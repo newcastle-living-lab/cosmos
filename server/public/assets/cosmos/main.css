@@ -5166,6 +5166,7 @@ a.text-gray-medium:visited {
   font-size: 0.7rem;
   text-align: center;
   padding: 1.8rem 0;
+  margin-bottom: 0;
 }
 
 .sortable-bg {

@@ -42,7 +42,7 @@ export default {
 
 	created() {
 		const image = new window.Image();
-		image.src = `/cosmos-images/${this.config.filename}`;
+		image.src = `/images/aspects/${this.config.filename}`;
 		image.onload = () => {
 			this.image = image;
 		};

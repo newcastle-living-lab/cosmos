@@ -44,6 +44,7 @@
 				:useImages="useImages"
 				:editingItem="editingItem"
 				:showHandle="true"
+				:projectId="projectId"
 				@edit-item="setEditItem"
 				@delete-item="deleteItem"
 			/>
@@ -78,6 +79,12 @@ export default {
 	props: {
 		definition: Object,
 		value: Object,
+		projectId: {
+			type: [String, Number],
+			coerce: function (val) {
+				return parseInt(val, 10);
+			}
+		},
 	},
 
 	data() {

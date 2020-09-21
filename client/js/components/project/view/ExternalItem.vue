@@ -23,10 +23,16 @@
 
 export default {
 
-	props: [
-		'item',
-		'type',
-	],
+	props: {
+		item: Object,
+		type: String,
+		projectId: {
+			type: [String, Number],
+			coerce: function (val) {
+				return parseInt(val, 10);
+			}
+		},
+	},
 
 	computed: {
 
@@ -92,11 +98,11 @@ export default {
 		},
 
 		imageUrl() {
-			return this.item.image ? `/uploads/${this.item.image}` : false;
+			return this.item.image ? `/uploads/${this.projectId}/${this.item.image}` : false;
 		},
 
 		imageThumbUrl() {
-			return this.item.image ? `/uploads/thumb/${this.item.image}` : false;
+			return this.item.image ? `/uploads/${this.projectId}/thumb/${this.item.image}` : false;
 		},
 
 	}

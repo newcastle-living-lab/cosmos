@@ -4,9 +4,33 @@ var path = require("path"),
 	Jimp = require('jimp');
 
 exports.method = "post";
-exports.route = "/cosmos-api/upload-image";
+exports.route = "/cosmos-api/upload-image/:projectId";
 
 exports.handler = function(req, res) {
+
+	const projectId = '' + req.params.projectId;
+
+	// Check dirs
+
+	const baseDir = fs.realpathSync(path.join(process.cwd(), 'data', 'uploads'));
+	const projectUploadDir = path.join(baseDir, projectId);
+	const projectThumbDir = path.join(baseDir, projectId, 'thumb');
+
+	try {
+		fs.mkdirSync(projectUploadDir, (err) => {});
+		fs.mkdirSync(projectThumbDir, (err) => {});
+	} catch (e) {
+		// OK if exists
+	}
+
+	/*
+	const projectStats = fs.statSync(projectUploadDir);
+	if ( ! projectStats.isDirectory()) {
+	}
+
+	const thumbStats = fs.statSync(projectThumbDir);
+	if ( ! thumbStats.isDirectory()) {
+	}*/
 
 	var form = new formidable.IncomingForm();
 	form.uploadDir = fs.realpathSync(path.join(process.cwd(), 'data'));
@@ -23,11 +47,11 @@ exports.handler = function(req, res) {
 
 		console.log("Form upload finished.");
 
-		var baseDir = fs.realpathSync(path.join(process.cwd(), 'data', 'uploads'));
 		var newFilename = Date.now() + '-' + file.name.toLowerCase();
 		newFilename = newFilename.replace(/[^a-zA-Z0-9\.]/g, '_');
-		var newFilepath = path.join(baseDir, newFilename);
-		var newThumbpath = path.join(baseDir, 'thumb', newFilename);
+
+		var newFilepath = path.join(projectUploadDir, newFilename);
+		var newThumbpath = path.join(projectThumbDir, newFilename);
 
 		Jimp.read(file.path)
 			.then(function(img) {

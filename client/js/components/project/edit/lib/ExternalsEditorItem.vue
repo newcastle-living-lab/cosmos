@@ -141,6 +141,12 @@ export default {
 		definition: Object,
 		useImages: Boolean,
 		showHandle: Boolean,
+		projectId: {
+			type: [String, Number],
+			coerce: function (val) {
+				return parseInt(val, 10);
+			}
+		},
 	},
 
 	data() {
@@ -198,7 +204,7 @@ export default {
 			if ( ! this.currentImage) {
 				return false;
 			}
-			return `/uploads/thumb/${this.currentImage}`;
+			return `/uploads/${this.projectId}/thumb/${this.currentImage}`;
 		},
 
 		dropClasses() {
@@ -270,7 +276,7 @@ export default {
 			this.currentStatus = STATUS_SAVING;
 			this.item.image = false;
 
-			Network.uploadImage(formData)
+			Network.uploadImage(this.projectId, formData)
 				.then(res => {
 					this.item.image = res.filename;
 					this.currentStatus = STATUS_SUCCESS;

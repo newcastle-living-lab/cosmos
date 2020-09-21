@@ -9,6 +9,7 @@
 					v-for="(item, index) in theoryOfChange"
 					:key="index"
 					:item="item"
+					:projectId="project.id"
 					type="toc"
 				/>
 			</div>

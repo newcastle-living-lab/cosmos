@@ -33,8 +33,6 @@ exports.handler = function(req, res, next) {
 
 			return res.send({
 				'success': true,
-				'foo': 'bar',
-				// 'returnTo': null,
 				'returnTo': req.session.returnTo ? req.session.returnTo : null,
 			});
 

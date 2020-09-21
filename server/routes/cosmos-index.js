@@ -8,7 +8,7 @@ exports.handler = function(req, res) {
 
 	var params = {
 		version: res.locals.app_version,
-		fathom_site_id: settings.get('fathom.site_id'),
+		fathom_site_id: settings.get('cosmos.fathom_site_id'),
 		auto_save: settings.get('cosmos.auto_save'),
 		assets: {
 			js: [],

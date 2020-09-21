@@ -49,10 +49,19 @@ export default {
 			});
 	},
 
-	uploadImage(formData) {
-		var endpoint = '/upload-image';
-		return cosmosHttp.post(endpoint, formData)
+	uploadImage(projectId, formData) {
+		return cosmosHttp.post(`/upload-image/${projectId}`, formData)
 			.then(res => res.data);
+	},
+
+	exportProject(id) {
+		return cosmosHttp.post(`export-project/${id}`)
+			.then(res => res.data)
+	},
+
+	importProject(formData) {
+		return cosmosHttp.post('import-project', formData)
+			.then(res => res.data)
 	}
 
 }

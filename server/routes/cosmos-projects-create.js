@@ -7,47 +7,38 @@ exports.route = "/cosmos-api/projects";
 
 exports.handler = function(req, res, next) {
 
-	var authUserEmail = req.user.email;
+	const authUserEmail = req.user.email;
+
+	const created_at = new Date().toISOString()
+		.replace(/T/, ' ')
+		.replace(/\..+/, '');
 
 	var decodedBody = req.body;
 
 	var params = {
 		$name: decodedBody.name,
-		$created_at: decodedBody.created_at,
-		$modified_at: decodedBody.modified_at,
+		$created_at: created_at,
+		$modified_at: null,
 		$created_by: authUserEmail,
 		$data: JSON.stringify({}),
 	};
 
-	var db = database.getDb();
 	var sql = "INSERT INTO `cosmos` (name, created_at, modified_at, created_by, data) VALUES ($name, $created_at, $modified_at, $created_by, $data)";
+	var db = database.getDb();
+	var stmt = db.prepare(sql);
 
-	db.run(sql, params, function(error) {
+	stmt.run(params, (err) => {
 
-		if (error) {
+		if (err) {
 			return res.status(500).send({
 				'success': false,
 				'reason': error,
 			});
 		}
 
-		var insid = 0;
-
-		db.each("SELECT last_insert_rowid() AS id FROM `cosmos`", function(err, row) {
-			insid = row.id;
-		}, function(err, rows) {
-
-			/*eventLog.log({
-				"type": eventType.ADD_PROJECT,
-				"req": req,
-				"data": { project_id: insid, project_name: pname }
-			});*/
-
-			res.send({
-				'success': true,
-				'id': parseInt(insid.toString(), 10),
-			});
-
+		res.send({
+			'success': true,
+			'id': parseInt(stmt.lastID.toString(), 10),
 		});
 
 	});

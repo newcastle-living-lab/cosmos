@@ -15,6 +15,7 @@
 				v-bind:is="componentName"
 				v-model="model"
 				:definition="definition"
+				:projectId="project.id"
 			></component>
 
 			<div class="sidebar-footer">
@@ -45,6 +46,10 @@ export default {
 	},
 
 	computed: {
+
+		...get([
+			'project',
+		]),
 
 		modelPath() {
 			return this.panel.modelPath;

@@ -27,16 +27,11 @@ mix.js(`js/main.js`, jsOutput);
 
 mix.sass(`scss/main.scss`, cssOutput);
 
-
-mix.copy('node_modules/@newcastle-living-lab/living-lab-admin/dist/main.js', `${basePath}/admin/main.js`);
-mix.copy('node_modules/@newcastle-living-lab/living-lab-admin/dist/main.css', `${basePath}/admin/main.css`);
-
-
 mix.webpackConfig({
 	resolve: {
 		extensions: ['.js', '.vue', '.json'],
 		alias: {
-			'@': __dirname + '/js'
+			'@': __dirname + '/js',
 		},
 	},
 });

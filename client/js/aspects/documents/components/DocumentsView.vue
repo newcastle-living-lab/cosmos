@@ -10,6 +10,7 @@
 						v-for="(item, index) in documents"
 						:key="index"
 						:item="item"
+						:projectId="project.id"
 						type="livlabmod"
 					/>
 				</div>

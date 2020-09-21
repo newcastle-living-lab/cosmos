@@ -9,6 +9,7 @@
 					v-for="(item, index) in communityReporting"
 					:key="index"
 					:item="item"
+					:projectId="project.id"
 					type="comrep"
 				/>
 			</div>

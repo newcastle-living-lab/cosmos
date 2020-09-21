@@ -78,6 +78,7 @@ var initServers = function() {
 
 	app.use(express.static(path.join(__dirname, "public")));
 	app.use("/uploads", express.static(path.join(process.cwd(), "data", "uploads")));
+	app.use("/export", express.static(path.join(process.cwd(), "data", "export")));
 
 	// Parsers
 	//
