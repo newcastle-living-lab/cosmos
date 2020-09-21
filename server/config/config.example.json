@@ -1,0 +1,6 @@
+{
+	"db_path": "data/cosmos.sqlite",
+	"http_port": 1338,
+	"secret": "living",
+	"auto_save": true
+}

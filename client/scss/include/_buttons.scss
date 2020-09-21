@@ -1,0 +1,39 @@
+.btn {
+
+	touch-action: manipulation;
+	transition: none;
+
+	&.btn-secondary {
+		@include button-variant($secondary-color);
+	}
+
+	&.btn-dark {
+		@include button-variant($grey-dark);
+	}
+
+	&.btn-grey {
+		@include button-variant($grey);
+	}
+
+	&.btn-negative {
+		@include button-variant($clrs-red);
+	}
+
+	.feather {
+		vertical-align: -15%;
+	}
+
+	&.btn-sm {
+		.feather {
+			// vertical-align: -10%;
+		}
+	}
+
+	&.btn-empty {
+		cursor: default;
+		color: inherit;
+		background: transparent;
+		border-color: transparent;
+	}
+
+}
