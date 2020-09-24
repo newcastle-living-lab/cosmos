@@ -15268,6 +15268,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -15282,7 +15283,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     };
   },
-  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(['userCanCreate']), {
+  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(['authUser', 'userCanCreate']), {
     canCreateNewProject: function canCreateNewProject() {
       return this.newProject.name && this.newProject.name.length > 0;
     }
@@ -50071,12 +50072,16 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c("div", [
-                    _c("a", { attrs: { href: _vm.loginUrl } }, [
-                      _vm._v("Log in")
-                    ]),
-                    _vm._v(" to create a project.")
-                  ])
+                  _vm.authUser
+                    ? _c("div", [
+                        _c("a", { attrs: { href: _vm.loginUrl } }, [
+                          _vm._v("Log in")
+                        ]),
+                        _vm._v(" to create a project.")
+                      ])
+                    : _c("div", [
+                        _vm._v("Your user access level is read-only.")
+                      ])
                 ])
               ])
             ])

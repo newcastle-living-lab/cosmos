@@ -27,7 +27,8 @@
 				<div class="tile tile-empty">
 					<div class="tile-content">
 						<div><alert-circle-icon size="16" /></div>
-						<div><a :href="loginUrl">Log in</a> to create a project.</div>
+						<div v-if="authUser"><a :href="loginUrl">Log in</a> to create a project.</div>
+						<div v-else>Your user access level is read-only.</div>
 					</div>
 				</div>
 			</div>
@@ -59,6 +60,7 @@ export default {
 
 	computed: {
 		...get([
+			'authUser',
 			'userCanCreate',
 		]),
 
