@@ -27,8 +27,8 @@
 				<div class="tile tile-empty">
 					<div class="tile-content">
 						<div><alert-circle-icon size="16" /></div>
-						<div v-if="authUser"><a :href="loginUrl">Log in</a> to create a project.</div>
-						<div v-else>Your user access level is read-only.</div>
+						<div v-if="authUser">Your user access level is read-only.</div>
+						<div v-else><a :href="loginUrl">Log in</a> to create a project.</div>
 					</div>
 				</div>
 			</div>
@@ -41,9 +41,15 @@
 
 import { get } from 'vuex-pathify';
 
+import AlertCircleIcon from 'vue-feather-icons/icons/AlertCircleIcon';
+
 import Network from '@/services/Network';
 
 export default {
+
+	components: {
+		AlertCircleIcon,
+	},
 
 	props: {
 		loginUrl: String,
