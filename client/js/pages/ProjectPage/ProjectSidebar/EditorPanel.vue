@@ -14,12 +14,13 @@
 			<component
 				v-bind:is="componentName"
 				v-model="model"
+				:aspectId="this.panel.aspectId"
 				:definition="definition"
 				:projectId="project.id"
 			></component>
 
 			<div class="sidebar-footer">
-				<VButton @click="goNext()" v-if="hasNext" class="btn btn-success btn-block">Next <i class="icon icon-arrow-down"></i></VButton>
+				<VButton @click="goNext()" v-if="hasNext" class="btn btn-success btn-block">{{ $t('app.next') }} <i class="icon icon-arrow-down"></i></VButton>
 			</div>
 		</div>
 
@@ -70,10 +71,21 @@ export default {
 		},
 
 		panelTitle() {
+			if (this.panel.title) {
+				return this.$t(this.panel.title);
+			}
+			const titleKey = `aspects.${this.panel.aspectId}.definitions.${this.definition.id}.title`;
+			if (this.$te(titleKey)) {
+				return this.$t(titleKey);
+			}
 			return this.panel.title ? this.panel.title : this.definition.title
 		},
 
 		hint() {
+			const hintKey = `aspects.${this.panel.aspectId}.definitions.${this.definition.id}.hint`;
+			if (this.$te(hintKey)) {
+				return this.$t(hintKey);
+			}
 			return this.definition && this.definition.hint ? this.definition.hint : false;
 		}
 	},

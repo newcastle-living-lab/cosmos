@@ -2,7 +2,7 @@
 
 	<div class="sidebar-content">
 
-		<VGroup :name="inputId('label')" label="Label" v-if="useLabel">
+		<VGroup :name="inputId('label')" :label="$t('app.label')" v-if="useLabel">
 			<VInput
 				ref="label"
 				:id="inputId('label')"
@@ -12,8 +12,8 @@
 			/>
 		</VGroup>
 
-		<VGroup :name="inputId('new')" label="Add new item" class="mb-8">
-			<span class="form-input-hint">Type the name below and press enter.</span>
+		<VGroup :name="inputId('new')" :label="$t('app.add_new_item')" class="mb-8">
+			<span class="form-input-hint">{{ $t('hints.type_and_enter') }}</span>
 			<VInput
 				ref="new_item_label"
 				:id="inputId('new')"
@@ -50,7 +50,7 @@
 			/>
 		</SortableList>
 
-		<span class="form-input-hint" v-if="limit">Maximum {{ limit }} items.</span>
+		<span class="form-input-hint" v-if="limit">{{ $tc('app.maximum_items', limit) }}.</span>
 
 	</div>
 

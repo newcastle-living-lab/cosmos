@@ -1768,7 +1768,7 @@ module.exports = JSON.parse("{\"id\":\"co_creation_of_service_model\",\"title\":
 /*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"id\":\"model\",\"type\":\"model\",\"title\":\"Model\",\"hint\":null},{\"id\":\"drivers\",\"type\":\"info\",\"title\":\"Drivers and Motivations\",\"hint\":\"What were / are the drivers and motivations of the project? Was it a statutory requirement, recognition of a need or demand, seizing an opportunity, addressing an inequality?\",\"body\":{\"label\":\"Drivers and Motivations\",\"hint\":\"What are the drivers and motivations involved?\"}},{\"id\":\"policyDef\",\"type\":\"stakeholder\",\"title\":\"Policy Definer\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},{\"id\":\"specDes\",\"type\":\"stakeholder\",\"title\":\"Specifier and Designer\",\"hint\":\"Who specifies / specified and designs / designed the service delivery processes and resources?\"},{\"id\":\"deployment\",\"type\":\"stakeholder\",\"title\":\"Deployer\",\"hint\":\"Who deploys / deployed and activates / activated those processes and resources?\"},{\"id\":\"delivery\",\"type\":\"stakeholder\",\"title\":\"Deliverer\",\"hint\":\"Who is responsible for the delivery mechanism(s), channels and roles in your pilot?\"},{\"id\":\"evaluation\",\"type\":\"stakeholder\",\"title\":\"Evaluator\",\"hint\":\"Who is the evaluator(s) and governors of the service?\"},{\"id\":\"user\",\"type\":\"stakeholder\",\"title\":\"User\",\"hint\":\"Who is the direct user of the service?\"},{\"id\":\"beneficiary\",\"type\":\"stakeholder\",\"title\":\"Beneficiary\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},{\"id\":\"initiator\",\"type\":\"stakeholder\",\"title\":\"Initiator\",\"hint\":\"Who are, or were, the instigators who initiated your pilot activity?\"},{\"id\":\"extsvc\",\"type\":\"externals\",\"title\":\"External Technical Services\",\"hint\":\"What reusable facilities, (technical and human) resources, services and sources of information were developed and used in support of these service definition and development processes? What external resources and services (e.g. communications and social media) were/are used?\",\"useLabel\":true,\"useImages\":false,\"limit\":8},{\"id\":\"extorg\",\"type\":\"externals\",\"title\":\"External Organisations\",\"hint\":\"Are there any relevant actors, stakeholders or agencies which are relevant to the pilot, but which remain outside its vision and ethos?\",\"useLabel\":true,\"useImages\":false,\"limit\":8},{\"id\":\"infsvc\",\"type\":\"externals\",\"title\":\"Infrastructural Services\",\"hint\":\"What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?\",\"useLabel\":true,\"useImages\":false,\"limit\":8}]");
+module.exports = JSON.parse("[{\"id\":\"model\",\"type\":\"model\",\"title\":\"Model\",\"hint\":null},{\"id\":\"drivers\",\"type\":\"info\"},{\"id\":\"policyDef\",\"type\":\"stakeholder\"},{\"id\":\"specDes\",\"type\":\"stakeholder\"},{\"id\":\"deployment\",\"type\":\"stakeholder\"},{\"id\":\"delivery\",\"type\":\"stakeholder\"},{\"id\":\"evaluation\",\"type\":\"stakeholder\"},{\"id\":\"user\",\"type\":\"stakeholder\"},{\"id\":\"beneficiary\",\"type\":\"stakeholder\"},{\"id\":\"initiator\",\"type\":\"stakeholder\"},{\"id\":\"extsvc\",\"type\":\"externals\",\"useLabel\":true,\"useImages\":false,\"limit\":8},{\"id\":\"extorg\",\"type\":\"externals\",\"useLabel\":true,\"useImages\":false,\"limit\":8},{\"id\":\"infsvc\",\"type\":\"externals\",\"useLabel\":true,\"useImages\":false,\"limit\":8}]");
 
 /***/ }),
 
@@ -5034,14 +5034,14 @@ for (var _i = 0, _keys = keys; _i < _keys.length; _i++) {
 
 /***/ }),
 
-/***/ "./js/data/language.json":
-/*!*******************************!*\
-  !*** ./js/data/language.json ***!
-  \*******************************/
-/*! exports provided: en, default */
+/***/ "./js/lang/en.json":
+/*!*************************!*\
+  !*** ./js/lang/en.json ***!
+  \*************************/
+/*! exports provided: app, hints, activity_types, aspects, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"en\":{\"yes\":\"Yes\",\"no\":\"No\"}}");
+module.exports = JSON.parse("{\"app\":{\"project\":\"Project\",\"name\":\"Name\",\"title\":\"Title\",\"created_by\":\"Created by\",\"description\":\"Description\",\"label\":\"Label\",\"type\":\"Type\",\"colour\":\"Colour\",\"web_address\":\"Web address\",\"next\":\"Next\",\"add_new_item\":\"Add new item\",\"maximum_items\":\"Maximum {count} items | Maxumum {count} item | Maximum {count} items\"},\"hints\":{\"type_and_enter\":\"Type the name below and press enter.\"},\"activity_types\":{\"user\":\"User\",\"organisation\":\"Organisation\",\"service\":\"Service\"},\"aspects\":{\"co_creation_of_service_model\":{\"title\":\"Co-Creation of Service Model\",\"definitions\":{\"model\":{\"title\":\"Model\"},\"drivers\":{\"title\":\"Drivers and Motivations\",\"hint\":\"What were / are the drivers and motivations of the project? Was it a statutory requirement, recognition of a need or demand, seizing an opportunity, addressing an inequality?\",\"body\":{\"label\":\"Drivers and Motivations\",\"hint\":\"What are the drivers and motivations involved?\"}},\"policyDef\":{\"title\":\"Policy Definer\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"specDes\":{\"title\":\"Specifier and Designer\",\"hint\":\"Who specifies / specified and designs / designed the service delivery processes and resources?\"},\"deployment\":{\"title\":\"Deployer\",\"hint\":\"Who deploys / deployed and activates / activated those processes and resources?\"},\"delivery\":{\"title\":\"Deliverer\",\"hint\":\"Who is responsible for the delivery mechanism(s), channels and roles in your pilot?\"},\"evaluation\":{\"title\":\"Evaluator\",\"hint\":\"Who is the evaluator(s) and governors of the service?\"},\"user\":{\"title\":\"User\",\"hint\":\"Who is the direct user of the service?\"},\"beneficiary\":{\"title\":\"Beneficiary\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"initiator\":{\"title\":\"Initiator\",\"hint\":\"Who are, or were, the instigators who initiated your pilot activity?\"},\"extsvc\":{\"title\":\"External Technical Services\",\"hint\":\"What reusable facilities, (technical and human) resources, services and sources of information were developed and used in support of these service definition and development processes? What external resources and services (e.g. communications and social media) were/are used?\"},\"extorg\":{\"title\":\"External Organisations\",\"hint\":\"Are there any relevant actors, stakeholders or agencies which are relevant to the pilot, but which remain outside its vision and ethos?\"},\"infsvc\":{\"title\":\"Infrastructural Services\",\"hint\":\"What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?\"}}}}}");
 
 /***/ }),
 
@@ -6107,8 +6107,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-i18n */ "./node_modules/vue-i18n/dist/vue-i18n.esm.js");
-/* harmony import */ var _data_language_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/data/language.json */ "./js/data/language.json");
-var _data_language_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! @/data/language.json */ "./js/data/language.json", 1);
+/* harmony import */ var _lang_en_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/lang/en.json */ "./js/lang/en.json");
+var _lang_en_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! @/lang/en.json */ "./js/lang/en.json", 1);
 
 
 
@@ -6118,7 +6118,9 @@ var i18n = new vue_i18n__WEBPACK_IMPORTED_MODULE_1__["default"]({
   // set locale
   fallbackLocale: 'en',
   // set fallback locale
-  messages: _data_language_json__WEBPACK_IMPORTED_MODULE_2__
+  messages: {
+    en: _lang_en_json__WEBPACK_IMPORTED_MODULE_2__
+  }
 });
 /* harmony default export */ __webpack_exports__["default"] = (i18n);
 
@@ -13632,6 +13634,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "InfoEditor",
   props: {
+    aspectId: String,
     definition: Object,
     value: Object
   },
@@ -13646,18 +13649,18 @@ __webpack_require__.r(__webpack_exports__);
     },
     definitionBody: function definitionBody() {
       var body = {
-        label: 'Description',
+        label: this.$t('app.description'),
         hint: false
       };
+      var labelKey = "aspects.".concat(this.aspectId, ".definitions.").concat(this.definition.id, ".body.label");
+      var hintKey = "aspects.".concat(this.aspectId, ".definitions.").concat(this.definition.id, ".body.hint");
 
-      if (this.definition.body) {
-        if (this.definition.body.label) {
-          body.label = this.definition.body.label;
-        }
+      if (this.$te(labelKey)) {
+        body.label = this.$t(labelKey);
+      }
 
-        if (this.definition.body.hint) {
-          body.hint = this.definition.body.hint;
-        }
+      if (this.$te(hintKey)) {
+        body.hint = this.$t(hintKey);
       }
 
       return body;
@@ -14125,11 +14128,6 @@ var defaultValue = {
     definition: Object,
     value: Object
   },
-  data: function data() {
-    return {
-      typeOptions: _data_activityTypes_json__WEBPACK_IMPORTED_MODULE_0__
-    };
-  },
   mounted: function mounted() {
     var _this = this;
 
@@ -14139,6 +14137,16 @@ var defaultValue = {
     });
   },
   computed: {
+    typeOptions: function typeOptions() {
+      var _this2 = this;
+
+      return _data_activityTypes_json__WEBPACK_IMPORTED_MODULE_0__.map(function (opt) {
+        return {
+          value: opt.value,
+          label: _this2.$t("activity_types.".concat(opt.value))
+        };
+      });
+    },
     showWrapper: function showWrapper() {
       return this.definition ? true : false;
     },
@@ -15223,7 +15231,8 @@ var STATUS_FILE = 5;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
-/* harmony import */ var _services_Network__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/services/Network */ "./js/services/Network.js");
+/* harmony import */ var vue_feather_icons_icons_AlertCircleIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-feather-icons/icons/AlertCircleIcon */ "./node_modules/vue-feather-icons/icons/AlertCircleIcon.js");
+/* harmony import */ var _services_Network__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/services/Network */ "./js/services/Network.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -15271,7 +15280,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    AlertCircleIcon: vue_feather_icons_icons_AlertCircleIcon__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   props: {
     loginUrl: String
   },
@@ -15299,7 +15312,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var _this = this;
 
       this.newProject.created_at = new Date().toLocaleDateString();
-      _services_Network__WEBPACK_IMPORTED_MODULE_1__["default"].createProject(this.newProject).then(function (id) {
+      _services_Network__WEBPACK_IMPORTED_MODULE_2__["default"].createProject(this.newProject).then(function (id) {
         _this.$router.push('/' + id + '/dashboard');
       }).then(function () {
         return _this.reset();
@@ -15327,10 +15340,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var lodash_filter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/filter */ "./node_modules/lodash/filter.js");
 /* harmony import */ var lodash_filter__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_filter__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var vue_feather_icons_icons_AlertCircleIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-feather-icons/icons/AlertCircleIcon */ "./node_modules/vue-feather-icons/icons/AlertCircleIcon.js");
-/* harmony import */ var _services_Network__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/services/Network */ "./js/services/Network.js");
-/* harmony import */ var _NewProject__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NewProject */ "./js/pages/IndexPage/NewProject.vue");
-/* harmony import */ var _ImportProject__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ImportProject */ "./js/pages/IndexPage/ImportProject.vue");
+/* harmony import */ var _services_Network__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/services/Network */ "./js/services/Network.js");
+/* harmony import */ var _NewProject__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NewProject */ "./js/pages/IndexPage/NewProject.vue");
+/* harmony import */ var _ImportProject__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ImportProject */ "./js/pages/IndexPage/ImportProject.vue");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -15419,12 +15431,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    AlertCircleIcon: vue_feather_icons_icons_AlertCircleIcon__WEBPACK_IMPORTED_MODULE_3__["default"],
-    NewProject: _NewProject__WEBPACK_IMPORTED_MODULE_5__["default"],
-    ImportProject: _ImportProject__WEBPACK_IMPORTED_MODULE_6__["default"]
+    NewProject: _NewProject__WEBPACK_IMPORTED_MODULE_4__["default"],
+    ImportProject: _ImportProject__WEBPACK_IMPORTED_MODULE_5__["default"]
   },
   data: function data() {
     return {
@@ -16078,6 +16088,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -16105,9 +16116,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return this.panel.editor;
     },
     panelTitle: function panelTitle() {
+      if (this.panel.title) {
+        return this.$t(this.panel.title);
+      }
+
+      var titleKey = "aspects.".concat(this.panel.aspectId, ".definitions.").concat(this.definition.id, ".title");
+
+      if (this.$te(titleKey)) {
+        return this.$t(titleKey);
+      }
+
       return this.panel.title ? this.panel.title : this.definition.title;
     },
     hint: function hint() {
+      var hintKey = "aspects.".concat(this.panel.aspectId, ".definitions.").concat(this.definition.id, ".hint");
+
+      if (this.$te(hintKey)) {
+        return this.$t(hintKey);
+      }
+
       return this.definition && this.definition.hint ? this.definition.hint : false;
     }
   }),
@@ -16242,8 +16269,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var aspectId = this.aspect.CONFIG.id;
       var panels = lodash_map__WEBPACK_IMPORTED_MODULE_2___default()(this.definitions, function (def) {
         return {
-          modelPath: "project@data.".concat(aspectId, ".").concat(def.id),
           id: def.id,
+          aspectId: aspectId,
+          modelPath: "project@data.".concat(aspectId, ".").concat(def.id),
           editor: "".concat(def.type, "-editor"),
           definition: def
         };
@@ -16251,10 +16279,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       if (this.aspect.CONFIG.id === 'welcome') {
         panels.unshift({
-          modelPath: "project",
           id: "meta",
+          aspectId: aspectId,
+          modelPath: "project",
           editor: "meta-editor",
-          title: "Project"
+          title: 'app.project'
         });
       }
 
@@ -48029,7 +48058,9 @@ var render = function() {
       _vm.useLabel
         ? _c(
             "VGroup",
-            { attrs: { name: _vm.inputId("label"), label: "Label" } },
+            {
+              attrs: { name: _vm.inputId("label"), label: _vm.$t("app.label") }
+            },
             [
               _c("VInput", {
                 ref: "label",
@@ -48055,11 +48086,11 @@ var render = function() {
         "VGroup",
         {
           staticClass: "mb-8",
-          attrs: { name: _vm.inputId("new"), label: "Add new item" }
+          attrs: { name: _vm.inputId("new"), label: _vm.$t("app.add_new_item") }
         },
         [
           _c("span", { staticClass: "form-input-hint" }, [
-            _vm._v("Type the name below and press enter.")
+            _vm._v(_vm._s(_vm.$t("hints.type_and_enter")))
           ]),
           _vm._v(" "),
           _c("VInput", {
@@ -48131,7 +48162,7 @@ var render = function() {
       _vm._v(" "),
       _vm.limit
         ? _c("span", { staticClass: "form-input-hint" }, [
-            _vm._v("Maximum " + _vm._s(_vm.limit) + " items.")
+            _vm._v(_vm._s(_vm.$tc("app.maximum_items", _vm.limit)) + ".")
           ])
         : _vm._e()
     ],
@@ -48482,7 +48513,7 @@ var render = function() {
     [
       _c(
         "VGroup",
-        { attrs: { name: _vm.inputId("title"), label: "Title" } },
+        { attrs: { name: _vm.inputId("title"), label: _vm.$t("app.title") } },
         [
           _c("VInput", {
             attrs: { type: "text", maxlength: "255" },
@@ -48555,7 +48586,7 @@ var render = function() {
     [
       _c(
         "VGroup",
-        { attrs: { name: "name", label: "Name" } },
+        { attrs: { name: "name", label: _vm.$t("app.name") } },
         [
           _c("VInput", {
             attrs: { type: "text", id: "name", maxlength: "255" },
@@ -48573,7 +48604,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "VGroup",
-        { attrs: { name: "created_by", label: "Created by" } },
+        { attrs: { name: "created_by", label: _vm.$t("app.created_by") } },
         [
           _c("VInput", {
             attrs: { type: "text", id: "created_by", maxlength: "255" },
@@ -48916,7 +48947,7 @@ var render = function() {
     [
       _c(
         "VGroup",
-        { attrs: { name: _vm.inputId("label"), label: "Label" } },
+        { attrs: { name: _vm.inputId("label"), label: _vm.$t("app.label") } },
         [
           _c("VInput", {
             ref: "label",
@@ -48940,7 +48971,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "VGroup",
-        { attrs: { name: "type", label: "Type" } },
+        { attrs: { name: "type", label: _vm.$t("app.type") } },
         [
           _c("VRadioList", {
             attrs: { name: "type", options: _vm.typeOptions },
@@ -48958,7 +48989,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "VGroup",
-        { attrs: { name: "colour", label: "Colour" } },
+        { attrs: { name: "colour", label: _vm.$t("app.colour") } },
         [
           _c("VColourPicker", {
             model: {
@@ -48975,7 +49006,9 @@ var render = function() {
       _vm._v(" "),
       _c(
         "VGroup",
-        { attrs: { name: _vm.inputId("url"), label: "Web address" } },
+        {
+          attrs: { name: _vm.inputId("url"), label: _vm.$t("app.web_address") }
+        },
         [
           _c("VInput", {
             attrs: {
@@ -50074,13 +50107,13 @@ var render = function() {
                   _vm._v(" "),
                   _vm.authUser
                     ? _c("div", [
+                        _vm._v("Your user access level is read-only.")
+                      ])
+                    : _c("div", [
                         _c("a", { attrs: { href: _vm.loginUrl } }, [
                           _vm._v("Log in")
                         ]),
                         _vm._v(" to create a project.")
-                      ])
-                    : _c("div", [
-                        _vm._v("Your user access level is read-only.")
                       ])
                 ])
               ])
@@ -50633,7 +50666,11 @@ var render = function() {
             _vm._v(" "),
             _c(_vm.componentName, {
               tag: "component",
-              attrs: { definition: _vm.definition, projectId: _vm.project.id },
+              attrs: {
+                aspectId: this.panel.aspectId,
+                definition: _vm.definition,
+                projectId: _vm.project.id
+              },
               model: {
                 value: _vm.model,
                 callback: function($$v) {
@@ -50659,7 +50696,7 @@ var render = function() {
                         }
                       },
                       [
-                        _vm._v("Next "),
+                        _vm._v(_vm._s(_vm.$t("app.next")) + " "),
                         _c("i", { staticClass: "icon icon-arrow-down" })
                       ]
                     )

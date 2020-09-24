@@ -2,7 +2,7 @@
 
 	<div class="sidebar-content">
 
-		<VGroup :name="inputId('title')" label="Title">
+		<VGroup :name="inputId('title')" :label="$t('app.title')">
 			<VInput type="text" v-model="val.title" maxlength="255" />
 		</VGroup>
 
@@ -22,6 +22,7 @@ export default {
 	name: "InfoEditor",
 
 	props: {
+		aspectId: String,
 		definition: Object,
 		value: Object,
 	},
@@ -40,17 +41,19 @@ export default {
 		definitionBody() {
 
 			var body = {
-				label: 'Description',
+				label: this.$t('app.description'),
 				hint: false
 			};
 
-			if (this.definition.body) {
-				if (this.definition.body.label) {
-					body.label = this.definition.body.label;
-				}
-				if (this.definition.body.hint) {
-					body.hint = this.definition.body.hint;
-				}
+			const labelKey = `aspects.${this.aspectId}.definitions.${this.definition.id}.body.label`;
+			const hintKey = `aspects.${this.aspectId}.definitions.${this.definition.id}.body.hint`;
+
+			if (this.$te(labelKey)) {
+				body.label = this.$t(labelKey);
+			}
+
+			if (this.$te(hintKey)) {
+				body.hint = this.$t(hintKey);
 			}
 
 			return body;

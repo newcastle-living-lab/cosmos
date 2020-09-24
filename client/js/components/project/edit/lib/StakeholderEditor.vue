@@ -2,19 +2,19 @@
 
 	<div :class="showWrapper ? 'sidebar-content' : ''">
 
-		<VGroup :name="inputId('label')" label="Label">
+		<VGroup :name="inputId('label')" :label="$t('app.label')">
 			<VInput ref="label" type="text" :id="inputId('label')" v-model="val.label" maxlength="255" @enter="$emit('enter')" />
 		</VGroup>
 
-		<VGroup name="type" label="Type">
+		<VGroup name="type" :label="$t('app.type')">
 			<VRadioList name="type" :options="typeOptions" v-model="val.type" />
 		</VGroup>
 
-		<VGroup name="colour" label="Colour">
+		<VGroup name="colour" :label="$t('app.colour')">
 			<VColourPicker v-model="val.colour" />
 		</VGroup>
 
-		<VGroup :name="inputId('url')" label="Web address">
+		<VGroup :name="inputId('url')" :label="$t('app.web_address')">
 			<VInput placeholder="https://" type="url" :id="inputId('url')" v-model="val.url" maxlength="255" @enter="$emit('enter')" />
 		</VGroup>
 
@@ -43,12 +43,6 @@ export default {
 		value: Object,
 	},
 
-	data() {
-		return {
-			typeOptions: activityTypes,
-		}
-	},
-
 	mounted() {
 		this.val = this.value;
 		this.$nextTick(() => {
@@ -57,6 +51,15 @@ export default {
 	},
 
 	computed: {
+
+		typeOptions() {
+			return activityTypes.map((opt) => {
+				return {
+					value: opt.value,
+					label: this.$t(`activity_types.${opt.value}`),
+				};
+			});
+		},
 
 		showWrapper() {
 			return this.definition ? true : false
