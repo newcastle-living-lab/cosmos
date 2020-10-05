@@ -2,7 +2,7 @@
 
 	<div class="sidebar-content">
 
-		<VGroup name="title" label="Title">
+		<VGroup name="title" :label="$t('app.title')">
 			<VTextarea rows="4" id="title" v-model="val.title" />
 		</VGroup>
 

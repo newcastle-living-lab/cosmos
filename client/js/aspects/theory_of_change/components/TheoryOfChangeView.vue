@@ -2,7 +2,7 @@
 
 	<main ref="container" class="app-content light theory-of-change">
 		<div class="container grid-xl">
-			<h4 class="mb-8 mt-4">Theory of Change</h4>
+			<h4 class="mb-8 mt-4">{{ $t('aspects.theory_of_change.dashboard.title') }}</h4>
 
 			<div class="columns external-items" v-if="theoryOfChange.length > 0">
 				<external-item
@@ -15,9 +15,9 @@
 			</div>
 
 			<div class="empty" v-if="!theoryOfChange.length">
-				<p class="empty-title h5">There are no theory of change items for this project.</p>
+				<p class="empty-title h5">{{ $t('aspects.theory_of_change.dashboard.empty_set') }}</p>
 				<div class="empty-action">
-					<button class="btn btn-primary" v-show="userCanEdit" @click.prevent="doEdit">Manage Theory of Change</button>
+					<button class="btn btn-primary" v-show="userCanEdit" @click.prevent="doEdit">{{ $t('aspects.theory_of_change.dashboard.manage') }}</button>
 				</div>
 			</div>
 

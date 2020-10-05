@@ -8,21 +8,19 @@
 	{
 		"id": "wellbeing",
 		"type": "group",
-		"title": "Human well-being and Environment",
 		"children": [
 			{
 				"id": "items",
 				"dataType": "array",
-				"label": "Which aspects of human well-being and of the environment are relevant to your service? Are some more significant than others?",
 				"componentName": "VCheckList",
 				"componentProps": {
 					"options": [
-						{"value": "physical_env", "label": "Physical Envrionment"},
-						{"value": "socio_cultural_env", "label": "Socio-cultural Environment"},
-						{"value": "faculties_skills", "label": "Faculties and Skills"},
-						{"value": "mental_psych", "label": "Mental and Psychological"},
-						{"value": "physiological", "label": "Physiological"},
-						{"value": "socio_economic", "label": "Socio-Economic"}
+						{"value": "physical_env", "lang": "aspects.intervention_theory_model.options.wellbeing.physical_env" },
+						{"value": "socio_cultural_env", "lang": "aspects.intervention_theory_model.options.wellbeing.socio_cultural_env" },
+						{"value": "faculties_skills", "lang": "aspects.intervention_theory_model.options.wellbeing.faculties_skills" },
+						{"value": "mental_psych", "lang": "aspects.intervention_theory_model.options.wellbeing.mental_psych" },
+						{"value": "physiological", "lang": "aspects.intervention_theory_model.options.wellbeing.physiological" },
+						{"value": "socio_economic", "lang": "aspects.intervention_theory_model.options.wellbeing.socio_economic" }
 					]
 				}
 			}
@@ -31,22 +29,20 @@
 	{
 		"id": "innovation",
 		"type": "group",
-		"title": "Innovation and change",
 		"children": [
 			{
 				"id": "items",
 				"dataType": "array",
-				"label": "What aspects of the service lifecycle are important regarding your innovation and change?",
 				"componentName": "VCheckList",
 				"componentProps": {
 					"options": [
-						{"value": "transformation", "label": "Transformation"},
-						{"value": "development", "label": "Development"},
-						{"value": "facilitation", "label": "Facilitation"},
-						{"value": "rehabilitation", "label": "Rehabilitation"},
-						{"value": "remedy", "label": "Remedy"},
-						{"value": "palliation", "label": "Palliation"},
-						{"value": "prevention", "label": "Prevention"}
+						{"value": "transformation", "lang": "aspects.intervention_theory_model.options.innovation.transformation" },
+						{"value": "development", "lang": "aspects.intervention_theory_model.options.innovation.development" },
+						{"value": "facilitation", "lang": "aspects.intervention_theory_model.options.innovation.facilitation" },
+						{"value": "rehabilitation", "lang": "aspects.intervention_theory_model.options.innovation.rehabilitation" },
+						{"value": "remedy", "lang": "aspects.intervention_theory_model.options.innovation.remedy" },
+						{"value": "palliation", "lang": "aspects.intervention_theory_model.options.innovation.palliation" },
+						{"value": "prevention", "lang": "aspects.intervention_theory_model.options.innovation.prevention" }
 					]
 				}
 			}
@@ -55,20 +51,18 @@
 	{
 		"id": "intervention",
 		"type": "group",
-		"title": "Intervention",
 		"children": [
 			{
 				"id": "items",
 				"dataType": "array",
-				"label": "What type of intervention is occuring?",
 				"componentName": "VCheckList",
 				"componentProps": {
 					"options": [
-						{"value": "identification", "label": "Identification & Planning"},
-						{"value": "coordination_delivery", "label": "Coordination & Delivery"},
-						{"value": "management", "label": "Management"},
-						{"value": "governance", "label": "Governance"},
-						{"value": "learning", "label": "Learning"}
+						{"value": "identification", "lang": "aspects.intervention_theory_model.options.intervention.identification" },
+						{"value": "coordination_delivery", "lang": "aspects.intervention_theory_model.options.intervention.coordination_delivery" },
+						{"value": "management", "lang": "aspects.intervention_theory_model.options.intervention.management" },
+						{"value": "governance", "lang": "aspects.intervention_theory_model.options.intervention.governance" },
+						{"value": "learning", "lang": "aspects.intervention_theory_model.options.intervention.learning" }
 					]
 				}
 			}
@@ -77,18 +71,16 @@
 	{
 		"id": "learning",
 		"type": "group",
-		"title": "Learning",
 		"children": [
 			{
 				"id": "items",
 				"dataType": "array",
-				"label": "How is learning happening in your intervention?",
 				"componentName": "VCheckList",
 				"componentProps": {
 					"options": [
-						{"value": "research_evidence", "label": "Research & Evidence"},
-						{"value": "trials", "label": "Trials"},
-						{"value": "service_improvement", "label": "Service Improvement"}
+						{"value": "research_evidence", "lang": "aspects.intervention_theory_model.options.learning.research_evidence" },
+						{"value": "trials", "lang": "aspects.intervention_theory_model.options.learning.trials" },
+						{"value": "service_improvement", "lang": "aspects.intervention_theory_model.options.learning.service_improvement" }
 					]
 				}
 			}

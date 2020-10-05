@@ -101,10 +101,10 @@ export default {
 
 			config.meso = {
 				position: "above",
-				label: "Meso",
+				label: this.$t('aspects.analytic_model.dashboard.meso.label'),
 				labelColour: "#3d9970",
 				lineColour: "#0074d9",
-				description: "There may be a number of stages at this level.",
+				description: this.$t('aspects.analytic_model.dashboard.meso.description'),
 				x: 242,
 				y: 215,
 				width: 310,
@@ -112,7 +112,7 @@ export default {
 
 			config.macro = {
 				position: "below",
-				label: "Macro",
+				label: this.$t('aspects.analytic_model.dashboard.macro.label'),
 				labelColour: "#3d9970",
 				lineColour: "#85144b",
 				x: 85,
@@ -122,7 +122,7 @@ export default {
 
 			config.micro = {
 				position: "below",
-				label: "Micro",
+				label: this.$t('aspects.analytic_model.dashboard.micro.label'),
 				labelColour: "#3d9970",
 				lineColour: "#0074d9",
 				x: 400,

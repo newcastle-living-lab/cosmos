@@ -3,7 +3,7 @@
 	<main ref="container" class="app-content light living-lab-models">
 		<div class="scrollable scr-y">
 			<div class="container grid-x">
-				<h4 class="mb-8 mt-4">Documents and Files</h4>
+				<h4 class="mb-8 mt-4">{{ $t('aspects.documents.dashboard.title') }}</h4>
 
 				<div class="columns external-items" v-if="documents">
 					<ExternalItem
@@ -16,9 +16,9 @@
 				</div>
 
 				<div class="empty" v-if="!documents.length">
-					<p class="empty-title h5">There are no documents or files for this project.</p>
+					<p class="empty-title h5">{{ $t('aspects.documents.dashboard.empty_set') }}</p>
 					<div class="empty-action">
-						<button class="btn btn-primary" v-show="userCanEdit" @click.prevent="doEdit">Manage documents and files</button>
+						<button class="btn btn-primary" v-show="userCanEdit" @click.prevent="doEdit">{{ $t('aspects.documents.dashboard.manage') }}</button>
 					</div>
 				</div>
 			</div>

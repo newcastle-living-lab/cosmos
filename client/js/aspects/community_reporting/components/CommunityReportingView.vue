@@ -2,7 +2,7 @@
 
 	<main ref="container" class="app-content light community-reporting">
 		<div class="container grid-xl">
-			<h4 class="mb-8 mt-4">Community Reporting</h4>
+			<h4 class="mb-8 mt-4">{{ $t('aspects.community_reporting.dashboard.title') }}</h4>
 
 			<div class="columns external-items" v-if="communityReporting.length > 0">
 				<external-item
@@ -14,9 +14,9 @@
 				/>
 			</div>
 			<div class="empty" v-if="!communityReporting.length">
-				<p class="empty-title h5">There are no community reporting items for this project.</p>
+				<p class="empty-title h5">{{ $t('aspects.community_reporting.dashboard.empty_set') }}</p>
 				<div class="empty-action">
-					<button class="btn btn-primary" v-show="userCanEdit" @click.prevent="doEdit">Manage Community Reporting</button>
+					<button class="btn btn-primary" v-show="userCanEdit" @click.prevent="doEdit">{{ $t('aspects.community_reporting.dashboard.manage') }}</button>
 				</div>
 			</div>
 		</div>

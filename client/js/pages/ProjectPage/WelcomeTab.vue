@@ -4,7 +4,8 @@
 		<div class="container grid-xl">
 			<div class="empty">
 					<p class="empty-title h5">{{ project.name }}</p>
-					<p class="empty-subtitle" v-if="project.created_by">Created by {{ project.created_by }} on {{ project.created_at }}</p>
+					<p class="empty-subtitle" v-if="project.created_by">
+					{{ $t('aspects.welcome.dashboard.summary', { user: project.created_by, date_time: project.created_at }) }}</p>
 				</div>
 		</div>
 	</main>

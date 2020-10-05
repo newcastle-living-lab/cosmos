@@ -137,13 +137,13 @@ export default {
 		wellbeingConfig() {
 
 			var items = [
-				{ key: 'physical_env', text: 'Physical Environment', fill: '#6161EA', x: 90, y: 160, width: 175 },
-				{ key: 'socio_cultural_env', text: 'Socio-cultural Environment', fill: '#6161EA', x: 530, y: 160, width: 175 },
+				{ key: 'physical_env', fill: '#6161EA', x: 90, y: 160, width: 175 },
+				{ key: 'socio_cultural_env', fill: '#6161EA', x: 530, y: 160, width: 175 },
 
-				{ key: 'faculties_skills', text: 'Faculties and Skills', x: 130, y: 300, width: 175 },
-				{ key: 'mental_psych', text: 'Mental and Psychological', x: 490, y: 305, width: 220 },
-				{ key: 'socio_economic', text: 'Socio-Economic', x: 25, y: 545, width: 280 },
-				{ key: 'physiological', text: 'Physiological', x: 510, y: 545, width: 220 },
+				{ key: 'faculties_skills', x: 130, y: 300, width: 175 },
+				{ key: 'mental_psych', x: 490, y: 305, width: 220 },
+				{ key: 'socio_economic', x: 25, y: 545, width: 280 },
+				{ key: 'physiological', x: 510, y: 545, width: 220 },
 			];
 
 			var config = {},
@@ -174,7 +174,7 @@ export default {
 				itemConfig = {
 					fontSize: 22,
 					visible: isVisible,
-					text: item.text,
+					text: this.$t(`aspects.intervention_theory_model.options.wellbeing.${item.key}`),
 					fill: item.fill ? item.fill : '#1818AA',
 					x: item.x,
 					y: item.y,
@@ -187,7 +187,7 @@ export default {
 
 			var headingConfig = {
 				fontSize: 30,
-				text: 'Well Being',
+				text: this.$t(`aspects.intervention_theory_model.dashboard.wellbeing`),
 				fill: '#1818AA',
 				x: 290,
 				y: 450,
@@ -202,11 +202,11 @@ export default {
 		interventionConfig() {
 
 			var items = [
-				{ key: 'identification', text: 'Identification & Planning', x: 20, y: 630, width: 220 },
-				{ key: 'coordination_delivery', text: 'Coordination & Delivery', x: 155, y: 700, width: 220 },
-				{ key: 'management', text: 'Management', x: 350, y: 740, width: 210 },
-				{ key: 'governance', text: 'Governance', x: 510, y: 700, width: 200 },
-				{ key: 'learning', text: 'Learning', x: 600, y: 630, width: 160 },
+				{ key: 'identification', x: 20, y: 630, width: 220 },
+				{ key: 'coordination_delivery', x: 155, y: 700, width: 220 },
+				{ key: 'management', x: 350, y: 740, width: 210 },
+				{ key: 'governance', x: 510, y: 700, width: 200 },
+				{ key: 'learning', x: 600, y: 630, width: 160 },
 			];
 
 			var config = {},
@@ -226,7 +226,7 @@ export default {
 				itemConfig = {
 					fontSize: 22,
 					visible: isVisible,
-					text: item.text,
+					text: this.$t(`aspects.intervention_theory_model.options.intervention.${item.key}`),
 					fill: item.fill ? item.fill : '#D3332A',
 					x: item.x,
 					y: item.y,
@@ -255,7 +255,7 @@ export default {
 				isVisible = true;
 			}
 
-			lines = map(lines, (line) => line.label);
+			lines = map(lines, (line) => this.$t(line.lang));
 
 			var itemConfig = {
 				x: 800,
@@ -289,7 +289,7 @@ export default {
 				isVisible = true;
 			}
 
-			lines = map(lines, (line) => line.label);
+			lines = map(lines, (line) => this.$t(line.lang));
 
 			var itemConfig = {
 				visible: isVisible,

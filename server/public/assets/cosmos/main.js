@@ -325,7 +325,7 @@ module.exports = JSON.parse("{\"id\":\"analytic_model\",\"title\":\"Analytic Mod
 /*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"id\":\"model\",\"type\":\"model\",\"title\":\"Model\",\"hint\":null},{\"id\":\"serviceDeliveryManager\",\"type\":\"stakeholder\",\"title\":\"Service Delivery Manager\",\"hint\":\"Who is the Service Delivery Manager responsible for the Intervention?\"},{\"id\":\"frontLineServiceDeliverer\",\"type\":\"stakeholder\",\"title\":\"Front-line Service Deliverer\",\"hint\":\"Who is the Front-line Service Deliverer?\"},{\"id\":\"user\",\"type\":\"stakeholder\",\"title\":\"Client / User\",\"hint\":\"Who is the direct user of the service?\"},{\"id\":\"serviceOrganisationManager\",\"type\":\"stakeholder\",\"title\":\"Service Organisation Manager\",\"hint\":\"Who is the Service Organisation Manager for the Intervention?\"},{\"id\":\"servicePolicyMaker\",\"type\":\"stakeholder\",\"title\":\"Service Policy Maker\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},{\"id\":\"instigatorsOfChange\",\"type\":\"stakeholder\",\"title\":\"Instigators of Change\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},{\"id\":\"changeMakers\",\"type\":\"stakeholder\",\"title\":\"Change Makers\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},{\"id\":\"subjectsOfChange\",\"type\":\"stakeholder\",\"title\":\"Subjects of Change\",\"hint\":\"Who are the idenitified subjects of change within the intervention?\"},{\"id\":\"broker\",\"type\":\"stakeholder\",\"title\":\"Broker\",\"hint\":\"Is there an active Broker between the Instigators of Change and Change Makers? If so, who are they?\"},{\"id\":\"changeTheorists\",\"type\":\"stakeholder\",\"title\":\"Change Theorists\",\"hint\":\"Who are the Change Theorists for the Intervention?\"},{\"id\":\"beneficiaries\",\"type\":\"stakeholder\",\"title\":\"Beneficiaries\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},{\"id\":\"victims\",\"type\":\"stakeholder\",\"title\":\"Victims\",\"hint\":\"Are there any identified victims? If so, who are they?\"}]");
+module.exports = JSON.parse("[{\"id\":\"model\",\"type\":\"model\"},{\"id\":\"serviceDeliveryManager\",\"type\":\"stakeholder\"},{\"id\":\"frontLineServiceDeliverer\",\"type\":\"stakeholder\"},{\"id\":\"user\",\"type\":\"stakeholder\"},{\"id\":\"serviceOrganisationManager\",\"type\":\"stakeholder\"},{\"id\":\"servicePolicyMaker\",\"type\":\"stakeholder\"},{\"id\":\"instigatorsOfChange\",\"type\":\"stakeholder\"},{\"id\":\"changeMakers\",\"type\":\"stakeholder\"},{\"id\":\"subjectsOfChange\",\"type\":\"stakeholder\"},{\"id\":\"broker\",\"type\":\"stakeholder\"},{\"id\":\"changeTheorists\",\"type\":\"stakeholder\"},{\"id\":\"beneficiaries\",\"type\":\"stakeholder\"},{\"id\":\"victims\",\"type\":\"stakeholder\"}]");
 
 /***/ }),
 
@@ -345,7 +345,6 @@ var _definitions_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__we
 /* harmony import */ var _Guide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Guide */ "./js/aspects/analytic_model/Guide.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components */ "./js/aspects/analytic_model/components/index.js");
 
- // import NODES from "./nodes.json";
 
 
 
@@ -353,8 +352,7 @@ var _definitions_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__we
   CONFIG: _config_json__WEBPACK_IMPORTED_MODULE_0__,
   DEFINITIONS: _definitions_json__WEBPACK_IMPORTED_MODULE_1__,
   Guide: _Guide__WEBPACK_IMPORTED_MODULE_2__["default"],
-  Components: _components__WEBPACK_IMPORTED_MODULE_3__ // NODES,
-
+  Components: _components__WEBPACK_IMPORTED_MODULE_3__
 });
 
 /***/ }),
@@ -593,7 +591,7 @@ module.exports = JSON.parse("{\"id\":\"change_model\",\"title\":\"Change Model\"
 /*! exports provided: 0, 1, 2, 3, 4, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"id\":\"model\",\"type\":\"model\",\"title\":\"Model\",\"hint\":null},{\"id\":\"first_order\",\"type\":\"group\",\"title\":\"First Order\",\"children\":[{\"id\":\"vision\",\"dataType\":\"string\",\"label\":\"How were the vision and objectives set?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"plan\",\"dataType\":\"string\",\"label\":\"How was a plan set up to deliver the vision?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"execute\",\"dataType\":\"string\",\"label\":\"How is the plan being executed?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"measure\",\"dataType\":\"string\",\"label\":\"How are observations and measurements being recorded? If not, what needs to be enabled to do so?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}}]},{\"id\":\"second_order\",\"type\":\"group\",\"title\":\"Second Order\",\"children\":[{\"id\":\"sense_making\",\"dataType\":\"string\",\"label\":\"When do you review the plans and vision?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"languaging\",\"dataType\":\"string\",\"label\":\"What changes have been made to how the intervention has been understood?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"committing\",\"dataType\":\"string\",\"label\":\"How has the service delivery of the intervention changed from its original plans?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}}]},{\"id\":\"third_order\",\"type\":\"group\",\"title\":\"Third Order\",\"children\":[{\"id\":\"processes\",\"dataType\":\"string\",\"label\":\"What processes provoke or enable second order questioning?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}}]},{\"id\":\"fourth_order\",\"type\":\"group\",\"title\":\"Fourth Order\",\"children\":[{\"id\":\"unexpected_events\",\"dataType\":\"string\",\"label\":\"Have there been instances where you have seen unexpected events occurred?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"event_cause\",\"dataType\":\"string\",\"label\":\"What happened to allow this event to occur?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"change_origin\",\"dataType\":\"string\",\"label\":\"What was the origin of the change? And what was the change?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}}]}]");
+module.exports = JSON.parse("[{\"id\":\"model\",\"type\":\"model\"},{\"id\":\"first_order\",\"type\":\"group\",\"title\":\"First Order\",\"children\":[{\"id\":\"vision\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"plan\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"execute\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"measure\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}}]},{\"id\":\"second_order\",\"type\":\"group\",\"title\":\"Second Order\",\"children\":[{\"id\":\"sense_making\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"languaging\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"committing\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}}]},{\"id\":\"third_order\",\"type\":\"group\",\"title\":\"Third Order\",\"children\":[{\"id\":\"processes\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}}]},{\"id\":\"fourth_order\",\"type\":\"group\",\"title\":\"Fourth Order\",\"children\":[{\"id\":\"unexpected_events\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"event_cause\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"change_origin\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}}]}]");
 
 /***/ }),
 
@@ -729,7 +727,7 @@ module.exports = JSON.parse("{\"id\":\"community_reporting\",\"title\":\"Communi
 /*! exports provided: 0, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"id\":\"data\",\"type\":\"externals\",\"title\":\"Community Reporting\",\"hint\":\"Please add any Community Reports your project may have.\",\"useImages\":false}]");
+module.exports = JSON.parse("[{\"id\":\"data\",\"type\":\"externals\",\"useImages\":false}]");
 
 /***/ }),
 
@@ -862,7 +860,7 @@ module.exports = JSON.parse("{\"id\":\"documents\",\"title\":\"Documents\",\"rou
 /*! exports provided: 0, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"id\":\"data\",\"type\":\"externals\",\"title\":\"Documents and Files\",\"hint\":\"Please add any Documents and Files your project may have.\",\"useImages\":true}]");
+module.exports = JSON.parse("[{\"id\":\"data\",\"type\":\"externals\",\"useImages\":true}]");
 
 /***/ }),
 
@@ -1325,7 +1323,7 @@ module.exports = JSON.parse("{\"id\":\"intervention_theory_model\",\"title\":\"I
 /*! exports provided: 0, 1, 2, 3, 4, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"id\":\"model\",\"type\":\"model\",\"title\":\"Model\",\"hint\":null},{\"id\":\"wellbeing\",\"type\":\"group\",\"title\":\"Human well-being and Environment\",\"children\":[{\"id\":\"items\",\"dataType\":\"array\",\"label\":\"Which aspects of human well-being and of the environment are relevant to your service? Are some more significant than others?\",\"componentName\":\"VCheckList\",\"componentProps\":{\"options\":[{\"value\":\"physical_env\",\"label\":\"Physical Envrionment\"},{\"value\":\"socio_cultural_env\",\"label\":\"Socio-cultural Environment\"},{\"value\":\"faculties_skills\",\"label\":\"Faculties and Skills\"},{\"value\":\"mental_psych\",\"label\":\"Mental and Psychological\"},{\"value\":\"physiological\",\"label\":\"Physiological\"},{\"value\":\"socio_economic\",\"label\":\"Socio-Economic\"}]}}]},{\"id\":\"innovation\",\"type\":\"group\",\"title\":\"Innovation and change\",\"children\":[{\"id\":\"items\",\"dataType\":\"array\",\"label\":\"What aspects of the service lifecycle are important regarding your innovation and change?\",\"componentName\":\"VCheckList\",\"componentProps\":{\"options\":[{\"value\":\"transformation\",\"label\":\"Transformation\"},{\"value\":\"development\",\"label\":\"Development\"},{\"value\":\"facilitation\",\"label\":\"Facilitation\"},{\"value\":\"rehabilitation\",\"label\":\"Rehabilitation\"},{\"value\":\"remedy\",\"label\":\"Remedy\"},{\"value\":\"palliation\",\"label\":\"Palliation\"},{\"value\":\"prevention\",\"label\":\"Prevention\"}]}}]},{\"id\":\"intervention\",\"type\":\"group\",\"title\":\"Intervention\",\"children\":[{\"id\":\"items\",\"dataType\":\"array\",\"label\":\"What type of intervention is occuring?\",\"componentName\":\"VCheckList\",\"componentProps\":{\"options\":[{\"value\":\"identification\",\"label\":\"Identification & Planning\"},{\"value\":\"coordination_delivery\",\"label\":\"Coordination & Delivery\"},{\"value\":\"management\",\"label\":\"Management\"},{\"value\":\"governance\",\"label\":\"Governance\"},{\"value\":\"learning\",\"label\":\"Learning\"}]}}]},{\"id\":\"learning\",\"type\":\"group\",\"title\":\"Learning\",\"children\":[{\"id\":\"items\",\"dataType\":\"array\",\"label\":\"How is learning happening in your intervention?\",\"componentName\":\"VCheckList\",\"componentProps\":{\"options\":[{\"value\":\"research_evidence\",\"label\":\"Research & Evidence\"},{\"value\":\"trials\",\"label\":\"Trials\"},{\"value\":\"service_improvement\",\"label\":\"Service Improvement\"}]}}]}]");
+module.exports = JSON.parse("[{\"id\":\"model\",\"type\":\"model\",\"title\":\"Model\",\"hint\":null},{\"id\":\"wellbeing\",\"type\":\"group\",\"children\":[{\"id\":\"items\",\"dataType\":\"array\",\"componentName\":\"VCheckList\",\"componentProps\":{\"options\":[{\"value\":\"physical_env\",\"lang\":\"aspects.intervention_theory_model.options.wellbeing.physical_env\"},{\"value\":\"socio_cultural_env\",\"lang\":\"aspects.intervention_theory_model.options.wellbeing.socio_cultural_env\"},{\"value\":\"faculties_skills\",\"lang\":\"aspects.intervention_theory_model.options.wellbeing.faculties_skills\"},{\"value\":\"mental_psych\",\"lang\":\"aspects.intervention_theory_model.options.wellbeing.mental_psych\"},{\"value\":\"physiological\",\"lang\":\"aspects.intervention_theory_model.options.wellbeing.physiological\"},{\"value\":\"socio_economic\",\"lang\":\"aspects.intervention_theory_model.options.wellbeing.socio_economic\"}]}}]},{\"id\":\"innovation\",\"type\":\"group\",\"children\":[{\"id\":\"items\",\"dataType\":\"array\",\"componentName\":\"VCheckList\",\"componentProps\":{\"options\":[{\"value\":\"transformation\",\"lang\":\"aspects.intervention_theory_model.options.innovation.transformation\"},{\"value\":\"development\",\"lang\":\"aspects.intervention_theory_model.options.innovation.development\"},{\"value\":\"facilitation\",\"lang\":\"aspects.intervention_theory_model.options.innovation.facilitation\"},{\"value\":\"rehabilitation\",\"lang\":\"aspects.intervention_theory_model.options.innovation.rehabilitation\"},{\"value\":\"remedy\",\"lang\":\"aspects.intervention_theory_model.options.innovation.remedy\"},{\"value\":\"palliation\",\"lang\":\"aspects.intervention_theory_model.options.innovation.palliation\"},{\"value\":\"prevention\",\"lang\":\"aspects.intervention_theory_model.options.innovation.prevention\"}]}}]},{\"id\":\"intervention\",\"type\":\"group\",\"children\":[{\"id\":\"items\",\"dataType\":\"array\",\"componentName\":\"VCheckList\",\"componentProps\":{\"options\":[{\"value\":\"identification\",\"lang\":\"aspects.intervention_theory_model.options.intervention.identification\"},{\"value\":\"coordination_delivery\",\"lang\":\"aspects.intervention_theory_model.options.intervention.coordination_delivery\"},{\"value\":\"management\",\"lang\":\"aspects.intervention_theory_model.options.intervention.management\"},{\"value\":\"governance\",\"lang\":\"aspects.intervention_theory_model.options.intervention.governance\"},{\"value\":\"learning\",\"lang\":\"aspects.intervention_theory_model.options.intervention.learning\"}]}}]},{\"id\":\"learning\",\"type\":\"group\",\"children\":[{\"id\":\"items\",\"dataType\":\"array\",\"componentName\":\"VCheckList\",\"componentProps\":{\"options\":[{\"value\":\"research_evidence\",\"lang\":\"aspects.intervention_theory_model.options.learning.research_evidence\"},{\"value\":\"trials\",\"lang\":\"aspects.intervention_theory_model.options.learning.trials\"},{\"value\":\"service_improvement\",\"lang\":\"aspects.intervention_theory_model.options.learning.service_improvement\"}]}}]}]");
 
 /***/ }),
 
@@ -1345,7 +1343,6 @@ var _definitions_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__we
 /* harmony import */ var _Guide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Guide */ "./js/aspects/intervention_theory_model/Guide.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components */ "./js/aspects/intervention_theory_model/components/index.js");
 
- // import NODES from "./nodes.json";
 
 
 
@@ -1353,8 +1350,6 @@ var _definitions_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__we
   CONFIG: _config_json__WEBPACK_IMPORTED_MODULE_0__,
   DEFINITIONS: _definitions_json__WEBPACK_IMPORTED_MODULE_1__,
   Guide: _Guide__WEBPACK_IMPORTED_MODULE_2__["default"],
-  // NODES,
-  // Functions,
   Components: _components__WEBPACK_IMPORTED_MODULE_3__
 });
 
@@ -1713,7 +1708,7 @@ module.exports = JSON.parse("{\"id\":\"moral_ordering_model\",\"title\":\"Moral 
 /*! exports provided: 0, 1, 2, 3, 4, 5, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"id\":\"model\",\"type\":\"model\",\"title\":\"Model\",\"hint\":null},{\"id\":\"defineEthos\",\"type\":\"group\",\"title\":\"Define Ethos\",\"children\":[{\"id\":\"values\",\"dataType\":\"string\",\"label\":\"What values are important that the intervention comes to address?\",\"componentName\":\"VTextarea\"},{\"id\":\"definedBy\",\"dataType\":\"string\",\"label\":\"How do these values come to be defined?\",\"componentName\":\"VRadioList\",\"componentProps\":{\"options\":[{\"value\":\"policy\",\"label\":\"Policy\"},{\"value\":\"meeting\",\"label\":\"Meeting\"},{\"value\":\"other\",\"label\":\"Other\"}]}},{\"id\":\"evidenceUrl\",\"dataType\":\"string\",\"label\":\"What (external) evidence is available to support this?\",\"componentName\":\"VInput\",\"componentProps\":{\"type\":\"url\",\"placeholder\":\"https://\"}}]},{\"id\":\"planManagePrior\",\"type\":\"group\",\"title\":\"Plan and Manage - Prior actions\",\"hint\":\"\",\"children\":[{\"id\":\"actions\",\"dataType\":\"string\",\"label\":\"What actions were being undertaken prior to the intervention?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"actors\",\"dataType\":\"array\",\"label\":\"Who was involved with these prior actions?\",\"componentName\":\"StakeholderMultiEditor\"},{\"id\":\"evidenceUrl\",\"dataType\":\"string\",\"label\":\"What (external) evidence is available to support this?\",\"componentName\":\"VInput\",\"componentProps\":{\"type\":\"url\",\"placeholder\":\"https://\"}}]},{\"id\":\"planManageCurrent\",\"type\":\"group\",\"title\":\"Plan and Manage - Current actions\",\"hint\":\"\",\"children\":[{\"id\":\"actions\",\"dataType\":\"string\",\"label\":\"What actions are now being undertaken within the pilot?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"actors\",\"dataType\":\"array\",\"label\":\"What ongoing actions are being taken?\",\"componentName\":\"StakeholderMultiEditor\"},{\"id\":\"evidenceUrl\",\"dataType\":\"string\",\"label\":\"What (external) evidence is available to support this?\",\"componentName\":\"VInput\",\"componentProps\":{\"type\":\"url\",\"placeholder\":\"https://\"}}]},{\"id\":\"deliver\",\"type\":\"group\",\"title\":\"Deliver\",\"children\":[{\"id\":\"method\",\"dataType\":\"string\",\"label\":\"How is the intervention delivered?\",\"componentName\":\"VRadioList\",\"componentProps\":{\"options\":[{\"value\":\"policy\",\"label\":\"Policy\"},{\"value\":\"meeting\",\"label\":\"Meeting\"},{\"value\":\"other\",\"label\":\"Other\"}]}},{\"id\":\"actors\",\"dataType\":\"array\",\"label\":\"By whom is it delivered?\",\"componentName\":\"StakeholderMultiEditor\"},{\"id\":\"evidenceUrl\",\"dataType\":\"string\",\"label\":\"What (external) evidence is available to support this?\",\"componentName\":\"VInput\",\"componentProps\":{\"type\":\"url\",\"placeholder\":\"https://\"}}]},{\"id\":\"govern\",\"type\":\"group\",\"title\":\"Govern\",\"hint\":\"\",\"children\":[{\"id\":\"actions\",\"dataType\":\"string\",\"label\":\"How is the intervention governed? What measures are put in place to ensure the outcomes were as intended?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"actors\",\"dataType\":\"array\",\"label\":\"Who is evaluating this?\",\"componentName\":\"StakeholderMultiEditor\"},{\"id\":\"outcomes\",\"dataType\":\"string\",\"label\":\"Are outcomes embodied in targets and measurements? And if so, whose?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"evolution\",\"dataType\":\"string\",\"label\":\"How does this impact on the evolution of the service?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"improvements\",\"dataType\":\"string\",\"label\":\"How are improvements identified? How are they implemented?\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}}]}]");
+module.exports = JSON.parse("[{\"id\":\"model\",\"type\":\"model\"},{\"id\":\"defineEthos\",\"type\":\"group\",\"children\":[{\"id\":\"values\",\"dataType\":\"string\",\"componentName\":\"VTextarea\"},{\"id\":\"definedBy\",\"dataType\":\"string\",\"componentName\":\"VRadioList\",\"componentProps\":{\"options\":[{\"value\":\"policy\",\"lang\":\"aspects.moral_ordering_model.options.sources.policy\"},{\"value\":\"meeting\",\"lang\":\"aspects.moral_ordering_model.options.sources.meeting\"},{\"value\":\"other\",\"lang\":\"aspects.moral_ordering_model.options.sources.other\"}]}},{\"id\":\"evidenceUrl\",\"dataType\":\"string\",\"componentName\":\"VInput\",\"componentProps\":{\"type\":\"url\",\"placeholder\":\"https://\"}}]},{\"id\":\"planManagePrior\",\"type\":\"group\",\"children\":[{\"id\":\"actions\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"actors\",\"dataType\":\"array\",\"componentName\":\"StakeholderMultiEditor\"},{\"id\":\"evidenceUrl\",\"dataType\":\"string\",\"componentName\":\"VInput\",\"componentProps\":{\"type\":\"url\",\"placeholder\":\"https://\"}}]},{\"id\":\"planManageCurrent\",\"type\":\"group\",\"hint\":\"\",\"children\":[{\"id\":\"actions\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"actors\",\"dataType\":\"array\",\"componentName\":\"StakeholderMultiEditor\"},{\"id\":\"evidenceUrl\",\"dataType\":\"string\",\"label\":\"What (external) evidence is available to support this?\",\"componentName\":\"VInput\",\"componentProps\":{\"type\":\"url\",\"placeholder\":\"https://\"}}]},{\"id\":\"deliver\",\"type\":\"group\",\"children\":[{\"id\":\"method\",\"dataType\":\"string\",\"componentName\":\"VRadioList\",\"componentProps\":{\"options\":[{\"value\":\"policy\",\"lang\":\"aspects.moral_ordering_model.options.sources.policy\"},{\"value\":\"meeting\",\"lang\":\"aspects.moral_ordering_model.options.sources.meeting\"},{\"value\":\"other\",\"lang\":\"aspects.moral_ordering_model.options.sources.other\"}]}},{\"id\":\"actors\",\"dataType\":\"array\",\"componentName\":\"StakeholderMultiEditor\"},{\"id\":\"evidenceUrl\",\"dataType\":\"string\",\"componentName\":\"VInput\",\"componentProps\":{\"type\":\"url\",\"placeholder\":\"https://\"}}]},{\"id\":\"govern\",\"type\":\"group\",\"children\":[{\"id\":\"actions\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"actors\",\"dataType\":\"array\",\"componentName\":\"StakeholderMultiEditor\"},{\"id\":\"outcomes\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"evolution\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"improvements\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}}]}]");
 
 /***/ }),
 
@@ -1734,7 +1729,6 @@ var _definitions_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__we
 /* harmony import */ var _Functions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Functions */ "./js/aspects/moral_ordering_model/Functions.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components */ "./js/aspects/moral_ordering_model/components/index.js");
 
- // import NODES from "./nodes.json";
 
 
 
@@ -1742,7 +1736,6 @@ var _definitions_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__we
 /* harmony default export */ __webpack_exports__["default"] = ({
   CONFIG: _config_json__WEBPACK_IMPORTED_MODULE_0__,
   DEFINITIONS: _definitions_json__WEBPACK_IMPORTED_MODULE_1__,
-  // NODES,
   Guide: _Guide__WEBPACK_IMPORTED_MODULE_2__["default"],
   Functions: _Functions__WEBPACK_IMPORTED_MODULE_3__["default"],
   Components: _components__WEBPACK_IMPORTED_MODULE_4__
@@ -1913,7 +1906,7 @@ module.exports = JSON.parse("{\"id\":\"social_media\",\"title\":\"Social Media\"
 /*! exports provided: 0, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"id\":\"data\",\"type\":\"social\",\"title\":\"Social Media\"}]");
+module.exports = JSON.parse("[{\"id\":\"data\",\"type\":\"social\"}]");
 
 /***/ }),
 
@@ -2046,7 +2039,7 @@ module.exports = JSON.parse("{\"id\":\"theory_of_change\",\"title\":\"Theory of 
 /*! exports provided: 0, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"id\":\"data\",\"type\":\"externals\",\"title\":\"Theory of Change\",\"hint\":\"Please add any theories of change your project may have.\",\"useImages\":false}]");
+module.exports = JSON.parse("[{\"id\":\"data\",\"type\":\"externals\",\"useImages\":false}]");
 
 /***/ }),
 
@@ -5041,7 +5034,7 @@ for (var _i = 0, _keys = keys; _i < _keys.length; _i++) {
 /*! exports provided: app, hints, activity_types, aspects, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"app\":{\"project\":\"Project\",\"name\":\"Name\",\"title\":\"Title\",\"created_by\":\"Created by\",\"description\":\"Description\",\"label\":\"Label\",\"type\":\"Type\",\"colour\":\"Colour\",\"web_address\":\"Web address\",\"next\":\"Next\",\"add_new_item\":\"Add new item\",\"maximum_items\":\"Maximum {count} items | Maxumum {count} item | Maximum {count} items\"},\"hints\":{\"type_and_enter\":\"Type the name below and press enter.\"},\"activity_types\":{\"user\":\"User\",\"organisation\":\"Organisation\",\"service\":\"Service\"},\"aspects\":{\"co_creation_of_service_model\":{\"title\":\"Co-Creation of Service Model\",\"definitions\":{\"model\":{\"title\":\"Model\"},\"drivers\":{\"title\":\"Drivers and Motivations\",\"hint\":\"What were / are the drivers and motivations of the project? Was it a statutory requirement, recognition of a need or demand, seizing an opportunity, addressing an inequality?\",\"body\":{\"label\":\"Drivers and Motivations\",\"hint\":\"What are the drivers and motivations involved?\"}},\"policyDef\":{\"title\":\"Policy Definer\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"specDes\":{\"title\":\"Specifier and Designer\",\"hint\":\"Who specifies / specified and designs / designed the service delivery processes and resources?\"},\"deployment\":{\"title\":\"Deployer\",\"hint\":\"Who deploys / deployed and activates / activated those processes and resources?\"},\"delivery\":{\"title\":\"Deliverer\",\"hint\":\"Who is responsible for the delivery mechanism(s), channels and roles in your pilot?\"},\"evaluation\":{\"title\":\"Evaluator\",\"hint\":\"Who is the evaluator(s) and governors of the service?\"},\"user\":{\"title\":\"User\",\"hint\":\"Who is the direct user of the service?\"},\"beneficiary\":{\"title\":\"Beneficiary\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"initiator\":{\"title\":\"Initiator\",\"hint\":\"Who are, or were, the instigators who initiated your pilot activity?\"},\"extsvc\":{\"title\":\"External Technical Services\",\"hint\":\"What reusable facilities, (technical and human) resources, services and sources of information were developed and used in support of these service definition and development processes? What external resources and services (e.g. communications and social media) were/are used?\"},\"extorg\":{\"title\":\"External Organisations\",\"hint\":\"Are there any relevant actors, stakeholders or agencies which are relevant to the pilot, but which remain outside its vision and ethos?\"},\"infsvc\":{\"title\":\"Infrastructural Services\",\"hint\":\"What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?\"}}}}}");
+module.exports = JSON.parse("{\"app\":{\"project\":\"Project\",\"name\":\"Name\",\"title\":\"Title\",\"created_by\":\"Created by\",\"description\":\"Description\",\"label\":\"Label\",\"type\":\"Type\",\"colour\":\"Colour\",\"web_address\":\"Web address\",\"image\":\"Image\",\"image_remove\":\"Remove image\",\"image_drag_prompt\":\"Drag your image here to begin or click to browse.\",\"image_is_uploading\":\"Uploading image...\",\"image_upload_error\":\"Upload error\",\"next\":\"Next\",\"ok\":\"OK\",\"delete\":\"Delete\",\"try_again\":\"Try again\",\"add_new_item\":\"Add new item\",\"maximum_items\":\"Maximum {count} items | Maxumum {count} item | Maximum {count} items\"},\"hints\":{\"type_and_enter\":\"Type the name below and press enter.\",\"editor_double_click_edit\":\"Double-click an item to edit it, and enter to save\",\"social_twitter_add\":\"Enter a Twitter hashtag, with or without the #. Press enter to add.\",\"social_facebook_add\":\"Add full links (URLs) to Facebook groups or pages.\",\"social_instagram_add\":\"Enter an Instagram hashtag, with or without the #. Press enter to add.\",\"social_youtube_add\":\"Enter a link to a YouTube video and press enter to add.\"},\"activity_types\":{\"user\":\"User\",\"organisation\":\"Organisation\",\"service\":\"Service\"},\"aspects\":{\"analytic_model\":{\"title\":\"Analytic Model\",\"dashboard\":{\"meso\":{\"label\":\"Meso\",\"description\":\"There may be a number of stages at this level.\"},\"macro\":{\"label\":\"Macro\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"title\":\"Service Delivery Manager\",\"hint\":\"Who is the Service Delivery Manager responsible for the Intervention?\"},\"frontLineServiceDeliverer\":{\"title\":\"Front-line Service Deliverer\",\"hint\":\"Who is the Front-line Service Deliverer?\"},\"user\":{\"title\":\"Client / User\",\"hint\":\"Who is the direct user of the service?\"},\"serviceOrganisationManager\":{\"title\":\"Service Organisation Manager\",\"hint\":\"Who is the Service Organisation Manager for the Intervention?\"},\"servicePolicyMaker\":{\"title\":\"Service Policy Maker\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"instigatorsOfChange\":{\"title\":\"Instigators of Change\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},\"changeMakers\":{\"title\":\"Change Makers\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},\"subjectsOfChange\":{\"title\":\"Subjects of Change\",\"hint\":\"Who are the idenitified subjects of change within the intervention?\"},\"broker\":{\"title\":\"Broker\",\"hint\":\"Is there an active Broker between the Instigators of Change and Change Makers? If so, who are they?\"},\"changeTheorists\":{\"title\":\"Change Theorists\",\"hint\":\"Who are the Change Theorists for the Intervention?\"},\"beneficiaries\":{\"title\":\"Beneficiaries\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"victims\":{\"title\":\"Victims\",\"hint\":\"Are there any identified victims? If so, who are they?\"}}},\"change_model\":{\"title\":\"Change Model\",\"dashboard\":{\"first_order\":\"First Order\",\"risk\":\"Risk\",\"vision\":\"Vision\",\"plan\":\"Plan\",\"execute\":\"Execute\",\"measure\":\"Measure\",\"second_order\":\"Second Order\",\"ambiguity\":\"Ambiguity\",\"sense_making\":\"Sense-Making\",\"languaging\":\"\\\"Languaging\\\"\",\"committing\":\"Committing\",\"third_order\":\"Third Order\",\"ambivalence\":\"Ambivalence\",\"zero_order\":\"Zero Order\",\"fourth_order\":\"Fourth Order!\"},\"definitions\":{\"model\":{\"title\":\"Model\"},\"first_order\":{\"vision\":{\"label\":\"How were the vision and objectives set?\"},\"plan\":{\"label\":\"How was a plan set up to deliver the vision?\"},\"execute\":{\"label\":\"How is the plan being executed?\"},\"measure\":{\"label\":\"How are observations and measurements being recorded? If not, what needs to be enabled to do so?\"}},\"second_order\":{\"sense_making\":{\"label\":\"When do you review the plans and vision?\"},\"languaging\":{\"label\":\"What changes have been made to how the intervention has been understood?\"},\"committing\":{\"label\":\"How has the service delivery of the intervention changed from its original plans?\"}},\"third_order\":{\"processes\":{\"label\":\"What processes provoke or enable second order questioning?\"}},\"fourth_order\":{\"unexpected_events\":{\"label\":\"Have there been instances where you have seen unexpected events occurred?\"},\"event_cause\":{\"label\":\"What happened to allow this event to occur?\"},\"change_origin\":{\"label\":\"What was the origin of the change? And what was the change?\"}}}},\"community_reporting\":{\"title\":\"Community Reporting\",\"dashboard\":{\"title\":\"Community Reporting\",\"empty_set\":\"There are no community reporting items for this project.\",\"manage\":\"Manage Community Reporting\"},\"definitions\":{\"data\":{\"title\":\"Community Reporting\",\"hint\":\"Please add any Community Reports your project may have.\"}}},\"documents\":{\"title\":\"Documents\",\"dashboard\":{\"title\":\"Documents and Files\",\"empty_set\":\"There are no documents or files for this project.\",\"manage\":\"Manage documents and files\"},\"definitions\":{\"data\":{\"title\":\"Documents and Files\",\"hint\":\"Please add any Documents and Files your project may have.\"}}},\"intervention_theory_model\":{\"title\":\"Intervention Theory Model\",\"dashboard\":{\"wellbeing\":\"Well Being\"},\"options\":{\"wellbeing\":{\"physical_env\":\"Physical Envrionment\",\"socio_cultural_env\":\"Socio-cultural Environment\",\"faculties_skills\":\"Faculties and Skills\",\"mental_psych\":\"Mental and Psychological\",\"physiological\":\"Physiological\",\"socio_economic\":\"Socio-Economic\"},\"innovation\":{\"transformation\":\"Transformation\",\"development\":\"Development\",\"facilitation\":\"Facilitation\",\"rehabilitation\":\"Rehabilitation\",\"remedy\":\"Remedy\",\"palliation\":\"Palliation\",\"prevention\":\"Prevention\"},\"intervention\":{\"identification\":\"Identification & Planning\",\"coordination_delivery\":\"Coordination & Delivery\",\"management\":\"Management\",\"governance\":\"Governance\",\"learning\":\"Learning\"},\"learning\":{\"research_evidence\":\"Research & Evidence\",\"trials\":\"Trials\",\"service_improvement\":\"Service Improvement\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"title\":\"Human well-being and Environment\",\"items\":{\"label\":\"Which aspects of human well-being and of the environment are relevant to your service? Are some more significant than others?\"}},\"innovation\":{\"title\":\"Innovation and change\",\"items\":{\"label\":\"What aspects of the service lifecycle are important regarding your innovation and change?\"}},\"intervention\":{\"title\":\"Intervention\",\"items\":{\"label\":\"What type of intervention is occuring?\"}},\"learning\":{\"title\":\"Learning\",\"items\":{\"label\":\"How is learning happening in your intervention?\"}}}},\"moral_ordering_model\":{\"title\":\"Moral Ordering\",\"dashboard\":{\"govern\":\"Govern\",\"deliver\":\"Deliver\",\"define_ethos\":\"Define Ethos\",\"define_ethos_items\":\"Values\\nPrinciples\\nIntentions\\nPolicies\",\"plan_manage\":\"Plan & Manage\",\"plan_manage_items\":\"Rules\\nResources\\nProcesses\\nAccounts\",\"experience\":\"Experience\",\"individual_cases\":\"Individual Cases\",\"the_service_level\":\"The Service Level\"},\"options\":{\"sources\":{\"policy\":\"Policy\",\"meeting\":\"Meeting\",\"other\":\"Other\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"defineEthos\":{\"title\":\"Define Ethos\",\"values\":{\"label\":\"What values are important that the intervention comes to address?\"},\"definedBy\":{\"label\":\"How do these values come to be defined?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"planManagePrior\":{\"title\":\"Plan and Manage - Prior actions\",\"actions\":{\"label\":\"What actions were being undertaken prior to the intervention?\"},\"actors\":{\"label\":\"Who was involved with these prior actions?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"planManageCurrent\":{\"title\":\"Plan and Manage - Current actions\",\"actions\":{\"label\":\"What actions are now being undertaken within the pilot?\"},\"actors\":{\"label\":\"What ongoing actions are being taken?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"deliver\":{\"title\":\"Deliver\",\"method\":{\"label\":\"How is the intervention delivered?\"},\"actors\":{\"label\":\"By whom is it delivered?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"govern\":{\"title\":\"Govern\",\"actions\":{\"label\":\"How is the intervention governed? What measures are put in place to ensure the outcomes were as intended?\"},\"actors\":{\"label\":\"Who is evaluating this?\"},\"outcomes\":{\"label\":\"Are outcomes embodied in targets and measurements? And if so, whose?\"},\"evolution\":{\"label\":\"How does this impact on the evolution of the service?\"},\"improvements\":{\"label\":\"How are improvements identified? How are they implemented?\"}}}},\"co_creation_of_service_model\":{\"title\":\"Co-Creation of Service Model\",\"definitions\":{\"model\":{\"title\":\"Model\"},\"drivers\":{\"title\":\"Drivers and Motivations\",\"hint\":\"What were / are the drivers and motivations of the project? Was it a statutory requirement, recognition of a need or demand, seizing an opportunity, addressing an inequality?\",\"body\":{\"label\":\"Drivers and Motivations\",\"hint\":\"What are the drivers and motivations involved?\"}},\"policyDef\":{\"title\":\"Policy Definer\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"specDes\":{\"title\":\"Specifier and Designer\",\"hint\":\"Who specifies / specified and designs / designed the service delivery processes and resources?\"},\"deployment\":{\"title\":\"Deployer\",\"hint\":\"Who deploys / deployed and activates / activated those processes and resources?\"},\"delivery\":{\"title\":\"Deliverer\",\"hint\":\"Who is responsible for the delivery mechanism(s), channels and roles in your pilot?\"},\"evaluation\":{\"title\":\"Evaluator\",\"hint\":\"Who is the evaluator(s) and governors of the service?\"},\"user\":{\"title\":\"User\",\"hint\":\"Who is the direct user of the service?\"},\"beneficiary\":{\"title\":\"Beneficiary\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"initiator\":{\"title\":\"Initiator\",\"hint\":\"Who are, or were, the instigators who initiated your pilot activity?\"},\"extsvc\":{\"title\":\"External Technical Services\",\"hint\":\"What reusable facilities, (technical and human) resources, services and sources of information were developed and used in support of these service definition and development processes? What external resources and services (e.g. communications and social media) were/are used?\"},\"extorg\":{\"title\":\"External Organisations\",\"hint\":\"Are there any relevant actors, stakeholders or agencies which are relevant to the pilot, but which remain outside its vision and ethos?\"},\"infsvc\":{\"title\":\"Infrastructural Services\",\"hint\":\"What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?\"}}},\"social_media\":{\"title\":\"Social Media\",\"dashboard\":{\"title\":\"Social Media\"},\"definitions\":{\"data\":{\"title\":\"Social Media\"}}},\"theory_of_change\":{\"title\":\"Theory of Change\",\"dashboard\":{\"title\":\"Theory of Change\",\"empty_set\":\"There are no theory of change items for this project.\",\"manage\":\"Manage Theory of Change\"},\"definitions\":{\"data\":{\"title\":\"Theory of Change\",\"hint\":\"Please add any theories of change your project may have.\"}}},\"welcome\":{\"title\":\"Welcome\",\"dashboard\":{\"summary\":\"Created by {user} on {date_time}\"}}}}");
 
 /***/ }),
 
@@ -8771,17 +8764,17 @@ var defaultTextConfig = {
       var config = {};
       config.meso = {
         position: "above",
-        label: "Meso",
+        label: this.$t('aspects.analytic_model.dashboard.meso.label'),
         labelColour: "#3d9970",
         lineColour: "#0074d9",
-        description: "There may be a number of stages at this level.",
+        description: this.$t('aspects.analytic_model.dashboard.meso.description'),
         x: 242,
         y: 215,
         width: 310
       };
       config.macro = {
         position: "below",
-        label: "Macro",
+        label: this.$t('aspects.analytic_model.dashboard.macro.label'),
         labelColour: "#3d9970",
         lineColour: "#85144b",
         x: 85,
@@ -8790,7 +8783,7 @@ var defaultTextConfig = {
       };
       config.micro = {
         position: "below",
-        label: "Micro",
+        label: this.$t('aspects.analytic_model.dashboard.micro.label'),
         labelColour: "#3d9970",
         lineColour: "#0074d9",
         x: 400,
@@ -9193,42 +9186,42 @@ var defaultTextConfig = {
     firstOrderConfigs: function firstOrderConfigs() {
       var configs = {};
       configs.label = _objectSpread({}, defaultTextConfig, {
-        text: 'First Order',
+        text: this.$t('aspects.change_model.dashboard.first_order'),
         fill: '#947194',
         x: 480,
         y: 435,
         visible: false
       });
       configs.risk = _objectSpread({}, defaultTextConfig, {
-        text: 'Risk',
+        text: this.$t('aspects.change_model.dashboard.risk'),
         fill: '#d317a4',
         x: 345,
         y: 600,
         visible: false
       });
       configs.vision = _objectSpread({}, defaultTextConfig, {
-        text: 'Vision',
+        text: this.$t('aspects.change_model.dashboard.vision'),
         fill: '#255d4d',
         x: 440,
         y: 375,
         visible: false
       });
       configs.plan = _objectSpread({}, defaultTextConfig, {
-        text: 'Plan',
+        text: this.$t('aspects.change_model.dashboard.plan'),
         fill: '#255d4d',
         x: 705,
         y: 515,
         visible: false
       });
       configs.execute = _objectSpread({}, defaultTextConfig, {
-        text: 'Execute',
+        text: this.$t('aspects.change_model.dashboard.execute'),
         fill: '#255d4d',
         x: 435,
         y: 670,
         visible: false
       });
       configs.measure = _objectSpread({}, defaultTextConfig, {
-        text: 'Measure',
+        text: this.$t('aspects.change_model.dashboard.measure'),
         fill: '#255d4d',
         x: 155,
         y: 520,
@@ -9264,35 +9257,35 @@ var defaultTextConfig = {
     secondOrderConfigs: function secondOrderConfigs() {
       var configs = {};
       configs.label = _objectSpread({}, defaultTextConfig, {
-        text: 'Second Order',
+        text: this.$t('aspects.change_model.dashboard.second_order'),
         fill: '#cab5ca',
         x: 390,
         y: 165,
         visible: false
       });
       configs.ambiguity = _objectSpread({}, defaultTextConfig, {
-        text: 'Ambiguity',
+        text: this.$t('aspects.change_model.dashboard.ambiguity'),
         fill: '#d317a4',
         x: 270,
         y: 115,
         visible: false
       });
       configs.sense_making = _objectSpread({}, defaultTextConfig, {
-        text: 'Sense-Making',
+        text: this.$t('aspects.change_model.dashboard.sense_making'),
         fill: '#a8bdb7',
         x: 100,
         y: 215,
         visible: false
       });
       configs.languaging = _objectSpread({}, defaultTextConfig, {
-        text: '"Languaging"',
+        text: this.$t('aspects.change_model.dashboard.languaging'),
         fill: '#a8bdb7',
         x: 350,
         y: 65,
         visible: false
       });
       configs.committing = _objectSpread({}, defaultTextConfig, {
-        text: 'Committing',
+        text: this.$t('aspects.change_model.dashboard.committing'),
         fill: '#a8bdb7',
         x: 610,
         y: 215,
@@ -9325,7 +9318,7 @@ var defaultTextConfig = {
     thirdOrderConfigs: function thirdOrderConfigs() {
       var configs = {};
       configs.label = _objectSpread({}, defaultTextConfig, {
-        text: 'Third Order',
+        text: this.$t('aspects.change_model.dashboard.third_order'),
         fill: '#3c003c',
         x: 45,
         y: 295,
@@ -9334,7 +9327,7 @@ var defaultTextConfig = {
         visible: false
       });
       configs.ambivalence = _objectSpread({}, defaultTextConfig, {
-        text: 'Ambivalence',
+        text: this.$t('aspects.change_model.dashboard.ambivalence'),
         fill: '#d317a4',
         x: 340,
         y: 295,
@@ -9366,7 +9359,7 @@ var defaultTextConfig = {
       }
 
       var config = {
-        text: 'Zero Order',
+        text: this.$t('aspects.change_model.dashboard.zero_order'),
         fill: '#2d2d68',
         x: 890,
         y: 645,
@@ -9384,7 +9377,7 @@ var defaultTextConfig = {
       }
 
       var config = {
-        text: 'Fourth Order!',
+        text: this.$t('aspects.change_model.dashboard.fourth_order'),
         fill: '#947194',
         x: 850,
         y: 35,
@@ -9874,39 +9867,33 @@ var defaultTextConfig = {
 
       var items = [{
         key: 'physical_env',
-        text: 'Physical Environment',
         fill: '#6161EA',
         x: 90,
         y: 160,
         width: 175
       }, {
         key: 'socio_cultural_env',
-        text: 'Socio-cultural Environment',
         fill: '#6161EA',
         x: 530,
         y: 160,
         width: 175
       }, {
         key: 'faculties_skills',
-        text: 'Faculties and Skills',
         x: 130,
         y: 300,
         width: 175
       }, {
         key: 'mental_psych',
-        text: 'Mental and Psychological',
         x: 490,
         y: 305,
         width: 220
       }, {
         key: 'socio_economic',
-        text: 'Socio-Economic',
         x: 25,
         y: 545,
         width: 280
       }, {
         key: 'physiological',
-        text: 'Physiological',
         x: 510,
         y: 545,
         width: 220
@@ -9938,7 +9925,7 @@ var defaultTextConfig = {
         itemConfig = {
           fontSize: 22,
           visible: isVisible,
-          text: item.text,
+          text: _this.$t("aspects.intervention_theory_model.options.wellbeing.".concat(item.key)),
           fill: item.fill ? item.fill : '#1818AA',
           x: item.x,
           y: item.y,
@@ -9948,7 +9935,7 @@ var defaultTextConfig = {
       });
       var headingConfig = {
         fontSize: 30,
-        text: 'Well Being',
+        text: this.$t("aspects.intervention_theory_model.dashboard.wellbeing"),
         fill: '#1818AA',
         x: 290,
         y: 450,
@@ -9962,31 +9949,26 @@ var defaultTextConfig = {
 
       var items = [{
         key: 'identification',
-        text: 'Identification & Planning',
         x: 20,
         y: 630,
         width: 220
       }, {
         key: 'coordination_delivery',
-        text: 'Coordination & Delivery',
         x: 155,
         y: 700,
         width: 220
       }, {
         key: 'management',
-        text: 'Management',
         x: 350,
         y: 740,
         width: 210
       }, {
         key: 'governance',
-        text: 'Governance',
         x: 510,
         y: 700,
         width: 200
       }, {
         key: 'learning',
-        text: 'Learning',
         x: 600,
         y: 630,
         width: 160
@@ -10006,7 +9988,7 @@ var defaultTextConfig = {
         itemConfig = {
           fontSize: 22,
           visible: isVisible,
-          text: item.text,
+          text: _this2.$t("aspects.intervention_theory_model.options.intervention.".concat(item.key)),
           fill: item.fill ? item.fill : '#D3332A',
           x: item.x,
           y: item.y,
@@ -10038,7 +10020,7 @@ var defaultTextConfig = {
       }
 
       lines = lodash_map__WEBPACK_IMPORTED_MODULE_1___default()(lines, function (line) {
-        return line.label;
+        return _this3.$t(line.lang);
       });
       var itemConfig = {
         x: 800,
@@ -10077,7 +10059,7 @@ var defaultTextConfig = {
       }
 
       lines = lodash_map__WEBPACK_IMPORTED_MODULE_1___default()(lines, function (line) {
-        return line.label;
+        return _this4.$t(line.lang);
       });
       var itemConfig = {
         visible: isVisible,
@@ -10309,22 +10291,22 @@ var defaultTextConfig = {
       data.govern = _objectSpread({}, defaults, {
         x: 570,
         y: 415,
-        text: "Govern"
+        text: this.$t('aspects.moral_ordering_model.dashboard.govern')
       });
       data.deliver = _objectSpread({}, defaults, {
         x: 420,
         y: 620,
-        text: "Deliver"
+        text: this.$t('aspects.moral_ordering_model.dashboard.deliver')
       });
       data.ethosLabel = _objectSpread({}, defaults, {
         x: 630,
         y: 150,
-        text: "Define Ethos"
+        text: this.$t('aspects.moral_ordering_model.dashboard.define_ethos')
       });
       data.ethosItems = _objectSpread({}, defaults, {
         x: 640,
         y: 200,
-        text: "Values\nPrinciples\nIntentions\nPolicies",
+        text: this.$t('aspects.moral_ordering_model.dashboard.define_ethos_items'),
         fontSize: 20,
         align: "left",
         lineHeight: 1.3
@@ -10333,13 +10315,13 @@ var defaultTextConfig = {
         x: 200,
         y: 275,
         width: 200,
-        text: "Plan & Manage"
+        text: this.$t('aspects.moral_ordering_model.dashboard.plan_manage')
       });
       data.planItems = _objectSpread({}, defaults, {
         x: 170,
         y: 310,
         width: 200,
-        text: "Rules\nResources\nProcesses\nAccounts",
+        text: this.$t('aspects.moral_ordering_model.dashboard.plan_manage_items'),
         fontSize: 20,
         align: "right",
         lineHeight: 1.3
@@ -10347,19 +10329,19 @@ var defaultTextConfig = {
       data.experience = _objectSpread({}, defaults, {
         x: 745,
         y: 570,
-        text: "Experience"
+        text: this.$t('aspects.moral_ordering_model.dashboard.experience')
       });
       data.individualCases = _objectSpread({}, defaults, {
         x: 835,
         y: 210,
-        text: "Individual Cases",
+        text: this.$t('aspects.moral_ordering_model.dashboard.individual_cases'),
         fontSize: 40,
         opacity: 0.6
       });
       data.serviceLevel = _objectSpread({}, defaults, {
         x: 835,
         y: 270,
-        text: "The Service Level",
+        text: this.$t('aspects.moral_ordering_model.dashboard.the_service_level'),
         fontSize: 40
       });
 
@@ -13376,6 +13358,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 var STATUS_INITIAL = 0;
@@ -13513,8 +13496,13 @@ var STATUS_REMOVED = 4;
       this.currentStatus = STATUS_SAVING;
       this.item.image = false;
       _services_Network__WEBPACK_IMPORTED_MODULE_1__["default"].uploadImage(this.projectId, formData).then(function (res) {
-        _this.item.image = res.filename;
-        _this.currentStatus = STATUS_SUCCESS;
+        if (res && res.success) {
+          _this.item.image = res.filename;
+          _this.currentStatus = STATUS_SUCCESS;
+        } else {
+          _this.uploadError = res.reason;
+          _this.currentStatus = STATUS_FAILED;
+        }
       })["catch"](function (err) {
         _this.uploadError = err.response;
         _this.currentStatus = STATUS_FAILED;
@@ -13585,6 +13573,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "GroupEditor",
   props: {
+    aspectId: String,
     definition: Object,
     value: Object
   },
@@ -13599,6 +13588,12 @@ __webpack_require__.r(__webpack_exports__);
       set: function set(value) {
         this.$emit("input", value);
       }
+    }
+  },
+  methods: {
+    groupLabel: function groupLabel(definition, child) {
+      var langKey = "aspects.".concat(this.aspectId, ".definitions.").concat(definition.id, ".").concat(child.id, ".label");
+      return this.$te(langKey) ? this.$t(langKey) : "[".concat(langKey, "]");
     }
   }
 });
@@ -13845,23 +13840,19 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 var tabs = [{
   "id": "twitter",
   "icon": "twitter-icon",
-  "class": "item-twitter-bg",
-  "hint": "Enter a Twitter hashtag, with or without the #. Press enter to add."
+  "class": "item-twitter-bg"
 }, {
   "id": "facebook",
   "icon": "facebook-icon",
-  "class": "item-facebook-bg",
-  "hint": "Add full links (URLs) to Facebook groups or pages."
+  "class": "item-facebook-bg"
 }, {
   "id": "instagram",
   "icon": "instagram-icon",
-  "class": "item-instagram-bg",
-  "hint": "Enter an Instagram hashtag, with or without the #. Press enter to add."
+  "class": "item-instagram-bg"
 }, {
   "id": "youtube",
   "icon": "youtube-icon",
-  "class": "item-youtube-bg",
-  "hint": "Enter a link to a YouTube video and press enter to add."
+  "class": "item-youtube-bg"
 }];
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "SocialEditor",
@@ -14642,6 +14633,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -15999,10 +15992,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       var tabs = lodash_map__WEBPACK_IMPORTED_MODULE_1___default()(_aspects__WEBPACK_IMPORTED_MODULE_5__["default"].all(), function (aspectConfig) {
         var labelRoute = null,
-            summaryRoute = null;
+            summaryRoute = null,
+            label = null;
 
         if (aspectConfig.routeName == 'project') {
-          aspectConfig.title = _this.project.name;
+          label = _this.project.name;
+        } else {
+          var labelLangKey = "aspects.".concat(aspectConfig.id, ".title");
+
+          if (_this.$te(labelLangKey)) {
+            label = _this.$t(labelLangKey);
+          } else {
+            label = labelLangKey;
+          }
         }
 
         labelRoute = {
@@ -16023,7 +16025,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
         return {
           aspectConfig: aspectConfig,
-          label: aspectConfig.title,
+          label: label,
           labelRoute: labelRoute,
           summaryRoute: summaryRoute
         };
@@ -16479,6 +16481,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
 //
 //
 //
@@ -45982,7 +45985,9 @@ var render = function() {
     { ref: "container", staticClass: "app-content light community-reporting" },
     [
       _c("div", { staticClass: "container grid-xl" }, [
-        _c("h4", { staticClass: "mb-8 mt-4" }, [_vm._v("Community Reporting")]),
+        _c("h4", { staticClass: "mb-8 mt-4" }, [
+          _vm._v(_vm._s(_vm.$t("aspects.community_reporting.dashboard.title")))
+        ]),
         _vm._v(" "),
         _vm.communityReporting.length > 0
           ? _c(
@@ -46006,7 +46011,9 @@ var render = function() {
           ? _c("div", { staticClass: "empty" }, [
               _c("p", { staticClass: "empty-title h5" }, [
                 _vm._v(
-                  "There are no community reporting items for this project."
+                  _vm._s(
+                    _vm.$t("aspects.community_reporting.dashboard.empty_set")
+                  )
                 )
               ]),
               _vm._v(" "),
@@ -46030,7 +46037,13 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("Manage Community Reporting")]
+                  [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t("aspects.community_reporting.dashboard.manage")
+                      )
+                    )
+                  ]
                 )
               ])
             ])
@@ -46068,7 +46081,7 @@ var render = function() {
       _c("div", { staticClass: "scrollable scr-y" }, [
         _c("div", { staticClass: "container grid-x" }, [
           _c("h4", { staticClass: "mb-8 mt-4" }, [
-            _vm._v("Documents and Files")
+            _vm._v(_vm._s(_vm.$t("aspects.documents.dashboard.title")))
           ]),
           _vm._v(" "),
           _vm.documents
@@ -46092,7 +46105,9 @@ var render = function() {
           !_vm.documents.length
             ? _c("div", { staticClass: "empty" }, [
                 _c("p", { staticClass: "empty-title h5" }, [
-                  _vm._v("There are no documents or files for this project.")
+                  _vm._v(
+                    _vm._s(_vm.$t("aspects.documents.dashboard.empty_set"))
+                  )
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "empty-action" }, [
@@ -46115,7 +46130,11 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Manage documents and files")]
+                    [
+                      _vm._v(
+                        _vm._s(_vm.$t("aspects.documents.dashboard.manage"))
+                      )
+                    ]
                   )
                 ])
               ])
@@ -46799,7 +46818,11 @@ var render = function() {
         "main",
         { ref: "container", staticClass: "app-content light social-media" },
         [
-          _vm._m(0),
+          _c("div", { staticClass: "container grid-xl" }, [
+            _c("h4", { staticClass: "mb-8 mt-4" }, [
+              _vm._v(_vm._s(_vm.$t("aspects.social_media.dashboard.title")))
+            ])
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "container grid-xl" }, [
             _c("div", { staticClass: "columns" }, [
@@ -46892,16 +46915,7 @@ var render = function() {
       )
     : _vm._e()
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container grid-xl" }, [
-      _c("h4", { staticClass: "mb-8 mt-4" }, [_vm._v("Social Media")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -46928,7 +46942,9 @@ var render = function() {
     { ref: "container", staticClass: "app-content light theory-of-change" },
     [
       _c("div", { staticClass: "container grid-xl" }, [
-        _c("h4", { staticClass: "mb-8 mt-4" }, [_vm._v("Theory of Change")]),
+        _c("h4", { staticClass: "mb-8 mt-4" }, [
+          _vm._v(_vm._s(_vm.$t("aspects.theory_of_change.dashboard.title")))
+        ]),
         _vm._v(" "),
         _vm.theoryOfChange.length > 0
           ? _c(
@@ -46947,7 +46963,9 @@ var render = function() {
         !_vm.theoryOfChange.length
           ? _c("div", { staticClass: "empty" }, [
               _c("p", { staticClass: "empty-title h5" }, [
-                _vm._v("There are no theory of change items for this project.")
+                _vm._v(
+                  _vm._s(_vm.$t("aspects.theory_of_change.dashboard.empty_set"))
+                )
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "empty-action" }, [
@@ -46970,7 +46988,13 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("Manage Theory of Change")]
+                  [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t("aspects.theory_of_change.dashboard.manage")
+                      )
+                    )
+                  ]
                 )
               ])
             ])
@@ -48233,7 +48257,7 @@ var render = function() {
                 {
                   attrs: {
                     name: _vm.inputId("label"),
-                    label: "Label",
+                    label: _vm.$t("app.label"),
                     labelClass: "label-sm"
                   }
                 },
@@ -48264,7 +48288,7 @@ var render = function() {
                 {
                   attrs: {
                     name: _vm.inputId("url"),
-                    label: "URL",
+                    label: _vm.$t("app.web_address"),
                     labelClass: "label-sm"
                   }
                 },
@@ -48296,7 +48320,7 @@ var render = function() {
                     {
                       attrs: {
                         name: _vm.inputId("image"),
-                        label: "Image",
+                        label: _vm.$t("app.image"),
                         labelClass: "label-sm"
                       }
                     },
@@ -48330,14 +48354,22 @@ var render = function() {
                               _vm.isInitial
                                 ? _c("p", [
                                     _vm._v(
-                                      "\n\t\t\t\t\t\t\tDrag your image here to begin or click to browse\n\t\t\t\t\t\t"
+                                      "\n\t\t\t\t\t\t\t" +
+                                        _vm._s(
+                                          _vm.$t("app.image_drag_prompt")
+                                        ) +
+                                        "\n\t\t\t\t\t\t"
                                     )
                                   ])
                                 : _vm._e(),
                               _vm._v(" "),
                               _vm.isUploading
                                 ? _c("div", [
-                                    _c("p", [_vm._v("Uploading image...")]),
+                                    _c("p", [
+                                      _vm._v(
+                                        _vm._s(_vm.$t("app.image_is_uploading"))
+                                      )
+                                    ]),
                                     _vm._v(" "),
                                     _c("div", { staticClass: "loading mb-2" }),
                                     _vm._v(" "),
@@ -48368,32 +48400,36 @@ var render = function() {
                                   }
                                 }
                               },
-                              [_vm._v("Remove image")]
+                              [_vm._v(_vm._s(_vm.$t("app.image_remove")))]
                             )
                           ])
                         : _vm._e(),
                       _vm._v(" "),
                       _vm.isFailed
                         ? _c("div", [
-                            _c("h6", [_vm._v("Uploaded failed.")]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "btn btn-dark btn-sm",
-                                  attrs: { href: "javascript:void(0)" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.reset()
-                                    }
-                                  }
-                                },
-                                [_vm._v("Try again")]
+                            _c("h6", [
+                              _vm._v(
+                                _vm._s(_vm.$t("app.image_upload_error")) + "."
                               )
                             ]),
                             _vm._v(" "),
-                            _c("pre", [_vm._v(_vm._s(_vm.uploadError))])
+                            _c("p", [_vm._v(_vm._s(_vm.uploadError))]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-dark btn-sm",
+                                  on: {
+                                    click: function($event) {
+                                      $event.preventDefault()
+                                      return _vm.resetUpload()
+                                    }
+                                  }
+                                },
+                                [_vm._v(_vm._s(_vm.$t("app.try_again")))]
+                              )
+                            ])
                           ])
                         : _vm._e()
                     ]
@@ -48411,14 +48447,18 @@ var render = function() {
                 attrs: { type: "button" },
                 on: { click: _vm.doFinish }
               },
-              [_c("i", { staticClass: "icon icon-check" }), _vm._v(" OK")]
+              [
+                _c("i", { staticClass: "icon icon-check" }),
+                _vm._v(" " + _vm._s(_vm.$t("app.ok")))
+              ]
             ),
             _vm._v(" "),
             _c(
               "button",
               {
-                staticClass: "btn btn-sm btn-negative btn-action float-right",
-                attrs: { type: "button" },
+                staticClass:
+                  "btn btn-sm btn-negative btn-action float-right tooltip",
+                attrs: { type: "button", "data-tooltip": _vm.$t("app.delete") },
                 on: { click: _vm.deleteItem }
               },
               [_c("i", { staticClass: "icon icon-delete" })]
@@ -48457,7 +48497,10 @@ var render = function() {
     _vm._l(_vm.definition.children, function(child, idx) {
       return _c(
         "VGroup",
-        { key: idx, attrs: { val: _vm.val, label: child.label } },
+        {
+          key: idx,
+          attrs: { val: _vm.val, label: _vm.groupLabel(_vm.definition, child) }
+        },
         [
           _c(
             child.componentName,
@@ -48651,7 +48694,7 @@ var render = function() {
     [
       _c(
         "VGroup",
-        { attrs: { name: "title", label: "Title" } },
+        { attrs: { name: "title", label: _vm.$t("app.title") } },
         [
           _c("VTextarea", {
             attrs: { rows: "4", id: "title" },
@@ -48735,7 +48778,7 @@ var render = function() {
       { staticClass: "sidebar-content" },
       [
         _c("p", { staticClass: "form-input-hint" }, [
-          _vm._v("Double-click an item to edit it, and enter to save.")
+          _vm._v(_vm._s(_vm.$t("hints.editor_double_click_edit")))
         ]),
         _vm._v(" "),
         _vm._l(_vm.tabs, function(tab) {
@@ -48754,7 +48797,7 @@ var render = function() {
             },
             [
               _c("p", { staticClass: "form-input-hint" }, [
-                _vm._v(_vm._s(tab.hint))
+                _vm._v(_vm._s(_vm.$t("hints.social_" + tab.id + "_add")))
               ]),
               _vm._v(" "),
               _c(
@@ -49375,47 +49418,57 @@ var render = function() {
   return _c(
     "div",
     _vm._l(_vm.options, function(option) {
-      return _c("label", { key: option.value, staticClass: "form-checkbox" }, [
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.val,
-              expression: "val"
-            }
-          ],
-          attrs: { type: "checkbox" },
-          domProps: {
-            value: option.value,
-            checked: Array.isArray(_vm.val)
-              ? _vm._i(_vm.val, option.value) > -1
-              : _vm.val
-          },
-          on: {
-            change: function($event) {
-              var $$a = _vm.val,
-                $$el = $event.target,
-                $$c = $$el.checked ? true : false
-              if (Array.isArray($$a)) {
-                var $$v = option.value,
-                  $$i = _vm._i($$a, $$v)
-                if ($$el.checked) {
-                  $$i < 0 && (_vm.val = $$a.concat([$$v]))
+      return _c(
+        "label",
+        { key: option.value, staticClass: "form-checkbox" },
+        [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.val,
+                expression: "val"
+              }
+            ],
+            attrs: { type: "checkbox" },
+            domProps: {
+              value: option.value,
+              checked: Array.isArray(_vm.val)
+                ? _vm._i(_vm.val, option.value) > -1
+                : _vm.val
+            },
+            on: {
+              change: function($event) {
+                var $$a = _vm.val,
+                  $$el = $event.target,
+                  $$c = $$el.checked ? true : false
+                if (Array.isArray($$a)) {
+                  var $$v = option.value,
+                    $$i = _vm._i($$a, $$v)
+                  if ($$el.checked) {
+                    $$i < 0 && (_vm.val = $$a.concat([$$v]))
+                  } else {
+                    $$i > -1 &&
+                      (_vm.val = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+                  }
                 } else {
-                  $$i > -1 &&
-                    (_vm.val = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+                  _vm.val = $$c
                 }
-              } else {
-                _vm.val = $$c
               }
             }
-          }
-        }),
-        _vm._v(" "),
-        _c("i", { staticClass: "form-icon" }),
-        _vm._v(" " + _vm._s(option.label) + "\n\t")
-      ])
+          }),
+          _vm._v(" "),
+          _c("i", { staticClass: "form-icon" }),
+          _vm._v(" "),
+          option.label
+            ? [_vm._v(_vm._s(option.label))]
+            : option.lang
+            ? [_vm._v(_vm._s(_vm.$t(option.lang)))]
+            : _vm._e()
+        ],
+        2
+      )
     }),
     0
   )
@@ -49756,7 +49809,10 @@ var render = function() {
     _vm._l(_vm.options, function(option) {
       return _c("VRadio", {
         key: option.value,
-        attrs: { value: option.value, label: option.label },
+        attrs: {
+          value: option.value,
+          label: option.label ? option.label : _vm.$t(option.lang)
+        },
         model: {
           value: _vm.val,
           callback: function($$v) {
@@ -50892,10 +50948,13 @@ var render = function() {
           _vm.project.created_by
             ? _c("p", { staticClass: "empty-subtitle" }, [
                 _vm._v(
-                  "Created by " +
-                    _vm._s(_vm.project.created_by) +
-                    " on " +
-                    _vm._s(_vm.project.created_at)
+                  "\n\t\t\t\t" +
+                    _vm._s(
+                      _vm.$t("aspects.welcome.dashboard.summary", {
+                        user: _vm.project.created_by,
+                        date_time: _vm.project.created_at
+                      })
+                    )
                 )
               ])
             : _vm._e()

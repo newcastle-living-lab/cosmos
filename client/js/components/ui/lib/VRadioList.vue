@@ -4,7 +4,7 @@
 			v-for="option in options"
 			:key="option.value"
 			:value="option.value"
-			:label="option.label"
+			:label="option.label ? option.label : $t(option.lang)"
 			v-model="val"
 		/>
 		<!-- <div
