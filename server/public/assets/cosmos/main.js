@@ -10836,7 +10836,7 @@ var EvidenceLink = {
       var item = lodash_find__WEBPACK_IMPORTED_MODULE_1___default()(definitionObj.componentProps.options, {
         'value': value
       });
-      return item ? item.label : '(Unknown)';
+      return item ? this.$t(item.lang) : '(Unknown)';
     },
     nl2br: function nl2br(value) {
       return value.replace(/(?:\r\n|\r|\n)/g, '<br>');
@@ -46056,7 +46056,15 @@ var render = function() {
               _c("div", { staticClass: "divider" }),
               _vm._v(" "),
               _c("div", { staticClass: "columns" }, [
-                _vm._m(0),
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t("aspects.change_model.dashboard.first_order")
+                      )
+                    )
+                  ])
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "column col-9" }, [
                   _c("table", { staticClass: "table" }, [
@@ -46065,8 +46073,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.first_order.children.vision
-                                .label
+                              _vm.$t(
+                                "aspects.change_model.definitions.first_order.vision.label"
+                              )
                             )
                           )
                         ]),
@@ -46080,8 +46089,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.first_order.children.plan
-                                .label
+                              _vm.$t(
+                                "aspects.change_model.definitions.first_order.plan.label"
+                              )
                             )
                           )
                         ]),
@@ -46095,8 +46105,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.first_order.children.execute
-                                .label
+                              _vm.$t(
+                                "aspects.change_model.definitions.first_order.execute.label"
+                              )
                             )
                           )
                         ]),
@@ -46110,8 +46121,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.first_order.children.measure
-                                .label
+                              _vm.$t(
+                                "aspects.change_model.definitions.first_order.measure.label"
+                              )
                             )
                           )
                         ]),
@@ -46128,7 +46140,15 @@ var render = function() {
               _c("div", { staticClass: "divider" }),
               _vm._v(" "),
               _c("div", { staticClass: "columns" }, [
-                _vm._m(1),
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t("aspects.change_model.dashboard.second_order")
+                      )
+                    )
+                  ])
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "column col-9" }, [
                   _c("table", { staticClass: "table" }, [
@@ -46137,8 +46157,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.second_order.children
-                                .sense_making.label
+                              _vm.$t(
+                                "aspects.change_model.definitions.second_order.sense_making.label"
+                              )
                             )
                           )
                         ]),
@@ -46154,8 +46175,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.second_order.children
-                                .languaging.label
+                              _vm.$t(
+                                "aspects.change_model.definitions.second_order.languaging.label"
+                              )
                             )
                           )
                         ]),
@@ -46169,8 +46191,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.second_order.children
-                                .committing.label
+                              _vm.$t(
+                                "aspects.change_model.definitions.second_order.committing.label"
+                              )
                             )
                           )
                         ]),
@@ -46187,7 +46210,15 @@ var render = function() {
               _c("div", { staticClass: "divider" }),
               _vm._v(" "),
               _c("div", { staticClass: "columns" }, [
-                _vm._m(2),
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t("aspects.change_model.dashboard.third_order")
+                      )
+                    )
+                  ])
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "column col-9" }, [
                   _c("table", { staticClass: "table" }, [
@@ -46196,8 +46227,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.third_order.children.processes
-                                .label
+                              _vm.$t(
+                                "aspects.change_model.definitions.third_order.processes.label"
+                              )
                             )
                           )
                         ]),
@@ -46214,7 +46246,15 @@ var render = function() {
               _c("div", { staticClass: "divider" }),
               _vm._v(" "),
               _c("div", { staticClass: "columns" }, [
-                _vm._m(3),
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t("aspects.change_model.dashboard.fourth_order")
+                      )
+                    )
+                  ])
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "column col-9" }, [
                   _c("table", { staticClass: "table" }, [
@@ -46223,8 +46263,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.fourth_order.children
-                                .unexpected_events.label
+                              _vm.$t(
+                                "aspects.change_model.definitions.fourth_order.unexpected_events.label"
+                              )
                             )
                           )
                         ]),
@@ -46242,8 +46283,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.fourth_order.children
-                                .event_cause.label
+                              _vm.$t(
+                                "aspects.change_model.definitions.fourth_order.event_cause.label"
+                              )
                             )
                           )
                         ]),
@@ -46259,8 +46301,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.fourth_order.children
-                                .change_origin.label
+                              _vm.$t(
+                                "aspects.change_model.definitions.fourth_order.change_origin.label"
+                              )
                             )
                           )
                         ]),
@@ -46281,40 +46324,7 @@ var render = function() {
       )
     : _vm._e()
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "column col-3" }, [
-      _c("h2", { staticClass: "group-title" }, [_vm._v("First Order")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "column col-3" }, [
-      _c("h2", { staticClass: "group-title" }, [_vm._v("Second Order")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "column col-3" }, [
-      _c("h2", { staticClass: "group-title" }, [_vm._v("Third Order")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "column col-3" }, [
-      _c("h2", { staticClass: "group-title" }, [_vm._v("Fourth Order!")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -46663,7 +46673,17 @@ var render = function() {
               _c("div", { staticClass: "divider" }),
               _vm._v(" "),
               _c("div", { staticClass: "columns" }, [
-                _vm._m(0),
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t(
+                          "aspects.moral_ordering_model.dashboard.define_ethos"
+                        )
+                      )
+                    )
+                  ])
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "column col-9" }, [
                   _c("table", { staticClass: "table" }, [
@@ -46672,8 +46692,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.defineEthos.children.values
-                                .label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.defineEthos.values.label"
+                              )
                             )
                           )
                         ]),
@@ -46687,8 +46708,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.defineEthos.children.definedBy
-                                .label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.defineEthos.definedBy.label"
+                              )
                             )
                           )
                         ]),
@@ -46710,8 +46732,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.defineEthos.children
-                                .evidenceUrl.label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.defineEthos.evidenceUrl.label"
+                              )
                             )
                           )
                         ]),
@@ -46737,7 +46760,17 @@ var render = function() {
               _c("div", { staticClass: "divider" }),
               _vm._v(" "),
               _c("div", { staticClass: "columns" }, [
-                _vm._m(1),
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t(
+                          "aspects.moral_ordering_model.dashboard.plan_manage"
+                        )
+                      )
+                    )
+                  ])
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "column col-9" }, [
                   _c("table", { staticClass: "table" }, [
@@ -46746,8 +46779,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.planManagePrior.children
-                                .actions.label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.planManagePrior.actions.label"
+                              )
                             )
                           )
                         ]),
@@ -46761,8 +46795,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.planManagePrior.children
-                                .actors.label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.planManagePrior.actors.label"
+                              )
                             )
                           )
                         ]),
@@ -46787,8 +46822,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.planManagePrior.children
-                                .evidenceUrl.label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.planManagePrior.evidenceUrl.label"
+                              )
                             )
                           )
                         ]),
@@ -46811,8 +46847,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.planManageCurrent.children
-                                .actions.label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.planManageCurrent.actions.label"
+                              )
                             )
                           )
                         ]),
@@ -46828,8 +46865,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.planManageCurrent.children
-                                .actors.label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.planManageCurrent.actors.label"
+                              )
                             )
                           )
                         ]),
@@ -46854,8 +46892,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.planManageCurrent.children
-                                .evidenceUrl.label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.planManageCurrent.evidenceUrl.label"
+                              )
                             )
                           )
                         ]),
@@ -46882,7 +46921,15 @@ var render = function() {
               _c("div", { staticClass: "divider" }),
               _vm._v(" "),
               _c("div", { staticClass: "columns" }, [
-                _vm._m(2),
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t("aspects.moral_ordering_model.dashboard.deliver")
+                      )
+                    )
+                  ])
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "column col-9" }, [
                   _c("table", { staticClass: "table" }, [
@@ -46891,7 +46938,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.deliver.children.method.label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.deliver.method.label"
+                              )
                             )
                           )
                         ]),
@@ -46912,7 +46961,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.deliver.children.actors.label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.deliver.actors.label"
+                              )
                             )
                           )
                         ]),
@@ -46937,8 +46988,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.deliver.children.evidenceUrl
-                                .label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.deliver.evidenceUrl.label"
+                              )
                             )
                           )
                         ]),
@@ -46962,7 +47014,15 @@ var render = function() {
               _c("div", { staticClass: "divider" }),
               _vm._v(" "),
               _c("div", { staticClass: "columns" }, [
-                _vm._m(3),
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t("aspects.moral_ordering_model.dashboard.govern")
+                      )
+                    )
+                  ])
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "column col-9" }, [
                   _c("table", { staticClass: "table" }, [
@@ -46971,7 +47031,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.govern.children.actions.label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.govern.actions.label"
+                              )
                             )
                           )
                         ]),
@@ -46985,7 +47047,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.govern.children.actors.label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.govern.actors.label"
+                              )
                             )
                           )
                         ]),
@@ -47010,7 +47074,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.govern.children.outcomes.label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.govern.outcomes.label"
+                              )
                             )
                           )
                         ]),
@@ -47024,8 +47090,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.govern.children.evolution
-                                .label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.govern.evolution.label"
+                              )
                             )
                           )
                         ]),
@@ -47039,8 +47106,9 @@ var render = function() {
                         _c("td", { staticClass: "group-prompt" }, [
                           _vm._v(
                             _vm._s(
-                              _vm.definitionsById.govern.children.improvements
-                                .label
+                              _vm.$t(
+                                "aspects.moral_ordering_model.definitions.govern.improvements.label"
+                              )
                             )
                           )
                         ]),
@@ -47059,40 +47127,7 @@ var render = function() {
       )
     : _vm._e()
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "column col-3" }, [
-      _c("h2", { staticClass: "group-title" }, [_vm._v("Define Ethos")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "column col-3" }, [
-      _c("h2", { staticClass: "group-title" }, [_vm._v("Plan & Manage")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "column col-3" }, [
-      _c("h2", { staticClass: "group-title" }, [_vm._v("Deliver")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "column col-3" }, [
-      _c("h2", { staticClass: "group-title" }, [_vm._v("Govern")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
