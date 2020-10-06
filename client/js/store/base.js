@@ -2,7 +2,7 @@ import { make } from 'vuex-pathify';
 import md5 from 'md5';
 import debounce from 'lodash/debounce';
 
-import { i18n } from '@/plugins/i18n';
+import i18n from '@/plugins/i18n.js';
 
 import Aspects from '@/aspects';
 import Network from '@/services/Network';

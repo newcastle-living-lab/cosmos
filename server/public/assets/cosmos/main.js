@@ -6385,7 +6385,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var md5__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(md5__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/debounce */ "./node_modules/lodash/debounce.js");
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _plugins_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/plugins/i18n */ "./js/plugins/i18n.js");
+/* harmony import */ var _plugins_i18n_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/plugins/i18n.js */ "./js/plugins/i18n.js");
 /* harmony import */ var _aspects__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/aspects */ "./js/aspects/index.js");
 /* harmony import */ var _services_Network__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/services/Network */ "./js/services/Network.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -6747,13 +6747,13 @@ var actions = {
 
         if (source === 'manual') {
           commit('SET_TOAST', {
-            message: _plugins_i18n__WEBPACK_IMPORTED_MODULE_3__["i18n"].t('app.project_save_success'),
+            message: _plugins_i18n_js__WEBPACK_IMPORTED_MODULE_3__["default"].t('app.project_save_success'),
             type: 'success',
             seconds: 2
           });
         }
       } else {
-        var msg = _plugins_i18n__WEBPACK_IMPORTED_MODULE_3__["i18n"].t('app.error_message', {
+        var msg = _plugins_i18n_js__WEBPACK_IMPORTED_MODULE_3__["default"].t('app.error_message', {
           message: res.reason
         });
         commit('SET_TOAST', {
