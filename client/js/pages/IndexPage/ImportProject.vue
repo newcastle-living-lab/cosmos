@@ -2,7 +2,7 @@
 
 	<div class="card card-min card-import-project" v-if="userCanCreate">
 		<div class="card-header">
-			<div class="card-title">Import project</div>
+			<div class="card-title">{{ $t('app.import_project') }}</div>
 		</div>
 		<div class="card-body">
 			<div class="card-content">
@@ -23,7 +23,7 @@
 						accept=".zip, application/zip, application/octet-stream, application/x-zip-compressed, multipart/x-zip"
 					/>
 					<p v-if="isInitial">
-						Drag your CoSMoS project here to begin or click to browse.
+						{{ $t('app.import_project_drag_hint') }}
 					</p>
 					<p v-if="isFailed" class="text-error">
 						{{ uploadError }}
@@ -32,13 +32,13 @@
 						{{ file.name }}
 					</p>
 					<div v-if="isUploading">
-						<p>Processing...</p>
+						<p>{{ $t('app.processing') }}...</p>
 						<div class="loading mb-2"></div>
 						<br>
 					</div>
 				</div>
 
-				<p class="text-small text-gray">Note: You will be the owner of the project that is imported.</p>
+				<p class="text-small text-gray">{{ $t('app.import_project_notes') }}</p>
 			</div>
 		</div>
 		<div class="card-footer">
@@ -47,7 +47,7 @@
 				@click="doImport"
 				:disabled="!file"
 				:class="(!file ? 'disabled' : '')"
-			>Import</VButton>
+			>{{ $t('app.import') }}</VButton>
 		</div>
 	</div>
 
@@ -146,7 +146,7 @@ export default {
 					if (res.success) {
 						this.resetUpload();
 						this.$router.push('/' + res.id + '/dashboard');
-						commit('SET_TOAST', { message: 'The project has been imported successfully!', type: 'success', seconds: 4 });
+						commit('SET_TOAST', { message: this.$t('app.import_project_success'), type: 'success', seconds: 4 });
 					} else {
 						this.currentStatus = STATUS_FAILED;
 						this.uploadError = res.reason;
@@ -154,7 +154,7 @@ export default {
 				})
 				.catch(err => {
 					this.currentStatus = STATUS_FAILED;
-					this.uploadError = "Unknown error.";
+					this.uploadError = this.$t('error');
 				});
 		},
 

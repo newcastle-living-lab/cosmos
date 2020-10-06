@@ -2,13 +2,13 @@
 
 	<div class="card card-min card-new-project">
 		<div class="card-header">
-			<div class="card-title">Create new project</div>
+			<div class="card-title">{{ $t('app.create_project') }}</div>
 		</div>
 		<template v-if="userCanCreate">
 			<div class="card-body">
 				<div class="card-content">
 					<div class="form-group">
-						<label class="form-label" for="name">Name</label>
+						<label class="form-label" for="name">{{ $t('app.name') }}</label>
 						<VInput type="text" id="name" v-model="newProject.name" />
 					</div>
 				</div>
@@ -27,8 +27,8 @@
 				<div class="tile tile-empty">
 					<div class="tile-content">
 						<div><alert-circle-icon size="16" /></div>
-						<div v-if="authUser">Your user access level is read-only.</div>
-						<div v-else><a :href="loginUrl">Log in</a> to create a project.</div>
+						<div v-if="authUser">{{ $t('app.user_is_read_only') }}</div>
+						<div v-else><a :href="loginUrl">{{ $t('app.log_in') }}</a> {{ $t('app.to_create_project') }}</div>
 					</div>
 				</div>
 			</div>

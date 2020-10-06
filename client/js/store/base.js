@@ -2,6 +2,8 @@ import { make } from 'vuex-pathify';
 import md5 from 'md5';
 import debounce from 'lodash/debounce';
 
+import { i18n } from '@/plugins/i18n';
+
 import Aspects from '@/aspects';
 import Network from '@/services/Network';
 
@@ -340,10 +342,11 @@ export const actions = {
 				if (res && res.success) {
 					commit('TOUCH_LAST_SAVE');
 					if (source === 'manual') {
-						commit('SET_TOAST', { message: 'Project saved!', type: 'success', seconds: 2 });
+						commit('SET_TOAST', { message: i18n.t('app.project_save_success'), type: 'success', seconds: 2 });
 					}
 				} else {
-					commit('SET_TOAST', { message: 'Error saving project: ' + res.reason, type: 'error', seconds: 10 });
+					const msg = i18n.t('app.error_message', { message: res.reason });
+					commit('SET_TOAST', { message: msg, type: 'error', seconds: 10 });
 				}
 				return res.success;
 			})

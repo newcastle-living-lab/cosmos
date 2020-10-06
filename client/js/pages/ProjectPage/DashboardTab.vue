@@ -40,11 +40,11 @@
 			<div class="modal-overlay"></div>
 			<div class="modal-container">
 				<div class="modal-header">
-					<div class="modal-title h5">Exporting...</div>
+					<div class="modal-title h5">{{ $t('app.exporting') }}...</div>
 				</div>
 				<div class="modal-body">
 					<div class="content mb-4">
-						<p>The export file is being generated.</p>
+						<p>{{ $t('app.please_wait_generate') }}</p>
 						<div class="loading loading-lg"></div>
 					</div>
 				</div>

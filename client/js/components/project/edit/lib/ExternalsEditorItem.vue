@@ -66,7 +66,7 @@
 								{{ $t('app.image_drag_prompt') }}
 							</p>
 							<div v-if="isUploading">
-								<p>{{ $t('app.image_is_uploading') }}</p>
+								<p>{{ $t('app.image_is_uploading') }}...</p>
 								<div class="loading mb-2"></div>
 								<br>
 							</div>

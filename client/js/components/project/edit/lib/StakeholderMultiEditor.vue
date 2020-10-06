@@ -6,7 +6,7 @@
 			class="btn btn-sm btn-secondary mb-4"
 			@click="addNewItem()"
 			:disabled="!canAddNewItem"
-		><i class="icon icon-plus"></i> Add new actor</button>
+		><i class="icon icon-plus"></i> {{ $t('app.add_new_actor') }}</button>
 
 		<SortableList
 			lockAxis="y"
@@ -31,7 +31,7 @@
 
 		</SortableList>
 
-		<span class="form-input-hint" v-if="limit">Maximum {{ limit }} items.</span>
+		<span class="form-input-hint" v-if="limit">{{ $tc('app.maximum_items', limit) }}.</span>
 
 	</div>
 

@@ -27,10 +27,11 @@
 						type="button"
 						class="btn btn-sm btn-primary"
 						@click="doFinish"
-					><i class="icon icon-check"></i> OK</button>
+					><i class="icon icon-check"></i> {{ $t('app.ok') }}</button>
 					<button
 						type="button"
-						class="btn btn-sm btn-negative btn-action float-right"
+						class="btn btn-sm btn-negative btn-action float-right tooltip"
+						:data-tooltip="$t('app.delete')"
 						@click="deleteItem"
 					><i class="icon icon-delete"></i></button>
 				</div>

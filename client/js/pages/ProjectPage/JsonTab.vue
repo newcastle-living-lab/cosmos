@@ -1,6 +1,6 @@
 <template>
 
-	<main ref="container" class="app-content light community-reporting">
+	<main ref="container" class="app-content light">
 		<div class="scrollable scr-y">
 			<div class="container grid-xl">
 				<pre>{{ project }}</pre>
