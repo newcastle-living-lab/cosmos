@@ -2,6 +2,7 @@
 	"id": "co_creation_of_service_model",
 	"title": "Co-Creation of Service Model",
 	"routeName": "model",
+	"dashboardComponent": "ServiceDashboard",
 	"stageSize": {
 		"width": 1500,
 		"height": 1020

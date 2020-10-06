@@ -360,6 +360,15 @@
 		},
 		"co_creation_of_service_model": {
 			"title": "Co-Creation of Service Model",
+			"dashboard": {
+				"structural_relationships": "Structural Relationships and Occasions",
+				"infrastructural_relationships": "Infrastructural Relationships, Recourses and Facilities",
+				"ethos": "Ethos",
+				"policy_law": "Policy & Law",
+				"resources": "Resources",
+				"service_definition": "Service Definition and Development Platform",
+				"service_delivery": "Service Delivery Platform"
+			},
 			"definitions": {
 				"model": {
 					"title": "Model"
