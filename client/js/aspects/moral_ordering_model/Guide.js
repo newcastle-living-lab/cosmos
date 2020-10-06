@@ -4,39 +4,39 @@ export default {
 	steps: [
 		{
 			'type': 'info',
-			'title': 'There are a number of core processes involved in a co-creative innovation. The first is concerned with the definition of ethos.',
+			'lang': 'step01',
 		},
 		{
 			'type': 'info',
-			'title': 'The second involves management activities and products.',
+			'lang': 'step02',
 		},
 		{
 			'type': 'info',
-			'title': 'Moral ordering is concerned with who gets to participate in activities so, in the case of your initiative, who is involved in these processes? Where and when do they take place? How do they communicate and how are they recorded?',
+			'lang': 'step03',
 		},
 		{
 			'type': 'info',
-			'title': 'As a result of leadership, planning and design, services or initiatives are delivered and experienced.',
+			'lang': 'step04',
 		},
 		{
 			'type': 'question',
-			'title': 'Again who is involved here and do they get any participation in the first two sets of activities?',
+			'lang': 'step05',
 		},
 		{
 			'type': 'info',
-			'title': 'Rather than simply close the loop with a simple evaluation process, we are suggesting that, in systems of co-productive wellbeing and care, governance involves all the participants in the relationships identified here participation in addressing the questions defined in the moral ordering model.',
+			'lang': 'step06',
 		},
 		{
 			'type': 'info',
-			'title': 'Governance takes place at the individual service client relationship level.',
+			'lang': 'step07',
 		},
 		{
 			'type': 'info',
-			'title': 'It also takes place at the overall service level.',
+			'lang': 'step08',
 		},
 		{
 			'type': 'question',
-			'title': 'How are governance processes, in the sense we are describing them here, take place in your initiative?',
+			'lang': 'step09',
 		},
 	]
 

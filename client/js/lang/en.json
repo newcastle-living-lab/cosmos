@@ -21,6 +21,13 @@
 		"add_new_item": "Add new item",
 		"maximum_items": "Maximum {count} items | Maxumum {count} item | Maximum {count} items"
 	},
+	"user_guide": {
+		"show": "Show user guide",
+		"skip": "Skip user guide",
+		"back": "Back",
+		"next": "Next",
+		"close": "Close"
+	},
 	"hints": {
 		"type_and_enter": "Type the name below and press enter.",
 		"editor_double_click_edit": "Double-click an item to edit it, and enter to save",
@@ -37,6 +44,25 @@
 	"aspects": {
 		"analytic_model": {
 			"title": "Analytic Model",
+			"guide": {
+				"step01": "In this model, we consider a Cosie initiative in terms of a set of roles and the conversational relationships in which they engage.",
+				"step02": "First we have front line service deliverer and a client.",
+				"step03": "The deliverer has a manager or supervisor. This pattern of an individual engaging in two conversations will be repeated.",
+				"step04": "The delivery takes place in some formal or informal institutional context.",
+				"step05": "Finally, the service exists in some wider policy setting.",
+				"step06": "This is meant to be an abstract model. In some cases there may be a flat organisation where delivery, management and policy are undertaken by all the members of a small team, in other cases they may represent distinct individuals and contexts.",
+				"step07": "How do the concepts of micro, meso and macro map onto your initiative?",
+				"step08": "How does communication take place between them?",
+				"step09": "How coordinated and coherent are they?",
+				"step10": "In particular, are there information flows and conversations between macro and micro which are not mediated by the meso? What are the implications of this?",
+				"step11": "The next model considers change agency in terms of roles and conversations.",
+				"step12": "A change must be instigated, then it is executed.",
+				"step13": "The changes we are considering are to a person, or a place or environment.",
+				"step14": "The changes we are considering are often themselves complex and are about complex situations. Often they are based on some theory which has been introduced or brokered into the situation.",
+				"step15": "There is a set of intended beneficiaries.",
+				"step16": "But there are also possible dis-beneficiaries or victims of the change.",
+				"step17": "This model is designed as a probe on the initial service model to identify the specific actors who, at various stages in the development of the initiative, have undertaken one or more of these change agency roles. Who are they?"
+			},
 			"dashboard": {
 				"meso": {
 					"label": "Meso",
@@ -105,6 +131,16 @@
 		},
 		"change_model": {
 			"title": "Change Model",
+			"guide": {
+				"step01": "We start off with the standard model of purposeful action that we are all very familiar with.",
+				"step02": "But we have all had the experience of looking back and realising that things have changed in a really fundamental way: we talk about the paradigm shifting. This implies that we have engaged in making new sense of our world and this often means that our language changes.",
+				"step03": "These two different ways of operation are sometimes referred to as first order and second order.",
+				"step04": "In management terms, we have risk management on one hand and the resolution of contradictions and ambiguities on the other.",
+				"step05": "We now introduce the idea of third order activities which enable and support the appropriate transitions between first and second work allowing a step back to reconsider our ethos and assumptions and, when we have, to move back into the mode of practical planning and delivery.",
+				"step06": "Sometimes the reaction to ambiguity and contradiction is an emotional one: fight or fly which is zero order, or inspiration and heroism which we will call fourth order.",
+				"step07": "So, on the right hand side of our diagram we have the spectrum of emotional work and responses while of the left hand side we have co-productive, conversational work.",
+				"step08": "This model generates a series of open ended questions about where the different first and second order work takes place in your initiative, what emotional work has been and is requires and how and where it is undertaken and how and by whom are the required third order interventions undertaken?"
+			},
 			"dashboard": {
 				"first_order": "First Order",
 				"risk": "Risk",
@@ -202,6 +238,21 @@
 		},
 		"intervention_theory_model": {
 			"title": "Intervention Theory Model",
+			"guide": {
+				"step01": "The co-creative initiatives we are considering are all concerned with improving and nurturing wellbeing. Here we consider the wellbeing of individuals but this might be applied to places or to wider environments.",
+				"step02": "Wellbeing has a number of different facets which are all interdependent.",
+				"step03": "It also interacts with the physical and social environments.",
+				"step04": "Some services or interventions are about mending something that has gone wrong and restoring the status quo.",
+				"step05": "But there are other purposes for interventions.",
+				"step06": "The intervention process involves a number of different stages and processes.",
+				"step07": "Finally, if our innovations are to be sustained we must learn and improve.",
+				"step08": "Who, what or where is the target of your intervention?",
+				"step09": "Which aspects of wellbeing are the focus of your initiative?",
+				"step10": "What aspects of the wellbeing of your subject are relevant but beyond the scope of your initiative?",
+				"step11": "What are the relevant environmental aspects?",
+				"step12": "Which combinations of interventions, from prevention to transformation, are relevant to your initiative?",
+				"step13": "To what extent is learning and improvement built into your development governance and delivery processes?"
+			},
 			"dashboard": {
 				"wellbeing": "Well Being"
 			},
@@ -268,6 +319,17 @@
 		},
 		"moral_ordering_model": {
 			"title": "Moral Ordering",
+			"guide": {
+				"step01": "There are a number of core processes involved in a co-creative innovation. The first is concerned with the definition of ethos.",
+				"step02": "The second involves management activities and products.",
+				"step03": "Moral ordering is concerned with who gets to participate in activities so, in the case of your initiative, who is involved in these processes? Where and when do they take place? How do they communicate and how are they recorded?",
+				"step04": "As a result of leadership, planning and design, services or initiatives are delivered and experienced.",
+				"step05": "Again who is involved here and do they get any participation in the first two sets of activities?",
+				"step06": "Rather than simply close the loop with a simple evaluation process, we are suggesting that, in systems of co-productive wellbeing and care, governance involves all the participants in the relationships identified here participation in addressing the questions defined in the moral ordering model.",
+				"step07": "Governance takes place at the individual service client relationship level.",
+				"step08": "It also takes place at the overall service level.",
+				"step09": "How are governance processes, in the sense we are describing them here, take place in your initiative?"
+			},
 			"dashboard": {
 				"govern": "Govern",
 				"deliver": "Deliver",
