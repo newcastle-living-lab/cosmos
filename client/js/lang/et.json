@@ -1,0 +1,562 @@
+{
+    "activity_types": {
+        "organisation": "Organisatsioon",
+        "service": "Teenus",
+        "user": "Kasutaja"
+    },
+    "app": {
+        "add_new_actor": "Lisage uus näitleja",
+        "add_new_item": "Lisage uus üksus",
+        "all": "Kõik",
+        "colour": "Värv",
+        "create": "Loo",
+        "created_by": "Loodud",
+        "delete": "Kustuta",
+        "description": "Kirjeldus",
+        "download": "Lae alla",
+        "error": "Viga",
+        "error_message": "Viga: {message}",
+        "export": "Eksport",
+        "exporting": "Eksportimine",
+        "exporting_project": "Eksportiv projekt",
+        "image": "Pilt",
+        "image_drag_prompt": "Alustamiseks lohistage oma pilt siia või sirvimiseks klõpsake sellel.",
+        "image_is_uploading": "Pildi üleslaadimine",
+        "image_remove": "Eemalda pilt",
+        "image_upload_error": "Üleslaadimise viga",
+        "import": "Impordi",
+        "import_project": "Importiprojekt",
+        "import_project_drag_hint": "Alustamiseks lohistage oma CoSMoS-i projekt siia või klõpsake sirvimiseks klõpsamiseks.",
+        "import_project_notes": "Märkus. Olete imporditud projekti omanik.",
+        "import_project_success": "Projekt on edukalt imporditud!",
+        "just_mine": "Lihtsalt minu",
+        "label": "Silt",
+        "last_saved_at": "Viimati salvestatud {date_time}",
+        "log_in": "Logi sisse",
+        "maximum_items": "Maksimaalselt {count} üksust | Maksimaalne üksus {count} | Maksimaalselt {count} üksust",
+        "name": "Nimi",
+        "new_project": "Looge uus projekt",
+        "next": "Järgmine",
+        "no_projects": "Ühtegi projekti ei leitud.",
+        "ok": "Okei",
+        "open_project": "Avatud projekt",
+        "please_wait_generate": "Oodake, kuni fail luuakse.",
+        "processing": "Töötlemine",
+        "project": "Projekt",
+        "project_save_success": "Projekt salvestatud!",
+        "save": "Salvesta",
+        "saving": "Säästmine",
+        "scale_to_fit": "Skaala sobivaks",
+        "search": "Otsing",
+        "title": "Pealkiri",
+        "to_create_project": "projekti loomiseks.",
+        "try_again": "Proovi uuesti",
+        "type": "Tüüp",
+        "user_is_read_only": "Teie kasutaja juurdepääsutase on kirjutuskaitstud.",
+        "web_address": "veebiaadress"
+    },
+    "aspects": {
+        "analytic_model": {
+            "dashboard": {
+                "macro": {
+                    "label": "Makro"
+                },
+                "meso": {
+                    "description": "Sellel tasemel võib olla mitu etappi.",
+                    "label": "Meso"
+                },
+                "micro": {
+                    "label": "Mikro"
+                }
+            },
+            "definitions": {
+                "beneficiaries": {
+                    "hint": "Kas lisaks otsesele kasutajale \/ osalejatele on ka teisi kasusaajaid? Kui jah, siis kes nad on?",
+                    "title": "Abisaajad"
+                },
+                "broker": {
+                    "hint": "Kas muutuste õhutajate ja muudatuste tegijate vahel on aktiivne maakler? Kui jah, siis kes nad on?",
+                    "title": "Maakler"
+                },
+                "changeMakers": {
+                    "hint": "Kes on või olid õhutajad, kes algatasid teie sekkumistegevuse?",
+                    "title": "Muudatuste tegijad"
+                },
+                "changeTheorists": {
+                    "hint": "Kes on sekkumise teoreetikud?",
+                    "title": "Muutusteoreetikud"
+                },
+                "frontLineServiceDeliverer": {
+                    "hint": "Kes on eesliini teenuse osutaja?",
+                    "title": "Eesliini teenuse osutaja"
+                },
+                "instigatorsOfChange": {
+                    "hint": "Kes on või olid õhutajad, kes algatasid teie sekkumistegevuse?",
+                    "title": "Muutuste õhutajad"
+                },
+                "model": {
+                    "title": "Mudel"
+                },
+                "serviceDeliveryManager": {
+                    "hint": "Kes on sekkumise eest vastutav teenuse osutamise juht?",
+                    "title": "Teenuse osutamise juht"
+                },
+                "serviceOrganisationManager": {
+                    "hint": "Kes on sekkumise teenuse organisatsiooni juht?",
+                    "title": "Teenuse korraldamise juht"
+                },
+                "servicePolicyMaker": {
+                    "hint": "Kes on või kes olid teenuse poliitika ja teenuse toimimise põhimõtete määratlejad?",
+                    "title": "Teenuse eeskirjade looja"
+                },
+                "subjectsOfChange": {
+                    "hint": "Kes on sekkumise käigus kindlaks tehtud muutuste subjektid?",
+                    "title": "Muutuste subjektid"
+                },
+                "user": {
+                    "hint": "Kes on teenuse otsene kasutaja?",
+                    "title": "Klient \/ Kasutaja"
+                },
+                "victims": {
+                    "hint": "Kas on tuvastatud ohvreid? Kui jah, siis kes nad on?",
+                    "title": "Ohvrid"
+                }
+            },
+            "guide": {
+                "step01": "Selles mudelis käsitleme Cosie algatust rollide komplekti ja vestlussuhete osas, millega nad tegelevad.",
+                "step02": "Esiteks on meil eesliini teenuse pakkuja ja klient.",
+                "step03": "Toimetajal on juht või juhendaja. Seda kahes vestluses osaleva inimese mustrit korratakse.",
+                "step04": "Kohaletoimetamine toimub mõnes ametlikus või mitteametlikus institutsioonilises kontekstis.",
+                "step05": "Lõpuks on teenus olemas mõnes laiemas poliitilises keskkonnas.",
+                "step06": "See on mõeldud abstraktseks mudeliks. Mõnel juhul võib olla lame organisatsioon, kus toimetamise, juhtimise ja poliitika eest vastutavad kõik väikese meeskonna liikmed, mõnel juhul võivad nad esindada erinevaid isikuid ja kontekste.",
+                "step07": "Kuidas kaardistavad mikro-, meso- ja makromõisted teie algatuse?",
+                "step08": "Kuidas toimub omavaheline suhtlus?",
+                "step09": "Kui koordineeritud ja sidusad nad on?",
+                "step10": "Kas makro ja mikro vahel on infovooge ja vestlusi, mida meso ei vahenda? Millised on selle tagajärjed?",
+                "step11": "Järgmine mudel kaalub muutuste agentuuri rollide ja vestluste osas.",
+                "step12": "Muudatus tuleb käivitada, seejärel see täidetakse.",
+                "step13": "Muudatused, mida me kaalume, puudutavad inimest, kohta või keskkonda.",
+                "step14": "Muudatused, mida me kaalume, on sageli iseenesest keerulised ja puudutavad keerukaid olukordi. Sageli põhinevad need mõnel teoorial, mis on olukorda sisse viidud või vahendatud.",
+                "step15": "On olemas hulk kavandatud abisaajaid.",
+                "step16": "Kuid on ka muudatustest võimalikke abisaajaid või ohvreid.",
+                "step17": "See mudel on välja töötatud esialgse teenusemudeli proovina, et selgitada välja konkreetsed osalejad, kes algatuse väljatöötamise erinevates etappides on võtnud endale ühe või mitu neist agentuuri rollidest. Kes nad on?"
+            },
+            "title": "Analüütiline mudel"
+        },
+        "change_model": {
+            "dashboard": {
+                "ambiguity": "Mitmetähenduslikkus",
+                "ambivalence": "Ambivalentsus",
+                "committing": "Pühendumine",
+                "execute": "Täitke",
+                "first_order": "Esimene tellimus",
+                "fourth_order": "Neljas järjekord!",
+                "languaging": "\"Keeled\"",
+                "measure": "Mõõda",
+                "plan": "Plaan",
+                "risk": "Risk",
+                "second_order": "Teine orden",
+                "sense_making": "Mõistmine",
+                "third_order": "Kolmas järjekord",
+                "vision": "Visioon",
+                "zero_order": "Nullkord"
+            },
+            "definitions": {
+                "first_order": {
+                    "execute": {
+                        "label": "Kuidas plaani täidetakse?"
+                    },
+                    "measure": {
+                        "label": "Kuidas vaatlusi ja mõõtmisi registreeritakse? Kui ei, siis mida peab selleks võimaldama?"
+                    },
+                    "plan": {
+                        "label": "Kuidas loodi visiooni esitamise plaan?"
+                    },
+                    "vision": {
+                        "label": "Kuidas visioon ja eesmärgid püstitati?"
+                    }
+                },
+                "fourth_order": {
+                    "change_origin": {
+                        "label": "Millest muutus alguse sai? Ja mis oli muutus?"
+                    },
+                    "event_cause": {
+                        "label": "Mis juhtus selle sündmuse toimumiseks?"
+                    },
+                    "unexpected_events": {
+                        "label": "Kas on olnud juhtumeid, kus olete näinud ootamatuid sündmusi?"
+                    }
+                },
+                "model": {
+                    "title": "Mudel"
+                },
+                "second_order": {
+                    "committing": {
+                        "label": "Kuidas on sekkumise teenuse osutamine muutunud võrreldes algsete plaanidega?"
+                    },
+                    "languaging": {
+                        "label": "Milliseid muudatusi on sekkumise mõistmises tehtud?"
+                    },
+                    "sense_making": {
+                        "label": "Millal plaanid ja visioon üle vaatate?"
+                    }
+                },
+                "third_order": {
+                    "processes": {
+                        "label": "Millised protsessid kutsuvad esile või võimaldavad teist järku küsimist?"
+                    }
+                }
+            },
+            "guide": {
+                "step01": "Alustame sihipärase tegevuse standardmudelist, mis on meile kõigile väga tuttav.",
+                "step02": "Kuid meil kõigil on olnud kogemus tagasi vaadata ja mõista, et asjad on muutunud tõeliselt põhimõttelisel viisil: räägime paradigma muutumisest. See tähendab, et oleme tegelenud oma maailma uue mõtestamisega ja see tähendab sageli, et meie keel muutub.",
+                "step03": "Neid kahte erinevat toimimisviisi nimetatakse mõnikord esimeseks ja teiseks järjeks.",
+                "step04": "Juhtimise mõttes on meil ühelt poolt riskijuhtimine ja teiselt poolt vastuolude ja ebaselguste lahendamine.",
+                "step05": "Tutvustame nüüd kolmanda järgu tegevuste ideed, mis võimaldavad ja toetavad asjakohaseid üleminekuid esimese ja teise töö vahel, võimaldades sammu tagasi oma eetose ja eelduste uuesti läbi vaatamiseks ning võimaluse korral liikuda tagasi praktilise planeerimise ja teostamise režiimi.",
+                "step06": "Mõnikord on ebaselgusele ja vastuoludele reageerimine emotsionaalne: võitlus või lendamine, mis on nulljärguline, või inspiratsioon ja kangelaslikkus, mida nimetame neljandaks järjekorraks.",
+                "step07": "Seega on meie skeemi paremal küljel emotsionaalse töö ja reageeringute spekter, vasakul pool on aga kaastootlik ja vestlustöö.",
+                "step08": "See mudel genereerib rea avatud küsimusi selle kohta, kus teie algatusel toimub erinev esimese ja teise järgu töö, milline emotsionaalne töö on olnud ja mida nõuab ning kuidas ja kus seda tehakse ning kuidas ja kes on nõutavad kolmanda järgu sekkumised ette võetud?"
+            },
+            "title": "Muuda mudelit"
+        },
+        "co_creation_of_service_model": {
+            "dashboard": {
+                "ethos": "Eetos",
+                "infrastructural_relationships": "Infrastruktuurisuhted, abinõud ja rajatised",
+                "policy_law": "Poliitika ja seadus",
+                "resources": "Ressursid",
+                "service_definition": "Teenuse määratlus ja arendusplatvorm",
+                "service_delivery": "Teenuse osutamise platvorm",
+                "structural_relationships": "Struktuursed suhted ja sündmused"
+            },
+            "definitions": {
+                "beneficiary": {
+                    "hint": "Kas lisaks otsesele kasutajale \/ osalejatele on ka teisi kasusaajaid? Kui jah, siis kes nad on?",
+                    "title": "Saaja"
+                },
+                "delivery": {
+                    "hint": "Kes vastutab teie piloodi kohaletoimetamise mehhanismi (de), kanalite ja rollide eest?",
+                    "title": "Tarnija"
+                },
+                "deployment": {
+                    "hint": "Kes neid protsesse ja ressursse juurutab \/ juurutab ja aktiveerib \/ aktiveerib?",
+                    "title": "Paigaldaja"
+                },
+                "drivers": {
+                    "body": {
+                        "hint": "Millised on ajurid ja motivatsioon?",
+                        "label": "Autojuhid ja motivatsioonid"
+                    },
+                    "hint": "Millised olid \/ on projekti ajendid ja motivatsioon? Kas see oli seadusest tulenev nõue, vajaduse või nõudmise tunnustamine, võimaluse ärakasutamine, ebavõrdsusega tegelemine?",
+                    "title": "Autojuhid ja motivatsioonid"
+                },
+                "evaluation": {
+                    "hint": "Kes on teenuse hindaja (d) ja juhid?",
+                    "title": "Hindaja"
+                },
+                "extorg": {
+                    "hint": "Kas on olemas asjakohaseid osalejaid, sidusrühmi või asutusi, kes on piloodi jaoks olulised, kuid jäävad väljaspool selle visiooni ja eetikat?",
+                    "title": "Välised organisatsioonid"
+                },
+                "extsvc": {
+                    "hint": "Milliseid korduvkasutatavaid rajatisi, (tehnilisi ja inimressursse), teenuseid ja teabeallikaid töötati välja ja kasutati nende teenuste määratlemise ja arendusprotsesside toetamiseks? Milliseid väliseid ressursse ja teenuseid (nt side ja sotsiaalmeedia) kasutati \/ kasutatakse?",
+                    "title": "Välised tehnilised teenused"
+                },
+                "infsvc": {
+                    "hint": "Milliseid väliseid teenuseid, kanaleid ja rajatisi kasutate oma teenuse (te) edastamisel? Milliseid teabeallikaid te kasutate? Millist teavet avaldate, kellele ja milliseid kanaleid ning meediume kasutades?",
+                    "title": "Infrastruktuuriteenused"
+                },
+                "initiator": {
+                    "hint": "Kes on või olid õhutajad, kes algatasid teie pilootide tegevuse?",
+                    "title": "Initsiaator"
+                },
+                "model": {
+                    "title": "Mudel"
+                },
+                "policyDef": {
+                    "hint": "Kes on või kes olid teenuse poliitika ja teenuse toimimise põhimõtete määratlejad?",
+                    "title": "Poliitika määratleja"
+                },
+                "specDes": {
+                    "hint": "Kes täpsustab \/ täpsustab ja kujundab \/ kujundab teenuste osutamise protsesse ja ressursse?",
+                    "title": "Täpsustaja ja kujundaja"
+                },
+                "user": {
+                    "hint": "Kes on teenuse otsene kasutaja?",
+                    "title": "Kasutaja"
+                }
+            },
+            "title": "Teenuse mudeli kaasloome"
+        },
+        "community_reporting": {
+            "dashboard": {
+                "empty_set": "Selle projekti jaoks pole kogukonna aruandlusüksusi.",
+                "manage": "Halda kogukonna aruandlust",
+                "title": "Kogukonna aruandlus"
+            },
+            "definitions": {
+                "data": {
+                    "hint": "Lisage kõik projektis olevad kogukonna aruanded.",
+                    "title": "Kogukonna aruandlus"
+                }
+            },
+            "title": "Kogukonna aruandlus"
+        },
+        "documents": {
+            "dashboard": {
+                "empty_set": "Selle projekti jaoks pole dokumente ega faile.",
+                "manage": "Halda dokumente ja faile",
+                "title": "Dokumendid ja toimikud"
+            },
+            "definitions": {
+                "data": {
+                    "hint": "Lisage kõik teie projektis olevad dokumendid ja failid.",
+                    "title": "Dokumendid ja toimikud"
+                }
+            },
+            "title": "Dokumendid"
+        },
+        "intervention_theory_model": {
+            "dashboard": {
+                "wellbeing": "Heaolu"
+            },
+            "definitions": {
+                "innovation": {
+                    "items": {
+                        "label": "Millised teenuse elutsükli aspektid on teie innovatsiooni ja muutuste seisukohast olulised?"
+                    },
+                    "title": "Innovatsioon ja muutused"
+                },
+                "intervention": {
+                    "items": {
+                        "label": "Mis tüüpi sekkumine toimub?"
+                    },
+                    "title": "Sekkumine"
+                },
+                "learning": {
+                    "items": {
+                        "label": "Kuidas toimub õppimine teie sekkumisel?"
+                    },
+                    "title": "Õppimine"
+                },
+                "model": {
+                    "title": "Mudel"
+                },
+                "wellbeing": {
+                    "items": {
+                        "label": "Millised inimeste heaolu ja keskkonna aspektid on teie teenuse jaoks asjakohased? Kas mõned on olulisemad kui teised?"
+                    },
+                    "title": "Inimeste heaolu ja keskkond"
+                }
+            },
+            "guide": {
+                "step01": "Kaalutavad loomingulised algatused on kõik seotud heaolu parandamise ja hooldamisega. Siin käsitleme üksikisikute heaolu, kuid seda võib rakendada kohtades või laiemas keskkonnas.",
+                "step02": "Heaolul on mitmeid erinevaid tahke, mis kõik on üksteisest sõltuvad.",
+                "step03": "See suhtleb ka füüsilise ja sotsiaalse keskkonnaga.",
+                "step04": "Mõni teenus või sekkumine on seotud valesti läinud asja parandamise ja status quo taastamisega.",
+                "step05": "Kuid sekkumistel on ka muid eesmärke.",
+                "step06": "Sekkumisprotsess hõlmab mitmeid erinevaid etappe ja protsesse.",
+                "step07": "Lõpuks, kui soovime oma uuendusi jätkata, peame õppima ja arenema.",
+                "step08": "Kes, mis või kus on teie sekkumise eesmärk?",
+                "step09": "Millised heaolu aspektid on teie algatuse keskmes?",
+                "step10": "Millised teie teema heaolu aspektid on asjakohased, kuid ületavad teie algatuse ulatust?",
+                "step11": "Millised on asjakohased keskkonnaaspektid?",
+                "step12": "Millised sekkumiste kombinatsioonid alates ennetamisest kuni ümberkujundamiseni on teie algatuse jaoks asjakohased?",
+                "step13": "Mil määral on õppimine ja paranemine teie arengujuhtimise ja -protsesside sisseehitatud?"
+            },
+            "options": {
+                "innovation": {
+                    "development": "Areng",
+                    "facilitation": "Hõlbustamine",
+                    "palliation": "Palliatsioon",
+                    "prevention": "Ärahoidmine",
+                    "rehabilitation": "Taastusravi",
+                    "remedy": "Parandus",
+                    "transformation": "Muutumine"
+                },
+                "intervention": {
+                    "coordination_delivery": "Koordineerimine ja kättetoimetamine",
+                    "governance": "Valitsemine",
+                    "identification": "Identifitseerimine ja planeerimine",
+                    "learning": "Õppimine",
+                    "management": "Juhtimine"
+                },
+                "learning": {
+                    "research_evidence": "Teadusuuringud ja tõendid",
+                    "service_improvement": "Teenuse täiustamine",
+                    "trials": "Kohtuprotsessid"
+                },
+                "wellbeing": {
+                    "faculties_skills": "Teaduskonnad ja oskused",
+                    "mental_psych": "Vaimne ja psühholoogiline",
+                    "physical_env": "Füüsiline ümbritsemine",
+                    "physiological": "Füsioloogiline",
+                    "socio_cultural_env": "Sotsiaal-kultuuriline keskkond",
+                    "socio_economic": "Sotsiaalmajanduslik"
+                }
+            },
+            "title": "Sekkumisteooria mudel"
+        },
+        "moral_ordering_model": {
+            "dashboard": {
+                "define_ethos": "Määratlege eetos",
+                "define_ethos_items": "Väärtused\n Põhimõtted\n Kavatsused\n Poliitikad",
+                "deliver": "Toimetama",
+                "experience": "Kogemused",
+                "govern": "Valitsus",
+                "individual_cases": "Üksikjuhtumid",
+                "plan_manage": "Planeerimine ja haldamine",
+                "plan_manage_items": "Reeglid\n Ressursid\n Protsessid\n Kontod",
+                "the_service_level": "Teenuse tase"
+            },
+            "definitions": {
+                "defineEthos": {
+                    "definedBy": {
+                        "label": "Kuidas neid väärtusi defineeritakse?"
+                    },
+                    "evidenceUrl": {
+                        "label": "Millised (välised) tõendid on selle toetamiseks saadaval?"
+                    },
+                    "title": "Määratlege eetos",
+                    "values": {
+                        "label": "Millised väärtused on olulised, millele sekkumine tähelepanu pöörab?"
+                    }
+                },
+                "deliver": {
+                    "actors": {
+                        "label": "Kelle poolt see toimetatakse?"
+                    },
+                    "evidenceUrl": {
+                        "label": "Millised (välised) tõendid on selle toetamiseks saadaval?"
+                    },
+                    "method": {
+                        "label": "Kuidas sekkumine toimub?"
+                    },
+                    "title": "Toimetama"
+                },
+                "govern": {
+                    "actions": {
+                        "label": "Kuidas sekkumist juhitakse? Milliseid meetmeid võetakse selleks, et tulemused oleksid kavandatud?"
+                    },
+                    "actors": {
+                        "label": "Kes seda hindab?"
+                    },
+                    "evolution": {
+                        "label": "Kuidas mõjutab see teenuse arengut?"
+                    },
+                    "improvements": {
+                        "label": "Kuidas tehakse kindlaks parandused? Kuidas neid rakendatakse?"
+                    },
+                    "outcomes": {
+                        "label": "Kas tulemused kajastuvad sihtmärkides ja mõõtmistes? Ja kui jah, siis kelle?"
+                    },
+                    "title": "Valitsus"
+                },
+                "model": {
+                    "title": "Mudel"
+                },
+                "planManageCurrent": {
+                    "actions": {
+                        "label": "Milliseid toiminguid piloodis praegu tehakse?"
+                    },
+                    "actors": {
+                        "label": "Milliseid käimasolevaid toiminguid tehakse?"
+                    },
+                    "evidenceUrl": {
+                        "label": "Millised (välised) tõendid on selle toetamiseks saadaval?"
+                    },
+                    "title": "Planeeri ja halda - praegused toimingud"
+                },
+                "planManagePrior": {
+                    "actions": {
+                        "label": "Milliseid toiminguid tehti enne sekkumist?"
+                    },
+                    "actors": {
+                        "label": "Kes olid nende varasemate toimingutega seotud?"
+                    },
+                    "evidenceUrl": {
+                        "label": "Millised (välised) tõendid on selle toetamiseks saadaval?"
+                    },
+                    "title": "Planeerimine ja haldamine - eelnevad toimingud"
+                }
+            },
+            "guide": {
+                "step01": "Kaasloovasse innovatsiooni on kaasatud mitmeid põhiprotsesse. Esimene on seotud eetose määratlusega.",
+                "step02": "Teine hõlmab juhtimistegevusi ja tooteid.",
+                "step03": "Moraalne korraldus on seotud sellega, kes saavad tegevustes osaleda, kes siis teie initsiatiivi korral nendes protsessides osalevad? Kus ja millal need toimuvad? Kuidas nad suhtlevad ja kuidas neid salvestatakse?",
+                "step04": "Juhtimise, planeerimise ja kujundamise tulemusel pakutakse ja kogetakse teenuseid või algatusi.",
+                "step05": "Jällegi, kes on siin seotud ja kas nad osalevad kahes esimeses tegevuskomplektis?",
+                "step06": "Selle asemel, et lihtsa hindamisprotsessiga silmus lihtsalt sulgeda, soovitame, et kaasproduktiivse heaolu ja hoolduse süsteemides kaasab juhtimine kõik siin tuvastatud suhetes osalejad osalema moraalse korrastamise mudelis määratletud küsimustes.",
+                "step07": "Juhtimine toimub individuaalse teenuse kliendisuhete tasandil.",
+                "step08": "See toimub ka teenuse üldisel tasemel.",
+                "step09": "Kuidas valitsemisprotsessid selles mõttes, nagu me neid siin kirjeldame, teie algatusel toimuvad?"
+            },
+            "options": {
+                "sources": {
+                    "meeting": "Kohtumine",
+                    "other": "Muu",
+                    "policy": "Poliitika"
+                }
+            },
+            "title": "Moraalne tellimine"
+        },
+        "social_media": {
+            "dashboard": {
+                "title": "Sotsiaalmeedia"
+            },
+            "definitions": {
+                "data": {
+                    "title": "Sotsiaalmeedia"
+                }
+            },
+            "title": "Sotsiaalmeedia"
+        },
+        "theory_of_change": {
+            "dashboard": {
+                "empty_set": "Selle projekti jaoks pole muudatuste teooriat.",
+                "manage": "Halda muutuste teooriat",
+                "title": "Muutuste teooria"
+            },
+            "definitions": {
+                "data": {
+                    "hint": "Palun lisage kõik projekti teooriad muudatuste kohta.",
+                    "title": "Muutuste teooria"
+                }
+            },
+            "title": "Muutuste teooria"
+        },
+        "welcome": {
+            "dashboard": {
+                "summary": "Loonud {user} kuupäeval {date_time}"
+            },
+            "title": "Tere tulemast"
+        }
+    },
+    "hints": {
+        "editor_double_click_edit": "Selle muutmiseks topeltklõpsake üksust ja salvestamiseks sisestage sisestusklahv",
+        "social_facebook_add": "Lisage täielikud lingid (URL-id) Facebooki gruppidesse või lehtedele.",
+        "social_instagram_add": "Sisestage Instagrami räsimärk # -ga või ilma. Lisamiseks vajutage sisestusklahvi.",
+        "social_twitter_add": "Sisestage Twitteri hashtag kas # -ga või ilma. Lisamiseks vajutage sisestusklahvi.",
+        "social_youtube_add": "Sisestage YouTube'i video link ja vajutage lisamiseks sisestusklahvi.",
+        "type_and_enter": "Sisestage nimi allpool ja vajutage sisestusklahvi."
+    },
+    "languages": {
+        "el": "Kreeka keel",
+        "en_GB": "Inglise",
+        "es": "Hispaania keel",
+        "et": "Eestlane",
+        "fi": "Soome keel",
+        "hu": "Ungari keel",
+        "it": "Itaalia keel",
+        "nl": "Hollandi",
+        "pl": "Poola keel",
+        "sv_SE": "Rootsi keel"
+    },
+    "user_guide": {
+        "back": "tagasi",
+        "close": "Sulge",
+        "next": "Järgmine",
+        "show": "Kuva kasutusjuhend",
+        "skip": "Jäta kasutusjuhend vahele"
+    }
+}

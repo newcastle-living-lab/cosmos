@@ -80,6 +80,8 @@ import { get, sync, call } from 'vuex-pathify';
 import debounce from 'lodash/debounce';
 import filter from 'lodash/filter';
 
+import AlertCircleIcon from 'vue-feather-icons/icons/AlertCircleIcon';
+
 import Network from "@/services/Network";
 import NewProject from './NewProject';
 import ImportProject from './ImportProject';
@@ -89,6 +91,7 @@ export default {
 	components: {
 		NewProject,
 		ImportProject,
+		AlertCircleIcon,
 	},
 
 	data() {

@@ -2,7 +2,7 @@
 
 	<div class="card card-min card-new-project">
 		<div class="card-header">
-			<div class="card-title">{{ $t('app.create_project') }}</div>
+			<div class="card-title">{{ $t('app.new_project') }}</div>
 		</div>
 		<template v-if="userCanCreate">
 			<div class="card-body">
@@ -19,7 +19,7 @@
 					@click="createProject"
 					:disabled="(canCreateNewProject ? false : true)"
 					:class="(canCreateNewProject ? '' : 'disabled')"
-				>Create</VButton>
+				>{{ $t('app.create') }}</VButton>
 			</div>
 		</template>
 		<template v-else>

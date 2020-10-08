@@ -90,7 +90,9 @@ export default {
 				return this.project.name;
 			}
 
-			return this.aspect.CONFIG.title;
+			return this.$t(`aspects.${this.aspectEditId}.title`);
+
+			// return this.aspect.CONFIG.title;
 		},
 
 		definitions() {

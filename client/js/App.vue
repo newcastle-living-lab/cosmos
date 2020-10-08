@@ -18,10 +18,10 @@
 
 import { get, commit, call, dispatch } from 'vuex-pathify';
 
-import Network from "./services/Network";
-import AppHeader from "./components/layout/AppHeader.vue";
-import LoadingBar from "./components/layout/LoadingBar.vue";
-import ToastMessage from "./components/layout/ToastMessage.vue";
+import Network from "@/services/Network";
+import AppHeader from "@/components/layout/AppHeader.vue";
+import LoadingBar from "@/components/layout/LoadingBar.vue";
+import ToastMessage from "@/components/layout/ToastMessage.vue";
 
 export default {
 

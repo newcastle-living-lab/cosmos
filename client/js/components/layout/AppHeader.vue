@@ -41,20 +41,20 @@
 			</section>
 
 			<section class="navbar-section navbar-tabs">
-				<div v-if="project && project.id" class="input-group input-inline mr-8">
+				<div v-if="project && project.id" class="input-group input-inline mr-4">
 					<button class="btn btn-sm btn-link"
 						@click.prevent="startUserGuide()"
 						v-if="userGuide.isAvailable && !userGuide.isOpen"
 					>{{ $t('user_guide.show') }}</button>
 				</div>
-				<div v-if="project && project.id" class="input-group input-inline mr-8">
+				<div v-if="project && project.id" class="input-group input-inline mr-4">
 					<label class="form-switch input-sm" v-show="activeTab == 'model'">
 						<input type="checkbox" v-model="scale">
 						<i class="form-icon"></i> <span class="text-small">{{ $t('app.scale_to_fit') }}</span>
 					</label>
 				</div>
 
-				<div class="input-group input-inline">
+				<div class="input-group input-inline mr-4">
 					<a v-if="hasUser"
 						class="btn btn-link btn-sm"
 						:href="accountUrl"
@@ -64,6 +64,9 @@
 						:href="loginUrl"
 					><key-icon size="16" /> {{ $t('app.log_in') }}</a>
 				</div>
+
+				<LanguageSwitcher />
+
 			</section>
 
 		</nav>
@@ -109,6 +112,8 @@ import Aspects from '@/aspects';
 import { EventBus } from '@/services/EventBus';
 import Network from '@/services/Network';
 
+import LanguageSwitcher from "./LanguageSwitcher.vue";
+
 export default {
 
 	components: {
@@ -121,6 +126,7 @@ export default {
 		DownloadIcon,
 		ShareIcon,
 		CheckIcon,
+		LanguageSwitcher,
 	},
 
 	props: ['route'],

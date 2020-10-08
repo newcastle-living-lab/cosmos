@@ -1,0 +1,562 @@
+{
+    "activity_types": {
+        "organisation": "Organisation",
+        "service": "Service",
+        "user": "Användare"
+    },
+    "app": {
+        "add_new_actor": "Lägg till ny skådespelare",
+        "add_new_item": "Lägg till nytt föremål",
+        "all": "Allt",
+        "colour": "Färg",
+        "create": "Skapa",
+        "created_by": "Skapad av",
+        "delete": "Radera",
+        "description": "Beskrivning",
+        "download": "Ladda ner",
+        "error": "Fel",
+        "error_message": "Fel: {message}",
+        "export": "Exportera",
+        "exporting": "Exporterar",
+        "exporting_project": "Exporterar projekt",
+        "image": "Bild",
+        "image_drag_prompt": "Dra din bild hit för att börja eller klicka för att bläddra.",
+        "image_is_uploading": "Överför bild",
+        "image_remove": "Ta bort bilden",
+        "image_upload_error": "Uppladdningsfel",
+        "import": "Importera",
+        "import_project": "Importera projekt",
+        "import_project_drag_hint": "Dra ditt CoSMoS-projekt hit för att börja eller klicka för att bläddra.",
+        "import_project_notes": "Obs! Du kommer att äga projektet som importeras.",
+        "import_project_success": "Projektet har importerats framgångsrikt!",
+        "just_mine": "Bara min",
+        "label": "Märka",
+        "last_saved_at": "Senast sparad {date_time}",
+        "log_in": "Logga in",
+        "maximum_items": "Högst {count} objekt | Maxumum {count} artikel | Högst {count} objekt",
+        "name": "namn",
+        "new_project": "Skapa nytt projekt",
+        "next": "Nästa",
+        "no_projects": "Inga projekt hittades.",
+        "ok": "OK",
+        "open_project": "Öppet projekt",
+        "please_wait_generate": "Vänta medan filen genereras.",
+        "processing": "Bearbetning",
+        "project": "Projekt",
+        "project_save_success": "Projektet sparades!",
+        "save": "Spara",
+        "saving": "Sparande",
+        "scale_to_fit": "Skala för att passa",
+        "search": "Sök",
+        "title": "Titel",
+        "to_create_project": "för att skapa ett projekt.",
+        "try_again": "Försök igen",
+        "type": "Typ",
+        "user_is_read_only": "Din användaråtkomstnivå är skrivskyddad.",
+        "web_address": "webbadress"
+    },
+    "aspects": {
+        "analytic_model": {
+            "dashboard": {
+                "macro": {
+                    "label": "Makro"
+                },
+                "meso": {
+                    "description": "Det kan finnas ett antal steg på denna nivå.",
+                    "label": "Meso"
+                },
+                "micro": {
+                    "label": "Micro"
+                }
+            },
+            "definitions": {
+                "beneficiaries": {
+                    "hint": "Finns det andra förmånstagare än den direkta användaren \/ deltagarna? Om så är fallet, vem är de?",
+                    "title": "Förmånstagare"
+                },
+                "broker": {
+                    "hint": "Finns det en aktiv mäklare mellan initiativtagarna till förändring och förändringsskapare? Om så är fallet, vem är de?",
+                    "title": "Mäklare"
+                },
+                "changeMakers": {
+                    "hint": "Vem är, eller var, initiativtagarna som inledde din intervention?",
+                    "title": "Change Makers"
+                },
+                "changeTheorists": {
+                    "hint": "Vilka är förändringsteoretikerna för interventionen?",
+                    "title": "Ändra teoretiker"
+                },
+                "frontLineServiceDeliverer": {
+                    "hint": "Vem är tjänsteleverantören i frontlinjen?",
+                    "title": "Serviceleverantör i frontlinjen"
+                },
+                "instigatorsOfChange": {
+                    "hint": "Vem är, eller var, initiativtagarna som inledde din intervention?",
+                    "title": "Påbörjare av förändring"
+                },
+                "model": {
+                    "title": "Modell"
+                },
+                "serviceDeliveryManager": {
+                    "hint": "Vem är Service Delivery Manager ansvarig för interventionen?",
+                    "title": "Service Delivery Manager"
+                },
+                "serviceOrganisationManager": {
+                    "hint": "Vem är Service Organization Manager för interventionen?",
+                    "title": "Service Organisationschef"
+                },
+                "servicePolicyMaker": {
+                    "hint": "Vem är, eller var, definierarna för servicepolicyn och de principer enligt vilka tjänsten fungerar?",
+                    "title": "Service Policy Maker"
+                },
+                "subjectsOfChange": {
+                    "hint": "Vilka är de identifierade ämnena för förändring inom interventionen?",
+                    "title": "Ämnen för förändring"
+                },
+                "user": {
+                    "hint": "Vem är den direkta användaren av tjänsten?",
+                    "title": "Kund \/ användare"
+                },
+                "victims": {
+                    "hint": "Finns det några identifierade offer? Om så är fallet, vem är de?",
+                    "title": "Offer"
+                }
+            },
+            "guide": {
+                "step01": "I den här modellen överväger vi ett Cosie-initiativ i termer av en uppsättning roller och samtalsförhållanden som de engagerar sig i.",
+                "step02": "Först har vi tjänsteleverantör i frontlinjen och en klient.",
+                "step03": "Leverantören har en chef eller handledare. Detta mönster för en individ som deltar i två konversationer kommer att upprepas.",
+                "step04": "Leveransen sker i något formellt eller informellt institutionellt sammanhang.",
+                "step05": "Slutligen finns tjänsten i en bredare policyinställning.",
+                "step06": "Detta är tänkt att vara en abstrakt modell. I vissa fall kan det finnas en platt organisation där leverans, ledning och policy genomförs av alla medlemmar i ett litet team, i andra fall kan de representera distinkta individer och sammanhang.",
+                "step07": "Hur kartläggs begreppen mikro, meso och makro på ditt initiativ?",
+                "step08": "Hur sker kommunikation mellan dem?",
+                "step09": "Hur samordnade och sammanhängande är de?",
+                "step10": "Finns det särskilt informationsflöden och konversationer mellan makro och mikro som inte förmedlas av meso? Vilka är konsekvenserna av detta?",
+                "step11": "Nästa modell tar hänsyn till förändringsbyrå i termer av roller och konversationer.",
+                "step12": "En förändring måste initieras och sedan körs den.",
+                "step13": "De förändringar vi överväger är till en person, eller en plats eller miljö.",
+                "step14": "De förändringar vi överväger är ofta själva komplexa och handlar om komplexa situationer. Ofta bygger de på någon teori som har införts eller förmedlats i situationen.",
+                "step15": "Det finns en uppsättning avsedda förmånstagare.",
+                "step16": "Men det finns också möjliga missmottagare eller offer för förändringen.",
+                "step17": "Denna modell är utformad som en sond på den ursprungliga servicemodellen för att identifiera de specifika aktörerna som i olika steg i utvecklingen av initiativet har genomfört en eller flera av dessa förändringsbyråroller. Vilka är dom?"
+            },
+            "title": "Analytisk modell"
+        },
+        "change_model": {
+            "dashboard": {
+                "ambiguity": "Tvetydighet",
+                "ambivalence": "Ambivalens",
+                "committing": "Åtar sig",
+                "execute": "Kör",
+                "first_order": "Första beställning",
+                "fourth_order": "Fjärde ordern!",
+                "languaging": "\"Språk\"",
+                "measure": "Mäta",
+                "plan": "Planen",
+                "risk": "Risk",
+                "second_order": "Andra beställning",
+                "sense_making": "Sense-Making",
+                "third_order": "Tredje ordningen",
+                "vision": "Syn",
+                "zero_order": "Noll ordning"
+            },
+            "definitions": {
+                "first_order": {
+                    "execute": {
+                        "label": "Hur genomförs planen?"
+                    },
+                    "measure": {
+                        "label": "Hur registreras observationer och mätningar? Om inte, vad behöver göras för att göra det?"
+                    },
+                    "plan": {
+                        "label": "Hur skapades en plan för att leverera visionen?"
+                    },
+                    "vision": {
+                        "label": "Hur fastställdes visionen och målen?"
+                    }
+                },
+                "fourth_order": {
+                    "change_origin": {
+                        "label": "Vad var ursprunget till förändringen? Och vad var förändringen?"
+                    },
+                    "event_cause": {
+                        "label": "Vad hände för att denna händelse skulle inträffa?"
+                    },
+                    "unexpected_events": {
+                        "label": "Har det förekommit fall där du har sett oväntade händelser inträffat?"
+                    }
+                },
+                "model": {
+                    "title": "Modell"
+                },
+                "second_order": {
+                    "committing": {
+                        "label": "Hur har tjänsteleveransen för interventionen förändrats från de ursprungliga planerna?"
+                    },
+                    "languaging": {
+                        "label": "Vilka förändringar har gjorts i hur insatsen har förstått?"
+                    },
+                    "sense_making": {
+                        "label": "När granskar du planerna och visionen?"
+                    }
+                },
+                "third_order": {
+                    "processes": {
+                        "label": "Vilka processer framkallar eller möjliggör frågan om andra ordningen?"
+                    }
+                }
+            },
+            "guide": {
+                "step01": "Vi börjar med den standardmodell för målmedveten handling som vi alla är mycket bekanta med.",
+                "step02": "Men vi har alla haft erfarenhet av att se tillbaka och inse att saker har förändrats på ett riktigt fundamentalt sätt: vi pratar om paradigmskiftet. Detta innebär att vi har åtagit oss att göra en ny känsla av vår värld och detta innebär ofta att vårt språk förändras.",
+                "step03": "Dessa två olika sätt att fungera kallas ibland första ordning och andra ordning.",
+                "step04": "När det gäller ledningen har vi å ena sidan riskhantering och å andra sidan lösningen på motsägelser och tvetydigheter.",
+                "step05": "Vi introducerar nu idén om tredje ordningens aktiviteter som möjliggör och stöder lämpliga övergångar mellan första och andra arbetet, vilket möjliggör ett steg tillbaka för att ompröva vår etos och antaganden och, när vi har det, gå tillbaka till läget för praktisk planering och leverans.",
+                "step06": "Ibland är reaktionen på tvetydighet och motsägelse en känslomässig reaktion: slåss eller flyga som är nollordning, eller inspiration och hjältemod som vi kommer att kalla fjärde ordningen.",
+                "step07": "Så på höger sida av vårt diagram har vi ett spektrum av känslomässigt arbete och svar medan vi på vänster sida har samproduktivt, konversationsarbete.",
+                "step08": "Denna modell genererar en serie öppna frågor om var de olika första och andra ordningens arbete äger rum i ditt initiativ, vad känslomässigt arbete har varit och vad som krävs och hur och var det utförs och hur och av vem är de erforderliga tredje ordningens insatser genomfört?"
+            },
+            "title": "Byt modell"
+        },
+        "co_creation_of_service_model": {
+            "dashboard": {
+                "ethos": "Livssyn",
+                "infrastructural_relationships": "Infrastrukturrelationer, resurser och anläggningar",
+                "policy_law": "Policy & lag",
+                "resources": "Resurser",
+                "service_definition": "Service Definition and Development Platform",
+                "service_delivery": "Serviceleveransplattform",
+                "structural_relationships": "Strukturella relationer och tillfällen"
+            },
+            "definitions": {
+                "beneficiary": {
+                    "hint": "Finns det andra förmånstagare än den direkta användaren \/ deltagarna? Om så är fallet, vem är de?",
+                    "title": "Förmånstagare"
+                },
+                "delivery": {
+                    "hint": "Vem är ansvarig för leveransmekanismen, kanalerna och rollerna i din pilot?",
+                    "title": "Leverantör"
+                },
+                "deployment": {
+                    "hint": "Vem distribuerar \/ distribuerar och aktiverar \/ aktiverade dessa processer och resurser?",
+                    "title": "Distributör"
+                },
+                "drivers": {
+                    "body": {
+                        "hint": "Vilka drivkrafter och motiv är inblandade?",
+                        "label": "Drivrutiner och motivationer"
+                    },
+                    "hint": "Vilka var \/ är drivkrafterna och motivationen för projektet? Var det ett lagstadgat krav, erkännande av ett behov eller krav, att ta tillfället i akt, ta itu med en ojämlikhet?",
+                    "title": "Drivrutiner och motivationer"
+                },
+                "evaluation": {
+                    "hint": "Vem är utvärderaren (arna) och guvernörerna för tjänsten?",
+                    "title": "Utvärderare"
+                },
+                "extorg": {
+                    "hint": "Finns det några relevanta aktörer, intressenter eller byråer som är relevanta för piloten, men som fortfarande ligger utanför dess vision och etos?",
+                    "title": "Externa organisationer"
+                },
+                "extsvc": {
+                    "hint": "Vilka återanvändbara anläggningar, (tekniska och mänskliga) resurser, tjänster och informationskällor utvecklades och användes för att stödja dessa definitioner av tjänster och utvecklingsprocesser? Vilka externa resurser och tjänster (t.ex. kommunikation och sociala medier) användes \/ användes?",
+                    "title": "Externa tekniska tjänster"
+                },
+                "infsvc": {
+                    "hint": "Vilka externa tjänster, kanaler och faciliteter använder du vid leveransen av dina tjänster? Vilka informationskällor använder du? Vilken information publicerar du, till vem och vilka kanaler och media använder du?",
+                    "title": "Infrastrukturtjänster"
+                },
+                "initiator": {
+                    "hint": "Vem är, eller var, initiativtagarna som initierade din pilotaktivitet?",
+                    "title": "Initiator"
+                },
+                "model": {
+                    "title": "Modell"
+                },
+                "policyDef": {
+                    "hint": "Vem är, eller var, definierarna för servicepolicyn och de principer enligt vilka tjänsten fungerar?",
+                    "title": "Policy Definition"
+                },
+                "specDes": {
+                    "hint": "Vem specificerar \/ specificerar och designar \/ utformade processer och resurser för tjänsteleverans?",
+                    "title": "Specifier och Designer"
+                },
+                "user": {
+                    "hint": "Vem är den direkta användaren av tjänsten?",
+                    "title": "Användare"
+                }
+            },
+            "title": "Co-Creation of Service Model"
+        },
+        "community_reporting": {
+            "dashboard": {
+                "empty_set": "Det finns inga gemenskapsrapporteringsobjekt för detta projekt.",
+                "manage": "Hantera gemenskapsrapportering",
+                "title": "Gemenskapsrapportering"
+            },
+            "definitions": {
+                "data": {
+                    "hint": "Lägg till eventuella gemenskapsrapporter som ditt projekt kan ha.",
+                    "title": "Gemenskapsrapportering"
+                }
+            },
+            "title": "Gemenskapsrapportering"
+        },
+        "documents": {
+            "dashboard": {
+                "empty_set": "Det finns inga dokument eller filer för detta projekt.",
+                "manage": "Hantera dokument och filer",
+                "title": "Dokument och filer"
+            },
+            "definitions": {
+                "data": {
+                    "hint": "Lägg till alla dokument och filer som ditt projekt kan ha.",
+                    "title": "Dokument och filer"
+                }
+            },
+            "title": "Dokument"
+        },
+        "intervention_theory_model": {
+            "dashboard": {
+                "wellbeing": "Välbefinnande"
+            },
+            "definitions": {
+                "innovation": {
+                    "items": {
+                        "label": "Vilka aspekter av tjänstens livscykel är viktiga för din innovation och förändring?"
+                    },
+                    "title": "Innovation och förändring"
+                },
+                "intervention": {
+                    "items": {
+                        "label": "Vilken typ av intervention sker?"
+                    },
+                    "title": "Intervention"
+                },
+                "learning": {
+                    "items": {
+                        "label": "Hur sker lärande i ditt ingripande?"
+                    },
+                    "title": "Inlärning"
+                },
+                "model": {
+                    "title": "Modell"
+                },
+                "wellbeing": {
+                    "items": {
+                        "label": "Vilka aspekter av människans välbefinnande och miljön är relevanta för din tjänst? Är några mer betydelsefulla än andra?"
+                    },
+                    "title": "Människors välbefinnande och miljö"
+                }
+            },
+            "guide": {
+                "step01": "De samkreativa initiativ vi överväger handlar om att förbättra och vårda välbefinnandet. Här tar vi hänsyn till individers välbefinnande men detta kan tillämpas på platser eller i större miljöer.",
+                "step02": "Välbefinnande har ett antal olika aspekter som alla är beroende av varandra.",
+                "step03": "Det interagerar också med de fysiska och sociala miljöerna.",
+                "step04": "Vissa tjänster eller ingripanden handlar om att reparera något som har gått fel och återställa status quo.",
+                "step05": "Men det finns andra syften för ingripanden.",
+                "step06": "Interventionsprocessen involverar ett antal olika steg och processer.",
+                "step07": "Slutligen, om våra innovationer ska upprätthållas måste vi lära oss och förbättra.",
+                "step08": "Vem, vad eller var är målet för din intervention?",
+                "step09": "Vilka aspekter av välbefinnande är fokus för ditt initiativ?",
+                "step10": "Vilka aspekter av ditt ämnes välbefinnande är relevanta men utanför ditt initiativ?",
+                "step11": "Vilka är de relevanta miljöaspekterna?",
+                "step12": "Vilka kombinationer av insatser, från förebyggande till transformation, är relevanta för ditt initiativ?",
+                "step13": "I vilken utsträckning är inlärning och förbättring inbyggd i dina utvecklingsstyrning och leveransprocesser?"
+            },
+            "options": {
+                "innovation": {
+                    "development": "Utveckling",
+                    "facilitation": "Underlättande",
+                    "palliation": "Lindring",
+                    "prevention": "Förebyggande",
+                    "rehabilitation": "Rehabilitering",
+                    "remedy": "Avhjälpa",
+                    "transformation": "Omvandling"
+                },
+                "intervention": {
+                    "coordination_delivery": "Koordinering och leverans",
+                    "governance": "Styrning",
+                    "identification": "Identifiering och planering",
+                    "learning": "Inlärning",
+                    "management": "Förvaltning"
+                },
+                "learning": {
+                    "research_evidence": "Forskning och bevis",
+                    "service_improvement": "Förbättring av tjänster",
+                    "trials": "Försök"
+                },
+                "wellbeing": {
+                    "faculties_skills": "Fakulteter och färdigheter",
+                    "mental_psych": "Mental och psykologisk",
+                    "physical_env": "Fysisk miljö",
+                    "physiological": "Fysiologisk",
+                    "socio_cultural_env": "Sociokulturell miljö",
+                    "socio_economic": "Socioekonomisk"
+                }
+            },
+            "title": "Interventionsteorimodell"
+        },
+        "moral_ordering_model": {
+            "dashboard": {
+                "define_ethos": "Definiera etos",
+                "define_ethos_items": "Värden\n Principer\n Avsikter\n Policyer",
+                "deliver": "Leverera",
+                "experience": "Erfarenhet",
+                "govern": "Styra",
+                "individual_cases": "Enskilda fall",
+                "plan_manage": "Planera och hantera",
+                "plan_manage_items": "Regler\n Resurser\n Processer\n Konton",
+                "the_service_level": "Servicenivån"
+            },
+            "definitions": {
+                "defineEthos": {
+                    "definedBy": {
+                        "label": "Hur kommer dessa värden att definieras?"
+                    },
+                    "evidenceUrl": {
+                        "label": "Vilka (externa) bevis finns tillgängliga för att stödja detta?"
+                    },
+                    "title": "Definiera etos",
+                    "values": {
+                        "label": "Vilka värden är viktiga att ingripandet kommer att ta itu med?"
+                    }
+                },
+                "deliver": {
+                    "actors": {
+                        "label": "Av vem levereras det?"
+                    },
+                    "evidenceUrl": {
+                        "label": "Vilka (externa) bevis finns tillgängliga för att stödja detta?"
+                    },
+                    "method": {
+                        "label": "Hur levereras interventionen?"
+                    },
+                    "title": "Leverera"
+                },
+                "govern": {
+                    "actions": {
+                        "label": "Hur styrs ingripandet? Vilka åtgärder vidtas för att säkerställa att resultaten var som avsedda?"
+                    },
+                    "actors": {
+                        "label": "Vem utvärderar detta?"
+                    },
+                    "evolution": {
+                        "label": "Hur påverkar detta utvecklingen av tjänsten?"
+                    },
+                    "improvements": {
+                        "label": "Hur identifieras förbättringar? Hur implementeras de?"
+                    },
+                    "outcomes": {
+                        "label": "Ingår resultaten i mål och mätningar? Och i så fall vem?"
+                    },
+                    "title": "Styra"
+                },
+                "model": {
+                    "title": "Modell"
+                },
+                "planManageCurrent": {
+                    "actions": {
+                        "label": "Vilka åtgärder genomförs nu inom piloten?"
+                    },
+                    "actors": {
+                        "label": "Vilka pågående åtgärder vidtas?"
+                    },
+                    "evidenceUrl": {
+                        "label": "Vilka (externa) bevis finns tillgängliga för att stödja detta?"
+                    },
+                    "title": "Planera och hantera - nuvarande åtgärder"
+                },
+                "planManagePrior": {
+                    "actions": {
+                        "label": "Vilka åtgärder vidtogs före ingripandet?"
+                    },
+                    "actors": {
+                        "label": "Vem var inblandad i dessa tidigare åtgärder?"
+                    },
+                    "evidenceUrl": {
+                        "label": "Vilka (externa) bevis finns tillgängliga för att stödja detta?"
+                    },
+                    "title": "Planera och hantera - Tidigare åtgärder"
+                }
+            },
+            "guide": {
+                "step01": "Det finns ett antal kärnprocesser involverade i en kreativ innovation. Den första handlar om definitionen av etos.",
+                "step02": "Den andra handlar om ledningsaktiviteter och produkter.",
+                "step03": "Moralisk ordning handlar om vem som får delta i aktiviteter så vem deltar i dessa processer, när det gäller ditt initiativ? Var och när äger de rum? Hur kommunicerar de och hur spelas de in?",
+                "step04": "Som ett resultat av ledarskap, planering och design levereras och upplevs tjänster eller initiativ.",
+                "step05": "Återigen vem är inblandad här och får de delta i de två första uppsättningarna av aktiviteter?",
+                "step06": "I stället för att helt enkelt stänga slingan med en enkel utvärderingsprocess, föreslår vi att i system för samproduktivt välbefinnande och vård involverar styrning alla deltagare i relationerna som identifieras här, deltagande i frågor som definieras i den moraliska ordningsmodellen.",
+                "step07": "Styrning sker på den individuella servicekundrelationsnivån.",
+                "step08": "Det sker också på den övergripande servicenivån.",
+                "step09": "Hur sker styrningsprocesser, i den mening som vi beskriver dem här, i ditt initiativ?"
+            },
+            "options": {
+                "sources": {
+                    "meeting": "Möte",
+                    "other": "Övrig",
+                    "policy": "Politik"
+                }
+            },
+            "title": "Moralisk ordning"
+        },
+        "social_media": {
+            "dashboard": {
+                "title": "Sociala media"
+            },
+            "definitions": {
+                "data": {
+                    "title": "Sociala media"
+                }
+            },
+            "title": "Sociala media"
+        },
+        "theory_of_change": {
+            "dashboard": {
+                "empty_set": "Det finns ingen teori om förändringsartiklar för detta projekt.",
+                "manage": "Hantera förändringsteori",
+                "title": "Teori om förändring"
+            },
+            "definitions": {
+                "data": {
+                    "hint": "Lägg till eventuella förändringsteorier som ditt projekt kan ha.",
+                    "title": "Teori om förändring"
+                }
+            },
+            "title": "Teori om förändring"
+        },
+        "welcome": {
+            "dashboard": {
+                "summary": "Skapad av {user} den {date_time}"
+            },
+            "title": "Välkommen"
+        }
+    },
+    "hints": {
+        "editor_double_click_edit": "Dubbelklicka på ett objekt för att redigera det och gå in för att spara",
+        "social_facebook_add": "Lägg till fullständiga länkar (URL: er) till Facebook-grupper eller -sidor.",
+        "social_instagram_add": "Ange en Instagram-hashtag, med eller utan #. Tryck på Enter för att lägga till.",
+        "social_twitter_add": "Ange en Twitter-hashtag, med eller utan #. Tryck på Enter för att lägga till.",
+        "social_youtube_add": "Ange en länk till en YouTube-video och tryck på Enter för att lägga till.",
+        "type_and_enter": "Skriv namnet nedan och tryck på enter."
+    },
+    "languages": {
+        "el": "Grekiska",
+        "en_GB": "Engelska",
+        "es": "Spanska",
+        "et": "Estniska",
+        "fi": "Finska",
+        "hu": "Ungerska",
+        "it": "Italienska",
+        "nl": "Nederländska",
+        "pl": "Polska",
+        "sv_SE": "Svenska"
+    },
+    "user_guide": {
+        "back": "Tillbaka",
+        "close": "Stänga",
+        "next": "Nästa",
+        "show": "Visa användarhandbok",
+        "skip": "Hoppa över användarhandboken"
+    }
+}

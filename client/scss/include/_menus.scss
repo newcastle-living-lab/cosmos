@@ -28,4 +28,18 @@
 		}
 	}
 
+	&.dropdown-language {
+		.menu {
+			animation: none;
+			color: $dark-color;
+		}
+		.menu-item {
+			font-size: $font-size-sm;
+		}
+		.gb-flag {
+			margin-right: $unit-1;
+			vertical-align: -30%;
+		}
+	}
+
 }

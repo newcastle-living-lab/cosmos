@@ -1,4 +1,16 @@
 {
+	"languages": {
+		"el": "Greek",
+		"en_GB": "English",
+		"es": "Spanish",
+		"et": "Estonian",
+		"fi": "Finnish",
+		"hu": "Hungarian",
+		"it": "Italian",
+		"nl": "Dutch",
+		"pl": "Polish",
+		"sv_SE": "Swedish"
+	},
 	"app": {
 		"log_in": "Log in",
 		"project": "Project",
@@ -21,6 +33,7 @@
 		"ok": "OK",
 		"save": "Save",
 		"saving": "Saving",
+		"create": "Create",
 		"project_save_success": "Project saved!",
 		"last_saved_at": "Last saved at {date_time}",
 		"download": "Download",
