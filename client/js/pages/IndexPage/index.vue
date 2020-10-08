@@ -141,7 +141,7 @@ export default {
 				});
 			}
 
-			if (this.filter.owner == 'mine') {
+			if (this.filter.owner == 'mine' && this.authUser) {
 				items = filter(items, { created_by: this.authUser.email  });
 			}
 

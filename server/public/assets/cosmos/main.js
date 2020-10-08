@@ -16294,7 +16294,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         });
       }
 
-      if (this.filter.owner == 'mine') {
+      if (this.filter.owner == 'mine' && this.authUser) {
         items = lodash_filter__WEBPACK_IMPORTED_MODULE_2___default()(items, {
           created_by: this.authUser.email
         });
