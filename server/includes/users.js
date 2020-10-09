@@ -258,11 +258,11 @@ Users.prototype.sendInviteEmail = function(id, hostname) {
 			var vars = {
 				url: url,
 				id: id,
-				app_name: "Living Lab"
+				app_name: "Living Lab CoSMoS"
 			};
 
 			return mailer.send({
-				subject: "Living Lab invitation",
+				subject: "Living Lab CoSMoS invitation",
 				to: user.email,
 				template: 'user_invite',
 				vars: vars,
@@ -301,11 +301,11 @@ Users.prototype.sendConfirmEmail = function(id, hostname) {
 			var vars = {
 				url: url,
 				id: id,
-				app_name: "Living Lab"
+				app_name: "Living Lab CoSMoS",
 			};
 
 			return mailer.send({
-				subject: "Living Lab registration",
+				subject: "Living Lab CoSMoS registration",
 				to: user.email,
 				template: 'user_register',
 				vars: vars,

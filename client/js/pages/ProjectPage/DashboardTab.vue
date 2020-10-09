@@ -29,6 +29,7 @@
 						:definitions="aspect.DEFINITIONS"
 						:options="options"
 						:aspectId="aspect.CONFIG.id"
+						:currentLanguage="currentLanguage"
 					/>
 				</v-layer>
 			</v-stage>
@@ -40,11 +41,11 @@
 			<div class="modal-overlay"></div>
 			<div class="modal-container">
 				<div class="modal-header">
-					<div class="modal-title h5">Exporting...</div>
+					<div class="modal-title h5">{{ $t('app.exporting') }}...</div>
 				</div>
 				<div class="modal-body">
 					<div class="content mb-4">
-						<p>The export file is being generated.</p>
+						<p>{{ $t('app.please_wait_generate') }}</p>
 						<div class="loading loading-lg"></div>
 					</div>
 				</div>
@@ -61,6 +62,7 @@ import throttle from 'lodash/throttle';
 import { get, set, sync, call } from 'vuex-pathify';
 import jsPDF from 'jspdf';
 
+import Trans from '@/services/Trans';
 import { EventBus } from '@/services/EventBus';
 import Aspects from '@/aspects';
 
@@ -119,6 +121,10 @@ export default {
 			'options',
 			'project',
 		]),
+
+		currentLanguage() {
+			return Trans.currentLanguage()
+		},
 
 		/**
 		 * Get aspect (ALL data - CONFIG + DEFS etc!) based on supplied editor ID

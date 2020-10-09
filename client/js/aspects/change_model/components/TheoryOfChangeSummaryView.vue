@@ -9,25 +9,25 @@
 
 				<div class="columns">
 					<div class="column col-3">
-						<h2 class="group-title">First Order</h2>
+						<h2 class="group-title">{{ $t('aspects.change_model.dashboard.first_order') }}</h2>
 					</div>
 					<div class="column col-9">
 						<table class="table">
 							<tbody>
 								<tr>
-									<td class="group-prompt">{{ definitionsById.first_order.children.vision.label }}</td>
+									<td class="group-prompt">{{ $t('aspects.change_model.definitions.first_order.vision.label') }}</td>
 									<td class="group-value like-pre">{{ aspectData.first_order.vision }}</td>
 								</tr>
 								<tr>
-									<td class="group-prompt">{{ definitionsById.first_order.children.plan.label }}</td>
+									<td class="group-prompt">{{ $t('aspects.change_model.definitions.first_order.plan.label') }}</td>
 									<td class="group-value like-pre">{{ aspectData.first_order.plan }}</td>
 								</tr>
 								<tr>
-									<td class="group-prompt">{{ definitionsById.first_order.children.execute.label }}</td>
+									<td class="group-prompt">{{ $t('aspects.change_model.definitions.first_order.execute.label') }}</td>
 									<td class="group-value like-pre">{{ aspectData.first_order.execute }}</td>
 								</tr>
 								<tr>
-									<td class="group-prompt">{{ definitionsById.first_order.children.measure.label }}</td>
+									<td class="group-prompt">{{ $t('aspects.change_model.definitions.first_order.measure.label') }}</td>
 									<td class="group-value like-pre">{{ aspectData.first_order.measure }}</td>
 								</tr>
 							</tbody>
@@ -39,21 +39,21 @@
 
 				<div class="columns">
 					<div class="column col-3">
-						<h2 class="group-title">Second Order</h2>
+						<h2 class="group-title">{{ $t('aspects.change_model.dashboard.second_order') }}</h2>
 					</div>
 					<div class="column col-9">
 						<table class="table">
 							<tbody>
 								<tr>
-									<td class="group-prompt">{{ definitionsById.second_order.children.sense_making.label }}</td>
+									<td class="group-prompt">{{ $t('aspects.change_model.definitions.second_order.sense_making.label') }}</td>
 									<td class="group-value like-pre">{{ aspectData.second_order.sense_making }}</td>
 								</tr>
 								<tr>
-									<td class="group-prompt">{{ definitionsById.second_order.children.languaging.label }}</td>
+									<td class="group-prompt">{{ $t('aspects.change_model.definitions.second_order.languaging.label') }}</td>
 									<td class="group-value like-pre">{{ aspectData.second_order.languaging }}</td>
 								</tr>
 								<tr>
-									<td class="group-prompt">{{ definitionsById.second_order.children.committing.label }}</td>
+									<td class="group-prompt">{{ $t('aspects.change_model.definitions.second_order.committing.label') }}</td>
 									<td class="group-value like-pre">{{ aspectData.second_order.committing }}</td>
 								</tr>
 							</tbody>
@@ -65,13 +65,13 @@
 
 				<div class="columns">
 					<div class="column col-3">
-						<h2 class="group-title">Third Order</h2>
+						<h2 class="group-title">{{ $t('aspects.change_model.dashboard.third_order') }}</h2>
 					</div>
 					<div class="column col-9">
 						<table class="table">
 							<tbody>
 								<tr>
-									<td class="group-prompt">{{ definitionsById.third_order.children.processes.label }}</td>
+									<td class="group-prompt">{{ $t('aspects.change_model.definitions.third_order.processes.label') }}</td>
 									<td class="group-value like-pre">{{ aspectData.third_order.processes }}</td>
 								</tr>
 							</tbody>
@@ -83,21 +83,21 @@
 
 				<div class="columns">
 					<div class="column col-3">
-						<h2 class="group-title">Fourth Order!</h2>
+						<h2 class="group-title">{{ $t('aspects.change_model.dashboard.fourth_order') }}</h2>
 					</div>
 					<div class="column col-9">
 						<table class="table">
 							<tbody>
 								<tr>
-									<td class="group-prompt">{{ definitionsById.fourth_order.children.unexpected_events.label }}</td>
+									<td class="group-prompt">{{ $t('aspects.change_model.definitions.fourth_order.unexpected_events.label') }}</td>
 									<td class="group-value like-pre">{{ aspectData.fourth_order.unexpected_events }}</td>
 								</tr>
 								<tr>
-									<td class="group-prompt">{{ definitionsById.fourth_order.children.event_cause.label }}</td>
+									<td class="group-prompt">{{ $t('aspects.change_model.definitions.fourth_order.event_cause.label') }}</td>
 									<td class="group-value like-pre">{{ aspectData.fourth_order.event_cause }}</td>
 								</tr>
 								<tr>
-									<td class="group-prompt">{{ definitionsById.fourth_order.children.change_origin.label }}</td>
+									<td class="group-prompt">{{ $t('aspects.change_model.definitions.fourth_order.change_origin.label') }}</td>
 									<td class="group-value like-pre">{{ aspectData.fourth_order.change_origin }}</td>
 								</tr>
 							</tbody>

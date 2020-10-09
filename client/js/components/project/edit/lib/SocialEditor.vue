@@ -18,14 +18,14 @@
 
 		<div class="sidebar-content">
 
-			<p class="form-input-hint">Double-click an item to edit it, and enter to save.</p>
+			<p class="form-input-hint">{{ $t('hints.editor_double_click_edit') }}</p>
 
 			<div
 				v-for="tab in tabs"
 				:key="tab.id"
 				v-show="tab.id == activeTab"
 			>
-				<p class="form-input-hint">{{ tab.hint }}</p>
+				<p class="form-input-hint">{{ $t(`hints.social_${tab.id}_add`) }}</p>
 
 				<VGroup :name="inputId(tab.id + '_new')" class="mb-8">
 					<VInput
@@ -71,28 +71,24 @@ const tabs = [
 		"id": "twitter",
 		"icon": "twitter-icon",
 		"class": "item-twitter-bg",
-		"hint": "Enter a Twitter hashtag, with or without the #. Press enter to add.",
 	},
 	{
 		"id": "facebook",
 		"icon": "facebook-icon",
 		"class":
 		"item-facebook-bg",
-		"hint": "Add full links (URLs) to Facebook groups or pages."
 	},
 	{
 		"id": "instagram",
 		"icon": "instagram-icon",
 		"class":
 		"item-instagram-bg",
-		"hint": "Enter an Instagram hashtag, with or without the #. Press enter to add."
 	},
 	{
 		"id": "youtube",
 		"icon": "youtube-icon",
 		"class":
 		"item-youtube-bg",
-		"hint": "Enter a link to a YouTube video and press enter to add."
 	},
 ];
 

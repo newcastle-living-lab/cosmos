@@ -1,8 +1,6 @@
 <template>
 	<div class="cosmos-project">
 
-		<!-- <ProjectToolbar /> -->
-
 		<section class="app-main">
 
 			<ProjectSidebar :aspectId="aspectId" />

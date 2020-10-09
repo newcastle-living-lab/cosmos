@@ -5506,6 +5506,21 @@ a.text-gray-medium:visited {
   color: #444;
 }
 
+.dropdown.dropdown-language .menu {
+  -webkit-animation: none;
+          animation: none;
+  color: #444;
+}
+
+.dropdown.dropdown-language .menu-item {
+  font-size: 0.7rem;
+}
+
+.dropdown.dropdown-language .gb-flag {
+  margin-right: 0.2rem;
+  vertical-align: -30%;
+}
+
 .btn {
   touch-action: manipulation;
   -webkit-transition: none;

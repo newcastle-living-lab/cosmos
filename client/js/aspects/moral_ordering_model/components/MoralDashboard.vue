@@ -229,28 +229,30 @@ export default {
 				...defaults,
 				x: 570,
 				y: 415,
-				text: "Govern",
+				text: this.$t('aspects.moral_ordering_model.dashboard.govern'),
 			};
 
 			data.deliver = {
 				...defaults,
-				x: 420,
-				y: 620,
-				text: "Deliver",
+				x: 100,
+				y: 610,
+				align: 'right',
+				width: 400,
+				text: this.$t('aspects.moral_ordering_model.dashboard.deliver'),
 			};
 
 			data.ethosLabel = {
 				...defaults,
 				x: 630,
 				y: 150,
-				text: "Define Ethos",
+				text: this.$t('aspects.moral_ordering_model.dashboard.define_ethos'),
 			};
 
 			data.ethosItems = {
 				...defaults,
 				x: 640,
 				y: 200,
-				text: "Values\nPrinciples\nIntentions\nPolicies",
+				text: this.$t('aspects.moral_ordering_model.dashboard.define_ethos_items'),
 				fontSize: 20,
 				align: "left",
 				lineHeight: 1.3,
@@ -258,10 +260,13 @@ export default {
 
 			data.planLabel = {
 				...defaults,
-				x: 200,
-				y: 275,
+				x: 190,
+				y: 235,
 				width: 200,
-				text: "Plan & Manage",
+				height: 65,
+				align: 'right',
+				verticalAlign: 'bottom',
+				text: this.$t('aspects.moral_ordering_model.dashboard.plan_manage'),
 			};
 
 			data.planItems = {
@@ -269,7 +274,7 @@ export default {
 				x: 170,
 				y: 310,
 				width: 200,
-				text: "Rules\nResources\nProcesses\nAccounts",
+				text: this.$t('aspects.moral_ordering_model.dashboard.plan_manage_items'),
 				fontSize: 20,
 				align: "right",
 				lineHeight: 1.3,
@@ -279,24 +284,28 @@ export default {
 				...defaults,
 				x: 745,
 				y: 570,
-				text: "Experience",
+				text: this.$t('aspects.moral_ordering_model.dashboard.experience'),
 			};
 
 			data.individualCases = {
 				...defaults,
 				x: 835,
-				y: 210,
-				text: "Individual Cases",
-				fontSize: 40,
+				y: 230,
+				width: 400,
+				align: 'left',
+				text: this.$t('aspects.moral_ordering_model.dashboard.individual_cases'),
+				fontSize: 30,
 				opacity: 0.6,
 			};
 
 			data.serviceLevel = {
 				...defaults,
 				x: 835,
-				y: 270,
-				text: "The Service Level",
-				fontSize: 40,
+				y: 290,
+				width: 400,
+				align: 'left',
+				text: this.$t('aspects.moral_ordering_model.dashboard.the_service_level'),
+				fontSize: 30,
 			};
 
 			if (this.userGuide.isOpen) {

@@ -78,10 +78,18 @@ export default {
 			var tabs = map(Aspects.all(), (aspectConfig) => {
 
 				var labelRoute = null,
-					summaryRoute = null;
+					summaryRoute = null,
+					label = null;
 
 				if (aspectConfig.routeName == 'project') {
-					aspectConfig.title = this.project.name;
+					label = this.project.name;
+				} else {
+					const labelLangKey = `aspects.${aspectConfig.id}.title`;
+					if (this.$te(labelLangKey)) {
+						label = this.$t(labelLangKey);
+					} else {
+						label = labelLangKey;
+					}
 				}
 
 				labelRoute = {
@@ -97,10 +105,10 @@ export default {
 				}
 
 				return {
-					aspectConfig: aspectConfig,
-					label: aspectConfig.title,
-					labelRoute: labelRoute,
-					summaryRoute: summaryRoute,
+					aspectConfig,
+					label,
+					labelRoute,
+					summaryRoute,
 				};
 			});
 

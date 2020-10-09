@@ -7,7 +7,7 @@
 				<div class="column col-8">
 					<div class="card card-min card-projects">
 						<div class="card-header">
-							<div class="card-title">Open project</div>
+							<div class="card-title">{{ $t('app.open_project') }}</div>
 						</div>
 						<div class="card-filter">
 							<div class="columns">
@@ -19,7 +19,7 @@
 											:value="filter.query"
 											@input="updateFilterQuery"
 											maxlength="100"
-											placeholder="Search..."
+											:placeholder="$t('app.search') + '...'"
 											autofocus="true"
 										/>
 										<i class="form-icon icon icon-search"></i>
@@ -27,10 +27,10 @@
 								</div>
 								<div class="column col-6" v-show="hasAdminRole">
 									<label class="form-radio form-inline input-sm">
-										<input type="radio" value="" v-model="filter.owner"><i class="form-icon"></i> All
+										<input type="radio" value="" v-model="filter.owner"><i class="form-icon"></i> {{ $t('app.all') }}
 									</label>
 									<label class="form-radio form-inline input-sm">
-										<input type="radio" value="mine" v-model="filter.owner"><i class="form-icon"></i> Just mine
+										<input type="radio" value="mine" v-model="filter.owner"><i class="form-icon"></i> {{ $t('app.just_mine') }}
 									</label>
 								</div>
 							</div>
@@ -56,7 +56,7 @@
 								<div class="tile tile-empty">
 									<div class="tile-content">
 										<div><alert-circle-icon size="16" /></div>
-										<div>No projects found.</div>
+										<div>{{ $t('app.no_projects') }}</div>
 									</div>
 								</div>
 							</template>
@@ -89,9 +89,9 @@ import ImportProject from './ImportProject';
 export default {
 
 	components: {
-		AlertCircleIcon,
 		NewProject,
 		ImportProject,
+		AlertCircleIcon,
 	},
 
 	data() {
@@ -141,7 +141,7 @@ export default {
 				});
 			}
 
-			if (this.filter.owner == 'mine') {
+			if (this.filter.owner == 'mine' && this.authUser) {
 				items = filter(items, { created_by: this.authUser.email  });
 			}
 

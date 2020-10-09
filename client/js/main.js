@@ -6,6 +6,11 @@ Vue.config.productionTip = false;
 import VueKonva from 'vue-konva';
 Vue.use(VueKonva);
 
+import VueFlags from '@growthbunker/vueflags';
+Vue.use(VueFlags, {
+	iconPath: '/images/flags/',
+});
+
 import UI from "./components/ui";
 Vue.use(UI);
 
@@ -24,6 +29,7 @@ import store from './store';
 import App from './App';
 
 import Network from './services/Network';
+import Trans from './services/Trans';
 
 
 /**
@@ -68,6 +74,9 @@ const getParams = function(elt) {
 
 Network.getAuthUser().then((user) => {
 
+	const lang = Trans.getUserSupportedLang();
+	Trans.changeLanguage(lang);
+
 	new Vue({
 		i18n,
 		router,
@@ -79,3 +88,5 @@ Network.getAuthUser().then((user) => {
 	}).$mount('#cosmos');
 
 });
+
+// console.log(`env: ${process.env.NODE_ENV}`);

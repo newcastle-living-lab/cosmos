@@ -90,7 +90,9 @@ export default {
 				return this.project.name;
 			}
 
-			return this.aspect.CONFIG.title;
+			return this.$t(`aspects.${this.aspectEditId}.title`);
+
+			// return this.aspect.CONFIG.title;
 		},
 
 		definitions() {
@@ -110,8 +112,9 @@ export default {
 
 			var panels = map(this.definitions, (def) => {
 				return {
-					modelPath: `project@data.${aspectId}.${def.id}`,
 					id: def.id,
+					aspectId: aspectId,
+					modelPath: `project@data.${aspectId}.${def.id}`,
 					editor: `${def.type}-editor`,
 					definition: def,
 				}
@@ -119,10 +122,11 @@ export default {
 
 			if (this.aspect.CONFIG.id === 'welcome') {
 				panels.unshift({
-					modelPath: `project`,
 					id: "meta",
+					aspectId: aspectId,
+					modelPath: `project`,
 					editor: "meta-editor",
-					title: "Project",
+					title: 'app.project',
 				});
 			}
 

@@ -2,7 +2,7 @@
 
 	<main ref="container" class="app-content light social-media" v-if="socialLinks">
 		<div class="container grid-xl">
-			<h4 class="mb-8 mt-4">Social Media</h4>
+			<h4 class="mb-8 mt-4">{{ $t('aspects.social_media.dashboard.title') }}</h4>
 		</div>
 		<div class="container grid-xl">
 			<div class="columns">

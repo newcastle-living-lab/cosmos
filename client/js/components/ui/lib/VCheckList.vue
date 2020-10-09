@@ -10,7 +10,9 @@
 				:value="option.value"
 				v-model="val"
 			>
-			<i class="form-icon"></i> {{ option.label }}
+			<i class="form-icon"></i>
+			<template v-if="option.label">{{ option.label }}</template>
+			<template v-else-if="option.lang">{{ $t(option.lang) }}</template>
 		</label>
 	</div>
 </template>

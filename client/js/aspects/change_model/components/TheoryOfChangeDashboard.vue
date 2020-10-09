@@ -134,7 +134,7 @@ export default {
 
 			configs.label = {
 				...defaultTextConfig,
-				text: 'First Order',
+				text: this.$t('aspects.change_model.dashboard.first_order'),
 				fill: '#947194',
 				x: 480,
 				y: 435,
@@ -143,7 +143,7 @@ export default {
 
 			configs.risk = {
 				...defaultTextConfig,
-				text: 'Risk',
+				text: this.$t('aspects.change_model.dashboard.risk'),
 				fill: '#d317a4',
 				x: 345,
 				y: 600,
@@ -152,7 +152,7 @@ export default {
 
 			configs.vision = {
 				...defaultTextConfig,
-				text: 'Vision',
+				text: this.$t('aspects.change_model.dashboard.vision'),
 				fill: '#255d4d',
 				x: 440,
 				y: 375,
@@ -161,7 +161,7 @@ export default {
 
 			configs.plan = {
 				...defaultTextConfig,
-				text: 'Plan',
+				text: this.$t('aspects.change_model.dashboard.plan'),
 				fill: '#255d4d',
 				x: 705,
 				y: 515,
@@ -170,7 +170,7 @@ export default {
 
 			configs.execute = {
 				...defaultTextConfig,
-				text: 'Execute',
+				text: this.$t('aspects.change_model.dashboard.execute'),
 				fill: '#255d4d',
 				x: 435,
 				y: 670,
@@ -179,7 +179,7 @@ export default {
 
 			configs.measure = {
 				...defaultTextConfig,
-				text: 'Measure',
+				text: this.$t('aspects.change_model.dashboard.measure'),
 				fill: '#255d4d',
 				x: 155,
 				y: 520,
@@ -223,7 +223,7 @@ export default {
 
 			configs.label = {
 				...defaultTextConfig,
-				text: 'Second Order',
+				text: this.$t('aspects.change_model.dashboard.second_order'),
 				fill: '#cab5ca',
 				x: 390,
 				y: 165,
@@ -232,7 +232,7 @@ export default {
 
 			configs.ambiguity = {
 				...defaultTextConfig,
-				text: 'Ambiguity',
+				text: this.$t('aspects.change_model.dashboard.ambiguity'),
 				fill: '#d317a4',
 				x: 270,
 				y: 115,
@@ -241,7 +241,7 @@ export default {
 
 			configs.sense_making = {
 				...defaultTextConfig,
-				text: 'Sense-Making',
+				text: this.$t('aspects.change_model.dashboard.sense_making'),
 				fill: '#a8bdb7',
 				x: 100,
 				y: 215,
@@ -250,7 +250,7 @@ export default {
 
 			configs.languaging = {
 				...defaultTextConfig,
-				text: '"Languaging"',
+				text: this.$t('aspects.change_model.dashboard.languaging'),
 				fill: '#a8bdb7',
 				x: 350,
 				y: 65,
@@ -259,9 +259,9 @@ export default {
 
 			configs.committing = {
 				...defaultTextConfig,
-				text: 'Committing',
+				text: this.$t('aspects.change_model.dashboard.committing'),
 				fill: '#a8bdb7',
-				x: 610,
+				x: 590,
 				y: 215,
 				visible: false,
 			};
@@ -301,7 +301,7 @@ export default {
 
 			configs.label = {
 				...defaultTextConfig,
-				text: 'Third Order',
+				text: this.$t('aspects.change_model.dashboard.third_order'),
 				fill: '#3c003c',
 				x: 45,
 				y: 295,
@@ -312,7 +312,7 @@ export default {
 
 			configs.ambivalence = {
 				...defaultTextConfig,
-				text: 'Ambivalence',
+				text: this.$t('aspects.change_model.dashboard.ambivalence'),
 				fill: '#d317a4',
 				x: 340,
 				y: 295,
@@ -350,10 +350,14 @@ export default {
 			}
 
 			var config = {
-				text: 'Zero Order',
+				text: this.$t('aspects.change_model.dashboard.zero_order'),
 				fill: '#2d2d68',
-				x: 890,
-				y: 645,
+				x: 880,
+				y: 615,
+				width: 200,
+				height: 85,
+				align: 'center',
+				verticalAlign: 'middle',
 				visible: isVisible,
 			};
 
@@ -371,10 +375,14 @@ export default {
 			}
 
 			var config = {
-				text: 'Fourth Order!',
+				text: this.$t('aspects.change_model.dashboard.fourth_order'),
 				fill: '#947194',
 				x: 850,
-				y: 35,
+				y: 5,
+				width: 200,
+				height: 85,
+				align: 'center',
+				verticalAlign: 'middle',
 				visible: isVisible,
 			};
 

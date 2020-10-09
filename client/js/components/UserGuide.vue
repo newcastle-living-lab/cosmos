@@ -9,13 +9,16 @@
 					<QuestionIcon size="48" v-show="step.type === 'question'" />
 				</div>
 				<div class="tile-content">
-					<div class="tile-title">{{ userGuide.currentStep }}. {{ step.title }}</div>
-					<a href="#" class="text-small mt-2 d-inline-block" @click.prevent="close()" v-if="userGuide.currentStep === 0">Skip user guide</a>
+					<div class="tile-title">
+						<!-- {{ userGuide.currentStep }}. -->
+						{{ $t(`aspects.${aspectId}.guide.${step.lang}`) }}
+					</div>
+					<a href="#" class="text-small mt-2 d-inline-block" @click.prevent="close()" v-if="userGuide.currentStep === 0">{{ $t('user_guide.skip') }}</a>
 				</div>
 				<div class="tile-action">
-					<button class="btn btn-grey" :class="userGuide.currentStep === 0 ? 'disabled' : ''" :disabled="userGuide.currentStep === 0" type="button" @click.prevent="prev()"><BackIcon size="16" /> {{ labels.BACK }}</button>
-					<button v-show="userGuide.currentStep !== steps.length - 1" class="btn btn-success" @click.prevent="next()">{{ labels.NEXT }} <NextIcon size="16" /></button>
-					<button v-show="userGuide.currentStep === steps.length - 1" class="btn btn-primary" @click.prevent="close()"><CheckIcon size="16" /> {{ labels.CLOSE }}</button>
+					<button class="btn btn-grey" :class="userGuide.currentStep === 0 ? 'disabled' : ''" :disabled="userGuide.currentStep === 0" type="button" @click.prevent="prev()"><BackIcon size="16" /> {{ $t('user_guide.back') }}</button>
+					<button v-show="userGuide.currentStep !== steps.length - 1" class="btn btn-success" @click.prevent="next()">{{ $t('user_guide.next') }} <NextIcon size="16" /></button>
+					<button v-show="userGuide.currentStep === steps.length - 1" class="btn btn-primary" @click.prevent="close()"><CheckIcon size="16" /> {{ $t('user_guide.close') }}</button>
 				</div>
 			</div>
 		</template>
@@ -35,12 +38,6 @@ import QuestionIcon from 'vue-feather-icons/icons/MessageSquareIcon';
 
 import Aspects from '@/aspects';
 
-const labels = {
-	BACK: 'Back',
-	NEXT: 'Next',
-	CLOSE: 'Close',
-};
-
 export default {
 
 	name: 'UserGuide',
@@ -56,12 +53,6 @@ export default {
 	props: {
 		'projectId': [Boolean, String, Number],
 		'aspectId': [String, Boolean],
-	},
-
-	data() {
-		return {
-			labels: labels,
-		}
 	},
 
 	computed: {

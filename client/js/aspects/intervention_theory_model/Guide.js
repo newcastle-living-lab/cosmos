@@ -4,55 +4,55 @@ export default {
 	steps: [
 		{
 			'type': 'info',
-			'title': 'The co-creative initiatives we are considering are all concerned with improving and nurturing wellbeing. Here we consider the wellbeing of individuals but this might be applied to places or to wider environments.',
+			'lang': 'step01',
 		},
 		{
 			'type': 'info',
-			'title': 'Wellbeing has a number of different facets which are all interdependent.',
+			'lang': 'step02',
 		},
 		{
 			'type': 'info',
-			'title': 'It also interacts with the physical and social environments.',
+			'lang': 'step03',
 		},
 		{
 			'type': 'info',
-			'title': 'Some services or interventions are about mending something that has gone wrong and restoring the status quo.',
+			'lang': 'step04',
 		},
 		{
 			'type': 'info',
-			'title': 'But there are other purposes for interventions.',
+			'lang': 'step05',
 		},
 		{
 			'type': 'info',
-			'title': 'The intervention process involves a number of different stages and processes.',
+			'lang': 'step06',
 		},
 		{
 			'type': 'info',
-			'title': 'Finally, if our innovations are to be sustained we must learn and improve.',
+			'lang': 'step07',
 		},
 		{
 			'type': 'question',
-			'title': 'Who, what or where is the target of your intervention?',
+			'lang': 'step08',
 		},
 		{
 			'type': 'question',
-			'title': 'Which aspects of wellbeing are the focus of your initiative?',
+			'lang': 'step09',
 		},
 		{
 			'type': 'question',
-			'title': 'What aspects of the wellbeing of your subject are relevant but beyond the scope of your initiative?',
+			'lang': 'step10',
 		},
 		{
 			'type': 'question',
-			'title': 'What are the relevant environmental aspects?',
+			'lang': 'step11',
 		},
 		{
 			'type': 'question',
-			'title': 'Which combinations of interventions, from prevention to transformation, are relevant to your initiative?',
+			'lang': 'step12',
 		},
 		{
 			'type': 'question',
-			'title': 'To what extent is learning and improvement built into your development governance and delivery processes?',
+			'lang': 'step13',
 		},
 	]
 

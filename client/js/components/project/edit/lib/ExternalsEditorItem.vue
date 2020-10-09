@@ -19,7 +19,7 @@
 
 				<div class="card-body">
 
-					<VGroup :name="inputId('label')" label="Label" labelClass="label-sm">
+					<VGroup :name="inputId('label')" :label="$t('app.label')" labelClass="label-sm">
 						<VInput
 							:id="inputId('label')"
 							v-model="item.label"
@@ -32,7 +32,7 @@
 						/>
 					</VGroup>
 
-					<VGroup :name="inputId('url')" label="URL" labelClass="label-sm">
+					<VGroup :name="inputId('url')" :label="$t('app.web_address')" labelClass="label-sm">
 						<VInput
 							:id="inputId('url')"
 							v-model="item.url"
@@ -45,7 +45,7 @@
 						/>
 					</VGroup>
 
-					<VGroup :name="inputId('image')" label="Image" labelClass="label-sm" v-if="useImages">
+					<VGroup :name="inputId('image')" :label="$t('app.image')" labelClass="label-sm" v-if="useImages">
 
 						<div class="dropbox" v-if="showUpload" :class="dropClasses">
 							<input
@@ -63,10 +63,10 @@
 								accept="image/*"
 							/>
 							<p v-if="isInitial">
-								Drag your image here to begin or click to browse
+								{{ $t('app.image_drag_prompt') }}
 							</p>
 							<div v-if="isUploading">
-								<p>Uploading image...</p>
+								<p>{{ $t('app.image_is_uploading') }}...</p>
 								<div class="loading mb-2"></div>
 								<br>
 							</div>
@@ -76,16 +76,16 @@
 							<p>
 								<img :src="imageUrl" class="img-responsive">
 							</p>
-							<a class="btn btn-dark btn-sm" href="javascript:void(0)" @click="removeImage()">Remove image</a>
+							<a class="btn btn-dark btn-sm" href="javascript:void(0)" @click="removeImage()">{{ $t('app.image_remove') }}</a>
 						</div>
 
 						<!--FAILED-->
 						<div v-if="isFailed">
-							<h6>Uploaded failed.</h6>
+							<h6>{{ $t('app.image_upload_error') }}.</h6>
+							<p>{{ uploadError }}</p>
 							<p>
-								<a class="btn btn-dark btn-sm" href="javascript:void(0)" @click="reset()">Try again</a>
+								<button class="btn btn-dark btn-sm" @click.prevent="resetUpload()">{{ $t('app.try_again') }}</button>
 							</p>
-							<pre>{{ uploadError }}</pre>
 						</div>
 
 					</VGroup>
@@ -97,10 +97,11 @@
 						type="button"
 						class="btn btn-sm btn-primary"
 						@click="doFinish"
-					><i class="icon icon-check"></i> OK</button>
+					><i class="icon icon-check"></i> {{ $t('app.ok') }}</button>
 					<button
 						type="button"
-						class="btn btn-sm btn-negative btn-action float-right"
+						class="btn btn-sm btn-negative btn-action float-right tooltip"
+						:data-tooltip="$t('app.delete')"
 						@click="deleteItem"
 					><i class="icon icon-delete"></i></button>
 				</div>
@@ -278,8 +279,13 @@ export default {
 
 			Network.uploadImage(this.projectId, formData)
 				.then(res => {
-					this.item.image = res.filename;
-					this.currentStatus = STATUS_SUCCESS;
+					if (res && res.success) {
+						this.item.image = res.filename;
+						this.currentStatus = STATUS_SUCCESS;
+					} else {
+						this.uploadError = res.reason;
+						this.currentStatus = STATUS_FAILED;
+					}
 				})
 				.catch(err => {
 					this.uploadError = err.response;

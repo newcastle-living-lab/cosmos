@@ -26,6 +26,10 @@ export default {
 		}
 	},
 
+	watch: {
+		'labelConfig': 'moveLabel',
+	},
+
 	computed: {
 
 		groupConfig() {
@@ -137,8 +141,11 @@ export default {
 				var coords = this.arrowCoords;
 
 				switch (this.config.direction.toUpperCase()) {
-					case "SE":
 					case "E":
+						this.labelOffset.x = coords.end.x + 5 + w;
+						this.labelOffset.y = (h/2) + coords.end.y;
+					break;
+					case "SE":
 					case "NE":
 						this.labelOffset.x = 5 + w + coords.end.x;
 						this.labelOffset.y = (h/2) + coords.end.y;

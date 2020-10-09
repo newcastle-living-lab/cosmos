@@ -1,7 +1,11 @@
 {
 	"name": "living-lab",
-	"version": "3.0.0",
+	"version": "3.1.0",
 	"description": "Living Lab CoSMoS",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/newcastle-living-lab/cosmos.git"
+	},
 	"main": "server.js",
 	"bin": "server.js",
 	"scripts": {

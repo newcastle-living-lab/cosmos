@@ -83,6 +83,14 @@ exports.handler = function(req, res) {
 			.catch(function(err) {
 				console.log('Caught error');
 				console.log(err);
+				var err = err.toString();
+				if (err.match(/Unsupported MIME type/)) {
+					err = "Unsupported file type";
+				}
+				return res.send({
+					'success': false,
+					'reason': err,
+				});
 			});
 
 	});

@@ -13,12 +13,12 @@
 				<button class='btn btn-link btn-sm'
 					v-if="hasProject && userCanEdit"
 					@click="doSave"
-				><save-icon size="16" />Save</button>
+				><save-icon size="16" />{{ $t('app.save') }}</button>
 
 				<div class="dropdown dropdown-download" v-if="hasProject">
-					<button class='btn btn-link btn-sm dropdown-toggle' :disabled="activeTab != 'model'"><download-icon size="16" />Download <i class="icon icon-caret"></i></button>
+					<button class='btn btn-link btn-sm dropdown-toggle' :disabled="activeTab != 'model'"><download-icon size="16" />{{ $t('app.download') }} <i class="icon icon-caret"></i></button>
 					<ul class="menu">
-						 <li class="menu-item"><a href="javascript:;" @click="doExportImage()">Image</a></li>
+						 <li class="menu-item"><a href="javascript:;" @click="doExportImage()">{{ $t('app.image') }}</a></li>
 						 <li class="menu-item"><a href="javascript:;" @click="doExportPdf()">PDF</a></li>
 					</ul>
 				</div>
@@ -26,35 +26,35 @@
 				<button class='btn btn-link btn-sm'
 					v-if="hasProject && hasUser"
 					@click="doExportProject()"
-				><share-icon size="16" />Export</button>
+				><share-icon size="16" />{{ $t('app.export') }}</button>
 
 				<div class="saving-ui input-group input-inline">
 					<div v-show="lastSave.waiting">
 						<span class="loading mr-4"></span>
-						<span>Saving...</span>
+						<span>{{ $t('app.saving') }}...</span>
 					</div>
 					<div v-show="lastSavedString && ! lastSave.waiting">
-						Last saved at {{ lastSavedString }}
+						{{ $t('app.last_saved_at', { date_time: lastSavedString }) }}
 					</div>
 				</div>
 
 			</section>
 
 			<section class="navbar-section navbar-tabs">
-				<div v-if="project && project.id" class="input-group input-inline mr-8">
+				<div v-if="project && project.id" class="input-group input-inline mr-4">
 					<button class="btn btn-sm btn-link"
 						@click.prevent="startUserGuide()"
 						v-if="userGuide.isAvailable && !userGuide.isOpen"
-					>Show user guide</button>
+					>{{ $t('user_guide.show') }}</button>
 				</div>
-				<div v-if="project && project.id" class="input-group input-inline mr-8">
+				<div v-if="project && project.id" class="input-group input-inline mr-4">
 					<label class="form-switch input-sm" v-show="activeTab == 'model'">
 						<input type="checkbox" v-model="scale">
-						<i class="form-icon"></i> <span class="text-small">Scale to fit</span>
+						<i class="form-icon"></i> <span class="text-small">{{ $t('app.scale_to_fit') }}</span>
 					</label>
 				</div>
 
-				<div class="input-group input-inline">
+				<div class="input-group input-inline mr-4">
 					<a v-if="hasUser"
 						class="btn btn-link btn-sm"
 						:href="accountUrl"
@@ -62,8 +62,11 @@
 					<a v-if="!hasUser"
 						class="btn btn-link btn-sm"
 						:href="loginUrl"
-					><key-icon size="16" /> Log in</a>
+					><key-icon size="16" /> {{ $t('app.log_in') }}</a>
 				</div>
+
+				<LanguageSwitcher />
+
 			</section>
 
 		</nav>
@@ -72,20 +75,14 @@
 			<div class="modal-overlay"></div>
 			<div class="modal-container">
 				<div class="modal-header">
-					<div class="modal-title h5">Exporting project...</div>
+					<div class="modal-title h5">{{ $t('app.exporting_project') }}...</div>
 				</div>
 				<div class="modal-body">
 					<div class="content">
 						<template>
-							<p>Please wait while the file is being generated.</p>
+							<p>{{ $t('app.please_wait_generate') }}</p>
 							<div class="loading loading-lg mb-8"></div>
 						</template>
-						<!-- <template v-else>
-							<div class="text-center mb-8" style="color: #2ecc40">
-								<CheckIcon size="48" />
-							</div>
-							<a class="btn btn-primary btn-block" :href="exportData.url">Download file</a>
-						</template> -->
 					</div>
 				</div>
 			</div>
@@ -115,6 +112,8 @@ import Aspects from '@/aspects';
 import { EventBus } from '@/services/EventBus';
 import Network from '@/services/Network';
 
+import LanguageSwitcher from "./LanguageSwitcher.vue";
+
 export default {
 
 	components: {
@@ -127,6 +126,7 @@ export default {
 		DownloadIcon,
 		ShareIcon,
 		CheckIcon,
+		LanguageSwitcher,
 	},
 
 	props: ['route'],
@@ -239,10 +239,12 @@ export default {
 						top.location.href = res.url;
 						return;
 					}
-					commit('SET_TOAST', { message: `Error: ${res.reason}`, type: 'error' });
+					const msg = this.$t('error_message', { message: res.reason });
+					commit('SET_TOAST', { message: msg, type: 'error' });
 				})
 				.catch((err) => {
-					commit('SET_TOAST', { message: `Error: ${err}`, type: 'error' });
+					const msg = this.$t('error_message', { message: err });
+					commit('SET_TOAST', { message: msg, type: 'error' });
 				});
 		},
 
