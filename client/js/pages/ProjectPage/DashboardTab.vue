@@ -29,6 +29,7 @@
 						:definitions="aspect.DEFINITIONS"
 						:options="options"
 						:aspectId="aspect.CONFIG.id"
+						:currentLanguage="currentLanguage"
 					/>
 				</v-layer>
 			</v-stage>
@@ -61,6 +62,7 @@ import throttle from 'lodash/throttle';
 import { get, set, sync, call } from 'vuex-pathify';
 import jsPDF from 'jspdf';
 
+import Trans from '@/services/Trans';
 import { EventBus } from '@/services/EventBus';
 import Aspects from '@/aspects';
 
@@ -119,6 +121,10 @@ export default {
 			'options',
 			'project',
 		]),
+
+		currentLanguage() {
+			return Trans.currentLanguage()
+		},
 
 		/**
 		 * Get aspect (ALL data - CONFIG + DEFS etc!) based on supplied editor ID

@@ -137,13 +137,13 @@ export default {
 		wellbeingConfig() {
 
 			var items = [
-				{ key: 'physical_env', fill: '#6161EA', x: 90, y: 160, width: 175 },
-				{ key: 'socio_cultural_env', fill: '#6161EA', x: 530, y: 160, width: 175 },
+				{ key: 'physical_env', fill: '#6161EA', x: 90, y: 160, width: 175, height: 55, align: 'center' },
+				{ key: 'socio_cultural_env', fill: '#6161EA', x: 530, y: 160, width: 200, height: 55, align: 'center'  },
 
-				{ key: 'faculties_skills', x: 130, y: 300, width: 175 },
-				{ key: 'mental_psych', x: 490, y: 305, width: 220 },
+				{ key: 'faculties_skills', x: 80, y: 300, width: 300, align: 'center' },
+				{ key: 'mental_psych', x: 530, y: 305, width: 220 },
 				{ key: 'socio_economic', x: 25, y: 545, width: 280 },
-				{ key: 'physiological', x: 510, y: 545, width: 220 },
+				{ key: 'physiological', x: 530, y: 545, width: 220 },
 			];
 
 			var config = {},
@@ -171,17 +171,19 @@ export default {
 					isVisible = this.inArray(this.aspectData.wellbeing.items, item.key);
 				}
 
-				itemConfig = {
+				const itemDefault = {
 					fontSize: 22,
 					visible: isVisible,
 					text: this.$t(`aspects.intervention_theory_model.options.wellbeing.${item.key}`),
-					fill: item.fill ? item.fill : '#1818AA',
-					x: item.x,
-					y: item.y,
-					width: item.width,
-				};
+					fill: '#1818AA',
+					align: 'left',
+					verticalAlign: 'middle',
+				}
 
-				config[item.key] = {...defaultTextConfig, ...itemConfig};
+				// itemConfig = {...item};
+				// delete item.key;
+
+				config[item.key] = {...defaultTextConfig, ...itemDefault, ...item};
 
 			});
 

@@ -25,7 +25,7 @@
 
 <script>
 
-import Trans from '@/services/Trans'
+import Trans from '@/services/Trans';
 
 export default {
 

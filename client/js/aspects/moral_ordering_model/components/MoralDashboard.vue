@@ -234,8 +234,10 @@ export default {
 
 			data.deliver = {
 				...defaults,
-				x: 420,
-				y: 620,
+				x: 100,
+				y: 610,
+				align: 'right',
+				width: 400,
 				text: this.$t('aspects.moral_ordering_model.dashboard.deliver'),
 			};
 
@@ -258,9 +260,12 @@ export default {
 
 			data.planLabel = {
 				...defaults,
-				x: 200,
-				y: 275,
+				x: 190,
+				y: 235,
 				width: 200,
+				height: 65,
+				align: 'right',
+				verticalAlign: 'bottom',
 				text: this.$t('aspects.moral_ordering_model.dashboard.plan_manage'),
 			};
 
@@ -285,18 +290,22 @@ export default {
 			data.individualCases = {
 				...defaults,
 				x: 835,
-				y: 210,
+				y: 230,
+				width: 400,
+				align: 'left',
 				text: this.$t('aspects.moral_ordering_model.dashboard.individual_cases'),
-				fontSize: 40,
+				fontSize: 30,
 				opacity: 0.6,
 			};
 
 			data.serviceLevel = {
 				...defaults,
 				x: 835,
-				y: 270,
+				y: 290,
+				width: 400,
+				align: 'left',
 				text: this.$t('aspects.moral_ordering_model.dashboard.the_service_level'),
-				fontSize: 40,
+				fontSize: 30,
 			};
 
 			if (this.userGuide.isOpen) {

@@ -261,7 +261,7 @@ export default {
 				...defaultTextConfig,
 				text: this.$t('aspects.change_model.dashboard.committing'),
 				fill: '#a8bdb7',
-				x: 610,
+				x: 590,
 				y: 215,
 				visible: false,
 			};
@@ -352,8 +352,12 @@ export default {
 			var config = {
 				text: this.$t('aspects.change_model.dashboard.zero_order'),
 				fill: '#2d2d68',
-				x: 890,
-				y: 645,
+				x: 880,
+				y: 615,
+				width: 200,
+				height: 85,
+				align: 'center',
+				verticalAlign: 'middle',
 				visible: isVisible,
 			};
 
@@ -374,7 +378,11 @@ export default {
 				text: this.$t('aspects.change_model.dashboard.fourth_order'),
 				fill: '#947194',
 				x: 850,
-				y: 35,
+				y: 5,
+				width: 200,
+				height: 85,
+				align: 'center',
+				verticalAlign: 'middle',
 				visible: isVisible,
 			};
 

@@ -9756,7 +9756,7 @@ var defaultTextConfig = {
       configs.committing = _objectSpread({}, defaultTextConfig, {
         text: this.$t('aspects.change_model.dashboard.committing'),
         fill: '#a8bdb7',
-        x: 610,
+        x: 590,
         y: 215,
         visible: false
       });
@@ -9830,8 +9830,12 @@ var defaultTextConfig = {
       var config = {
         text: this.$t('aspects.change_model.dashboard.zero_order'),
         fill: '#2d2d68',
-        x: 890,
-        y: 645,
+        x: 880,
+        y: 615,
+        width: 200,
+        height: 85,
+        align: 'center',
+        verticalAlign: 'middle',
         visible: isVisible
       };
       return _objectSpread({}, defaultTextConfig, {}, config);
@@ -9849,7 +9853,11 @@ var defaultTextConfig = {
         text: this.$t('aspects.change_model.dashboard.fourth_order'),
         fill: '#947194',
         x: 850,
-        y: 35,
+        y: 5,
+        width: 200,
+        height: 85,
+        align: 'center',
+        verticalAlign: 'middle',
         visible: isVisible
       };
       return _objectSpread({}, defaultTextConfig, {}, config);
@@ -10339,21 +10347,26 @@ var defaultTextConfig = {
         fill: '#6161EA',
         x: 90,
         y: 160,
-        width: 175
+        width: 175,
+        height: 55,
+        align: 'center'
       }, {
         key: 'socio_cultural_env',
         fill: '#6161EA',
         x: 530,
         y: 160,
-        width: 175
+        width: 200,
+        height: 55,
+        align: 'center'
       }, {
         key: 'faculties_skills',
-        x: 130,
+        x: 80,
         y: 300,
-        width: 175
+        width: 300,
+        align: 'center'
       }, {
         key: 'mental_psych',
-        x: 490,
+        x: 530,
         y: 305,
         width: 220
       }, {
@@ -10363,7 +10376,7 @@ var defaultTextConfig = {
         width: 280
       }, {
         key: 'physiological',
-        x: 510,
+        x: 530,
         y: 545,
         width: 220
       }];
@@ -10391,16 +10404,17 @@ var defaultTextConfig = {
           isVisible = _this.inArray(_this.aspectData.wellbeing.items, item.key);
         }
 
-        itemConfig = {
+        var itemDefault = {
           fontSize: 22,
           visible: isVisible,
           text: _this.$t("aspects.intervention_theory_model.options.wellbeing.".concat(item.key)),
-          fill: item.fill ? item.fill : '#1818AA',
-          x: item.x,
-          y: item.y,
-          width: item.width
-        };
-        config[item.key] = _objectSpread({}, defaultTextConfig, {}, itemConfig);
+          fill: '#1818AA',
+          align: 'left',
+          verticalAlign: 'middle'
+        }; // itemConfig = {...item};
+        // delete item.key;
+
+        config[item.key] = _objectSpread({}, defaultTextConfig, {}, itemDefault, {}, item);
       });
       var headingConfig = {
         fontSize: 30,
@@ -10763,8 +10777,10 @@ var defaultTextConfig = {
         text: this.$t('aspects.moral_ordering_model.dashboard.govern')
       });
       data.deliver = _objectSpread({}, defaults, {
-        x: 420,
-        y: 620,
+        x: 100,
+        y: 610,
+        align: 'right',
+        width: 400,
         text: this.$t('aspects.moral_ordering_model.dashboard.deliver')
       });
       data.ethosLabel = _objectSpread({}, defaults, {
@@ -10781,9 +10797,12 @@ var defaultTextConfig = {
         lineHeight: 1.3
       });
       data.planLabel = _objectSpread({}, defaults, {
-        x: 200,
-        y: 275,
+        x: 190,
+        y: 235,
         width: 200,
+        height: 65,
+        align: 'right',
+        verticalAlign: 'bottom',
         text: this.$t('aspects.moral_ordering_model.dashboard.plan_manage')
       });
       data.planItems = _objectSpread({}, defaults, {
@@ -10802,16 +10821,20 @@ var defaultTextConfig = {
       });
       data.individualCases = _objectSpread({}, defaults, {
         x: 835,
-        y: 210,
+        y: 230,
+        width: 400,
+        align: 'left',
         text: this.$t('aspects.moral_ordering_model.dashboard.individual_cases'),
-        fontSize: 40,
+        fontSize: 30,
         opacity: 0.6
       });
       data.serviceLevel = _objectSpread({}, defaults, {
         x: 835,
-        y: 270,
+        y: 290,
+        width: 400,
+        align: 'left',
         text: this.$t('aspects.moral_ordering_model.dashboard.the_service_level'),
-        fontSize: 40
+        fontSize: 30
       });
 
       if (this.userGuide.isOpen) {
@@ -11947,6 +11970,9 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
+  watch: {
+    'labelConfig': 'moveLabel'
+  },
   computed: {
     groupConfig: function groupConfig() {
       return {
@@ -12067,8 +12093,12 @@ __webpack_require__.r(__webpack_exports__);
         var coords = _this.arrowCoords;
 
         switch (_this.config.direction.toUpperCase()) {
-          case "SE":
           case "E":
+            _this.labelOffset.x = coords.end.x + 5 + w;
+            _this.labelOffset.y = h / 2 + coords.end.y;
+            break;
+
+          case "SE":
           case "NE":
             _this.labelOffset.x = 5 + w + coords.end.x;
             _this.labelOffset.y = h / 2 + coords.end.y;
@@ -16405,9 +16435,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
 /* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jspdf */ "./node_modules/jspdf/dist/jspdf.min.js");
 /* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jspdf__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _services_EventBus__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/services/EventBus */ "./js/services/EventBus.js");
-/* harmony import */ var _aspects__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/aspects */ "./js/aspects/index.js");
-/* harmony import */ var _components_UserGuide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/components/UserGuide */ "./js/components/UserGuide.vue");
+/* harmony import */ var _services_Trans__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/services/Trans */ "./js/services/Trans.js");
+/* harmony import */ var _services_EventBus__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/services/EventBus */ "./js/services/EventBus.js");
+/* harmony import */ var _aspects__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/aspects */ "./js/aspects/index.js");
+/* harmony import */ var _components_UserGuide__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/components/UserGuide */ "./js/components/UserGuide.vue");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -16471,6 +16502,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+
 
 
 
@@ -16480,7 +16513,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'DashboardTab',
   components: {
-    UserGuide: _components_UserGuide__WEBPACK_IMPORTED_MODULE_5__["default"]
+    UserGuide: _components_UserGuide__WEBPACK_IMPORTED_MODULE_6__["default"]
   },
   props: {
     aspectId: [Boolean, String]
@@ -16517,6 +16550,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     };
   },
   computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_1__["get"])(['scale', 'stageHover', 'options', 'project']), {
+    currentLanguage: function currentLanguage() {
+      return _services_Trans__WEBPACK_IMPORTED_MODULE_3__["default"].currentLanguage();
+    },
+
     /**
      * Get aspect (ALL data - CONFIG + DEFS etc!) based on supplied editor ID
      *
@@ -16528,7 +16565,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         return null;
       }
 
-      return _aspects__WEBPACK_IMPORTED_MODULE_4__["default"].get(aspect);
+      return _aspects__WEBPACK_IMPORTED_MODULE_5__["default"].get(aspect);
     },
 
     /*
@@ -16691,11 +16728,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       window.addEventListener('resize', lodash_throttle__WEBPACK_IMPORTED_MODULE_0___default()(_this2.resize, 250));
     });
-    _services_EventBus__WEBPACK_IMPORTED_MODULE_3__["EventBus"].$on('export', this.exportHandler);
+    _services_EventBus__WEBPACK_IMPORTED_MODULE_4__["EventBus"].$on('export', this.exportHandler);
   },
   destroyed: function destroyed() {
     window.removeEventListener("resize", lodash_throttle__WEBPACK_IMPORTED_MODULE_0___default()(this.resize, 250));
-    _services_EventBus__WEBPACK_IMPORTED_MODULE_3__["EventBus"].$off('export', this.exportHandler);
+    _services_EventBus__WEBPACK_IMPORTED_MODULE_4__["EventBus"].$off('export', this.exportHandler);
   }
 });
 
@@ -51689,7 +51726,8 @@ var render = function() {
                           attrs: {
                             definitions: _vm.aspect.DEFINITIONS,
                             options: _vm.options,
-                            aspectId: _vm.aspect.CONFIG.id
+                            aspectId: _vm.aspect.CONFIG.id,
+                            currentLanguage: _vm.currentLanguage
                           }
                         })
                       ],
