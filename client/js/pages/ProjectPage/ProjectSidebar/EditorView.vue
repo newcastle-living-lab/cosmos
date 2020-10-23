@@ -156,10 +156,17 @@ export default {
 			// find index of current panel ID
 			var idx = findIndex(this.panels, { id: id }),
 				nextIdx = 0;
+
 			// Increment to get next one
 			if (idx < this.numPanels-1) {
 				nextIdx = idx + 1;
 			}
+
+			// Skip 'divider' types
+			if (this.panels[nextIdx].definition.type === 'divider') {
+				nextIdx++;
+			}
+
 			this.setCurrentPanel(this.panels[nextIdx].id);
 		}
 	},

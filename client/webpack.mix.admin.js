@@ -11,6 +11,12 @@ let mix = require('laravel-mix');
  |
  */
 
+
+const basePath = '../server/public/assets/admin';
+
+mix.copyDirectory('node_modules/@newcastle-living-lab/living-lab-admin/dist', basePath);
+
+/*
 const basePath = '../server/public/assets';
 
 if (mix.inProduction()) {
@@ -32,7 +38,7 @@ mix.webpackConfig({
 			'@adminRoot': __dirname + '/node_modules/@newcastle-living-lab/living-lab-admin/src/js',
 		},
 	},
-});
+});*/
 
 
 

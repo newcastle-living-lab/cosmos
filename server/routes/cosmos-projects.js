@@ -6,6 +6,13 @@ exports.route = "/cosmos-api/projects";
 
 exports.handler = function(req, res) {
 
+	if ( ! req.user) {
+		return res.send({
+			'success': true,
+			'projects': [],
+		});
+	}
+
 	var db = database.getDb();
 	var sql = "SELECT id, name, slug, created_at, modified_at, created_by, folder, template FROM cosmos";
 

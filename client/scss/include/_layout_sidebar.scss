@@ -39,6 +39,7 @@
 		border: 0;
 	}
 
+
 	.sidebar-heading {
 		background: $gray-color-light;
 		font-size: $font-size-sm;
@@ -56,6 +57,16 @@
 		&.clickable {
 			&:hover {
 				background: darken($gray-color-light, 7%);
+			}
+		}
+	}
+
+	.sidebar-item {
+		&.sidebar-item-type-divider {
+			.sidebar-heading {
+				background: darken($gray-color-light, 14%);
+				font-weight: bold;
+				color: $dark-color;
 			}
 		}
 	}

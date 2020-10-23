@@ -322,10 +322,10 @@ module.exports = JSON.parse("{\"id\":\"analytic_model\",\"title\":\"Analytic Mod
 /*!****************************************************!*\
   !*** ./js/aspects/analytic_model/definitions.json ***!
   \****************************************************/
-/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, default */
+/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"id\":\"model\",\"type\":\"model\"},{\"id\":\"serviceDeliveryManager\",\"type\":\"stakeholder\"},{\"id\":\"frontLineServiceDeliverer\",\"type\":\"stakeholder\"},{\"id\":\"user\",\"type\":\"stakeholder\"},{\"id\":\"serviceOrganisationManager\",\"type\":\"stakeholder\"},{\"id\":\"servicePolicyMaker\",\"type\":\"stakeholder\"},{\"id\":\"instigatorsOfChange\",\"type\":\"stakeholder\"},{\"id\":\"changeMakers\",\"type\":\"stakeholder\"},{\"id\":\"subjectsOfChange\",\"type\":\"stakeholder\"},{\"id\":\"broker\",\"type\":\"stakeholder\"},{\"id\":\"changeTheorists\",\"type\":\"stakeholder\"},{\"id\":\"beneficiaries\",\"type\":\"stakeholder\"},{\"id\":\"victims\",\"type\":\"stakeholder\"}]");
+module.exports = JSON.parse("[{\"id\":\"model\",\"type\":\"model\"},{\"id\":\"macro_meso_micro\",\"type\":\"divider\"},{\"id\":\"serviceDeliveryManager\",\"type\":\"stakeholder\"},{\"id\":\"frontLineServiceDeliverer\",\"type\":\"stakeholder\"},{\"id\":\"user\",\"type\":\"stakeholder\"},{\"id\":\"serviceOrganisationManager\",\"type\":\"stakeholder\"},{\"id\":\"servicePolicyMaker\",\"type\":\"stakeholder\"},{\"id\":\"innovation_brokerage\",\"type\":\"divider\"},{\"id\":\"instigatorsOfChange\",\"type\":\"stakeholder\"},{\"id\":\"changeMakers\",\"type\":\"stakeholder\"},{\"id\":\"subjectsOfChange\",\"type\":\"stakeholder\"},{\"id\":\"broker\",\"type\":\"stakeholder\"},{\"id\":\"changeTheorists\",\"type\":\"stakeholder\"},{\"id\":\"beneficiaries\",\"type\":\"stakeholder\"},{\"id\":\"victims\",\"type\":\"stakeholder\"}]");
 
 /***/ }),
 
@@ -5206,7 +5206,7 @@ module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Οργάν�
 /*! exports provided: activity_types, app, aspects, hints, languages, user_guide, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisation\",\"service\":\"Service\",\"user\":\"User\"},\"app\":{\"add_new_actor\":\"Add new actor\",\"add_new_item\":\"Add new item\",\"all\":\"All\",\"colour\":\"Colour\",\"create\":\"Create\",\"created_by\":\"Created by\",\"delete\":\"Delete\",\"description\":\"Description\",\"download\":\"Download\",\"error\":\"Error\",\"error_message\":\"Error: {message}\",\"export\":\"Export\",\"exporting\":\"Exporting\",\"exporting_project\":\"Exporting project\",\"image\":\"Image\",\"image_drag_prompt\":\"Drag your image here to begin or click to browse.\",\"image_is_uploading\":\"Uploading image\",\"image_remove\":\"Remove image\",\"image_upload_error\":\"Upload error\",\"import\":\"Import\",\"import_project\":\"Import project\",\"import_project_drag_hint\":\"Drag your CoSMoS project here to begin or click to browse.\",\"import_project_notes\":\"Note: You will be the owner of the project that is imported.\",\"import_project_success\":\"The project has been imported successfully!\",\"just_mine\":\"Just mine\",\"label\":\"Label\",\"last_saved_at\":\"Last saved at {date_time}\",\"log_in\":\"Log in\",\"maximum_items\":\"Maximum {count} items | Maxumum {count} item | Maximum {count} items\",\"name\":\"Name\",\"new_project\":\"Create new project\",\"next\":\"Next\",\"no_projects\":\"No projects found.\",\"ok\":\"OK\",\"open_project\":\"Open project\",\"please_wait_generate\":\"Please wait while the file is being generated.\",\"processing\":\"Processing\",\"project\":\"Project\",\"project_save_success\":\"Project saved!\",\"save\":\"Save\",\"saving\":\"Saving\",\"scale_to_fit\":\"Scale to fit\",\"search\":\"Search\",\"title\":\"Title\",\"to_create_project\":\"to create a project.\",\"try_again\":\"Try again\",\"type\":\"Type\",\"user_is_read_only\":\"Your user access level is read-only.\",\"web_address\":\"Web address\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Macro\"},\"meso\":{\"description\":\"There may be a number of stages at this level.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\",\"title\":\"Beneficiaries\"},\"broker\":{\"hint\":\"Is there an active Broker between the Instigators of Change and Change Makers? If so, who are they?\",\"title\":\"Broker\"},\"changeMakers\":{\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\",\"title\":\"Change Makers\"},\"changeTheorists\":{\"hint\":\"Who are the Change Theorists for the Intervention?\",\"title\":\"Change Theorists\"},\"frontLineServiceDeliverer\":{\"hint\":\"Who is the Front-line Service Deliverer?\",\"title\":\"Front-line Service Deliverer\"},\"instigatorsOfChange\":{\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\",\"title\":\"Instigators of Change\"},\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"hint\":\"Who is the Service Delivery Manager responsible for the Intervention?\",\"title\":\"Service Delivery Manager\"},\"serviceOrganisationManager\":{\"hint\":\"Who is the Service Organisation Manager for the Intervention?\",\"title\":\"Service Organisation Manager\"},\"servicePolicyMaker\":{\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\",\"title\":\"Service Policy Maker\"},\"subjectsOfChange\":{\"hint\":\"Who are the idenitified subjects of change within the intervention?\",\"title\":\"Subjects of Change\"},\"user\":{\"hint\":\"Who is the direct user of the service?\",\"title\":\"Client / User\"},\"victims\":{\"hint\":\"Are there any identified victims? If so, who are they?\",\"title\":\"Victims\"}},\"guide\":{\"step01\":\"In this model, we consider a Cosie initiative in terms of a set of roles and the conversational relationships in which they engage.\",\"step02\":\"First we have front line service deliverer and a client.\",\"step03\":\"The deliverer has a manager or supervisor. This pattern of an individual engaging in two conversations will be repeated.\",\"step04\":\"The delivery takes place in some formal or informal institutional context.\",\"step05\":\"Finally, the service exists in some wider policy setting.\",\"step06\":\"This is meant to be an abstract model. In some cases there may be a flat organisation where delivery, management and policy are undertaken by all the members of a small team, in other cases they may represent distinct individuals and contexts.\",\"step07\":\"How do the concepts of micro, meso and macro map onto your initiative?\",\"step08\":\"How does communication take place between them?\",\"step09\":\"How coordinated and coherent are they?\",\"step10\":\"In particular, are there information flows and conversations between macro and micro which are not mediated by the meso? What are the implications of this?\",\"step11\":\"The next model considers change agency in terms of roles and conversations.\",\"step12\":\"A change must be instigated, then it is executed.\",\"step13\":\"The changes we are considering are to a person, or a place or environment.\",\"step14\":\"The changes we are considering are often themselves complex and are about complex situations. Often they are based on some theory which has been introduced or brokered into the situation.\",\"step15\":\"There is a set of intended beneficiaries.\",\"step16\":\"But there are also possible dis-beneficiaries or victims of the change.\",\"step17\":\"This model is designed as a probe on the initial service model to identify the specific actors who, at various stages in the development of the initiative, have undertaken one or more of these change agency roles. Who are they?\"},\"title\":\"Analytic Model\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Ambiguity\",\"ambivalence\":\"Ambivalence\",\"committing\":\"Committing\",\"execute\":\"Execute\",\"first_order\":\"First Order\",\"fourth_order\":\"Fourth Order!\",\"languaging\":\"\\\"Languaging\\\"\",\"measure\":\"Measure\",\"plan\":\"Plan\",\"risk\":\"Risk\",\"second_order\":\"Second Order\",\"sense_making\":\"Sense-Making\",\"third_order\":\"Third Order\",\"vision\":\"Vision\",\"zero_order\":\"Zero Order\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"How is the plan being executed?\"},\"measure\":{\"label\":\"How are observations and measurements being recorded? If not, what needs to be enabled to do so?\"},\"plan\":{\"label\":\"How was a plan set up to deliver the vision?\"},\"vision\":{\"label\":\"How were the vision and objectives set?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"What was the origin of the change? And what was the change?\"},\"event_cause\":{\"label\":\"What happened to allow this event to occur?\"},\"unexpected_events\":{\"label\":\"Have there been instances where you have seen unexpected events occurred?\"}},\"model\":{\"title\":\"Model\"},\"second_order\":{\"committing\":{\"label\":\"How has the service delivery of the intervention changed from its original plans?\"},\"languaging\":{\"label\":\"What changes have been made to how the intervention has been understood?\"},\"sense_making\":{\"label\":\"When do you review the plans and vision?\"}},\"third_order\":{\"processes\":{\"label\":\"What processes provoke or enable second order questioning?\"}}},\"guide\":{\"step01\":\"We start off with the standard model of purposeful action that we are all very familiar with.\",\"step02\":\"But we have all had the experience of looking back and realising that things have changed in a really fundamental way: we talk about the paradigm shifting. This implies that we have engaged in making new sense of our world and this often means that our language changes.\",\"step03\":\"These two different ways of operation are sometimes referred to as first order and second order.\",\"step04\":\"In management terms, we have risk management on one hand and the resolution of contradictions and ambiguities on the other.\",\"step05\":\"We now introduce the idea of third order activities which enable and support the appropriate transitions between first and second work allowing a step back to reconsider our ethos and assumptions and, when we have, to move back into the mode of practical planning and delivery.\",\"step06\":\"Sometimes the reaction to ambiguity and contradiction is an emotional one: fight or fly which is zero order, or inspiration and heroism which we will call fourth order.\",\"step07\":\"So, on the right hand side of our diagram we have the spectrum of emotional work and responses while of the left hand side we have co-productive, conversational work.\",\"step08\":\"This model generates a series of open ended questions about where the different first and second order work takes place in your initiative, what emotional work has been and is requires and how and where it is undertaken and how and by whom are the required third order interventions undertaken?\"},\"title\":\"Change Model\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Infrastructural Relationships, Recourses and Facilities\",\"policy_law\":\"Policy & Law\",\"resources\":\"Resources\",\"service_definition\":\"Service Definition and Development Platform\",\"service_delivery\":\"Service Delivery Platform\",\"structural_relationships\":\"Structural Relationships and Occasions\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\",\"title\":\"Beneficiary\"},\"delivery\":{\"hint\":\"Who is responsible for the delivery mechanism(s), channels and roles in your pilot?\",\"title\":\"Deliverer\"},\"deployment\":{\"hint\":\"Who deploys / deployed and activates / activated those processes and resources?\",\"title\":\"Deployer\"},\"drivers\":{\"body\":{\"hint\":\"What are the drivers and motivations involved?\",\"label\":\"Drivers and Motivations\"},\"hint\":\"What were / are the drivers and motivations of the project? Was it a statutory requirement, recognition of a need or demand, seizing an opportunity, addressing an inequality?\",\"title\":\"Drivers and Motivations\"},\"evaluation\":{\"hint\":\"Who is the evaluator(s) and governors of the service?\",\"title\":\"Evaluator\"},\"extorg\":{\"hint\":\"Are there any relevant actors, stakeholders or agencies which are relevant to the pilot, but which remain outside its vision and ethos?\",\"title\":\"External Organisations\"},\"extsvc\":{\"hint\":\"What reusable facilities, (technical and human) resources, services and sources of information were developed and used in support of these service definition and development processes? What external resources and services (e.g. communications and social media) were/are used?\",\"title\":\"External Technical Services\"},\"infsvc\":{\"hint\":\"What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?\",\"title\":\"Infrastructural Services\"},\"initiator\":{\"hint\":\"Who are, or were, the instigators who initiated your pilot activity?\",\"title\":\"Initiator\"},\"model\":{\"title\":\"Model\"},\"policyDef\":{\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\",\"title\":\"Policy Definer\"},\"specDes\":{\"hint\":\"Who specifies / specified and designs / designed the service delivery processes and resources?\",\"title\":\"Specifier and Designer\"},\"user\":{\"hint\":\"Who is the direct user of the service?\",\"title\":\"User\"}},\"title\":\"Co-Creation of Service Model\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"There are no community reporting items for this project.\",\"manage\":\"Manage Community Reporting\",\"title\":\"Community Reporting\"},\"definitions\":{\"data\":{\"hint\":\"Please add any Community Reports your project may have.\",\"title\":\"Community Reporting\"}},\"title\":\"Community Reporting\"},\"documents\":{\"dashboard\":{\"empty_set\":\"There are no documents or files for this project.\",\"manage\":\"Manage documents and files\",\"title\":\"Documents and Files\"},\"definitions\":{\"data\":{\"hint\":\"Please add any Documents and Files your project may have.\",\"title\":\"Documents and Files\"}},\"title\":\"Documents\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Well Being\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"What aspects of the service lifecycle are important regarding your innovation and change?\"},\"title\":\"Innovation and change\"},\"intervention\":{\"items\":{\"label\":\"What type of intervention is occuring?\"},\"title\":\"Intervention\"},\"learning\":{\"items\":{\"label\":\"How is learning happening in your intervention?\"},\"title\":\"Learning\"},\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"items\":{\"label\":\"Which aspects of human well-being and of the environment are relevant to your service? Are some more significant than others?\"},\"title\":\"Human well-being and Environment\"}},\"guide\":{\"step01\":\"The co-creative initiatives we are considering are all concerned with improving and nurturing wellbeing. Here we consider the wellbeing of individuals but this might be applied to places or to wider environments.\",\"step02\":\"Wellbeing has a number of different facets which are all interdependent.\",\"step03\":\"It also interacts with the physical and social environments.\",\"step04\":\"Some services or interventions are about mending something that has gone wrong and restoring the status quo.\",\"step05\":\"But there are other purposes for interventions.\",\"step06\":\"The intervention process involves a number of different stages and processes.\",\"step07\":\"Finally, if our innovations are to be sustained we must learn and improve.\",\"step08\":\"Who, what or where is the target of your intervention?\",\"step09\":\"Which aspects of wellbeing are the focus of your initiative?\",\"step10\":\"What aspects of the wellbeing of your subject are relevant but beyond the scope of your initiative?\",\"step11\":\"What are the relevant environmental aspects?\",\"step12\":\"Which combinations of interventions, from prevention to transformation, are relevant to your initiative?\",\"step13\":\"To what extent is learning and improvement built into your development governance and delivery processes?\"},\"options\":{\"innovation\":{\"development\":\"Development\",\"facilitation\":\"Facilitation\",\"palliation\":\"Palliation\",\"prevention\":\"Prevention\",\"rehabilitation\":\"Rehabilitation\",\"remedy\":\"Remedy\",\"transformation\":\"Transformation\"},\"intervention\":{\"coordination_delivery\":\"Coordination & Delivery\",\"governance\":\"Governance\",\"identification\":\"Identification & Planning\",\"learning\":\"Learning\",\"management\":\"Management\"},\"learning\":{\"research_evidence\":\"Research & Evidence\",\"service_improvement\":\"Service Improvement\",\"trials\":\"Trials\"},\"wellbeing\":{\"faculties_skills\":\"Faculties and Skills\",\"mental_psych\":\"Mental and Psychological\",\"physical_env\":\"Physical Envrionment\",\"physiological\":\"Physiological\",\"socio_cultural_env\":\"Socio-cultural Environment\",\"socio_economic\":\"Socio-Economic\"}},\"title\":\"Intervention Theory Model\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Define Ethos\",\"define_ethos_items\":\"Values\\nPrinciples\\nIntentions\\nPolicies\",\"deliver\":\"Deliver\",\"experience\":\"Experience\",\"govern\":\"Govern\",\"individual_cases\":\"Individual Cases\",\"plan_manage\":\"Plan & Manage\",\"plan_manage_items\":\"Rules\\nResources\\nProcesses\\nAccounts\",\"the_service_level\":\"The Service Level\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"How do these values come to be defined?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"title\":\"Define Ethos\",\"values\":{\"label\":\"What values are important that the intervention comes to address?\"}},\"deliver\":{\"actors\":{\"label\":\"By whom is it delivered?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"method\":{\"label\":\"How is the intervention delivered?\"},\"title\":\"Deliver\"},\"govern\":{\"actions\":{\"label\":\"How is the intervention governed? What measures are put in place to ensure the outcomes were as intended?\"},\"actors\":{\"label\":\"Who is evaluating this?\"},\"evolution\":{\"label\":\"How does this impact on the evolution of the service?\"},\"improvements\":{\"label\":\"How are improvements identified? How are they implemented?\"},\"outcomes\":{\"label\":\"Are outcomes embodied in targets and measurements? And if so, whose?\"},\"title\":\"Govern\"},\"model\":{\"title\":\"Model\"},\"planManageCurrent\":{\"actions\":{\"label\":\"What actions are now being undertaken within the pilot?\"},\"actors\":{\"label\":\"What ongoing actions are being taken?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"title\":\"Plan and Manage - Current actions\"},\"planManagePrior\":{\"actions\":{\"label\":\"What actions were being undertaken prior to the intervention?\"},\"actors\":{\"label\":\"Who was involved with these prior actions?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"title\":\"Plan and Manage - Prior actions\"}},\"guide\":{\"step01\":\"There are a number of core processes involved in a co-creative innovation. The first is concerned with the definition of ethos.\",\"step02\":\"The second involves management activities and products.\",\"step03\":\"Moral ordering is concerned with who gets to participate in activities so, in the case of your initiative, who is involved in these processes? Where and when do they take place? How do they communicate and how are they recorded?\",\"step04\":\"As a result of leadership, planning and design, services or initiatives are delivered and experienced.\",\"step05\":\"Again who is involved here and do they get any participation in the first two sets of activities?\",\"step06\":\"Rather than simply close the loop with a simple evaluation process, we are suggesting that, in systems of co-productive wellbeing and care, governance involves all the participants in the relationships identified here participation in addressing the questions defined in the moral ordering model.\",\"step07\":\"Governance takes place at the individual service client relationship level.\",\"step08\":\"It also takes place at the overall service level.\",\"step09\":\"How are governance processes, in the sense we are describing them here, take place in your initiative?\"},\"options\":{\"sources\":{\"meeting\":\"Meeting\",\"other\":\"Other\",\"policy\":\"Policy\"}},\"title\":\"Moral Ordering\"},\"social_media\":{\"dashboard\":{\"title\":\"Social Media\"},\"definitions\":{\"data\":{\"title\":\"Social Media\"}},\"title\":\"Social Media\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"There are no theory of change items for this project.\",\"manage\":\"Manage Theory of Change\",\"title\":\"Theory of Change\"},\"definitions\":{\"data\":{\"hint\":\"Please add any theories of change your project may have.\",\"title\":\"Theory of Change\"}},\"title\":\"Theory of Change\"},\"welcome\":{\"dashboard\":{\"summary\":\"Created by {user} on {date_time}\"},\"title\":\"Welcome\"}},\"hints\":{\"editor_double_click_edit\":\"Double-click an item to edit it, and enter to save\",\"social_facebook_add\":\"Add full links (URLs) to Facebook groups or pages.\",\"social_instagram_add\":\"Enter an Instagram hashtag, with or without the #. Press enter to add.\",\"social_twitter_add\":\"Enter a Twitter hashtag, with or without the #. Press enter to add.\",\"social_youtube_add\":\"Enter a link to a YouTube video and press enter to add.\",\"type_and_enter\":\"Type the name below and press enter.\"},\"languages\":{\"el\":\"Greek\",\"en_GB\":\"English\",\"es\":\"Spanish\",\"et\":\"Estonian\",\"fi\":\"Finnish\",\"hu\":\"Hungarian\",\"it\":\"Italian\",\"nl\":\"Dutch\",\"pl\":\"Polish\",\"sv_SE\":\"Swedish\"},\"user_guide\":{\"back\":\"Back\",\"close\":\"Close\",\"next\":\"Next\",\"show\":\"Show user guide\",\"skip\":\"Skip user guide\"}}");
+module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisation\",\"service\":\"Service\",\"user\":\"User\"},\"app\":{\"add_new_actor\":\"Add new actor\",\"add_new_item\":\"Add new item\",\"all\":\"All\",\"colour\":\"Colour\",\"create\":\"Create\",\"created_by\":\"Created by\",\"delete\":\"Delete\",\"description\":\"Description\",\"download\":\"Download\",\"error\":\"Error\",\"error_message\":\"Error: {message}\",\"export\":\"Export\",\"exporting\":\"Exporting\",\"exporting_project\":\"Exporting project\",\"image\":\"Image\",\"image_drag_prompt\":\"Drag your image here to begin or click to browse.\",\"image_is_uploading\":\"Uploading image\",\"image_remove\":\"Remove image\",\"image_upload_error\":\"Upload error\",\"import\":\"Import\",\"import_project\":\"Import project\",\"import_project_drag_hint\":\"Drag your CoSMoS project here to begin or click to browse.\",\"import_project_notes\":\"Note: You will be the owner of the project that is imported.\",\"import_project_success\":\"The project has been imported successfully!\",\"just_mine\":\"Just mine\",\"label\":\"Label\",\"last_saved_at\":\"Last saved at {date_time}\",\"log_in\":\"Log in\",\"maximum_items\":\"Maximum {count} items | Maxumum {count} item | Maximum {count} items\",\"name\":\"Name\",\"new_project\":\"Create new project\",\"next\":\"Next\",\"no_projects\":\"No projects found.\",\"ok\":\"OK\",\"open_project\":\"Open project\",\"please_wait_generate\":\"Please wait while the file is being generated.\",\"processing\":\"Processing\",\"project\":\"Project\",\"project_save_success\":\"Project saved!\",\"save\":\"Save\",\"saving\":\"Saving\",\"scale_to_fit\":\"Scale to fit\",\"search\":\"Search\",\"title\":\"Title\",\"to_create_project\":\"to create a project.\",\"try_again\":\"Try again\",\"type\":\"Type\",\"user_is_read_only\":\"Your user access level is read-only.\",\"web_address\":\"Web address\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Macro\"},\"meso\":{\"description\":\"There may be a number of stages at this level.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"macro_meso_micro\":{\"title\":\"Macro-Meso-Micro Model\"},\"innovation_brokerage\":{\"title\":\"Innovation Brokerage Model\"},\"beneficiaries\":{\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\",\"title\":\"Beneficiaries\"},\"broker\":{\"hint\":\"Is there an active Broker between the Instigators of Change and Change Makers? If so, who are they?\",\"title\":\"Broker\"},\"changeMakers\":{\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\",\"title\":\"Change Makers\"},\"changeTheorists\":{\"hint\":\"Who are the Change Theorists for the Intervention?\",\"title\":\"Change Theorists\"},\"frontLineServiceDeliverer\":{\"hint\":\"Who is the Front-line Service Deliverer?\",\"title\":\"Front-line Service Deliverer\"},\"instigatorsOfChange\":{\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\",\"title\":\"Instigators of Change\"},\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"hint\":\"Who is the Service Delivery Manager responsible for the Intervention?\",\"title\":\"Service Delivery Manager\"},\"serviceOrganisationManager\":{\"hint\":\"Who is the Service Organisation Manager for the Intervention?\",\"title\":\"Service Organisation Manager\"},\"servicePolicyMaker\":{\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\",\"title\":\"Service Policy Maker\"},\"subjectsOfChange\":{\"hint\":\"Who are the idenitified subjects of change within the intervention?\",\"title\":\"Subjects of Change\"},\"user\":{\"hint\":\"Who is the direct user of the service?\",\"title\":\"Client / User\"},\"victims\":{\"hint\":\"Are there any identified victims? If so, who are they?\",\"title\":\"Victims\"}},\"guide\":{\"step01\":\"In this model, we consider a Cosie initiative in terms of a set of roles and the conversational relationships in which they engage.\",\"step02\":\"First we have front line service deliverer and a client.\",\"step03\":\"The deliverer has a manager or supervisor. This pattern of an individual engaging in two conversations will be repeated.\",\"step04\":\"The delivery takes place in some formal or informal institutional context.\",\"step05\":\"Finally, the service exists in some wider policy setting.\",\"step06\":\"This is meant to be an abstract model. In some cases there may be a flat organisation where delivery, management and policy are undertaken by all the members of a small team, in other cases they may represent distinct individuals and contexts.\",\"step07\":\"How do the concepts of micro, meso and macro map onto your initiative?\",\"step08\":\"How does communication take place between them?\",\"step09\":\"How coordinated and coherent are they?\",\"step10\":\"In particular, are there information flows and conversations between macro and micro which are not mediated by the meso? What are the implications of this?\",\"step11\":\"The next model considers change agency in terms of roles and conversations.\",\"step12\":\"A change must be instigated, then it is executed.\",\"step13\":\"The changes we are considering are to a person, or a place or environment.\",\"step14\":\"The changes we are considering are often themselves complex and are about complex situations. Often they are based on some theory which has been introduced or brokered into the situation.\",\"step15\":\"There is a set of intended beneficiaries.\",\"step16\":\"But there are also possible dis-beneficiaries or victims of the change.\",\"step17\":\"This model is designed as a probe on the initial service model to identify the specific actors who, at various stages in the development of the initiative, have undertaken one or more of these change agency roles. Who are they?\"},\"title\":\"Analytic Model\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Ambiguity\",\"ambivalence\":\"Ambivalence\",\"committing\":\"Committing\",\"execute\":\"Execute\",\"first_order\":\"First Order\",\"fourth_order\":\"Fourth Order!\",\"languaging\":\"\\\"Languaging\\\"\",\"measure\":\"Measure\",\"plan\":\"Plan\",\"risk\":\"Risk\",\"second_order\":\"Second Order\",\"sense_making\":\"Sense-Making\",\"third_order\":\"Third Order\",\"vision\":\"Vision\",\"zero_order\":\"Zero Order\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"How is the plan being executed?\"},\"measure\":{\"label\":\"How are observations and measurements being recorded? If not, what needs to be enabled to do so?\"},\"plan\":{\"label\":\"How was a plan set up to deliver the vision?\"},\"vision\":{\"label\":\"How were the vision and objectives set?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"What was the origin of the change? And what was the change?\"},\"event_cause\":{\"label\":\"What happened to allow this event to occur?\"},\"unexpected_events\":{\"label\":\"Have there been instances where you have seen unexpected events occurred?\"}},\"model\":{\"title\":\"Model\"},\"second_order\":{\"committing\":{\"label\":\"How has the service delivery of the intervention changed from its original plans?\"},\"languaging\":{\"label\":\"What changes have been made to how the intervention has been understood?\"},\"sense_making\":{\"label\":\"When do you review the plans and vision?\"}},\"third_order\":{\"processes\":{\"label\":\"What processes provoke or enable second order questioning?\"}}},\"guide\":{\"step01\":\"We start off with the standard model of purposeful action that we are all very familiar with.\",\"step02\":\"But we have all had the experience of looking back and realising that things have changed in a really fundamental way: we talk about the paradigm shifting. This implies that we have engaged in making new sense of our world and this often means that our language changes.\",\"step03\":\"These two different ways of operation are sometimes referred to as first order and second order.\",\"step04\":\"In management terms, we have risk management on one hand and the resolution of contradictions and ambiguities on the other.\",\"step05\":\"We now introduce the idea of third order activities which enable and support the appropriate transitions between first and second work allowing a step back to reconsider our ethos and assumptions and, when we have, to move back into the mode of practical planning and delivery.\",\"step06\":\"Sometimes the reaction to ambiguity and contradiction is an emotional one: fight or fly which is zero order, or inspiration and heroism which we will call fourth order.\",\"step07\":\"So, on the right hand side of our diagram we have the spectrum of emotional work and responses while of the left hand side we have co-productive, conversational work.\",\"step08\":\"This model generates a series of open ended questions about where the different first and second order work takes place in your initiative, what emotional work has been and is requires and how and where it is undertaken and how and by whom are the required third order interventions undertaken?\"},\"title\":\"Change Model\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Infrastructural Relationships, Recourses and Facilities\",\"policy_law\":\"Policy & Law\",\"resources\":\"Resources\",\"service_definition\":\"Service Definition and Development Platform\",\"service_delivery\":\"Service Delivery Platform\",\"structural_relationships\":\"Structural Relationships and Occasions\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\",\"title\":\"Beneficiary\"},\"delivery\":{\"hint\":\"Who is responsible for the delivery mechanism(s), channels and roles in your pilot?\",\"title\":\"Deliverer\"},\"deployment\":{\"hint\":\"Who deploys / deployed and activates / activated those processes and resources?\",\"title\":\"Deployer\"},\"drivers\":{\"body\":{\"hint\":\"What are the drivers and motivations involved?\",\"label\":\"Drivers and Motivations\"},\"hint\":\"What were / are the drivers and motivations of the project? Was it a statutory requirement, recognition of a need or demand, seizing an opportunity, addressing an inequality?\",\"title\":\"Drivers and Motivations\"},\"evaluation\":{\"hint\":\"Who is the evaluator(s) and governors of the service?\",\"title\":\"Evaluator\"},\"extorg\":{\"hint\":\"Are there any relevant actors, stakeholders or agencies which are relevant to the pilot, but which remain outside its vision and ethos?\",\"title\":\"External Organisations\"},\"extsvc\":{\"hint\":\"What reusable facilities, (technical and human) resources, services and sources of information were developed and used in support of these service definition and development processes? What external resources and services (e.g. communications and social media) were/are used?\",\"title\":\"External Technical Services\"},\"infsvc\":{\"hint\":\"What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?\",\"title\":\"Infrastructural Services\"},\"initiator\":{\"hint\":\"Who are, or were, the instigators who initiated your pilot activity?\",\"title\":\"Initiator\"},\"model\":{\"title\":\"Model\"},\"policyDef\":{\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\",\"title\":\"Policy Definer\"},\"specDes\":{\"hint\":\"Who specifies / specified and designs / designed the service delivery processes and resources?\",\"title\":\"Specifier and Designer\"},\"user\":{\"hint\":\"Who is the direct user of the service?\",\"title\":\"User\"}},\"title\":\"Co-Creation of Service Model\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"There are no community reporting items for this project.\",\"manage\":\"Manage Community Reporting\",\"title\":\"Community Reporting\"},\"definitions\":{\"data\":{\"hint\":\"Please add any Community Reports your project may have.\",\"title\":\"Community Reporting\"}},\"title\":\"Community Reporting\"},\"documents\":{\"dashboard\":{\"empty_set\":\"There are no documents or files for this project.\",\"manage\":\"Manage documents and files\",\"title\":\"Documents and Files\"},\"definitions\":{\"data\":{\"hint\":\"Please add any Documents and Files your project may have.\",\"title\":\"Documents and Files\"}},\"title\":\"Documents\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Well Being\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"What aspects of the service lifecycle are important regarding your innovation and change?\"},\"title\":\"Innovation and change\"},\"intervention\":{\"items\":{\"label\":\"What type of intervention is occuring?\"},\"title\":\"Intervention\"},\"learning\":{\"items\":{\"label\":\"How is learning happening in your intervention?\"},\"title\":\"Learning\"},\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"items\":{\"label\":\"Which aspects of human well-being and of the environment are relevant to your service? Are some more significant than others?\"},\"title\":\"Human well-being and Environment\"}},\"guide\":{\"step01\":\"The co-creative initiatives we are considering are all concerned with improving and nurturing wellbeing. Here we consider the wellbeing of individuals but this might be applied to places or to wider environments.\",\"step02\":\"Wellbeing has a number of different facets which are all interdependent.\",\"step03\":\"It also interacts with the physical and social environments.\",\"step04\":\"Some services or interventions are about mending something that has gone wrong and restoring the status quo.\",\"step05\":\"But there are other purposes for interventions.\",\"step06\":\"The intervention process involves a number of different stages and processes.\",\"step07\":\"Finally, if our innovations are to be sustained we must learn and improve.\",\"step08\":\"Who, what or where is the target of your intervention?\",\"step09\":\"Which aspects of wellbeing are the focus of your initiative?\",\"step10\":\"What aspects of the wellbeing of your subject are relevant but beyond the scope of your initiative?\",\"step11\":\"What are the relevant environmental aspects?\",\"step12\":\"Which combinations of interventions, from prevention to transformation, are relevant to your initiative?\",\"step13\":\"To what extent is learning and improvement built into your development governance and delivery processes?\"},\"options\":{\"innovation\":{\"development\":\"Development\",\"facilitation\":\"Facilitation\",\"palliation\":\"Palliation\",\"prevention\":\"Prevention\",\"rehabilitation\":\"Rehabilitation\",\"remedy\":\"Remedy\",\"transformation\":\"Transformation\"},\"intervention\":{\"coordination_delivery\":\"Coordination & Delivery\",\"governance\":\"Governance\",\"identification\":\"Identification & Planning\",\"learning\":\"Learning\",\"management\":\"Management\"},\"learning\":{\"research_evidence\":\"Research & Evidence\",\"service_improvement\":\"Service Improvement\",\"trials\":\"Trials\"},\"wellbeing\":{\"faculties_skills\":\"Faculties and Skills\",\"mental_psych\":\"Mental and Psychological\",\"physical_env\":\"Physical Envrionment\",\"physiological\":\"Physiological\",\"socio_cultural_env\":\"Socio-cultural Environment\",\"socio_economic\":\"Socio-Economic\"}},\"title\":\"Intervention Theory Model\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Define Ethos\",\"define_ethos_items\":\"Values\\nPrinciples\\nIntentions\\nPolicies\",\"deliver\":\"Deliver\",\"experience\":\"Experience\",\"govern\":\"Govern\",\"individual_cases\":\"Individual Cases\",\"plan_manage\":\"Plan & Manage\",\"plan_manage_items\":\"Rules\\nResources\\nProcesses\\nAccounts\",\"the_service_level\":\"The Service Level\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"How do these values come to be defined?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"title\":\"Define Ethos\",\"values\":{\"label\":\"What values are important that the intervention comes to address?\"}},\"deliver\":{\"actors\":{\"label\":\"By whom is it delivered?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"method\":{\"label\":\"How is the intervention delivered?\"},\"title\":\"Deliver\"},\"govern\":{\"actions\":{\"label\":\"How is the intervention governed? What measures are put in place to ensure the outcomes were as intended?\"},\"actors\":{\"label\":\"Who is evaluating this?\"},\"evolution\":{\"label\":\"How does this impact on the evolution of the service?\"},\"improvements\":{\"label\":\"How are improvements identified? How are they implemented?\"},\"outcomes\":{\"label\":\"Are outcomes embodied in targets and measurements? And if so, whose?\"},\"title\":\"Govern\"},\"model\":{\"title\":\"Model\"},\"planManageCurrent\":{\"actions\":{\"label\":\"What actions are now being undertaken within the pilot?\"},\"actors\":{\"label\":\"What ongoing actions are being taken?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"title\":\"Plan and Manage - Current actions\"},\"planManagePrior\":{\"actions\":{\"label\":\"What actions were being undertaken prior to the intervention?\"},\"actors\":{\"label\":\"Who was involved with these prior actions?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"title\":\"Plan and Manage - Prior actions\"}},\"guide\":{\"step01\":\"There are a number of core processes involved in a co-creative innovation. The first is concerned with the definition of ethos.\",\"step02\":\"The second involves management activities and products.\",\"step03\":\"Moral ordering is concerned with who gets to participate in activities so, in the case of your initiative, who is involved in these processes? Where and when do they take place? How do they communicate and how are they recorded?\",\"step04\":\"As a result of leadership, planning and design, services or initiatives are delivered and experienced.\",\"step05\":\"Again who is involved here and do they get any participation in the first two sets of activities?\",\"step06\":\"Rather than simply close the loop with a simple evaluation process, we are suggesting that, in systems of co-productive wellbeing and care, governance involves all the participants in the relationships identified here participation in addressing the questions defined in the moral ordering model.\",\"step07\":\"Governance takes place at the individual service client relationship level.\",\"step08\":\"It also takes place at the overall service level.\",\"step09\":\"How are governance processes, in the sense we are describing them here, take place in your initiative?\"},\"options\":{\"sources\":{\"meeting\":\"Meeting\",\"other\":\"Other\",\"policy\":\"Policy\"}},\"title\":\"Moral Ordering\"},\"social_media\":{\"dashboard\":{\"title\":\"Social Media\"},\"definitions\":{\"data\":{\"title\":\"Social Media\"}},\"title\":\"Social Media\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"There are no theory of change items for this project.\",\"manage\":\"Manage Theory of Change\",\"title\":\"Theory of Change\"},\"definitions\":{\"data\":{\"hint\":\"Please add any theories of change your project may have.\",\"title\":\"Theory of Change\"}},\"title\":\"Theory of Change\"},\"welcome\":{\"dashboard\":{\"summary\":\"Created by {user} on {date_time}\"},\"title\":\"Welcome\"}},\"hints\":{\"editor_double_click_edit\":\"Double-click an item to edit it, and enter to save\",\"social_facebook_add\":\"Add full links (URLs) to Facebook groups or pages.\",\"social_instagram_add\":\"Enter an Instagram hashtag, with or without the #. Press enter to add.\",\"social_twitter_add\":\"Enter a Twitter hashtag, with or without the #. Press enter to add.\",\"social_youtube_add\":\"Enter a link to a YouTube video and press enter to add.\",\"type_and_enter\":\"Type the name below and press enter.\"},\"languages\":{\"el\":\"Greek\",\"en_GB\":\"English\",\"es\":\"Spanish\",\"et\":\"Estonian\",\"fi\":\"Finnish\",\"hu\":\"Hungarian\",\"it\":\"Italian\",\"nl\":\"Dutch\",\"pl\":\"Polish\",\"sv_SE\":\"Swedish\"},\"user_guide\":{\"back\":\"Back\",\"close\":\"Close\",\"next\":\"Next\",\"show\":\"Show user guide\",\"skip\":\"Skip user guide\"}}");
 
 /***/ }),
 
@@ -7217,7 +7217,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "countries", function() { return e; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "countryCodes", function() { return m; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "countryNames", function() { return s; });
-var n=[{code:"af",name:"Africa"},{code:"an",name:"Antarctica"},{code:"as",name:"Asia"},{code:"eu",name:"Europe"},{code:"na",name:"North America"},{code:"oc",name:"Oceania"},{code:"sa",name:"South America"}],e=[{code:"ad",name:"Andorra",continent:"Europe",continent_code:"eu"},{code:"ae",name:"United Arab Emirates",continent:"Asia",continent_code:"as"},{code:"af",name:"Afghanistan",continent:"Asia",continent_code:"as"},{code:"ag",name:"Antigua and Barbuda",continent:"North America",continent_code:"na"},{code:"ai",name:"Anguilla",continent:"North America",continent_code:"na"},{code:"al",name:"Albania",continent:"Europe",continent_code:"eu"},{code:"am",name:"Armenia",continent:"Asia",continent_code:"as"},{code:"ao",name:"Angola",continent:"Africa",continent_code:"af"},{code:"aq",name:"Antarctica",continent:"Antarctica",continent_code:"an"},{code:"ar",name:"Argentina",continent:"South America",continent_code:"sa"},{code:"as",name:"American Samoa",continent:"Oceania",continent_code:"oc"},{code:"at",name:"Austria",continent:"Europe",continent_code:"eu"},{code:"au",name:"Australia",continent:"Oceania",continent_code:"oc"},{code:"aw",name:"Aruba",continent:"North America",continent_code:"na"},{code:"ax",name:"Aland Islands",continent:"Europe",continent_code:"eu"},{code:"az",name:"Azerbaijan",continent:"Asia",continent_code:"as"},{code:"ba",name:"Bosnia and Herzegovina",continent:"Europe",continent_code:"eu"},{code:"bb",name:"Barbados",continent:"North America",continent_code:"na"},{code:"bd",name:"Bangladesh",continent:"Asia",continent_code:"as"},{code:"be",name:"Belgium",continent:"Europe",continent_code:"eu"},{code:"bf",name:"Burkina Faso",continent:"Africa",continent_code:"af"},{code:"bg",name:"Bulgaria",continent:"Europe",continent_code:"eu"},{code:"bh",name:"Bahrain",continent:"Asia",continent_code:"as"},{code:"bi",name:"Burundi",continent:"Africa",continent_code:"af"},{code:"bj",name:"Benin",continent:"Africa",continent_code:"af"},{code:"bl",name:"Saint-Barthélemy",continent:"North America",continent_code:"na"},{code:"bm",name:"Bermuda",continent:"North America",continent_code:"na"},{code:"bn",name:"Brunei Darussalam",continent:"Asia",continent_code:"as"},{code:"bo",name:"Bolivia",continent:"South America",continent_code:"sa"},{code:"bq",name:"Caribbean Netherlands",continent:"South America",continent_code:"sa"},{code:"br",name:"Brazil",continent:"South America",continent_code:"sa"},{code:"bs",name:"Bahamas",continent:"North America",continent_code:"na"},{code:"bt",name:"Bhutan",continent:"Asia",continent_code:"as"},{code:"bv",name:"Bouvet Island",continent:"Antarctica",continent_code:"an"},{code:"bw",name:"Botswana",continent:"Africa",continent_code:"af"},{code:"by",name:"Belarus",continent:"Europe",continent_code:"eu"},{code:"bz",name:"Belize",continent:"North America",continent_code:"na"},{code:"ca",name:"Canada",continent:"North America",continent_code:"na"},{code:"cc",name:"Cocos (Keeling) Islands",continent:"Asia",continent_code:"as"},{code:"cd",name:"Democratic Republic of the Congo",continent:"Africa",continent_code:"af"},{code:"cf",name:"Centrafrican Republic",continent:"Africa",continent_code:"af"},{code:"cg",name:"Republic of the Congo",continent:"Africa",continent_code:"af"},{code:"ch",name:"Switzerland",continent:"Europe",continent_code:"eu"},{code:"ci",name:"Côte d'Ivoire",continent:"Africa",continent_code:"af"},{code:"ck",name:"Cook Islands",continent:"Oceania",continent_code:"oc"},{code:"cl",name:"Chile",continent:"South America",continent_code:"sa"},{code:"cm",name:"Cameroon",continent:"Africa",continent_code:"af"},{code:"cn",name:"China",continent:"Asia",continent_code:"as"},{code:"co",name:"Colombia",continent:"South America",continent_code:"sa"},{code:"cr",name:"Costa Rica",continent:"North America",continent_code:"na"},{code:"cu",name:"Cuba",continent:"North America",continent_code:"na"},{code:"cv",name:"Cabo Verde",continent:"Africa",continent_code:"af"},{code:"cw",name:"Curaçao",continent:"South America",continent_code:"sa"},{code:"cx",name:"Christmas Island",continent:"Asia",continent_code:"as"},{code:"cy",name:"Cyprus",continent:"Europe",continent_code:"eu"},{code:"cz",name:"Czech Republic",continent:"Europe",continent_code:"eu"},{code:"de",name:"Germany",continent:"Europe",continent_code:"eu"},{code:"dj",name:"Djibouti",continent:"Africa",continent_code:"af"},{code:"dk",name:"Denmark",continent:"Europe",continent_code:"eu"},{code:"dm",name:"Dominica",continent:"North America",continent_code:"na"},{code:"do",name:"Dominican Republic",continent:"North America",continent_code:"na"},{code:"dz",name:"Algeria",continent:"Africa",continent_code:"af"},{code:"ec",name:"Ecuador",continent:"South America",continent_code:"sa"},{code:"ee",name:"Estonia",continent:"Europe",continent_code:"eu"},{code:"eg",name:"Egypt",continent:"Africa",continent_code:"af"},{code:"eh",name:"Western Sahara",continent:"Africa",continent_code:"af"},{code:"er",name:"Eritrea",continent:"Africa",continent_code:"af"},{code:"es",name:"Spain",continent:"Europe",continent_code:"eu"},{code:"et",name:"Ethiopia",continent:"Africa",continent_code:"af"},{code:"fi",name:"Finland",continent:"Europe",continent_code:"eu"},{code:"fj",name:"Fiji",continent:"Oceania",continent_code:"oc"},{code:"fk",name:"Falkland Islands",continent:"South America",continent_code:"sa"},{code:"fm",name:"Micronesia",continent:"Oceania",continent_code:"oc"},{code:"fo",name:"Faroe Islands",continent:"Europe",continent_code:"eu"},{code:"fr",name:"France",continent:"Europe",continent_code:"eu"},{code:"ga",name:"Gabon",continent:"Africa",continent_code:"af"},{code:"gb",name:"United Kindgom",continent:"Europe",continent_code:"eu"},{code:"gd",name:"Grenada",continent:"North America",continent_code:"na"},{code:"ge",name:"Georgia",continent:"Asia",continent_code:"as"},{code:"gf",name:"French Guiana",continent:"South America",continent_code:"sa"},{code:"gg",name:"Guernsey",continent:"Europe",continent_code:"eu"},{code:"gh",name:"Ghana",continent:"Africa",continent_code:"af"},{code:"gi",name:"Gibraltar",continent:"Europe",continent_code:"eu"},{code:"gl",name:"Greenland",continent:"North America",continent_code:"na"},{code:"gm",name:"The Gambia",continent:"Africa",continent_code:"af"},{code:"gn",name:"Guinea",continent:"Africa",continent_code:"af"},{code:"gp",name:"Guadeloupe",continent:"North America",continent_code:"na"},{code:"gq",name:"Equatorial Guinea",continent:"Africa",continent_code:"af"},{code:"gr",name:"Greece",continent:"Europe",continent_code:"eu"},{code:"gs",name:"South Georgia and the South Sandwich Islands",continent:"Antarctica",continent_code:"an"},{code:"gt",name:"Guatemala",continent:"North AMerica",continent_code:"na"},{code:"gu",name:"Guam",continent:"Oceania",continent_code:"oc"},{code:"gw",name:"Guinea Bissau",continent:"Africa",continent_code:"af"},{code:"gy",name:"Guyana",continent:"South America",continent_code:"sa"},{code:"hk",name:"Hong Kong",continent:"Asia",continent_code:"as"},{code:"hm",name:"Heard Island and McDonald Islands",continent:"Antarctica",continent_code:"an"},{code:"hn",name:"Honduras",continent:"North America",continent_code:"na"},{code:"hr",name:"Croatia",continent:"Europe",continent_code:"eu"},{code:"ht",name:"Haiti",continent:"North America",continent_code:"na"},{code:"hu",name:"Hungary",continent:"Europe",continent_code:"eu"},{code:"id",name:"Indonesia",continent:"Asia",continent_code:"as"},{code:"ie",name:"Ireland",continent:"Europe",continent_code:"eu"},{code:"il",name:"Israel",continent:"Asia",continent_code:"as"},{code:"im",name:"Isle of Man",continent:"Europe",continent_code:"eu"},{code:"in",name:"India",continent:"Asia",continent_code:"as"},{code:"io",name:"British Indian Ocean Territory",continent:"Asia",continent_code:"as"},{code:"iq",name:"Iraq",continent:"Asia",continent_code:"as"},{code:"ir",name:"Iran",continent:"Asia",continent_code:"as"},{code:"is",name:"Iceland",continent:"Europe",continent_code:"eu"},{code:"it",name:"Italy",continent:"Europe",continent_code:"eu"},{code:"je",name:"Jersey",continent:"Europe",continent_code:"eu"},{code:"jm",name:"Jamaica",continent:"North America",continent_code:"na"},{code:"jo",name:"Jordan",continent:"Asia",continent_code:"as"},{code:"jp",name:"Japan",continent:"Asia",continent_code:"as"},{code:"ke",name:"Kenya",continent:"Africa",continent_code:"af"},{code:"kg",name:"Kyrgyzstan",continent:"Asia",continent_code:"as"},{code:"kh",name:"Cambodia",continent:"Asia",continent_code:"as"},{code:"ki",name:"Kiribati",continent:"Oceania",continent_code:"oc"},{code:"km",name:"Comoros",continent:"Africa",continent_code:"af"},{code:"kn",name:"Saint Kitts and Nevis",continent:"North America",continent_code:"na"},{code:"kp",name:"North Korea",continent:"Asia",continent_code:"as"},{code:"kr",name:"South Korea",continent:"Asia",continent_code:"as"},{code:"kw",name:"Kuwait",continent:"Asia",continent_code:"as"},{code:"ky",name:"Cayman Islands",continent:"North America",continent_code:"na"},{code:"kz",name:"Kazakhstan",continent:"Asia",continent_code:"as"},{code:"la",name:"Laos",continent:"Asia",continent_code:"as"},{code:"lb",name:"Lebanon",continent:"Asia",continent_code:"as"},{code:"lc",name:"Saint Lucia",continent:"North America",continent_code:"na"},{code:"li",name:"Liechtenstein",continent:"Europe",continent_code:"eu"},{code:"lk",name:"Sri Lanka",continent:"Asia",continent_code:"as"},{code:"lr",name:"Liberia",continent:"Africa",continent_code:"af"},{code:"ls",name:"Lesotho",continent:"Africa",continent_code:"af"},{code:"lt",name:"Lithuania",continent:"Europe",continent_code:"eu"},{code:"lu",name:"Luxembourg",continent:"Europe",continent_code:"eu"},{code:"lv",name:"Latvia",continent:"Europe",continent_code:"eu"},{code:"ly",name:"Libya",continent:"Africa",continent_code:"af"},{code:"ma",name:"Morocco",continent:"Africa",continent_code:"af"},{code:"mc",name:"Monaco",continent:"Europe",continent_code:"eu"},{code:"md",name:"Moldova",continent:"Europe",continent_code:"eu"},{code:"me",name:"Montenegro",continent:"Europe",continent_code:"eu"},{code:"mf",name:"Saint Martin (French part)",continent:"North America",continent_code:"na"},{code:"mg",name:"Madagascar",continent:"Africa",continent_code:"af"},{code:"mh",name:"Marshall Islands",continent:"Oceania",continent_code:"oc"},{code:"mk",name:"North Macedonia",continent:"Europe",continent_code:"eu"},{code:"ml",name:"Mali",continent:"Africa",continent_code:"af"},{code:"mm",name:"Myanmar",continent:"Asia",continent_code:"as"},{code:"mn",name:"Mongolia",continent:"Asia",continent_code:"as"},{code:"mo",name:"Macao (SAR of China)",continent:"Asia",continent_code:"as"},{code:"mp",name:"Northern Mariana Islands",continent:"Oceania",continent_code:"oc"},{code:"mq",name:"Martinique",continent:"North America",continent_code:"na"},{code:"mr",name:"Mauritania",continent:"Africa",continent_code:"af"},{code:"ms",name:"Montserrat",continent:"North America",continent_code:"na"},{code:"mt",name:"Malta",continent:"Europe",continent_code:"eu"},{code:"mu",name:"Mauritius",continent:"Africa",continent_code:"af"},{code:"mv",name:"Maldives",continent:"Asia",continent_code:"as"},{code:"mw",name:"Malawi",continent:"Africa",continent_code:"af"},{code:"mx",name:"Mexico",continent:"North America",continent_code:"na"},{code:"my",name:"Malaysia",continent:"Asia",continent_code:"as"},{code:"mz",name:"Mozambique",continent:"Africa",continent_code:"af"},{code:"na",name:"Namibia",continent:"Africa",continent_code:"af"},{code:"nc",name:"New Caledonia",continent:"Oceania",continent_code:"oc"},{code:"ne",name:"Niger",continent:"Africa",continent_code:"af"},{code:"nf",name:"Norfolk Island",continent:"Oceania",continent_code:"oc"},{code:"ng",name:"Nigeria",continent:"Africa",continent_code:"af"},{code:"ni",name:"Nicaragua",continent:"North America",continent_code:"na"},{code:"nl",name:"The Netherlands",continent:"Europe",continent_code:"eu"},{code:"no",name:"Norway",continent:"Europe",continent_code:"eu"},{code:"np",name:"Nepal",continent:"Asia",continent_code:"as"},{code:"nr",name:"Nauru",continent:"Oceania",continent_code:"oc"},{code:"nu",name:"Niue",continent:"Oceania",continent_code:"oc"},{code:"nz",name:"New Zealand",continent:"Oceania",continent_code:"oc"},{code:"om",name:"Oman",continent:"Asia",continent_code:"as"},{code:"pa",name:"Panama",continent:"North America",continent_code:"na"},{code:"pe",name:"Peru",continent:"South America",continent_code:"sa"},{code:"pf",name:"French Polynesia",continent:"Oceania",continent_code:"oc"},{code:"pg",name:"Papua New Guinea",continent:"Oceania",continent_code:"oc"},{code:"ph",name:"Philippines",continent:"Asia",continent_code:"as"},{code:"pk",name:"Pakistan",continent:"Asia",continent_code:"as"},{code:"pl",name:"Poland",continent:"Europe",continent_code:"eu"},{code:"pm",name:"Saint Pierre and Miquelon",continent:"North America",continent_code:"na"},{code:"pn",name:"Pitcairn",continent:"Oceania",continent_code:"oc"},{code:"pr",name:"Puerto Rico",continent:"North America",continent_code:"na"},{code:"ps",name:"Palestinian Territory",continent:"Asia",continent_code:"as"},{code:"pt",name:"Portugal",continent:"Europe",continent_code:"eu"},{code:"pw",name:"Palau",continent:"Oceania",continent_code:"oc"},{code:"py",name:"Paraguay",continent:"South America",continent_code:"sa"},{code:"qa",name:"Qatar",continent:"Asia",continent_code:"as"},{code:"re",name:"Réunion",continent:"Africa",continent_code:"af"},{code:"ro",name:"Romania",continent:"Europe",continent_code:"eu"},{code:"rs",name:"Serbia",continent:"Europe",continent_code:"eu"},{code:"ru",name:"Russia",continent:"Europe",continent_code:"eu"},{code:"rw",name:"Rwanda",continent:"Africa",continent_code:"af"},{code:"sa",name:"Saudi Arabia",continent:"Asia",continent_code:"as"},{code:"sb",name:"Solomon Islands",continent:"Oceania",continent_code:"oc"},{code:"sc",name:"Seychelles",continent:"Africa",continent_code:"af"},{code:"sd",name:"Sudan",continent:"Africa",continent_code:"af"},{code:"se",name:"Sweden",continent:"Europe",continent_code:"eu"},{code:"sg",name:"Singapore",continent:"Asia",continent_code:"as"},{code:"sh",name:"Saint Helena",continent:"Africa",continent_code:"af"},{code:"si",name:"Slovenia",continent:"Europe",continent_code:"eu"},{code:"sj",name:"Svalbard and Jan Mayen",continent:"Europe",continent_code:"eu"},{code:"sk",name:"Slovakia",continent:"Europe",continent_code:"eu"},{code:"sl",name:"Sierra Leone",continent:"Africa",continent_code:"af"},{code:"sm",name:"San Marino",continent:"Europe",continent_code:"eu"},{code:"sn",name:"Sénégal",continent:"Africa",continent_code:"af"},{code:"so",name:"Somalia",continent:"Africa",continent_code:"af"},{code:"sr",name:"Suriname",continent:"South America",continent_code:"sa"},{code:"ss",name:"South Sudan",continent:"Africa",continent_code:"af"},{code:"st",name:"São Tomé and Príncipe",continent:"Africa",continent_code:"af"},{code:"sv",name:"El Salvador",continent:"North America",continent_code:"na"},{code:"sx",name:"Saint Martin (Dutch part)",continent:"North America",continent_code:"na"},{code:"sy",name:"Syria",continent:"Asia",continent_code:"as"},{code:"sz",name:"Swaziland",continent:"Africa",continent_code:"af"},{code:"tc",name:"Turks and Caicos Islands",continent:"North America",continent_code:"na"},{code:"td",name:"Chad",continent:"Africa",continent_code:"af"},{code:"tf",name:"French Southern and Antarctic Lands",continent:"Antarctica",continent_code:"an"},{code:"tg",name:"Togo",continent:"Africa",continent_code:"af"},{code:"th",name:"Thailand",continent:"Asia",continent_code:"as"},{code:"tj",name:"Tajikistan",continent:"Asia",continent_code:"as"},{code:"tk",name:"Tokelau",continent:"Oceania",continent_code:"oc"},{code:"tl",name:"Timor-Leste",continent:"Asia",continent_code:"as"},{code:"tm",name:"Turkmenistan",continent:"Asia",continent_code:"as"},{code:"tn",name:"Tunisia",continent:"Africa",continent_code:"af"},{code:"to",name:"Tonga",continent:"Oceania",continent_code:"oc"},{code:"tr",name:"Turkey",continent:"Europe",continent_code:"eu"},{code:"tt",name:"Trinidad and Tobago",continent:"North America",continent_code:"na"},{code:"tv",name:"Tuvalu",continent:"Oceania",continent_code:"oc"},{code:"tw",name:"Taiwan",continent:"Asia",continent_code:"as"},{code:"tz",name:"Tanzania",continent:"Africa",continent_code:"af"},{code:"ua",name:"Ukraine",continent:"Europe",continent_code:"eu"},{code:"ug",name:"Uganda",continent:"Africa",continent_code:"af"},{code:"um",name:"United States Minor Outlying Islands",continent:"Oceania",continent_code:"oc"},{code:"us",name:"United States of America",continent:"North America",continent_code:"na"},{code:"uy",name:"Uruguay",continent:"South America",continent_code:"sa"},{code:"uz",name:"Uzbekistan",continent:"Asia",continent_code:"as"},{code:"va",name:"City of the Vatican",continent:"Europe",continent_code:"eu"},{code:"vc",name:"Saint Vincent and the Grenadines",continent:"North America",continent_code:"na"},{code:"ve",name:"Venezuela",continent:"South America",continent_code:"sa"},{code:"vg",name:"British Virgin Islands",continent:"North America",continent_code:"na"},{code:"vi",name:"United States Virgin Islands",continent:"North America",continent_code:"na"},{code:"vn",name:"Vietnam",continent:"Asia",continent_code:"as"},{code:"vu",name:"Vanuatu",continent:"Oceania",continent_code:"oc"},{code:"wf",name:"Wallis and Futuna",continent:"Oceania",continent_code:"oc"},{code:"ws",name:"Samoa",continent:"Oceania",continent_code:"oc"},{code:"ye",name:"Yemen",continent:"Asia",continent_code:"as"},{code:"yt",name:"Mayotte",continent:"Africa",continent_code:"af"},{code:"za",name:"South Africa",continent:"Africa",continent_code:"af"},{code:"zm",name:"Zambia",continent:"Africa",continent_code:"af"},{code:"zw",name:"Zimbabwe",continent:"Africa",continent_code:"af"}],o={props:{code:{type:String,required:!0},height:{type:String,default:null},iconPath:{type:String,default:null},size:{type:String,default:"default",validator:function(n){return["nano","micro","mini","small","default","medium","large","huge"].includes(n)}},width:{type:String,default:null}},computed:{path:function(){var n=(this.code||"").toLowerCase(),o=this.$gb.vueflags.iconPath||this.iconPath||"";return o=o.replace(/\/$/,""),e.map((function(n){return n.code})).includes(n)||(n="unknown"),o+"/"+n+".svg"}},methods:{onClick:function(n){this.$emit("click",n)}}};var t,c="undefined"!=typeof navigator&&/msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());var a={};var i=function(n,e,o,t,c,a,i,d,r,m){"boolean"!=typeof i&&(r=d,d=i,i=!1);var s,u="function"==typeof o?o.options:o;if(n&&n.render&&(u.render=n.render,u.staticRenderFns=n.staticRenderFns,u._compiled=!0,c&&(u.functional=!0)),t&&(u._scopeId=t),a?(s=function(n){(n=n||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(n=__VUE_SSR_CONTEXT__),e&&e.call(this,r(n)),n&&n._registeredComponents&&n._registeredComponents.add(a)},u._ssrRegister=s):e&&(s=i?function(n){e.call(this,m(n,this.$root.$options.shadowRoot))}:function(n){e.call(this,d(n))}),s)if(u.functional){var _=u.render;u.render=function(n,e){return s.call(e),_(n,e)}}else{var l=u.beforeCreate;u.beforeCreate=l?[].concat(l,s):[s]}return o}({render:function(){var n=this.$createElement;return(this._self._c||n)("img",{class:["gb-flag","gb-flag--"+this.size,{"gb-flag--clickable":this.$listeners.click}],style:{height:this.height,width:this.width},attrs:{alt:this.code,src:this.path}})},staticRenderFns:[]},(function(n){n&&n("data-v-6432aa7f_0",{source:".gb-flag{display:inline-block;background-size:cover;background-repeat:no-repeat;user-select:none}.gb-flag--nano{height:10px}.gb-flag--micro{height:15px}.gb-flag--mini{height:20px}.gb-flag--small{height:25px}.gb-flag--default{height:30px}.gb-flag--medium{height:35px}.gb-flag--large{height:40px}.gb-flag--huge{height:45px}.gb-flag--clickable{cursor:pointer}",map:void 0,media:void 0})}),o,void 0,!1,void 0,!1,(function(n){return function(n,e){return function(n,e){var o=c?e.media||"default":n,i=a[o]||(a[o]={ids:new Set,styles:[]});if(!i.ids.has(n)){i.ids.add(n);var d=e.source;if(e.map&&(d+="\n/*# sourceURL="+e.map.sources[0]+" */",d+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(e.map))))+" */"),i.element||(i.element=document.createElement("style"),i.element.type="text/css",e.media&&i.element.setAttribute("media",e.media),void 0===t&&(t=document.head||document.getElementsByTagName("head")[0]),t.appendChild(i.element)),"styleSheet"in i.element)i.styles.push(d),i.element.styleSheet.cssText=i.styles.filter(Boolean).join("\n");else{var r=i.ids.size-1,m=document.createTextNode(d),s=i.element.childNodes;s[r]&&i.element.removeChild(s[r]),s.length?i.element.insertBefore(m,s[r]):i.element.appendChild(m)}}}(n,e)}}),void 0,void 0);var d={install:function n(e,o){n.installed||(n.installed=!0,e.component("gb-flag",i),e.prototype.$gb||(e.prototype.$gb={}),e.prototype.$gb.vueflags={},e.prototype.$gb.vueflags.iconPath=(o||{}).iconPath||null)}},r=null;"undefined"!=typeof window?r=window.Vue:"undefined"!=typeof global&&(r=global.Vue),r&&r.use(d);var m=e.map((function(n){return n.code})),s=e.map((function(n){return n.names}));/* harmony default export */ __webpack_exports__["default"] = (d);
+var n=[{code:"af",name:"Africa"},{code:"an",name:"Antarctica"},{code:"as",name:"Asia"},{code:"eu",name:"Europe"},{code:"na",name:"North America"},{code:"oc",name:"Oceania"},{code:"sa",name:"South America"}],e=[{code:"ad",name:"Andorra",continent:"Europe",continent_code:"eu"},{code:"ae",name:"United Arab Emirates",continent:"Asia",continent_code:"as"},{code:"af",name:"Afghanistan",continent:"Asia",continent_code:"as"},{code:"ag",name:"Antigua and Barbuda",continent:"North America",continent_code:"na"},{code:"ai",name:"Anguilla",continent:"North America",continent_code:"na"},{code:"al",name:"Albania",continent:"Europe",continent_code:"eu"},{code:"am",name:"Armenia",continent:"Asia",continent_code:"as"},{code:"ao",name:"Angola",continent:"Africa",continent_code:"af"},{code:"aq",name:"Antarctica",continent:"Antarctica",continent_code:"an"},{code:"ar",name:"Argentina",continent:"South America",continent_code:"sa"},{code:"as",name:"American Samoa",continent:"Oceania",continent_code:"oc"},{code:"at",name:"Austria",continent:"Europe",continent_code:"eu"},{code:"au",name:"Australia",continent:"Oceania",continent_code:"oc"},{code:"aw",name:"Aruba",continent:"North America",continent_code:"na"},{code:"ax",name:"Aland Islands",continent:"Europe",continent_code:"eu"},{code:"az",name:"Azerbaijan",continent:"Asia",continent_code:"as"},{code:"ba",name:"Bosnia and Herzegovina",continent:"Europe",continent_code:"eu"},{code:"bb",name:"Barbados",continent:"North America",continent_code:"na"},{code:"bd",name:"Bangladesh",continent:"Asia",continent_code:"as"},{code:"be",name:"Belgium",continent:"Europe",continent_code:"eu"},{code:"bf",name:"Burkina Faso",continent:"Africa",continent_code:"af"},{code:"bg",name:"Bulgaria",continent:"Europe",continent_code:"eu"},{code:"bh",name:"Bahrain",continent:"Asia",continent_code:"as"},{code:"bi",name:"Burundi",continent:"Africa",continent_code:"af"},{code:"bj",name:"Benin",continent:"Africa",continent_code:"af"},{code:"bl",name:"Saint-Barthélemy",continent:"North America",continent_code:"na"},{code:"bm",name:"Bermuda",continent:"North America",continent_code:"na"},{code:"bn",name:"Brunei Darussalam",continent:"Asia",continent_code:"as"},{code:"bo",name:"Bolivia",continent:"South America",continent_code:"sa"},{code:"bq",name:"Caribbean Netherlands",continent:"South America",continent_code:"sa"},{code:"br",name:"Brazil",continent:"South America",continent_code:"sa"},{code:"bs",name:"Bahamas",continent:"North America",continent_code:"na"},{code:"bt",name:"Bhutan",continent:"Asia",continent_code:"as"},{code:"bv",name:"Bouvet Island",continent:"Antarctica",continent_code:"an"},{code:"bw",name:"Botswana",continent:"Africa",continent_code:"af"},{code:"by",name:"Belarus",continent:"Europe",continent_code:"eu"},{code:"bz",name:"Belize",continent:"North America",continent_code:"na"},{code:"ca",name:"Canada",continent:"North America",continent_code:"na"},{code:"cc",name:"Cocos (Keeling) Islands",continent:"Asia",continent_code:"as"},{code:"cd",name:"Democratic Republic of the Congo",continent:"Africa",continent_code:"af"},{code:"cf",name:"Central African Republic",continent:"Africa",continent_code:"af"},{code:"cg",name:"Republic of the Congo",continent:"Africa",continent_code:"af"},{code:"ch",name:"Switzerland",continent:"Europe",continent_code:"eu"},{code:"ci",name:"Côte d'Ivoire",continent:"Africa",continent_code:"af"},{code:"ck",name:"Cook Islands",continent:"Oceania",continent_code:"oc"},{code:"cl",name:"Chile",continent:"South America",continent_code:"sa"},{code:"cm",name:"Cameroon",continent:"Africa",continent_code:"af"},{code:"cn",name:"China",continent:"Asia",continent_code:"as"},{code:"co",name:"Colombia",continent:"South America",continent_code:"sa"},{code:"cr",name:"Costa Rica",continent:"North America",continent_code:"na"},{code:"cu",name:"Cuba",continent:"North America",continent_code:"na"},{code:"cv",name:"Cabo Verde",continent:"Africa",continent_code:"af"},{code:"cw",name:"Curaçao",continent:"South America",continent_code:"sa"},{code:"cx",name:"Christmas Island",continent:"Asia",continent_code:"as"},{code:"cy",name:"Cyprus",continent:"Europe",continent_code:"eu"},{code:"cz",name:"Czech Republic",continent:"Europe",continent_code:"eu"},{code:"de",name:"Germany",continent:"Europe",continent_code:"eu"},{code:"dj",name:"Djibouti",continent:"Africa",continent_code:"af"},{code:"dk",name:"Denmark",continent:"Europe",continent_code:"eu"},{code:"dm",name:"Dominica",continent:"North America",continent_code:"na"},{code:"do",name:"Dominican Republic",continent:"North America",continent_code:"na"},{code:"dz",name:"Algeria",continent:"Africa",continent_code:"af"},{code:"ec",name:"Ecuador",continent:"South America",continent_code:"sa"},{code:"ee",name:"Estonia",continent:"Europe",continent_code:"eu"},{code:"eg",name:"Egypt",continent:"Africa",continent_code:"af"},{code:"eh",name:"Western Sahara",continent:"Africa",continent_code:"af"},{code:"er",name:"Eritrea",continent:"Africa",continent_code:"af"},{code:"es",name:"Spain",continent:"Europe",continent_code:"eu"},{code:"et",name:"Ethiopia",continent:"Africa",continent_code:"af"},{code:"fi",name:"Finland",continent:"Europe",continent_code:"eu"},{code:"fj",name:"Fiji",continent:"Oceania",continent_code:"oc"},{code:"fk",name:"Falkland Islands",continent:"South America",continent_code:"sa"},{code:"fm",name:"Micronesia",continent:"Oceania",continent_code:"oc"},{code:"fo",name:"Faroe Islands",continent:"Europe",continent_code:"eu"},{code:"fr",name:"France",continent:"Europe",continent_code:"eu"},{code:"ga",name:"Gabon",continent:"Africa",continent_code:"af"},{code:"gb",name:"United Kingdom",continent:"Europe",continent_code:"eu"},{code:"gd",name:"Grenada",continent:"North America",continent_code:"na"},{code:"ge",name:"Georgia",continent:"Asia",continent_code:"as"},{code:"gf",name:"French Guiana",continent:"South America",continent_code:"sa"},{code:"gg",name:"Guernsey",continent:"Europe",continent_code:"eu"},{code:"gh",name:"Ghana",continent:"Africa",continent_code:"af"},{code:"gi",name:"Gibraltar",continent:"Europe",continent_code:"eu"},{code:"gl",name:"Greenland",continent:"North America",continent_code:"na"},{code:"gm",name:"The Gambia",continent:"Africa",continent_code:"af"},{code:"gn",name:"Guinea",continent:"Africa",continent_code:"af"},{code:"gp",name:"Guadeloupe",continent:"North America",continent_code:"na"},{code:"gq",name:"Equatorial Guinea",continent:"Africa",continent_code:"af"},{code:"gr",name:"Greece",continent:"Europe",continent_code:"eu"},{code:"gs",name:"South Georgia and the South Sandwich Islands",continent:"Antarctica",continent_code:"an"},{code:"gt",name:"Guatemala",continent:"North AMerica",continent_code:"na"},{code:"gu",name:"Guam",continent:"Oceania",continent_code:"oc"},{code:"gw",name:"Guinea Bissau",continent:"Africa",continent_code:"af"},{code:"gy",name:"Guyana",continent:"South America",continent_code:"sa"},{code:"hk",name:"Hong Kong",continent:"Asia",continent_code:"as"},{code:"hm",name:"Heard Island and McDonald Islands",continent:"Antarctica",continent_code:"an"},{code:"hn",name:"Honduras",continent:"North America",continent_code:"na"},{code:"hr",name:"Croatia",continent:"Europe",continent_code:"eu"},{code:"ht",name:"Haiti",continent:"North America",continent_code:"na"},{code:"hu",name:"Hungary",continent:"Europe",continent_code:"eu"},{code:"id",name:"Indonesia",continent:"Asia",continent_code:"as"},{code:"ie",name:"Ireland",continent:"Europe",continent_code:"eu"},{code:"il",name:"Israel",continent:"Asia",continent_code:"as"},{code:"im",name:"Isle of Man",continent:"Europe",continent_code:"eu"},{code:"in",name:"India",continent:"Asia",continent_code:"as"},{code:"io",name:"British Indian Ocean Territory",continent:"Asia",continent_code:"as"},{code:"iq",name:"Iraq",continent:"Asia",continent_code:"as"},{code:"ir",name:"Iran",continent:"Asia",continent_code:"as"},{code:"is",name:"Iceland",continent:"Europe",continent_code:"eu"},{code:"it",name:"Italy",continent:"Europe",continent_code:"eu"},{code:"je",name:"Jersey",continent:"Europe",continent_code:"eu"},{code:"jm",name:"Jamaica",continent:"North America",continent_code:"na"},{code:"jo",name:"Jordan",continent:"Asia",continent_code:"as"},{code:"jp",name:"Japan",continent:"Asia",continent_code:"as"},{code:"ke",name:"Kenya",continent:"Africa",continent_code:"af"},{code:"kg",name:"Kyrgyzstan",continent:"Asia",continent_code:"as"},{code:"kh",name:"Cambodia",continent:"Asia",continent_code:"as"},{code:"ki",name:"Kiribati",continent:"Oceania",continent_code:"oc"},{code:"km",name:"Comoros",continent:"Africa",continent_code:"af"},{code:"kn",name:"Saint Kitts and Nevis",continent:"North America",continent_code:"na"},{code:"kp",name:"North Korea",continent:"Asia",continent_code:"as"},{code:"kr",name:"South Korea",continent:"Asia",continent_code:"as"},{code:"kw",name:"Kuwait",continent:"Asia",continent_code:"as"},{code:"ky",name:"Cayman Islands",continent:"North America",continent_code:"na"},{code:"kz",name:"Kazakhstan",continent:"Asia",continent_code:"as"},{code:"la",name:"Laos",continent:"Asia",continent_code:"as"},{code:"lb",name:"Lebanon",continent:"Asia",continent_code:"as"},{code:"lc",name:"Saint Lucia",continent:"North America",continent_code:"na"},{code:"li",name:"Liechtenstein",continent:"Europe",continent_code:"eu"},{code:"lk",name:"Sri Lanka",continent:"Asia",continent_code:"as"},{code:"lr",name:"Liberia",continent:"Africa",continent_code:"af"},{code:"ls",name:"Lesotho",continent:"Africa",continent_code:"af"},{code:"lt",name:"Lithuania",continent:"Europe",continent_code:"eu"},{code:"lu",name:"Luxembourg",continent:"Europe",continent_code:"eu"},{code:"lv",name:"Latvia",continent:"Europe",continent_code:"eu"},{code:"ly",name:"Libya",continent:"Africa",continent_code:"af"},{code:"ma",name:"Morocco",continent:"Africa",continent_code:"af"},{code:"mc",name:"Monaco",continent:"Europe",continent_code:"eu"},{code:"md",name:"Moldova",continent:"Europe",continent_code:"eu"},{code:"me",name:"Montenegro",continent:"Europe",continent_code:"eu"},{code:"mf",name:"Saint Martin (French part)",continent:"North America",continent_code:"na"},{code:"mg",name:"Madagascar",continent:"Africa",continent_code:"af"},{code:"mh",name:"Marshall Islands",continent:"Oceania",continent_code:"oc"},{code:"mk",name:"North Macedonia",continent:"Europe",continent_code:"eu"},{code:"ml",name:"Mali",continent:"Africa",continent_code:"af"},{code:"mm",name:"Myanmar",continent:"Asia",continent_code:"as"},{code:"mn",name:"Mongolia",continent:"Asia",continent_code:"as"},{code:"mo",name:"Macao",continent:"Asia",continent_code:"as"},{code:"mp",name:"Northern Mariana Islands",continent:"Oceania",continent_code:"oc"},{code:"mq",name:"Martinique",continent:"North America",continent_code:"na"},{code:"mr",name:"Mauritania",continent:"Africa",continent_code:"af"},{code:"ms",name:"Montserrat",continent:"North America",continent_code:"na"},{code:"mt",name:"Malta",continent:"Europe",continent_code:"eu"},{code:"mu",name:"Mauritius",continent:"Africa",continent_code:"af"},{code:"mv",name:"Maldives",continent:"Asia",continent_code:"as"},{code:"mw",name:"Malawi",continent:"Africa",continent_code:"af"},{code:"mx",name:"Mexico",continent:"North America",continent_code:"na"},{code:"my",name:"Malaysia",continent:"Asia",continent_code:"as"},{code:"mz",name:"Mozambique",continent:"Africa",continent_code:"af"},{code:"na",name:"Namibia",continent:"Africa",continent_code:"af"},{code:"nc",name:"New Caledonia",continent:"Oceania",continent_code:"oc"},{code:"ne",name:"Niger",continent:"Africa",continent_code:"af"},{code:"nf",name:"Norfolk Island",continent:"Oceania",continent_code:"oc"},{code:"ng",name:"Nigeria",continent:"Africa",continent_code:"af"},{code:"ni",name:"Nicaragua",continent:"North America",continent_code:"na"},{code:"nl",name:"The Netherlands",continent:"Europe",continent_code:"eu"},{code:"no",name:"Norway",continent:"Europe",continent_code:"eu"},{code:"np",name:"Nepal",continent:"Asia",continent_code:"as"},{code:"nr",name:"Nauru",continent:"Oceania",continent_code:"oc"},{code:"nu",name:"Niue",continent:"Oceania",continent_code:"oc"},{code:"nz",name:"New Zealand",continent:"Oceania",continent_code:"oc"},{code:"om",name:"Oman",continent:"Asia",continent_code:"as"},{code:"pa",name:"Panama",continent:"North America",continent_code:"na"},{code:"pe",name:"Peru",continent:"South America",continent_code:"sa"},{code:"pf",name:"French Polynesia",continent:"Oceania",continent_code:"oc"},{code:"pg",name:"Papua New Guinea",continent:"Oceania",continent_code:"oc"},{code:"ph",name:"Philippines",continent:"Asia",continent_code:"as"},{code:"pk",name:"Pakistan",continent:"Asia",continent_code:"as"},{code:"pl",name:"Poland",continent:"Europe",continent_code:"eu"},{code:"pm",name:"Saint Pierre and Miquelon",continent:"North America",continent_code:"na"},{code:"pn",name:"Pitcairn",continent:"Oceania",continent_code:"oc"},{code:"pr",name:"Puerto Rico",continent:"North America",continent_code:"na"},{code:"ps",name:"Palestine",continent:"Asia",continent_code:"as"},{code:"pt",name:"Portugal",continent:"Europe",continent_code:"eu"},{code:"pw",name:"Palau",continent:"Oceania",continent_code:"oc"},{code:"py",name:"Paraguay",continent:"South America",continent_code:"sa"},{code:"qa",name:"Qatar",continent:"Asia",continent_code:"as"},{code:"re",name:"Réunion",continent:"Africa",continent_code:"af"},{code:"ro",name:"Romania",continent:"Europe",continent_code:"eu"},{code:"rs",name:"Serbia",continent:"Europe",continent_code:"eu"},{code:"ru",name:"Russia",continent:"Europe",continent_code:"eu"},{code:"rw",name:"Rwanda",continent:"Africa",continent_code:"af"},{code:"sa",name:"Saudi Arabia",continent:"Asia",continent_code:"as"},{code:"sb",name:"Solomon Islands",continent:"Oceania",continent_code:"oc"},{code:"sc",name:"Seychelles",continent:"Africa",continent_code:"af"},{code:"sd",name:"Sudan",continent:"Africa",continent_code:"af"},{code:"se",name:"Sweden",continent:"Europe",continent_code:"eu"},{code:"sg",name:"Singapore",continent:"Asia",continent_code:"as"},{code:"sh",name:"Saint Helena",continent:"Africa",continent_code:"af"},{code:"si",name:"Slovenia",continent:"Europe",continent_code:"eu"},{code:"sj",name:"Svalbard and Jan Mayen",continent:"Europe",continent_code:"eu"},{code:"sk",name:"Slovakia",continent:"Europe",continent_code:"eu"},{code:"sl",name:"Sierra Leone",continent:"Africa",continent_code:"af"},{code:"sm",name:"San Marino",continent:"Europe",continent_code:"eu"},{code:"sn",name:"Sénégal",continent:"Africa",continent_code:"af"},{code:"so",name:"Somalia",continent:"Africa",continent_code:"af"},{code:"sr",name:"Suriname",continent:"South America",continent_code:"sa"},{code:"ss",name:"South Sudan",continent:"Africa",continent_code:"af"},{code:"st",name:"São Tomé and Príncipe",continent:"Africa",continent_code:"af"},{code:"sv",name:"El Salvador",continent:"North America",continent_code:"na"},{code:"sx",name:"Saint Martin (Dutch part)",continent:"North America",continent_code:"na"},{code:"sy",name:"Syria",continent:"Asia",continent_code:"as"},{code:"sz",name:"Swaziland",continent:"Africa",continent_code:"af"},{code:"tc",name:"Turks and Caicos Islands",continent:"North America",continent_code:"na"},{code:"td",name:"Chad",continent:"Africa",continent_code:"af"},{code:"tf",name:"French Southern and Antarctic Lands",continent:"Antarctica",continent_code:"an"},{code:"tg",name:"Togo",continent:"Africa",continent_code:"af"},{code:"th",name:"Thailand",continent:"Asia",continent_code:"as"},{code:"tj",name:"Tajikistan",continent:"Asia",continent_code:"as"},{code:"tk",name:"Tokelau",continent:"Oceania",continent_code:"oc"},{code:"tl",name:"Timor-Leste",continent:"Asia",continent_code:"as"},{code:"tm",name:"Turkmenistan",continent:"Asia",continent_code:"as"},{code:"tn",name:"Tunisia",continent:"Africa",continent_code:"af"},{code:"to",name:"Tonga",continent:"Oceania",continent_code:"oc"},{code:"tr",name:"Turkey",continent:"Europe",continent_code:"eu"},{code:"tt",name:"Trinidad and Tobago",continent:"North America",continent_code:"na"},{code:"tv",name:"Tuvalu",continent:"Oceania",continent_code:"oc"},{code:"tw",name:"Taiwan",continent:"Asia",continent_code:"as"},{code:"tz",name:"Tanzania",continent:"Africa",continent_code:"af"},{code:"ua",name:"Ukraine",continent:"Europe",continent_code:"eu"},{code:"ug",name:"Uganda",continent:"Africa",continent_code:"af"},{code:"um",name:"United States Minor Outlying Islands",continent:"Oceania",continent_code:"oc"},{code:"us",name:"United States of America",continent:"North America",continent_code:"na"},{code:"uy",name:"Uruguay",continent:"South America",continent_code:"sa"},{code:"uz",name:"Uzbekistan",continent:"Asia",continent_code:"as"},{code:"va",name:"City of the Vatican",continent:"Europe",continent_code:"eu"},{code:"vc",name:"Saint Vincent and the Grenadines",continent:"North America",continent_code:"na"},{code:"ve",name:"Venezuela",continent:"South America",continent_code:"sa"},{code:"vg",name:"British Virgin Islands",continent:"North America",continent_code:"na"},{code:"vi",name:"United States Virgin Islands",continent:"North America",continent_code:"na"},{code:"vn",name:"Vietnam",continent:"Asia",continent_code:"as"},{code:"vu",name:"Vanuatu",continent:"Oceania",continent_code:"oc"},{code:"wf",name:"Wallis and Futuna",continent:"Oceania",continent_code:"oc"},{code:"ws",name:"Samoa",continent:"Oceania",continent_code:"oc"},{code:"ye",name:"Yemen",continent:"Asia",continent_code:"as"},{code:"yt",name:"Mayotte",continent:"Africa",continent_code:"af"},{code:"za",name:"South Africa",continent:"Africa",continent_code:"af"},{code:"zm",name:"Zambia",continent:"Africa",continent_code:"af"},{code:"zw",name:"Zimbabwe",continent:"Africa",continent_code:"af"}],o={props:{code:{type:String,required:!0},height:{type:String,default:null},iconPath:{type:String,default:null},size:{type:String,default:"default",validator:function(n){return["nano","micro","mini","small","default","medium","large","huge"].includes(n)}},width:{type:String,default:null}},computed:{path:function(){var n=(this.code||"").toLowerCase(),o=this.$gb.vueflags.iconPath||this.iconPath||"";return o=o.replace(/\/$/,""),e.map((function(n){return n.code})).includes(n)||(n="unknown"),o+"/"+n+".svg"}},methods:{onClick:function(n){this.$emit("click",n)}}};var t,c="undefined"!=typeof navigator&&/msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());var a={};var i=function(n,e,o,t,c,a,i,d,r,m){"boolean"!=typeof i&&(r=d,d=i,i=!1);var s,u="function"==typeof o?o.options:o;if(n&&n.render&&(u.render=n.render,u.staticRenderFns=n.staticRenderFns,u._compiled=!0,c&&(u.functional=!0)),t&&(u._scopeId=t),a?(s=function(n){(n=n||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(n=__VUE_SSR_CONTEXT__),e&&e.call(this,r(n)),n&&n._registeredComponents&&n._registeredComponents.add(a)},u._ssrRegister=s):e&&(s=i?function(n){e.call(this,m(n,this.$root.$options.shadowRoot))}:function(n){e.call(this,d(n))}),s)if(u.functional){var _=u.render;u.render=function(n,e){return s.call(e),_(n,e)}}else{var l=u.beforeCreate;u.beforeCreate=l?[].concat(l,s):[s]}return o}({render:function(){var n=this.$createElement;return(this._self._c||n)("img",{class:["gb-flag","gb-flag--"+this.size,{"gb-flag--clickable":this.$listeners.click}],style:{height:this.height,width:this.width},attrs:{alt:this.code,src:this.path}})},staticRenderFns:[]},(function(n){n&&n("data-v-6432aa7f_0",{source:".gb-flag{display:inline-block;background-size:cover;background-repeat:no-repeat;user-select:none}.gb-flag--nano{height:10px}.gb-flag--micro{height:15px}.gb-flag--mini{height:20px}.gb-flag--small{height:25px}.gb-flag--default{height:30px}.gb-flag--medium{height:35px}.gb-flag--large{height:40px}.gb-flag--huge{height:45px}.gb-flag--clickable{cursor:pointer}",map:void 0,media:void 0})}),o,void 0,!1,void 0,!1,(function(n){return function(n,e){return function(n,e){var o=c?e.media||"default":n,i=a[o]||(a[o]={ids:new Set,styles:[]});if(!i.ids.has(n)){i.ids.add(n);var d=e.source;if(e.map&&(d+="\n/*# sourceURL="+e.map.sources[0]+" */",d+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(e.map))))+" */"),i.element||(i.element=document.createElement("style"),i.element.type="text/css",e.media&&i.element.setAttribute("media",e.media),void 0===t&&(t=document.head||document.getElementsByTagName("head")[0]),t.appendChild(i.element)),"styleSheet"in i.element)i.styles.push(d),i.element.styleSheet.cssText=i.styles.filter(Boolean).join("\n");else{var r=i.ids.size-1,m=document.createTextNode(d),s=i.element.childNodes;s[r]&&i.element.removeChild(s[r]),s.length?i.element.insertBefore(m,s[r]):i.element.appendChild(m)}}}(n,e)}}),void 0,void 0);var d={install:function n(e,o){n.installed||(n.installed=!0,e.component("gb-flag",i),e.prototype.$gb||(e.prototype.$gb={}),e.prototype.$gb.vueflags={},e.prototype.$gb.vueflags.iconPath=(o||{}).iconPath||null)}},r=null;"undefined"!=typeof window?r=window.Vue:"undefined"!=typeof global&&(r=global.Vue),r&&r.use(d);var m=e.map((function(n){return n.code})),s=e.map((function(n){return n.names}));/* harmony default export */ __webpack_exports__["default"] = (d);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
@@ -7247,6 +7247,7 @@ module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/li
 var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
 var settle = __webpack_require__(/*! ./../core/settle */ "./node_modules/axios/lib/core/settle.js");
 var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ "./node_modules/axios/lib/helpers/buildURL.js");
+var buildFullPath = __webpack_require__(/*! ../core/buildFullPath */ "./node_modules/axios/lib/core/buildFullPath.js");
 var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ "./node_modules/axios/lib/helpers/parseHeaders.js");
 var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ "./node_modules/axios/lib/helpers/isURLSameOrigin.js");
 var createError = __webpack_require__(/*! ../core/createError */ "./node_modules/axios/lib/core/createError.js");
@@ -7269,7 +7270,8 @@ module.exports = function xhrAdapter(config) {
       requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
     }
 
-    request.open(config.method.toUpperCase(), buildURL(config.url, config.params, config.paramsSerializer), true);
+    var fullPath = buildFullPath(config.baseURL, config.url);
+    request.open(config.method.toUpperCase(), buildURL(fullPath, config.params, config.paramsSerializer), true);
 
     // Set the request timeout in MS
     request.timeout = config.timeout;
@@ -7330,7 +7332,11 @@ module.exports = function xhrAdapter(config) {
 
     // Handle timeout
     request.ontimeout = function handleTimeout() {
-      reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED',
+      var timeoutErrorMessage = 'timeout of ' + config.timeout + 'ms exceeded';
+      if (config.timeoutErrorMessage) {
+        timeoutErrorMessage = config.timeoutErrorMessage;
+      }
+      reject(createError(timeoutErrorMessage, config, 'ECONNABORTED',
         request));
 
       // Clean up request
@@ -7344,7 +7350,7 @@ module.exports = function xhrAdapter(config) {
       var cookies = __webpack_require__(/*! ./../helpers/cookies */ "./node_modules/axios/lib/helpers/cookies.js");
 
       // Add xsrf header
-      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
+      var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ?
         cookies.read(config.xsrfCookieName) :
         undefined;
 
@@ -7367,8 +7373,8 @@ module.exports = function xhrAdapter(config) {
     }
 
     // Add withCredentials to request if needed
-    if (config.withCredentials) {
-      request.withCredentials = true;
+    if (!utils.isUndefined(config.withCredentials)) {
+      request.withCredentials = !!config.withCredentials;
     }
 
     // Add responseType to request if needed
@@ -7647,7 +7653,15 @@ Axios.prototype.request = function request(config) {
   }
 
   config = mergeConfig(this.defaults, config);
-  config.method = config.method ? config.method.toLowerCase() : 'get';
+
+  // Set config.method
+  if (config.method) {
+    config.method = config.method.toLowerCase();
+  } else if (this.defaults.method) {
+    config.method = this.defaults.method.toLowerCase();
+  } else {
+    config.method = 'get';
+  }
 
   // Hook up interceptors middleware
   var chain = [dispatchRequest, undefined];
@@ -7764,6 +7778,38 @@ module.exports = InterceptorManager;
 
 /***/ }),
 
+/***/ "./node_modules/axios/lib/core/buildFullPath.js":
+/*!******************************************************!*\
+  !*** ./node_modules/axios/lib/core/buildFullPath.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var isAbsoluteURL = __webpack_require__(/*! ../helpers/isAbsoluteURL */ "./node_modules/axios/lib/helpers/isAbsoluteURL.js");
+var combineURLs = __webpack_require__(/*! ../helpers/combineURLs */ "./node_modules/axios/lib/helpers/combineURLs.js");
+
+/**
+ * Creates a new URL by combining the baseURL with the requestedURL,
+ * only when the requestedURL is not already an absolute URL.
+ * If the requestURL is absolute, this function returns the requestedURL untouched.
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} requestedURL Absolute or relative URL to combine
+ * @returns {string} The combined full path
+ */
+module.exports = function buildFullPath(baseURL, requestedURL) {
+  if (baseURL && !isAbsoluteURL(requestedURL)) {
+    return combineURLs(baseURL, requestedURL);
+  }
+  return requestedURL;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/lib/core/createError.js":
 /*!****************************************************!*\
   !*** ./node_modules/axios/lib/core/createError.js ***!
@@ -7808,8 +7854,6 @@ var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/util
 var transformData = __webpack_require__(/*! ./transformData */ "./node_modules/axios/lib/core/transformData.js");
 var isCancel = __webpack_require__(/*! ../cancel/isCancel */ "./node_modules/axios/lib/cancel/isCancel.js");
 var defaults = __webpack_require__(/*! ../defaults */ "./node_modules/axios/lib/defaults.js");
-var isAbsoluteURL = __webpack_require__(/*! ./../helpers/isAbsoluteURL */ "./node_modules/axios/lib/helpers/isAbsoluteURL.js");
-var combineURLs = __webpack_require__(/*! ./../helpers/combineURLs */ "./node_modules/axios/lib/helpers/combineURLs.js");
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -7829,11 +7873,6 @@ function throwIfCancellationRequested(config) {
 module.exports = function dispatchRequest(config) {
   throwIfCancellationRequested(config);
 
-  // Support baseURL config
-  if (config.baseURL && !isAbsoluteURL(config.url)) {
-    config.url = combineURLs(config.baseURL, config.url);
-  }
-
   // Ensure headers exist
   config.headers = config.headers || {};
 
@@ -7848,7 +7887,7 @@ module.exports = function dispatchRequest(config) {
   config.headers = utils.merge(
     config.headers.common || {},
     config.headers[config.method] || {},
-    config.headers || {}
+    config.headers
   );
 
   utils.forEach(
@@ -7971,13 +8010,23 @@ module.exports = function mergeConfig(config1, config2) {
   config2 = config2 || {};
   var config = {};
 
-  utils.forEach(['url', 'method', 'params', 'data'], function valueFromConfig2(prop) {
+  var valueFromConfig2Keys = ['url', 'method', 'params', 'data'];
+  var mergeDeepPropertiesKeys = ['headers', 'auth', 'proxy'];
+  var defaultToConfig2Keys = [
+    'baseURL', 'url', 'transformRequest', 'transformResponse', 'paramsSerializer',
+    'timeout', 'withCredentials', 'adapter', 'responseType', 'xsrfCookieName',
+    'xsrfHeaderName', 'onUploadProgress', 'onDownloadProgress',
+    'maxContentLength', 'validateStatus', 'maxRedirects', 'httpAgent',
+    'httpsAgent', 'cancelToken', 'socketPath'
+  ];
+
+  utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
     if (typeof config2[prop] !== 'undefined') {
       config[prop] = config2[prop];
     }
   });
 
-  utils.forEach(['headers', 'auth', 'proxy'], function mergeDeepProperties(prop) {
+  utils.forEach(mergeDeepPropertiesKeys, function mergeDeepProperties(prop) {
     if (utils.isObject(config2[prop])) {
       config[prop] = utils.deepMerge(config1[prop], config2[prop]);
     } else if (typeof config2[prop] !== 'undefined') {
@@ -7989,13 +8038,25 @@ module.exports = function mergeConfig(config1, config2) {
     }
   });
 
-  utils.forEach([
-    'baseURL', 'transformRequest', 'transformResponse', 'paramsSerializer',
-    'timeout', 'withCredentials', 'adapter', 'responseType', 'xsrfCookieName',
-    'xsrfHeaderName', 'onUploadProgress', 'onDownloadProgress', 'maxContentLength',
-    'validateStatus', 'maxRedirects', 'httpAgent', 'httpsAgent', 'cancelToken',
-    'socketPath'
-  ], function defaultToConfig2(prop) {
+  utils.forEach(defaultToConfig2Keys, function defaultToConfig2(prop) {
+    if (typeof config2[prop] !== 'undefined') {
+      config[prop] = config2[prop];
+    } else if (typeof config1[prop] !== 'undefined') {
+      config[prop] = config1[prop];
+    }
+  });
+
+  var axiosKeys = valueFromConfig2Keys
+    .concat(mergeDeepPropertiesKeys)
+    .concat(defaultToConfig2Keys);
+
+  var otherKeys = Object
+    .keys(config2)
+    .filter(function filterAxiosKeys(key) {
+      return axiosKeys.indexOf(key) === -1;
+    });
+
+  utils.forEach(otherKeys, function otherKeysDefaultToConfig2(prop) {
     if (typeof config2[prop] !== 'undefined') {
       config[prop] = config2[prop];
     } else if (typeof config1[prop] !== 'undefined') {
@@ -8103,13 +8164,12 @@ function setContentTypeIfUnset(headers, value) {
 
 function getDefaultAdapter() {
   var adapter;
-  // Only Node.JS has a process variable that is of [[Class]] process
-  if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
-    // For node use HTTP adapter
-    adapter = __webpack_require__(/*! ./adapters/http */ "./node_modules/axios/lib/adapters/xhr.js");
-  } else if (typeof XMLHttpRequest !== 'undefined') {
+  if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
     adapter = __webpack_require__(/*! ./adapters/xhr */ "./node_modules/axios/lib/adapters/xhr.js");
+  } else if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
+    // For node use HTTP adapter
+    adapter = __webpack_require__(/*! ./adapters/http */ "./node_modules/axios/lib/adapters/xhr.js");
   }
   return adapter;
 }
@@ -8631,7 +8691,6 @@ module.exports = function spread(callback) {
 
 
 var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
-var isBuffer = __webpack_require__(/*! is-buffer */ "./node_modules/axios/node_modules/is-buffer/index.js");
 
 /*global toString:true*/
 
@@ -8647,6 +8706,27 @@ var toString = Object.prototype.toString;
  */
 function isArray(val) {
   return toString.call(val) === '[object Array]';
+}
+
+/**
+ * Determine if a value is undefined
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if the value is undefined, otherwise false
+ */
+function isUndefined(val) {
+  return typeof val === 'undefined';
+}
+
+/**
+ * Determine if a value is a Buffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Buffer, otherwise false
+ */
+function isBuffer(val) {
+  return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor)
+    && typeof val.constructor.isBuffer === 'function' && val.constructor.isBuffer(val);
 }
 
 /**
@@ -8703,16 +8783,6 @@ function isString(val) {
  */
 function isNumber(val) {
   return typeof val === 'number';
-}
-
-/**
- * Determine if a value is undefined
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if the value is undefined, otherwise false
- */
-function isUndefined(val) {
-  return typeof val === 'undefined';
 }
 
 /**
@@ -8962,28 +9032,6 @@ module.exports = {
   extend: extend,
   trim: trim
 };
-
-
-/***/ }),
-
-/***/ "./node_modules/axios/node_modules/is-buffer/index.js":
-/*!************************************************************!*\
-  !*** ./node_modules/axios/node_modules/is-buffer/index.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
-module.exports = function isBuffer (obj) {
-  return obj != null && obj.constructor != null &&
-    typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
-}
 
 
 /***/ }),
@@ -9365,6 +9413,7 @@ var defaultTextConfig = {
       config.sdm = {
         definitionName: 'serviceDeliveryManager',
         config: {
+          description: this.$t('aspects.analytic_model.definitions.serviceDeliveryManager.title'),
           group: {
             x: 345,
             y: 225
@@ -9374,6 +9423,7 @@ var defaultTextConfig = {
       config.flsd = {
         definitionName: 'frontLineServiceDeliverer',
         config: {
+          description: this.$t('aspects.analytic_model.definitions.frontLineServiceDeliverer.title'),
           group: {
             x: 500,
             y: 225
@@ -9383,6 +9433,7 @@ var defaultTextConfig = {
       config.user = {
         definitionName: 'user',
         config: {
+          description: this.$t('aspects.analytic_model.definitions.user.title'),
           group: {
             x: 655,
             y: 225
@@ -9392,6 +9443,7 @@ var defaultTextConfig = {
       config.som = {
         definitionName: 'serviceOrganisationManager',
         config: {
+          description: this.$t('aspects.analytic_model.definitions.serviceOrganisationManager.title'),
           group: {
             x: 190,
             y: 225
@@ -9401,6 +9453,7 @@ var defaultTextConfig = {
       config.spm = {
         definitionName: 'servicePolicyMaker',
         config: {
+          description: this.$t('aspects.analytic_model.definitions.servicePolicyMaker.title'),
           group: {
             x: 35,
             y: 225
@@ -9424,6 +9477,7 @@ var defaultTextConfig = {
       config.ioc = {
         definitionName: 'instigatorsOfChange',
         config: {
+          description: this.$t('aspects.analytic_model.definitions.instigatorsOfChange.title'),
           group: {
             x: 0,
             y: 270
@@ -9433,6 +9487,7 @@ var defaultTextConfig = {
       config.cm = {
         definitionName: 'changeMakers',
         config: {
+          description: this.$t('aspects.analytic_model.definitions.changeMakers.title'),
           group: {
             x: 290,
             y: 270
@@ -9442,6 +9497,7 @@ var defaultTextConfig = {
       config.soc = {
         definitionName: 'subjectsOfChange',
         config: {
+          description: this.$t('aspects.analytic_model.definitions.subjectsOfChange.title'),
           group: {
             x: 145,
             y: 405
@@ -9451,6 +9507,7 @@ var defaultTextConfig = {
       config.br = {
         definitionName: 'broker',
         config: {
+          description: this.$t('aspects.analytic_model.definitions.broker.title'),
           group: {
             x: 145,
             y: 135
@@ -9460,6 +9517,7 @@ var defaultTextConfig = {
       config.ct = {
         definitionName: 'changeTheorists',
         config: {
+          description: this.$t('aspects.analytic_model.definitions.changeTheorists.title'),
           group: {
             x: 290,
             y: 0
@@ -9469,6 +9527,7 @@ var defaultTextConfig = {
       config.be = {
         definitionName: 'beneficiaries',
         config: {
+          description: this.$t('aspects.analytic_model.definitions.beneficiaries.title'),
           group: {
             x: 290,
             y: 540
@@ -9478,6 +9537,7 @@ var defaultTextConfig = {
       config.v = {
         definitionName: 'victims',
         config: {
+          description: this.$t('aspects.analytic_model.definitions.victims.title'),
           group: {
             x: 0,
             y: 540
@@ -12993,6 +13053,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -13010,6 +13071,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   data: function data() {
     return {
+      descriptionPosY: 0,
       pos: {
         width: 100,
         icon: 70
@@ -13024,10 +13086,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     };
   },
-
-  /*	watch: {
-  		'value': 'refreshPositions',
-  	},*/
+  watch: {
+    'model.label': 'refreshPositions'
+  },
   computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(['userGuide']), {
     dataPath: function dataPath() {
       if (this.userGuide.isOpen) {
@@ -13094,6 +13155,28 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         align: 'center'
       };
       return config;
+    },
+    descriptionConfig: function descriptionConfig() {
+      var label = this.config && this.config.description ? this.config.description : false;
+
+      if (label === false) {
+        return false;
+      }
+
+      var config = {
+        fill: '#999999',
+        text: label,
+        fontSize: 11,
+        fontFamily: this.options.fontFamily,
+        lineHeight: 1.3,
+        x: -15,
+        y: this.descriptionPosY,
+        //this.pos.icon + 30 + 20,
+        width: this.pos.width + 30,
+        padding: 0,
+        align: 'center'
+      };
+      return config;
     }
   }),
   methods: {
@@ -13111,28 +13194,34 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       if (this.url) {
         this.$refs.link.click();
       }
-    } // refreshPositions() {
-    // 	if ( ! this.circle) {
-    // 		return;
-    // 	}
-    // 	this.$nextTick(() => {
-    // 		let labelHeight = 15;
-    // 		let iconHeight = 70;
-    // 		if (nodeRefs.label && nodeRefs.icon && this.value.label && this.value.type) {
-    // 			labelHeight = nodeRefs.label.getNode().getClientRect().height;
-    // 			iconHeight = nodeRefs.icon.getNode().getClientRect().height;
-    // 		}
-    // 		this.circlePos = {
-    // 			x: this.pos.width / 2,
-    // 			y: Math.floor((iconHeight + labelHeight) / 2),	//Math.floor((this.pos.icon + labelHeight) / 2),
-    // 			radius: {
-    // 				x: this.pos.width * 0.75,
-    // 				y: (iconHeight + 15),
-    // 			}
-    // 		}
-    // 	});
-    // }
+    },
+    refreshPositions: function refreshPositions() {
+      var _this = this;
 
+      if (!this.isVisible) {
+        return;
+      }
+
+      if (!this.descriptionConfig) {
+        return;
+      }
+
+      var refs = {
+        label: this.$refs.label,
+        description: this.$refs.description
+      };
+
+      if (!refs.label) {
+        return;
+      }
+
+      this.$nextTick(function () {
+        _this.descriptionPosY = _this.pos.icon + 30 + refs.label.getNode().getClientRect().height + 5;
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.refreshPositions();
   }
 });
 
@@ -17182,6 +17271,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       if (idx < this.numPanels - 1) {
         nextIdx = idx + 1;
+      } // Skip 'divider' types
+
+
+      if (this.panels[nextIdx].definition.type === 'divider') {
+        nextIdx++;
       }
 
       this.setCurrentPanel(this.panels[nextIdx].id);
@@ -20729,7 +20823,7 @@ function toDate(argument) {
   } else {
     if ((typeof argument === 'string' || argStr === '[object String]') && typeof console !== 'undefined') {
       // eslint-disable-next-line no-console
-      console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as arguments. Please use `parseISO` to parse strings. See: https://git.io/fjule"); // eslint-disable-next-line no-console
+      console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://git.io/fjule"); // eslint-disable-next-line no-console
 
       console.warn(new Error().stack);
     }
@@ -22493,8 +22587,8 @@ var BaseLayer = (function (_super) {
         var stage = this.getStage();
         if (stage) {
             stage.content.removeChild(this.getCanvas()._canvas);
-            if (index < stage.getChildren().length - 1) {
-                stage.content.insertBefore(this.getCanvas()._canvas, stage.getChildren()[index + 1].getCanvas()._canvas);
+            if (index < stage.children.length - 1) {
+                stage.content.insertBefore(this.getCanvas()._canvas, stage.children[index + 1].getCanvas()._canvas);
             }
             else {
                 stage.content.appendChild(this.getCanvas()._canvas);
@@ -22521,8 +22615,8 @@ var BaseLayer = (function (_super) {
             return false;
         }
         stage.content.removeChild(this.getCanvas()._canvas);
-        if (this.index < stage.getChildren().length - 1) {
-            stage.content.insertBefore(this.getCanvas()._canvas, stage.getChildren()[this.index + 1].getCanvas()._canvas);
+        if (this.index < stage.children.length - 1) {
+            stage.content.insertBefore(this.getCanvas()._canvas, stage.children[this.index + 1].getCanvas()._canvas);
         }
         else {
             stage.content.appendChild(this.getCanvas()._canvas);
@@ -22533,7 +22627,7 @@ var BaseLayer = (function (_super) {
         if (Node_1.Node.prototype.moveDown.call(this)) {
             var stage = this.getStage();
             if (stage) {
-                var children = stage.getChildren();
+                var children = stage.children;
                 stage.content.removeChild(this.getCanvas()._canvas);
                 stage.content.insertBefore(this.getCanvas()._canvas, children[this.index + 1].getCanvas()._canvas);
             }
@@ -22545,7 +22639,7 @@ var BaseLayer = (function (_super) {
         if (Node_1.Node.prototype.moveToBottom.call(this)) {
             var stage = this.getStage();
             if (stage) {
-                var children = stage.getChildren();
+                var children = stage.children;
                 stage.content.removeChild(this.getCanvas()._canvas);
                 stage.content.insertBefore(this.getCanvas()._canvas, children[1].getCanvas()._canvas);
             }
@@ -22734,8 +22828,8 @@ var Canvas = (function () {
         return this.height;
     };
     Canvas.prototype.setSize = function (width, height) {
-        this.setWidth(width);
-        this.setHeight(height);
+        this.setWidth(width || 0);
+        this.setHeight(height || 0);
     };
     Canvas.prototype.toDataURL = function (mimeType, quality) {
         try {
@@ -22746,7 +22840,9 @@ var Canvas = (function () {
                 return this._canvas.toDataURL();
             }
             catch (err) {
-                Util_1.Util.error('Unable to get data URL. ' + err.message);
+                Util_1.Util.error('Unable to get data URL. ' +
+                    err.message +
+                    ' For more info read https://konvajs.org/docs/posts/Tainted_Canvas.html.');
                 return '';
             }
         }
@@ -22868,13 +22964,14 @@ var Container = (function (_super) {
             }
             return this;
         }
-        var child = arguments[0];
+        var child = children[0];
         if (child.getParent()) {
             child.moveTo(this);
             return this;
         }
         var _children = this.children;
         this._validateAdd(child);
+        child._clearCaches();
         child.index = _children.length;
         child.parent = this;
         _children.push(child);
@@ -23244,26 +23341,22 @@ var Context = (function () {
         }
     }
     Context.prototype.fillShape = function (shape) {
-        if (shape.getFillEnabled()) {
+        if (shape.fillEnabled()) {
             this._fill(shape);
         }
     };
     Context.prototype._fill = function (shape) {
     };
     Context.prototype.strokeShape = function (shape) {
-        if (shape.getStrokeEnabled()) {
+        if (shape.hasStroke()) {
             this._stroke(shape);
         }
     };
     Context.prototype._stroke = function (shape) {
     };
     Context.prototype.fillStrokeShape = function (shape) {
-        if (shape.getFillEnabled()) {
-            this._fill(shape);
-        }
-        if (shape.getStrokeEnabled()) {
-            this._stroke(shape);
-        }
+        this.fillShape(shape);
+        this.strokeShape(shape);
     };
     Context.prototype.getTrace = function (relaxed) {
         var traceArr = this.traceArr, len = traceArr.length, str = '', n, trace, method, args;
@@ -23663,6 +23756,11 @@ var HitContext = (function (_super) {
         shape._fillFuncHit(this);
         this.restore();
     };
+    HitContext.prototype.strokeShape = function (shape) {
+        if (shape.hasHitStroke()) {
+            this._stroke(shape);
+        }
+    };
     HitContext.prototype._stroke = function (shape) {
         if (shape.hasHitStroke()) {
             var strokeScaleEnabled = shape.getStrokeScaleEnabled();
@@ -24056,7 +24154,7 @@ exports.glob = typeof global !== 'undefined'
             : {};
 exports.Konva = {
     _global: exports.glob,
-    version: '4.1.0',
+    version: '4.2.2',
     isBrowser: detectBrowser(),
     isUnminified: /param/.test(function (param) { }.toString()),
     dblClickWindow: 400,
@@ -24613,7 +24711,7 @@ var Node = (function () {
                         if (typeof filter !== 'function') {
                             Util_1.Util.error('Filter should be type of function, but got ' +
                                 typeof filter +
-                                ' insted. Please check correct filters');
+                                ' instead. Please check correct filters');
                             continue;
                         }
                         filter.call(this, imageData);
@@ -24621,7 +24719,9 @@ var Node = (function () {
                     }
                 }
                 catch (e) {
-                    Util_1.Util.error('Unable to apply filter. ' + e.message);
+                    Util_1.Util.error('Unable to apply filter. ' +
+                        e.message +
+                        ' This post my help you https://konvajs.org/docs/posts/Tainted_Canvas.html.');
                 }
                 this._filterUpToDate = true;
             }
@@ -24712,12 +24812,16 @@ var Node = (function () {
         this._remove();
         return this;
     };
-    Node.prototype._remove = function () {
-        this._clearSelfAndDescendantCache(STAGE);
+    Node.prototype._clearCaches = function () {
         this._clearSelfAndDescendantCache(ABSOLUTE_TRANSFORM);
+        this._clearSelfAndDescendantCache(ABSOLUTE_OPACITY);
+        this._clearSelfAndDescendantCache(ABSOLUTE_SCALE);
+        this._clearSelfAndDescendantCache(STAGE);
         this._clearSelfAndDescendantCache(VISIBLE);
         this._clearSelfAndDescendantCache(LISTENING);
-        this._clearSelfAndDescendantCache(ABSOLUTE_OPACITY);
+    };
+    Node.prototype._remove = function () {
+        this._clearCaches();
         var parent = this.getParent();
         if (parent && parent.children) {
             parent.children.splice(this.index, 1);
@@ -25235,6 +25339,15 @@ var Node = (function () {
             y: scaleY
         };
     };
+    Node.prototype.getAbsoluteRotation = function () {
+        var parent = this;
+        var rotation = 0;
+        while (parent) {
+            rotation += parent.rotation();
+            parent = parent.getParent();
+        }
+        return rotation;
+    };
     Node.prototype.getTransform = function () {
         return this._getCache(TRANSFORM, this._getTransform);
     };
@@ -25259,10 +25372,6 @@ var Node = (function () {
     };
     Node.prototype.clone = function (obj) {
         var attrs = Util_1.Util.cloneObject(this.attrs), key, allListeners, len, n, listener;
-        for (var i in CLONE_BLACK_LIST) {
-            var blockAttr = CLONE_BLACK_LIST[i];
-            delete attrs[blockAttr];
-        }
         for (key in obj) {
             attrs[key] = obj[key];
         }
@@ -25471,16 +25580,16 @@ var Node = (function () {
         if (!shouldStop) {
             this._fire(eventType, evt);
             var stopBubble = (eventType === MOUSEENTER || eventType === MOUSELEAVE) &&
-                (compareShape &&
-                    compareShape.isAncestorOf &&
-                    compareShape.isAncestorOf(this) &&
-                    !compareShape.isAncestorOf(this.parent));
+                compareShape &&
+                compareShape.isAncestorOf &&
+                compareShape.isAncestorOf(this) &&
+                !compareShape.isAncestorOf(this.parent);
             if (((evt && !evt.cancelBubble) || !evt) &&
                 this.parent &&
                 this.parent.isListening() &&
                 !stopBubble) {
                 if (compareShape && compareShape.parent) {
-                    this._fireAndBubble.call(this.parent, eventType, evt, compareShape.parent);
+                    this._fireAndBubble.call(this.parent, eventType, evt, compareShape);
                 }
                 else {
                     this._fireAndBubble.call(this.parent, eventType, evt);
@@ -25873,11 +25982,11 @@ var Shape = (function (_super) {
     };
     Shape.prototype._hasShadow = function () {
         return (this.shadowEnabled() &&
-            (this.shadowOpacity() !== 0 &&
-                !!(this.shadowColor() ||
-                    this.shadowBlur() ||
-                    this.shadowOffsetX() ||
-                    this.shadowOffsetY())));
+            this.shadowOpacity() !== 0 &&
+            !!(this.shadowColor() ||
+                this.shadowBlur() ||
+                this.shadowOffsetX() ||
+                this.shadowOffsetY()));
     };
     Shape.prototype._getFillPattern = function () {
         return this._getCache(patternImage, this.__getFillPattern);
@@ -25939,10 +26048,11 @@ var Shape = (function (_super) {
         }
     };
     Shape.prototype.hasFill = function () {
-        return !!(this.fill() ||
-            this.fillPatternImage() ||
-            this.fillLinearGradientColorStops() ||
-            this.fillRadialGradientColorStops());
+        return (this.fillEnabled() &&
+            !!(this.fill() ||
+                this.fillPatternImage() ||
+                this.fillLinearGradientColorStops() ||
+                this.fillRadialGradientColorStops()));
     };
     Shape.prototype.hasStroke = function () {
         return (this.strokeEnabled() &&
@@ -25951,8 +26061,10 @@ var Shape = (function (_super) {
     };
     Shape.prototype.hasHitStroke = function () {
         var width = this.hitStrokeWidth();
-        return (this.strokeEnabled() &&
-            (width || this.strokeWidth() && width === 'auto'));
+        if (width === 'auto') {
+            return this.hasStroke();
+        }
+        return this.strokeEnabled() && !!width;
     };
     Shape.prototype.intersects = function (point) {
         var stage = this.getStage(), bufferHitCanvas = stage.bufferHitCanvas, p;
@@ -25976,6 +26088,7 @@ var Shape = (function (_super) {
             this.getStage());
     };
     Shape.prototype.setStrokeHitEnabled = function (val) {
+        Util_1.Util.warn('strokeHitEnabled property is deprecated. Please use hitStrokeWidth instead.');
         if (val) {
             this.hitStrokeWidth('auto');
         }
@@ -25994,8 +26107,8 @@ var Shape = (function (_super) {
     Shape.prototype.getSelfRect = function () {
         var size = this.size();
         return {
-            x: this._centroid ? Math.round(-size.width / 2) : 0,
-            y: this._centroid ? Math.round(-size.height / 2) : 0,
+            x: this._centroid ? -size.width / 2 : 0,
+            y: this._centroid ? -size.height / 2 : 0,
             width: size.width,
             height: size.height
         };
@@ -26394,6 +26507,9 @@ var Stage = (function (_super) {
         }
     };
     Stage.prototype._checkVisibility = function () {
+        if (!this.content) {
+            return;
+        }
         var style = this.visible() ? '' : 'none';
         this.content.style.display = style;
     };
@@ -26511,18 +26627,18 @@ var Stage = (function (_super) {
         return null;
     };
     Stage.prototype._resizeDOM = function () {
+        var width = this.width();
+        var height = this.height();
         if (this.content) {
-            var width = this.width(), height = this.height(), layers = this.getChildren(), len = layers.length, n, layer;
             this.content.style.width = width + PX;
             this.content.style.height = height + PX;
-            this.bufferCanvas.setSize(width, height);
-            this.bufferHitCanvas.setSize(width, height);
-            for (n = 0; n < len; n++) {
-                layer = layers[n];
-                layer.setSize({ width: width, height: height });
-                layer.draw();
-            }
         }
+        this.bufferCanvas.setSize(width, height);
+        this.bufferHitCanvas.setSize(width, height);
+        this.children.each(function (layer) {
+            layer.setSize({ width: width, height: height });
+            layer.draw();
+        });
     };
     Stage.prototype.add = function (layer) {
         if (arguments.length > 1) {
@@ -27015,19 +27131,32 @@ var Stage = (function (_super) {
         this.setPointersPositions(evt);
     };
     Stage.prototype._getContentPosition = function () {
-        var rect = this.content.getBoundingClientRect
-            ? this.content.getBoundingClientRect()
-            : { top: 0, left: 0, width: 1000, height: 1000 };
+        if (!this.content || !this.content.getBoundingClientRect) {
+            return {
+                top: 0,
+                left: 0,
+                scaleX: 1,
+                scaleY: 1
+            };
+        }
+        var rect = this.content.getBoundingClientRect();
         return {
             top: rect.top,
             left: rect.left,
-            scaleX: rect.width / this.content.clientWidth,
-            scaleY: rect.height / this.content.clientHeight,
+            scaleX: rect.width / this.content.clientWidth || 1,
+            scaleY: rect.height / this.content.clientHeight || 1
         };
     };
     Stage.prototype._buildDOM = function () {
-        this.bufferCanvas = new Canvas_1.SceneCanvas();
-        this.bufferHitCanvas = new Canvas_1.HitCanvas({ pixelRatio: 1 });
+        this.bufferCanvas = new Canvas_1.SceneCanvas({
+            width: this.width(),
+            height: this.height()
+        });
+        this.bufferHitCanvas = new Canvas_1.HitCanvas({
+            pixelRatio: 1,
+            width: this.width(),
+            height: this.height()
+        });
         if (!Global_1.Konva.isBrowser) {
             return;
         }
@@ -28566,6 +28695,7 @@ var Canvas_1 = __webpack_require__(/*! ./Canvas */ "./node_modules/konva/lib/Can
 exports.Konva = Util_1.Util._assign(Global_1.Konva, {
     Collection: Util_1.Collection,
     Util: Util_1.Util,
+    Transform: Util_1.Transform,
     Node: Node_1.Node,
     ids: Node_1.ids,
     names: Node_1.names,
@@ -30604,6 +30734,16 @@ var Arrow = (function (_super) {
             this.attrs.dashEnabled = true;
         }
     };
+    Arrow.prototype.getSelfRect = function () {
+        var lineRect = _super.prototype.getSelfRect.call(this);
+        var offset = this.pointerWidth() / 2;
+        return {
+            x: lineRect.x - offset,
+            y: lineRect.y - offset,
+            width: lineRect.width + offset * 2,
+            height: lineRect.height + offset * 2
+        };
+    };
     return Arrow;
 }(Line_1.Line));
 exports.Arrow = Arrow;
@@ -30835,12 +30975,14 @@ var Image = (function (_super) {
         context.fillStrokeShape(this);
     };
     Image.prototype.getWidth = function () {
+        var _a;
         var image = this.image();
-        return this.attrs.width || (image ? image.width : 0);
+        return _a = this.attrs.width, (_a !== null && _a !== void 0 ? _a : (image ? image.width : 0));
     };
     Image.prototype.getHeight = function () {
+        var _a;
         var image = this.image();
-        return this.attrs.height || (image ? image.height : 0);
+        return _a = this.attrs.height, (_a !== null && _a !== void 0 ? _a : (image ? image.height : 0));
     };
     Image.fromURL = function (url, callback) {
         var img = Util_1.Util.createImageElement();
@@ -31217,7 +31359,7 @@ var Line = (function (_super) {
                 points[1]
             ], this._getTensionPoints(), [
                 points[points.length - 2],
-                points[points.length - 2]
+                points[points.length - 1]
             ]);
         }
         else {
@@ -31237,10 +31379,10 @@ var Line = (function (_super) {
             maxY = Math.max(maxY, y);
         }
         return {
-            x: Math.round(minX),
-            y: Math.round(minY),
-            width: Math.round(maxX - minX),
-            height: Math.round(maxY - minY)
+            x: minX,
+            y: minY,
+            width: maxX - minX,
+            height: maxY - minY
         };
     };
     return Line;
@@ -31308,6 +31450,7 @@ var Path = (function (_super) {
     Path.prototype._sceneFunc = function (context) {
         var ca = this.dataArray;
         context.beginPath();
+        var isClosed = false;
         for (var n = 0; n < ca.length; n++) {
             var c = ca[n].command;
             var p = ca[n].points;
@@ -31338,22 +31481,47 @@ var Path = (function (_super) {
                     context.translate(-cx, -cy);
                     break;
                 case 'z':
+                    isClosed = true;
                     context.closePath();
                     break;
             }
         }
-        context.fillStrokeShape(this);
+        if (!isClosed && !this.hasFill()) {
+            context.strokeShape(this);
+        }
+        else {
+            context.fillStrokeShape(this);
+        }
     };
     Path.prototype.getSelfRect = function () {
         var points = [];
         this.dataArray.forEach(function (data) {
             if (data.command === 'A') {
-                points = points.concat([
-                    data.points[0] - data.points[2],
-                    data.points[1] - data.points[3],
-                    data.points[0] + data.points[2],
-                    data.points[1] + data.points[3]
-                ]);
+                var start = data.points[4];
+                var dTheta = data.points[5];
+                var end = data.points[4] + dTheta;
+                var inc = Math.PI / 180.0;
+                if (Math.abs(start - end) < inc) {
+                    inc = Math.abs(start - end);
+                }
+                if (dTheta < 0) {
+                    for (var t = start - inc; t > end; t -= inc) {
+                        var point = Path.getPointOnEllipticalArc(data.points[0], data.points[1], data.points[2], data.points[3], t, 0);
+                        points.push(point.x, point.y);
+                    }
+                }
+                else {
+                    for (var t = start + inc; t < end; t += inc) {
+                        var point = Path.getPointOnEllipticalArc(data.points[0], data.points[1], data.points[2], data.points[3], t, 0);
+                        points.push(point.x, point.y);
+                    }
+                }
+            }
+            else if (data.command === 'C') {
+                for (var t = 0.0; t <= 1; t += 0.01) {
+                    var point = Path.getPointOnCubicBezier(t, data.start.x, data.start.y, data.points[0], data.points[1], data.points[2], data.points[3], data.points[4], data.points[5]);
+                    points.push(point.x, point.y);
+                }
             }
             else {
                 points = points.concat(data.points);
@@ -32388,9 +32556,10 @@ function checkDefaultFill(config) {
     }
     return config;
 }
-var trimRight = String.prototype.trimRight || function polyfill() {
-    return this.replace(/[\s\xa0]+$/, '');
-};
+var trimRight = String.prototype.trimRight ||
+    function polyfill() {
+        return this.replace(/[\s\xa0]+$/, '');
+    };
 var Text = (function (_super) {
     __extends(Text, _super);
     function Text(config) {
@@ -32497,7 +32666,11 @@ var Text = (function (_super) {
         context.fillStrokeShape(this);
     };
     Text.prototype.setText = function (text) {
-        var str = Util_1.Util._isString(text) ? text : (text === null || text === undefined) ? '' : text + '';
+        var str = Util_1.Util._isString(text)
+            ? text
+            : text === null || text === undefined
+                ? ''
+                : text + '';
         this._setAttr(TEXT, str);
         return this;
     };
@@ -33021,10 +33194,10 @@ var TextPath = (function (_super) {
         }
         var fontSize = this.fontSize();
         return {
-            x: Math.round(minX) - fontSize / 2,
-            y: Math.round(minY) - fontSize / 2,
-            width: Math.round(maxX - minX) + fontSize,
-            height: Math.round(maxY - minY) + fontSize
+            x: minX - fontSize / 2,
+            y: minY - fontSize / 2,
+            width: maxX - minX + fontSize,
+            height: maxY - minY + fontSize
         };
     };
     return TextPath;
@@ -33229,6 +33402,9 @@ var Transformer = (function (_super) {
     Transformer.prototype.getNode = function () {
         return this._node;
     };
+    Transformer.prototype.getActiveAnchor = function () {
+        return this._movingAnchorName;
+    };
     Transformer.prototype.detach = function () {
         if (this.getNode()) {
             this.getNode().off('.' + EVENTS_NAME);
@@ -33321,7 +33497,7 @@ var Transformer = (function (_super) {
             e.cancelBubble = true;
         });
         anchor.on('mouseenter', function () {
-            var rad = Global_1.Konva.getAngle(_this.rotation());
+            var rad = Global_1.Konva.getAngle(_this.getAbsoluteRotation());
             var scale = _this.getNode().getAbsoluteScale();
             var isMirrored = scale.y * scale.x < 0;
             var cursor = getCursor(name, rad, isMirrored);
@@ -33370,27 +33546,15 @@ var Transformer = (function (_super) {
         window.addEventListener('mouseup', this._handleMouseUp, true);
         window.addEventListener('touchend', this._handleMouseUp, true);
         this._transforming = true;
-        this._fire('transformstart', { evt: e });
-        this.getNode()._fire('transformstart', { evt: e });
+        this._fire('transformstart', { evt: e, target: this.getNode() });
+        this.getNode()._fire('transformstart', { evt: e, target: this.getNode() });
     };
     Transformer.prototype._handleMouseMove = function (e) {
         var x, y, newHypotenuse;
         var anchorNode = this.findOne('.' + this._movingAnchorName);
         var stage = anchorNode.getStage();
-        var box = stage.getContent().getBoundingClientRect();
-        var zeroPoint = {
-            x: box.left,
-            y: box.top
-        };
-        var pointerPos = {
-            left: e.clientX !== undefined ? e.clientX : e.touches[0].clientX,
-            top: e.clientX !== undefined ? e.clientY : e.touches[0].clientY
-        };
-        var newAbsPos = {
-            x: pointerPos.left - zeroPoint.x,
-            y: pointerPos.top - zeroPoint.y
-        };
-        anchorNode.setAbsolutePosition(newAbsPos);
+        stage.setPointersPositions(e);
+        anchorNode.setAbsolutePosition(stage.getPointerPosition());
         var keepProportion = this.keepRatio() || e.shiftKey;
         var padding = this.padding();
         if (this._movingAnchorName === 'top-left') {
@@ -33488,7 +33652,7 @@ var Transformer = (function (_super) {
             var alpha = Global_1.Konva.getAngle(this.getNode().rotation());
             var newAlpha = Util_1.Util._degToRad(newRotation);
             var snaps = this.rotationSnaps();
-            var offset = 0.1;
+            var offset = Global_1.Konva.getAngle(this.rotationSnapTolerance());
             for (var i = 0; i < snaps.length; i++) {
                 var angle = Global_1.Konva.getAngle(snaps[i]);
                 var dif = Math.abs(angle - Util_1.Util._degToRad(newRotation)) % (Math.PI * 2);
@@ -33563,11 +33727,12 @@ var Transformer = (function (_super) {
             window.removeEventListener('touchmove', this._handleMouseMove);
             window.removeEventListener('mouseup', this._handleMouseUp, true);
             window.removeEventListener('touchend', this._handleMouseUp, true);
-            this._fire('transformend', { evt: e });
             var node = this.getNode();
+            this._fire('transformend', { evt: e, target: node });
             if (node) {
-                node.fire('transformend', { evt: e });
+                node.fire('transformend', { evt: e, target: node });
             }
+            this._movingAnchorName = null;
         }
     };
     Transformer.prototype._fitNodeInto = function (newAttrs, evt) {
@@ -33599,8 +33764,8 @@ var Transformer = (function (_super) {
             x: newAttrs.x - (dx * Math.cos(rotation) + dy * Math.sin(-rotation)),
             y: newAttrs.y - (dy * Math.cos(rotation) + dx * Math.sin(rotation))
         });
-        this._fire('transform', { evt: evt });
-        this.getNode()._fire('transform', { evt: evt });
+        this._fire('transform', { evt: evt, target: this.getNode() });
+        this.getNode()._fire('transform', { evt: evt, target: this.getNode() });
         this.update();
         this.getLayer().batchDraw();
     };
@@ -33754,6 +33919,7 @@ Factory_1.Factory.addGetterSetter(Transformer, 'anchorSize', 10, Validators_1.ge
 Factory_1.Factory.addGetterSetter(Transformer, 'rotateEnabled', true);
 Factory_1.Factory.addGetterSetter(Transformer, 'rotationSnaps', []);
 Factory_1.Factory.addGetterSetter(Transformer, 'rotateAnchorOffset', 50, Validators_1.getNumberValidator());
+Factory_1.Factory.addGetterSetter(Transformer, 'rotationSnapTolerance', 5, Validators_1.getNumberValidator());
 Factory_1.Factory.addGetterSetter(Transformer, 'borderEnabled', true);
 Factory_1.Factory.addGetterSetter(Transformer, 'anchorStroke', 'rgb(0, 161, 255)');
 Factory_1.Factory.addGetterSetter(Transformer, 'anchorStrokeWidth', 1, Validators_1.getNumberValidator());
@@ -34596,7 +34762,8 @@ var Stack = __webpack_require__(/*! ./_Stack */ "./node_modules/lodash/_Stack.js
     isMap = __webpack_require__(/*! ./isMap */ "./node_modules/lodash/isMap.js"),
     isObject = __webpack_require__(/*! ./isObject */ "./node_modules/lodash/isObject.js"),
     isSet = __webpack_require__(/*! ./isSet */ "./node_modules/lodash/isSet.js"),
-    keys = __webpack_require__(/*! ./keys */ "./node_modules/lodash/keys.js");
+    keys = __webpack_require__(/*! ./keys */ "./node_modules/lodash/keys.js"),
+    keysIn = __webpack_require__(/*! ./keysIn */ "./node_modules/lodash/keysIn.js");
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1,
@@ -36532,10 +36699,11 @@ function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
   if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
     return false;
   }
-  // Assume cyclic values are equal.
-  var stacked = stack.get(array);
-  if (stacked && stack.get(other)) {
-    return stacked == other;
+  // Check that cyclic values are equal.
+  var arrStacked = stack.get(array);
+  var othStacked = stack.get(other);
+  if (arrStacked && othStacked) {
+    return arrStacked == other && othStacked == array;
   }
   var index = -1,
       result = true,
@@ -36761,10 +36929,11 @@ function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
       return false;
     }
   }
-  // Assume cyclic values are equal.
-  var stacked = stack.get(object);
-  if (stacked && stack.get(other)) {
-    return stacked == other;
+  // Check that cyclic values are equal.
+  var objStacked = stack.get(object);
+  var othStacked = stack.get(other);
+  if (objStacked && othStacked) {
+    return objStacked == other && othStacked == object;
   }
   var result = true;
   stack.set(object, other);
@@ -39137,6 +39306,10 @@ var arrayFilter = __webpack_require__(/*! ./_arrayFilter */ "./node_modules/loda
  * // The `_.property` iteratee shorthand.
  * _.filter(users, 'active');
  * // => objects for ['barney']
+ *
+ * // Combining several predicates using `_.overEvery` or `_.overSome`.
+ * _.filter(users, _.overSome([{ 'age': 36 }, ['age', 40]]));
+ * // => objects for ['fred', 'barney']
  */
 function filter(collection, predicate) {
   var func = isArray(collection) ? arrayFilter : baseFilter;
@@ -40862,7 +41035,7 @@ module.exports = toString;
         message = utf8.stringToBytes(message);
     else if (isBuffer(message))
       message = Array.prototype.slice.call(message, 0);
-    else if (!Array.isArray(message))
+    else if (!Array.isArray(message) && message.constructor !== Uint8Array)
       message = message.toString();
     // else, assume byte array already
 
@@ -42566,7 +42739,7 @@ __webpack_require__.r(__webpack_exports__);
       attrs: {
         x1: "12",
         y1: "16",
-        x2: "12",
+        x2: "12.01",
         y2: "16"
       }
     })]);
@@ -43226,7 +43399,7 @@ __webpack_require__.r(__webpack_exports__);
       attrs: {
         x1: "12",
         y1: "8",
-        x2: "12",
+        x2: "12.01",
         y2: "8"
       }
     })]);
@@ -43295,7 +43468,7 @@ __webpack_require__.r(__webpack_exports__);
       attrs: {
         x1: "17.5",
         y1: "6.5",
-        x2: "17.5",
+        x2: "17.51",
         y2: "6.5"
       }
     })]);
@@ -43920,8 +44093,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /*!
- * vue-i18n v8.15.3 
- * (c) 2019 kazuya kawaguchi
+ * vue-i18n v8.22.1 
+ * (c) 2020 kazuya kawaguchi
  * Released under the MIT License.
  */
 /*  */
@@ -43969,8 +44142,18 @@ function error (msg, err) {
   }
 }
 
+var isArray = Array.isArray;
+
 function isObject (obj) {
   return obj !== null && typeof obj === 'object'
+}
+
+function isBoolean (val) {
+  return typeof val === 'boolean'
+}
+
+function isString (val) {
+  return typeof val === 'string'
 }
 
 var toString = Object.prototype.toString;
@@ -43983,6 +44166,10 @@ function isNull (val) {
   return val === null || val === undefined
 }
 
+function isFunction (val) {
+  return typeof val === 'function'
+}
+
 function parseArgs () {
   var args = [], len = arguments.length;
   while ( len-- ) args[ len ] = arguments[ len ];
@@ -43990,7 +44177,7 @@ function parseArgs () {
   var locale = null;
   var params = null;
   if (args.length === 1) {
-    if (isObject(args[0]) || Array.isArray(args[0])) {
+    if (isObject(args[0]) || isArray(args[0])) {
       params = args[0];
     } else if (typeof args[0] === 'string') {
       locale = args[0];
@@ -44000,7 +44187,7 @@ function parseArgs () {
       locale = args[0];
     }
     /* istanbul ignore if */
-    if (isObject(args[1]) || Array.isArray(args[1])) {
+    if (isObject(args[1]) || isArray(args[1])) {
       params = args[1];
     }
   }
@@ -44019,6 +44206,10 @@ function remove (arr, item) {
       return arr.splice(index, 1)
     }
   }
+}
+
+function includes (arr, item) {
+  return !!~arr.indexOf(item)
 }
 
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -44054,8 +44245,8 @@ function looseEqual (a, b) {
   var isObjectB = isObject(b);
   if (isObjectA && isObjectB) {
     try {
-      var isArrayA = Array.isArray(a);
-      var isArrayB = Array.isArray(b);
+      var isArrayA = isArray(a);
+      var isArrayB = isArray(b);
       if (isArrayA && isArrayB) {
         return a.length === b.length && a.every(function (e, i) {
           return looseEqual(e, b[i])
@@ -44079,6 +44270,38 @@ function looseEqual (a, b) {
   } else {
     return false
   }
+}
+
+/**
+ * Sanitizes html special characters from input strings. For mitigating risk of XSS attacks.
+ * @param rawText The raw input from the user that should be escaped.
+ */
+function escapeHtml(rawText) {
+  return rawText
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;')
+}
+
+/**
+ * Escapes html tags and special symbols from all provided params which were returned from parseArgs().params.
+ * This method performs an in-place operation on the params object.
+ *
+ * @param {any} params Parameters as provided from `parseArgs().params`.
+ *                     May be either an array of strings or a string->any map.
+ *
+ * @returns The manipulated `params` object.
+ */
+function escapeParams(params) {
+  if(params != null) {
+    Object.keys(params).forEach(function (key) {
+      if(typeof(params[key]) == 'string') {
+        params[key] = escapeHtml(params[key]);
+      }
+    });
+  }
+  return params
 }
 
 /*  */
@@ -44141,7 +44364,7 @@ var mixin = {
         // init locale messages via custom blocks
         if (options.__i18n) {
           try {
-            var localeMessages = {};
+            var localeMessages = options.i18n && options.i18n.messages ? options.i18n.messages : {};
             options.__i18n.forEach(function (resource) {
               localeMessages = merge(localeMessages, JSON.parse(resource));
             });
@@ -44157,22 +44380,25 @@ var mixin = {
         this._i18n = options.i18n;
         this._i18nWatcher = this._i18n.watchI18nData();
       } else if (isPlainObject(options.i18n)) {
+        var rootI18n = this.$root && this.$root.$i18n && this.$root.$i18n instanceof VueI18n
+          ? this.$root.$i18n
+          : null;
         // component local i18n
-        if (this.$root && this.$root.$i18n && this.$root.$i18n instanceof VueI18n) {
+        if (rootI18n) {
           options.i18n.root = this.$root;
-          options.i18n.formatter = this.$root.$i18n.formatter;
-          options.i18n.fallbackLocale = this.$root.$i18n.fallbackLocale;
-          options.i18n.formatFallbackMessages = this.$root.$i18n.formatFallbackMessages;
-          options.i18n.silentTranslationWarn = this.$root.$i18n.silentTranslationWarn;
-          options.i18n.silentFallbackWarn = this.$root.$i18n.silentFallbackWarn;
-          options.i18n.pluralizationRules = this.$root.$i18n.pluralizationRules;
-          options.i18n.preserveDirectiveContent = this.$root.$i18n.preserveDirectiveContent;
+          options.i18n.formatter = rootI18n.formatter;
+          options.i18n.fallbackLocale = rootI18n.fallbackLocale;
+          options.i18n.formatFallbackMessages = rootI18n.formatFallbackMessages;
+          options.i18n.silentTranslationWarn = rootI18n.silentTranslationWarn;
+          options.i18n.silentFallbackWarn = rootI18n.silentFallbackWarn;
+          options.i18n.pluralizationRules = rootI18n.pluralizationRules;
+          options.i18n.preserveDirectiveContent = rootI18n.preserveDirectiveContent;
         }
 
         // init locale messages via custom blocks
         if (options.__i18n) {
           try {
-            var localeMessages$1 = {};
+            var localeMessages$1 = options.i18n && options.i18n.messages ? options.i18n.messages : {};
             options.__i18n.forEach(function (resource) {
               localeMessages$1 = merge(localeMessages$1, JSON.parse(resource));
             });
@@ -44195,6 +44421,10 @@ var mixin = {
 
         if (options.i18n.sync === undefined || !!options.i18n.sync) {
           this._localeWatcher = this.$i18n.watchLocale();
+        }
+
+        if (rootI18n) {
+          rootI18n.onComponentInstanceCreated(this._i18n);
         }
       } else {
         if (true) {
@@ -44256,8 +44486,6 @@ var mixin = {
         self._localeWatcher();
         delete self._localeWatcher;
       }
-
-      self._i18n = null;
     });
   }
 };
@@ -44269,7 +44497,8 @@ var interpolationComponent = {
   functional: true,
   props: {
     tag: {
-      type: String
+      type: [String, Boolean, Object],
+      default: 'span'
     },
     path: {
       type: String,
@@ -44308,7 +44537,7 @@ var interpolationComponent = {
         : params
     );
 
-    var tag = props.tag || 'span';
+    var tag = (!!props.tag && props.tag !== true) || props.tag === false ? props.tag : 'span';
     return tag ? h(tag, data, children) : children
   }
 };
@@ -44375,7 +44604,7 @@ var numberComponent = {
   functional: true,
   props: {
     tag: {
-      type: String,
+      type: [String, Boolean, Object],
       default: 'span'
     },
     value: {
@@ -44406,7 +44635,7 @@ var numberComponent = {
     var key = null;
     var options = null;
 
-    if (typeof props.format === 'string') {
+    if (isString(props.format)) {
       key = props.format;
     } else if (isObject(props.format)) {
       if (props.format.key) {
@@ -44417,7 +44646,7 @@ var numberComponent = {
       options = Object.keys(props.format).reduce(function (acc, prop) {
         var obj;
 
-        if (numberFormatKeys.includes(prop)) {
+        if (includes(numberFormatKeys, prop)) {
           return Object.assign({}, acc, ( obj = {}, obj[prop] = props.format[prop], obj ))
         }
         return acc
@@ -44434,11 +44663,14 @@ var numberComponent = {
       return slot ? slot(( obj = {}, obj[part.type] = part.value, obj.index = index, obj.parts = parts, obj )) : part.value
     });
 
-    return h(props.tag, {
-      attrs: data.attrs,
-      'class': data['class'],
-      staticClass: data.staticClass
-    }, values)
+    var tag = (!!props.tag && props.tag !== true) || props.tag === false ? props.tag : 'span';
+    return tag
+      ? h(tag, {
+        attrs: data.attrs,
+        'class': data['class'],
+        staticClass: data.staticClass
+      }, values)
+      : values
   }
 };
 
@@ -44521,7 +44753,7 @@ function t (el, binding, vnode) {
   }
 
   var vm = vnode.context;
-  if (choice) {
+  if (choice != null) {
     el._vt = el.textContent = (ref$1 = vm.$i18n).tc.apply(ref$1, [ path, choice ].concat( makeParams(locale, args) ));
   } else {
     el._vt = el.textContent = (ref$2 = vm.$i18n).t.apply(ref$2, [ path ].concat( makeParams(locale, args) ));
@@ -44536,7 +44768,7 @@ function parseValue (value) {
   var args;
   var choice;
 
-  if (typeof value === 'string') {
+  if (isString(value)) {
     path = value;
   } else if (isPlainObject(value)) {
     path = value.path;
@@ -45006,7 +45238,8 @@ var linkKeyPrefixMatcher = /^@(?:\.([a-z]+))?:/;
 var bracketsMatcher = /[()]/g;
 var defaultModifiers = {
   'upper': function (str) { return str.toLocaleUpperCase(); },
-  'lower': function (str) { return str.toLocaleLowerCase(); }
+  'lower': function (str) { return str.toLocaleLowerCase(); },
+  'capitalize': function (str) { return ("" + (str.charAt(0).toLocaleUpperCase()) + (str.substr(1))); }
 };
 
 var defaultFormatter = new BaseFormatter();
@@ -45024,7 +45257,9 @@ var VueI18n = function VueI18n (options) {
   }
 
   var locale = options.locale || 'en-US';
-  var fallbackLocale = options.fallbackLocale || 'en-US';
+  var fallbackLocale = options.fallbackLocale === false
+    ? false
+    : options.fallbackLocale || 'en-US';
   var messages = options.messages || {};
   var dateTimeFormats = options.dateTimeFormats || {};
   var numberFormats = options.numberFormats || {};
@@ -45051,11 +45286,49 @@ var VueI18n = function VueI18n (options) {
   this._numberFormatters = {};
   this._path = new I18nPath();
   this._dataListeners = [];
+  this._componentInstanceCreatedListener = options.componentInstanceCreatedListener || null;
   this._preserveDirectiveContent = options.preserveDirectiveContent === undefined
     ? false
     : !!options.preserveDirectiveContent;
   this.pluralizationRules = options.pluralizationRules || {};
   this._warnHtmlInMessage = options.warnHtmlInMessage || 'off';
+  this._postTranslation = options.postTranslation || null;
+  this._escapeParameterHtml = options.escapeParameterHtml || false;
+
+  /**
+   * @param choice {number} a choice index given by the input to $tc: `$tc('path.to.rule', choiceIndex)`
+   * @param choicesLength {number} an overall amount of available choices
+   * @returns a final choice index
+  */
+  this.getChoiceIndex = function (choice, choicesLength) {
+    var thisPrototype = Object.getPrototypeOf(this$1);
+    if (thisPrototype && thisPrototype.getChoiceIndex) {
+      var prototypeGetChoiceIndex = (thisPrototype.getChoiceIndex);
+      return (prototypeGetChoiceIndex).call(this$1, choice, choicesLength)
+    }
+
+    // Default (old) getChoiceIndex implementation - english-compatible
+    var defaultImpl = function (_choice, _choicesLength) {
+      _choice = Math.abs(_choice);
+
+      if (_choicesLength === 2) {
+        return _choice
+          ? _choice > 1
+            ? 1
+            : 0
+          : 1
+      }
+
+      return _choice ? Math.min(_choice, 2) : 0
+    };
+
+    if (this$1.locale in this$1.pluralizationRules) {
+      return this$1.pluralizationRules[this$1.locale].apply(this$1, [choice, choicesLength])
+    } else {
+      return defaultImpl(choice, choicesLength)
+    }
+  };
+
 
   this._exist = function (message, key) {
     if (!message || !key) { return false }
@@ -45080,7 +45353,7 @@ var VueI18n = function VueI18n (options) {
   });
 };
 
-var prototypeAccessors = { vm: { configurable: true },messages: { configurable: true },dateTimeFormats: { configurable: true },numberFormats: { configurable: true },availableLocales: { configurable: true },locale: { configurable: true },fallbackLocale: { configurable: true },formatFallbackMessages: { configurable: true },missing: { configurable: true },formatter: { configurable: true },silentTranslationWarn: { configurable: true },silentFallbackWarn: { configurable: true },preserveDirectiveContent: { configurable: true },warnHtmlInMessage: { configurable: true } };
+var prototypeAccessors = { vm: { configurable: true },messages: { configurable: true },dateTimeFormats: { configurable: true },numberFormats: { configurable: true },availableLocales: { configurable: true },locale: { configurable: true },fallbackLocale: { configurable: true },formatFallbackMessages: { configurable: true },missing: { configurable: true },formatter: { configurable: true },silentTranslationWarn: { configurable: true },silentFallbackWarn: { configurable: true },preserveDirectiveContent: { configurable: true },warnHtmlInMessage: { configurable: true },postTranslation: { configurable: true } };
 
 VueI18n.prototype._checkLocaleMessage = function _checkLocaleMessage (locale, level, message) {
   var paths = [];
@@ -45101,7 +45374,7 @@ VueI18n.prototype._checkLocaleMessage = function _checkLocaleMessage (locale, le
           paths.pop();
         }
       });
-    } else if (Array.isArray(message)) {
+    } else if (isArray(message)) {
       message.forEach(function (item, index) {
         if (isPlainObject(item)) {
           paths.push(("[" + index + "]"));
@@ -45115,7 +45388,7 @@ VueI18n.prototype._checkLocaleMessage = function _checkLocaleMessage (locale, le
           paths.pop();
         }
       });
-    } else if (typeof message === 'string') {
+    } else if (isString(message)) {
       var ret = htmlTagMatcher.test(message);
       if (ret) {
         var msg = "Detected HTML in message '" + message + "' of keypath '" + (paths.join('')) + "' at '" + locale + "'. Consider component interpolation with '<i18n>' to avoid XSS. See https://bit.ly/2ZqJzkp";
@@ -45172,6 +45445,12 @@ VueI18n.prototype.watchLocale = function watchLocale () {
   }, { immediate: true })
 };
 
+VueI18n.prototype.onComponentInstanceCreated = function onComponentInstanceCreated (newI18n) {
+  if (this._componentInstanceCreatedListener) {
+    this._componentInstanceCreatedListener(newI18n, this);
+  }
+};
+
 prototypeAccessors.vm.get = function () { return this._vm };
 
 prototypeAccessors.messages.get = function () { return looseClone(this._getMessages()) };
@@ -45186,6 +45465,7 @@ prototypeAccessors.locale.set = function (locale) {
 
 prototypeAccessors.fallbackLocale.get = function () { return this._vm.fallbackLocale };
 prototypeAccessors.fallbackLocale.set = function (locale) {
+  this._localeChainCache = {};
   this._vm.$set(this._vm, 'fallbackLocale', locale);
 };
 
@@ -45221,15 +45501,18 @@ prototypeAccessors.warnHtmlInMessage.set = function (level) {
   }
 };
 
+prototypeAccessors.postTranslation.get = function () { return this._postTranslation };
+prototypeAccessors.postTranslation.set = function (handler) { this._postTranslation = handler; };
+
 VueI18n.prototype._getMessages = function _getMessages () { return this._vm.messages };
 VueI18n.prototype._getDateTimeFormats = function _getDateTimeFormats () { return this._vm.dateTimeFormats };
 VueI18n.prototype._getNumberFormats = function _getNumberFormats () { return this._vm.numberFormats };
 
-VueI18n.prototype._warnDefault = function _warnDefault (locale, key, result, vm, values) {
+VueI18n.prototype._warnDefault = function _warnDefault (locale, key, result, vm, values, interpolateMode) {
   if (!isNull(result)) { return result }
   if (this._missing) {
     var missingRet = this._missing.apply(null, [locale, key, vm, values]);
-    if (typeof missingRet === 'string') {
+    if (isString(missingRet)) {
       return missingRet
     }
   } else {
@@ -45243,7 +45526,7 @@ VueI18n.prototype._warnDefault = function _warnDefault (locale, key, result, vm,
 
   if (this._formatFallbackMessages) {
     var parsedArgs = parseArgs.apply(void 0, values);
-    return this._render(key, 'string', parsedArgs.params, key)
+    return this._render(key, interpolateMode, parsedArgs.params, key)
   } else {
     return key
   }
@@ -45281,16 +45564,16 @@ VueI18n.prototype._interpolate = function _interpolate (
   if (!message) { return null }
 
   var pathRet = this._path.getPathValue(message, key);
-  if (Array.isArray(pathRet) || isPlainObject(pathRet)) { return pathRet }
+  if (isArray(pathRet) || isPlainObject(pathRet)) { return pathRet }
 
   var ret;
   if (isNull(pathRet)) {
     /* istanbul ignore else */
     if (isPlainObject(message)) {
       ret = message[key];
-      if (typeof ret !== 'string') {
+      if (!(isString(ret) || isFunction(ret))) {
         if ( true && !this._isSilentTranslationWarn(key) && !this._isSilentFallback(locale, key)) {
-          warn(("Value of key '" + key + "' is not a string!"));
+          warn(("Value of key '" + key + "' is not a string or function !"));
         }
         return null
       }
@@ -45299,18 +45582,18 @@ VueI18n.prototype._interpolate = function _interpolate (
     }
   } else {
     /* istanbul ignore else */
-    if (typeof pathRet === 'string') {
+    if (isString(pathRet) || isFunction(pathRet)) {
       ret = pathRet;
     } else {
       if ( true && !this._isSilentTranslationWarn(key) && !this._isSilentFallback(locale, key)) {
-        warn(("Value of key '" + key + "' is not a string!"));
+        warn(("Value of key '" + key + "' is not a string or function!"));
       }
       return null
     }
   }
 
   // Check for the existence of links within the translated string
-  if (ret.indexOf('@:') >= 0 || ret.indexOf('@.') >= 0) {
+  if (isString(ret) && (ret.indexOf('@:') >= 0 || ret.indexOf('@.') >= 0)) {
     ret = this._link(locale, message, ret, host, 'raw', values, visitedLinkStack);
   }
 
@@ -45346,7 +45629,7 @@ VueI18n.prototype._link = function _link (
     // Remove the leading @:, @.case: and the brackets
     var linkPlaceholder = link.replace(linkPrefix, '').replace(bracketsMatcher, '');
 
-    if (visitedLinkStack.includes(linkPlaceholder)) {
+    if (includes(visitedLinkStack, linkPlaceholder)) {
       if (true) {
         warn(("Circular reference found. \"" + link + "\" is already visited in the chain of " + (visitedLinkStack.reverse().join(' <- '))));
       }
@@ -45376,7 +45659,8 @@ VueI18n.prototype._link = function _link (
     }
     translated = this._warnDefault(
       locale, linkPlaceholder, translated, host,
-      Array.isArray(values) ? values : [values]
+      isArray(values) ? values : [values],
+      interpolateMode
     );
 
     if (this._modifiers.hasOwnProperty(formatterName)) {
@@ -45394,7 +45678,22 @@ VueI18n.prototype._link = function _link (
   return ret
 };
 
+VueI18n.prototype._createMessageContext = function _createMessageContext (values) {
+  var _list = isArray(values) ? values : [];
+  var _named = isObject(values) ? values : {};
+  var list = function (index) { return _list[index]; };
+  var named = function (key) { return _named[key]; };
+  return {
+    list: list,
+    named: named
+  }
+};
+
 VueI18n.prototype._render = function _render (message, interpolateMode, values, path) {
+  if (isFunction(message)) {
+    return message(this._createMessageContext(values))
+  }
+
   var ret = this._formatter.interpolate(message, values, path);
 
   // If the custom formatter refuses to work - apply the default one
@@ -45404,7 +45703,104 @@ VueI18n.prototype._render = function _render (message, interpolateMode, values, 
 
   // if interpolateMode is **not** 'string' ('row'),
   // return the compiled data (e.g. ['foo', VNode, 'bar']) with formatter
-  return interpolateMode === 'string' ? ret.join('') : ret
+  return interpolateMode === 'string' && !isString(ret) ? ret.join('') : ret
+};
+
+VueI18n.prototype._appendItemToChain = function _appendItemToChain (chain, item, blocks) {
+  var follow = false;
+  if (!includes(chain, item)) {
+    follow = true;
+    if (item) {
+      follow = item[item.length - 1] !== '!';
+      item = item.replace(/!/g, '');
+      chain.push(item);
+      if (blocks && blocks[item]) {
+        follow = blocks[item];
+      }
+    }
+  }
+  return follow
+};
+
+VueI18n.prototype._appendLocaleToChain = function _appendLocaleToChain (chain, locale, blocks) {
+  var follow;
+  var tokens = locale.split('-');
+  do {
+    var item = tokens.join('-');
+    follow = this._appendItemToChain(chain, item, blocks);
+    tokens.splice(-1, 1);
+  } while (tokens.length && (follow === true))
+  return follow
+};
+
+VueI18n.prototype._appendBlockToChain = function _appendBlockToChain (chain, block, blocks) {
+  var follow = true;
+  for (var i = 0; (i < block.length) && (isBoolean(follow)); i++) {
+    var locale = block[i];
+    if (isString(locale)) {
+      follow = this._appendLocaleToChain(chain, locale, blocks);
+    }
+  }
+  return follow
+};
+
+VueI18n.prototype._getLocaleChain = function _getLocaleChain (start, fallbackLocale) {
+  if (start === '') { return [] }
+
+  if (!this._localeChainCache) {
+    this._localeChainCache = {};
+  }
+
+  var chain = this._localeChainCache[start];
+  if (!chain) {
+    if (!fallbackLocale) {
+      fallbackLocale = this.fallbackLocale;
+    }
+    chain = [];
+
+    // first block defined by start
+    var block = [start];
+
+    // while any intervening block found
+    while (isArray(block)) {
+      block = this._appendBlockToChain(
+        chain,
+        block,
+        fallbackLocale
+      );
+    }
+
+    // last block defined by default
+    var defaults;
+    if (isArray(fallbackLocale)) {
+      defaults = fallbackLocale;
+    } else if (isObject(fallbackLocale)) {
+      /* $FlowFixMe */
+      if (fallbackLocale['default']) {
+        defaults = fallbackLocale['default'];
+      } else {
+        defaults = null;
+      }
+    } else {
+      defaults = fallbackLocale;
+    }
+
+    // convert defaults to array
+    if (isString(defaults)) {
+      block = [defaults];
+    } else {
+      block = defaults;
+    }
+    if (block) {
+      this._appendBlockToChain(
+        chain,
+        block,
+        null
+      );
+    }
+    this._localeChainCache[start] = chain;
+  }
+  return chain
 };
 
 VueI18n.prototype._translate = function _translate (
@@ -45416,19 +45812,20 @@ VueI18n.prototype._translate = function _translate (
   interpolateMode,
   args
 ) {
-  var res =
-    this._interpolate(locale, messages[locale], key, host, interpolateMode, args, [key]);
-  if (!isNull(res)) { return res }
-
-  res = this._interpolate(fallback, messages[fallback], key, host, interpolateMode, args, [key]);
-  if (!isNull(res)) {
-    if ( true && !this._isSilentTranslationWarn(key) && !this._isSilentFallbackWarn(key)) {
-      warn(("Fall back to translate the keypath '" + key + "' with '" + fallback + "' locale."));
+  var chain = this._getLocaleChain(locale, fallback);
+  var res;
+  for (var i = 0; i < chain.length; i++) {
+    var step = chain[i];
+    res =
+      this._interpolate(step, messages[step], key, host, interpolateMode, args, [key]);
+    if (!isNull(res)) {
+      if (step !== locale && "development" !== 'production' && !this._isSilentTranslationWarn(key) && !this._isSilentFallbackWarn(key)) {
+        warn(("Fall back to translate the keypath '" + key + "' with '" + step + "' locale."));
+      }
+      return res
     }
-    return res
-  } else {
-    return null
   }
+  return null
 };
 
 VueI18n.prototype._t = function _t (key, _locale, messages, host) {
@@ -45439,6 +45836,10 @@ VueI18n.prototype._t = function _t (key, _locale, messages, host) {
   if (!key) { return '' }
 
   var parsedArgs = parseArgs.apply(void 0, values);
+  if(this._escapeParameterHtml) {
+    parsedArgs.params = escapeParams(parsedArgs.params);
+  }
+
   var locale = parsedArgs.locale || _locale;
 
   var ret = this._translate(
@@ -45453,7 +45854,11 @@ VueI18n.prototype._t = function _t (key, _locale, messages, host) {
     if (!this._root) { throw Error('unexpected error') }
     return (ref = this._root).$t.apply(ref, [ key ].concat( values ))
   } else {
-    return this._warnDefault(locale, key, ret, host, values)
+    ret = this._warnDefault(locale, key, ret, host, values, 'string');
+    if (this._postTranslation && ret !== null && ret !== undefined) {
+      ret = this._postTranslation(ret, key);
+    }
+    return ret
   }
 };
 
@@ -45475,7 +45880,7 @@ VueI18n.prototype._i = function _i (key, locale, messages, host, values) {
     if (!this._root) { throw Error('unexpected error') }
     return this._root.$i18n.i(key, locale, values)
   } else {
-    return this._warnDefault(locale, key, ret, host, [values])
+    return this._warnDefault(locale, key, ret, host, [values], 'raw')
   }
 };
 
@@ -45483,7 +45888,7 @@ VueI18n.prototype.i = function i (key, locale, values) {
   /* istanbul ignore if */
   if (!key) { return '' }
 
-  if (typeof locale !== 'string') {
+  if (!isString(locale)) {
     locale = this.locale;
   }
 
@@ -45515,40 +45920,12 @@ VueI18n.prototype._tc = function _tc (
 
 VueI18n.prototype.fetchChoice = function fetchChoice (message, choice) {
   /* istanbul ignore if */
-  if (!message && typeof message !== 'string') { return null }
+  if (!message || !isString(message)) { return null }
   var choices = message.split('|');
 
   choice = this.getChoiceIndex(choice, choices.length);
   if (!choices[choice]) { return message }
   return choices[choice].trim()
-};
-
-/**
- * @param choice {number} a choice index given by the input to $tc: `$tc('path.to.rule', choiceIndex)`
- * @param choicesLength {number} an overall amount of available choices
- * @returns a final choice index
-*/
-VueI18n.prototype.getChoiceIndex = function getChoiceIndex (choice, choicesLength) {
-  // Default (old) getChoiceIndex implementation - english-compatible
-  var defaultImpl = function (_choice, _choicesLength) {
-    _choice = Math.abs(_choice);
-
-    if (_choicesLength === 2) {
-      return _choice
-        ? _choice > 1
-          ? 1
-          : 0
-        : 1
-    }
-
-    return _choice ? Math.min(_choice, 2) : 0
-  };
-
-  if (this.locale in this.pluralizationRules) {
-    return this.pluralizationRules[this.locale].apply(this, [choice, choicesLength])
-  } else {
-    return defaultImpl(choice, choicesLength)
-  }
 };
 
 VueI18n.prototype.tc = function tc (key, choice) {
@@ -45578,7 +45955,6 @@ VueI18n.prototype.getLocaleMessage = function getLocaleMessage (locale) {
 VueI18n.prototype.setLocaleMessage = function setLocaleMessage (locale, message) {
   if (this._warnHtmlInMessage === 'warn' || this._warnHtmlInMessage === 'error') {
     this._checkLocaleMessage(locale, this._warnHtmlInMessage, message);
-    if (this._warnHtmlInMessage === 'error') { return }
   }
   this._vm.$set(this._vm.messages, locale, message);
 };
@@ -45586,7 +45962,6 @@ VueI18n.prototype.setLocaleMessage = function setLocaleMessage (locale, message)
 VueI18n.prototype.mergeLocaleMessage = function mergeLocaleMessage (locale, message) {
   if (this._warnHtmlInMessage === 'warn' || this._warnHtmlInMessage === 'error') {
     this._checkLocaleMessage(locale, this._warnHtmlInMessage, message);
-    if (this._warnHtmlInMessage === 'error') { return }
   }
   this._vm.$set(this._vm.messages, locale, merge({}, this._vm.messages[locale] || {}, message));
 };
@@ -45597,10 +45972,24 @@ VueI18n.prototype.getDateTimeFormat = function getDateTimeFormat (locale) {
 
 VueI18n.prototype.setDateTimeFormat = function setDateTimeFormat (locale, format) {
   this._vm.$set(this._vm.dateTimeFormats, locale, format);
+  this._clearDateTimeFormat(locale, format);
 };
 
 VueI18n.prototype.mergeDateTimeFormat = function mergeDateTimeFormat (locale, format) {
   this._vm.$set(this._vm.dateTimeFormats, locale, merge(this._vm.dateTimeFormats[locale] || {}, format));
+  this._clearDateTimeFormat(locale, format);
+};
+
+VueI18n.prototype._clearDateTimeFormat = function _clearDateTimeFormat (locale, format) {
+  for (var key in format) {
+    var id = locale + "__" + key;
+
+    if (!this._dateTimeFormatters.hasOwnProperty(id)) {
+      continue
+    }
+
+    delete this._dateTimeFormatters[id];
+  }
 };
 
 VueI18n.prototype._localizeDateTime = function _localizeDateTime (
@@ -45613,13 +46002,20 @@ VueI18n.prototype._localizeDateTime = function _localizeDateTime (
   var _locale = locale;
   var formats = dateTimeFormats[_locale];
 
-  // fallback locale
-  if (isNull(formats) || isNull(formats[key])) {
-    if ( true && !this._isSilentTranslationWarn(key) && !this._isSilentFallbackWarn(key)) {
-      warn(("Fall back to '" + fallback + "' datetime formats from '" + locale + "' datetime formats."));
+  var chain = this._getLocaleChain(locale, fallback);
+  for (var i = 0; i < chain.length; i++) {
+    var current = _locale;
+    var step = chain[i];
+    formats = dateTimeFormats[step];
+    _locale = step;
+    // fallback locale
+    if (isNull(formats) || isNull(formats[key])) {
+      if (step !== locale && "development" !== 'production' && !this._isSilentTranslationWarn(key) && !this._isSilentFallbackWarn(key)) {
+        warn(("Fall back to '" + step + "' datetime formats from '" + current + "' datetime formats."));
+      }
+    } else {
+      break
     }
-    _locale = fallback;
-    formats = dateTimeFormats[_locale];
   }
 
   if (isNull(formats) || isNull(formats[key])) {
@@ -45668,7 +46064,7 @@ VueI18n.prototype.d = function d (value) {
   var key = null;
 
   if (args.length === 1) {
-    if (typeof args[0] === 'string') {
+    if (isString(args[0])) {
       key = args[0];
     } else if (isObject(args[0])) {
       if (args[0].locale) {
@@ -45679,10 +46075,10 @@ VueI18n.prototype.d = function d (value) {
       }
     }
   } else if (args.length === 2) {
-    if (typeof args[0] === 'string') {
+    if (isString(args[0])) {
       key = args[0];
     }
-    if (typeof args[1] === 'string') {
+    if (isString(args[1])) {
       locale = args[1];
     }
   }
@@ -45696,10 +46092,24 @@ VueI18n.prototype.getNumberFormat = function getNumberFormat (locale) {
 
 VueI18n.prototype.setNumberFormat = function setNumberFormat (locale, format) {
   this._vm.$set(this._vm.numberFormats, locale, format);
+  this._clearNumberFormat(locale, format);
 };
 
 VueI18n.prototype.mergeNumberFormat = function mergeNumberFormat (locale, format) {
   this._vm.$set(this._vm.numberFormats, locale, merge(this._vm.numberFormats[locale] || {}, format));
+  this._clearNumberFormat(locale, format);
+};
+
+VueI18n.prototype._clearNumberFormat = function _clearNumberFormat (locale, format) {
+  for (var key in format) {
+    var id = locale + "__" + key;
+
+    if (!this._numberFormatters.hasOwnProperty(id)) {
+      continue
+    }
+
+    delete this._numberFormatters[id];
+  }
 };
 
 VueI18n.prototype._getNumberFormatter = function _getNumberFormatter (
@@ -45713,13 +46123,20 @@ VueI18n.prototype._getNumberFormatter = function _getNumberFormatter (
   var _locale = locale;
   var formats = numberFormats[_locale];
 
-  // fallback locale
-  if (isNull(formats) || isNull(formats[key])) {
-    if ( true && !this._isSilentTranslationWarn(key) && !this._isSilentFallbackWarn(key)) {
-      warn(("Fall back to '" + fallback + "' number formats from '" + locale + "' number formats."));
+  var chain = this._getLocaleChain(locale, fallback);
+  for (var i = 0; i < chain.length; i++) {
+    var current = _locale;
+    var step = chain[i];
+    formats = numberFormats[step];
+    _locale = step;
+    // fallback locale
+    if (isNull(formats) || isNull(formats[key])) {
+      if (step !== locale && "development" !== 'production' && !this._isSilentTranslationWarn(key) && !this._isSilentFallbackWarn(key)) {
+        warn(("Fall back to '" + step + "' number formats from '" + current + "' number formats."));
+      }
+    } else {
+      break
     }
-    _locale = fallback;
-    formats = numberFormats[_locale];
   }
 
   if (isNull(formats) || isNull(formats[key])) {
@@ -45779,7 +46196,7 @@ VueI18n.prototype.n = function n (value) {
   var options = null;
 
   if (args.length === 1) {
-    if (typeof args[0] === 'string') {
+    if (isString(args[0])) {
       key = args[0];
     } else if (isObject(args[0])) {
       if (args[0].locale) {
@@ -45793,17 +46210,17 @@ VueI18n.prototype.n = function n (value) {
       options = Object.keys(args[0]).reduce(function (acc, key) {
           var obj;
 
-        if (numberFormatKeys.includes(key)) {
+        if (includes(numberFormatKeys, key)) {
           return Object.assign({}, acc, ( obj = {}, obj[key] = args[0][key], obj ))
         }
         return acc
       }, null);
     }
   } else if (args.length === 2) {
-    if (typeof args[0] === 'string') {
+    if (isString(args[0])) {
       key = args[0];
     }
-    if (typeof args[1] === 'string') {
+    if (isString(args[1])) {
       locale = args[1];
     }
   }
@@ -45858,7 +46275,7 @@ Object.defineProperty(VueI18n, 'availabilities', {
 });
 
 VueI18n.install = install;
-VueI18n.version = '8.15.3';
+VueI18n.version = '8.22.1';
 
 /* harmony default export */ __webpack_exports__["default"] = (VueI18n);
 
@@ -45873,7 +46290,7 @@ VueI18n.version = '8.15.3';
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
- * vue-konva v2.1.0 - https://github.com/konvajs/vue-konva#readme
+ * vue-konva v2.1.5 - https://github.com/konvajs/vue-konva#readme
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -45991,6 +46408,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__2__;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: external {"root":"Vue","commonjs2":"vue","commonjs":"vue","amd":"vue"}
@@ -45999,7 +46417,6 @@ var external_root_Vue_commonjs2_vue_commonjs_vue_amd_vue_default = /*#__PURE__*/
 
 // CONCATENATED MODULE: ./src/utils/updatePicture.js
 // adapted FROM: https://github.com/lavrton/react-konva/blob/master/src/react-konva-fiber.js
-
 function updatePicture(node) {
   var drawingNode = node.getLayer() || node.getStage();
   drawingNode && drawingNode.batchDraw();
@@ -46007,52 +46424,73 @@ function updatePicture(node) {
 // CONCATENATED MODULE: ./src/utils/applyNodeProps.js
 // adapted FROM: https://github.com/lavrton/react-konva/blob/master/src/react-konva-fiber.js
 
-
-
-var propsToSkip = { key: true, style: true, elm: true, isRootInsert: true };
+var propsToSkip = {
+  key: true,
+  style: true,
+  elm: true,
+  isRootInsert: true
+};
 var EVENTS_NAMESPACE = '.vue-konva-event';
+function applyNodeProps(vueComponent, props, oldProps) {
+  if (props === void 0) {
+    props = {};
+  }
 
-function applyNodeProps(vueComponent) {
-  var props = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  var oldProps = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  if (oldProps === void 0) {
+    oldProps = {};
+  }
 
   var instance = vueComponent._konvaNode;
   var updatedProps = {};
   var hasUpdates = false;
+
   for (var key in oldProps) {
     if (propsToSkip[key]) {
       continue;
     }
+
     var isEvent = key.slice(0, 2) === 'on';
     var propChanged = oldProps[key] !== props[key];
+
     if (isEvent && propChanged) {
       var eventName = key.substr(2).toLowerCase();
+
       if (eventName.substr(0, 7) === 'content') {
         eventName = 'content' + eventName.substr(7, 1).toUpperCase() + eventName.substr(8);
       }
+
       instance.off(eventName + EVENTS_NAMESPACE, oldProps[key]);
     }
+
     var toRemove = !props.hasOwnProperty(key);
+
     if (toRemove) {
       instance.setAttr(key, undefined);
     }
   }
+
   for (var _key in props) {
     if (propsToSkip[_key]) {
       continue;
     }
+
     var _isEvent = _key.slice(0, 2) === 'on';
+
     var toAdd = oldProps[_key] !== props[_key];
+
     if (_isEvent && toAdd) {
       var _eventName = _key.substr(2).toLowerCase();
+
       if (_eventName.substr(0, 7) === 'content') {
         _eventName = 'content' + _eventName.substr(7, 1).toUpperCase() + _eventName.substr(8);
       }
+
       if (props[_key]) {
         instance.off(_eventName + EVENTS_NAMESPACE);
         instance.on(_eventName + EVENTS_NAMESPACE, props[_key]);
       }
     }
+
     if (!_isEvent && props[_key] !== oldProps[_key]) {
       hasUpdates = true;
       updatedProps[_key] = props[_key];
@@ -46067,14 +46505,11 @@ function applyNodeProps(vueComponent) {
 // CONCATENATED MODULE: ./src/utils/index.js
 
 
-
 var componentPrefix = 'v';
 var konvaNodeMarker = '_konvaNode';
-
 function copy(obj) {
   return JSON.parse(JSON.stringify(obj));
 }
-
 function createListener(obj) {
   var output = {};
   Object.keys(obj).forEach(function (eventName) {
@@ -46082,34 +46517,73 @@ function createListener(obj) {
   });
   return output;
 }
-
 function findParentKonva(instance) {
   function re(instance) {
     if (instance._konvaNode) {
       return instance;
     }
+
     if (instance.$parent) {
       return re(instance.$parent);
     }
+
     return {};
   }
+
   return re(instance.$parent);
 }
-
 function findKonvaNode(instance) {
+  if (!instance) {
+    return null;
+  }
+
   if (instance.$options[konvaNodeMarker]) {
     return instance.getNode();
-  } else if (instance.$children.length === 0) {
+  }
+
+  if (instance.$children.length === 0) {
     return null;
-  } else {
-    return findKonvaNode(instance.$children[0]);
+  }
+
+  return findKonvaNode(instance.$children[0]);
+}
+function checkOrder($vnode, konvaNode) {
+  var needRedraw = false; // check indexes
+  // somehow this.$children are not ordered correctly
+  // so we have to dive-in into componentOptions of vnode
+  // also componentOptions.children may have empty nodes, and other non Konva elements so we need to filter them first
+
+  var children = $vnode.componentOptions.children || [];
+  var nodes = [];
+  children.forEach(function ($vnode) {
+    var konvaNode = findKonvaNode($vnode.componentInstance);
+
+    if (konvaNode) {
+      nodes.push(konvaNode);
+    }
+
+    var elm = $vnode.elm,
+        componentInstance = $vnode.componentInstance;
+
+    if (elm && elm.tagName && componentInstance && !konvaNode) {
+      var name = elm && elm.tagName.toLowerCase();
+      console.error("vue-konva error: You are trying to render \"" + name + "\" inside your component tree. Looks like it is not a Konva node. You can render only Konva components inside the Stage.");
+    }
+  });
+  nodes.forEach(function (konvaNode, index) {
+    if (konvaNode.getZIndex() !== index) {
+      konvaNode.setZIndex(index);
+      needRedraw = true;
+    }
+  });
+
+  if (needRedraw) {
+    updatePicture(konvaNode);
   }
 }
 
-
 // CONCATENATED MODULE: ./src/components/Stage.js
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 
@@ -46122,7 +46596,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
       handler: function handler(val) {
         this.uploadKonva();
       },
-
       deep: true
     }
   },
@@ -46134,7 +46607,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
       }
     }
   },
-
   created: function created() {
     this._konvaNode = new window.Konva.Stage({
       width: this.config.width,
@@ -46145,16 +46617,20 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
   },
   mounted: function mounted() {
     this.$el.innerHTML = '';
+
     this._konvaNode.container(this.$el);
+
     this.uploadKonva();
+    this.validateChildren();
   },
   updated: function updated() {
     this.uploadKonva();
+    this.uploadKonva();
+    checkOrder(this.$vnode, this._konvaNode);
   },
   beforeDestroy: function beforeDestroy() {
     this._konvaNode.destroy();
   },
-
   methods: {
     getNode: function getNode() {
       return this._konvaNode;
@@ -46164,30 +46640,48 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     },
     uploadKonva: function uploadKonva() {
       var oldProps = this.oldProps || {};
+
       var props = _extends({}, this.$attrs, this.config, createListener(this.$listeners));
+
       applyNodeProps(this, props, oldProps);
       this.oldProps = props;
+    },
+    validateChildren: function validateChildren() {// TODO: add a waring if we see non-Konva element here
+      // this.$vnode.componentOptions.children.forEach(child => {
+      //   console.log(child);
+      // })
     }
   }
 }));
 // CONCATENATED MODULE: ./src/components/KonvaNode.js
-var KonvaNode_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
+function KonvaNode_extends() { KonvaNode_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return KonvaNode_extends.apply(this, arguments); }
 
 
 var KonvaNode_EVENTS_NAMESPACE = '.vue-konva-event';
-
+var CONTAINERS = {
+  Group: true,
+  Layer: true,
+  FastLayer: true,
+  Label: true
+};
 /* harmony default export */ var KonvaNode = (function (nameNode) {
   var _ref;
 
   return _ref = {}, _ref[konvaNodeMarker] = true, _ref.render = function render(createElement) {
-    return createElement('div', this.$slots.default);
+    // containers should be able to draw children
+    var isContainer = CONTAINERS[nameNode];
+
+    if (isContainer) {
+      return createElement('template', this.$slots.default);
+    } // other elements are not containers
+
+
+    return null;
   }, _ref.watch = {
     config: {
       handler: function handler(val) {
         this.uploadKonva();
       },
-
       deep: true
     }
   }, _ref.props = {
@@ -46206,30 +46700,12 @@ var KonvaNode_EVENTS_NAMESPACE = '.vue-konva-event';
     updatePicture(this._konvaNode);
   }, _ref.updated = function updated() {
     this.uploadKonva();
-    var needRedraw = false;
-    // check indexes
-    // somehow this.$children are not ordered correctly
-    // so we have to dive-in into componentOptions of vnode
-    // also componentOptions.children may have empty nodes, so we need to filter them first
-    var children = this.$vnode.componentOptions.children && this.$vnode.componentOptions.children.filter(function (c) {
-      return c.componentInstance;
-    });
-
-    children && children.forEach(function ($vnode, index) {
-      // const vnode = component.$vnode;
-      // const index = children.indexOf(vnode);
-      var konvaNode = findKonvaNode($vnode.componentInstance);
-      if (konvaNode.getZIndex() !== index) {
-        konvaNode.setZIndex(index);
-        needRedraw = true;
-      }
-    });
-    if (needRedraw) {
-      updatePicture(this._konvaNode);
-    }
+    checkOrder(this.$vnode, this._konvaNode);
   }, _ref.destroyed = function destroyed() {
     updatePicture(this._konvaNode);
+
     this._konvaNode.destroy();
+
     this._konvaNode.off(KonvaNode_EVENTS_NAMESPACE);
   }, _ref.methods = {
     getNode: function getNode() {
@@ -46248,12 +46724,13 @@ var KonvaNode_EVENTS_NAMESPACE = '.vue-konva-event';
 
       this._konvaNode = new NodeClass();
       this._konvaNode.VueComponent = this;
-
       this.uploadKonva();
     },
     uploadKonva: function uploadKonva() {
       var oldProps = this.oldProps || {};
+
       var props = KonvaNode_extends({}, this.$attrs, this.config, createListener(this.$listeners));
+
       applyNodeProps(this, props, oldProps);
       this.oldProps = props;
     }
@@ -46278,19 +46755,19 @@ var components = [{
     component: KonvaNode(name)
   };
 }));
-
 var VueKonva = {
   install: function install(Vue, options) {
     var prefixToUse = componentPrefix;
+
     if (options && options.prefix) {
       prefixToUse = options.prefix;
     }
+
     components.forEach(function (k) {
-      Vue.component('' + prefixToUse + k.name, k.component);
+      Vue.component("" + prefixToUse + k.name, k.component);
     });
   }
 };
-
 /* harmony default export */ var src = __webpack_exports__["default"] = (VueKonva);
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -48654,6 +49131,13 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("v-text", { ref: "label", attrs: { config: _vm.labelConfig } }),
+      _vm._v(" "),
+      _vm.descriptionConfig
+        ? _c("v-text", {
+            ref: "description",
+            attrs: { config: _vm.descriptionConfig }
+          })
+        : _vm._e(),
       _vm._v(" "),
       _c("a", { ref: "link", attrs: { href: _vm.url, target: "_blank" } })
     ],
@@ -51911,82 +52395,90 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "sidebar-item" }, [
-    _c(
-      "h3",
-      {
-        staticClass: "sidebar-heading clickable",
-        on: {
-          click: function($event) {
-            return _vm.setCurrent()
+  return _c(
+    "div",
+    {
+      staticClass: "sidebar-item",
+      class: "sidebar-item-type-" + _vm.definition.type
+    },
+    [
+      _c(
+        "h3",
+        {
+          staticClass: "sidebar-heading",
+          class: { clickable: _vm.definition.type !== "divider" },
+          on: {
+            click: function($event) {
+              return _vm.setCurrent()
+            }
           }
-        }
-      },
-      [_vm._v(_vm._s(_vm.panelTitle))]
-    ),
-    _vm._v(" "),
-    _vm.isVisible
-      ? _c(
-          "div",
-          { staticClass: "sidebar-main" },
-          [
-            _vm.hint
-              ? _c(
-                  "div",
-                  { staticClass: "sidebar-hint" },
-                  [
-                    _c("info-icon", { attrs: { size: "16" } }),
-                    _vm._v("\n\t\t\t" + _vm._s(_vm.hint) + "\n\t\t")
-                  ],
-                  1
-                )
-              : _vm._e(),
-            _vm._v(" "),
-            _c(_vm.componentName, {
-              tag: "component",
-              attrs: {
-                aspectId: this.panel.aspectId,
-                definition: _vm.definition,
-                projectId: _vm.project.id
-              },
-              model: {
-                value: _vm.model,
-                callback: function($$v) {
-                  _vm.model = $$v
+        },
+        [_vm._v(_vm._s(_vm.panelTitle))]
+      ),
+      _vm._v(" "),
+      _vm.isVisible && _vm.definition.type !== "divider"
+        ? _c(
+            "div",
+            { staticClass: "sidebar-main" },
+            [
+              _vm.hint
+                ? _c(
+                    "div",
+                    { staticClass: "sidebar-hint" },
+                    [
+                      _c("info-icon", { attrs: { size: "16" } }),
+                      _vm._v("\n\t\t\t" + _vm._s(_vm.hint) + "\n\t\t")
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _c(_vm.componentName, {
+                tag: "component",
+                attrs: {
+                  aspectId: this.panel.aspectId,
+                  definition: _vm.definition,
+                  projectId: _vm.project.id
                 },
-                expression: "model"
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "sidebar-footer" },
-              [
-                _vm.hasNext
-                  ? _c(
-                      "VButton",
-                      {
-                        staticClass: "btn btn-success btn-block",
-                        on: {
-                          click: function($event) {
-                            return _vm.goNext()
+                model: {
+                  value: _vm.model,
+                  callback: function($$v) {
+                    _vm.model = $$v
+                  },
+                  expression: "model"
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "sidebar-footer" },
+                [
+                  _vm.hasNext
+                    ? _c(
+                        "VButton",
+                        {
+                          staticClass: "btn btn-success btn-block",
+                          on: {
+                            click: function($event) {
+                              return _vm.goNext()
+                            }
                           }
-                        }
-                      },
-                      [
-                        _vm._v(_vm._s(_vm.$t("app.next")) + " "),
-                        _c("i", { staticClass: "icon icon-arrow-down" })
-                      ]
-                    )
-                  : _vm._e()
-              ],
-              1
-            )
-          ],
-          1
-        )
-      : _vm._e()
-  ])
+                        },
+                        [
+                          _vm._v(_vm._s(_vm.$t("app.next")) + " "),
+                          _c("i", { staticClass: "icon icon-arrow-down" })
+                        ]
+                      )
+                    : _vm._e()
+                ],
+                1
+              )
+            ],
+            1
+          )
+        : _vm._e()
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -52357,8 +52849,8 @@ function normalizeComponent (
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /*!
-  * vue-router v3.1.3
-  * (c) 2019 Evan You
+  * vue-router v3.4.7
+  * (c) 2020 Evan You
   * @license MIT
   */
 /*  */
@@ -52375,150 +52867,11 @@ function warn (condition, message) {
   }
 }
 
-function isError (err) {
-  return Object.prototype.toString.call(err).indexOf('Error') > -1
-}
-
-function isExtendedError (constructor, err) {
-  return (
-    err instanceof constructor ||
-    // _name is to support IE9 too
-    (err && (err.name === constructor.name || err._name === constructor._name))
-  )
-}
-
 function extend (a, b) {
   for (var key in b) {
     a[key] = b[key];
   }
   return a
-}
-
-var View = {
-  name: 'RouterView',
-  functional: true,
-  props: {
-    name: {
-      type: String,
-      default: 'default'
-    }
-  },
-  render: function render (_, ref) {
-    var props = ref.props;
-    var children = ref.children;
-    var parent = ref.parent;
-    var data = ref.data;
-
-    // used by devtools to display a router-view badge
-    data.routerView = true;
-
-    // directly use parent context's createElement() function
-    // so that components rendered by router-view can resolve named slots
-    var h = parent.$createElement;
-    var name = props.name;
-    var route = parent.$route;
-    var cache = parent._routerViewCache || (parent._routerViewCache = {});
-
-    // determine current view depth, also check to see if the tree
-    // has been toggled inactive but kept-alive.
-    var depth = 0;
-    var inactive = false;
-    while (parent && parent._routerRoot !== parent) {
-      var vnodeData = parent.$vnode && parent.$vnode.data;
-      if (vnodeData) {
-        if (vnodeData.routerView) {
-          depth++;
-        }
-        if (vnodeData.keepAlive && parent._inactive) {
-          inactive = true;
-        }
-      }
-      parent = parent.$parent;
-    }
-    data.routerViewDepth = depth;
-
-    // render previous view if the tree is inactive and kept-alive
-    if (inactive) {
-      return h(cache[name], data, children)
-    }
-
-    var matched = route.matched[depth];
-    // render empty node if no matched route
-    if (!matched) {
-      cache[name] = null;
-      return h()
-    }
-
-    var component = cache[name] = matched.components[name];
-
-    // attach instance registration hook
-    // this will be called in the instance's injected lifecycle hooks
-    data.registerRouteInstance = function (vm, val) {
-      // val could be undefined for unregistration
-      var current = matched.instances[name];
-      if (
-        (val && current !== vm) ||
-        (!val && current === vm)
-      ) {
-        matched.instances[name] = val;
-      }
-    }
-
-    // also register instance in prepatch hook
-    // in case the same component instance is reused across different routes
-    ;(data.hook || (data.hook = {})).prepatch = function (_, vnode) {
-      matched.instances[name] = vnode.componentInstance;
-    };
-
-    // register instance in init hook
-    // in case kept-alive component be actived when routes changed
-    data.hook.init = function (vnode) {
-      if (vnode.data.keepAlive &&
-        vnode.componentInstance &&
-        vnode.componentInstance !== matched.instances[name]
-      ) {
-        matched.instances[name] = vnode.componentInstance;
-      }
-    };
-
-    // resolve props
-    var propsToPass = data.props = resolveProps(route, matched.props && matched.props[name]);
-    if (propsToPass) {
-      // clone to prevent mutation
-      propsToPass = data.props = extend({}, propsToPass);
-      // pass non-declared props as attrs
-      var attrs = data.attrs = data.attrs || {};
-      for (var key in propsToPass) {
-        if (!component.props || !(key in component.props)) {
-          attrs[key] = propsToPass[key];
-          delete propsToPass[key];
-        }
-      }
-    }
-
-    return h(component, data, children)
-  }
-};
-
-function resolveProps (route, config) {
-  switch (typeof config) {
-    case 'undefined':
-      return
-    case 'object':
-      return config
-    case 'function':
-      return config(route)
-    case 'boolean':
-      return config ? route.params : undefined
-    default:
-      if (true) {
-        warn(
-          false,
-          "props in \"" + (route.path) + "\" is a " + (typeof config) + ", " +
-          "expecting an object, function or boolean."
-        );
-      }
-  }
 }
 
 /*  */
@@ -52531,10 +52884,19 @@ var commaRE = /%2C/g;
 // - escapes [!'()*]
 // - preserve commas
 var encode = function (str) { return encodeURIComponent(str)
-  .replace(encodeReserveRE, encodeReserveReplacer)
-  .replace(commaRE, ','); };
+    .replace(encodeReserveRE, encodeReserveReplacer)
+    .replace(commaRE, ','); };
 
-var decode = decodeURIComponent;
+function decode (str) {
+  try {
+    return decodeURIComponent(str)
+  } catch (err) {
+    if (true) {
+      warn(false, ("Error decoding \"" + str + "\". Leaving it intact."));
+    }
+  }
+  return str
+}
 
 function resolveQuery (
   query,
@@ -52552,10 +52914,15 @@ function resolveQuery (
     parsedQuery = {};
   }
   for (var key in extraQuery) {
-    parsedQuery[key] = extraQuery[key];
+    var value = extraQuery[key];
+    parsedQuery[key] = Array.isArray(value)
+      ? value.map(castQueryParamValue)
+      : castQueryParamValue(value);
   }
   return parsedQuery
 }
+
+var castQueryParamValue = function (value) { return (value == null || typeof value === 'object' ? value : String(value)); };
 
 function parseQuery (query) {
   var res = {};
@@ -52569,9 +52936,7 @@ function parseQuery (query) {
   query.split('&').forEach(function (param) {
     var parts = param.replace(/\+/g, ' ').split('=');
     var key = decode(parts.shift());
-    var val = parts.length > 0
-      ? decode(parts.join('='))
-      : null;
+    var val = parts.length > 0 ? decode(parts.join('=')) : null;
 
     if (res[key] === undefined) {
       res[key] = val;
@@ -52586,34 +52951,39 @@ function parseQuery (query) {
 }
 
 function stringifyQuery (obj) {
-  var res = obj ? Object.keys(obj).map(function (key) {
-    var val = obj[key];
+  var res = obj
+    ? Object.keys(obj)
+      .map(function (key) {
+        var val = obj[key];
 
-    if (val === undefined) {
-      return ''
-    }
-
-    if (val === null) {
-      return encode(key)
-    }
-
-    if (Array.isArray(val)) {
-      var result = [];
-      val.forEach(function (val2) {
-        if (val2 === undefined) {
-          return
+        if (val === undefined) {
+          return ''
         }
-        if (val2 === null) {
-          result.push(encode(key));
-        } else {
-          result.push(encode(key) + '=' + encode(val2));
-        }
-      });
-      return result.join('&')
-    }
 
-    return encode(key) + '=' + encode(val)
-  }).filter(function (x) { return x.length > 0; }).join('&') : null;
+        if (val === null) {
+          return encode(key)
+        }
+
+        if (Array.isArray(val)) {
+          var result = [];
+          val.forEach(function (val2) {
+            if (val2 === undefined) {
+              return
+            }
+            if (val2 === null) {
+              result.push(encode(key));
+            } else {
+              result.push(encode(key) + '=' + encode(val2));
+            }
+          });
+          return result.join('&')
+        }
+
+        return encode(key) + '=' + encode(val)
+      })
+      .filter(function (x) { return x.length > 0; })
+      .join('&')
+    : null;
   return res ? ("?" + res) : ''
 }
 
@@ -52719,14 +53089,18 @@ function isObjectEqual (a, b) {
 
   // handle null value #1566
   if (!a || !b) { return a === b }
-  var aKeys = Object.keys(a);
-  var bKeys = Object.keys(b);
+  var aKeys = Object.keys(a).sort();
+  var bKeys = Object.keys(b).sort();
   if (aKeys.length !== bKeys.length) {
     return false
   }
-  return aKeys.every(function (key) {
+  return aKeys.every(function (key, i) {
     var aVal = a[key];
+    var bKey = bKeys[i];
+    if (bKey !== key) { return false }
     var bVal = b[key];
+    // query values can be null and undefined
+    if (aVal == null || bVal == null) { return aVal === bVal }
     // check nested equality
     if (typeof aVal === 'object' && typeof bVal === 'object') {
       return isObjectEqual(aVal, bVal)
@@ -52752,6 +53126,178 @@ function queryIncludes (current, target) {
     }
   }
   return true
+}
+
+function handleRouteEntered (route) {
+  for (var i = 0; i < route.matched.length; i++) {
+    var record = route.matched[i];
+    for (var name in record.instances) {
+      var instance = record.instances[name];
+      var cbs = record.enteredCbs[name];
+      if (!instance || !cbs) { continue }
+      delete record.enteredCbs[name];
+      for (var i$1 = 0; i$1 < cbs.length; i$1++) {
+        if (!instance._isBeingDestroyed) { cbs[i$1](instance); }
+      }
+    }
+  }
+}
+
+var View = {
+  name: 'RouterView',
+  functional: true,
+  props: {
+    name: {
+      type: String,
+      default: 'default'
+    }
+  },
+  render: function render (_, ref) {
+    var props = ref.props;
+    var children = ref.children;
+    var parent = ref.parent;
+    var data = ref.data;
+
+    // used by devtools to display a router-view badge
+    data.routerView = true;
+
+    // directly use parent context's createElement() function
+    // so that components rendered by router-view can resolve named slots
+    var h = parent.$createElement;
+    var name = props.name;
+    var route = parent.$route;
+    var cache = parent._routerViewCache || (parent._routerViewCache = {});
+
+    // determine current view depth, also check to see if the tree
+    // has been toggled inactive but kept-alive.
+    var depth = 0;
+    var inactive = false;
+    while (parent && parent._routerRoot !== parent) {
+      var vnodeData = parent.$vnode ? parent.$vnode.data : {};
+      if (vnodeData.routerView) {
+        depth++;
+      }
+      if (vnodeData.keepAlive && parent._directInactive && parent._inactive) {
+        inactive = true;
+      }
+      parent = parent.$parent;
+    }
+    data.routerViewDepth = depth;
+
+    // render previous view if the tree is inactive and kept-alive
+    if (inactive) {
+      var cachedData = cache[name];
+      var cachedComponent = cachedData && cachedData.component;
+      if (cachedComponent) {
+        // #2301
+        // pass props
+        if (cachedData.configProps) {
+          fillPropsinData(cachedComponent, data, cachedData.route, cachedData.configProps);
+        }
+        return h(cachedComponent, data, children)
+      } else {
+        // render previous empty view
+        return h()
+      }
+    }
+
+    var matched = route.matched[depth];
+    var component = matched && matched.components[name];
+
+    // render empty node if no matched route or no config component
+    if (!matched || !component) {
+      cache[name] = null;
+      return h()
+    }
+
+    // cache component
+    cache[name] = { component: component };
+
+    // attach instance registration hook
+    // this will be called in the instance's injected lifecycle hooks
+    data.registerRouteInstance = function (vm, val) {
+      // val could be undefined for unregistration
+      var current = matched.instances[name];
+      if (
+        (val && current !== vm) ||
+        (!val && current === vm)
+      ) {
+        matched.instances[name] = val;
+      }
+    }
+
+    // also register instance in prepatch hook
+    // in case the same component instance is reused across different routes
+    ;(data.hook || (data.hook = {})).prepatch = function (_, vnode) {
+      matched.instances[name] = vnode.componentInstance;
+    };
+
+    // register instance in init hook
+    // in case kept-alive component be actived when routes changed
+    data.hook.init = function (vnode) {
+      if (vnode.data.keepAlive &&
+        vnode.componentInstance &&
+        vnode.componentInstance !== matched.instances[name]
+      ) {
+        matched.instances[name] = vnode.componentInstance;
+      }
+
+      // if the route transition has already been confirmed then we weren't
+      // able to call the cbs during confirmation as the component was not
+      // registered yet, so we call it here.
+      handleRouteEntered(route);
+    };
+
+    var configProps = matched.props && matched.props[name];
+    // save route and configProps in cache
+    if (configProps) {
+      extend(cache[name], {
+        route: route,
+        configProps: configProps
+      });
+      fillPropsinData(component, data, route, configProps);
+    }
+
+    return h(component, data, children)
+  }
+};
+
+function fillPropsinData (component, data, route, configProps) {
+  // resolve props
+  var propsToPass = data.props = resolveProps(route, configProps);
+  if (propsToPass) {
+    // clone to prevent mutation
+    propsToPass = data.props = extend({}, propsToPass);
+    // pass non-declared props as attrs
+    var attrs = data.attrs = data.attrs || {};
+    for (var key in propsToPass) {
+      if (!component.props || !(key in component.props)) {
+        attrs[key] = propsToPass[key];
+        delete propsToPass[key];
+      }
+    }
+  }
+}
+
+function resolveProps (route, config) {
+  switch (typeof config) {
+    case 'undefined':
+      return
+    case 'object':
+      return config
+    case 'function':
+      return config(route)
+    case 'boolean':
+      return config ? route.params : undefined
+    default:
+      if (true) {
+        warn(
+          false,
+          "props in \"" + (route.path) + "\" is a " + (typeof config) + ", " +
+          "expecting an object, function or boolean."
+        );
+      }
+  }
 }
 
 /*  */
@@ -52937,7 +53483,7 @@ function parse (str, options) {
  * @return {!function(Object=, Object=)}
  */
 function compile (str, options) {
-  return tokensToFunction(parse(str, options))
+  return tokensToFunction(parse(str, options), options)
 }
 
 /**
@@ -52967,14 +53513,14 @@ function encodeAsterisk (str) {
 /**
  * Expose a method for transforming tokens into the path function.
  */
-function tokensToFunction (tokens) {
+function tokensToFunction (tokens, options) {
   // Compile all the tokens into regexps.
   var matches = new Array(tokens.length);
 
   // Compile all the patterns before compilation.
   for (var i = 0; i < tokens.length; i++) {
     if (typeof tokens[i] === 'object') {
-      matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$');
+      matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$', flags(options));
     }
   }
 
@@ -53087,7 +53633,7 @@ function attachKeys (re, keys) {
  * @return {string}
  */
 function flags (options) {
-  return options.sensitive ? '' : 'i'
+  return options && options.sensitive ? '' : 'i'
 }
 
 /**
@@ -53275,12 +53821,14 @@ function fillParams (
       (regexpCompileCache[path] = pathToRegexp_1.compile(path));
 
     // Fix #2505 resolving asterisk routes { name: 'not-found', params: { pathMatch: '/not-found' }}
-    if (params.pathMatch) { params[0] = params.pathMatch; }
+    // and fix #3106 so that you can work with location descriptor object having params.pathMatch equal to empty string
+    if (typeof params.pathMatch === 'string') { params[0] = params.pathMatch; }
 
     return filler(params, { pretty: true })
   } catch (e) {
     if (true) {
-      warn(false, ("missing param for " + routeMsg + ": " + (e.message)));
+      // Fix #3072 no warn if `pathMatch` is string
+      warn(typeof params.pathMatch === 'string', ("missing param for " + routeMsg + ": " + (e.message)));
     }
     return ''
   } finally {
@@ -53302,20 +53850,25 @@ function normalizeLocation (
   if (next._normalized) {
     return next
   } else if (next.name) {
-    return extend({}, raw)
+    next = extend({}, raw);
+    var params = next.params;
+    if (params && typeof params === 'object') {
+      next.params = extend({}, params);
+    }
+    return next
   }
 
   // relative params
   if (!next.path && next.params && current) {
     next = extend({}, next);
     next._normalized = true;
-    var params = extend(extend({}, current.params), next.params);
+    var params$1 = extend(extend({}, current.params), next.params);
     if (current.name) {
       next.name = current.name;
-      next.params = params;
+      next.params = params$1;
     } else if (current.matched.length) {
       var rawPath = current.matched[current.matched.length - 1].path;
-      next.path = fillParams(rawPath, params, ("path " + (current.path)));
+      next.path = fillParams(rawPath, params$1, ("path " + (current.path)));
     } else if (true) {
       warn(false, "relative params navigation requires a current route.");
     }
@@ -53371,6 +53924,10 @@ var Link = {
     replace: Boolean,
     activeClass: String,
     exactActiveClass: String,
+    ariaCurrentValue: {
+      type: String,
+      default: 'page'
+    },
     event: {
       type: eventTypes,
       default: 'click'
@@ -53416,6 +53973,8 @@ var Link = {
       ? classes[exactActiveClass]
       : isIncludedRoute(current, compareTarget);
 
+    var ariaCurrentValue = classes[exactActiveClass] ? this.ariaCurrentValue : null;
+
     var handler = function (e) {
       if (guardEvent(e)) {
         if (this$1.replace) {
@@ -53455,7 +54014,7 @@ var Link = {
         if (true) {
           warn(
             false,
-            ("RouterLink with to=\"" + (this.props.to) + "\" is trying to use a scoped slot but it didn't provide exactly one child.")
+            ("RouterLink with to=\"" + (this.to) + "\" is trying to use a scoped slot but it didn't provide exactly one child. Wrapping the content with a span element.")
           );
         }
         return scopedSlot.length === 0 ? h() : h('span', {}, scopedSlot)
@@ -53464,7 +54023,7 @@ var Link = {
 
     if (this.tag === 'a') {
       data.on = on;
-      data.attrs = { href: href };
+      data.attrs = { href: href, 'aria-current': ariaCurrentValue };
     } else {
       // find the first <a> child and apply listener and href
       var a = findAnchor(this.$slots.default);
@@ -53492,6 +54051,7 @@ var Link = {
 
         var aAttrs = (a.data.attrs = extend({}, a.data.attrs));
         aAttrs.href = href;
+        aAttrs['aria-current'] = ariaCurrentValue;
       } else {
         // doesn't have <a> child, apply listener to self
         data.on = on;
@@ -53670,6 +54230,7 @@ function addRouteRecord (
     regex: compileRouteRegex(normalizedPath, pathToRegexpOptions),
     components: route.components || { default: route.component },
     instances: {},
+    enteredCbs: {},
     name: name,
     parent: parent,
     matchAs: matchAs,
@@ -53959,6 +54520,14 @@ function matchRoute (
   path,
   params
 ) {
+  try {
+    path = decodeURI(path);
+  } catch (err) {
+    if (true) {
+      warn(false, ("Error decoding \"" + path + "\". Leaving it intact."));
+    }
+  }
+
   var m = path.match(regex);
 
   if (!m) {
@@ -53969,10 +54538,9 @@ function matchRoute (
 
   for (var i = 1, len = m.length; i < len; ++i) {
     var key = regex.keys[i - 1];
-    var val = typeof m[i] === 'string' ? decodeURIComponent(m[i]) : m[i];
     if (key) {
       // Fix #1994: using * with props: true generates a param named 0
-      params[key.name || 'pathMatch'] = val;
+      params[key.name || 'pathMatch'] = m[i];
     }
   }
 
@@ -54010,6 +54578,10 @@ function setStateKey (key) {
 var positionStore = Object.create(null);
 
 function setupScroll () {
+  // Prevent browser scroll behavior on History popstate
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
   // Fix for #1585 for Firefox
   // Fix for #2195 Add optional third attribute to workaround a bug in safari https://bugs.webkit.org/show_bug.cgi?id=182678
   // Fix for #2774 Support for apps loaded from Windows file shares not mapped to network drives: replaced location.origin with
@@ -54017,13 +54589,14 @@ function setupScroll () {
   // location.host contains the port and location.hostname doesn't
   var protocolAndPath = window.location.protocol + '//' + window.location.host;
   var absolutePath = window.location.href.replace(protocolAndPath, '');
-  window.history.replaceState({ key: getStateKey() }, '', absolutePath);
-  window.addEventListener('popstate', function (e) {
-    saveScrollPosition();
-    if (e.state && e.state.key) {
-      setStateKey(e.state.key);
-    }
-  });
+  // preserve existing history state as it could be overriden by the user
+  var stateCopy = extend({}, window.history.state);
+  stateCopy.key = getStateKey();
+  window.history.replaceState(stateCopy, '', absolutePath);
+  window.addEventListener('popstate', handlePopState);
+  return function () {
+    window.removeEventListener('popstate', handlePopState);
+  }
 }
 
 function handleScroll (
@@ -54082,6 +54655,13 @@ function saveScrollPosition () {
       x: window.pageXOffset,
       y: window.pageYOffset
     };
+  }
+}
+
+function handlePopState (e) {
+  saveScrollPosition();
+  if (e.state && e.state.key) {
+    setStateKey(e.state.key);
   }
 }
 
@@ -54170,7 +54750,7 @@ var supportsPushState =
       return false
     }
 
-    return window.history && 'pushState' in window.history
+    return window.history && typeof window.history.pushState === 'function'
   })();
 
 function pushState (url, replace) {
@@ -54180,7 +54760,10 @@ function pushState (url, replace) {
   var history = window.history;
   try {
     if (replace) {
-      history.replaceState({ key: getStateKey() }, '', url);
+      // preserve existing history state as it could be overriden by the user
+      var stateCopy = extend({}, history.state);
+      stateCopy.key = getStateKey();
+      history.replaceState(stateCopy, '', url);
     } else {
       history.pushState({ key: setStateKey(genStateKey()) }, '', url);
     }
@@ -54210,6 +54793,89 @@ function runQueue (queue, fn, cb) {
     }
   };
   step(0);
+}
+
+// When changing thing, also edit router.d.ts
+var NavigationFailureType = {
+  redirected: 2,
+  aborted: 4,
+  cancelled: 8,
+  duplicated: 16
+};
+
+function createNavigationRedirectedError (from, to) {
+  return createRouterError(
+    from,
+    to,
+    NavigationFailureType.redirected,
+    ("Redirected when going from \"" + (from.fullPath) + "\" to \"" + (stringifyRoute(
+      to
+    )) + "\" via a navigation guard.")
+  )
+}
+
+function createNavigationDuplicatedError (from, to) {
+  var error = createRouterError(
+    from,
+    to,
+    NavigationFailureType.duplicated,
+    ("Avoided redundant navigation to current location: \"" + (from.fullPath) + "\".")
+  );
+  // backwards compatible with the first introduction of Errors
+  error.name = 'NavigationDuplicated';
+  return error
+}
+
+function createNavigationCancelledError (from, to) {
+  return createRouterError(
+    from,
+    to,
+    NavigationFailureType.cancelled,
+    ("Navigation cancelled from \"" + (from.fullPath) + "\" to \"" + (to.fullPath) + "\" with a new navigation.")
+  )
+}
+
+function createNavigationAbortedError (from, to) {
+  return createRouterError(
+    from,
+    to,
+    NavigationFailureType.aborted,
+    ("Navigation aborted from \"" + (from.fullPath) + "\" to \"" + (to.fullPath) + "\" via a navigation guard.")
+  )
+}
+
+function createRouterError (from, to, type, message) {
+  var error = new Error(message);
+  error._isRouter = true;
+  error.from = from;
+  error.to = to;
+  error.type = type;
+
+  return error
+}
+
+var propertiesToLog = ['params', 'query', 'hash'];
+
+function stringifyRoute (to) {
+  if (typeof to === 'string') { return to }
+  if ('path' in to) { return to.path }
+  var location = {};
+  propertiesToLog.forEach(function (key) {
+    if (key in to) { location[key] = to[key]; }
+  });
+  return JSON.stringify(location, null, 2)
+}
+
+function isError (err) {
+  return Object.prototype.toString.call(err).indexOf('Error') > -1
+}
+
+function isNavigationFailure (err, errorType) {
+  return (
+    isError(err) &&
+    err._isRouter &&
+    (errorType == null || err.type === errorType)
+  )
 }
 
 /*  */
@@ -54321,33 +54987,6 @@ function once (fn) {
   }
 }
 
-var NavigationDuplicated = /*@__PURE__*/(function (Error) {
-  function NavigationDuplicated (normalizedLocation) {
-    Error.call(this);
-    this.name = this._name = 'NavigationDuplicated';
-    // passing the message to super() doesn't seem to work in the transpiled version
-    this.message = "Navigating to current location (\"" + (normalizedLocation.fullPath) + "\") is not allowed";
-    // add a stack property so services like Sentry can correctly display it
-    Object.defineProperty(this, 'stack', {
-      value: new Error().stack,
-      writable: true,
-      configurable: true
-    });
-    // we could also have used
-    // Error.captureStackTrace(this, this.constructor)
-    // but it only exists on node and chrome
-  }
-
-  if ( Error ) NavigationDuplicated.__proto__ = Error;
-  NavigationDuplicated.prototype = Object.create( Error && Error.prototype );
-  NavigationDuplicated.prototype.constructor = NavigationDuplicated;
-
-  return NavigationDuplicated;
-}(Error));
-
-// support IE9
-NavigationDuplicated._name = 'NavigationDuplicated';
-
 /*  */
 
 var History = function History (router, base) {
@@ -54360,6 +54999,7 @@ var History = function History (router, base) {
   this.readyCbs = [];
   this.readyErrorCbs = [];
   this.errorCbs = [];
+  this.listeners = [];
 };
 
 History.prototype.listen = function listen (cb) {
@@ -54388,13 +55028,27 @@ History.prototype.transitionTo = function transitionTo (
 ) {
     var this$1 = this;
 
-  var route = this.router.match(location, this.current);
+  var route;
+  // catch redirect option https://github.com/vuejs/vue-router/issues/3201
+  try {
+    route = this.router.match(location, this.current);
+  } catch (e) {
+    this.errorCbs.forEach(function (cb) {
+      cb(e);
+    });
+    // Exception should still be thrown
+    throw e
+  }
+  var prev = this.current;
   this.confirmTransition(
     route,
     function () {
       this$1.updateRoute(route);
       onComplete && onComplete(route);
       this$1.ensureURL();
+      this$1.router.afterHooks.forEach(function (hook) {
+        hook && hook(route, prev);
+      });
 
       // fire ready cbs once
       if (!this$1.ready) {
@@ -54409,10 +55063,16 @@ History.prototype.transitionTo = function transitionTo (
         onAbort(err);
       }
       if (err && !this$1.ready) {
-        this$1.ready = true;
-        this$1.readyErrorCbs.forEach(function (cb) {
-          cb(err);
-        });
+        // Initial redirection should not mark the history as ready yet
+        // because it's triggered by the redirection instead
+        // https://github.com/vuejs/vue-router/issues/3225
+        // https://github.com/vuejs/vue-router/issues/3331
+        if (!isNavigationFailure(err, NavigationFailureType.redirected) || prev !== START) {
+          this$1.ready = true;
+          this$1.readyErrorCbs.forEach(function (cb) {
+            cb(err);
+          });
+        }
       }
     }
   );
@@ -54422,12 +55082,12 @@ History.prototype.confirmTransition = function confirmTransition (route, onCompl
     var this$1 = this;
 
   var current = this.current;
+  this.pending = route;
   var abort = function (err) {
-    // after merging https://github.com/vuejs/vue-router/pull/2771 we
-    // When the user navigates through history through back/forward buttons
-    // we do not want to throw the error. We only throw it if directly calling
-    // push/replace. That's why it's not included in isError
-    if (!isExtendedError(NavigationDuplicated, err) && isError(err)) {
+    // changed after adding errors with
+    // https://github.com/vuejs/vue-router/pull/3047 before that change,
+    // redirect and aborted navigation would produce an err == null
+    if (!isNavigationFailure(err) && isError(err)) {
       if (this$1.errorCbs.length) {
         this$1.errorCbs.forEach(function (cb) {
           cb(err);
@@ -54439,13 +55099,16 @@ History.prototype.confirmTransition = function confirmTransition (route, onCompl
     }
     onAbort && onAbort(err);
   };
+  var lastRouteIndex = route.matched.length - 1;
+  var lastCurrentIndex = current.matched.length - 1;
   if (
     isSameRoute(route, current) &&
     // in the case the route map has been dynamically appended to
-    route.matched.length === current.matched.length
+    lastRouteIndex === lastCurrentIndex &&
+    route.matched[lastRouteIndex] === current.matched[lastCurrentIndex]
   ) {
     this.ensureURL();
-    return abort(new NavigationDuplicated(route))
+    return abort(createNavigationDuplicatedError(current, route))
   }
 
   var ref = resolveQueue(
@@ -54469,15 +55132,17 @@ History.prototype.confirmTransition = function confirmTransition (route, onCompl
     resolveAsyncComponents(activated)
   );
 
-  this.pending = route;
   var iterator = function (hook, next) {
     if (this$1.pending !== route) {
-      return abort()
+      return abort(createNavigationCancelledError(current, route))
     }
     try {
       hook(route, current, function (to) {
-        if (to === false || isError(to)) {
+        if (to === false) {
           // next(false) -> abort navigation, ensure current URL
+          this$1.ensureURL(true);
+          abort(createNavigationAbortedError(current, route));
+        } else if (isError(to)) {
           this$1.ensureURL(true);
           abort(to);
         } else if (
@@ -54486,7 +55151,7 @@ History.prototype.confirmTransition = function confirmTransition (route, onCompl
             (typeof to.path === 'string' || typeof to.name === 'string'))
         ) {
           // next('/') or next({ path: '/' }) -> redirect
-          abort();
+          abort(createNavigationRedirectedError(current, route));
           if (typeof to === 'object' && to.replace) {
             this$1.replace(to);
           } else {
@@ -54503,23 +55168,19 @@ History.prototype.confirmTransition = function confirmTransition (route, onCompl
   };
 
   runQueue(queue, iterator, function () {
-    var postEnterCbs = [];
-    var isValid = function () { return this$1.current === route; };
     // wait until async components are resolved before
     // extracting in-component enter guards
-    var enterGuards = extractEnterGuards(activated, postEnterCbs, isValid);
+    var enterGuards = extractEnterGuards(activated);
     var queue = enterGuards.concat(this$1.router.resolveHooks);
     runQueue(queue, iterator, function () {
       if (this$1.pending !== route) {
-        return abort()
+        return abort(createNavigationCancelledError(current, route))
       }
       this$1.pending = null;
       onComplete(route);
       if (this$1.router.app) {
         this$1.router.app.$nextTick(function () {
-          postEnterCbs.forEach(function (cb) {
-            cb();
-          });
+          handleRouteEntered(route);
         });
       }
     });
@@ -54527,12 +55188,26 @@ History.prototype.confirmTransition = function confirmTransition (route, onCompl
 };
 
 History.prototype.updateRoute = function updateRoute (route) {
-  var prev = this.current;
   this.current = route;
   this.cb && this.cb(route);
-  this.router.afterHooks.forEach(function (hook) {
-    hook && hook(route, prev);
+};
+
+History.prototype.setupListeners = function setupListeners () {
+  // Default implementation is empty
+};
+
+History.prototype.teardown = function teardown () {
+  // clean up event listeners
+  // https://github.com/vuejs/vue-router/issues/2341
+  this.listeners.forEach(function (cleanupListener) {
+    cleanupListener();
   });
+  this.listeners = [];
+
+  // reset current history route
+  // https://github.com/vuejs/vue-router/issues/3294
+  this.current = START;
+  this.pending = null;
 };
 
 function normalizeBase (base) {
@@ -54618,15 +55293,13 @@ function bindGuard (guard, instance) {
 }
 
 function extractEnterGuards (
-  activated,
-  cbs,
-  isValid
+  activated
 ) {
   return extractGuards(
     activated,
     'beforeRouteEnter',
     function (guard, _, match, key) {
-      return bindEnterGuard(guard, match, key, cbs, isValid)
+      return bindEnterGuard(guard, match, key)
     }
   )
 }
@@ -54634,42 +55307,18 @@ function extractEnterGuards (
 function bindEnterGuard (
   guard,
   match,
-  key,
-  cbs,
-  isValid
+  key
 ) {
   return function routeEnterGuard (to, from, next) {
     return guard(to, from, function (cb) {
       if (typeof cb === 'function') {
-        cbs.push(function () {
-          // #750
-          // if a router-view is wrapped with an out-in transition,
-          // the instance may not have been registered at this time.
-          // we will need to poll for registration until current route
-          // is no longer valid.
-          poll(cb, match.instances, key, isValid);
-        });
+        if (!match.enteredCbs[key]) {
+          match.enteredCbs[key] = [];
+        }
+        match.enteredCbs[key].push(cb);
       }
       next(cb);
     })
-  }
-}
-
-function poll (
-  cb, // somehow flow cannot infer this is a function
-  instances,
-  key,
-  isValid
-) {
-  if (
-    instances[key] &&
-    !instances[key]._isBeingDestroyed // do not reuse being destroyed instance
-  ) {
-    cb(instances[key]);
-  } else if (isValid()) {
-    setTimeout(function () {
-      poll(cb, instances, key, isValid);
-    }, 16);
   }
 }
 
@@ -54677,25 +55326,37 @@ function poll (
 
 var HTML5History = /*@__PURE__*/(function (History) {
   function HTML5History (router, base) {
-    var this$1 = this;
-
     History.call(this, router, base);
 
+    this._startLocation = getLocation(this.base);
+  }
+
+  if ( History ) HTML5History.__proto__ = History;
+  HTML5History.prototype = Object.create( History && History.prototype );
+  HTML5History.prototype.constructor = HTML5History;
+
+  HTML5History.prototype.setupListeners = function setupListeners () {
+    var this$1 = this;
+
+    if (this.listeners.length > 0) {
+      return
+    }
+
+    var router = this.router;
     var expectScroll = router.options.scrollBehavior;
     var supportsScroll = supportsPushState && expectScroll;
 
     if (supportsScroll) {
-      setupScroll();
+      this.listeners.push(setupScroll());
     }
 
-    var initLocation = getLocation(this.base);
-    window.addEventListener('popstate', function (e) {
+    var handleRoutingEvent = function () {
       var current = this$1.current;
 
       // Avoiding first `popstate` event dispatched in some browsers but first
       // history route not updated since async guard at the same time.
       var location = getLocation(this$1.base);
-      if (this$1.current === START && location === initLocation) {
+      if (this$1.current === START && location === this$1._startLocation) {
         return
       }
 
@@ -54704,12 +55365,12 @@ var HTML5History = /*@__PURE__*/(function (History) {
           handleScroll(router, route, current, true);
         }
       });
+    };
+    window.addEventListener('popstate', handleRoutingEvent);
+    this.listeners.push(function () {
+      window.removeEventListener('popstate', handleRoutingEvent);
     });
-  }
-
-  if ( History ) HTML5History.__proto__ = History;
-  HTML5History.prototype = Object.create( History && History.prototype );
-  HTML5History.prototype.constructor = HTML5History;
+  };
 
   HTML5History.prototype.go = function go (n) {
     window.history.go(n);
@@ -54754,8 +55415,8 @@ var HTML5History = /*@__PURE__*/(function (History) {
 }(History));
 
 function getLocation (base) {
-  var path = decodeURI(window.location.pathname);
-  if (base && path.indexOf(base) === 0) {
+  var path = window.location.pathname;
+  if (base && path.toLowerCase().indexOf(base.toLowerCase()) === 0) {
     path = path.slice(base.length);
   }
   return (path || '/') + window.location.search + window.location.hash
@@ -54782,31 +55443,40 @@ var HashHistory = /*@__PURE__*/(function (History) {
   HashHistory.prototype.setupListeners = function setupListeners () {
     var this$1 = this;
 
+    if (this.listeners.length > 0) {
+      return
+    }
+
     var router = this.router;
     var expectScroll = router.options.scrollBehavior;
     var supportsScroll = supportsPushState && expectScroll;
 
     if (supportsScroll) {
-      setupScroll();
+      this.listeners.push(setupScroll());
     }
 
-    window.addEventListener(
-      supportsPushState ? 'popstate' : 'hashchange',
-      function () {
-        var current = this$1.current;
-        if (!ensureSlash()) {
-          return
-        }
-        this$1.transitionTo(getHash(), function (route) {
-          if (supportsScroll) {
-            handleScroll(this$1.router, route, current, true);
-          }
-          if (!supportsPushState) {
-            replaceHash(route.fullPath);
-          }
-        });
+    var handleRoutingEvent = function () {
+      var current = this$1.current;
+      if (!ensureSlash()) {
+        return
       }
+      this$1.transitionTo(getHash(), function (route) {
+        if (supportsScroll) {
+          handleScroll(this$1.router, route, current, true);
+        }
+        if (!supportsPushState) {
+          replaceHash(route.fullPath);
+        }
+      });
+    };
+    var eventType = supportsPushState ? 'popstate' : 'hashchange';
+    window.addEventListener(
+      eventType,
+      handleRoutingEvent
     );
+    this.listeners.push(function () {
+      window.removeEventListener(eventType, handleRoutingEvent);
+    });
   };
 
   HashHistory.prototype.push = function push (location, onComplete, onAbort) {
@@ -54885,20 +55555,6 @@ function getHash () {
   if (index < 0) { return '' }
 
   href = href.slice(index + 1);
-  // decode the hash but not the search or hash
-  // as search(query) is already decoded
-  // https://github.com/vuejs/vue-router/issues/2708
-  var searchIndex = href.indexOf('?');
-  if (searchIndex < 0) {
-    var hashIndex = href.indexOf('#');
-    if (hashIndex > -1) {
-      href = decodeURI(href.slice(0, hashIndex)) + href.slice(hashIndex);
-    } else { href = decodeURI(href); }
-  } else {
-    if (searchIndex > -1) {
-      href = decodeURI(href.slice(0, searchIndex)) + href.slice(searchIndex);
-    }
-  }
 
   return href
 }
@@ -54977,11 +55633,15 @@ var AbstractHistory = /*@__PURE__*/(function (History) {
     this.confirmTransition(
       route,
       function () {
+        var prev = this$1.current;
         this$1.index = targetIndex;
         this$1.updateRoute(route);
+        this$1.router.afterHooks.forEach(function (hook) {
+          hook && hook(route, prev);
+        });
       },
       function (err) {
-        if (isExtendedError(NavigationDuplicated, err)) {
+        if (isNavigationFailure(err, NavigationFailureType.duplicated)) {
           this$1.index = targetIndex;
         }
       }
@@ -55002,8 +55662,6 @@ var AbstractHistory = /*@__PURE__*/(function (History) {
 
 /*  */
 
-
-
 var VueRouter = function VueRouter (options) {
   if ( options === void 0 ) options = {};
 
@@ -55016,7 +55674,8 @@ var VueRouter = function VueRouter (options) {
   this.matcher = createMatcher(options.routes || [], this);
 
   var mode = options.mode || 'hash';
-  this.fallback = mode === 'history' && !supportsPushState && options.fallback !== false;
+  this.fallback =
+    mode === 'history' && !supportsPushState && options.fallback !== false;
   if (this.fallback) {
     mode = 'hash';
   }
@@ -55044,11 +55703,7 @@ var VueRouter = function VueRouter (options) {
 
 var prototypeAccessors = { currentRoute: { configurable: true } };
 
-VueRouter.prototype.match = function match (
-  raw,
-  current,
-  redirectedFrom
-) {
+VueRouter.prototype.match = function match (raw, current, redirectedFrom) {
   return this.matcher.match(raw, current, redirectedFrom)
 };
 
@@ -55059,11 +55714,12 @@ prototypeAccessors.currentRoute.get = function () {
 VueRouter.prototype.init = function init (app /* Vue component instance */) {
     var this$1 = this;
 
-   true && assert(
-    install.installed,
-    "not installed. Make sure to call `Vue.use(VueRouter)` " +
-    "before creating root instance."
-  );
+   true &&
+    assert(
+      install.installed,
+      "not installed. Make sure to call `Vue.use(VueRouter)` " +
+        "before creating root instance."
+    );
 
   this.apps.push(app);
 
@@ -55076,6 +55732,8 @@ VueRouter.prototype.init = function init (app /* Vue component instance */) {
     // ensure we still have a main app or null if no apps
     // we do not release the router so it can be reused
     if (this$1.app === app) { this$1.app = this$1.apps[0] || null; }
+
+    if (!this$1.app) { this$1.history.teardown(); }
   });
 
   // main app previously initialized
@@ -55088,16 +55746,24 @@ VueRouter.prototype.init = function init (app /* Vue component instance */) {
 
   var history = this.history;
 
-  if (history instanceof HTML5History) {
-    history.transitionTo(history.getCurrentLocation());
-  } else if (history instanceof HashHistory) {
-    var setupHashListener = function () {
+  if (history instanceof HTML5History || history instanceof HashHistory) {
+    var handleInitialScroll = function (routeOrError) {
+      var from = history.current;
+      var expectScroll = this$1.options.scrollBehavior;
+      var supportsScroll = supportsPushState && expectScroll;
+
+      if (supportsScroll && 'fullPath' in routeOrError) {
+        handleScroll(this$1, routeOrError, from, false);
+      }
+    };
+    var setupListeners = function (routeOrError) {
       history.setupListeners();
+      handleInitialScroll(routeOrError);
     };
     history.transitionTo(
       history.getCurrentLocation(),
-      setupHashListener,
-      setupHashListener
+      setupListeners,
+      setupListeners
     );
   }
 
@@ -55175,11 +55841,14 @@ VueRouter.prototype.getMatchedComponents = function getMatchedComponents (to) {
   if (!route) {
     return []
   }
-  return [].concat.apply([], route.matched.map(function (m) {
-    return Object.keys(m.components).map(function (key) {
-      return m.components[key]
+  return [].concat.apply(
+    [],
+    route.matched.map(function (m) {
+      return Object.keys(m.components).map(function (key) {
+        return m.components[key]
+      })
     })
-  }))
+  )
 };
 
 VueRouter.prototype.resolve = function resolve (
@@ -55188,12 +55857,7 @@ VueRouter.prototype.resolve = function resolve (
   append
 ) {
   current = current || this.history.current;
-  var location = normalizeLocation(
-    to,
-    current,
-    append,
-    this
-  );
+  var location = normalizeLocation(to, current, append, this);
   var route = this.match(location, current);
   var fullPath = route.redirectedFrom || route.fullPath;
   var base = this.history.base;
@@ -55231,7 +55895,9 @@ function createHref (base, fullPath, mode) {
 }
 
 VueRouter.install = install;
-VueRouter.version = '3.1.3';
+VueRouter.version = '3.4.7';
+VueRouter.isNavigationFailure = isNavigationFailure;
+VueRouter.NavigationFailureType = NavigationFailureType;
 
 if (inBrowser && window.Vue) {
   window.Vue.use(VueRouter);
@@ -56344,8 +57010,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {/*!
- * Vue.js v2.6.11
- * (c) 2014-2019 Evan You
+ * Vue.js v2.6.12
+ * (c) 2014-2020 Evan You
  * Released under the MIT License.
  */
 
@@ -61784,7 +62450,7 @@ Object.defineProperty(Vue, 'FunctionalRenderContext', {
   value: FunctionalRenderContext
 });
 
-Vue.version = '2.6.11';
+Vue.version = '2.6.12';
 
 /*  */
 
@@ -63990,7 +64656,7 @@ function updateDOMProps (oldVnode, vnode) {
       // skip the update if old and new VDOM state is the same.
       // `value` is handled separately because the DOM value may be temporarily
       // out of sync with VDOM state due to focus, composition and modifiers.
-      // This  #4521 by skipping the unnecesarry `checked` update.
+      // This  #4521 by skipping the unnecessary `checked` update.
       cur !== oldProps[key]
     ) {
       // some property updates can throw
@@ -66235,7 +66901,7 @@ function parse (
       }
     },
     comment: function comment (text, start, end) {
-      // adding anyting as a sibling to the root node is forbidden
+      // adding anything as a sibling to the root node is forbidden
       // comments should still be allowed, but ignored
       if (currentParent) {
         var child = {
@@ -69515,21 +70181,22 @@ function registerModule(path, module, callback, options) {
 /*!********************************************!*\
   !*** ./node_modules/vuex/dist/vuex.esm.js ***!
   \********************************************/
-/*! exports provided: default, Store, install, mapState, mapMutations, mapGetters, mapActions, createNamespacedHelpers */
+/*! exports provided: default, Store, createLogger, createNamespacedHelpers, install, mapActions, mapGetters, mapMutations, mapState */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Store", function() { return Store; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "install", function() { return install; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapState", function() { return mapState; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapMutations", function() { return mapMutations; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapGetters", function() { return mapGetters; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapActions", function() { return mapActions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createLogger", function() { return createLogger; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createNamespacedHelpers", function() { return createNamespacedHelpers; });
-/**
- * vuex v3.1.2
- * (c) 2019 Evan You
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "install", function() { return install; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapActions", function() { return mapActions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapGetters", function() { return mapGetters; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapMutations", function() { return mapMutations; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapState", function() { return mapState; });
+/*!
+ * vuex v3.5.1
+ * (c) 2020 Evan You
  * @license MIT
  */
 function applyMixin (Vue) {
@@ -69588,7 +70255,11 @@ function devtoolPlugin (store) {
 
   store.subscribe(function (mutation, state) {
     devtoolHook.emit('vuex:mutation', mutation, state);
-  });
+  }, { prepend: true });
+
+  store.subscribeAction(function (action, state) {
+    devtoolHook.emit('vuex:action', action, state);
+  }, { prepend: true });
 }
 
 /**
@@ -69599,6 +70270,47 @@ function devtoolPlugin (store) {
  * @param {Function} f
  * @return {*}
  */
+function find (list, f) {
+  return list.filter(f)[0]
+}
+
+/**
+ * Deep copy the given object considering circular structure.
+ * This function caches all nested objects and its copies.
+ * If it detects circular structure, use cached copy to avoid infinite loop.
+ *
+ * @param {*} obj
+ * @param {Array<Object>} cache
+ * @return {*}
+ */
+function deepCopy (obj, cache) {
+  if ( cache === void 0 ) cache = [];
+
+  // just return if obj is immutable value
+  if (obj === null || typeof obj !== 'object') {
+    return obj
+  }
+
+  // if obj is hit, it is in circular structure
+  var hit = find(cache, function (c) { return c.original === obj; });
+  if (hit) {
+    return hit.copy
+  }
+
+  var copy = Array.isArray(obj) ? [] : {};
+  // put the copy into cache at first
+  // because we want to refer it in recursive deepCopy
+  cache.push({
+    original: obj,
+    copy: copy
+  });
+
+  Object.keys(obj).forEach(function (key) {
+    copy[key] = deepCopy(obj[key], cache);
+  });
+
+  return copy
+}
 
 /**
  * forEach for object
@@ -69654,6 +70366,10 @@ Module.prototype.removeChild = function removeChild (key) {
 
 Module.prototype.getChild = function getChild (key) {
   return this._children[key]
+};
+
+Module.prototype.hasChild = function hasChild (key) {
+  return key in this._children
 };
 
 Module.prototype.update = function update (rawModule) {
@@ -69720,7 +70436,7 @@ ModuleCollection.prototype.register = function register (path, rawModule, runtim
     var this$1 = this;
     if ( runtime === void 0 ) runtime = true;
 
-  if (true) {
+  if ((true)) {
     assertRawModule(path, rawModule);
   }
 
@@ -69743,13 +70459,34 @@ ModuleCollection.prototype.register = function register (path, rawModule, runtim
 ModuleCollection.prototype.unregister = function unregister (path) {
   var parent = this.get(path.slice(0, -1));
   var key = path[path.length - 1];
-  if (!parent.getChild(key).runtime) { return }
+  var child = parent.getChild(key);
+
+  if (!child) {
+    if ((true)) {
+      console.warn(
+        "[vuex] trying to unregister module '" + key + "', which is " +
+        "not registered"
+      );
+    }
+    return
+  }
+
+  if (!child.runtime) {
+    return
+  }
 
   parent.removeChild(key);
 };
 
+ModuleCollection.prototype.isRegistered = function isRegistered (path) {
+  var parent = this.get(path.slice(0, -1));
+  var key = path[path.length - 1];
+
+  return parent.hasChild(key)
+};
+
 function update (path, targetModule, newModule) {
-  if (true) {
+  if ((true)) {
     assertRawModule(path, newModule);
   }
 
@@ -69760,7 +70497,7 @@ function update (path, targetModule, newModule) {
   if (newModule.modules) {
     for (var key in newModule.modules) {
       if (!targetModule.getChild(key)) {
-        if (true) {
+        if ((true)) {
           console.warn(
             "[vuex] trying to add a new module '" + key + "' on hot reloading, " +
             'manual reload is needed'
@@ -69831,7 +70568,7 @@ var Store = function Store (options) {
     install(window.Vue);
   }
 
-  if (true) {
+  if ((true)) {
     assert(Vue, "must call Vue.use(Vuex) before creating a store instance.");
     assert(typeof Promise !== 'undefined', "vuex requires a Promise polyfill in this browser.");
     assert(this instanceof Store, "store must be called with the new operator.");
@@ -69894,7 +70631,7 @@ prototypeAccessors$1.state.get = function () {
 };
 
 prototypeAccessors$1.state.set = function (v) {
-  if (true) {
+  if ((true)) {
     assert(false, "use store.replaceState() to explicit replace store state.");
   }
 };
@@ -69911,7 +70648,7 @@ Store.prototype.commit = function commit (_type, _payload, _options) {
   var mutation = { type: type, payload: payload };
   var entry = this._mutations[type];
   if (!entry) {
-    if (true) {
+    if ((true)) {
       console.error(("[vuex] unknown mutation type: " + type));
     }
     return
@@ -69921,10 +70658,13 @@ Store.prototype.commit = function commit (_type, _payload, _options) {
       handler(payload);
     });
   });
-  this._subscribers.forEach(function (sub) { return sub(mutation, this$1.state); });
+
+  this._subscribers
+    .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
+    .forEach(function (sub) { return sub(mutation, this$1.state); });
 
   if (
-     true &&
+    ( true) &&
     options && options.silent
   ) {
     console.warn(
@@ -69945,7 +70685,7 @@ Store.prototype.dispatch = function dispatch (_type, _payload) {
   var action = { type: type, payload: payload };
   var entry = this._actions[type];
   if (!entry) {
-    if (true) {
+    if ((true)) {
       console.error(("[vuex] unknown action type: " + type));
     }
     return
@@ -69953,10 +70693,11 @@ Store.prototype.dispatch = function dispatch (_type, _payload) {
 
   try {
     this._actionSubscribers
+      .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
       .filter(function (sub) { return sub.before; })
       .forEach(function (sub) { return sub.before(action, this$1.state); });
   } catch (e) {
-    if (true) {
+    if ((true)) {
       console.warn("[vuex] error in before action subscribers: ");
       console.error(e);
     }
@@ -69966,34 +70707,48 @@ Store.prototype.dispatch = function dispatch (_type, _payload) {
     ? Promise.all(entry.map(function (handler) { return handler(payload); }))
     : entry[0](payload);
 
-  return result.then(function (res) {
-    try {
-      this$1._actionSubscribers
-        .filter(function (sub) { return sub.after; })
-        .forEach(function (sub) { return sub.after(action, this$1.state); });
-    } catch (e) {
-      if (true) {
-        console.warn("[vuex] error in after action subscribers: ");
-        console.error(e);
+  return new Promise(function (resolve, reject) {
+    result.then(function (res) {
+      try {
+        this$1._actionSubscribers
+          .filter(function (sub) { return sub.after; })
+          .forEach(function (sub) { return sub.after(action, this$1.state); });
+      } catch (e) {
+        if ((true)) {
+          console.warn("[vuex] error in after action subscribers: ");
+          console.error(e);
+        }
       }
-    }
-    return res
+      resolve(res);
+    }, function (error) {
+      try {
+        this$1._actionSubscribers
+          .filter(function (sub) { return sub.error; })
+          .forEach(function (sub) { return sub.error(action, this$1.state, error); });
+      } catch (e) {
+        if ((true)) {
+          console.warn("[vuex] error in error action subscribers: ");
+          console.error(e);
+        }
+      }
+      reject(error);
+    });
   })
 };
 
-Store.prototype.subscribe = function subscribe (fn) {
-  return genericSubscribe(fn, this._subscribers)
+Store.prototype.subscribe = function subscribe (fn, options) {
+  return genericSubscribe(fn, this._subscribers, options)
 };
 
-Store.prototype.subscribeAction = function subscribeAction (fn) {
+Store.prototype.subscribeAction = function subscribeAction (fn, options) {
   var subs = typeof fn === 'function' ? { before: fn } : fn;
-  return genericSubscribe(subs, this._actionSubscribers)
+  return genericSubscribe(subs, this._actionSubscribers, options)
 };
 
 Store.prototype.watch = function watch (getter, cb, options) {
     var this$1 = this;
 
-  if (true) {
+  if ((true)) {
     assert(typeof getter === 'function', "store.watch only accepts a function.");
   }
   return this._watcherVM.$watch(function () { return getter(this$1.state, this$1.getters); }, cb, options)
@@ -70012,7 +70767,7 @@ Store.prototype.registerModule = function registerModule (path, rawModule, optio
 
   if (typeof path === 'string') { path = [path]; }
 
-  if (true) {
+  if ((true)) {
     assert(Array.isArray(path), "module path must be a string or an Array.");
     assert(path.length > 0, 'cannot register the root module by using registerModule.');
   }
@@ -70028,7 +70783,7 @@ Store.prototype.unregisterModule = function unregisterModule (path) {
 
   if (typeof path === 'string') { path = [path]; }
 
-  if (true) {
+  if ((true)) {
     assert(Array.isArray(path), "module path must be a string or an Array.");
   }
 
@@ -70038,6 +70793,16 @@ Store.prototype.unregisterModule = function unregisterModule (path) {
     Vue.delete(parentState, path[path.length - 1]);
   });
   resetStore(this);
+};
+
+Store.prototype.hasModule = function hasModule (path) {
+  if (typeof path === 'string') { path = [path]; }
+
+  if ((true)) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+  }
+
+  return this._modules.isRegistered(path)
 };
 
 Store.prototype.hotUpdate = function hotUpdate (newOptions) {
@@ -70054,9 +70819,11 @@ Store.prototype._withCommit = function _withCommit (fn) {
 
 Object.defineProperties( Store.prototype, prototypeAccessors$1 );
 
-function genericSubscribe (fn, subs) {
+function genericSubscribe (fn, subs, options) {
   if (subs.indexOf(fn) < 0) {
-    subs.push(fn);
+    options && options.prepend
+      ? subs.unshift(fn)
+      : subs.push(fn);
   }
   return function () {
     var i = subs.indexOf(fn);
@@ -70134,7 +70901,7 @@ function installModule (store, rootState, path, module, hot) {
 
   // register in namespace map
   if (module.namespaced) {
-    if (store._modulesNamespaceMap[namespace] && "development" !== 'production') {
+    if (store._modulesNamespaceMap[namespace] && ("development" !== 'production')) {
       console.error(("[vuex] duplicate namespace " + namespace + " for the namespaced module " + (path.join('/'))));
     }
     store._modulesNamespaceMap[namespace] = module;
@@ -70145,7 +70912,7 @@ function installModule (store, rootState, path, module, hot) {
     var parentState = getNestedState(rootState, path.slice(0, -1));
     var moduleName = path[path.length - 1];
     store._withCommit(function () {
-      if (true) {
+      if ((true)) {
         if (moduleName in parentState) {
           console.warn(
             ("[vuex] state field \"" + moduleName + "\" was overridden by a module with the same name at \"" + (path.join('.')) + "\"")
@@ -70195,7 +70962,7 @@ function makeLocalContext (store, namespace, path) {
 
       if (!options || !options.root) {
         type = namespace + type;
-        if ( true && !store._actions[type]) {
+        if (( true) && !store._actions[type]) {
           console.error(("[vuex] unknown local action type: " + (args.type) + ", global type: " + type));
           return
         }
@@ -70212,7 +70979,7 @@ function makeLocalContext (store, namespace, path) {
 
       if (!options || !options.root) {
         type = namespace + type;
-        if ( true && !store._mutations[type]) {
+        if (( true) && !store._mutations[type]) {
           console.error(("[vuex] unknown local mutation type: " + (args.type) + ", global type: " + type));
           return
         }
@@ -70297,7 +71064,7 @@ function registerAction (store, type, handler, local) {
 
 function registerGetter (store, type, rawGetter, local) {
   if (store._wrappedGetters[type]) {
-    if (true) {
+    if ((true)) {
       console.error(("[vuex] duplicate getter key: " + type));
     }
     return
@@ -70314,16 +71081,14 @@ function registerGetter (store, type, rawGetter, local) {
 
 function enableStrictMode (store) {
   store._vm.$watch(function () { return this._data.$$state }, function () {
-    if (true) {
+    if ((true)) {
       assert(store._committing, "do not mutate vuex store state outside mutation handlers.");
     }
   }, { deep: true, sync: true });
 }
 
 function getNestedState (state, path) {
-  return path.length
-    ? path.reduce(function (state, key) { return state[key]; }, state)
-    : state
+  return path.reduce(function (state, key) { return state[key]; }, state)
 }
 
 function unifyObjectStyle (type, payload, options) {
@@ -70333,7 +71098,7 @@ function unifyObjectStyle (type, payload, options) {
     type = type.type;
   }
 
-  if (true) {
+  if ((true)) {
     assert(typeof type === 'string', ("expects string as the type, but found " + (typeof type) + "."));
   }
 
@@ -70342,7 +71107,7 @@ function unifyObjectStyle (type, payload, options) {
 
 function install (_Vue) {
   if (Vue && _Vue === Vue) {
-    if (true) {
+    if ((true)) {
       console.error(
         '[vuex] already installed. Vue.use(Vuex) should be called only once.'
       );
@@ -70361,7 +71126,7 @@ function install (_Vue) {
  */
 var mapState = normalizeNamespace(function (namespace, states) {
   var res = {};
-  if ( true && !isValidMap(states)) {
+  if (( true) && !isValidMap(states)) {
     console.error('[vuex] mapState: mapper parameter must be either an Array or an Object');
   }
   normalizeMap(states).forEach(function (ref) {
@@ -70397,7 +71162,7 @@ var mapState = normalizeNamespace(function (namespace, states) {
  */
 var mapMutations = normalizeNamespace(function (namespace, mutations) {
   var res = {};
-  if ( true && !isValidMap(mutations)) {
+  if (( true) && !isValidMap(mutations)) {
     console.error('[vuex] mapMutations: mapper parameter must be either an Array or an Object');
   }
   normalizeMap(mutations).forEach(function (ref) {
@@ -70433,7 +71198,7 @@ var mapMutations = normalizeNamespace(function (namespace, mutations) {
  */
 var mapGetters = normalizeNamespace(function (namespace, getters) {
   var res = {};
-  if ( true && !isValidMap(getters)) {
+  if (( true) && !isValidMap(getters)) {
     console.error('[vuex] mapGetters: mapper parameter must be either an Array or an Object');
   }
   normalizeMap(getters).forEach(function (ref) {
@@ -70446,7 +71211,7 @@ var mapGetters = normalizeNamespace(function (namespace, getters) {
       if (namespace && !getModuleByNamespace(this.$store, 'mapGetters', namespace)) {
         return
       }
-      if ( true && !(val in this.$store.getters)) {
+      if (( true) && !(val in this.$store.getters)) {
         console.error(("[vuex] unknown getter: " + val));
         return
       }
@@ -70466,7 +71231,7 @@ var mapGetters = normalizeNamespace(function (namespace, getters) {
  */
 var mapActions = normalizeNamespace(function (namespace, actions) {
   var res = {};
-  if ( true && !isValidMap(actions)) {
+  if (( true) && !isValidMap(actions)) {
     console.error('[vuex] mapActions: mapper parameter must be either an Array or an Object');
   }
   normalizeMap(actions).forEach(function (ref) {
@@ -70557,24 +71322,116 @@ function normalizeNamespace (fn) {
  */
 function getModuleByNamespace (store, helper, namespace) {
   var module = store._modulesNamespaceMap[namespace];
-  if ( true && !module) {
+  if (( true) && !module) {
     console.error(("[vuex] module namespace not found in " + helper + "(): " + namespace));
   }
   return module
 }
 
-var index_esm = {
+// Credits: borrowed code from fcomb/redux-logger
+
+function createLogger (ref) {
+  if ( ref === void 0 ) ref = {};
+  var collapsed = ref.collapsed; if ( collapsed === void 0 ) collapsed = true;
+  var filter = ref.filter; if ( filter === void 0 ) filter = function (mutation, stateBefore, stateAfter) { return true; };
+  var transformer = ref.transformer; if ( transformer === void 0 ) transformer = function (state) { return state; };
+  var mutationTransformer = ref.mutationTransformer; if ( mutationTransformer === void 0 ) mutationTransformer = function (mut) { return mut; };
+  var actionFilter = ref.actionFilter; if ( actionFilter === void 0 ) actionFilter = function (action, state) { return true; };
+  var actionTransformer = ref.actionTransformer; if ( actionTransformer === void 0 ) actionTransformer = function (act) { return act; };
+  var logMutations = ref.logMutations; if ( logMutations === void 0 ) logMutations = true;
+  var logActions = ref.logActions; if ( logActions === void 0 ) logActions = true;
+  var logger = ref.logger; if ( logger === void 0 ) logger = console;
+
+  return function (store) {
+    var prevState = deepCopy(store.state);
+
+    if (typeof logger === 'undefined') {
+      return
+    }
+
+    if (logMutations) {
+      store.subscribe(function (mutation, state) {
+        var nextState = deepCopy(state);
+
+        if (filter(mutation, prevState, nextState)) {
+          var formattedTime = getFormattedTime();
+          var formattedMutation = mutationTransformer(mutation);
+          var message = "mutation " + (mutation.type) + formattedTime;
+
+          startMessage(logger, message, collapsed);
+          logger.log('%c prev state', 'color: #9E9E9E; font-weight: bold', transformer(prevState));
+          logger.log('%c mutation', 'color: #03A9F4; font-weight: bold', formattedMutation);
+          logger.log('%c next state', 'color: #4CAF50; font-weight: bold', transformer(nextState));
+          endMessage(logger);
+        }
+
+        prevState = nextState;
+      });
+    }
+
+    if (logActions) {
+      store.subscribeAction(function (action, state) {
+        if (actionFilter(action, state)) {
+          var formattedTime = getFormattedTime();
+          var formattedAction = actionTransformer(action);
+          var message = "action " + (action.type) + formattedTime;
+
+          startMessage(logger, message, collapsed);
+          logger.log('%c action', 'color: #03A9F4; font-weight: bold', formattedAction);
+          endMessage(logger);
+        }
+      });
+    }
+  }
+}
+
+function startMessage (logger, message, collapsed) {
+  var startMessage = collapsed
+    ? logger.groupCollapsed
+    : logger.group;
+
+  // render
+  try {
+    startMessage.call(logger, message);
+  } catch (e) {
+    logger.log(message);
+  }
+}
+
+function endMessage (logger) {
+  try {
+    logger.groupEnd();
+  } catch (e) {
+    logger.log('—— log end ——');
+  }
+}
+
+function getFormattedTime () {
+  var time = new Date();
+  return (" @ " + (pad(time.getHours(), 2)) + ":" + (pad(time.getMinutes(), 2)) + ":" + (pad(time.getSeconds(), 2)) + "." + (pad(time.getMilliseconds(), 3)))
+}
+
+function repeat (str, times) {
+  return (new Array(times + 1)).join(str)
+}
+
+function pad (num, maxLength) {
+  return repeat('0', maxLength - num.toString().length) + num
+}
+
+var index = {
   Store: Store,
   install: install,
-  version: '3.1.2',
+  version: '3.5.1',
   mapState: mapState,
   mapMutations: mapMutations,
   mapGetters: mapGetters,
   mapActions: mapActions,
-  createNamespacedHelpers: createNamespacedHelpers
+  createNamespacedHelpers: createNamespacedHelpers,
+  createLogger: createLogger
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (index_esm);
+/* harmony default export */ __webpack_exports__["default"] = (index);
 
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
