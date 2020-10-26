@@ -25,6 +25,6 @@ COSMOS is available to use in the following languages:
 - French
 - German
 
-These are provided with help from Lokalise.
+Thanks to Lokalise.
 
-[![Lokalise](/server/public/images/logos/lokalise_logo_colour_black_text.png =200)](https://lokalise.com/)
+<a href="https://lokalise.com/"><img src="server/public/images/logos/lokalise_logo_colour_black_text.png" alt="Lokalise" width="150" /></a>
