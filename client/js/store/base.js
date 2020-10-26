@@ -42,6 +42,10 @@ export const state = {
 		isOpen: false,
 		currentStep: 0,
 		project: {},
+	},
+	logos: {
+		primary: [],
+		secondary: []
 	}
 };
 
@@ -351,6 +355,15 @@ export const actions = {
 				return res.success;
 			})
 		.then(() => commit('STOP_LOADING'));
+	},
+
+	fetchLogos({ state, commit }) {
+		return Network.getLogos().then(res => {
+			if (res.success && res.logos) {
+				commit('SET_LOGOS', res.logos);
+			}
+			return res;
+		});
 	}
 
 }

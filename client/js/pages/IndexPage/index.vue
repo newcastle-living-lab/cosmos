@@ -71,6 +71,9 @@
 
 			</div>
 		</div>
+
+		<FooterLogos />
+
 	</div>
 </template>
 
@@ -82,6 +85,8 @@ import filter from 'lodash/filter';
 
 import AlertCircleIcon from 'vue-feather-icons/icons/AlertCircleIcon';
 
+import FooterLogos from "@/components/layout/FooterLogos.vue";
+
 import Network from "@/services/Network";
 import NewProject from './NewProject';
 import ImportProject from './ImportProject';
@@ -92,6 +97,7 @@ export default {
 		NewProject,
 		ImportProject,
 		AlertCircleIcon,
+		FooterLogos,
 	},
 
 	data() {
