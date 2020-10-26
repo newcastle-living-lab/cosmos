@@ -1,6 +1,6 @@
 <template>
 
-	<div class="sidebar-item" :class="'sidebar-item-type-' + definition.type">
+	<div class="sidebar-item" :class="'sidebar-item-type-' + (definition.type ? definition.type : 'general')">
 
 		<h3 @click="setCurrent()" class="sidebar-heading" :class="{ 'clickable': definition.type !== 'divider' }">{{ panelTitle }}</h3>
 

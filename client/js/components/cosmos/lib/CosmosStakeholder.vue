@@ -61,6 +61,7 @@ export default {
 
 	watch: {
 		'model.label': 'refreshPositions',
+		'isVisible': 'refreshPositions',
 	},
 
 	computed: {
@@ -208,16 +209,20 @@ export default {
 				description: this.$refs.description,
 			};
 
-			if ( ! refs.label) {
-				return;
-			}
+			// if ( ! refs.label) {
+			// 	return;
+			// }
+
+			console.log("refreshPositions");
+			// console.log("refreshPositions");
 
 			this.$nextTick(() => {
 				this.descriptionPosY =
 					this.pos.icon
 					+ 30
-					+ refs.label.getNode().getClientRect().height
+					+ parseInt(refs.label.getNode().getClientRect().height, 10)
 					+ 5;
+				console.log(this.descriptionPosY);
 			});
 		}
 	},

@@ -17,7 +17,7 @@
 					v-for="(panel, idx) in panels"
 					:key="panel.id"
 					:panel="panel"
-					:hasNext="idx < (numPanels-1)"
+					:hasNext="idx < (numPanels-1) && aspectEditId !== 'welcome'"
 					:currentPanel="currentPanel"
 					@set-current="setCurrentPanel"
 					@go-next="goNextPanel"
@@ -121,6 +121,13 @@ export default {
 			});
 
 			if (this.aspect.CONFIG.id === 'welcome') {
+				panels.unshift({
+					id: "models",
+					aspectId: aspectId,
+					modelPath: `project@config.models`,
+					editor: "project-models-editor",
+					title: 'app.models',
+				});
 				panels.unshift({
 					id: "meta",
 					aspectId: aspectId,

@@ -31,6 +31,7 @@
 import { get, set, sync, call, commit } from 'vuex-pathify';
 
 import map from 'lodash/map';
+import filter from 'lodash/filter';
 import findIndex from 'lodash/findIndex';
 
 import EditIcon from 'vue-feather-icons/icons/SettingsIcon';
@@ -60,6 +61,8 @@ export default {
 			'userCanEdit',
 			'project',
 		]),
+
+		models: get('project@config.models'),
 
 		isEditable() {
 			return (this.userCanEdit);
@@ -110,6 +113,14 @@ export default {
 					labelRoute,
 					summaryRoute,
 				};
+			});
+
+
+			tabs = filter(tabs, (tab) => {
+				if (tab.aspectConfig.type === 'model') {
+					return Array.isArray(this.models) && this.models.indexOf(tab.aspectConfig.id) > -1;
+				}
+				return true;
 			});
 
 			return tabs;

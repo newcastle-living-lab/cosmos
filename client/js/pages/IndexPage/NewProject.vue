@@ -7,10 +7,15 @@
 		<template v-if="userCanCreate">
 			<div class="card-body">
 				<div class="card-content">
-					<div class="form-group">
-						<label class="form-label" for="name">{{ $t('app.name') }}</label>
+
+					<VGroup name="name" :label="$t('app.name')">
 						<VInput type="text" id="name" v-model="newProject.name" />
-					</div>
+					</VGroup>
+
+					<VGroup name="models" :label="$t('app.models')">
+						<VCheckList :options="availableModels" v-model="newProject.config.models" />
+					</VGroup>
+				</VGroup>
 				</div>
 			</div>
 			<div class="card-footer">
@@ -60,11 +65,21 @@ export default {
 			newProject: {
 				name: null,
 				created_at: null,
+				config: {
+					models: [
+						"analytic_model",
+						"change_model",
+						"intervention_theory_model",
+						"moral_ordering_model",
+						"co_creation_of_service_model",
+					],
+				},
 			},
-		}
+		};
 	},
 
 	computed: {
+
 		...get([
 			'authUser',
 			'userCanCreate',
@@ -73,6 +88,16 @@ export default {
 		canCreateNewProject() {
 			return (this.newProject.name && this.newProject.name.length > 0)
 		},
+
+		availableModels() {
+			return [
+				{ value: "analytic_model", label: this.$t(`aspects.analytic_model.title`) },
+				{ value: "change_model", label: this.$t(`aspects.change_model.title`) },
+				{ value: "intervention_theory_model", label: this.$t(`aspects.intervention_theory_model.title`) },
+				{ value: "moral_ordering_model", label: this.$t(`aspects.moral_ordering_model.title`) },
+				{ value: "co_creation_of_service_model", label: this.$t(`aspects.co_creation_of_service_model.title`) },
+			];
+		}
 	},
 
 	methods: {
@@ -80,7 +105,16 @@ export default {
 		reset() {
 			this.newProject = {
 				name: null,
-				created_at: null
+				created_at: null,
+				config: {
+					models: [
+						"analytic_model",
+						"change_model",
+						"intervention_theory_model",
+						"moral_ordering_model",
+						"co_creation_of_service_model",
+					],
+				},
 			};
 		},
 

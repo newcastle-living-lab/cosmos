@@ -53,7 +53,8 @@
 		"try_again": "Try again",
 		"type": "Type",
 		"user_is_read_only": "Your user access level is read-only.",
-		"web_address": "Web address"
+		"web_address": "Web address",
+		"models": "Models"
 	},
 	"aspects": {
 		"analytic_model": {
