@@ -5469,6 +5469,24 @@ a.text-gray-medium:visited {
   vertical-align: -15%;
 }
 
+.footer.footer-logos {
+  margin-top: 3.2rem;
+  border-top: 0.1rem solid #bbb;
+  padding: 1.6rem 0;
+}
+
+.footer .logo-item {
+  display: inline-block;
+  margin: 0.8rem 1.2rem;
+}
+
+.footer .logo-item img {
+  height: 2.8rem;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+
 .user-guide {
   background: #fff5da;
   padding: 0.8rem;

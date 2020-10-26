@@ -60,7 +60,8 @@
 		"try_again": "Try again",
 		"add_new_item": "Add new item",
 		"add_new_actor": "Add new actor",
-		"maximum_items": "Maximum {count} items | Maxumum {count} item | Maximum {count} items"
+		"maximum_items": "Maximum {count} items | Maxumum {count} item | Maximum {count} items",
+		"models": "Models"
 	},
 	"user_guide": {
 		"show": "Show user guide",
