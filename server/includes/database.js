@@ -69,6 +69,14 @@ Database.prototype.updateTables = function() {
 
 	var db = this.db;
 
+	// Add config column
+	this.tableHasColumn('cosmos', 'config', function(colExists) {
+		if ( ! colExists) {
+			db.run('ALTER TABLE cosmos ADD COLUMN config TEXT');
+			console.log('Added "config" column to Cosmos.');
+		}
+	});
+
 	// No current updates to do
 
 }

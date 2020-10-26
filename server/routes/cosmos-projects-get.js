@@ -11,7 +11,7 @@ exports.handler = function(req, res) {
 	var projectId = req.params.projectId;
 
 	var db = database.getDb();
-	var sql = "SELECT id, name, slug, created_at, modified_at, created_by, folder, data, template FROM cosmos WHERE id = ?";
+	var sql = "SELECT id, name, slug, created_at, modified_at, created_by, data, config FROM cosmos WHERE id = ?";
 
 	db.get(sql, [projectId], function(err, row) {
 
