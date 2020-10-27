@@ -66,7 +66,7 @@ export default {
 
 		project = this.convertFromTemplate(project);
 
-		console.log(JSON.parse(JSON.stringify(project)));
+		console.debug(JSON.parse(JSON.stringify(project)));
 
 		return project;
 	},

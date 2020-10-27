@@ -34,6 +34,7 @@
         "last_saved_at": "Senast sparad {date_time}",
         "log_in": "Logga in",
         "maximum_items": "Högst {count} objekt | Maxumum {count} artikel | Högst {count} objekt",
+        "models": "Modeller",
         "name": "namn",
         "new_project": "Skapa nytt projekt",
         "next": "Nästa",
@@ -541,11 +542,13 @@
         "type_and_enter": "Skriv namnet nedan och tryck på enter."
     },
     "languages": {
+        "de": "tysk",
         "el": "Grekiska",
         "en_GB": "Engelska",
         "es": "Spanska",
         "et": "Estniska",
         "fi": "Finska",
+        "fr": "Franska",
         "hu": "Ungerska",
         "it": "Italienska",
         "nl": "Nederländska",

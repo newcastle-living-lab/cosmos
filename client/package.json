@@ -15,12 +15,13 @@
 		"admin-watch": "npm run admin-development -- --watch",
 		"admin-prod": "npm run admin-production",
 		"admin-production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --env.mixfile=webpack.mix.admin --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"cosmos-lokalise-get": "lokalise2 file download --unzip-to js/lang --format json --bundle-structure %LANG_ISO%.%FORMAT% --placeholder-format icu --original-filenames=false --replace-breaks=false"
+		"cosmos-lokalise-upload": "lokalise2 file upload --lang-iso en_GB --file js/lang/en.json",
+		"cosmos-lokalise-download": "lokalise2 file download --unzip-to js/lang --format json --bundle-structure %LANG_ISO%.%FORMAT% --placeholder-format icu --original-filenames=false --replace-breaks=false"
 	},
 	"author": "Newcastle University",
 	"license": "MIT",
 	"devDependencies": {
-		"@growthbunker/vueflags": "^0.1.13",
+		"@growthbunker/vueflags": "^0.1.14",
 		"@newcastle-living-lab/living-lab-admin": "^1.1.0",
 		"axios": "^0.19.2",
 		"colors.css": "^3.0.0",

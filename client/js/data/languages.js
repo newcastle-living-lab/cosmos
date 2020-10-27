@@ -12,4 +12,6 @@ export const SUPPORTED_LANGUAGES = [
 	'nl',
 	'pl',
 	'sv_SE',
+	'fr',
+	'de',
 ];

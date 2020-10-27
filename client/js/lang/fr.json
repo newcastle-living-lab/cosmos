@@ -1,0 +1,565 @@
+{
+    "activity_types": {
+        "organisation": "Organisation",
+        "service": "Un service",
+        "user": "Utilisateur"
+    },
+    "app": {
+        "add_new_actor": "Ajouter un nouvel acteur",
+        "add_new_item": "Ajouter un nouvel élément",
+        "all": "Tout",
+        "colour": "Couleur",
+        "create": "Créer",
+        "created_by": "",
+        "delete": "Effacer",
+        "description": "",
+        "download": "Télécharger",
+        "error": "Erreur",
+        "error_message": "Erreur: {message}",
+        "export": "Exportation",
+        "exporting": "Exporter",
+        "exporting_project": "Projet d'exportation",
+        "image": "Image",
+        "image_drag_prompt": "Faites glisser votre image ici pour commencer ou cliquez pour parcourir.",
+        "image_is_uploading": "Téléchargement de l'image",
+        "image_remove": "Supprimer l'image",
+        "image_upload_error": "Erreur de téléversement",
+        "import": "Importer",
+        "import_project": "Importer un projet",
+        "import_project_drag_hint": "Faites glisser votre projet CoSMoS ici pour commencer ou cliquez pour parcourir.",
+        "import_project_notes": "Remarque: vous serez le propriétaire du projet importé.",
+        "import_project_success": "Le projet a été importé avec succès!",
+        "just_mine": "Seulement le mien",
+        "label": "Étiquette",
+        "last_saved_at": "Dernier enregistrement à {date_time}",
+        "log_in": "",
+        "maximum_items": "Maximum {count} éléments | Maxumum {count} élément | {count} éléments au maximum",
+        "models": "Des modèles",
+        "name": "",
+        "new_project": "Créer un nouveau projet",
+        "next": "Suivant",
+        "no_projects": "Aucun projet trouvé.",
+        "ok": "D'accord",
+        "open_project": "Projet ouvert",
+        "please_wait_generate": "Veuillez patienter pendant la génération du fichier.",
+        "processing": "En traitement",
+        "project": "",
+        "project_save_success": "Projet enregistré!",
+        "save": "sauvegarder",
+        "saving": "Économie",
+        "scale_to_fit": "Échelle pour s'adapter",
+        "search": "Chercher",
+        "title": "",
+        "to_create_project": "pour créer un projet.",
+        "try_again": "Réessayer",
+        "type": "Type",
+        "user_is_read_only": "Votre niveau d'accès utilisateur est en lecture seule.",
+        "web_address": "Adresse web"
+    },
+    "aspects": {
+        "analytic_model": {
+            "dashboard": {
+                "macro": {
+                    "label": "Macro"
+                },
+                "meso": {
+                    "description": "Il peut y avoir plusieurs étapes à ce niveau.",
+                    "label": "Meso"
+                },
+                "micro": {
+                    "label": "Micro"
+                }
+            },
+            "definitions": {
+                "beneficiaries": {
+                    "hint": "Y a-t-il des bénéficiaires autres que l'utilisateur \/ les participants directs? Si oui, qui sont-ils?",
+                    "title": "Les bénéficiaires"
+                },
+                "broker": {
+                    "hint": "Existe-t-il un courtier actif entre les instigateurs du changement et les acteurs du changement? Si oui, qui sont-ils?",
+                    "title": "Courtier"
+                },
+                "changeMakers": {
+                    "hint": "Qui sont, ou étaient, les instigateurs qui ont initié votre activité d'intervention?",
+                    "title": "Changer les créateurs"
+                },
+                "changeTheorists": {
+                    "hint": "Qui sont les théoriciens du changement pour l'intervention?",
+                    "title": "Les théoriciens du changement"
+                },
+                "frontLineServiceDeliverer": {
+                    "hint": "Qui est le fournisseur de services de première ligne?",
+                    "title": "Prestataire de services de première ligne"
+                },
+                "instigatorsOfChange": {
+                    "hint": "Qui sont, ou étaient, les instigateurs qui ont initié votre activité d'intervention?",
+                    "title": "Instigateurs de changement"
+                },
+                "model": {
+                    "title": "Modèle"
+                },
+                "serviceDeliveryManager": {
+                    "hint": "Qui est le gestionnaire de la prestation de services responsable de l'intervention?",
+                    "title": "Gestionnaire de prestation de services"
+                },
+                "serviceOrganisationManager": {
+                    "hint": "Qui est le responsable de l'organisation de service pour l'intervention?",
+                    "title": "Responsable de l'organisation des services"
+                },
+                "servicePolicyMaker": {
+                    "hint": "Qui sont, ou ont été, les définisseurs des politiques de service et des principes selon lesquels le service fonctionne?",
+                    "title": "Créateur de politiques de service"
+                },
+                "subjectsOfChange": {
+                    "hint": "Quels sont les sujets de changement identifiés au sein de l'intervention?",
+                    "title": "Sujets de changement"
+                },
+                "user": {
+                    "hint": "Qui est l'utilisateur direct du service?",
+                    "title": "Client \/ Utilisateur"
+                },
+                "victims": {
+                    "hint": "Y a-t-il des victimes identifiées? Si oui, qui sont-ils?",
+                    "title": "Victimes"
+                }
+            },
+            "guide": {
+                "step01": "Dans ce modèle, nous considérons une initiative Cosie en termes d'un ensemble de rôles et des relations conversationnelles dans lesquelles ils s'engagent.",
+                "step02": "Premièrement, nous avons un fournisseur de services de première ligne et un client.",
+                "step03": "Le livreur a un gestionnaire ou un superviseur. Ce modèle d'un individu s'engageant dans deux conversations sera répété.",
+                "step04": "La livraison a lieu dans un contexte institutionnel formel ou informel.",
+                "step05": "Enfin, le service existe dans un cadre de stratégie plus large.",
+                "step06": "Ceci est censé être un modèle abstrait. Dans certains cas, il peut y avoir une organisation plate où la prestation, la gestion et la politique sont entreprises par tous les membres d'une petite équipe, dans d'autres cas, ils peuvent représenter des individus et des contextes distincts.",
+                "step07": "",
+                "step08": "Comment se déroule la communication entre eux?",
+                "step09": "Dans quelle mesure sont-ils coordonnés et cohérents?",
+                "step10": "En particulier, y a-t-il des flux d'informations et des conversations entre macro et micro qui ne sont pas médiatisés par le méso? Quelles sont les conséquences de cela?",
+                "step11": "Le modèle suivant considère l'agence de changement en termes de rôles et de conversations.",
+                "step12": "Un changement doit être initié, puis il est exécuté.",
+                "step13": "Les changements que nous envisageons concernent une personne, un lieu ou un environnement.",
+                "step14": "Les changements que nous envisageons sont souvent eux-mêmes complexes et concernent des situations complexes. Souvent, ils sont basés sur une théorie qui a été introduite ou négociée dans la situation.",
+                "step15": "Il existe un ensemble de bénéficiaires visés.",
+                "step16": "Mais il y a aussi de possibles dis-bénéficiaires ou victimes du changement.",
+                "step17": "Ce modèle est conçu comme une sonde sur le modèle de service initial pour identifier les acteurs spécifiques qui, à différentes étapes du développement de l'initiative, ont assumé un ou plusieurs de ces rôles d'agence de changement. Qui sont-ils?"
+            },
+            "title": "Modèle analytique"
+        },
+        "change_model": {
+            "dashboard": {
+                "ambiguity": "Ambiguïté",
+                "ambivalence": "Ambivalence",
+                "committing": "S'engager",
+                "execute": "Exécuter",
+                "first_order": "Premier ordre",
+                "fourth_order": "Quatrième ordre!",
+                "languaging": "\"Languaging\"",
+                "measure": "Mesure",
+                "plan": "Plan",
+                "risk": "Risque",
+                "second_order": "Deuxième ordre",
+                "sense_making": "Donner un sens",
+                "third_order": "Troisième ordre",
+                "vision": "Vision",
+                "zero_order": "Ordre zéro"
+            },
+            "definitions": {
+                "first_order": {
+                    "execute": {
+                        "label": "Comment le plan est-il exécuté?"
+                    },
+                    "measure": {
+                        "label": "Comment les observations et les mesures sont-elles enregistrées? Sinon, que faut-il activer pour ce faire?"
+                    },
+                    "plan": {
+                        "label": "Comment un plan a-t-il été mis en place pour concrétiser la vision?"
+                    },
+                    "vision": {
+                        "label": "Comment la vision et les objectifs ont-ils été définis?"
+                    }
+                },
+                "fourth_order": {
+                    "change_origin": {
+                        "label": "Quelle était l'origine du changement? Et quel a été le changement?"
+                    },
+                    "event_cause": {
+                        "label": "Que s'est-il passé pour permettre à cet événement de se produire?"
+                    },
+                    "unexpected_events": {
+                        "label": "Y a-t-il eu des cas où vous avez vu des événements inattendus se produire?"
+                    }
+                },
+                "model": {
+                    "title": "Modèle"
+                },
+                "second_order": {
+                    "committing": {
+                        "label": ""
+                    },
+                    "languaging": {
+                        "label": "Quels changements ont été apportés à la façon dont l'intervention a été comprise?"
+                    },
+                    "sense_making": {
+                        "label": "Quand révisez-vous les plans et la vision?"
+                    }
+                },
+                "third_order": {
+                    "processes": {
+                        "label": ""
+                    }
+                }
+            },
+            "guide": {
+                "step01": "Nous commençons avec le modèle standard d'action intentionnelle que nous connaissons tous très bien.",
+                "step02": "Mais nous avons tous eu l'expérience de regarder en arrière et de réaliser que les choses ont changé d'une manière vraiment fondamentale: nous parlons de changement de paradigme. Cela implique que nous nous sommes engagés à donner un nouveau sens à notre monde et cela signifie souvent que notre langue change.",
+                "step03": "Ces deux modes de fonctionnement différents sont parfois appelés premier et second ordre.",
+                "step04": "En termes de gestion, nous avons la gestion des risques d'une part et la résolution des contradictions et des ambiguïtés d'autre part.",
+                "step05": "Nous introduisons maintenant l'idée d'activités de troisième ordre qui permettent et soutiennent les transitions appropriées entre le premier et le deuxième travail, permettant un pas en arrière pour reconsidérer notre éthique et nos hypothèses et, lorsque c'est le cas, revenir au mode de planification pratique et de livraison.",
+                "step06": "Parfois, la réaction à l'ambiguïté et à la contradiction est une réaction émotionnelle: se battre ou voler qui est d'ordre zéro, ou inspiration et héroïsme que nous appellerons le quatrième ordre.",
+                "step07": "Ainsi, sur le côté droit de notre diagramme, nous avons le spectre du travail émotionnel et des réponses, tandis que du côté gauche, nous avons un travail conversationnel coproductif.",
+                "step08": "Ce modèle génère une série de questions ouvertes sur l'endroit où les différents travaux de premier et de deuxième ordre ont lieu dans votre initiative, quel travail émotionnel a été et est nécessaire et comment et où il est entrepris et comment et par qui sont les interventions de troisième ordre requises. entrepris?"
+            },
+            "title": "Changer de modèle"
+        },
+        "co_creation_of_service_model": {
+            "dashboard": {
+                "ethos": "Ethos",
+                "infrastructural_relationships": "Relations infrastructurelles, recours et installations",
+                "policy_law": "Politique et loi",
+                "resources": "Ressources",
+                "service_definition": "Plateforme de définition et de développement de services",
+                "service_delivery": "Plateforme de prestation de services",
+                "structural_relationships": "Relations structurelles et occasions"
+            },
+            "definitions": {
+                "beneficiary": {
+                    "hint": "Y a-t-il des bénéficiaires autres que l'utilisateur \/ les participants directs? Si oui, qui sont-ils?",
+                    "title": "Bénéficiaire"
+                },
+                "delivery": {
+                    "hint": "Qui est responsable du (des) mécanisme (s) de prestation, des canaux et des rôles dans votre projet pilote?",
+                    "title": "Livreur"
+                },
+                "deployment": {
+                    "hint": "Qui déploie \/ déployé et active \/ active ces processus et ressources?",
+                    "title": "Déployeur"
+                },
+                "drivers": {
+                    "body": {
+                        "hint": "Quels sont les moteurs et les motivations impliqués?",
+                        "label": "Pilotes et motivations"
+                    },
+                    "hint": "Quels étaient \/ sont les moteurs et les motivations du projet? S'agit-il d'une exigence légale, de la reconnaissance d'un besoin ou d'une demande, de saisir une opportunité, de remédier à une inégalité?",
+                    "title": "Pilotes et motivations"
+                },
+                "evaluation": {
+                    "hint": "Qui sont les évaluateurs et les administrateurs du service?",
+                    "title": "Évaluateur"
+                },
+                "extorg": {
+                    "hint": "Y a-t-il des acteurs, parties prenantes ou agences pertinents qui sont pertinents pour le pilote, mais qui restent en dehors de sa vision et de sa philosophie?",
+                    "title": "Organisations externes"
+                },
+                "extsvc": {
+                    "hint": "Quelles installations, ressources (techniques et humaines), services et sources d'information réutilisables ont été développés et utilisés à l'appui de ces processus de définition et de développement de services? Quelles ressources et services externes (par exemple, communications et médias sociaux) ont été \/ sont utilisés?",
+                    "title": "Services techniques externes"
+                },
+                "infsvc": {
+                    "hint": "Quels services, canaux et installations externes utilisez-vous dans la fourniture de vos services? Quelles sources d'information utilisez-vous? Quelles informations publiez-vous, à qui et en utilisant quels canaux et médias?",
+                    "title": "Services d'infrastructure"
+                },
+                "initiator": {
+                    "hint": "Qui sont, ou étaient, les instigateurs qui ont lancé votre activité pilote?",
+                    "title": "Initiateur"
+                },
+                "model": {
+                    "title": "Modèle"
+                },
+                "policyDef": {
+                    "hint": "Qui sont, ou ont été, les définisseurs des politiques de service et des principes selon lesquels le service fonctionne?",
+                    "title": "Définisseur de politique"
+                },
+                "specDes": {
+                    "hint": "Qui spécifie \/ spécifie et conçoit \/ conçoit les processus et les ressources de prestation de services?",
+                    "title": "Spécificateur et concepteur"
+                },
+                "user": {
+                    "hint": "Qui est l'utilisateur direct du service?",
+                    "title": "Utilisateur"
+                }
+            },
+            "title": "Co-création de modèle de service"
+        },
+        "community_reporting": {
+            "dashboard": {
+                "empty_set": "Il n'y a aucun élément de rapport de communauté pour ce projet.",
+                "manage": "Gérer les rapports de communauté",
+                "title": "Reporting communautaire"
+            },
+            "definitions": {
+                "data": {
+                    "hint": "Veuillez ajouter les rapports de communauté que votre projet peut avoir.",
+                    "title": "Reporting communautaire"
+                }
+            },
+            "title": "Reporting communautaire"
+        },
+        "documents": {
+            "dashboard": {
+                "empty_set": "Il n'y a aucun document ou fichier pour ce projet.",
+                "manage": "Gérer les documents et les fichiers",
+                "title": "Documents et fichiers"
+            },
+            "definitions": {
+                "data": {
+                    "hint": "Veuillez ajouter tous les documents et fichiers que votre projet peut avoir.",
+                    "title": "Documents et fichiers"
+                }
+            },
+            "title": "Des documents"
+        },
+        "intervention_theory_model": {
+            "dashboard": {
+                "wellbeing": "Bien-être"
+            },
+            "definitions": {
+                "innovation": {
+                    "items": {
+                        "label": "Quels aspects du cycle de vie des services sont importants pour votre innovation et votre changement?"
+                    },
+                    "title": "Innovation et changement"
+                },
+                "intervention": {
+                    "items": {
+                        "label": "Quel type d'intervention est en cours?"
+                    },
+                    "title": "Intervention"
+                },
+                "learning": {
+                    "items": {
+                        "label": "Comment se déroule l'apprentissage dans votre intervention?"
+                    },
+                    "title": "Apprentissage"
+                },
+                "model": {
+                    "title": "Modèle"
+                },
+                "wellbeing": {
+                    "items": {
+                        "label": "Quels aspects du bien-être humain et de l'environnement sont pertinents pour votre service? Certains sont-ils plus importants que d'autres?"
+                    },
+                    "title": "Bien-être humain et environnement"
+                }
+            },
+            "guide": {
+                "step01": "Les initiatives cocréatives que nous envisageons visent toutes à améliorer et à entretenir le bien-être. Ici, nous considérons le bien-être des individus, mais cela pourrait s'appliquer à des lieux ou à des environnements plus larges.",
+                "step02": "Le bien-être a un certain nombre de facettes différentes qui sont toutes interdépendantes.",
+                "step03": "Il interagit également avec les environnements physiques et sociaux.",
+                "step04": "Certains services ou interventions visent à réparer quelque chose qui a mal tourné et à rétablir le statu quo.",
+                "step05": "Mais les interventions ont d’autres fins.",
+                "step06": "Le processus d'intervention comporte un certain nombre d'étapes et de processus différents.",
+                "step07": "Enfin, pour que nos innovations soient durables, nous devons apprendre et nous améliorer.",
+                "step08": "Qui, quoi ou où est la cible de votre intervention?",
+                "step09": "Quels aspects du bien-être sont au centre de votre initiative?",
+                "step10": "Quels aspects du bien-être de votre sujet sont pertinents mais sortent du cadre de votre initiative?",
+                "step11": "Quels sont les aspects environnementaux pertinents?",
+                "step12": "Quelles combinaisons d'interventions, de la prévention à la transformation, sont pertinentes pour votre initiative?",
+                "step13": "Dans quelle mesure l'apprentissage et l'amélioration sont-ils intégrés à vos processus de gouvernance et de prestation de développement?"
+            },
+            "options": {
+                "innovation": {
+                    "development": "Développement",
+                    "facilitation": "Facilitation",
+                    "palliation": "Palliatif",
+                    "prevention": "La prévention",
+                    "rehabilitation": "Réhabilitation",
+                    "remedy": "Remède",
+                    "transformation": "Transformation"
+                },
+                "intervention": {
+                    "coordination_delivery": "Coordination et livraison",
+                    "governance": "Gouvernance",
+                    "identification": "Identification et planification",
+                    "learning": "Apprentissage",
+                    "management": "La gestion"
+                },
+                "learning": {
+                    "research_evidence": "Recherche et preuves",
+                    "service_improvement": "Amélioration du service",
+                    "trials": "Essais"
+                },
+                "wellbeing": {
+                    "faculties_skills": "Facultés et compétences",
+                    "mental_psych": "Mentale et psychologique",
+                    "physical_env": "Environnement physique",
+                    "physiological": "Physiologique",
+                    "socio_cultural_env": "Environnement socio-culturel",
+                    "socio_economic": "Socio-économique"
+                }
+            },
+            "title": "Modèle de théorie d'intervention"
+        },
+        "moral_ordering_model": {
+            "dashboard": {
+                "define_ethos": "Définir Ethos",
+                "define_ethos_items": "Valeurs\n Des principes\n Intentions\n Stratégies",
+                "deliver": "Livrer",
+                "experience": "Expérience",
+                "govern": "Gouverne",
+                "individual_cases": "Cas individuels",
+                "plan_manage": "Planifier et gérer",
+                "plan_manage_items": "Règles\n Ressources\n Processus\n Comptes",
+                "the_service_level": "Le niveau de service"
+            },
+            "definitions": {
+                "defineEthos": {
+                    "definedBy": {
+                        "label": "Comment ces valeurs se définissent-elles?"
+                    },
+                    "evidenceUrl": {
+                        "label": "Quelles preuves (externes) sont disponibles pour étayer cela?"
+                    },
+                    "title": "Définir Ethos",
+                    "values": {
+                        "label": "Quelles sont les valeurs importantes que l'intervention doit aborder?"
+                    }
+                },
+                "deliver": {
+                    "actors": {
+                        "label": "Par qui est-il délivré?"
+                    },
+                    "evidenceUrl": {
+                        "label": "Quelles preuves (externes) sont disponibles pour étayer cela?"
+                    },
+                    "method": {
+                        "label": "Comment l'intervention est-elle délivrée?"
+                    },
+                    "title": "Livrer"
+                },
+                "govern": {
+                    "actions": {
+                        "label": "Comment l'intervention est-elle régie? Quelles mesures sont mises en place pour garantir que les résultats sont conformes aux attentes?"
+                    },
+                    "actors": {
+                        "label": "Qui évalue cela?"
+                    },
+                    "evolution": {
+                        "label": "Quel impact cela a-t-il sur l'évolution du service?"
+                    },
+                    "improvements": {
+                        "label": "Comment les améliorations sont-elles identifiées? Comment sont-ils mis en œuvre?"
+                    },
+                    "outcomes": {
+                        "label": "Les résultats sont-ils incorporés dans les cibles et les mesures? Et si oui, à qui?"
+                    },
+                    "title": "Gouverne"
+                },
+                "model": {
+                    "title": "Modèle"
+                },
+                "planManageCurrent": {
+                    "actions": {
+                        "label": "Quelles actions sont actuellement entreprises dans le cadre du pilote?"
+                    },
+                    "actors": {
+                        "label": "Quelles sont les actions en cours?"
+                    },
+                    "evidenceUrl": {
+                        "label": "Quelles preuves (externes) sont disponibles pour étayer cela?"
+                    },
+                    "title": "Planifier et gérer - Actions en cours"
+                },
+                "planManagePrior": {
+                    "actions": {
+                        "label": "Quelles actions étaient entreprises avant l'intervention?"
+                    },
+                    "actors": {
+                        "label": "Qui était impliqué dans ces actions antérieures?"
+                    },
+                    "evidenceUrl": {
+                        "label": "Quelles preuves (externes) sont disponibles pour étayer cela?"
+                    },
+                    "title": "Planifier et gérer - Actions préalables"
+                }
+            },
+            "guide": {
+                "step01": "Il existe un certain nombre de processus de base impliqués dans une innovation co-créative. Le premier concerne la définition de l'éthos.",
+                "step02": "Le second concerne les activités de gestion et les produits.",
+                "step03": "L'ordre moral concerne les personnes qui participent aux activités. Dans le cas de votre initiative, qui est impliqué dans ces processus? Où et quand ont-ils lieu? Comment communiquent-ils et comment sont-ils enregistrés?",
+                "step04": "Grâce au leadership, à la planification et à la conception, les services ou les initiatives sont fournis et expérimentés.",
+                "step05": "Encore une fois, qui est impliqué ici et obtient-il une participation aux deux premières séries d'activités?",
+                "step06": "Plutôt que de simplement boucler la boucle avec un simple processus d'évaluation, nous suggérons que, dans les systèmes de bien-être et de soins coproductifs, la gouvernance implique tous les acteurs des relations identifiées ici, la participation à la réponse aux questions définies dans le modèle d'ordre moral.",
+                "step07": "La gouvernance a lieu au niveau de la relation client de service individuel.",
+                "step08": "Il a également lieu au niveau du service global.",
+                "step09": "Comment les processus de gouvernance, au sens où nous les décrivons ici, se déroulent-ils dans votre initiative?"
+            },
+            "options": {
+                "sources": {
+                    "meeting": "Réunion",
+                    "other": "Autre",
+                    "policy": "Politique"
+                }
+            },
+            "title": "Ordre moral"
+        },
+        "social_media": {
+            "dashboard": {
+                "title": "Des médias sociaux"
+            },
+            "definitions": {
+                "data": {
+                    "title": "Des médias sociaux"
+                }
+            },
+            "title": "Des médias sociaux"
+        },
+        "theory_of_change": {
+            "dashboard": {
+                "empty_set": "Il n'y a pas de théorie des éléments de changement pour ce projet.",
+                "manage": "Gérer la théorie du changement",
+                "title": "Théorie du changement"
+            },
+            "definitions": {
+                "data": {
+                    "hint": "Veuillez ajouter toutes les théories du changement que votre projet pourrait avoir.",
+                    "title": "Théorie du changement"
+                }
+            },
+            "title": "Théorie du changement"
+        },
+        "welcome": {
+            "dashboard": {
+                "summary": "Créé par {user} le {date_time}"
+            },
+            "title": "Bienvenue"
+        }
+    },
+    "hints": {
+        "editor_double_click_edit": "Double-cliquez sur un élément pour le modifier et entrez pour enregistrer",
+        "social_facebook_add": "Ajoutez des liens complets (URL) vers des groupes ou des pages Facebook.",
+        "social_instagram_add": "Entrez un hashtag Instagram, avec ou sans le #. Appuyez sur Entrée pour ajouter.",
+        "social_twitter_add": "Saisissez un hashtag Twitter, avec ou sans le #. Appuyez sur Entrée pour ajouter.",
+        "social_youtube_add": "Entrez un lien vers une vidéo YouTube et appuyez sur Entrée pour l'ajouter.",
+        "type_and_enter": "Tapez le nom ci-dessous et appuyez sur Entrée."
+    },
+    "languages": {
+        "de": "allemand",
+        "el": "grec",
+        "en_GB": "Anglais",
+        "es": "Espagnol",
+        "et": "Estonien",
+        "fi": "Finlandais",
+        "fr": "français",
+        "hu": "Hongrois",
+        "it": "Italien",
+        "nl": "Néerlandais",
+        "pl": "Polonais",
+        "sv_SE": "Suédois"
+    },
+    "user_guide": {
+        "back": "Retour",
+        "close": "proche",
+        "next": "Suivant",
+        "show": "Afficher le guide de l'utilisateur",
+        "skip": "Passer le guide de l'utilisateur"
+    }
+}

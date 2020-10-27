@@ -16,8 +16,6 @@
 					{{ $t(`languages.${lang}`) }}
 				</a>
 			</li>
-			 <!-- <li class="menu-item"><a href="javascript:;">Language 1</a></li>
-			 <li class="menu-item"><a href="javascript:;">Language 2</a></li> -->
 		</ul>
 	</div>
 

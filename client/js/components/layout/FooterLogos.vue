@@ -9,7 +9,7 @@
 					<div class="text-center">
 						<component
 							v-for="(logo, idx) in logos.primary"
-							:key="idx"
+							:key="'p' + idx"
 							:is="logo.url ? 'a' : 'span'"
 							:href="logo.url ? logo.url : false"
 							:rel="logo.url ? 'noopener' : false"
@@ -21,7 +21,7 @@
 						</component>
 						<component
 							v-for="(logo, idx) in logos.secondary"
-							:key="idx"
+							:key="'s' + idx"
 							:is="logo.url ? 'a' : 'span'"
 							:href="logo.url ? logo.url : false"
 							:rel="logo.url ? 'noopener' : false"

@@ -34,6 +34,7 @@
         "last_saved_at": "Laatst opgeslagen om {date_time}",
         "log_in": "Log in",
         "maximum_items": "Maximaal {count} items | Maxumum {count} item | Maximaal {count} items",
+        "models": "Modellen",
         "name": "Naam",
         "new_project": "Maak een nieuw project",
         "next": "De volgende",
@@ -541,11 +542,13 @@
         "type_and_enter": "Typ de naam hieronder en druk op enter."
     },
     "languages": {
+        "de": "Duitse",
         "el": "Grieks",
         "en_GB": "Engels",
         "es": "Spaans",
         "et": "Ests",
         "fi": "Fins",
+        "fr": "Frans",
         "hu": "Hongaars",
         "it": "Italiaans",
         "nl": "Nederlands",
