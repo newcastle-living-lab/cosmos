@@ -34,6 +34,7 @@
         "last_saved_at": "Viimati salvestatud {date_time}",
         "log_in": "Logi sisse",
         "maximum_items": "Maksimaalselt {count} üksust | Maksimaalne üksus {count} | Maksimaalselt {count} üksust",
+        "models": "Mudelid",
         "name": "Nimi",
         "new_project": "Looge uus projekt",
         "next": "Järgmine",
@@ -541,11 +542,13 @@
         "type_and_enter": "Sisestage nimi allpool ja vajutage sisestusklahvi."
     },
     "languages": {
+        "de": "Saksa keel",
         "el": "Kreeka keel",
         "en_GB": "Inglise",
         "es": "Hispaania keel",
         "et": "Eestlane",
         "fi": "Soome keel",
+        "fr": "Prantsuse keel",
         "hu": "Ungari keel",
         "it": "Itaalia keel",
         "nl": "Hollandi",

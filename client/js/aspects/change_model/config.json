@@ -1,5 +1,6 @@
 {
 	"id": "change_model",
+	"type": "model",
 	"title": "Change Model",
 	"routeName": "model",
 	"dashboardComponent": "TheoryOfChangeDashboard",

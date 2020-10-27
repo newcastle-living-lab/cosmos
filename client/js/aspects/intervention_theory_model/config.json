@@ -1,5 +1,6 @@
 {
 	"id": "intervention_theory_model",
+	"type": "model",
 	"title": "Intervention Theory Model",
 	"routeName": "model",
 	"dashboardComponent": "InterventionDashboard",

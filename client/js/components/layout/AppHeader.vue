@@ -156,7 +156,7 @@ export default {
 		]),
 
 		hasProject() {
-			return (this.route && this.route.params.id);
+			return (this.route && this.route.params.id ? true : false);
 		},
 
 		accountUrl() {

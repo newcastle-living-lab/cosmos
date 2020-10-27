@@ -4,6 +4,10 @@
 		"type": "model"
 	},
 	{
+		"id": "macro_meso_micro",
+		"type": "divider"
+	},
+	{
 		"id": "serviceDeliveryManager",
 		"type": "stakeholder"
 	},
@@ -22,6 +26,10 @@
 	{
 		"id": "servicePolicyMaker",
 		"type": "stakeholder"
+	},
+	{
+		"id": "innovation_brokerage",
+		"type": "divider"
 	},
 	{
 		"id": "instigatorsOfChange",

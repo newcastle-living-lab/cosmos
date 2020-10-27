@@ -1,5 +1,6 @@
 {
 	"id": "co_creation_of_service_model",
+	"type": "model",
 	"title": "Co-Creation of Service Model",
 	"routeName": "model",
 	"dashboardComponent": "ServiceDashboard",

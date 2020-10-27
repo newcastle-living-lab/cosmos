@@ -77,6 +77,7 @@ handlers.push(function(req, res, next) {
 		$name: decodedBody.name,
 		$modified_at: decodedBody.modified_at,
 		$data: JSON.stringify(decodedBody.data),
+		$config: JSON.stringify(decodedBody.config),
 	};
 
 	if ( ! params.$id) {
@@ -87,7 +88,7 @@ handlers.push(function(req, res, next) {
 	}
 
 	var db = database.getDb();
-	var sql = "UPDATE `cosmos` SET name = $name, modified_at = $modified_at, data = $data WHERE id = $id";
+	var sql = "UPDATE `cosmos` SET name = $name, modified_at = $modified_at, data = $data, config = $config WHERE id = $id";
 
 	db.run(sql, params, function(error) {
 

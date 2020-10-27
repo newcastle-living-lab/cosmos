@@ -9,6 +9,8 @@ import it from "./it.json";
 import nl from "./nl.json";
 import pl from "./pl.json";
 import sv_SE from "./sv_SE.json";
+import fr from "./fr.json";
+import de from "./de.json";
 
 export default {
 	el,
@@ -21,4 +23,6 @@ export default {
 	nl,
 	pl,
 	sv_SE,
+	fr,
+	de,
 }

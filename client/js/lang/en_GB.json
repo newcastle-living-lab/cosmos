@@ -34,6 +34,7 @@
         "last_saved_at": "Last saved at {date_time}",
         "log_in": "Log in",
         "maximum_items": "Maximum {count} items | Maxumum {count} item | Maximum {count} items",
+        "models": "Models",
         "name": "Name",
         "new_project": "Create new project",
         "next": "Next",
@@ -541,11 +542,13 @@
         "type_and_enter": "Type the name below and press enter."
     },
     "languages": {
+        "de": "German",
         "el": "Greek",
         "en_GB": "English",
         "es": "Spanish",
         "et": "Estonian",
         "fi": "Finnish",
+        "fr": "French",
         "hu": "Hungarian",
         "it": "Italian",
         "nl": "Dutch",

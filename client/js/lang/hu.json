@@ -34,6 +34,7 @@
         "last_saved_at": "Utoljára mentve: {date_time}",
         "log_in": "Belépés",
         "maximum_items": "Legfeljebb {count} elem | Maximális {count} elem | Legfeljebb {count} elem",
+        "models": "Modellek",
         "name": "Név",
         "new_project": "Hozzon létre új projektet",
         "next": "Következő",
@@ -541,11 +542,13 @@
         "type_and_enter": "Írja be az alábbi nevet, és nyomja meg az Enter billentyűt."
     },
     "languages": {
+        "de": "német",
         "el": "görög",
         "en_GB": "angol",
         "es": "spanyol",
         "et": "észt",
         "fi": "finn",
+        "fr": "Francia",
         "hu": "Magyar",
         "it": "olasz",
         "nl": "holland",

@@ -34,6 +34,7 @@
         "last_saved_at": "Viimeksi tallennettu {date_time}",
         "log_in": "Kirjaudu sisään",
         "maximum_items": "Enintään {count} kohdetta | Suurin {count} kohde | Enintään {count} kohdetta",
+        "models": "Mallit",
         "name": "Nimi",
         "new_project": "Luo uusi projekti",
         "next": "Seuraava",
@@ -541,11 +542,13 @@
         "type_and_enter": "Kirjoita nimi alla ja paina Enter."
     },
     "languages": {
+        "de": "Saksan kieli",
         "el": "Kreikka",
         "en_GB": "Englanti",
         "es": "Espanja",
         "et": "Virolainen",
         "fi": "Suomalainen",
+        "fr": "Ranskan kieli",
         "hu": "Unkarin kieli",
         "it": "italialainen",
         "nl": "Hollannin kieli",

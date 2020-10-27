@@ -1,0 +1,19 @@
+.footer {
+
+	&.footer-logos {
+		margin-top: $unit-16;
+		border-top: $unit-h solid $border-color;
+		padding: $unit-8 0;
+	}
+
+	.logo-item {
+		display: inline-block;
+		margin: $unit-4 $unit-6;
+		img {
+			height: $unit-7 * 2;
+			width: auto;
+			max-width: 100%;
+			display: block;
+		}
+	}
+}

@@ -34,6 +34,7 @@
         "last_saved_at": "Guardado por última vez a las {date_time}",
         "log_in": "Iniciar sesión",
         "maximum_items": "Máximo {count} elementos | Maxumum {count} elemento | Máximo de {count} elementos",
+        "models": "Modelos",
         "name": "Nombre",
         "new_project": "Crear nuevo proyecto",
         "next": "próximo",
@@ -541,11 +542,13 @@
         "type_and_enter": "Escriba el nombre a continuación y presione Intro."
     },
     "languages": {
+        "de": "alemán",
         "el": "Griego",
         "en_GB": "Inglés",
         "es": "Español",
         "et": "Estonio",
         "fi": "Finlandés",
+        "fr": "francés",
         "hu": "Húngaro",
         "it": "Italiano",
         "nl": "Holandés",

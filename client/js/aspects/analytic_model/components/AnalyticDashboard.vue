@@ -267,6 +267,7 @@ export default {
 			config.sdm = {
 				definitionName: 'serviceDeliveryManager',
 				config: {
+					description: this.$t('aspects.analytic_model.definitions.serviceDeliveryManager.title'),
 					group: {
 						x: 345,
 						y: 225,
@@ -277,6 +278,7 @@ export default {
 			config.flsd = {
 				definitionName: 'frontLineServiceDeliverer',
 				config: {
+					description: this.$t('aspects.analytic_model.definitions.frontLineServiceDeliverer.title'),
 					group: {
 						x: 500,
 						y: 225,
@@ -287,6 +289,7 @@ export default {
 			config.user = {
 				definitionName: 'user',
 				config: {
+					description: this.$t('aspects.analytic_model.definitions.user.title'),
 					group: {
 						x: 655,
 						y: 225,
@@ -297,6 +300,7 @@ export default {
 			config.som = {
 				definitionName: 'serviceOrganisationManager',
 				config: {
+					description: this.$t('aspects.analytic_model.definitions.serviceOrganisationManager.title'),
 					group: {
 						x: 190,
 						y: 225,
@@ -307,6 +311,7 @@ export default {
 			config.spm = {
 				definitionName: 'servicePolicyMaker',
 				config: {
+					description: this.$t('aspects.analytic_model.definitions.servicePolicyMaker.title'),
 					group: {
 						x: 35,
 						y: 225,
@@ -336,6 +341,7 @@ export default {
 			config.ioc = {
 				definitionName: 'instigatorsOfChange',
 				config: {
+					description: this.$t('aspects.analytic_model.definitions.instigatorsOfChange.title'),
 					group: {
 						x: 0,
 						y: 270,
@@ -346,6 +352,7 @@ export default {
 			config.cm = {
 				definitionName: 'changeMakers',
 				config: {
+					description: this.$t('aspects.analytic_model.definitions.changeMakers.title'),
 					group: {
 						x: 290,
 						y: 270,
@@ -356,6 +363,7 @@ export default {
 			config.soc = {
 				definitionName: 'subjectsOfChange',
 				config: {
+					description: this.$t('aspects.analytic_model.definitions.subjectsOfChange.title'),
 					group: {
 						x: 145,
 						y: 405,
@@ -366,6 +374,7 @@ export default {
 			config.br = {
 				definitionName: 'broker',
 				config: {
+					description: this.$t('aspects.analytic_model.definitions.broker.title'),
 					group: {
 						x: 145,
 						y: 135,
@@ -376,6 +385,7 @@ export default {
 			config.ct = {
 				definitionName: 'changeTheorists',
 				config: {
+					description: this.$t('aspects.analytic_model.definitions.changeTheorists.title'),
 					group: {
 						x: 290,
 						y: 0,
@@ -386,6 +396,7 @@ export default {
 			config.be = {
 				definitionName: 'beneficiaries',
 				config: {
+					description: this.$t('aspects.analytic_model.definitions.beneficiaries.title'),
 					group: {
 						x: 290,
 						y: 540,
@@ -396,6 +407,7 @@ export default {
 			config.v = {
 				definitionName: 'victims',
 				config: {
+					description: this.$t('aspects.analytic_model.definitions.victims.title'),
 					group: {
 						x: 0,
 						y: 540,

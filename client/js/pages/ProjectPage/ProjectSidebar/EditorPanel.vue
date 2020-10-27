@@ -1,10 +1,10 @@
 <template>
 
-	<div class="sidebar-item">
+	<div class="sidebar-item" :class="'sidebar-item-type-' + (definition.type ? definition.type : 'general')">
 
-		<h3 @click="setCurrent()" class="sidebar-heading clickable">{{ panelTitle }}</h3>
+		<h3 @click="setCurrent()" class="sidebar-heading" :class="{ 'clickable': definition.type !== 'divider' }">{{ panelTitle }}</h3>
 
-		<div class="sidebar-main" v-if="isVisible">
+		<div class="sidebar-main" v-if="isVisible && definition.type !== 'divider'">
 
 			<div class="sidebar-hint" v-if="hint">
 				<info-icon size="16" />

@@ -11,6 +11,7 @@
 		<!-- <v-ellipse ref="circle" :config="circleConfig" /> -->
 		<CosmosStakeholderIcon ref="icon" v-bind="iconConfig" />
 		<v-text ref="label" :config="labelConfig" />
+		<v-text ref="description" :config="descriptionConfig" v-if="descriptionConfig" />
 		<a :href="url" target="_blank" ref="link"></a>
 	</v-group>
 
@@ -42,6 +43,7 @@ export default {
 
 	data() {
 		return {
+			descriptionPosY: 0,
 			pos: {
 				width: 100,
 				icon: 70,
@@ -57,9 +59,10 @@ export default {
 		}
 	},
 
-/*	watch: {
-		'value': 'refreshPositions',
-	},*/
+	watch: {
+		'model.label': 'refreshPositions',
+		'isVisible': 'refreshPositions',
+	},
 
 	computed: {
 
@@ -146,6 +149,29 @@ export default {
 			return config;
 		},
 
+		descriptionConfig() {
+
+			var label = this.config && this.config.description ? this.config.description : false;
+			if (label === false) {
+				return false;
+			}
+
+			var config = {
+				fill: '#999999',
+				text: label,
+				fontSize: 11,
+				fontFamily: this.options.fontFamily,
+				lineHeight: 1.3,
+				x: -15,
+				y: this.descriptionPosY,	//this.pos.icon + 30 + 20,
+				width: this.pos.width + 30,
+				padding: 0,
+				align: 'center',
+			}
+
+			return config;
+		},
+
 	},
 
 	methods: {
@@ -168,31 +194,41 @@ export default {
 			}
 		},
 
-		// refreshPositions() {
-		// 	if ( ! this.circle) {
-		// 		return;
-		// 	}
-		// 	this.$nextTick(() => {
+		refreshPositions() {
 
-		// 		let labelHeight = 15;
-		// 		let iconHeight = 70;
+			if ( ! this.isVisible) {
+				return;
+			}
 
-		// 		if (nodeRefs.label && nodeRefs.icon && this.value.label && this.value.type) {
-		// 			labelHeight = nodeRefs.label.getNode().getClientRect().height;
-		// 			iconHeight = nodeRefs.icon.getNode().getClientRect().height;
-		// 		}
+			if ( ! this.descriptionConfig) {
+				return;
+			}
 
-		// 		this.circlePos = {
-		// 			x: this.pos.width / 2,
-		// 			y: Math.floor((iconHeight + labelHeight) / 2),	//Math.floor((this.pos.icon + labelHeight) / 2),
-		// 			radius: {
-		// 				x: this.pos.width * 0.75,
-		// 				y: (iconHeight + 15),
-		// 			}
-		// 		}
+			var refs = {
+				label: this.$refs.label,
+				description: this.$refs.description,
+			};
 
-		// 	});
-		// }
+			// if ( ! refs.label) {
+			// 	return;
+			// }
+
+			console.log("refreshPositions");
+			// console.log("refreshPositions");
+
+			this.$nextTick(() => {
+				this.descriptionPosY =
+					this.pos.icon
+					+ 30
+					+ parseInt(refs.label.getNode().getClientRect().height, 10)
+					+ 5;
+				console.log(this.descriptionPosY);
+			});
+		}
+	},
+
+	mounted() {
+		this.refreshPositions();
 	}
 
 }

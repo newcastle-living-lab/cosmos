@@ -21,9 +21,10 @@ exports.handler = function(req, res, next) {
 		$modified_at: null,
 		$created_by: authUserEmail,
 		$data: JSON.stringify({}),
+		$config: JSON.stringify(decodedBody.config),
 	};
 
-	var sql = "INSERT INTO `cosmos` (name, created_at, modified_at, created_by, data) VALUES ($name, $created_at, $modified_at, $created_by, $data)";
+	var sql = "INSERT INTO `cosmos` (name, created_at, modified_at, created_by, data, config) VALUES ($name, $created_at, $modified_at, $created_by, $data, $config)";
 	var db = database.getDb();
 	var stmt = db.prepare(sql);
 

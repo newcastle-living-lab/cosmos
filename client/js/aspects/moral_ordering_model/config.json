@@ -1,5 +1,6 @@
 {
 	"id": "moral_ordering_model",
+	"type": "model",
 	"title": "Moral Ordering",
 	"routeName": "model",
 	"dashboardComponent": "MoralDashboard",

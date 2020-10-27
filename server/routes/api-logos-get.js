@@ -17,7 +17,7 @@ handlers.push(function(req, res) {
 		],
 		secondary: [],
 	};
-/*
+
 	const config = require(path.join(process.cwd(), "config", "config.json"));
 	const allLogos = require(path.join(process.cwd(), "config", "logos.json"));
 	const hasAllowList = (typeof(config.logos) !== 'undefined' && Array.isArray(config.logos) && config.logos.length > 0);
@@ -28,7 +28,7 @@ handlers.push(function(req, res) {
 			logos.secondary.push(allLogos[name]);
 		}
 	}
-*/
+
 	return res.send({
 		'success': true,
 		'logos': logos

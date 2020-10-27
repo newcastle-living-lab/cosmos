@@ -9,7 +9,7 @@ Vue.use(Vuex)
 function builder(params) {
 
 	const populatedState = {...state, ...params};
-	console.log(populatedState);
+	console.debug(populatedState);
 
 	return new Vuex.Store({
 		plugins: [ pathify.plugin ],

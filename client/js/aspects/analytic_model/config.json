@@ -1,5 +1,6 @@
 {
 	"id": "analytic_model",
+	"type": "model",
 	"title": "Analytic Model",
 	"routeName": "model",
 	"dashboardComponent": "AnalyticDashboard",

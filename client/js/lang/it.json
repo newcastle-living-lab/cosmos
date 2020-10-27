@@ -34,6 +34,7 @@
         "last_saved_at": "Ultimo salvataggio alle {date_time}",
         "log_in": "Accesso",
         "maximum_items": "{count} massimo di {count} elementi | Numero massimo {count} elemento | {count} massimo di {count} elementi",
+        "models": "Modelli",
         "name": "Nome",
         "new_project": "Crea nuovo progetto",
         "next": "Il prossimo",
@@ -541,11 +542,13 @@
         "type_and_enter": "Digita il nome di seguito e premi invio."
     },
     "languages": {
+        "de": "Tedesco",
         "el": "Greco",
         "en_GB": "Inglese",
         "es": "Spagnolo",
         "et": "Estone",
         "fi": "Finlandese",
+        "fr": "francese",
         "hu": "Ungherese",
         "it": "Italiano",
         "nl": "Olandese",

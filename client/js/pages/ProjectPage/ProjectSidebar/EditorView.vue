@@ -17,7 +17,7 @@
 					v-for="(panel, idx) in panels"
 					:key="panel.id"
 					:panel="panel"
-					:hasNext="idx < (numPanels-1)"
+					:hasNext="idx < (numPanels-1) && aspectEditId !== 'welcome'"
 					:currentPanel="currentPanel"
 					@set-current="setCurrentPanel"
 					@go-next="goNextPanel"
@@ -122,6 +122,13 @@ export default {
 
 			if (this.aspect.CONFIG.id === 'welcome') {
 				panels.unshift({
+					id: "models",
+					aspectId: aspectId,
+					modelPath: `project@config.models`,
+					editor: "project-models-editor",
+					title: 'app.models',
+				});
+				panels.unshift({
 					id: "meta",
 					aspectId: aspectId,
 					modelPath: `project`,
@@ -156,10 +163,17 @@ export default {
 			// find index of current panel ID
 			var idx = findIndex(this.panels, { id: id }),
 				nextIdx = 0;
+
 			// Increment to get next one
 			if (idx < this.numPanels-1) {
 				nextIdx = idx + 1;
 			}
+
+			// Skip 'divider' types
+			if (this.panels[nextIdx].definition.type === 'divider') {
+				nextIdx++;
+			}
+
 			this.setCurrentPanel(this.panels[nextIdx].id);
 		}
 	},

@@ -42,6 +42,10 @@ export const state = {
 		isOpen: false,
 		currentStep: 0,
 		project: {},
+	},
+	logos: {
+		primary: [],
+		secondary: []
 	}
 };
 
@@ -127,7 +131,7 @@ export const mutations = {
 		};
 	},
 
-	INITIAL_SAVE_HASH(sate) {
+	INITIAL_SAVE_HASH(state) {
 		state.lastSave.hash = md5(JSON.stringify(state.project));
 	},
 
@@ -304,17 +308,17 @@ export const actions = {
 
 	doAutoSave({ state, commit, dispatch }) {
 
-		var isEditing = (state.aspectEditId !== false);
-		var hasProject = (state.project && state.project.id);
-		var hasLastSave = (state.lastSave.hash);
+		const isEditing = (state.aspectEditId !== false);
+		const hasProject = (state.project && state.project.id ? true : false);
+		const hasLastSave = (state.lastSave.hash !== null);
 
 		if ( ! isEditing || ! hasProject || ! hasLastSave) {
 			commit('AUTO_SAVE_WAIT', false);
 			return;
 		}
 
-		var newHash = md5(JSON.stringify(state.project));
-		var isDiff = (newHash !== state.lastSave.hash);
+		const newHash = md5(JSON.stringify(state.project));
+		const isDiff = (newHash !== state.lastSave.hash);
 
 		if ( ! isDiff) {
 			commit('AUTO_SAVE_WAIT', false);
@@ -326,7 +330,7 @@ export const actions = {
 		dispatch('doAutoSaveAction');
 	},
 
-	doAutoSaveAction: debounce(function({ dispatch }) {
+	doAutoSaveAction: debounce(function({ state, dispatch }) {
 		if (state.project && state.project.id) {
 			dispatch('saveProject');
 		}
@@ -351,6 +355,15 @@ export const actions = {
 				return res.success;
 			})
 		.then(() => commit('STOP_LOADING'));
+	},
+
+	fetchLogos({ state, commit }) {
+		return Network.getLogos().then(res => {
+			if (res.success && res.logos) {
+				commit('SET_LOGOS', res.logos);
+			}
+			return res;
+		});
 	}
 
 }

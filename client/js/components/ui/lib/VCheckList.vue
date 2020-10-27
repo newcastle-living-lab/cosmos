@@ -41,16 +41,7 @@ export default {
 			}
 		}
 
-	},
-/*
-	methods: {
-		onChange() {
-			if (this.value !== this.val) {
-				this.$emit("input", this.val);
-				this.$emit("changed", this.val);
-			}
-		}
-	}*/
+	}
 }
 
 </script>

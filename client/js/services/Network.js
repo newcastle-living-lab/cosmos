@@ -62,6 +62,11 @@ export default {
 	importProject(formData) {
 		return cosmosHttp.post('import-project', formData)
 			.then(res => res.data)
+	},
+
+	getLogos() {
+		return authHttp.get('/logos')
+			.then(res => res.data);
 	}
 
 }

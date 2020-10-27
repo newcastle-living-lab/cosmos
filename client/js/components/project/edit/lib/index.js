@@ -1,4 +1,5 @@
 import MetaEditor from "./MetaEditor";
+import ProjectModelsEditor from "./ProjectModelsEditor";
 import ExternalsEditor from "./ExternalsEditor";
 import ExternalsEditorItem from "./ExternalsEditorItem";
 import GroupEditor from "./GroupEditor";
@@ -11,6 +12,7 @@ import StakeholderMultiEditor from "./StakeholderMultiEditor";
 
 export {
 	MetaEditor,
+	ProjectModelsEditor,
 	ExternalsEditor,
 	ExternalsEditorItem,
 	GroupEditor,

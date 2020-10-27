@@ -89,7 +89,7 @@ const Trans = {
 		// 	return Trans.setI18nLanguageInServices(lang)
 		// })
 		return Trans.loadLanguageFile(lang).then(msgs => {
-			console.log(msgs);
+			// console.log(msgs);
 			i18n.setLocaleMessage(lang, msgs.default || msgs)
 			return Trans.setI18nLanguageInServices(lang)
 		});
@@ -115,7 +115,7 @@ const Trans = {
 	* @return {boolean}
 	*/
 	isLangSupported (lang) {
-		return Trans.supportedLanguages().includes(lang)
+		return Trans.supportedLanguages().includes(lang);
 	},
 
 
