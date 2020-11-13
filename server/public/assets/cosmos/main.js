@@ -14091,7 +14091,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _services_Trans__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/services/Trans */ "./js/services/Trans.js");
+/* harmony import */ var v_click_outside__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! v-click-outside */ "./node_modules/v-click-outside/dist/v-click-outside.umd.js");
+/* harmony import */ var v_click_outside__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(v_click_outside__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _services_Trans__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/services/Trans */ "./js/services/Trans.js");
 //
 //
 //
@@ -14116,18 +14118,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  directives: {
+    clickOutside: v_click_outside__WEBPACK_IMPORTED_MODULE_0___default.a.directive
+  },
+  data: function data() {
+    return {
+      showMenu: false
+    };
+  },
   computed: {
     supportedLanguages: function supportedLanguages() {
-      return _services_Trans__WEBPACK_IMPORTED_MODULE_0__["default"].supportedLanguages();
+      return _services_Trans__WEBPACK_IMPORTED_MODULE_1__["default"].supportedLanguages();
     },
     currentLanguage: function currentLanguage() {
-      return _services_Trans__WEBPACK_IMPORTED_MODULE_0__["default"].currentLanguage();
+      return _services_Trans__WEBPACK_IMPORTED_MODULE_1__["default"].currentLanguage();
     }
   },
   methods: {
+    toggleMenu: function toggleMenu() {
+      if (this.showMenu) {
+        console.log("toggle: hiding menu");
+        this.showMenu = false;
+      } else {
+        console.log("toggle: showing menu");
+        this.showMenu = true;
+      }
+    },
+    hideMenuOutside: function hideMenuOutside() {
+      console.log("click outside");
+
+      if (this.showMenu === true) {
+        console.log("hiding menu");
+        this.showMenu = false;
+      }
+    },
     changeLanguage: function changeLanguage(lang) {
-      return _services_Trans__WEBPACK_IMPORTED_MODULE_0__["default"].changeLanguage(lang);
+      return _services_Trans__WEBPACK_IMPORTED_MODULE_1__["default"].changeLanguage(lang);
     },
     isCurrentLanguage: function isCurrentLanguage(lang) {
       return lang === this.currentLanguage;
@@ -42705,6 +42733,19 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/v-click-outside/dist/v-click-outside.umd.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/v-click-outside/dist/v-click-outside.umd.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,n){ true?module.exports=n():undefined}(this,function(){var e="undefined"!=typeof window,n="undefined"!=typeof navigator,t=e&&("ontouchstart"in window||n&&navigator.msMaxTouchPoints>0)?["touchstart"]:["click"];function i(e){var n=e.event,t=e.handler;(0,e.middleware)(n)&&t(n)}function r(e,n){var r=function(e){var n="function"==typeof e;if(!n&&"object"!=typeof e)throw new Error("v-click-outside: Binding value must be a function or an object");return{handler:n?e:e.handler,middleware:e.middleware||function(e){return e},events:e.events||t,isActive:!(!1===e.isActive),detectIframe:!(!1===e.detectIframe)}}(n.value),d=r.handler,o=r.middleware,a=r.detectIframe;if(r.isActive){if(e["__v-click-outside"]=r.events.map(function(n){return{event:n,srcTarget:document.documentElement,handler:function(n){return function(e){var n=e.el,t=e.event,r=e.handler,d=e.middleware,o=t.path||t.composedPath&&t.composedPath();(o?o.indexOf(n)<0:!n.contains(t.target))&&i({event:t,handler:r,middleware:d})}({el:e,event:n,handler:d,middleware:o})}}}),a){var c={event:"blur",srcTarget:window,handler:function(n){return function(e){var n=e.el,t=e.event,r=e.handler,d=e.middleware;setTimeout(function(){var e=document.activeElement;e&&"IFRAME"===e.tagName&&!n.contains(e)&&i({event:t,handler:r,middleware:d})},0)}({el:e,event:n,handler:d,middleware:o})}};e["__v-click-outside"]=[].concat(e["__v-click-outside"],[c])}e["__v-click-outside"].forEach(function(n){var t=n.event,i=n.srcTarget,r=n.handler;return setTimeout(function(){e["__v-click-outside"]&&i.addEventListener(t,r,!1)},0)})}}function d(e){(e["__v-click-outside"]||[]).forEach(function(e){return e.srcTarget.removeEventListener(e.event,e.handler,!1)}),delete e["__v-click-outside"]}var o=e?{bind:r,update:function(e,n){var t=n.value,i=n.oldValue;JSON.stringify(t)!==JSON.stringify(i)&&(d(e),r(e,{value:t}))},unbind:d}:{};return{install:function(e){e.directive("click-outside",o)},directive:o}});
+//# sourceMappingURL=v-click-outside.umd.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-class-component/dist/vue-class-component.esm.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/vue-class-component/dist/vue-class-component.esm.js ***!
@@ -50097,11 +50138,30 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "dropdown dropdown-right dropdown-language" },
+    {
+      directives: [
+        {
+          name: "click-outside",
+          rawName: "v-click-outside",
+          value: _vm.hideMenuOutside,
+          expression: "hideMenuOutside"
+        }
+      ],
+      staticClass: "dropdown dropdown-right dropdown-language",
+      class: { active: _vm.showMenu }
+    },
     [
       _c(
         "button",
-        { staticClass: "btn btn-sm dropdown-toggle " },
+        {
+          staticClass: "btn btn-sm",
+          on: {
+            click: function($event) {
+              $event.preventDefault()
+              return _vm.toggleMenu($event)
+            }
+          }
+        },
         [
           _c("gb-flag", {
             attrs: { code: _vm.flagCode(_vm.currentLanguage), size: "small" }
@@ -52443,185 +52503,197 @@ var render = function() {
     [
       _c("div", { staticClass: "container grid-lg mb-16" }, [
         _c("div", { staticClass: "columns" }, [
-          _c("div", { staticClass: "column col-8" }, [
-            _c("div", { staticClass: "card card-min card-projects" }, [
-              _c("div", { staticClass: "card-header" }, [
-                _c("div", { staticClass: "card-title" }, [
-                  _vm._v(_vm._s(_vm.$t("app.open_project")))
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-filter" }, [
-                _c("div", { staticClass: "columns" }, [
-                  _c("div", { staticClass: "column col-6" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "column col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-8"
+            },
+            [
+              _c("div", { staticClass: "card card-min card-projects mb-8" }, [
+                _c("div", { staticClass: "card-header" }, [
+                  _c("div", { staticClass: "card-title" }, [
+                    _vm._v(_vm._s(_vm.$t("app.open_project")))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-filter" }, [
+                  _c("div", { staticClass: "columns" }, [
+                    _c("div", { staticClass: "column col-6" }, [
+                      _c(
+                        "div",
+                        { staticClass: "has-icon-left" },
+                        [
+                          _c("VInput", {
+                            staticClass: "input-sm",
+                            attrs: {
+                              type: "search",
+                              value: _vm.filter.query,
+                              maxlength: "100",
+                              placeholder: _vm.$t("app.search") + "...",
+                              autofocus: "true"
+                            },
+                            on: { input: _vm.updateFilterQuery }
+                          }),
+                          _vm._v(" "),
+                          _c("i", { staticClass: "form-icon icon icon-search" })
+                        ],
+                        1
+                      )
+                    ]),
+                    _vm._v(" "),
                     _c(
                       "div",
-                      { staticClass: "has-icon-left" },
-                      [
-                        _c("VInput", {
-                          staticClass: "input-sm",
-                          attrs: {
-                            type: "search",
-                            value: _vm.filter.query,
-                            maxlength: "100",
-                            placeholder: _vm.$t("app.search") + "...",
-                            autofocus: "true"
-                          },
-                          on: { input: _vm.updateFilterQuery }
-                        }),
-                        _vm._v(" "),
-                        _c("i", { staticClass: "form-icon icon icon-search" })
-                      ],
-                      1
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.hasAdminRole,
-                          expression: "hasAdminRole"
-                        }
-                      ],
-                      staticClass: "column col-6"
-                    },
-                    [
-                      _c(
-                        "label",
-                        { staticClass: "form-radio form-inline input-sm" },
-                        [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.filter.owner,
-                                expression: "filter.owner"
-                              }
-                            ],
-                            attrs: { type: "radio", value: "" },
-                            domProps: { checked: _vm._q(_vm.filter.owner, "") },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.filter, "owner", "")
-                              }
-                            }
-                          }),
-                          _c("i", { staticClass: "form-icon" }),
-                          _vm._v(
-                            " " +
-                              _vm._s(_vm.$t("app.all")) +
-                              "\n\t\t\t\t\t\t\t\t"
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "label",
-                        { staticClass: "form-radio form-inline input-sm" },
-                        [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.filter.owner,
-                                expression: "filter.owner"
-                              }
-                            ],
-                            attrs: { type: "radio", value: "mine" },
-                            domProps: {
-                              checked: _vm._q(_vm.filter.owner, "mine")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.filter, "owner", "mine")
-                              }
-                            }
-                          }),
-                          _c("i", { staticClass: "form-icon" }),
-                          _vm._v(
-                            " " +
-                              _vm._s(_vm.$t("app.just_mine")) +
-                              "\n\t\t\t\t\t\t\t\t"
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "card-body" },
-                [
-                  _vm.filteredProjects.length > 0
-                    ? _vm._l(_vm.filteredProjects, function(project) {
-                        return _c(
-                          "router-link",
+                      {
+                        directives: [
                           {
-                            key: project.id,
-                            staticClass: "tile tile-project",
-                            attrs: {
-                              to:
-                                "/" +
-                                project.id +
-                                "/" +
-                                (project.slug ? project.slug : "untitled")
-                            }
-                          },
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.hasAdminRole,
+                            expression: "hasAdminRole"
+                          }
+                        ],
+                        staticClass: "column col-6"
+                      },
+                      [
+                        _c(
+                          "label",
+                          { staticClass: "form-radio form-inline input-sm" },
                           [
-                            _c("div", { staticClass: "tile-content" }, [
-                              _c("p", { staticClass: "tile-title" }, [
-                                project.name
-                                  ? _c("span", [_vm._v(_vm._s(project.name))])
-                                  : _c("span", [
-                                      _vm._v("#" + _vm._s(project.id))
-                                    ])
-                              ]),
-                              _vm._v(" "),
-                              project.created_by
-                                ? _c("p", { staticClass: "tile-subtitle" }, [
-                                    _vm._v(_vm._s(project.created_by))
-                                  ])
-                                : _vm._e()
-                            ])
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.filter.owner,
+                                  expression: "filter.owner"
+                                }
+                              ],
+                              attrs: { type: "radio", value: "" },
+                              domProps: {
+                                checked: _vm._q(_vm.filter.owner, "")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.filter, "owner", "")
+                                }
+                              }
+                            }),
+                            _c("i", { staticClass: "form-icon" }),
+                            _vm._v(
+                              " " +
+                                _vm._s(_vm.$t("app.all")) +
+                                "\n\t\t\t\t\t\t\t\t"
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "label",
+                          { staticClass: "form-radio form-inline input-sm" },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.filter.owner,
+                                  expression: "filter.owner"
+                                }
+                              ],
+                              attrs: { type: "radio", value: "mine" },
+                              domProps: {
+                                checked: _vm._q(_vm.filter.owner, "mine")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.filter, "owner", "mine")
+                                }
+                              }
+                            }),
+                            _c("i", { staticClass: "form-icon" }),
+                            _vm._v(
+                              " " +
+                                _vm._s(_vm.$t("app.just_mine")) +
+                                "\n\t\t\t\t\t\t\t\t"
+                            )
                           ]
                         )
-                      })
-                    : [
-                        _c("div", { staticClass: "tile tile-empty" }, [
-                          _c("div", { staticClass: "tile-content" }, [
-                            _c(
-                              "div",
-                              [
-                                _c("alert-circle-icon", {
-                                  attrs: { size: "16" }
-                                })
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c("div", [
-                              _vm._v(_vm._s(_vm.$t("app.no_projects")))
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "card-body" },
+                  [
+                    _vm.filteredProjects.length > 0
+                      ? _vm._l(_vm.filteredProjects, function(project) {
+                          return _c(
+                            "router-link",
+                            {
+                              key: project.id,
+                              staticClass: "tile tile-project",
+                              attrs: {
+                                to:
+                                  "/" +
+                                  project.id +
+                                  "/" +
+                                  (project.slug ? project.slug : "untitled")
+                              }
+                            },
+                            [
+                              _c("div", { staticClass: "tile-content" }, [
+                                _c("p", { staticClass: "tile-title" }, [
+                                  project.name
+                                    ? _c("span", [_vm._v(_vm._s(project.name))])
+                                    : _c("span", [
+                                        _vm._v("#" + _vm._s(project.id))
+                                      ])
+                                ]),
+                                _vm._v(" "),
+                                project.created_by
+                                  ? _c("p", { staticClass: "tile-subtitle" }, [
+                                      _vm._v(_vm._s(project.created_by))
+                                    ])
+                                  : _vm._e()
+                              ])
+                            ]
+                          )
+                        })
+                      : [
+                          _c("div", { staticClass: "tile tile-empty" }, [
+                            _c("div", { staticClass: "tile-content" }, [
+                              _c(
+                                "div",
+                                [
+                                  _c("alert-circle-icon", {
+                                    attrs: { size: "16" }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("div", [
+                                _vm._v(_vm._s(_vm.$t("app.no_projects")))
+                              ])
                             ])
                           ])
-                        ])
-                      ]
-                ],
-                2
-              )
-            ])
-          ]),
+                        ]
+                  ],
+                  2
+                )
+              ])
+            ]
+          ),
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "column col-4" },
+            {
+              staticClass:
+                "column col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-4"
+            },
             [
               _c("NewProject", {
                 staticClass: "mb-8",
