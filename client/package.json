@@ -37,6 +37,7 @@
 		"sass": "^1.27.0",
 		"sass-loader": "^7.3.1",
 		"spectre.css": "^0.5.9",
+		"v-click-outside": "^3.1.2",
 		"vue": "^2.6.12",
 		"vue-feather-icons": "^5.1.0",
 		"vue-i18n": "^8.22.1",

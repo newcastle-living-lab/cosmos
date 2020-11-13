@@ -4,8 +4,8 @@
 		<div class="container grid-lg mb-16">
 			<div class="columns">
 
-				<div class="column col-8">
-					<div class="card card-min card-projects">
+				<div class="column col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-8">
+					<div class="card card-min card-projects mb-8">
 						<div class="card-header">
 							<div class="card-title">{{ $t('app.open_project') }}</div>
 						</div>
@@ -64,7 +64,7 @@
 					</div>
 				</div>
 
-				<div class="column col-4">
+				<div class="column col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-4">
 					<NewProject :loginUrl="loginUrl" class="mb-8" />
 					<ImportProject :loginUrl="loginUrl" />
 				</div>
