@@ -5,7 +5,7 @@
         "user": "Felhasználó"
     },
     "app": {
-        "add_new_actor": "Új színész hozzáadása",
+        "add_new_actor": "Új szereplő hozzáadása",
         "add_new_item": "Új elem hozzáadása",
         "all": "Összes",
         "colour": "Szín",
@@ -400,85 +400,85 @@
         },
         "moral_ordering_model": {
             "dashboard": {
-                "define_ethos": "Definiálja az Ethos-t",
+                "define_ethos": "ÉTHOSZ MEGHATÁROZÁSA",
                 "define_ethos_items": "Értékek\n Alapelvek\n Szándékok\n Házirendek",
-                "deliver": "Szállít",
+                "deliver": "Megvalósítás",
                 "experience": "Tapasztalat",
-                "govern": "Kormányzó",
-                "individual_cases": "Egyedi esetek",
-                "plan_manage": "Tervezés és kezelés",
-                "plan_manage_items": "Szabályok\n Erőforrások\n Folyamatok\n Fiókok",
-                "the_service_level": "A szolgáltatási szint"
+                "govern": "Irányítás",
+                "individual_cases": "Egyéni eset",
+                "plan_manage": "TERV ÉS MENEDZSMENT – ELŐKÉSZÍTŐ TEVÉKENYSÉGEK",
+                "plan_manage_items": "Szabályok\nForrások\nFolyamatok\nBeszámolók",
+                "the_service_level": "A szolgáltatás szintje"
             },
             "definitions": {
                 "defineEthos": {
                     "definedBy": {
-                        "label": "Hogyan határozzák meg ezeket az értékeket?"
+                        "label": "Helyi szinten milyen célokat fogalmaztak meg és milyen értékekekt követtek?"
                     },
                     "evidenceUrl": {
-                        "label": "Milyen (külső) bizonyíték áll rendelkezésre ennek alátámasztására?"
+                        "label": "Ki határozta meg ezeket a célokat és értékeket?"
                     },
-                    "title": "Definiálja az Ethos-t",
+                    "title": "ÉTHOSZ MEGHATÁROZÁSA",
                     "values": {
-                        "label": "Milyen értékek fontosak a beavatkozás kezelésére?"
+                        "label": "Milyen célok és értékek írnák le legjobban a COSIE projekt lényegét?"
                     }
                 },
                 "deliver": {
                     "actors": {
-                        "label": "Ki szállítja?"
+                        "label": "Ki vesz részt benne?"
                     },
                     "evidenceUrl": {
-                        "label": "Milyen (külső) bizonyíték áll rendelkezésre ennek alátámasztására?"
+                        "label": "Milyen támogató szolgáltatáselemek jelentek meg a megvalósítás során?"
                     },
                     "method": {
                         "label": "Hogyan történik a beavatkozás?"
                     },
-                    "title": "Szállít"
+                    "title": "MEGVALÓSÍTÁS"
                 },
                 "govern": {
                     "actions": {
-                        "label": "Hogyan szabályozzák a beavatkozást? Milyen intézkedéseket hoznak annak biztosítására, hogy az eredmények a szándéknak megfelelőek legyenek?"
+                        "label": "Hogyan zajlik a döntéshozatal szolgáltatásfejesztés helyi és projekt szintjén?"
                     },
                     "actors": {
-                        "label": "Ki értékeli ezt?"
+                        "label": "Ki értékeli a program megvalósítását helyi és projekt szinten?"
                     },
                     "evolution": {
-                        "label": "Hogyan befolyásolja ez a szolgáltatás fejlődését?"
+                        "label": "Hogyan befolyásolják az eredmények a szolgáltatás fejlődését?"
                     },
                     "improvements": {
-                        "label": "Hogyan azonosítják a fejlesztéseket? Hogyan valósítják meg őket?"
+                        "label": "Hogyan azonosítják a fejlesztendő területeket? Hogyan valósítják meg?"
                     },
                     "outcomes": {
-                        "label": "Az eredmények megtestesülnek-e célokban és mérésekben? És ha igen, akkor kinek?"
+                        "label": "Hogyan jelennek meg és hogyan mérhetőek az eredmények?"
                     },
-                    "title": "Kormányzó"
+                    "title": "IRÁNYÍTÁS"
                 },
                 "model": {
                     "title": "Modell"
                 },
                 "planManageCurrent": {
                     "actions": {
-                        "label": "Milyen intézkedéseket hajtanak végre a pilóta keretében?"
+                        "label": "Hogyan foglalná össze a lényegét annak, amit a programban csinálnak?"
                     },
                     "actors": {
-                        "label": "Milyen folyamatban lévő intézkedések vannak folyamatban?"
+                        "label": "Mi az, ami még most is működik a projektből?"
                     },
                     "evidenceUrl": {
-                        "label": "Milyen (külső) bizonyíték áll rendelkezésre ennek alátámasztására?"
+                        "label": "Mi bizonyítja ennek a fennmaradó elemnek a működését?"
                     },
-                    "title": "Tervezés és kezelés - Aktuális műveletek"
+                    "title": "TERV ÉS MENEDZSMENT – JELENLEGI TEVÉKENYSÉGEK"
                 },
                 "planManagePrior": {
                     "actions": {
-                        "label": "Milyen intézkedéseket hajtottak végre a beavatkozás előtt?"
+                        "label": "Milyen tevékenységek készítették elő a programot?"
                     },
                     "actors": {
-                        "label": "Ki vett részt ezekben a korábbi akciókban?"
+                        "label": "Milyen szereplőket mozgósítottak az előkészítés során? "
                     },
                     "evidenceUrl": {
-                        "label": "Milyen (külső) bizonyíték áll rendelkezésre ennek alátámasztására?"
+                        "label": "Miért pont ezeket a tevékenységeket tartották fontosnak és miért pont ezeket a szereplőket vontták be?"
                     },
-                    "title": "Tervezés és kezelés - Korábbi cselekvések"
+                    "title": "TERV ÉS MENEDZSMENT – ELŐKÉSZÍTŐ TEVÉKENYSÉGEK"
                 }
             },
             "guide": {
@@ -495,11 +495,11 @@
             "options": {
                 "sources": {
                     "meeting": "Találkozó",
-                    "other": "Egyéb",
-                    "policy": "Irányelv"
+                    "other": "Más",
+                    "policy": "Közpolitika"
                 }
             },
-            "title": "Erkölcsi rendezés"
+            "title": "MORÁLIS RENDSZER"
         },
         "social_media": {
             "dashboard": {
