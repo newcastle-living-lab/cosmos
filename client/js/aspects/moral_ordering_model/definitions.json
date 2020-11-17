@@ -15,22 +15,14 @@
 			{
 				"id": "definedBy",
 				"dataType": "string",
-				"componentName": "VRadioList",
-				"componentProps": {
-					"options": [
-						{"value": "policy", "lang": "aspects.moral_ordering_model.options.sources.policy" },
-						{"value": "meeting", "lang": "aspects.moral_ordering_model.options.sources.meeting" },
-						{"value": "other", "lang": "aspects.moral_ordering_model.options.sources.other" }
-					]
-				}
+				"componentName": "VInput"
 			},
 			{
 				"id": "evidenceUrl",
 				"dataType": "string",
-				"componentName": "VInput",
+				"componentName": "VTextarea",
 				"componentProps": {
-					"type": "url",
-					"placeholder": "https://"
+					"rows": 4
 				}
 			}
 		]
@@ -55,10 +47,9 @@
 			{
 				"id": "evidenceUrl",
 				"dataType": "string",
-				"componentName": "VInput",
+				"componentName": "VTextarea",
 				"componentProps": {
-					"type": "url",
-					"placeholder": "https://"
+					"rows": 4
 				}
 			}
 		]
@@ -78,17 +69,19 @@
 			},
 			{
 				"id": "actors",
-				"dataType": "array",
-				"componentName": "StakeholderMultiEditor"
+				"dataType": "string",
+				"componentName": "VTextarea",
+				"componentProps": {
+					"rows": 4
+				}
 			},
 			{
 				"id": "evidenceUrl",
 				"dataType": "string",
 				"label": "What (external) evidence is available to support this?",
-				"componentName": "VInput",
+				"componentName": "VTextarea",
 				"componentProps": {
-					"type": "url",
-					"placeholder": "https://"
+					"rows": 4
 				}
 			}
 		]
@@ -100,14 +93,7 @@
 			{
 				"id": "method",
 				"dataType": "string",
-				"componentName": "VRadioList",
-				"componentProps": {
-					"options": [
-						{"value": "policy", "lang": "aspects.moral_ordering_model.options.sources.policy" },
-						{"value": "meeting", "lang": "aspects.moral_ordering_model.options.sources.meeting" },
-						{"value": "other", "lang": "aspects.moral_ordering_model.options.sources.other" }
-					]
-				}
+				"componentName": "VInput"
 			},
 			{
 				"id": "actors",
@@ -117,10 +103,9 @@
 			{
 				"id": "evidenceUrl",
 				"dataType": "string",
-				"componentName": "VInput",
+				"componentName": "VTextarea",
 				"componentProps": {
-					"type": "url",
-					"placeholder": "https://"
+					"rows": 4
 				}
 			}
 		]

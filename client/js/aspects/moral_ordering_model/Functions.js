@@ -1,5 +1,19 @@
+import forEach from 'lodash/forEach';
 
 export default {
+
+	populateProject(projectData) {
+		// Convert array of actors into string for new textbox.
+		if (Array.isArray(projectData.planManageCurrent.actors)) {
+			let actors = '';
+			forEach(projectData.planManageCurrent.actors, (actor) => {
+				actors += `${actor.label} (${actor.type})`;
+				actors += "\n";
+			});
+			projectData.planManageCurrent.actors = actors;
+		}
+		return projectData;
+	},
 
 	/**
 	 * Determine the visibility status (true/false) based on the definition and project data.
