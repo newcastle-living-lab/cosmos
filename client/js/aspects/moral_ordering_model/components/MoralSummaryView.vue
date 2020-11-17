@@ -20,11 +20,11 @@
 								</tr>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.moral_ordering_model.definitions.defineEthos.definedBy.label') }}</td>
-									<td class="group-value">{{ optionListLabel(definitionsById.defineEthos.children.definedBy, aspectData.defineEthos.definedBy) }}</td>
+									<td class="group-value like-pre">{{ aspectData.defineEthos.definedBy }}</td>
 								</tr>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.moral_ordering_model.definitions.defineEthos.evidenceUrl.label') }}</td>
-									<td class="group-value"><EvidenceLink :url="aspectData.defineEthos.evidenceUrl" /></td>
+									<td class="group-value like-pre"><span v-linkify="aspectData.defineEthos.evidenceUrl" /></td>
 								</tr>
 							</tbody>
 						</table>
@@ -56,7 +56,7 @@
 								</tr>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.moral_ordering_model.definitions.planManagePrior.evidenceUrl.label') }}</td>
-									<td class="group-value"><EvidenceLink :url="aspectData.planManagePrior.evidenceUrl" /></td>
+									<td class="group-value like-pre"><span v-linkify="aspectData.planManagePrior.evidenceUrl" /></td>
 								</tr>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.moral_ordering_model.definitions.planManageCurrent.actions.label') }}</td>
@@ -64,17 +64,11 @@
 								</tr>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.moral_ordering_model.definitions.planManageCurrent.actors.label') }}</td>
-									<td class="group-value">
-										<StakeholderTile
-											v-for="(actor, idx) in aspectData.planManageCurrent.actors"
-											:key="idx"
-											:stakeholder="actor"
-										/>
-									</td>
+									<td class="group-value like-pre"><span v-linkify="aspectData.planManageCurrent.actors" /></td>
 								</tr>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.moral_ordering_model.definitions.planManageCurrent.evidenceUrl.label') }}</td>
-									<td class="group-value"><EvidenceLink :url="aspectData.planManageCurrent.evidenceUrl" /></td>
+									<td class="group-value like-pre"><span v-linkify="aspectData.planManageCurrent.evidenceUrl" /></td>
 								</tr>
 							</tbody>
 						</table>
@@ -92,7 +86,7 @@
 							<tbody>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.moral_ordering_model.definitions.deliver.method.label') }}</td>
-									<td class="group-value">{{ optionListLabel(definitionsById.deliver.children.method, aspectData.deliver.method) }}</td>
+									<td class="group-value like-pre">{{ aspectData.deliver.method }}</td>
 								</tr>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.moral_ordering_model.definitions.deliver.actors.label') }}</td>
@@ -106,7 +100,7 @@
 								</tr>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.moral_ordering_model.definitions.deliver.evidenceUrl.label') }}</td>
-									<td class="group-value"><EvidenceLink :url="aspectData.deliver.evidenceUrl" /></td>
+									<td class="group-value like-pre"><span v-linkify="aspectData.deliver.evidenceUrl" /></td>
 								</tr>
 							</tbody>
 						</table>
@@ -164,6 +158,7 @@
 import { get, set, sync, call } from 'vuex-pathify';
 import find from 'lodash/find';
 
+import { linkify } from '@/plugins/linkify';
 import Aspects from '@/aspects';
 
 import StakeholderTile from './StakeholderTile';
@@ -182,6 +177,10 @@ export default {
 	components: {
 		StakeholderTile,
 		EvidenceLink,
+	},
+
+	directives: {
+		linkify
 	},
 
 	props: {

@@ -62,6 +62,9 @@ export default {
 				console.debug(`Setting object keys for ${aspect.CONFIG.id}...`);
 				project.data[aspectConfig.id] = setObjectKeys(project.data[aspectConfig.id], aspect.DEFINITIONS);
 			}
+			if (typeof(aspect.Functions) !== 'undefined' && typeof(aspect.Functions.populateProject) !== 'undefined') {
+				project.data[aspectConfig.id] = aspect.Functions.populateProject(project.data[aspectConfig.id]);
+			}
 		});
 
 		project = this.convertFromTemplate(project);

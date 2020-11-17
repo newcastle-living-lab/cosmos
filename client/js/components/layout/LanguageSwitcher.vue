@@ -50,17 +50,13 @@ export default {
 	methods: {
 		toggleMenu() {
 			if (this.showMenu) {
-				console.log("toggle: hiding menu");
 				this.showMenu = false;
 			} else {
-				console.log("toggle: showing menu");
 				this.showMenu = true;
 			}
 		},
 		hideMenuOutside() {
-			console.log("click outside");
 			if (this.showMenu === true) {
-				console.log("hiding menu");
 				this.showMenu = false;
 			}
 		},
