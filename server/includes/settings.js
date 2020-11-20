@@ -1,4 +1,7 @@
-var database = require("./database");
+var fs = require("fs"),
+	path = require("path"),
+	bindAll = require('lodash/bindAll'),
+	database = require("./database");
 
 /**
  * Settings keys and their types.
@@ -20,12 +23,25 @@ const SETTINGS = {
 
 var Settings = function() {
 	var data = {};
+	bindAll(this, [
+		'init',
+		'ensureDefaults',
+		'importFromFile',
+		'reloadSettings',
+		'getSettings',
+		'wakeValue',
+		'sleepValue',
+		'get',
+		'getAll',
+		'set',
+	]);
 }
 
 
 Settings.prototype.init = function() {
 	return this.ensureDefaults()
-		.then(this.reloadSettings())
+		.then(this.reloadSettings)
+		.then(this.importFromFile);
 }
 
 
@@ -296,6 +312,47 @@ Settings.prototype.sleepValue = function(row) {
 	}
 
 	return row;
+}
+
+
+/**
+ * Import settings from `settings-default.json` if the file exists.
+ * On success, rename the file so it isn't imported again.
+ *
+ * This permits new managed instances to have controlled defaults.
+ *
+ */
+Settings.prototype.importFromFile = function() {
+
+	return new Promise((resolve, reject) => {
+
+		const settingsFilePath = path.join(process.cwd(), "config", "settings-default.json");
+		const settingsFileExists = fs.existsSync(settingsFilePath);
+
+		if ( ! settingsFileExists) {
+			console.log(`Default settings file not found (${settingsFilePath})`);
+			resolve();
+		}
+
+		const settingsContents = fs.readFileSync(settingsFilePath, 'utf8');
+		const defaultSettings = JSON.parse(settingsContents);
+
+		console.log(`Loading default settings from ${settingsFilePath}...`);
+
+		this.set(defaultSettings).then(() => {
+
+			// Move defaults file
+			const ts = (new Date()).getTime();
+			const newFilePath = path.join(process.cwd(), "config", `settings-default.${ts}.json`);
+			fs.rename(settingsFilePath, newFilePath, function (err) {
+				console.log(`Moved default settings file to ${newFilePath}.`);
+				return resolve();
+			});
+
+		});
+
+	});
+
 }
 
 module.exports = (new Settings());
