@@ -220,7 +220,7 @@ Users.prototype.register = function(userParams, hostname) {
 		name: userParams.name,
 		email: userParams.email,
 		status: 5,
-		roles: ['view'],
+		roles: ['view', 'edit'],
 	};
 
 	return this.insertUser(user)
