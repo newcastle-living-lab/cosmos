@@ -580,7 +580,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! exports provided: id, type, title, routeName, dashboardComponent, summaryComponent, stageSize, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"id\":\"change_model\",\"type\":\"model\",\"title\":\"Change Model\",\"routeName\":\"model\",\"dashboardComponent\":\"TheoryOfChangeDashboard\",\"summaryComponent\":\"TheoryOfChangeSummaryView\",\"stageSize\":{\"width\":1280,\"height\":800}}");
+module.exports = JSON.parse("{\"id\":\"change_model\",\"type\":\"model\",\"title\":\"Change Model\",\"routeName\":\"model\",\"dashboardComponent\":\"TheoryOfChangeDashboard\",\"summaryComponent\":\"TheoryOfChangeSummaryView\",\"stageSize\":{\"width\":1285,\"height\":800}}");
 
 /***/ }),
 
@@ -916,10 +916,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _intervention_theory_model__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./intervention_theory_model */ "./js/aspects/intervention_theory_model/index.js");
 /* harmony import */ var _change_model__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./change_model */ "./js/aspects/change_model/index.js");
 /* harmony import */ var _moral_ordering_model__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./moral_ordering_model */ "./js/aspects/moral_ordering_model/index.js");
-/* harmony import */ var _theory_of_change__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./theory_of_change */ "./js/aspects/theory_of_change/index.js");
-/* harmony import */ var _community_reporting__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./community_reporting */ "./js/aspects/community_reporting/index.js");
-/* harmony import */ var _social_media__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./social_media */ "./js/aspects/social_media/index.js");
-/* harmony import */ var _documents__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./documents */ "./js/aspects/documents/index.js");
+/* harmony import */ var _user_journey_model__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./user_journey_model */ "./js/aspects/user_journey_model/index.js");
+/* harmony import */ var _theory_of_change__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./theory_of_change */ "./js/aspects/theory_of_change/index.js");
+/* harmony import */ var _community_reporting__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./community_reporting */ "./js/aspects/community_reporting/index.js");
+/* harmony import */ var _social_media__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./social_media */ "./js/aspects/social_media/index.js");
+/* harmony import */ var _documents__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./documents */ "./js/aspects/documents/index.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -942,7 +943,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var allAspects = [_welcome__WEBPACK_IMPORTED_MODULE_6__["default"], _service_model__WEBPACK_IMPORTED_MODULE_7__["default"], _analytic_model__WEBPACK_IMPORTED_MODULE_8__["default"], _intervention_theory_model__WEBPACK_IMPORTED_MODULE_9__["default"], _change_model__WEBPACK_IMPORTED_MODULE_10__["default"], _moral_ordering_model__WEBPACK_IMPORTED_MODULE_11__["default"], _theory_of_change__WEBPACK_IMPORTED_MODULE_12__["default"], _community_reporting__WEBPACK_IMPORTED_MODULE_13__["default"], _social_media__WEBPACK_IMPORTED_MODULE_14__["default"], _documents__WEBPACK_IMPORTED_MODULE_15__["default"]];
+
+var allAspects = [_welcome__WEBPACK_IMPORTED_MODULE_6__["default"], _service_model__WEBPACK_IMPORTED_MODULE_7__["default"], _analytic_model__WEBPACK_IMPORTED_MODULE_8__["default"], _intervention_theory_model__WEBPACK_IMPORTED_MODULE_9__["default"], _change_model__WEBPACK_IMPORTED_MODULE_10__["default"], _moral_ordering_model__WEBPACK_IMPORTED_MODULE_11__["default"], _user_journey_model__WEBPACK_IMPORTED_MODULE_12__["default"], _theory_of_change__WEBPACK_IMPORTED_MODULE_13__["default"], _community_reporting__WEBPACK_IMPORTED_MODULE_14__["default"], _social_media__WEBPACK_IMPORTED_MODULE_15__["default"], _documents__WEBPACK_IMPORTED_MODULE_16__["default"]];
 /* harmony default export */ __webpack_exports__["default"] = ({
   all: function all() {
     return lodash_map__WEBPACK_IMPORTED_MODULE_1___default()(allAspects, function (t) {
@@ -2159,6 +2161,196 @@ var _definitions_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__we
   CONFIG: _config_json__WEBPACK_IMPORTED_MODULE_0__,
   DEFINITIONS: _definitions_json__WEBPACK_IMPORTED_MODULE_1__,
   Components: _components__WEBPACK_IMPORTED_MODULE_2__
+});
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/Guide.js":
+/*!************************************************!*\
+  !*** ./js/aspects/user_journey_model/Guide.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  steps: [{
+    'type': 'info',
+    'lang': 'step01'
+  }, {
+    'type': 'info',
+    'lang': 'step02'
+  }, {
+    'type': 'info',
+    'lang': 'step03'
+  }, {
+    'type': 'info',
+    'lang': 'step04'
+  }, {
+    'type': 'info',
+    'lang': 'step05'
+  }, {
+    'type': 'info',
+    'lang': 'step06'
+  }, {
+    'type': 'info',
+    'lang': 'step07'
+  }, {
+    'type': 'question',
+    'lang': 'step08'
+  }, {
+    'type': 'question',
+    'lang': 'step09'
+  }, {
+    'type': 'question',
+    'lang': 'step10'
+  }, {
+    'type': 'question',
+    'lang': 'step11'
+  }, {
+    'type': 'question',
+    'lang': 'step12'
+  }, {
+    'type': 'question',
+    'lang': 'step13'
+  }]
+});
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/UserJourneyDashboard.vue":
+/*!***************************************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/UserJourneyDashboard.vue ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _UserJourneyDashboard_vue_vue_type_template_id_b843cd4a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UserJourneyDashboard.vue?vue&type=template&id=b843cd4a& */ "./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=template&id=b843cd4a&");
+/* harmony import */ var _UserJourneyDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserJourneyDashboard.vue?vue&type=script&lang=js& */ "./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _UserJourneyDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _UserJourneyDashboard_vue_vue_type_template_id_b843cd4a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _UserJourneyDashboard_vue_vue_type_template_id_b843cd4a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "js/aspects/user_journey_model/components/UserJourneyDashboard.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneyDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./UserJourneyDashboard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneyDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=template&id=b843cd4a&":
+/*!**********************************************************************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=template&id=b843cd4a& ***!
+  \**********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneyDashboard_vue_vue_type_template_id_b843cd4a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./UserJourneyDashboard.vue?vue&type=template&id=b843cd4a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=template&id=b843cd4a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneyDashboard_vue_vue_type_template_id_b843cd4a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneyDashboard_vue_vue_type_template_id_b843cd4a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/index.js":
+/*!***********************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/index.js ***!
+  \***********************************************************/
+/*! exports provided: UserJourneyDashboard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _UserJourneyDashboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UserJourneyDashboard */ "./js/aspects/user_journey_model/components/UserJourneyDashboard.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UserJourneyDashboard", function() { return _UserJourneyDashboard__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/config.json":
+/*!***************************************************!*\
+  !*** ./js/aspects/user_journey_model/config.json ***!
+  \***************************************************/
+/*! exports provided: id, type, routeName, dashboardComponent, stageSize, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"id\":\"user_journey_model\",\"type\":\"model\",\"routeName\":\"model\",\"dashboardComponent\":\"UserJourneyDashboard\",\"stageSize\":{\"width\":1285,\"height\":800}}");
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/definitions.json":
+/*!********************************************************!*\
+  !*** ./js/aspects/user_journey_model/definitions.json ***!
+  \********************************************************/
+/*! exports provided: 0, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("[{\"id\":\"model\",\"type\":\"model\",\"title\":\"Model\",\"hint\":null}]");
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/index.js":
+/*!************************************************!*\
+  !*** ./js/aspects/user_journey_model/index.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _config_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config.json */ "./js/aspects/user_journey_model/config.json");
+var _config_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./config.json */ "./js/aspects/user_journey_model/config.json", 1);
+/* harmony import */ var _definitions_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./definitions.json */ "./js/aspects/user_journey_model/definitions.json");
+var _definitions_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./definitions.json */ "./js/aspects/user_journey_model/definitions.json", 1);
+/* harmony import */ var _Guide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Guide */ "./js/aspects/user_journey_model/Guide.js");
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components */ "./js/aspects/user_journey_model/components/index.js");
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  CONFIG: _config_json__WEBPACK_IMPORTED_MODULE_0__,
+  DEFINITIONS: _definitions_json__WEBPACK_IMPORTED_MODULE_1__,
+  // Guide,
+  Components: _components__WEBPACK_IMPORTED_MODULE_3__
 });
 
 /***/ }),
@@ -5373,6 +5565,17 @@ module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Οργάν�
 
 /***/ }),
 
+/***/ "./js/lang/en.json":
+/*!*************************!*\
+  !*** ./js/lang/en.json ***!
+  \*************************/
+/*! exports provided: languages, app, user_guide, hints, activity_types, aspects, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"languages\":{\"el\":\"Greek\",\"en_GB\":\"English\",\"fr\":\"French\",\"de\":\"German\",\"es\":\"Spanish\",\"et\":\"Estonian\",\"fi\":\"Finnish\",\"hu\":\"Hungarian\",\"it\":\"Italian\",\"nl\":\"Dutch\",\"pl\":\"Polish\",\"sv_SE\":\"Swedish\"},\"app\":{\"log_in\":\"Log in\",\"project\":\"Project\",\"name\":\"Name\",\"title\":\"Title\",\"created_by\":\"Created by\",\"description\":\"Description\",\"label\":\"Label\",\"type\":\"Type\",\"colour\":\"Colour\",\"search\":\"Search\",\"web_address\":\"Web address\",\"image\":\"Image\",\"image_remove\":\"Remove image\",\"image_drag_prompt\":\"Drag your image here to begin or click to browse.\",\"image_is_uploading\":\"Uploading image\",\"image_upload_error\":\"Upload error\",\"next\":\"Next\",\"delete\":\"Delete\",\"ok\":\"OK\",\"save\":\"Save\",\"saving\":\"Saving\",\"create\":\"Create\",\"project_save_success\":\"Project saved!\",\"last_saved_at\":\"Last saved at {date_time}\",\"download\":\"Download\",\"export\":\"Export\",\"exporting\":\"Exporting\",\"import\":\"Import\",\"processing\":\"Processing\",\"import_project\":\"Import project\",\"import_project_success\":\"The project has been imported successfully!\",\"import_project_notes\":\"Note: You will be the owner of the project that is imported.\",\"import_project_drag_hint\":\"Drag your CoSMoS project here to begin or click to browse.\",\"open_project\":\"Open project\",\"all\":\"All\",\"just_mine\":\"Just mine\",\"no_projects\":\"No projects found.\",\"new_project\":\"Create new project\",\"to_create_project\":\"to create a project.\",\"user_is_read_only\":\"Your user access level is read-only.\",\"exporting_project\":\"Exporting project\",\"please_wait_generate\":\"Please wait while the file is being generated.\",\"error\":\"Error\",\"error_message\":\"Error: {message}\",\"scale_to_fit\":\"Scale to fit\",\"try_again\":\"Try again\",\"add_new_item\":\"Add new item\",\"add_new_actor\":\"Add new actor\",\"maximum_items\":\"Maximum {count} items | Maxumum {count} item | Maximum {count} items\",\"models\":\"Models\"},\"user_guide\":{\"show\":\"Show user guide\",\"skip\":\"Skip user guide\",\"back\":\"Back\",\"next\":\"Next\",\"close\":\"Close\"},\"hints\":{\"type_and_enter\":\"Type the name below and press enter.\",\"editor_double_click_edit\":\"Double-click an item to edit it, and enter to save\",\"social_twitter_add\":\"Enter a Twitter hashtag, with or without the #. Press enter to add.\",\"social_facebook_add\":\"Add full links (URLs) to Facebook groups or pages.\",\"social_instagram_add\":\"Enter an Instagram hashtag, with or without the #. Press enter to add.\",\"social_youtube_add\":\"Enter a link to a YouTube video and press enter to add.\"},\"activity_types\":{\"user\":\"User\",\"organisation\":\"Organisation\",\"service\":\"Service\"},\"aspects\":{\"analytic_model\":{\"title\":\"Analytic Model\",\"guide\":{\"step01\":\"In this model, we consider a Cosie initiative in terms of a set of roles and the conversational relationships in which they engage.\",\"step02\":\"First we have front line service deliverer and a client.\",\"step03\":\"The deliverer has a manager or supervisor. This pattern of an individual engaging in two conversations will be repeated.\",\"step04\":\"The delivery takes place in some formal or informal institutional context.\",\"step05\":\"Finally, the service exists in some wider policy setting.\",\"step06\":\"This is meant to be an abstract model. In some cases there may be a flat organisation where delivery, management and policy are undertaken by all the members of a small team, in other cases they may represent distinct individuals and contexts.\",\"step07\":\"How do the concepts of micro, meso and macro map onto your initiative?\",\"step08\":\"How does communication take place between them?\",\"step09\":\"How coordinated and coherent are they?\",\"step10\":\"In particular, are there information flows and conversations between macro and micro which are not mediated by the meso? What are the implications of this?\",\"step11\":\"The next model considers change agency in terms of roles and conversations.\",\"step12\":\"A change must be instigated, then it is executed.\",\"step13\":\"The changes we are considering are to a person, or a place or environment.\",\"step14\":\"The changes we are considering are often themselves complex and are about complex situations. Often they are based on some theory which has been introduced or brokered into the situation.\",\"step15\":\"There is a set of intended beneficiaries.\",\"step16\":\"But there are also possible dis-beneficiaries or victims of the change.\",\"step17\":\"This model is designed as a probe on the initial service model to identify the specific actors who, at various stages in the development of the initiative, have undertaken one or more of these change agency roles. Who are they?\"},\"dashboard\":{\"meso\":{\"label\":\"Meso\",\"description\":\"There may be a number of stages at this level.\"},\"macro\":{\"label\":\"Macro\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"title\":\"Service Delivery Manager\",\"hint\":\"Who is the Service Delivery Manager responsible for the Intervention?\"},\"frontLineServiceDeliverer\":{\"title\":\"Front-line Service Deliverer\",\"hint\":\"Who is the Front-line Service Deliverer?\"},\"user\":{\"title\":\"Client / User\",\"hint\":\"Who is the direct user of the service?\"},\"serviceOrganisationManager\":{\"title\":\"Service Organisation Manager\",\"hint\":\"Who is the Service Organisation Manager for the Intervention?\"},\"servicePolicyMaker\":{\"title\":\"Service Policy Maker\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"instigatorsOfChange\":{\"title\":\"Instigators of Change\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},\"changeMakers\":{\"title\":\"Change Makers\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},\"subjectsOfChange\":{\"title\":\"Subjects of Change\",\"hint\":\"Who are the idenitified subjects of change within the intervention?\"},\"broker\":{\"title\":\"Broker\",\"hint\":\"Is there an active Broker between the Instigators of Change and Change Makers? If so, who are they?\"},\"changeTheorists\":{\"title\":\"Change Theorists\",\"hint\":\"Who are the Change Theorists for the Intervention?\"},\"beneficiaries\":{\"title\":\"Beneficiaries\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"victims\":{\"title\":\"Victims\",\"hint\":\"Are there any identified victims? If so, who are they?\"}}},\"change_model\":{\"title\":\"Change Model\",\"guide\":{\"step01\":\"We start off with the standard model of purposeful action that we are all very familiar with.\",\"step02\":\"But we have all had the experience of looking back and realising that things have changed in a really fundamental way: we talk about the paradigm shifting. This implies that we have engaged in making new sense of our world and this often means that our language changes.\",\"step03\":\"These two different ways of operation are sometimes referred to as first order and second order.\",\"step04\":\"In management terms, we have risk management on one hand and the resolution of contradictions and ambiguities on the other.\",\"step05\":\"We now introduce the idea of third order activities which enable and support the appropriate transitions between first and second work allowing a step back to reconsider our ethos and assumptions and, when we have, to move back into the mode of practical planning and delivery.\",\"step06\":\"Sometimes the reaction to ambiguity and contradiction is an emotional one: fight or fly which is zero order, or inspiration and heroism which we will call fourth order.\",\"step07\":\"So, on the right hand side of our diagram we have the spectrum of emotional work and responses while of the left hand side we have co-productive, conversational work.\",\"step08\":\"This model generates a series of open ended questions about where the different first and second order work takes place in your initiative, what emotional work has been and is requires and how and where it is undertaken and how and by whom are the required third order interventions undertaken?\"},\"dashboard\":{\"first_order\":\"First Order\",\"risk\":\"Risk\",\"vision\":\"Vision\",\"plan\":\"Plan\",\"execute\":\"Execute\",\"measure\":\"Measure\",\"second_order\":\"Second Order\",\"ambiguity\":\"Ambiguity\",\"sense_making\":\"Sense-Making\",\"languaging\":\"\\\"Languaging\\\"\",\"committing\":\"Committing\",\"third_order\":\"Third Order\",\"ambivalence\":\"Ambivalence\",\"zero_order\":\"Zero Order\",\"fourth_order\":\"Fourth Order!\"},\"definitions\":{\"model\":{\"title\":\"Model\"},\"first_order\":{\"vision\":{\"label\":\"How were the vision and objectives set?\"},\"plan\":{\"label\":\"How was a plan set up to deliver the vision?\"},\"execute\":{\"label\":\"How is the plan being executed?\"},\"measure\":{\"label\":\"How are observations and measurements being recorded? If not, what needs to be enabled to do so?\"}},\"second_order\":{\"sense_making\":{\"label\":\"When do you review the plans and vision?\"},\"languaging\":{\"label\":\"What changes have been made to how the intervention has been understood?\"},\"committing\":{\"label\":\"How has the service delivery of the intervention changed from its original plans?\"}},\"third_order\":{\"processes\":{\"label\":\"What processes provoke or enable second order questioning?\"}},\"fourth_order\":{\"unexpected_events\":{\"label\":\"Have there been instances where you have seen unexpected events occurred?\"},\"event_cause\":{\"label\":\"What happened to allow this event to occur?\"},\"change_origin\":{\"label\":\"What was the origin of the change? And what was the change?\"}}}},\"community_reporting\":{\"title\":\"Community Reporting\",\"dashboard\":{\"title\":\"Community Reporting\",\"empty_set\":\"There are no community reporting items for this project.\",\"manage\":\"Manage Community Reporting\"},\"definitions\":{\"data\":{\"title\":\"Community Reporting\",\"hint\":\"Please add any Community Reports your project may have.\"}}},\"documents\":{\"title\":\"Documents\",\"dashboard\":{\"title\":\"Documents and Files\",\"empty_set\":\"There are no documents or files for this project.\",\"manage\":\"Manage documents and files\"},\"definitions\":{\"data\":{\"title\":\"Documents and Files\",\"hint\":\"Please add any Documents and Files your project may have.\"}}},\"intervention_theory_model\":{\"title\":\"Intervention Theory Model\",\"guide\":{\"step01\":\"The co-creative initiatives we are considering are all concerned with improving and nurturing wellbeing. Here we consider the wellbeing of individuals but this might be applied to places or to wider environments.\",\"step02\":\"Wellbeing has a number of different facets which are all interdependent.\",\"step03\":\"It also interacts with the physical and social environments.\",\"step04\":\"Some services or interventions are about mending something that has gone wrong and restoring the status quo.\",\"step05\":\"But there are other purposes for interventions.\",\"step06\":\"The intervention process involves a number of different stages and processes.\",\"step07\":\"Finally, if our innovations are to be sustained we must learn and improve.\",\"step08\":\"Who, what or where is the target of your intervention?\",\"step09\":\"Which aspects of wellbeing are the focus of your initiative?\",\"step10\":\"What aspects of the wellbeing of your subject are relevant but beyond the scope of your initiative?\",\"step11\":\"What are the relevant environmental aspects?\",\"step12\":\"Which combinations of interventions, from prevention to transformation, are relevant to your initiative?\",\"step13\":\"To what extent is learning and improvement built into your development governance and delivery processes?\"},\"dashboard\":{\"wellbeing\":\"Well Being\"},\"options\":{\"wellbeing\":{\"physical_env\":\"Physical Envrionment\",\"socio_cultural_env\":\"Socio-cultural Environment\",\"faculties_skills\":\"Faculties and Skills\",\"mental_psych\":\"Mental and Psychological\",\"physiological\":\"Physiological\",\"socio_economic\":\"Socio-Economic\"},\"innovation\":{\"transformation\":\"Transformation\",\"development\":\"Development\",\"facilitation\":\"Facilitation\",\"rehabilitation\":\"Rehabilitation\",\"remedy\":\"Remedy\",\"palliation\":\"Palliation\",\"prevention\":\"Prevention\"},\"intervention\":{\"identification\":\"Identification & Planning\",\"coordination_delivery\":\"Coordination & Delivery\",\"management\":\"Management\",\"governance\":\"Governance\",\"learning\":\"Learning\"},\"learning\":{\"research_evidence\":\"Research & Evidence\",\"trials\":\"Trials\",\"service_improvement\":\"Service Improvement\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"title\":\"Human well-being and Environment\",\"items\":{\"label\":\"Which aspects of human well-being and of the environment are relevant to your service? Are some more significant than others?\"}},\"innovation\":{\"title\":\"Innovation and change\",\"items\":{\"label\":\"What aspects of the service lifecycle are important regarding your innovation and change?\"}},\"intervention\":{\"title\":\"Intervention\",\"items\":{\"label\":\"What type of intervention is occuring?\"}},\"learning\":{\"title\":\"Learning\",\"items\":{\"label\":\"How is learning happening in your intervention?\"}}}},\"moral_ordering_model\":{\"title\":\"Moral Ordering\",\"guide\":{\"step01\":\"There are a number of core processes involved in a co-creative innovation. The first is concerned with the definition of ethos.\",\"step02\":\"The second involves management activities and products.\",\"step03\":\"Moral ordering is concerned with who gets to participate in activities so, in the case of your initiative, who is involved in these processes? Where and when do they take place? How do they communicate and how are they recorded?\",\"step04\":\"As a result of leadership, planning and design, services or initiatives are delivered and experienced.\",\"step05\":\"Again who is involved here and do they get any participation in the first two sets of activities?\",\"step06\":\"Rather than simply close the loop with a simple evaluation process, we are suggesting that, in systems of co-productive wellbeing and care, governance involves all the participants in the relationships identified here participation in addressing the questions defined in the moral ordering model.\",\"step07\":\"Governance takes place at the individual service client relationship level.\",\"step08\":\"It also takes place at the overall service level.\",\"step09\":\"How are governance processes, in the sense we are describing them here, take place in your initiative?\"},\"dashboard\":{\"govern\":\"Govern\",\"deliver\":\"Deliver\",\"define_ethos\":\"Define Ethos\",\"define_ethos_items\":\"Values\\nPrinciples\\nIntentions\\nPolicies\",\"plan_manage\":\"Plan & Manage\",\"plan_manage_items\":\"Rules\\nResources\\nProcesses\\nAccounts\",\"experience\":\"Experience\",\"individual_cases\":\"Individual Cases\",\"the_service_level\":\"The Service Level\"},\"options\":{\"sources\":{\"policy\":\"Policy\",\"meeting\":\"Meeting\",\"other\":\"Other\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"defineEthos\":{\"title\":\"Define Ethos\",\"values\":{\"label\":\"What values are important that the intervention comes to address?\"},\"definedBy\":{\"label\":\"How do these values come to be defined?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"planManagePrior\":{\"title\":\"Plan and Manage - Prior actions\",\"actions\":{\"label\":\"What actions were being undertaken prior to the intervention?\"},\"actors\":{\"label\":\"Who was involved with these prior actions?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"planManageCurrent\":{\"title\":\"Plan and Manage - Current actions\",\"actions\":{\"label\":\"What actions are now being undertaken within the pilot?\"},\"actors\":{\"label\":\"What ongoing actions are being taken?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"deliver\":{\"title\":\"Deliver\",\"method\":{\"label\":\"How is the intervention delivered?\"},\"actors\":{\"label\":\"By whom is it delivered?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"govern\":{\"title\":\"Govern\",\"actions\":{\"label\":\"How is the intervention governed? What measures are put in place to ensure the outcomes were as intended?\"},\"actors\":{\"label\":\"Who is evaluating this?\"},\"outcomes\":{\"label\":\"Are outcomes embodied in targets and measurements? And if so, whose?\"},\"evolution\":{\"label\":\"How does this impact on the evolution of the service?\"},\"improvements\":{\"label\":\"How are improvements identified? How are they implemented?\"}}}},\"co_creation_of_service_model\":{\"title\":\"Co-Creation of Service Model\",\"dashboard\":{\"structural_relationships\":\"Structural Relationships and Occasions\",\"infrastructural_relationships\":\"Infrastructural Relationships, Recourses and Facilities\",\"ethos\":\"Ethos\",\"policy_law\":\"Policy & Law\",\"resources\":\"Resources\",\"service_definition\":\"Service Definition and Development Platform\",\"service_delivery\":\"Service Delivery Platform\"},\"definitions\":{\"model\":{\"title\":\"Model\"},\"drivers\":{\"title\":\"Drivers and Motivations\",\"hint\":\"What were / are the drivers and motivations of the project? Was it a statutory requirement, recognition of a need or demand, seizing an opportunity, addressing an inequality?\",\"body\":{\"label\":\"Drivers and Motivations\",\"hint\":\"What are the drivers and motivations involved?\"}},\"policyDef\":{\"title\":\"Policy Definer\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"specDes\":{\"title\":\"Specifier and Designer\",\"hint\":\"Who specifies / specified and designs / designed the service delivery processes and resources?\"},\"deployment\":{\"title\":\"Deployer\",\"hint\":\"Who deploys / deployed and activates / activated those processes and resources?\"},\"delivery\":{\"title\":\"Deliverer\",\"hint\":\"Who is responsible for the delivery mechanism(s), channels and roles in your pilot?\"},\"evaluation\":{\"title\":\"Evaluator\",\"hint\":\"Who is the evaluator(s) and governors of the service?\"},\"user\":{\"title\":\"User\",\"hint\":\"Who is the direct user of the service?\"},\"beneficiary\":{\"title\":\"Beneficiary\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"initiator\":{\"title\":\"Initiator\",\"hint\":\"Who are, or were, the instigators who initiated your pilot activity?\"},\"extsvc\":{\"title\":\"External Technical Services\",\"hint\":\"What reusable facilities, (technical and human) resources, services and sources of information were developed and used in support of these service definition and development processes? What external resources and services (e.g. communications and social media) were/are used?\"},\"extorg\":{\"title\":\"External Organisations\",\"hint\":\"Are there any relevant actors, stakeholders or agencies which are relevant to the pilot, but which remain outside its vision and ethos?\"},\"infsvc\":{\"title\":\"Infrastructural Services\",\"hint\":\"What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?\"}}},\"user_journey_model\":{\"title\":\"User Journey Model\",\"dashboard\":{},\"definitions\":{\"model\":{\"title\":\"Model\"}}},\"social_media\":{\"title\":\"Social Media\",\"dashboard\":{\"title\":\"Social Media\"},\"definitions\":{\"data\":{\"title\":\"Social Media\"}}},\"theory_of_change\":{\"title\":\"Theory of Change\",\"dashboard\":{\"title\":\"Theory of Change\",\"empty_set\":\"There are no theory of change items for this project.\",\"manage\":\"Manage Theory of Change\"},\"definitions\":{\"data\":{\"title\":\"Theory of Change\",\"hint\":\"Please add any theories of change your project may have.\"}}},\"welcome\":{\"title\":\"Welcome\",\"dashboard\":{\"summary\":\"Created by {user} on {date_time}\"}}}}");
+
+/***/ }),
+
 /***/ "./js/lang/en_GB.json":
 /*!****************************!*\
   !*** ./js/lang/en_GB.json ***!
@@ -6617,8 +6820,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-i18n */ "./node_modules/vue-i18n/dist/vue-i18n.esm.js");
 /* harmony import */ var _data_languages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/data/languages */ "./js/data/languages.js");
-/* harmony import */ var _lang_en_GB_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/lang/en_GB.json */ "./js/lang/en_GB.json");
-var _lang_en_GB_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! @/lang/en_GB.json */ "./js/lang/en_GB.json", 1);
+/* harmony import */ var _lang_en_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/lang/en.json */ "./js/lang/en.json");
+var _lang_en_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! @/lang/en.json */ "./js/lang/en.json", 1);
 
 
 
@@ -6629,7 +6832,7 @@ var i18n = new vue_i18n__WEBPACK_IMPORTED_MODULE_1__["default"]({
   locale: _data_languages__WEBPACK_IMPORTED_MODULE_2__["DEFAULT_LANGUAGE"],
   fallbackLocale: _data_languages__WEBPACK_IMPORTED_MODULE_2__["FALLBACK_LANGUAGE"],
   messages: {
-    en_GB: _lang_en_GB_json__WEBPACK_IMPORTED_MODULE_3__
+    en_GB: _lang_en_json__WEBPACK_IMPORTED_MODULE_3__
   }
 });
 /* harmony default export */ __webpack_exports__["default"] = (i18n);
@@ -11166,13 +11369,13 @@ var defaultTextConfig = {
       } else {
         data.individualCases.visible = true;
         data.serviceLevel.visible = true;
-        data.govern.visible = this.userValues.hasGovern;
-        data.deliver.visible = this.userValues.hasDeliver;
-        data.experience.visible = this.userValues.hasDeliver;
-        data.ethosLabel.visible = this.userValues.hasEthos;
-        data.ethosItems.visible = this.userValues.hasEthos;
-        data.planLabel.visible = this.userValues.hasPlanManage;
-        data.planItems.visible = this.userValues.hasPlanManage;
+        data.govern.visible = this.userValues.hasGovern ? true : false;
+        data.deliver.visible = this.userValues.hasDeliver ? true : false;
+        data.experience.visible = this.userValues.hasDeliver ? true : false;
+        data.ethosLabel.visible = this.userValues.hasEthos ? true : false;
+        data.ethosItems.visible = this.userValues.hasEthos ? true : false;
+        data.planLabel.visible = this.userValues.hasPlanManage ? true : false;
+        data.planItems.visible = this.userValues.hasPlanManage ? true : false;
       }
 
       return data;
@@ -12106,6 +12309,575 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   methods: {
     doEdit: function doEdit() {
       Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["commit"])('EDIT_ASPECT', this.aspectId);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/map */ "./node_modules/lodash/map.js");
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_map__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/find */ "./node_modules/lodash/find.js");
+/* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_find__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/filter */ "./node_modules/lodash/filter.js");
+/* harmony import */ var lodash_filter__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_filter__WEBPACK_IMPORTED_MODULE_3__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+var defaultTextConfig = {
+  fontSize: 24,
+  fontStyle: 'bold',
+  fontFamily: '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+  lineHeight: 1.2,
+  align: 'center'
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'UserJourneyDashboard',
+  props: {
+    aspectId: [Boolean, String],
+    options: Object,
+    definitions: [Object, Array]
+  },
+  data: function data() {
+    return {
+      labelConfig: {
+        x: 170,
+        y: 75,
+        opacity: 0.75
+      },
+      tagConfig: {
+        fill: "black",
+        pointerDirection: "down",
+        pointerWidth: 10,
+        pointerHeight: 10,
+        lineJoin: "round"
+      },
+      textConfig: {
+        text: "Tooltip pointing down",
+        fontFamily: "Calibri",
+        fontSize: 18,
+        padding: 5,
+        fill: "white"
+      }
+    };
+  },
+  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(['userGuide']), {
+    dataPath: function dataPath() {
+      if (this.userGuide.isOpen) {
+        return "userGuide@project.data.".concat(this.aspectId);
+      } else {
+        return "project@data.".concat(this.aspectId);
+      }
+    },
+    aspectData: Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(':dataPath'),
+    bgConfig: function bgConfig() {
+      var data = {};
+      return data;
+    },
+    journeyStagesConfig: function journeyStagesConfig() {
+      var data = {};
+      var tagConfig = {
+        fill: '#aaaaaa',
+        pointerDirection: 'right',
+        pointerWidth: 18,
+        pointerHeight: 56,
+        lineJoin: 'round'
+      };
+
+      var textConfig = _objectSpread({}, defaultTextConfig, {
+        width: 180,
+        text: 'STAGE',
+        fontStyle: 'normal',
+        fontSize: 20,
+        padding: 18,
+        fill: '#ffffff'
+      });
+
+      function xPos(itemNum) {
+        var offset = 385;
+        return offset + itemNum * 180;
+      }
+
+      ;
+      var yPos = 555;
+      data.evaluating = {
+        label: {
+          x: xPos(5),
+          y: yPos
+        },
+        tag: _objectSpread({}, tagConfig, {
+          fill: '#604A7B',
+          pointerHeight: 0
+        }),
+        text: _objectSpread({}, textConfig, {
+          text: 'Evaluating'
+        })
+      };
+      data.using = {
+        label: {
+          x: xPos(4),
+          y: yPos
+        },
+        tag: _objectSpread({}, tagConfig, {
+          fill: '#FAC090'
+        }),
+        text: _objectSpread({}, textConfig, {
+          text: 'Using'
+        })
+      };
+      data.accessing = {
+        label: {
+          x: xPos(3),
+          y: yPos
+        },
+        tag: _objectSpread({}, tagConfig, {
+          fill: '#D99694'
+        }),
+        text: _objectSpread({}, textConfig, {
+          text: 'Accessing'
+        })
+      };
+      data.discovering = {
+        label: {
+          x: xPos(2),
+          y: yPos
+        },
+        tag: _objectSpread({}, tagConfig, {
+          fill: '#4F81BD'
+        }),
+        text: _objectSpread({}, textConfig, {
+          text: 'Discovering'
+        })
+      };
+      data.designing = {
+        label: {
+          x: xPos(1),
+          y: yPos
+        },
+        tag: _objectSpread({}, tagConfig, {
+          fill: '#79C36F'
+        }),
+        text: _objectSpread({}, textConfig, {
+          text: 'Designing'
+        })
+      };
+      data.instigating = {
+        label: {
+          x: xPos(0),
+          y: yPos
+        },
+        tag: _objectSpread({}, tagConfig, {
+          fill: '#DC5C52'
+        }),
+        text: _objectSpread({}, textConfig, {
+          text: 'Instigating'
+        })
+      };
+      return data;
+    },
+    flowchartTextConfig: function flowchartTextConfig() {
+      var data = [];
+      var defaultConfig = {
+        labelConfig: {
+          fontStyle: 'normal',
+          fontSize: 16
+        },
+        borderConfig: {
+          cornerRadius: 0,
+          strokeWidth: 2
+        }
+      };
+      data.push(_objectSpread({}, defaultConfig, {
+        label: "Service Definition",
+        x: 0,
+        y: 140,
+        textWidth: 105,
+        width: 115,
+        height: 60
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        label: "Service Resourcing",
+        x: 130,
+        y: 30,
+        textWidth: 125,
+        width: 155,
+        height: 60
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        label: "Reservation & Scheduling",
+        x: 305,
+        y: 30,
+        textWidth: 175,
+        width: 185,
+        height: 60
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        label: "Service Delivery",
+        x: 515,
+        y: 30,
+        textWidth: 100,
+        width: 130,
+        height: 60
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        label: "Service Publicity",
+        x: 130,
+        y: 150,
+        textWidth: 135,
+        width: 165,
+        height: 40
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        label: "Qualifying Agent",
+        x: 315,
+        y: 150,
+        textWidth: 135,
+        width: 165,
+        height: 40
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        label: "Evaluating Agent",
+        x: 700,
+        y: 140,
+        textWidth: 100,
+        width: 125,
+        height: 60
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        label: "Potential Beneficiary",
+        x: 125,
+        y: 315,
+        textWidth: 130,
+        width: 165,
+        height: 60
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        label: "Applicant",
+        x: 315,
+        y: 325,
+        textWidth: 130,
+        width: 165,
+        height: 40
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        label: "Client",
+        x: 490,
+        y: 325,
+        textWidth: 130,
+        width: 165,
+        height: 40
+      }));
+      return data;
+    },
+    flowchartLabelsConfig: function flowchartLabelsConfig() {
+      var data = [];
+
+      var defaultConfig = _objectSpread({}, defaultTextConfig, {
+        text: '',
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontStyle: 'italic',
+        fontSize: 16,
+        fill: '#c00000'
+      });
+
+      data.push(_objectSpread({}, defaultConfig, {
+        text: 'Budget',
+        x: 120,
+        y: 100
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        text: 'Service Definition',
+        x: 265,
+        y: 110
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        text: 'Outcome Reports',
+        x: 715,
+        y: 55,
+        width: 80
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        text: 'Provider views',
+        x: 600,
+        y: 145,
+        width: 75
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        text: 'Service publication',
+        x: 155,
+        y: 235,
+        width: 100
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        text: 'Application',
+        x: 345,
+        y: 245
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        text: 'Service Use',
+        x: 525,
+        y: 245
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        text: 'Clients\' views',
+        x: 715,
+        y: 235,
+        width: 90
+      }));
+      return data;
+    },
+    flowchartArrowsConfig: function flowchartArrowsConfig() {
+      var data = [];
+      var defaultConfig = {
+        x: 0,
+        y: 0,
+        pointerLength: 8,
+        pointerWidth: 8,
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 1
+      }; // Service Def -> Service Resourcing
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [85, 130, 115, 110]
+      })); // Service Definition -> Service Definition
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [120, 135, 245, 120]
+      })); // Service Definition -> Service Publicity
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [275, 130, 275, 145]
+      })); // Service Definition -> Qualifying
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [370, 130, 370, 145]
+      })); // Service Definition -> Service Delivery
+
+      data.push(_objectSpread({}, defaultConfig, {
+        tension: 0.6,
+        points: [430, 120, 525, 115, 565, 100]
+      })); // Service Delivery -> Service Use
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [570, 100, 570, 240]
+      })); // Service Delivery -> Provider Views
+
+      data.push(_objectSpread({}, defaultConfig, {
+        tension: 0.6,
+        points: [575, 100, 585, 140, 600, 155]
+      })); // Provider views -> Evaluating Agent
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [675, 165, 695, 165]
+      })); // Evaluating Agent -> Outcome reports
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [755, 130, 755, 105]
+      })); // Clients views -> Evaluating Agent
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [755, 230, 755, 210]
+      })); // Client -> Clients Views
+
+      data.push(_objectSpread({}, defaultConfig, {
+        tension: 0.3,
+        points: [660, 350, 715, 350, 755, 325, 760, 285]
+      })); // Service Publicity -> Service publication
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [205, 195, 205, 230]
+      })); // Service publication -> Potential Beneficiary
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [205, 280, 205, 305]
+      })); // Applicant -> Application
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [390, 315, 390, 275]
+      })); // Application -> Qualifying Agent
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [390, 240, 390, 205]
+      })); // Service Use -> Client
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [570, 275, 570, 315]
+      })); // Outcome reports -> Service definition
+
+      data.push(_objectSpread({}, defaultConfig, {
+        tension: 0.4,
+        points: [755, 45, 745, 20, 700, 0, 105, 0, 75, 130]
+      }));
+      return data;
+    },
+    sipConfig: function sipConfig() {
+      var data = {}; // Outer container
+      //
+
+      data.rect = {
+        width: 400,
+        height: 160,
+        fill: '#eeece1',
+        strokeWidth: 2,
+        stroke: '#000000'
+      };
+      data.label = _objectSpread({}, defaultTextConfig, {
+        width: 400,
+        align: 'center',
+        lineHeight: 1.3,
+        padding: 10,
+        fontSize: 18,
+        fontStyle: 'normal',
+        text: 'Service Instigation and Policymaking'
+      }); // Inner boxes
+      //
+
+      data.boxes = [];
+      var defaultConfig = {
+        labelConfig: {
+          fontStyle: 'normal',
+          fontSize: 16
+        },
+        borderConfig: {
+          fill: '#ffffff',
+          cornerRadius: 0,
+          strokeWidth: 2
+        }
+      };
+      data.boxes.push(_objectSpread({}, defaultConfig, {
+        label: "Pressure / Campaign Group",
+        x: 10,
+        y: 85,
+        textWidth: 170,
+        width: 190,
+        height: 65
+      }));
+      data.boxes.push(_objectSpread({}, defaultConfig, {
+        label: "Government Department",
+        x: 240,
+        y: 85,
+        textWidth: 130,
+        width: 150,
+        height: 65
+      }));
+      data.boxes.push(_objectSpread({}, defaultConfig, {
+        label: "Political Party",
+        x: 155,
+        y: 40,
+        textWidth: 125,
+        width: 145,
+        height: 35
+      }));
+      data.boxes.push(_objectSpread({}, defaultConfig, {
+        label: "Activist",
+        x: 55,
+        y: 370,
+        textWidth: 95,
+        width: 100,
+        height: 35
+      }));
+      data.boxes.push(_objectSpread({}, defaultConfig, {
+        label: "Voter",
+        x: 160,
+        y: 370,
+        textWidth: 95,
+        width: 100,
+        height: 35
+      }));
+      data.boxes.push(_objectSpread({}, defaultConfig, {
+        label: "Citizen",
+        x: 265,
+        y: 370,
+        textWidth: 95,
+        width: 100,
+        height: 35
+      })); // Blue connecting lines
+      //
+
+      data.lines = [];
+      var defaultLineConfig = {
+        x: 0,
+        y: 0,
+        pointerLength: 8,
+        pointerWidth: 8,
+        pointerAtBeginning: true,
+        fill: 'red',
+        lineJoin: 'round',
+        stroke: 'green',
+        strokeWidth: 1,
+        dash: [6, 3]
+      };
+      data.lines.push(_objectSpread({}, defaultLineConfig, {
+        points: [105, 145, 105, 375]
+      }));
+      return data;
+    }
+  }),
+  methods: {
+    inArray: function inArray(arr, item) {
+      return arr.indexOf(item) !== -1;
     }
   }
 });
@@ -13668,6 +14440,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
 /* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! colors.css */ "./node_modules/colors.css/js/colors.js");
 /* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(colors_css__WEBPACK_IMPORTED_MODULE_1__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -13692,6 +14470,22 @@ __webpack_require__.r(__webpack_exports__);
     config: Object
   },
   computed: {
+    defaultText: function defaultText() {
+      return {
+        fontSize: 14,
+        fontStyle: 'bold',
+        fontFamily: this.options.fontFamily,
+        lineHeight: this.lineHeight,
+        align: 'center',
+        verticalAlign: 'middle'
+      };
+    },
+    defaultBorder: function defaultBorder() {
+      return {
+        strokeWidth: 2,
+        stroke: colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.black
+      };
+    },
     fontSize: function fontSize() {
       return this.config.fontSize ? this.config.fontSize : 14;
     },
@@ -13704,31 +14498,52 @@ __webpack_require__.r(__webpack_exports__);
     labelConfig: function labelConfig() {
       var x = this.config.width / 2;
       x -= this.config.textWidth / 2;
-      return {
+      var customConfig = this.config.labelConfig ? this.config.labelConfig : {};
+      return _objectSpread({}, this.defaultText, {}, customConfig, {
         x: x,
         y: 0,
         width: this.config.textWidth,
         height: this.config.height,
-        text: this.config.label,
-        fontSize: this.fontSize,
-        fontStyle: 'bold',
-        fontFamily: this.options.fontFamily,
-        lineHeight: this.lineHeight,
-        align: 'center',
-        verticalAlign: 'middle'
-      };
+        text: this.config.label
+      });
+      /*
+      			return {
+      				x: x,
+      				y: 0,
+      				width: this.config.textWidth,
+      				height: this.config.height,
+      				text: this.config.label,
+      				fontSize: this.fontSize,
+      				fontStyle: 'bold',
+      				fontFamily: this.options.fontFamily,
+      				lineHeight: this.lineHeight,
+      				align: 'center',
+      				verticalAlign: 'middle',
+      			}*/
     },
     borderConfig: function borderConfig() {
-      var height = this.labelHeight;
-      return {
+      var customConfig = this.config.borderConfig ? this.config.borderConfig : {};
+      return _objectSpread({}, this.defaultBorder, {
+        cornerRadius: Math.ceil(this.config.height / 2)
+      }, customConfig, {
         x: 0,
         y: 0,
         width: this.config.width,
         height: this.config.height,
-        cornerRadius: Math.ceil(this.config.height / 2),
-        stroke: colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.black,
-        strokeWidth: 2
-      };
+        text: this.config.label
+      });
+      /*
+      			var height = this.labelHeight;
+      
+      			return {
+      				x: 0,
+      				y: 0,
+      				width: this.config.width,
+      				height: this.config.height,
+      				cornerRadius: Math.ceil(this.config.height / 2),
+      				stroke: colours.black,
+      				strokeWidth: 2,
+      			}*/
     }
   }
 });
@@ -15072,6 +15887,9 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         value: "co_creation_of_service_model",
         label: this.$t("aspects.co_creation_of_service_model.title")
+      }, {
+        value: "user_journey_model",
+        label: this.$t("aspects.user_journey_model.title")
       }];
     },
     val: {
@@ -16644,6 +17462,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         value: "co_creation_of_service_model",
         label: this.$t("aspects.co_creation_of_service_model.title")
+      }, {
+        value: "user_journey_model",
+        label: this.$t("aspects.user_journey_model.title")
       }];
     }
   }),
@@ -16653,7 +17474,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         name: null,
         created_at: null,
         config: {
-          models: ["analytic_model", "change_model", "intervention_theory_model", "moral_ordering_model", "co_creation_of_service_model"]
+          models: ["analytic_model", "change_model", "intervention_theory_model", "moral_ordering_model", "co_creation_of_service_model", "user_journey_model"]
         }
       };
     },
@@ -50621,6 +51442,110 @@ var render = function() {
           : _vm._e()
       ])
     ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=template&id=b843cd4a&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=template&id=b843cd4a& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-group",
+    [
+      _vm._l(_vm.journeyStagesConfig, function(stage, idx) {
+        return _c(
+          "v-group",
+          { key: "stage" + idx },
+          [
+            _c(
+              "v-label",
+              { attrs: { config: stage.label } },
+              [
+                _c("v-tag", { attrs: { config: stage.tag } }),
+                _vm._v(" "),
+                _c("v-text", { attrs: { config: stage.text } })
+              ],
+              1
+            )
+          ],
+          1
+        )
+      }),
+      _vm._v(" "),
+      _vm._l(_vm.flowchartTextConfig, function(text, idx) {
+        return _c(
+          "v-group",
+          { key: "flowText" + idx, attrs: { config: { x: 440, y: 130 } } },
+          [
+            _c("CosmosTextBox", {
+              attrs: { options: _vm.options, config: text }
+            })
+          ],
+          1
+        )
+      }),
+      _vm._v(" "),
+      _vm._l(_vm.flowchartLabelsConfig, function(text, idx) {
+        return _c(
+          "v-group",
+          { key: "flowLabel" + idx, attrs: { config: { x: 440, y: 130 } } },
+          [_c("v-text", { attrs: { config: text } })],
+          1
+        )
+      }),
+      _vm._v(" "),
+      _vm._l(_vm.flowchartArrowsConfig, function(arrow, idx) {
+        return _c(
+          "v-group",
+          { key: "flowArrow" + idx, attrs: { config: { x: 440, y: 130 } } },
+          [_c("v-arrow", { attrs: { config: arrow } })],
+          1
+        )
+      }),
+      _vm._v(" "),
+      _c(
+        "v-group",
+        { attrs: { config: { x: 100, y: 85 } } },
+        [
+          _c("v-rect", { attrs: { config: _vm.sipConfig.rect } }),
+          _vm._v(" "),
+          _c("v-text", { attrs: { config: _vm.sipConfig.label } }),
+          _vm._v(" "),
+          _vm._l(_vm.sipConfig.boxes, function(text, idx) {
+            return _c("CosmosTextBox", {
+              key: "sipBox" + idx,
+              attrs: { config: text, options: _vm.options }
+            })
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.sipConfig.lines, function(arrow, idx) {
+            return _c("v-arrow", {
+              key: "sipLine" + idx,
+              attrs: { config: arrow }
+            })
+          })
+        ],
+        2
+      )
+    ],
+    2
   )
 }
 var staticRenderFns = []

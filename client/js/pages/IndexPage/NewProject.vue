@@ -96,6 +96,7 @@ export default {
 				{ value: "intervention_theory_model", label: this.$t(`aspects.intervention_theory_model.title`) },
 				{ value: "moral_ordering_model", label: this.$t(`aspects.moral_ordering_model.title`) },
 				{ value: "co_creation_of_service_model", label: this.$t(`aspects.co_creation_of_service_model.title`) },
+				{ value: "user_journey_model", label: this.$t(`aspects.user_journey_model.title`) },
 			];
 		}
 	},
@@ -113,6 +114,7 @@ export default {
 						"intervention_theory_model",
 						"moral_ordering_model",
 						"co_creation_of_service_model",
+						"user_journey_model",
 					],
 				},
 			};

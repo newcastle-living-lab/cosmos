@@ -533,6 +533,16 @@
 				}
 			}
 		},
+		"user_journey_model": {
+			"title": "User Journey Model",
+			"dashboard": {
+			},
+			"definitions": {
+				"model": {
+					"title": "Model"
+				}
+			}
+		},
 		"social_media": {
 			"title": "Social Media",
 			"dashboard": {

@@ -6,7 +6,7 @@
 	"dashboardComponent": "TheoryOfChangeDashboard",
 	"summaryComponent": "TheoryOfChangeSummaryView",
 	"stageSize": {
-		"width": 1280,
+		"width": 1285,
 		"height": 800
 	}
 }

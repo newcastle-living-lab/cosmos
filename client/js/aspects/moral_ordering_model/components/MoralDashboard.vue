@@ -343,13 +343,13 @@ export default {
 				data.individualCases.visible = true;
 				data.serviceLevel.visible = true;
 
-				data.govern.visible = this.userValues.hasGovern;
-				data.deliver.visible = this.userValues.hasDeliver;
-				data.experience.visible = this.userValues.hasDeliver;
-				data.ethosLabel.visible = this.userValues.hasEthos;
-				data.ethosItems.visible = this.userValues.hasEthos;
-				data.planLabel.visible = this.userValues.hasPlanManage;
-				data.planItems.visible = this.userValues.hasPlanManage;
+				data.govern.visible = this.userValues.hasGovern ? true : false;
+				data.deliver.visible = this.userValues.hasDeliver ? true : false;
+				data.experience.visible = this.userValues.hasDeliver ? true : false;
+				data.ethosLabel.visible = this.userValues.hasEthos ? true : false;
+				data.ethosItems.visible = this.userValues.hasEthos ? true : false;
+				data.planLabel.visible = this.userValues.hasPlanManage ? true : false;
+				data.planItems.visible = this.userValues.hasPlanManage ? true : false;
 
 			}
 

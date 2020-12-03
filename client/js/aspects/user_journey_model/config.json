@@ -1,0 +1,10 @@
+{
+	"id": "user_journey_model",
+	"type": "model",
+	"routeName": "model",
+	"dashboardComponent": "UserJourneyDashboard",
+	"stageSize": {
+		"width": 1285,
+		"height": 800
+	}
+}
