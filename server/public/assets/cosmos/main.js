@@ -2551,6 +2551,76 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./js/components/cosmos/lib/CosmosConnector.vue":
+/*!******************************************************!*\
+  !*** ./js/components/cosmos/lib/CosmosConnector.vue ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CosmosConnector_vue_vue_type_template_id_4a6fc2d6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CosmosConnector.vue?vue&type=template&id=4a6fc2d6& */ "./js/components/cosmos/lib/CosmosConnector.vue?vue&type=template&id=4a6fc2d6&");
+/* harmony import */ var _CosmosConnector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CosmosConnector.vue?vue&type=script&lang=js& */ "./js/components/cosmos/lib/CosmosConnector.vue?vue&type=script&lang=js&");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _CosmosConnector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _CosmosConnector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CosmosConnector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CosmosConnector_vue_vue_type_template_id_4a6fc2d6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CosmosConnector_vue_vue_type_template_id_4a6fc2d6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "js/components/cosmos/lib/CosmosConnector.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./js/components/cosmos/lib/CosmosConnector.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./js/components/cosmos/lib/CosmosConnector.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosConnector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./CosmosConnector.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosConnector.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosConnector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./js/components/cosmos/lib/CosmosConnector.vue?vue&type=template&id=4a6fc2d6&":
+/*!*************************************************************************************!*\
+  !*** ./js/components/cosmos/lib/CosmosConnector.vue?vue&type=template&id=4a6fc2d6& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosConnector_vue_vue_type_template_id_4a6fc2d6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./CosmosConnector.vue?vue&type=template&id=4a6fc2d6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosConnector.vue?vue&type=template&id=4a6fc2d6&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosConnector_vue_vue_type_template_id_4a6fc2d6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosConnector_vue_vue_type_template_id_4a6fc2d6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./js/components/cosmos/lib/CosmosCurve.vue":
 /*!**************************************************!*\
   !*** ./js/components/cosmos/lib/CosmosCurve.vue ***!
@@ -3314,7 +3384,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************************!*\
   !*** ./js/components/cosmos/lib/index.js ***!
   \*******************************************/
-/*! exports provided: CosmosGroup, CosmosTitle, CosmosImage, CosmosInfoBox, CosmosTextBox, CosmosExternals, CosmosExternalsItem, CosmosStakeholder, CosmosNodeBracket, CosmosArrow, CosmosCurve */
+/*! exports provided: CosmosGroup, CosmosTitle, CosmosImage, CosmosInfoBox, CosmosTextBox, CosmosExternals, CosmosExternalsItem, CosmosStakeholder, CosmosNodeBracket, CosmosArrow, CosmosCurve, CosmosConnector */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3351,6 +3421,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _CosmosCurve__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./CosmosCurve */ "./js/components/cosmos/lib/CosmosCurve.vue");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CosmosCurve", function() { return _CosmosCurve__WEBPACK_IMPORTED_MODULE_10__["default"]; });
+
+/* harmony import */ var _CosmosConnector__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./CosmosConnector */ "./js/components/cosmos/lib/CosmosConnector.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CosmosConnector", function() { return _CosmosConnector__WEBPACK_IMPORTED_MODULE_11__["default"]; });
+
 
 
 
@@ -12331,6 +12405,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_find__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var lodash_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/filter */ "./node_modules/lodash/filter.js");
 /* harmony import */ var lodash_filter__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_filter__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! colors.css */ "./node_modules/colors.css/js/colors.js");
+/* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(colors_css__WEBPACK_IMPORTED_MODULE_4__);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -12380,6 +12456,34 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -12390,6 +12494,10 @@ var defaultTextConfig = {
   fontFamily: '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
   lineHeight: 1.2,
   align: 'center'
+};
+var Icons = {
+  check: 'M5 13l4 4L19 7',
+  cross: 'M6 18L18 6M6 6l12 12'
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'UserJourneyDashboard',
@@ -12434,6 +12542,17 @@ var defaultTextConfig = {
       var data = {};
       return data;
     },
+    serviceLabelConfig: function serviceLabelConfig() {
+      return _objectSpread({}, defaultTextConfig, {
+        fontStyle: 'italic',
+        fontSize: 18,
+        text: 'Service Co-creation Journey',
+        width: 175,
+        align: 'right',
+        x: 0,
+        y: 535
+      });
+    },
     journeyStagesConfig: function journeyStagesConfig() {
       var data = {};
       var tagConfig = {
@@ -12461,6 +12580,9 @@ var defaultTextConfig = {
       ;
       var yPos = 555;
       data.evaluating = {
+        group: {
+          visible: true
+        },
         label: {
           x: xPos(5),
           y: yPos
@@ -12474,6 +12596,9 @@ var defaultTextConfig = {
         })
       };
       data.using = {
+        group: {
+          visible: true
+        },
         label: {
           x: xPos(4),
           y: yPos
@@ -12486,6 +12611,9 @@ var defaultTextConfig = {
         })
       };
       data.accessing = {
+        group: {
+          visible: true
+        },
         label: {
           x: xPos(3),
           y: yPos
@@ -12498,6 +12626,9 @@ var defaultTextConfig = {
         })
       };
       data.discovering = {
+        group: {
+          visible: true
+        },
         label: {
           x: xPos(2),
           y: yPos
@@ -12510,6 +12641,9 @@ var defaultTextConfig = {
         })
       };
       data.designing = {
+        group: {
+          visible: true
+        },
         label: {
           x: xPos(1),
           y: yPos
@@ -12522,6 +12656,9 @@ var defaultTextConfig = {
         })
       };
       data.instigating = {
+        group: {
+          visible: true
+        },
         label: {
           x: xPos(0),
           y: yPos
@@ -12670,8 +12807,9 @@ var defaultTextConfig = {
         width: 100
       }));
       data.push(_objectSpread({}, defaultConfig, {
+        align: 'center',
         text: 'Application',
-        x: 345,
+        x: 355,
         y: 245
       }));
       data.push(_objectSpread({}, defaultConfig, {
@@ -12769,6 +12907,16 @@ var defaultTextConfig = {
       data.push(_objectSpread({}, defaultConfig, {
         tension: 0.4,
         points: [755, 45, 745, 20, 700, 0, 105, 0, 75, 130]
+      })); // Arrows from initial screen
+      //
+      // Service Publication -> Application
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [265, 255, 330, 255]
+      })); // Application -> Service Use
+
+      data.push(_objectSpread({}, defaultConfig, {
+        points: [455, 255, 510, 255]
       }));
       return data;
     },
@@ -12824,7 +12972,7 @@ var defaultTextConfig = {
       }));
       data.boxes.push(_objectSpread({}, defaultConfig, {
         label: "Political Party",
-        x: 155,
+        x: 150,
         y: 40,
         textWidth: 125,
         width: 145,
@@ -12856,23 +13004,166 @@ var defaultTextConfig = {
       })); // Blue connecting lines
       //
 
-      data.lines = [];
-      var defaultLineConfig = {
-        x: 0,
-        y: 0,
-        pointerLength: 8,
-        pointerWidth: 8,
-        pointerAtBeginning: true,
-        fill: 'red',
-        lineJoin: 'round',
-        stroke: 'green',
-        strokeWidth: 1,
+      data.connectors = [];
+      var defaultConnectorConfig = {
+        colour: '#4a7ebb',
+        radius: 6,
+        strokeWidth: 2,
         dash: [6, 3]
       };
-      data.lines.push(_objectSpread({}, defaultLineConfig, {
-        points: [105, 145, 105, 375]
+      data.connectors.push(_objectSpread({}, defaultConnectorConfig, {
+        start: [105, 150],
+        end: [105, 370]
+      }));
+      data.connectors.push(_objectSpread({}, defaultConnectorConfig, {
+        start: [220, 75],
+        end: [220, 370]
+      }));
+      data.connectors.push(_objectSpread({}, defaultConnectorConfig, {
+        start: [315, 150],
+        end: [315, 370]
+      })); // Icons
+      //
+
+      data.icons = [];
+      var defaultIconConfig = {
+        closed: false,
+        x: 0,
+        y: 0,
+        opacity: 1,
+        scale: {
+          x: 1.75,
+          y: 1.75
+        }
+      };
+
+      var checkConfig = _objectSpread({}, defaultIconConfig, {
+        stroke: colors_css__WEBPACK_IMPORTED_MODULE_4___default.a.green,
+        data: Icons.check
+      });
+
+      var crossConfig = _objectSpread({}, defaultIconConfig, {
+        stroke: colors_css__WEBPACK_IMPORTED_MODULE_4___default.a.red,
+        data: Icons.cross
+      });
+
+      data.icons.push(_objectSpread({}, checkConfig, {
+        x: 60,
+        y: 280
+      }));
+      data.icons.push(_objectSpread({}, crossConfig, {
+        x: 105,
+        y: 280
+      }));
+      data.icons.push(_objectSpread({}, checkConfig, {
+        x: 180,
+        y: 280
+      }));
+      data.icons.push(_objectSpread({}, crossConfig, {
+        x: 220,
+        y: 280
+      }));
+      data.icons.push(_objectSpread({}, checkConfig, {
+        x: 275,
+        y: 280
+      }));
+      data.icons.push(_objectSpread({}, crossConfig, {
+        x: 315,
+        y: 280
       }));
       return data;
+    },
+    swimLanesConfig: function swimLanesConfig() {
+      var lanes = [];
+      lanes.push({
+        x: 0,
+        y: 0,
+        width: 720,
+        height: 90,
+        fill: '#edfdfb'
+      });
+      lanes.push({
+        x: 0,
+        y: 160,
+        width: 720,
+        height: 65,
+        fill: '#d7e4bd'
+      });
+      lanes.push({
+        x: 0,
+        y: 230,
+        width: 720,
+        height: 65,
+        fill: '#ffe07d'
+      });
+      return lanes;
+    },
+    swimLaneLabelsConfig: function swimLaneLabelsConfig() {
+      var labels = [];
+
+      var defaultLabelConfig = _objectSpread({}, defaultTextConfig, {
+        fontStyle: 'italic',
+        fontSize: 18
+      });
+
+      labels.push(_objectSpread({}, defaultLabelConfig, {
+        text: 'Service Workflow',
+        width: 100,
+        align: 'right',
+        x: 0,
+        y: -60,
+        offsetX: 110
+      }));
+      labels.push(_objectSpread({}, defaultLabelConfig, {
+        text: 'Touch Points',
+        width: 100,
+        align: 'right',
+        x: 0,
+        y: 30,
+        offsetX: 110
+      }));
+      labels.push(_objectSpread({}, defaultLabelConfig, {
+        text: 'Service User Journey',
+        width: 100,
+        align: 'right',
+        x: 0,
+        y: 105,
+        offsetX: 110
+      }));
+      labels.push(_objectSpread({}, defaultLabelConfig, {
+        text: 'Which channels?',
+        width: 100,
+        align: 'right',
+        x: 0,
+        y: 240,
+        offsetX: 110
+      }));
+      return labels;
+    },
+    swimLaneSmileys: function swimLaneSmileys() {
+      var faces = [];
+      var defaultFaceConfig = {
+        opacity: 1,
+        scale: {
+          x: 0.4,
+          y: 0.4
+        },
+        x: 0,
+        y: 165
+      };
+      faces.push(_objectSpread({}, defaultFaceConfig, {
+        filename: 'user-journey/face-smile.svg',
+        x: -60
+      }));
+      faces.push(_objectSpread({}, defaultFaceConfig, {
+        filename: 'user-journey/face-neutral.svg',
+        x: -110
+      }));
+      faces.push(_objectSpread({}, defaultFaceConfig, {
+        filename: 'user-journey/face-frown.svg',
+        x: -160
+      }));
+      return faces;
     }
   }),
   methods: {
@@ -13198,6 +13489,90 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.moveLabel();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosConnector.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/components/cosmos/lib/CosmosConnector.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var defaultConfig = {
+  color: '#cccccc',
+  dash: [10, 5],
+  strokeWidth: 1,
+  start: [],
+  end: [],
+  radius: 10
+};
+var defaultLineConfig = {
+  x: 0,
+  y: 0,
+  strokeWidth: 1,
+  dash: [6, 3]
+};
+var defaultCircleConfig = {
+  fill: '#cccccc'
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'CosmosConnector',
+  props: {
+    options: Object,
+    config: Object
+  },
+  computed: {
+    mergedConfig: function mergedConfig() {
+      return _objectSpread({}, defaultConfig, {}, this.config);
+    },
+    circlesConfig: function circlesConfig() {
+      var circles = [];
+      circles.push(_objectSpread({}, defaultCircleConfig, {
+        x: this.mergedConfig.start[0],
+        y: this.mergedConfig.start[1],
+        fill: this.mergedConfig.colour,
+        radius: this.mergedConfig.radius
+      }));
+      circles.push(_objectSpread({}, defaultCircleConfig, {
+        x: this.mergedConfig.end[0],
+        y: this.mergedConfig.end[1],
+        fill: this.mergedConfig.colour,
+        radius: this.mergedConfig.radius
+      }));
+      return circles;
+    },
+    lineConfig: function lineConfig() {
+      var mergedConfig = this.mergedConfig;
+
+      var config = _objectSpread({}, defaultLineConfig, {
+        stroke: mergedConfig.colour,
+        strokeWidth: mergedConfig.strokeWidth,
+        dash: mergedConfig.dash,
+        points: [mergedConfig.start[0], mergedConfig.start[1], mergedConfig.end[0], mergedConfig.end[1]]
+      });
+
+      return config;
+    }
   }
 });
 
@@ -51469,10 +51844,41 @@ var render = function() {
   return _c(
     "v-group",
     [
+      _c("CosmosTitle", {
+        attrs: { aspectId: _vm.aspectId, options: _vm.options }
+      }),
+      _vm._v(" "),
+      _c(
+        "v-group",
+        { attrs: { config: { x: 547, y: 430 } } },
+        [
+          _vm._l(_vm.swimLanesConfig, function(rect, idx) {
+            return _c("v-rect", {
+              key: "swimLane" + idx,
+              attrs: { config: rect }
+            })
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.swimLaneLabelsConfig, function(label, idx) {
+            return _c("v-text", {
+              key: "swimLaneLabel" + idx,
+              attrs: { config: label }
+            })
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.swimLaneSmileys, function(img, idx) {
+            return _c("CosmosImage", { attrs: { config: img } })
+          })
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _c("v-text", { attrs: { config: _vm.serviceLabelConfig } }),
+      _vm._v(" "),
       _vm._l(_vm.journeyStagesConfig, function(stage, idx) {
         return _c(
           "v-group",
-          { key: "stage" + idx },
+          { key: "stage" + idx, attrs: { config: stage.group } },
           [
             _c(
               "v-label",
@@ -51535,10 +51941,17 @@ var render = function() {
             })
           }),
           _vm._v(" "),
-          _vm._l(_vm.sipConfig.lines, function(arrow, idx) {
-            return _c("v-arrow", {
-              key: "sipLine" + idx,
-              attrs: { config: arrow }
+          _vm._l(_vm.sipConfig.connectors, function(conn, idx) {
+            return _c("CosmosConnector", {
+              key: "sipConnector" + idx,
+              attrs: { config: conn }
+            })
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.sipConfig.icons, function(icon, idx) {
+            return _c("v-path", {
+              key: "sipIcon" + idx,
+              attrs: { config: icon }
             })
           })
         ],
@@ -51767,6 +52180,40 @@ var render = function() {
       _c("v-arrow", { attrs: { config: _vm.arrowConfig } })
     ],
     1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosConnector.vue?vue&type=template&id=4a6fc2d6&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/components/cosmos/lib/CosmosConnector.vue?vue&type=template&id=4a6fc2d6& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-group",
+    [
+      _c("v-line", { ref: "line", attrs: { config: _vm.lineConfig } }),
+      _vm._v(" "),
+      _vm._l(_vm.circlesConfig, function(circle, idx) {
+        return _c("v-circle", { attrs: { config: circle } })
+      })
+    ],
+    2
   )
 }
 var staticRenderFns = []

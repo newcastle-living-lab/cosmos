@@ -2,7 +2,29 @@
 
 	<v-group>
 
-		<v-group v-for="(stage, idx) in journeyStagesConfig" :key="'stage' + idx">
+		<CosmosTitle :aspectId="aspectId" :options="options" />
+
+		<!-- Swim Lanes -->
+		<v-group :config="{ x: 547, y: 430 }">
+			<v-rect
+				v-for="(rect, idx) in swimLanesConfig"
+				:key="'swimLane' + idx"
+				:config="rect"
+			/>
+			<v-text
+				v-for="(label, idx) in swimLaneLabelsConfig"
+				:key="'swimLaneLabel' + idx"
+				:config="label"
+			/>
+			<CosmosImage
+				v-for="(img, idx) in swimLaneSmileys"
+				:config="img"
+			/>
+		</v-group>
+
+		<v-text :config="serviceLabelConfig" />
+
+		<v-group v-for="(stage, idx) in journeyStagesConfig" :key="'stage' + idx" :config="stage.group">
 			<v-label :config="stage.label">
 				<v-tag :config="stage.tag" />
 				<v-text :config="stage.text" />
@@ -30,10 +52,15 @@
 				:config="text"
 				:options="options"
 			/>
-			<v-arrow
-				v-for="(arrow, idx) in sipConfig.lines"
-				:key="'sipLine' + idx"
-				:config="arrow"
+			<CosmosConnector
+				v-for="(conn, idx) in sipConfig.connectors"
+				:key="'sipConnector' + idx"
+				:config="conn"
+			/>
+			<v-path
+				v-for="(icon, idx) in sipConfig.icons"
+				:key="'sipIcon' + idx"
+				:config="icon"
 			/>
 		</v-group>
 
@@ -48,12 +75,19 @@ import map from 'lodash/map';
 import find from 'lodash/find';
 import filter from 'lodash/filter';
 
+import colours from 'colors.css';
+
 const defaultTextConfig = {
 	fontSize: 24,
 	fontStyle: 'bold',
 	fontFamily: '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
 	lineHeight: 1.2,
 	align: 'center'
+};
+
+const Icons = {
+	check: 'M5 13l4 4L19 7',
+	cross: 'M6 18L18 6M6 6l12 12',
 };
 
 export default {
@@ -111,6 +145,19 @@ export default {
 			return data;
 		},
 
+		serviceLabelConfig() {
+			return {
+				...defaultTextConfig,
+				fontStyle: 'italic',
+				fontSize: 18,
+				text: 'Service Co-creation Journey',
+				width: 175,
+				align: 'right',
+				x: 0,
+				y: 535,
+			}
+		},
+
 		journeyStagesConfig() {
 
 			var data = {};
@@ -141,36 +188,42 @@ export default {
 			const yPos = 555;
 
 			data.evaluating = {
+				group: { visible: true },
 				label: { x: xPos(5), y: yPos, },
 				tag: { ...tagConfig, fill: '#604A7B', pointerHeight: 0 },
 				text: { ...textConfig, text: 'Evaluating' },
 			};
 
 			data.using = {
+				group: { visible: true },
 				label: { x: xPos(4), y: yPos, },
 				tag: { ...tagConfig, fill: '#FAC090', },
 				text: { ...textConfig, text: 'Using' },
 			};
 
 			data.accessing = {
+				group: { visible: true },
 				label: { x: xPos(3), y: yPos, },
 				tag: { ...tagConfig, fill: '#D99694', },
 				text: { ...textConfig, text: 'Accessing' },
 			};
 
 			data.discovering = {
+				group: { visible: true },
 				label: { x: xPos(2), y: yPos, },
 				tag: { ...tagConfig, fill: '#4F81BD', },
 				text: { ...textConfig, text: 'Discovering' },
 			};
 
 			data.designing = {
+				group: { visible: true },
 				label: { x: xPos(1), y: yPos, },
 				tag: { ...tagConfig, fill: '#79C36F', },
 				text: { ...textConfig, text: 'Designing' },
 			};
 
 			data.instigating = {
+				group: { visible: true },
 				label: { x: xPos(0), y: yPos, },
 				tag: { ...tagConfig, fill: '#DC5C52', },
 				text: { ...textConfig, text: 'Instigating' },
@@ -345,8 +398,9 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				align: 'center',
 				text: 'Application',
-				x: 345,
+				x: 355,
 				y: 245,
 			});
 
@@ -468,6 +522,15 @@ export default {
 				]
 			});
 
+			// Arrows from initial screen
+			//
+
+			// Service Publication -> Application
+			data.push({ ...defaultConfig, points: [ 265, 255, 330, 255] });
+
+			// Application -> Service Use
+			data.push({ ...defaultConfig, points: [ 455, 255, 510, 255] });
+
 			return data;
 		},
 
@@ -530,7 +593,7 @@ export default {
 			data.boxes.push({
 				...defaultConfig,
 				label: "Political Party",
-				x: 155,
+				x: 150,
 				y: 40,
 				textWidth: 125,
 				width: 145,
@@ -570,27 +633,187 @@ export default {
 			// Blue connecting lines
 			//
 
-			data.lines = [];
+			data.connectors = [];
 
-			const defaultLineConfig = {
-				x: 0,
-				y: 0,
-				pointerLength: 8,
-				pointerWidth: 8,
-				pointerAtBeginning: true,
-				fill: 'red',
-				lineJoin: 'round',
-				stroke: 'green',
-				strokeWidth: 1,
+			const defaultConnectorConfig = {
+				colour: '#4a7ebb',
+				radius: 6,
+				strokeWidth: 2,
 				dash: [6, 3],
 			};
 
-			data.lines.push({
-				...defaultLineConfig,
-				points: [105, 145, 105, 375],
+			data.connectors.push({
+				...defaultConnectorConfig,
+				start: [105, 150],
+				end: [105, 370],
 			});
 
+			data.connectors.push({
+				...defaultConnectorConfig,
+				start: [220, 75],
+				end: [220, 370],
+			});
+
+			data.connectors.push({
+				...defaultConnectorConfig,
+				start: [315, 150],
+				end: [315, 370],
+			});
+
+			// Icons
+			//
+
+			data.icons = []
+
+			const defaultIconConfig = {
+				closed: false,
+				x: 0,
+				y: 0,
+				opacity: 1,
+				scale: {
+					x: 1.75,
+					y: 1.75,
+				}
+			}
+
+			const checkConfig = {
+				...defaultIconConfig,
+				stroke: colours.green,
+				data: Icons.check,
+			};
+
+			const crossConfig = {
+				...defaultIconConfig,
+				stroke: colours.red,
+				data: Icons.cross,
+			};
+
+			data.icons.push({ ...checkConfig, x: 60, y: 280 });
+			data.icons.push({ ...crossConfig, x: 105, y: 280 });
+
+			data.icons.push({ ...checkConfig, x: 180, y: 280 });
+			data.icons.push({ ...crossConfig, x: 220, y: 280 });
+
+			data.icons.push({ ...checkConfig, x: 275, y: 280 });
+			data.icons.push({ ...crossConfig, x: 315, y: 280 });
+
 			return data;
+		},
+
+		swimLanesConfig() {
+
+			var lanes = [];
+
+			lanes.push({
+				x: 0,
+				y: 0,
+				width: 720,
+				height: 90,
+				fill: '#edfdfb',
+			});
+
+			lanes.push({
+				x: 0,
+				y: 160,
+				width: 720,
+				height: 65,
+				fill: '#d7e4bd',
+			});
+
+			lanes.push({
+				x: 0,
+				y: 230,
+				width: 720,
+				height: 65,
+				fill: '#ffe07d',
+			});
+
+			return lanes;
+		},
+
+		swimLaneLabelsConfig() {
+
+			var labels = [];
+
+			const defaultLabelConfig = {
+				...defaultTextConfig,
+				fontStyle: 'italic',
+				fontSize: 18,
+			}
+
+			labels.push({
+				...defaultLabelConfig,
+				text: 'Service Workflow',
+				width: 100,
+				align: 'right',
+				x: 0,
+				y: -60,
+				offsetX: 110,
+			});
+
+			labels.push({
+				...defaultLabelConfig,
+				text: 'Touch Points',
+				width: 100,
+				align: 'right',
+				x: 0,
+				y: 30,
+				offsetX: 110,
+			});
+
+			labels.push({
+				...defaultLabelConfig,
+				text: 'Service User Journey',
+				width: 100,
+				align: 'right',
+				x: 0,
+				y: 105,
+				offsetX: 110,
+			});
+
+			labels.push({
+				...defaultLabelConfig,
+				text: 'Which channels?',
+				width: 100,
+				align: 'right',
+				x: 0,
+				y: 240,
+				offsetX: 110,
+			});
+
+			return labels;
+		},
+
+		swimLaneSmileys() {
+
+			var faces = [];
+
+			const defaultFaceConfig = {
+				opacity: 1,
+				scale: { x: 0.4, y: 0.4 },
+				x: 0,
+				y: 165,
+			};
+
+			faces.push({
+				...defaultFaceConfig,
+				filename: 'user-journey/face-smile.svg',
+				x: -60,
+			});
+
+			faces.push({
+				...defaultFaceConfig,
+				filename: 'user-journey/face-neutral.svg',
+				x: -110,
+			});
+
+			faces.push({
+				...defaultFaceConfig,
+				filename: 'user-journey/face-frown.svg',
+				x: -160,
+			});
+
+			return faces;
 		}
 
 	},
