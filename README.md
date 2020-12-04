@@ -31,6 +31,6 @@ Thanks to Lokalise.
 
 # Attributions
 
-> Where used, emojis designed by [OpenMoji](https://openmoji.org/) – the open-source emoji and icon project. License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/#)
+Where used, emojis are designed by [OpenMoji](https://openmoji.org/) – the open-source emoji and icon project. License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/#)
 
 For other projects, see `package.json` files in `client` and `server` directories.
