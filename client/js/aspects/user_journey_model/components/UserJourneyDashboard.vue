@@ -18,6 +18,7 @@
 			/>
 			<CosmosImage
 				v-for="(img, idx) in swimLaneSmileys"
+				:key="'swimLaneSmiley' + idx"
 				:config="img"
 			/>
 		</v-group>

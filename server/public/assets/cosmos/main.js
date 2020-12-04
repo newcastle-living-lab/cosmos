@@ -12483,6 +12483,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -51867,7 +51868,10 @@ var render = function() {
           }),
           _vm._v(" "),
           _vm._l(_vm.swimLaneSmileys, function(img, idx) {
-            return _c("CosmosImage", { attrs: { config: img } })
+            return _c("CosmosImage", {
+              key: "swimLaneSmiley" + idx,
+              attrs: { config: img }
+            })
           })
         ],
         2
@@ -52210,7 +52214,7 @@ var render = function() {
       _c("v-line", { ref: "line", attrs: { config: _vm.lineConfig } }),
       _vm._v(" "),
       _vm._l(_vm.circlesConfig, function(circle, idx) {
-        return _c("v-circle", { attrs: { config: circle } })
+        return _c("v-circle", { key: idx, attrs: { config: circle } })
       })
     ],
     2

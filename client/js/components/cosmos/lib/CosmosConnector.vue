@@ -2,7 +2,7 @@
 
 	<v-group>
 		<v-line ref="line" :config="lineConfig" />
-		<v-circle v-for="(circle, idx) in circlesConfig" :config="circle" />
+		<v-circle v-for="(circle, idx) in circlesConfig" :key="idx" :config="circle" />
 	</v-group>
 
 </template>
