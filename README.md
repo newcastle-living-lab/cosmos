@@ -28,3 +28,9 @@ COSMOS is available to use in the following languages:
 Thanks to Lokalise.
 
 <a href="https://lokalise.com/"><img src="server/public/images/logos/lokalise_logo_colour_black_text.png" alt="Lokalise" width="150" /></a>
+
+# Attributions
+
+> Where used, emojis designed by [OpenMoji](https://openmoji.org/) – the open-source emoji and icon project. License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/#)
+
+For other projects, see `package.json` files in `client` and `server` directories.
