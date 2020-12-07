@@ -982,6 +982,11 @@ var allAspects = [_welcome__WEBPACK_IMPORTED_MODULE_6__["default"], _service_mod
         project.data[aspectConfig.id] = aspect.Functions.populateProject(project.data[aspectConfig.id]);
       }
     });
+
+    if (typeof project.data.annotations === 'undefined') {
+      project.data.annotations = [];
+    }
+
     project = this.convertFromTemplate(project);
     console.debug(JSON.parse(JSON.stringify(project)));
     return project;
@@ -2555,15 +2560,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!******************************************************!*\
   !*** ./js/components/cosmos/lib/CosmosConnector.vue ***!
   \******************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CosmosConnector_vue_vue_type_template_id_4a6fc2d6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CosmosConnector.vue?vue&type=template&id=4a6fc2d6& */ "./js/components/cosmos/lib/CosmosConnector.vue?vue&type=template&id=4a6fc2d6&");
 /* harmony import */ var _CosmosConnector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CosmosConnector.vue?vue&type=script&lang=js& */ "./js/components/cosmos/lib/CosmosConnector.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _CosmosConnector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _CosmosConnector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -2593,7 +2597,7 @@ component.options.__file = "js/components/cosmos/lib/CosmosConnector.vue"
 /*!*******************************************************************************!*\
   !*** ./js/components/cosmos/lib/CosmosConnector.vue?vue&type=script&lang=js& ***!
   \*******************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3380,11 +3384,80 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./js/components/cosmos/lib/CosmosVisualAnnotation.vue":
+/*!*************************************************************!*\
+  !*** ./js/components/cosmos/lib/CosmosVisualAnnotation.vue ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CosmosVisualAnnotation_vue_vue_type_template_id_ab515512___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CosmosVisualAnnotation.vue?vue&type=template&id=ab515512& */ "./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=template&id=ab515512&");
+/* harmony import */ var _CosmosVisualAnnotation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CosmosVisualAnnotation.vue?vue&type=script&lang=js& */ "./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CosmosVisualAnnotation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CosmosVisualAnnotation_vue_vue_type_template_id_ab515512___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CosmosVisualAnnotation_vue_vue_type_template_id_ab515512___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "js/components/cosmos/lib/CosmosVisualAnnotation.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************!*\
+  !*** ./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosVisualAnnotation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./CosmosVisualAnnotation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosVisualAnnotation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=template&id=ab515512&":
+/*!********************************************************************************************!*\
+  !*** ./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=template&id=ab515512& ***!
+  \********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosVisualAnnotation_vue_vue_type_template_id_ab515512___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./CosmosVisualAnnotation.vue?vue&type=template&id=ab515512& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=template&id=ab515512&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosVisualAnnotation_vue_vue_type_template_id_ab515512___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosVisualAnnotation_vue_vue_type_template_id_ab515512___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./js/components/cosmos/lib/index.js":
 /*!*******************************************!*\
   !*** ./js/components/cosmos/lib/index.js ***!
   \*******************************************/
-/*! exports provided: CosmosGroup, CosmosTitle, CosmosImage, CosmosInfoBox, CosmosTextBox, CosmosExternals, CosmosExternalsItem, CosmosStakeholder, CosmosNodeBracket, CosmosArrow, CosmosCurve, CosmosConnector */
+/*! exports provided: CosmosGroup, CosmosTitle, CosmosImage, CosmosInfoBox, CosmosTextBox, CosmosExternals, CosmosExternalsItem, CosmosStakeholder, CosmosNodeBracket, CosmosArrow, CosmosCurve, CosmosConnector, CosmosVisualAnnotation */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3424,6 +3497,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _CosmosConnector__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./CosmosConnector */ "./js/components/cosmos/lib/CosmosConnector.vue");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CosmosConnector", function() { return _CosmosConnector__WEBPACK_IMPORTED_MODULE_11__["default"]; });
+
+/* harmony import */ var _CosmosVisualAnnotation__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./CosmosVisualAnnotation */ "./js/components/cosmos/lib/CosmosVisualAnnotation.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CosmosVisualAnnotation", function() { return _CosmosVisualAnnotation__WEBPACK_IMPORTED_MODULE_12__["default"]; });
+
 
 
 
@@ -3799,6 +3876,94 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ToastMessage_vue_vue_type_template_id_8766a998_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ToastMessage_vue_vue_type_template_id_8766a998_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./js/components/project/AnnotationCard.vue":
+/*!**************************************************!*\
+  !*** ./js/components/project/AnnotationCard.vue ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AnnotationCard_vue_vue_type_template_id_3adb0916_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true& */ "./js/components/project/AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true&");
+/* harmony import */ var _AnnotationCard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AnnotationCard.vue?vue&type=script&lang=js& */ "./js/components/project/AnnotationCard.vue?vue&type=script&lang=js&");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _AnnotationCard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _AnnotationCard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _AnnotationCard_vue_vue_type_style_index_0_id_3adb0916_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true& */ "./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _AnnotationCard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AnnotationCard_vue_vue_type_template_id_3adb0916_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AnnotationCard_vue_vue_type_template_id_3adb0916_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "3adb0916",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "js/components/project/AnnotationCard.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./js/components/project/AnnotationCard.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./js/components/project/AnnotationCard.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./AnnotationCard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true&":
+/*!************************************************************************************************************!*\
+  !*** ./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true& ***!
+  \************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_style_index_0_id_3adb0916_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_style_index_0_id_3adb0916_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_style_index_0_id_3adb0916_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_style_index_0_id_3adb0916_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_style_index_0_id_3adb0916_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_style_index_0_id_3adb0916_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./js/components/project/AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true&":
+/*!*********************************************************************************************!*\
+  !*** ./js/components/project/AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true& ***!
+  \*********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_template_id_3adb0916_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_template_id_3adb0916_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_template_id_3adb0916_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -5646,7 +5811,7 @@ module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Οργάν�
 /*! exports provided: languages, app, user_guide, hints, activity_types, aspects, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"languages\":{\"el\":\"Greek\",\"en_GB\":\"English\",\"fr\":\"French\",\"de\":\"German\",\"es\":\"Spanish\",\"et\":\"Estonian\",\"fi\":\"Finnish\",\"hu\":\"Hungarian\",\"it\":\"Italian\",\"nl\":\"Dutch\",\"pl\":\"Polish\",\"sv_SE\":\"Swedish\"},\"app\":{\"log_in\":\"Log in\",\"project\":\"Project\",\"name\":\"Name\",\"title\":\"Title\",\"created_by\":\"Created by\",\"description\":\"Description\",\"label\":\"Label\",\"type\":\"Type\",\"colour\":\"Colour\",\"search\":\"Search\",\"web_address\":\"Web address\",\"image\":\"Image\",\"image_remove\":\"Remove image\",\"image_drag_prompt\":\"Drag your image here to begin or click to browse.\",\"image_is_uploading\":\"Uploading image\",\"image_upload_error\":\"Upload error\",\"next\":\"Next\",\"delete\":\"Delete\",\"ok\":\"OK\",\"save\":\"Save\",\"saving\":\"Saving\",\"create\":\"Create\",\"project_save_success\":\"Project saved!\",\"last_saved_at\":\"Last saved at {date_time}\",\"download\":\"Download\",\"export\":\"Export\",\"exporting\":\"Exporting\",\"import\":\"Import\",\"processing\":\"Processing\",\"import_project\":\"Import project\",\"import_project_success\":\"The project has been imported successfully!\",\"import_project_notes\":\"Note: You will be the owner of the project that is imported.\",\"import_project_drag_hint\":\"Drag your CoSMoS project here to begin or click to browse.\",\"open_project\":\"Open project\",\"all\":\"All\",\"just_mine\":\"Just mine\",\"no_projects\":\"No projects found.\",\"new_project\":\"Create new project\",\"to_create_project\":\"to create a project.\",\"user_is_read_only\":\"Your user access level is read-only.\",\"exporting_project\":\"Exporting project\",\"please_wait_generate\":\"Please wait while the file is being generated.\",\"error\":\"Error\",\"error_message\":\"Error: {message}\",\"scale_to_fit\":\"Scale to fit\",\"try_again\":\"Try again\",\"add_new_item\":\"Add new item\",\"add_new_actor\":\"Add new actor\",\"maximum_items\":\"Maximum {count} items | Maxumum {count} item | Maximum {count} items\",\"models\":\"Models\"},\"user_guide\":{\"show\":\"Show user guide\",\"skip\":\"Skip user guide\",\"back\":\"Back\",\"next\":\"Next\",\"close\":\"Close\"},\"hints\":{\"type_and_enter\":\"Type the name below and press enter.\",\"editor_double_click_edit\":\"Double-click an item to edit it, and enter to save\",\"social_twitter_add\":\"Enter a Twitter hashtag, with or without the #. Press enter to add.\",\"social_facebook_add\":\"Add full links (URLs) to Facebook groups or pages.\",\"social_instagram_add\":\"Enter an Instagram hashtag, with or without the #. Press enter to add.\",\"social_youtube_add\":\"Enter a link to a YouTube video and press enter to add.\"},\"activity_types\":{\"user\":\"User\",\"organisation\":\"Organisation\",\"service\":\"Service\"},\"aspects\":{\"analytic_model\":{\"title\":\"Analytic Model\",\"guide\":{\"step01\":\"In this model, we consider a Cosie initiative in terms of a set of roles and the conversational relationships in which they engage.\",\"step02\":\"First we have front line service deliverer and a client.\",\"step03\":\"The deliverer has a manager or supervisor. This pattern of an individual engaging in two conversations will be repeated.\",\"step04\":\"The delivery takes place in some formal or informal institutional context.\",\"step05\":\"Finally, the service exists in some wider policy setting.\",\"step06\":\"This is meant to be an abstract model. In some cases there may be a flat organisation where delivery, management and policy are undertaken by all the members of a small team, in other cases they may represent distinct individuals and contexts.\",\"step07\":\"How do the concepts of micro, meso and macro map onto your initiative?\",\"step08\":\"How does communication take place between them?\",\"step09\":\"How coordinated and coherent are they?\",\"step10\":\"In particular, are there information flows and conversations between macro and micro which are not mediated by the meso? What are the implications of this?\",\"step11\":\"The next model considers change agency in terms of roles and conversations.\",\"step12\":\"A change must be instigated, then it is executed.\",\"step13\":\"The changes we are considering are to a person, or a place or environment.\",\"step14\":\"The changes we are considering are often themselves complex and are about complex situations. Often they are based on some theory which has been introduced or brokered into the situation.\",\"step15\":\"There is a set of intended beneficiaries.\",\"step16\":\"But there are also possible dis-beneficiaries or victims of the change.\",\"step17\":\"This model is designed as a probe on the initial service model to identify the specific actors who, at various stages in the development of the initiative, have undertaken one or more of these change agency roles. Who are they?\"},\"dashboard\":{\"meso\":{\"label\":\"Meso\",\"description\":\"There may be a number of stages at this level.\"},\"macro\":{\"label\":\"Macro\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"title\":\"Service Delivery Manager\",\"hint\":\"Who is the Service Delivery Manager responsible for the Intervention?\"},\"frontLineServiceDeliverer\":{\"title\":\"Front-line Service Deliverer\",\"hint\":\"Who is the Front-line Service Deliverer?\"},\"user\":{\"title\":\"Client / User\",\"hint\":\"Who is the direct user of the service?\"},\"serviceOrganisationManager\":{\"title\":\"Service Organisation Manager\",\"hint\":\"Who is the Service Organisation Manager for the Intervention?\"},\"servicePolicyMaker\":{\"title\":\"Service Policy Maker\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"instigatorsOfChange\":{\"title\":\"Instigators of Change\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},\"changeMakers\":{\"title\":\"Change Makers\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},\"subjectsOfChange\":{\"title\":\"Subjects of Change\",\"hint\":\"Who are the idenitified subjects of change within the intervention?\"},\"broker\":{\"title\":\"Broker\",\"hint\":\"Is there an active Broker between the Instigators of Change and Change Makers? If so, who are they?\"},\"changeTheorists\":{\"title\":\"Change Theorists\",\"hint\":\"Who are the Change Theorists for the Intervention?\"},\"beneficiaries\":{\"title\":\"Beneficiaries\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"victims\":{\"title\":\"Victims\",\"hint\":\"Are there any identified victims? If so, who are they?\"}}},\"change_model\":{\"title\":\"Change Model\",\"guide\":{\"step01\":\"We start off with the standard model of purposeful action that we are all very familiar with.\",\"step02\":\"But we have all had the experience of looking back and realising that things have changed in a really fundamental way: we talk about the paradigm shifting. This implies that we have engaged in making new sense of our world and this often means that our language changes.\",\"step03\":\"These two different ways of operation are sometimes referred to as first order and second order.\",\"step04\":\"In management terms, we have risk management on one hand and the resolution of contradictions and ambiguities on the other.\",\"step05\":\"We now introduce the idea of third order activities which enable and support the appropriate transitions between first and second work allowing a step back to reconsider our ethos and assumptions and, when we have, to move back into the mode of practical planning and delivery.\",\"step06\":\"Sometimes the reaction to ambiguity and contradiction is an emotional one: fight or fly which is zero order, or inspiration and heroism which we will call fourth order.\",\"step07\":\"So, on the right hand side of our diagram we have the spectrum of emotional work and responses while of the left hand side we have co-productive, conversational work.\",\"step08\":\"This model generates a series of open ended questions about where the different first and second order work takes place in your initiative, what emotional work has been and is requires and how and where it is undertaken and how and by whom are the required third order interventions undertaken?\"},\"dashboard\":{\"first_order\":\"First Order\",\"risk\":\"Risk\",\"vision\":\"Vision\",\"plan\":\"Plan\",\"execute\":\"Execute\",\"measure\":\"Measure\",\"second_order\":\"Second Order\",\"ambiguity\":\"Ambiguity\",\"sense_making\":\"Sense-Making\",\"languaging\":\"\\\"Languaging\\\"\",\"committing\":\"Committing\",\"third_order\":\"Third Order\",\"ambivalence\":\"Ambivalence\",\"zero_order\":\"Zero Order\",\"fourth_order\":\"Fourth Order!\"},\"definitions\":{\"model\":{\"title\":\"Model\"},\"first_order\":{\"vision\":{\"label\":\"How were the vision and objectives set?\"},\"plan\":{\"label\":\"How was a plan set up to deliver the vision?\"},\"execute\":{\"label\":\"How is the plan being executed?\"},\"measure\":{\"label\":\"How are observations and measurements being recorded? If not, what needs to be enabled to do so?\"}},\"second_order\":{\"sense_making\":{\"label\":\"When do you review the plans and vision?\"},\"languaging\":{\"label\":\"What changes have been made to how the intervention has been understood?\"},\"committing\":{\"label\":\"How has the service delivery of the intervention changed from its original plans?\"}},\"third_order\":{\"processes\":{\"label\":\"What processes provoke or enable second order questioning?\"}},\"fourth_order\":{\"unexpected_events\":{\"label\":\"Have there been instances where you have seen unexpected events occurred?\"},\"event_cause\":{\"label\":\"What happened to allow this event to occur?\"},\"change_origin\":{\"label\":\"What was the origin of the change? And what was the change?\"}}}},\"community_reporting\":{\"title\":\"Community Reporting\",\"dashboard\":{\"title\":\"Community Reporting\",\"empty_set\":\"There are no community reporting items for this project.\",\"manage\":\"Manage Community Reporting\"},\"definitions\":{\"data\":{\"title\":\"Community Reporting\",\"hint\":\"Please add any Community Reports your project may have.\"}}},\"documents\":{\"title\":\"Documents\",\"dashboard\":{\"title\":\"Documents and Files\",\"empty_set\":\"There are no documents or files for this project.\",\"manage\":\"Manage documents and files\"},\"definitions\":{\"data\":{\"title\":\"Documents and Files\",\"hint\":\"Please add any Documents and Files your project may have.\"}}},\"intervention_theory_model\":{\"title\":\"Intervention Theory Model\",\"guide\":{\"step01\":\"The co-creative initiatives we are considering are all concerned with improving and nurturing wellbeing. Here we consider the wellbeing of individuals but this might be applied to places or to wider environments.\",\"step02\":\"Wellbeing has a number of different facets which are all interdependent.\",\"step03\":\"It also interacts with the physical and social environments.\",\"step04\":\"Some services or interventions are about mending something that has gone wrong and restoring the status quo.\",\"step05\":\"But there are other purposes for interventions.\",\"step06\":\"The intervention process involves a number of different stages and processes.\",\"step07\":\"Finally, if our innovations are to be sustained we must learn and improve.\",\"step08\":\"Who, what or where is the target of your intervention?\",\"step09\":\"Which aspects of wellbeing are the focus of your initiative?\",\"step10\":\"What aspects of the wellbeing of your subject are relevant but beyond the scope of your initiative?\",\"step11\":\"What are the relevant environmental aspects?\",\"step12\":\"Which combinations of interventions, from prevention to transformation, are relevant to your initiative?\",\"step13\":\"To what extent is learning and improvement built into your development governance and delivery processes?\"},\"dashboard\":{\"wellbeing\":\"Well Being\"},\"options\":{\"wellbeing\":{\"physical_env\":\"Physical Envrionment\",\"socio_cultural_env\":\"Socio-cultural Environment\",\"faculties_skills\":\"Faculties and Skills\",\"mental_psych\":\"Mental and Psychological\",\"physiological\":\"Physiological\",\"socio_economic\":\"Socio-Economic\"},\"innovation\":{\"transformation\":\"Transformation\",\"development\":\"Development\",\"facilitation\":\"Facilitation\",\"rehabilitation\":\"Rehabilitation\",\"remedy\":\"Remedy\",\"palliation\":\"Palliation\",\"prevention\":\"Prevention\"},\"intervention\":{\"identification\":\"Identification & Planning\",\"coordination_delivery\":\"Coordination & Delivery\",\"management\":\"Management\",\"governance\":\"Governance\",\"learning\":\"Learning\"},\"learning\":{\"research_evidence\":\"Research & Evidence\",\"trials\":\"Trials\",\"service_improvement\":\"Service Improvement\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"title\":\"Human well-being and Environment\",\"items\":{\"label\":\"Which aspects of human well-being and of the environment are relevant to your service? Are some more significant than others?\"}},\"innovation\":{\"title\":\"Innovation and change\",\"items\":{\"label\":\"What aspects of the service lifecycle are important regarding your innovation and change?\"}},\"intervention\":{\"title\":\"Intervention\",\"items\":{\"label\":\"What type of intervention is occuring?\"}},\"learning\":{\"title\":\"Learning\",\"items\":{\"label\":\"How is learning happening in your intervention?\"}}}},\"moral_ordering_model\":{\"title\":\"Moral Ordering\",\"guide\":{\"step01\":\"There are a number of core processes involved in a co-creative innovation. The first is concerned with the definition of ethos.\",\"step02\":\"The second involves management activities and products.\",\"step03\":\"Moral ordering is concerned with who gets to participate in activities so, in the case of your initiative, who is involved in these processes? Where and when do they take place? How do they communicate and how are they recorded?\",\"step04\":\"As a result of leadership, planning and design, services or initiatives are delivered and experienced.\",\"step05\":\"Again who is involved here and do they get any participation in the first two sets of activities?\",\"step06\":\"Rather than simply close the loop with a simple evaluation process, we are suggesting that, in systems of co-productive wellbeing and care, governance involves all the participants in the relationships identified here participation in addressing the questions defined in the moral ordering model.\",\"step07\":\"Governance takes place at the individual service client relationship level.\",\"step08\":\"It also takes place at the overall service level.\",\"step09\":\"How are governance processes, in the sense we are describing them here, take place in your initiative?\"},\"dashboard\":{\"govern\":\"Govern\",\"deliver\":\"Deliver\",\"define_ethos\":\"Define Ethos\",\"define_ethos_items\":\"Values\\nPrinciples\\nIntentions\\nPolicies\",\"plan_manage\":\"Plan & Manage\",\"plan_manage_items\":\"Rules\\nResources\\nProcesses\\nAccounts\",\"experience\":\"Experience\",\"individual_cases\":\"Individual Cases\",\"the_service_level\":\"The Service Level\"},\"options\":{\"sources\":{\"policy\":\"Policy\",\"meeting\":\"Meeting\",\"other\":\"Other\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"defineEthos\":{\"title\":\"Define Ethos\",\"values\":{\"label\":\"What values are important that the intervention comes to address?\"},\"definedBy\":{\"label\":\"How do these values come to be defined?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"planManagePrior\":{\"title\":\"Plan and Manage - Prior actions\",\"actions\":{\"label\":\"What actions were being undertaken prior to the intervention?\"},\"actors\":{\"label\":\"Who was involved with these prior actions?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"planManageCurrent\":{\"title\":\"Plan and Manage - Current actions\",\"actions\":{\"label\":\"What actions are now being undertaken within the pilot?\"},\"actors\":{\"label\":\"What ongoing actions are being taken?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"deliver\":{\"title\":\"Deliver\",\"method\":{\"label\":\"How is the intervention delivered?\"},\"actors\":{\"label\":\"By whom is it delivered?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"govern\":{\"title\":\"Govern\",\"actions\":{\"label\":\"How is the intervention governed? What measures are put in place to ensure the outcomes were as intended?\"},\"actors\":{\"label\":\"Who is evaluating this?\"},\"outcomes\":{\"label\":\"Are outcomes embodied in targets and measurements? And if so, whose?\"},\"evolution\":{\"label\":\"How does this impact on the evolution of the service?\"},\"improvements\":{\"label\":\"How are improvements identified? How are they implemented?\"}}}},\"co_creation_of_service_model\":{\"title\":\"Co-Creation of Service Model\",\"dashboard\":{\"structural_relationships\":\"Structural Relationships and Occasions\",\"infrastructural_relationships\":\"Infrastructural Relationships, Recourses and Facilities\",\"ethos\":\"Ethos\",\"policy_law\":\"Policy & Law\",\"resources\":\"Resources\",\"service_definition\":\"Service Definition and Development Platform\",\"service_delivery\":\"Service Delivery Platform\"},\"definitions\":{\"model\":{\"title\":\"Model\"},\"drivers\":{\"title\":\"Drivers and Motivations\",\"hint\":\"What were / are the drivers and motivations of the project? Was it a statutory requirement, recognition of a need or demand, seizing an opportunity, addressing an inequality?\",\"body\":{\"label\":\"Drivers and Motivations\",\"hint\":\"What are the drivers and motivations involved?\"}},\"policyDef\":{\"title\":\"Policy Definer\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"specDes\":{\"title\":\"Specifier and Designer\",\"hint\":\"Who specifies / specified and designs / designed the service delivery processes and resources?\"},\"deployment\":{\"title\":\"Deployer\",\"hint\":\"Who deploys / deployed and activates / activated those processes and resources?\"},\"delivery\":{\"title\":\"Deliverer\",\"hint\":\"Who is responsible for the delivery mechanism(s), channels and roles in your pilot?\"},\"evaluation\":{\"title\":\"Evaluator\",\"hint\":\"Who is the evaluator(s) and governors of the service?\"},\"user\":{\"title\":\"User\",\"hint\":\"Who is the direct user of the service?\"},\"beneficiary\":{\"title\":\"Beneficiary\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"initiator\":{\"title\":\"Initiator\",\"hint\":\"Who are, or were, the instigators who initiated your pilot activity?\"},\"extsvc\":{\"title\":\"External Technical Services\",\"hint\":\"What reusable facilities, (technical and human) resources, services and sources of information were developed and used in support of these service definition and development processes? What external resources and services (e.g. communications and social media) were/are used?\"},\"extorg\":{\"title\":\"External Organisations\",\"hint\":\"Are there any relevant actors, stakeholders or agencies which are relevant to the pilot, but which remain outside its vision and ethos?\"},\"infsvc\":{\"title\":\"Infrastructural Services\",\"hint\":\"What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?\"}}},\"user_journey_model\":{\"title\":\"User Journey Model\",\"dashboard\":{},\"definitions\":{\"model\":{\"title\":\"Model\"}}},\"social_media\":{\"title\":\"Social Media\",\"dashboard\":{\"title\":\"Social Media\"},\"definitions\":{\"data\":{\"title\":\"Social Media\"}}},\"theory_of_change\":{\"title\":\"Theory of Change\",\"dashboard\":{\"title\":\"Theory of Change\",\"empty_set\":\"There are no theory of change items for this project.\",\"manage\":\"Manage Theory of Change\"},\"definitions\":{\"data\":{\"title\":\"Theory of Change\",\"hint\":\"Please add any theories of change your project may have.\"}}},\"welcome\":{\"title\":\"Welcome\",\"dashboard\":{\"summary\":\"Created by {user} on {date_time}\"}}}}");
+module.exports = JSON.parse("{\"languages\":{\"el\":\"Greek\",\"en_GB\":\"English\",\"fr\":\"French\",\"de\":\"German\",\"es\":\"Spanish\",\"et\":\"Estonian\",\"fi\":\"Finnish\",\"hu\":\"Hungarian\",\"it\":\"Italian\",\"nl\":\"Dutch\",\"pl\":\"Polish\",\"sv_SE\":\"Swedish\"},\"app\":{\"log_in\":\"Log in\",\"project\":\"Project\",\"name\":\"Name\",\"title\":\"Title\",\"created_by\":\"Created by\",\"description\":\"Description\",\"label\":\"Label\",\"type\":\"Type\",\"colour\":\"Colour\",\"search\":\"Search\",\"web_address\":\"Web address\",\"image\":\"Image\",\"image_remove\":\"Remove image\",\"image_drag_prompt\":\"Drag your image here to begin or click to browse.\",\"image_is_uploading\":\"Uploading image\",\"image_upload_error\":\"Upload error\",\"next\":\"Next\",\"delete\":\"Delete\",\"ok\":\"OK\",\"save\":\"Save\",\"saving\":\"Saving\",\"create\":\"Create\",\"project_save_success\":\"Project saved!\",\"last_saved_at\":\"Last saved at {date_time}\",\"download\":\"Download\",\"export\":\"Export\",\"exporting\":\"Exporting\",\"import\":\"Import\",\"processing\":\"Processing\",\"import_project\":\"Import project\",\"import_project_success\":\"The project has been imported successfully!\",\"import_project_notes\":\"Note: You will be the owner of the project that is imported.\",\"import_project_drag_hint\":\"Drag your CoSMoS project here to begin or click to browse.\",\"open_project\":\"Open project\",\"all\":\"All\",\"just_mine\":\"Just mine\",\"no_projects\":\"No projects found.\",\"new_project\":\"Create new project\",\"to_create_project\":\"to create a project.\",\"user_is_read_only\":\"Your user access level is read-only.\",\"exporting_project\":\"Exporting project\",\"please_wait_generate\":\"Please wait while the file is being generated.\",\"error\":\"Error\",\"error_message\":\"Error: {message}\",\"scale_to_fit\":\"Scale to fit\",\"annotate\":\"Annotate\",\"annotation\":\"Annotation\",\"annotations\":\"Annotations\",\"try_again\":\"Try again\",\"add_new_item\":\"Add new item\",\"add_new_actor\":\"Add new actor\",\"maximum_items\":\"Maximum {count} items | Maxumum {count} item | Maximum {count} items\",\"models\":\"Models\"},\"user_guide\":{\"show\":\"Show user guide\",\"skip\":\"Skip user guide\",\"back\":\"Back\",\"next\":\"Next\",\"close\":\"Close\"},\"hints\":{\"type_and_enter\":\"Type the name below and press enter.\",\"editor_double_click_edit\":\"Double-click an item to edit it, and enter to save\",\"social_twitter_add\":\"Enter a Twitter hashtag, with or without the #. Press enter to add.\",\"social_facebook_add\":\"Add full links (URLs) to Facebook groups or pages.\",\"social_instagram_add\":\"Enter an Instagram hashtag, with or without the #. Press enter to add.\",\"social_youtube_add\":\"Enter a link to a YouTube video and press enter to add.\"},\"activity_types\":{\"user\":\"User\",\"organisation\":\"Organisation\",\"service\":\"Service\"},\"aspects\":{\"analytic_model\":{\"title\":\"Analytic Model\",\"guide\":{\"step01\":\"In this model, we consider a Cosie initiative in terms of a set of roles and the conversational relationships in which they engage.\",\"step02\":\"First we have front line service deliverer and a client.\",\"step03\":\"The deliverer has a manager or supervisor. This pattern of an individual engaging in two conversations will be repeated.\",\"step04\":\"The delivery takes place in some formal or informal institutional context.\",\"step05\":\"Finally, the service exists in some wider policy setting.\",\"step06\":\"This is meant to be an abstract model. In some cases there may be a flat organisation where delivery, management and policy are undertaken by all the members of a small team, in other cases they may represent distinct individuals and contexts.\",\"step07\":\"How do the concepts of micro, meso and macro map onto your initiative?\",\"step08\":\"How does communication take place between them?\",\"step09\":\"How coordinated and coherent are they?\",\"step10\":\"In particular, are there information flows and conversations between macro and micro which are not mediated by the meso? What are the implications of this?\",\"step11\":\"The next model considers change agency in terms of roles and conversations.\",\"step12\":\"A change must be instigated, then it is executed.\",\"step13\":\"The changes we are considering are to a person, or a place or environment.\",\"step14\":\"The changes we are considering are often themselves complex and are about complex situations. Often they are based on some theory which has been introduced or brokered into the situation.\",\"step15\":\"There is a set of intended beneficiaries.\",\"step16\":\"But there are also possible dis-beneficiaries or victims of the change.\",\"step17\":\"This model is designed as a probe on the initial service model to identify the specific actors who, at various stages in the development of the initiative, have undertaken one or more of these change agency roles. Who are they?\"},\"dashboard\":{\"meso\":{\"label\":\"Meso\",\"description\":\"There may be a number of stages at this level.\"},\"macro\":{\"label\":\"Macro\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"title\":\"Service Delivery Manager\",\"hint\":\"Who is the Service Delivery Manager responsible for the Intervention?\"},\"frontLineServiceDeliverer\":{\"title\":\"Front-line Service Deliverer\",\"hint\":\"Who is the Front-line Service Deliverer?\"},\"user\":{\"title\":\"Client / User\",\"hint\":\"Who is the direct user of the service?\"},\"serviceOrganisationManager\":{\"title\":\"Service Organisation Manager\",\"hint\":\"Who is the Service Organisation Manager for the Intervention?\"},\"servicePolicyMaker\":{\"title\":\"Service Policy Maker\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"instigatorsOfChange\":{\"title\":\"Instigators of Change\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},\"changeMakers\":{\"title\":\"Change Makers\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},\"subjectsOfChange\":{\"title\":\"Subjects of Change\",\"hint\":\"Who are the idenitified subjects of change within the intervention?\"},\"broker\":{\"title\":\"Broker\",\"hint\":\"Is there an active Broker between the Instigators of Change and Change Makers? If so, who are they?\"},\"changeTheorists\":{\"title\":\"Change Theorists\",\"hint\":\"Who are the Change Theorists for the Intervention?\"},\"beneficiaries\":{\"title\":\"Beneficiaries\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"victims\":{\"title\":\"Victims\",\"hint\":\"Are there any identified victims? If so, who are they?\"}}},\"change_model\":{\"title\":\"Change Model\",\"guide\":{\"step01\":\"We start off with the standard model of purposeful action that we are all very familiar with.\",\"step02\":\"But we have all had the experience of looking back and realising that things have changed in a really fundamental way: we talk about the paradigm shifting. This implies that we have engaged in making new sense of our world and this often means that our language changes.\",\"step03\":\"These two different ways of operation are sometimes referred to as first order and second order.\",\"step04\":\"In management terms, we have risk management on one hand and the resolution of contradictions and ambiguities on the other.\",\"step05\":\"We now introduce the idea of third order activities which enable and support the appropriate transitions between first and second work allowing a step back to reconsider our ethos and assumptions and, when we have, to move back into the mode of practical planning and delivery.\",\"step06\":\"Sometimes the reaction to ambiguity and contradiction is an emotional one: fight or fly which is zero order, or inspiration and heroism which we will call fourth order.\",\"step07\":\"So, on the right hand side of our diagram we have the spectrum of emotional work and responses while of the left hand side we have co-productive, conversational work.\",\"step08\":\"This model generates a series of open ended questions about where the different first and second order work takes place in your initiative, what emotional work has been and is requires and how and where it is undertaken and how and by whom are the required third order interventions undertaken?\"},\"dashboard\":{\"first_order\":\"First Order\",\"risk\":\"Risk\",\"vision\":\"Vision\",\"plan\":\"Plan\",\"execute\":\"Execute\",\"measure\":\"Measure\",\"second_order\":\"Second Order\",\"ambiguity\":\"Ambiguity\",\"sense_making\":\"Sense-Making\",\"languaging\":\"\\\"Languaging\\\"\",\"committing\":\"Committing\",\"third_order\":\"Third Order\",\"ambivalence\":\"Ambivalence\",\"zero_order\":\"Zero Order\",\"fourth_order\":\"Fourth Order!\"},\"definitions\":{\"model\":{\"title\":\"Model\"},\"first_order\":{\"vision\":{\"label\":\"How were the vision and objectives set?\"},\"plan\":{\"label\":\"How was a plan set up to deliver the vision?\"},\"execute\":{\"label\":\"How is the plan being executed?\"},\"measure\":{\"label\":\"How are observations and measurements being recorded? If not, what needs to be enabled to do so?\"}},\"second_order\":{\"sense_making\":{\"label\":\"When do you review the plans and vision?\"},\"languaging\":{\"label\":\"What changes have been made to how the intervention has been understood?\"},\"committing\":{\"label\":\"How has the service delivery of the intervention changed from its original plans?\"}},\"third_order\":{\"processes\":{\"label\":\"What processes provoke or enable second order questioning?\"}},\"fourth_order\":{\"unexpected_events\":{\"label\":\"Have there been instances where you have seen unexpected events occurred?\"},\"event_cause\":{\"label\":\"What happened to allow this event to occur?\"},\"change_origin\":{\"label\":\"What was the origin of the change? And what was the change?\"}}}},\"community_reporting\":{\"title\":\"Community Reporting\",\"dashboard\":{\"title\":\"Community Reporting\",\"empty_set\":\"There are no community reporting items for this project.\",\"manage\":\"Manage Community Reporting\"},\"definitions\":{\"data\":{\"title\":\"Community Reporting\",\"hint\":\"Please add any Community Reports your project may have.\"}}},\"documents\":{\"title\":\"Documents\",\"dashboard\":{\"title\":\"Documents and Files\",\"empty_set\":\"There are no documents or files for this project.\",\"manage\":\"Manage documents and files\"},\"definitions\":{\"data\":{\"title\":\"Documents and Files\",\"hint\":\"Please add any Documents and Files your project may have.\"}}},\"intervention_theory_model\":{\"title\":\"Intervention Theory Model\",\"guide\":{\"step01\":\"The co-creative initiatives we are considering are all concerned with improving and nurturing wellbeing. Here we consider the wellbeing of individuals but this might be applied to places or to wider environments.\",\"step02\":\"Wellbeing has a number of different facets which are all interdependent.\",\"step03\":\"It also interacts with the physical and social environments.\",\"step04\":\"Some services or interventions are about mending something that has gone wrong and restoring the status quo.\",\"step05\":\"But there are other purposes for interventions.\",\"step06\":\"The intervention process involves a number of different stages and processes.\",\"step07\":\"Finally, if our innovations are to be sustained we must learn and improve.\",\"step08\":\"Who, what or where is the target of your intervention?\",\"step09\":\"Which aspects of wellbeing are the focus of your initiative?\",\"step10\":\"What aspects of the wellbeing of your subject are relevant but beyond the scope of your initiative?\",\"step11\":\"What are the relevant environmental aspects?\",\"step12\":\"Which combinations of interventions, from prevention to transformation, are relevant to your initiative?\",\"step13\":\"To what extent is learning and improvement built into your development governance and delivery processes?\"},\"dashboard\":{\"wellbeing\":\"Well Being\"},\"options\":{\"wellbeing\":{\"physical_env\":\"Physical Envrionment\",\"socio_cultural_env\":\"Socio-cultural Environment\",\"faculties_skills\":\"Faculties and Skills\",\"mental_psych\":\"Mental and Psychological\",\"physiological\":\"Physiological\",\"socio_economic\":\"Socio-Economic\"},\"innovation\":{\"transformation\":\"Transformation\",\"development\":\"Development\",\"facilitation\":\"Facilitation\",\"rehabilitation\":\"Rehabilitation\",\"remedy\":\"Remedy\",\"palliation\":\"Palliation\",\"prevention\":\"Prevention\"},\"intervention\":{\"identification\":\"Identification & Planning\",\"coordination_delivery\":\"Coordination & Delivery\",\"management\":\"Management\",\"governance\":\"Governance\",\"learning\":\"Learning\"},\"learning\":{\"research_evidence\":\"Research & Evidence\",\"trials\":\"Trials\",\"service_improvement\":\"Service Improvement\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"title\":\"Human well-being and Environment\",\"items\":{\"label\":\"Which aspects of human well-being and of the environment are relevant to your service? Are some more significant than others?\"}},\"innovation\":{\"title\":\"Innovation and change\",\"items\":{\"label\":\"What aspects of the service lifecycle are important regarding your innovation and change?\"}},\"intervention\":{\"title\":\"Intervention\",\"items\":{\"label\":\"What type of intervention is occuring?\"}},\"learning\":{\"title\":\"Learning\",\"items\":{\"label\":\"How is learning happening in your intervention?\"}}}},\"moral_ordering_model\":{\"title\":\"Moral Ordering\",\"guide\":{\"step01\":\"There are a number of core processes involved in a co-creative innovation. The first is concerned with the definition of ethos.\",\"step02\":\"The second involves management activities and products.\",\"step03\":\"Moral ordering is concerned with who gets to participate in activities so, in the case of your initiative, who is involved in these processes? Where and when do they take place? How do they communicate and how are they recorded?\",\"step04\":\"As a result of leadership, planning and design, services or initiatives are delivered and experienced.\",\"step05\":\"Again who is involved here and do they get any participation in the first two sets of activities?\",\"step06\":\"Rather than simply close the loop with a simple evaluation process, we are suggesting that, in systems of co-productive wellbeing and care, governance involves all the participants in the relationships identified here participation in addressing the questions defined in the moral ordering model.\",\"step07\":\"Governance takes place at the individual service client relationship level.\",\"step08\":\"It also takes place at the overall service level.\",\"step09\":\"How are governance processes, in the sense we are describing them here, take place in your initiative?\"},\"dashboard\":{\"govern\":\"Govern\",\"deliver\":\"Deliver\",\"define_ethos\":\"Define Ethos\",\"define_ethos_items\":\"Values\\nPrinciples\\nIntentions\\nPolicies\",\"plan_manage\":\"Plan & Manage\",\"plan_manage_items\":\"Rules\\nResources\\nProcesses\\nAccounts\",\"experience\":\"Experience\",\"individual_cases\":\"Individual Cases\",\"the_service_level\":\"The Service Level\"},\"options\":{\"sources\":{\"policy\":\"Policy\",\"meeting\":\"Meeting\",\"other\":\"Other\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"defineEthos\":{\"title\":\"Define Ethos\",\"values\":{\"label\":\"What values are important that the intervention comes to address?\"},\"definedBy\":{\"label\":\"How do these values come to be defined?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"planManagePrior\":{\"title\":\"Plan and Manage - Prior actions\",\"actions\":{\"label\":\"What actions were being undertaken prior to the intervention?\"},\"actors\":{\"label\":\"Who was involved with these prior actions?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"planManageCurrent\":{\"title\":\"Plan and Manage - Current actions\",\"actions\":{\"label\":\"What actions are now being undertaken within the pilot?\"},\"actors\":{\"label\":\"What ongoing actions are being taken?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"deliver\":{\"title\":\"Deliver\",\"method\":{\"label\":\"How is the intervention delivered?\"},\"actors\":{\"label\":\"By whom is it delivered?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"govern\":{\"title\":\"Govern\",\"actions\":{\"label\":\"How is the intervention governed? What measures are put in place to ensure the outcomes were as intended?\"},\"actors\":{\"label\":\"Who is evaluating this?\"},\"outcomes\":{\"label\":\"Are outcomes embodied in targets and measurements? And if so, whose?\"},\"evolution\":{\"label\":\"How does this impact on the evolution of the service?\"},\"improvements\":{\"label\":\"How are improvements identified? How are they implemented?\"}}}},\"co_creation_of_service_model\":{\"title\":\"Co-Creation of Service Model\",\"dashboard\":{\"structural_relationships\":\"Structural Relationships and Occasions\",\"infrastructural_relationships\":\"Infrastructural Relationships, Recourses and Facilities\",\"ethos\":\"Ethos\",\"policy_law\":\"Policy & Law\",\"resources\":\"Resources\",\"service_definition\":\"Service Definition and Development Platform\",\"service_delivery\":\"Service Delivery Platform\"},\"definitions\":{\"model\":{\"title\":\"Model\"},\"drivers\":{\"title\":\"Drivers and Motivations\",\"hint\":\"What were / are the drivers and motivations of the project? Was it a statutory requirement, recognition of a need or demand, seizing an opportunity, addressing an inequality?\",\"body\":{\"label\":\"Drivers and Motivations\",\"hint\":\"What are the drivers and motivations involved?\"}},\"policyDef\":{\"title\":\"Policy Definer\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"specDes\":{\"title\":\"Specifier and Designer\",\"hint\":\"Who specifies / specified and designs / designed the service delivery processes and resources?\"},\"deployment\":{\"title\":\"Deployer\",\"hint\":\"Who deploys / deployed and activates / activated those processes and resources?\"},\"delivery\":{\"title\":\"Deliverer\",\"hint\":\"Who is responsible for the delivery mechanism(s), channels and roles in your pilot?\"},\"evaluation\":{\"title\":\"Evaluator\",\"hint\":\"Who is the evaluator(s) and governors of the service?\"},\"user\":{\"title\":\"User\",\"hint\":\"Who is the direct user of the service?\"},\"beneficiary\":{\"title\":\"Beneficiary\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"initiator\":{\"title\":\"Initiator\",\"hint\":\"Who are, or were, the instigators who initiated your pilot activity?\"},\"extsvc\":{\"title\":\"External Technical Services\",\"hint\":\"What reusable facilities, (technical and human) resources, services and sources of information were developed and used in support of these service definition and development processes? What external resources and services (e.g. communications and social media) were/are used?\"},\"extorg\":{\"title\":\"External Organisations\",\"hint\":\"Are there any relevant actors, stakeholders or agencies which are relevant to the pilot, but which remain outside its vision and ethos?\"},\"infsvc\":{\"title\":\"Infrastructural Services\",\"hint\":\"What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?\"}}},\"user_journey_model\":{\"title\":\"User Journey Model\",\"dashboard\":{},\"definitions\":{\"model\":{\"title\":\"Model\"}}},\"social_media\":{\"title\":\"Social Media\",\"dashboard\":{\"title\":\"Social Media\"},\"definitions\":{\"data\":{\"title\":\"Social Media\"}}},\"theory_of_change\":{\"title\":\"Theory of Change\",\"dashboard\":{\"title\":\"Theory of Change\",\"empty_set\":\"There are no theory of change items for this project.\",\"manage\":\"Manage Theory of Change\"},\"definitions\":{\"data\":{\"title\":\"Theory of Change\",\"hint\":\"Please add any theories of change your project may have.\"}}},\"welcome\":{\"title\":\"Welcome\",\"dashboard\":{\"summary\":\"Created by {user} on {date_time}\"}}}}");
 
 /***/ }),
 
@@ -5842,12 +6007,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_cosmos__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/cosmos */ "./js/components/cosmos/index.js");
 /* harmony import */ var _components_project_edit__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/project/edit */ "./js/components/project/edit/index.js");
 /* harmony import */ var _aspects__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./aspects */ "./js/aspects/index.js");
-/* harmony import */ var _plugins_i18n__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./plugins/i18n */ "./js/plugins/i18n.js");
-/* harmony import */ var _plugins_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./plugins/router */ "./js/plugins/router.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./store */ "./js/store/index.js");
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./App */ "./js/App.vue");
-/* harmony import */ var _services_Network__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/Network */ "./js/services/Network.js");
-/* harmony import */ var _services_Trans__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/Trans */ "./js/services/Trans.js");
+/* harmony import */ var _components_project_AnnotationCard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/project/AnnotationCard */ "./js/components/project/AnnotationCard.vue");
+/* harmony import */ var _plugins_i18n__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./plugins/i18n */ "./js/plugins/i18n.js");
+/* harmony import */ var _plugins_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./plugins/router */ "./js/plugins/router.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./store */ "./js/store/index.js");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./App */ "./js/App.vue");
+/* harmony import */ var _services_Network__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/Network */ "./js/services/Network.js");
+/* harmony import */ var _services_Trans__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./services/Trans */ "./js/services/Trans.js");
 
 
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.config.productionTip = false;
@@ -5865,6 +6031,8 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(_components_cosmos__WEBPACK_IMPOR
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(_components_project_edit__WEBPACK_IMPORTED_MODULE_6__["default"]);
 
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(_aspects__WEBPACK_IMPORTED_MODULE_7__["default"].Components);
+
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('AnnotationCard', _components_project_AnnotationCard__WEBPACK_IMPORTED_MODULE_8__["default"]);
 
 
 
@@ -5912,18 +6080,18 @@ var getParams = function getParams(elt) {
   return data;
 };
 
-_services_Network__WEBPACK_IMPORTED_MODULE_12__["default"].getAuthUser().then(function (user) {
-  var lang = _services_Trans__WEBPACK_IMPORTED_MODULE_13__["default"].getUserSupportedLang();
-  _services_Trans__WEBPACK_IMPORTED_MODULE_13__["default"].changeLanguage(lang);
+_services_Network__WEBPACK_IMPORTED_MODULE_13__["default"].getAuthUser().then(function (user) {
+  var lang = _services_Trans__WEBPACK_IMPORTED_MODULE_14__["default"].getUserSupportedLang();
+  _services_Trans__WEBPACK_IMPORTED_MODULE_14__["default"].changeLanguage(lang);
   new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
-    i18n: _plugins_i18n__WEBPACK_IMPORTED_MODULE_8__["default"],
-    router: _plugins_router__WEBPACK_IMPORTED_MODULE_9__["default"],
-    store: Object(_store__WEBPACK_IMPORTED_MODULE_10__["default"])({
+    i18n: _plugins_i18n__WEBPACK_IMPORTED_MODULE_9__["default"],
+    router: _plugins_router__WEBPACK_IMPORTED_MODULE_10__["default"],
+    store: Object(_store__WEBPACK_IMPORTED_MODULE_11__["default"])({
       authUser: user,
       config: getParams('cosmos')
     }),
     render: function render(h) {
-      return h(_App__WEBPACK_IMPORTED_MODULE_11__["default"]);
+      return h(_App__WEBPACK_IMPORTED_MODULE_12__["default"]);
     }
   }).$mount('#cosmos');
 }); // console.log(`env: ${process.env.NODE_ENV}`);
@@ -7285,6 +7453,7 @@ var state = {
     auto_save: false
   },
   scale: false,
+  showAnnotations: true,
   stageHover: false,
   projects: [],
   project: {},
@@ -7585,7 +7754,7 @@ var actions = {
     var hasProject = state.project && state.project.id ? true : false;
     var hasLastSave = state.lastSave.hash !== null;
 
-    if (!isEditing || !hasProject || !hasLastSave) {
+    if (!hasProject || !hasLastSave) {
       commit('AUTO_SAVE_WAIT', false);
       return;
     }
@@ -14977,6 +15146,104 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
+/* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! colors.css */ "./node_modules/colors.css/js/colors.js");
+/* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(colors_css__WEBPACK_IMPORTED_MODULE_1__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'CosmosVisualAnnotation',
+  props: {
+    annotation: Object
+  },
+  data: function data() {
+    return {
+      isHovering: false
+    };
+  },
+  computed: {
+    groupConfig: function groupConfig() {
+      return {
+        x: this.annotation.position[0],
+        y: this.annotation.position[1],
+        draggable: true
+      };
+    },
+    circlesConfig: function circlesConfig() {
+      var defaultConfig = {
+        x: 0,
+        y: 0,
+        fill: this.isHovering ? colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.fuchsia : colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.purple
+      };
+      var circles = [];
+      circles.push(_objectSpread({}, defaultConfig, {
+        radius: 12,
+        opacity: 0.5
+      }));
+      circles.push(_objectSpread({}, defaultConfig, {
+        radius: 8,
+        opacity: 1
+      }));
+      return circles;
+    }
+  },
+  methods: {
+    handleDragEnd: function handleDragEnd(event) {
+      console.log(event);
+      this.annotation.position = [event.target.attrs.x, event.target.attrs.y];
+    },
+    handleMouseMove: function handleMouseMove() {
+      this.isHovering = true;
+      Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["commit"])('START_STAGE_HOVER');
+    },
+    handleMouseOut: function handleMouseOut() {
+      this.isHovering = false;
+      Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["commit"])('STOP_STAGE_HOVER');
+    },
+    handleActivate: function handleActivate(evt) {
+      evt.cancelBubble = true;
+      this.$emit('activate', this.annotation);
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/layout/AppHeader.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/components/layout/AppHeader.vue?vue&type=script&lang=js& ***!
@@ -15007,6 +15274,12 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -15138,7 +15411,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       exportData: null
     };
   },
-  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(['appName', 'userCanEdit', 'hasUser', 'authUser', 'project', 'lastSave', 'userGuide']), {}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["sync"])(['scale']), {
+  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(['appName', 'userCanEdit', 'hasUser', 'authUser', 'project', 'lastSave', 'userGuide']), {}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["sync"])(['scale', 'showAnnotations']), {
     hasProject: function hasProject() {
       return this.route && this.route.params.id ? true : false;
     },
@@ -15487,6 +15760,159 @@ var timer = null;
   },
   activated: function activated() {
     console.log("Activated");
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/AnnotationCard.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
+/* harmony import */ var _plugins_linkify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/plugins/linkify */ "./js/plugins/linkify.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'AnnotationCard',
+  props: {
+    annotation: Object,
+    stageConfig: Object
+  },
+  directives: {
+    linkify: _plugins_linkify__WEBPACK_IMPORTED_MODULE_1__["linkify"]
+  },
+  watch: {
+    'annotation': 'watchAnnotation'
+  },
+  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(['userCanEdit', 'hasUser', 'authUser', 'scale']), {
+    containerClass: function containerClass() {
+      var classes = [];
+
+      if (!this.annotation) {
+        return classes;
+      }
+
+      switch (this.annotation.type) {
+        case 'visual':
+          var posX = this.annotation.position[0];
+          var posY = this.annotation.position[1];
+
+          if (this.scale) {
+            posX = Math.floor(posX * this.stageConfig.scale.x);
+            posY = Math.floor(posY * this.stageConfig.scale.y);
+          }
+
+          if (posX > this.stageConfig.width / 2) {
+            classes.push('on-left');
+          } else {
+            classes.push('on-right');
+          }
+
+          if (posY > this.stageConfig.height / 2) {
+            classes.push('is-above');
+          }
+
+          break;
+      }
+
+      return classes;
+    },
+    containerStyle: function containerStyle() {
+      var style = {};
+
+      if (!this.annotation) {
+        return style;
+      }
+
+      switch (this.annotation.type) {
+        case 'visual':
+          var posX = this.annotation.position[0];
+          var posY = this.annotation.position[1];
+
+          if (this.scale) {
+            posX = Math.floor(posX * this.stageConfig.scale.x);
+            posY = Math.floor(posY * this.stageConfig.scale.y);
+          }
+
+          style.top = posY + 'px';
+          style.left = posX + 'px';
+          return style;
+          break;
+      }
+    }
+  }),
+  methods: {
+    /**
+     * When an annotation is present, focus the textarea.
+     *
+     */
+    watchAnnotation: function watchAnnotation() {
+      var _this = this;
+
+      if (this.annotation) {
+        this.$nextTick(function () {
+          _this.$refs.body.$el.focus();
+        });
+      }
+    },
+
+    /**
+     * Close the window.
+     *
+     */
+    doOK: function doOK() {
+      this.$emit('close');
+    },
+    deleteAnnotation: function deleteAnnotation() {
+      this.$emit('delete', this.annotation);
+    }
   }
 });
 
@@ -18132,13 +18558,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash_throttle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash/throttle */ "./node_modules/lodash/throttle.js");
 /* harmony import */ var lodash_throttle__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_throttle__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
-/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jspdf */ "./node_modules/jspdf/dist/jspdf.min.js");
-/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jspdf__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _services_Trans__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/services/Trans */ "./js/services/Trans.js");
-/* harmony import */ var _services_EventBus__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/services/EventBus */ "./js/services/EventBus.js");
-/* harmony import */ var _aspects__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/aspects */ "./js/aspects/index.js");
-/* harmony import */ var _components_UserGuide__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/components/UserGuide */ "./js/components/UserGuide.vue");
+/* harmony import */ var lodash_filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/filter */ "./node_modules/lodash/filter.js");
+/* harmony import */ var lodash_filter__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_filter__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jspdf */ "./node_modules/jspdf/dist/jspdf.min.js");
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jspdf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _services_Trans__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/services/Trans */ "./js/services/Trans.js");
+/* harmony import */ var _services_EventBus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/services/EventBus */ "./js/services/EventBus.js");
+/* harmony import */ var _aspects__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/aspects */ "./js/aspects/index.js");
+/* harmony import */ var _components_UserGuide__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/components/UserGuide */ "./js/components/UserGuide.vue");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -18203,6 +18631,35 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -18213,13 +18670,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'DashboardTab',
   components: {
-    UserGuide: _components_UserGuide__WEBPACK_IMPORTED_MODULE_6__["default"]
+    UserGuide: _components_UserGuide__WEBPACK_IMPORTED_MODULE_7__["default"]
   },
   props: {
     aspectId: [Boolean, String]
   },
   watch: {
     'scale': 'resize',
+    'annotate': 'watchAnnotate',
     'stageHover': 'setCursor',
     'project.id': {
       handler: function handler(newVal, oldVal) {
@@ -18246,12 +18704,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           x: 1,
           y: 1
         }
-      }
+      },
+      currentAnnotation: null
     };
   },
-  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_1__["get"])(['scale', 'stageHover', 'options', 'project']), {
+  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_2__["get"])(['scale', 'showAnnotations', 'stageHover', 'options', 'project', 'userCanEdit']), {
+    /**
+     * All annotations. See @filteredAnnotations() for scoped ones.
+     *
+     */
+    annotations: Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_2__["sync"])('project@data.annotations'),
+
+    /**
+     * Current language to pass to child components.
+     *
+     */
     currentLanguage: function currentLanguage() {
-      return _services_Trans__WEBPACK_IMPORTED_MODULE_3__["default"].currentLanguage();
+      return _services_Trans__WEBPACK_IMPORTED_MODULE_4__["default"].currentLanguage();
     },
 
     /**
@@ -18265,20 +18734,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         return null;
       }
 
-      return _aspects__WEBPACK_IMPORTED_MODULE_5__["default"].get(aspect);
+      return _aspects__WEBPACK_IMPORTED_MODULE_6__["default"].get(aspect);
     },
 
-    /*
-    		template() {
-    			if ( ! this.project.id) {
-    				return false;
-    			}
-    			var template = Templates.get(this.project.template);
-    			return template;
-    		},*/
+    /**
+     * Get dashboard nodes of the current aspect.
+     *
+     */
     nodes: function nodes() {
       return this.aspect && this.aspect.NODES ? this.aspect.NODES : [];
     },
+
+    /**
+     * Background layer config (just solid colour so it isn't transparent)
+     *
+     */
     backgroundConfig: function backgroundConfig() {
       var config = {
         fill: '#ffffff',
@@ -18288,6 +18758,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         height: this.aspect.CONFIG.stageSize.height
       };
       return config;
+    },
+
+    /**
+     * List of 'visual' annotations for this aspect.
+     *
+     */
+    filteredAnnotations: function filteredAnnotations() {
+      return lodash_filter__WEBPACK_IMPORTED_MODULE_1___default()(this.annotations, {
+        type: 'visual',
+        aspect: this.aspectId
+      });
     }
   }),
   methods: {
@@ -18401,7 +18882,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
               var image = stage.toDataURL({
                 pixelRatio: 1.5
               });
-              var pdf = new jspdf__WEBPACK_IMPORTED_MODULE_2___default.a('l', 'px', [w, h], false, true);
+              var pdf = new jspdf__WEBPACK_IMPORTED_MODULE_3___default.a('l', 'px', [w, h], false, true);
               var width = pdf.internal.pageSize.getWidth();
               var height = pdf.internal.pageSize.getHeight();
               pdf.addImage(image, 'PNG', 0, 0, width, height);
@@ -18418,6 +18899,73 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           }, 100);
           break;
       }
+    },
+
+    /**
+     * On double-click of stage, add a new annotation.
+     *
+     */
+    handleAddAnnotate: function handleAddAnnotate(event) {
+      if (!this.userCanEdit) {
+        return;
+      }
+
+      if (!this.showAnnotations) {
+        return;
+      }
+
+      if (event.evt.button && event.evt.button > 0) {
+        return;
+      }
+
+      var pos = this.$refs.stage.getStage().getPointerPosition();
+
+      if (this.scale) {
+        pos.x = Math.floor(pos.x / this.stageConfig.scale.x);
+        pos.y = Math.floor(pos.y / this.stageConfig.scale.y);
+      }
+
+      var newAnnotation = {
+        aspect: this.aspectId,
+        type: 'visual',
+        position: [pos.x, pos.y],
+        body: ''
+      };
+      this.annotations.push(newAnnotation);
+      this.currentAnnotation = newAnnotation;
+    },
+
+    /**
+     * Handle showing the dialog for a given annotation.
+     * Set the currentAnnotation to this object, which will show the dialog.
+     *
+     */
+    setCurrentAnnotation: function setCurrentAnnotation(annotation) {
+      this.currentAnnotation = annotation;
+    },
+    deleteAnnotation: function deleteAnnotation(annotation) {
+      if (!confirm("Delete this annotation?")) {
+        return;
+      }
+
+      var items = this.annotations;
+
+      if (items.indexOf(annotation) > -1) {
+        items.splice(items.indexOf(annotation), 1);
+        this.annotations = items;
+        this.setCurrentAnnotation(null);
+      }
+    },
+
+    /**
+     * Watch the 'annotate' flag.
+     * When `false`, set the current annotation to `null` - which will remove any visible window of it.
+     *
+     */
+    watchAnnotate: function watchAnnotate() {
+      if (!this.annotate) {
+        this.currentAnnotation = null;
+      }
     }
   },
   mounted: function mounted() {
@@ -18428,11 +18976,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       window.addEventListener('resize', lodash_throttle__WEBPACK_IMPORTED_MODULE_0___default()(_this2.resize, 250));
     });
-    _services_EventBus__WEBPACK_IMPORTED_MODULE_4__["EventBus"].$on('export', this.exportHandler);
+    _services_EventBus__WEBPACK_IMPORTED_MODULE_5__["EventBus"].$on('export', this.exportHandler);
   },
   destroyed: function destroyed() {
     window.removeEventListener("resize", lodash_throttle__WEBPACK_IMPORTED_MODULE_0___default()(this.resize, 250));
-    _services_EventBus__WEBPACK_IMPORTED_MODULE_4__["EventBus"].$off('export', this.exportHandler);
+    _services_EventBus__WEBPACK_IMPORTED_MODULE_5__["EventBus"].$off('export', this.exportHandler);
   }
 });
 
@@ -19406,6 +19954,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, ".group-title[data-v-cd9dbf10] {\n  font-size: 1.3rem;\n  padding-top: 0.6rem;\n}\n.group-prompt[data-v-cd9dbf10] {\n  font-size: 0.8rem;\n  font-weight: bold;\n  width: 50%;\n  vertical-align: top;\n}\n.group-value[data-v-cd9dbf10] {\n  vertical-align: top;\n}\n.group-value .link[data-v-cd9dbf10],\n.group-value a.link[data-v-cd9dbf10] {\n  color: #0074D9;\n  text-decoration: underline;\n}\n.like-pre[data-v-cd9dbf10] {\n  white-space: pre;\n}\ntable[data-v-cd9dbf10] {\n  margin-bottom: 2.4rem;\n}\n.divider[data-v-cd9dbf10] {\n  border-top-width: 0.1rem;\n  height: 0.1rem;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".annotation-container[data-v-3adb0916] {\n  position: absolute;\n}", ""]);
 
 // exports
 
@@ -44850,6 +45417,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/layout/ToastMessage.vue?vue&type=style&index=0&id=8766a998&scoped=true&lang=css&":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./js/components/layout/ToastMessage.vue?vue&type=style&index=0&id=8766a998&scoped=true&lang=css& ***!
@@ -52687,6 +53284,47 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=template&id=ab515512&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=template&id=ab515512& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-group",
+    {
+      ref: "group",
+      attrs: { config: _vm.groupConfig },
+      on: {
+        click: _vm.handleActivate,
+        tap: _vm.handleActivate,
+        dragend: _vm.handleDragEnd,
+        mousemove: _vm.handleMouseMove,
+        mouseout: _vm.handleMouseOut
+      }
+    },
+    _vm._l(_vm.circlesConfig, function(circle, idx) {
+      return _c("v-circle", { key: "circle" + idx, attrs: { config: circle } })
+    }),
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/layout/AppHeader.vue?vue&type=template&id=40a0b06a&":
 /*!*********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/components/layout/AppHeader.vue?vue&type=template&id=40a0b06a& ***!
@@ -52874,6 +53512,71 @@ var render = function() {
                       [_vm._v(_vm._s(_vm.$t("user_guide.show")))]
                     )
                   : _vm._e()
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.project && _vm.project.id
+            ? _c("div", { staticClass: "input-group input-inline mr-4" }, [
+                _c(
+                  "label",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.activeTab == "model",
+                        expression: "activeTab == 'model'"
+                      }
+                    ],
+                    staticClass: "form-switch input-sm"
+                  },
+                  [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.showAnnotations,
+                          expression: "showAnnotations"
+                        }
+                      ],
+                      attrs: { type: "checkbox" },
+                      domProps: {
+                        checked: Array.isArray(_vm.showAnnotations)
+                          ? _vm._i(_vm.showAnnotations, null) > -1
+                          : _vm.showAnnotations
+                      },
+                      on: {
+                        change: function($event) {
+                          var $$a = _vm.showAnnotations,
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = null,
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 &&
+                                (_vm.showAnnotations = $$a.concat([$$v]))
+                            } else {
+                              $$i > -1 &&
+                                (_vm.showAnnotations = $$a
+                                  .slice(0, $$i)
+                                  .concat($$a.slice($$i + 1)))
+                            }
+                          } else {
+                            _vm.showAnnotations = $$c
+                          }
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "form-icon" }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "text-small" }, [
+                      _vm._v(_vm._s(_vm.$t("app.annotations")))
+                    ])
+                  ]
+                )
               ])
             : _vm._e(),
           _vm._v(" "),
@@ -53265,6 +53968,130 @@ var render = function() {
         ])
       : _vm._e()
   ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm.annotation
+    ? _c(
+        "div",
+        {
+          staticClass: "annotation-container",
+          class: _vm.containerClass,
+          style: _vm.containerStyle
+        },
+        [
+          _c("div", { staticClass: "card card-annotation" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("button", {
+                staticClass: "btn btn-clear float-right",
+                attrs: { "aria-label": "Close" },
+                on: { click: _vm.doOK }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-title h5" }, [
+                _vm._v(_vm._s(_vm.$t("app.annotation")))
+              ])
+            ]),
+            _vm._v(" "),
+            _vm.userCanEdit
+              ? _c(
+                  "div",
+                  { staticClass: "card-body" },
+                  [
+                    _c(
+                      "VGroup",
+                      { attrs: { name: "annotation" } },
+                      [
+                        _c("VTextarea", {
+                          ref: "body",
+                          staticClass: "input-sm",
+                          attrs: { rows: "6", id: "annotation" },
+                          model: {
+                            value: _vm.annotation.body,
+                            callback: function($$v) {
+                              _vm.$set(_vm.annotation, "body", $$v)
+                            },
+                            expression: "annotation.body"
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.userCanEdit
+              ? _c("div", { staticClass: "card-body" }, [
+                  _c("div", {
+                    directives: [
+                      {
+                        name: "linkify",
+                        rawName: "v-linkify",
+                        value: _vm.annotation.body,
+                        expression: "annotation.body"
+                      }
+                    ],
+                    staticClass: "text-small like-pre"
+                  })
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-sm btn-primary",
+                  attrs: { type: "button" },
+                  on: { click: _vm.doOK }
+                },
+                [
+                  _c("i", { staticClass: "icon icon-check" }),
+                  _vm._v(" " + _vm._s(_vm.$t("app.ok")))
+                ]
+              ),
+              _vm._v(" "),
+              _vm.userCanEdit
+                ? _c(
+                    "button",
+                    {
+                      staticClass:
+                        "btn btn-sm btn-negative btn-action float-right tooltip",
+                      attrs: {
+                        type: "button",
+                        "data-tooltip": _vm.$t("app.delete")
+                      },
+                      on: { click: _vm.deleteAnnotation }
+                    },
+                    [_c("i", { staticClass: "icon icon-delete" })]
+                  )
+                : _vm._e()
+            ])
+          ])
+        ]
+      )
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -55752,98 +56579,152 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("main", { staticClass: "app-content dark" }, [
-    _vm.aspect
-      ? _c(
-          "div",
-          {
-            ref: "container",
-            staticClass: "canvas-container scrollable scr-x scr-y"
-          },
-          [
-            _c(
-              "v-stage",
-              { ref: "stage", attrs: { config: _vm.stageConfig } },
-              [
-                _c(
-                  "v-layer",
-                  [_c("v-rect", { attrs: { config: _vm.backgroundConfig } })],
-                  1
-                ),
-                _vm._v(" "),
-                _vm.project.id && _vm.nodes.length
-                  ? _c(
-                      "v-layer",
-                      _vm._l(_vm.nodes, function(node, idx) {
-                        return _c(node.componentName, {
-                          key: idx,
-                          ref: node.ref,
-                          refInFor: true,
-                          tag: "component",
-                          attrs: {
-                            path: node.path,
-                            config: node.config,
-                            children: node.children,
-                            definitionName: node.definitionName,
-                            visibilityFunc: node.visibilityFunc,
-                            options: _vm.options,
-                            aspectId: _vm.aspect.CONFIG.id
-                          }
-                        })
-                      }),
-                      1
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.project.id && _vm.aspect.CONFIG.dashboardComponent
-                  ? _c(
-                      "v-layer",
-                      [
-                        _c(_vm.aspect.CONFIG.dashboardComponent, {
-                          tag: "component",
-                          attrs: {
-                            definitions: _vm.aspect.DEFINITIONS,
-                            options: _vm.options,
-                            aspectId: _vm.aspect.CONFIG.id,
-                            currentLanguage: _vm.currentLanguage
-                          }
-                        })
-                      ],
-                      1
-                    )
-                  : _vm._e()
-              ],
-              1
-            )
-          ],
-          1
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "modal modal-sm", class: _vm.isExporting ? "active" : "" },
-      [
-        _c("div", { staticClass: "modal-overlay" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "modal-container" }, [
-          _c("div", { staticClass: "modal-header" }, [
-            _c("div", { staticClass: "modal-title h5" }, [
-              _vm._v(_vm._s(_vm.$t("app.exporting")) + "...")
-            ])
-          ]),
+  return _c(
+    "main",
+    { staticClass: "app-content dark" },
+    [
+      _vm.aspect
+        ? _c(
+            "div",
+            {
+              ref: "container",
+              staticClass: "canvas-container scrollable scr-x scr-y"
+            },
+            [
+              _c(
+                "v-stage",
+                {
+                  ref: "stage",
+                  attrs: { config: _vm.stageConfig },
+                  on: {
+                    click: function($event) {
+                      return _vm.setCurrentAnnotation(null)
+                    },
+                    tap: function($event) {
+                      return _vm.setCurrentAnnotation(null)
+                    },
+                    dblclick: _vm.handleAddAnnotate,
+                    dbltap: _vm.handleAddAnnotate
+                  }
+                },
+                [
+                  _c(
+                    "v-layer",
+                    [_c("v-rect", { attrs: { config: _vm.backgroundConfig } })],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _vm.project.id && _vm.nodes.length
+                    ? _c(
+                        "v-layer",
+                        _vm._l(_vm.nodes, function(node, idx) {
+                          return _c(node.componentName, {
+                            key: idx,
+                            ref: node.ref,
+                            refInFor: true,
+                            tag: "component",
+                            attrs: {
+                              path: node.path,
+                              config: node.config,
+                              children: node.children,
+                              definitionName: node.definitionName,
+                              visibilityFunc: node.visibilityFunc,
+                              options: _vm.options,
+                              aspectId: _vm.aspect.CONFIG.id
+                            }
+                          })
+                        }),
+                        1
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.project.id && _vm.aspect.CONFIG.dashboardComponent
+                    ? _c(
+                        "v-layer",
+                        [
+                          _c(_vm.aspect.CONFIG.dashboardComponent, {
+                            tag: "component",
+                            attrs: {
+                              definitions: _vm.aspect.DEFINITIONS,
+                              options: _vm.options,
+                              aspectId: _vm.aspect.CONFIG.id,
+                              currentLanguage: _vm.currentLanguage
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.showAnnotations
+                    ? _c(
+                        "v-layer",
+                        _vm._l(_vm.filteredAnnotations, function(
+                          annotation,
+                          idx
+                        ) {
+                          return _c("CosmosVisualAnnotation", {
+                            key: "annotation" + idx,
+                            attrs: {
+                              annotation: annotation,
+                              currentAnnotation: _vm.currentAnnotation
+                            },
+                            on: { activate: _vm.setCurrentAnnotation }
+                          })
+                        }),
+                        1
+                      )
+                    : _vm._e()
+                ],
+                1
+              )
+            ],
+            1
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "modal modal-sm",
+          class: _vm.isExporting ? "active" : ""
+        },
+        [
+          _c("div", { staticClass: "modal-overlay" }),
           _vm._v(" "),
-          _c("div", { staticClass: "modal-body" }, [
-            _c("div", { staticClass: "content mb-4" }, [
-              _c("p", [_vm._v(_vm._s(_vm.$t("app.please_wait_generate")))]),
-              _vm._v(" "),
-              _c("div", { staticClass: "loading loading-lg" })
+          _c("div", { staticClass: "modal-container" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c("div", { staticClass: "modal-title h5" }, [
+                _vm._v(_vm._s(_vm.$t("app.exporting")) + "...")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _c("div", { staticClass: "content mb-4" }, [
+                _c("p", [_vm._v(_vm._s(_vm.$t("app.please_wait_generate")))]),
+                _vm._v(" "),
+                _c("div", { staticClass: "loading loading-lg" })
+              ])
             ])
           ])
-        ])
-      ]
-    )
-  ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("AnnotationCard", {
+        attrs: {
+          annotation: _vm.currentAnnotation,
+          stageConfig: _vm.stageConfig
+        },
+        on: {
+          close: function($event) {
+            return _vm.setCurrentAnnotation(null)
+          },
+          delete: _vm.deleteAnnotation
+        }
+      })
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

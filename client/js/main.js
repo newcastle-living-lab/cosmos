@@ -23,6 +23,9 @@ Vue.use(Editors);
 import Aspects from "./aspects";
 Vue.use(Aspects.Components);
 
+import AnnotationCard from './components/project/AnnotationCard';
+Vue.component('AnnotationCard', AnnotationCard);
+
 import i18n from './plugins/i18n';
 import router from './plugins/router';
 import store from './store';

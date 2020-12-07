@@ -10,6 +10,7 @@ import CosmosNodeBracket from './CosmosNodeBracket';
 import CosmosArrow from './CosmosArrow';
 import CosmosCurve from './CosmosCurve';
 import CosmosConnector from './CosmosConnector';
+import CosmosVisualAnnotation from './CosmosVisualAnnotation';
 
 export {
 	CosmosGroup,
@@ -24,4 +25,5 @@ export {
 	CosmosArrow,
 	CosmosCurve,
 	CosmosConnector,
+	CosmosVisualAnnotation,
 };

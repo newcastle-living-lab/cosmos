@@ -69,6 +69,10 @@ export default {
 			}
 		});
 
+		if (typeof(project.data.annotations) === 'undefined') {
+			project.data.annotations = [];
+		}
+
 		project = this.convertFromTemplate(project);
 
 		console.debug(JSON.parse(JSON.stringify(project)));

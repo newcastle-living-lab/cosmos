@@ -1,0 +1,30 @@
+.annotation-container {
+
+	position: absolute;
+	width: $control-width-sm;
+
+	&.on-right {
+		padding-left: 32px;
+		// transform: translateX(0) scale(0);
+	}
+
+	&.on-left {
+		padding-right: 4px;
+		transform: translateX(-100%);
+	}
+
+	&.is-above {
+		transform: translateY(-100%);
+		padding-bottom: -32px;
+	}
+
+	&.on-left.is-above {
+		transform: translate(-100%, -100%);
+	}
+
+	.card {
+		@include shadow-variant(.2rem);
+		border: 0;
+	}
+
+}

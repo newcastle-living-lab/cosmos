@@ -23,6 +23,8 @@
 	"devDependencies": {
 		"@growthbunker/vueflags": "^0.1.14",
 		"@newcastle-living-lab/living-lab-admin": "^1.1.0",
+		"@vue-hero-icons/outline": "^1.6.3",
+		"@vue-hero-icons/solid": "^1.6.3",
 		"axios": "^0.19.2",
 		"colors.css": "^3.0.0",
 		"cross-env": "^6.0.3",
