@@ -4,5 +4,174 @@
 		"type": "model",
 		"title": "Model",
 		"hint": null
+	},
+	{
+		"id": "discovering",
+		"type": "group",
+		"children": [
+			{
+				"id": "discovery_medium",
+				"dataType": "string",
+				"componentName": "VRadioList",
+				"componentProps": {
+					"options": [
+						{"value": "face", "lang": "aspects.user_journey_model.options.mediums.face" },
+						{"value": "paper", "lang": "aspects.user_journey_model.options.mediums.paper" },
+						{"value": "tv", "lang": "aspects.user_journey_model.options.mediums.tv" },
+						{"value": "social", "lang": "aspects.user_journey_model.options.mediums.social" },
+						{"value": "other", "lang": "aspects.user_journey_model.options.mediums.other" }
+					]
+				}
+			},
+			{
+				"id": "information_medium",
+				"dataType": "string",
+				"componentName": "VRadioList",
+				"componentProps": {
+					"options": [
+						{"value": "face", "lang": "aspects.user_journey_model.options.mediums.face" },
+						{"value": "paper", "lang": "aspects.user_journey_model.options.mediums.paper" },
+						{"value": "tv", "lang": "aspects.user_journey_model.options.mediums.tv" },
+						{"value": "social", "lang": "aspects.user_journey_model.options.mediums.social" },
+						{"value": "other", "lang": "aspects.user_journey_model.options.mediums.other" }
+					]
+				}
+			},
+			{
+				"id": "information_experience",
+				"dataType": "string",
+				"componentName": "CosmosExperience"
+			},
+			{
+				"id": "comments",
+				"dataType": "string",
+				"componentName": "VTextarea",
+				"componentProps": {
+					"rows": 4
+				}
+			}
+		]
+	},
+	{
+		"id": "accessing",
+		"type": "group",
+		"children": [
+			{
+				"id": "access_method",
+				"dataType": "string",
+				"componentName": "VRadioList",
+				"componentProps": {
+					"options": [
+						{"value": "community", "lang": "aspects.user_journey_model.options.access_methods.community" },
+						{"value": "public", "lang": "aspects.user_journey_model.options.access_methods.public" },
+						{"value": "electronically", "lang": "aspects.user_journey_model.options.access_methods.electronically" },
+						{"value": "other", "lang": "aspects.user_journey_model.options.access_methods.other" }
+					]
+				}
+			},
+			{
+				"id": "qualification_process",
+				"dataType": "string",
+				"componentName": "VTextarea",
+				"componentProps": {
+					"rows": 4
+				}
+			},
+			{
+				"id": "qualification_experience",
+				"dataType": "string",
+				"componentName": "CosmosExperience"
+			},
+			{
+				"id": "appropriate_comment",
+				"dataType": "string",
+				"componentName": "VTextarea",
+				"componentProps": {
+					"rows": 4
+				}
+			}
+		]
+	},
+	{
+		"id": "using",
+		"type": "group",
+		"children": [
+			{
+				"id": "participate_experience",
+				"dataType": "string",
+				"componentName": "CosmosExperience"
+			},
+			{
+				"id": "accessible_experience",
+				"dataType": "string",
+				"componentName": "CosmosExperience"
+			},
+			{
+				"id": "time_experience",
+				"dataType": "string",
+				"componentName": "CosmosExperience"
+			}
+		]
+	},
+	{
+		"id": "evaluating",
+		"type": "group",
+		"children": [
+			{
+				"id": "surveyed_opinions",
+				"dataType": "string",
+				"componentName": "VTextarea",
+				"componentProps": {
+					"rows": 4
+				}
+			},
+			{
+				"id": "service_experience",
+				"dataType": "string",
+				"componentName": "CosmosExperience"
+			},
+			{
+				"id": "surprises_comments",
+				"dataType": "string",
+				"componentName": "VTextarea",
+				"componentProps": {
+					"rows": 4
+				}
+			}
+		]
+	},
+	{
+		"id": "instigating",
+		"type": "group",
+		"children": [
+			{
+				"id": "design_role",
+				"dataType": "string",
+				"componentName": "VTextarea",
+				"componentProps": {
+					"rows": 4
+				}
+			},
+			{
+				"id": "instigate_role",
+				"dataType": "array",
+				"componentName": "VCheckList",
+				"componentProps": {
+					"options": [
+						{"value": "pressure_group", "lang": "aspects.user_journey_model.options.instigate_roles.pressure_group" },
+						{"value": "political_party", "lang": "aspects.user_journey_model.options.instigate_roles.political_party" },
+						{"value": "government_department", "lang": "aspects.user_journey_model.options.instigate_roles.government_department" }
+					]
+				}
+			},
+			{
+				"id": "comments",
+				"dataType": "string",
+				"componentName": "VTextarea",
+				"componentProps": {
+					"rows": 4
+				}
+			}
+		]
 	}
 ]

@@ -16,11 +16,11 @@
 				:key="'swimLaneLabel' + idx"
 				:config="label"
 			/>
-			<CosmosImage
+			<!-- <CosmosImage
 				v-for="(img, idx) in swimLaneSmileys"
 				:key="'swimLaneSmiley' + idx"
 				:config="img"
-			/>
+			/> -->
 		</v-group>
 
 		<v-text :config="serviceLabelConfig" />
@@ -44,7 +44,7 @@
 			<v-arrow :config="arrow" />
 		</v-group>
 
-		<v-group :config="{ x: 100, y: 85 }">
+		<v-group :config="{ x: 20, y: 85 }">
 			<v-rect :config="sipConfig.rect" />
 			<v-text :config="sipConfig.label" />
 			<CosmosTextBox
@@ -774,7 +774,17 @@ export default {
 
 			labels.push({
 				...defaultLabelConfig,
-				text: 'Which channels?',
+				text: 'Service Experience',
+				width: 100,
+				align: 'right',
+				x: 0,
+				y: 175,
+				offsetX: 110,
+			});
+
+			labels.push({
+				...defaultLabelConfig,
+				text: 'Carrier of Experience',
 				width: 100,
 				align: 'right',
 				x: 0,

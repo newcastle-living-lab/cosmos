@@ -540,9 +540,96 @@
 			"title": "User Journey Model",
 			"dashboard": {
 			},
+			"options": {
+				"mediums": {
+					"face": "Face to face",
+					"paper": "Paper publication",
+					"tv": "TV broadcast",
+					"social": "Social media",
+					"other": "Other"
+				},
+				"access_methods": {
+					"community": "In the community",
+					"public": "In a public facility",
+					"electronically": "Electronically",
+					"other": "Other"
+				},
+				"instigate_roles": {
+					"pressure_group": "Pressure/Campaigning Group",
+					"political_party": "Political Party",
+					"government_department": "Government Department"
+				}
+			},
 			"definitions": {
 				"model": {
 					"title": "Model"
+				},
+				"discovering": {
+					"title": "Discovering",
+					"discovery_medium": {
+						"label": "How did you find out about the service?"
+					},
+					"information_medium": {
+						"label": "How did you access information about the service?"
+					},
+					"information_experience": {
+						"label": "What is your opinion about the quality, completeness and accessibility of the information?"
+					},
+					"comments": {
+						"label": "Any further comments, observations?"
+					}
+				},
+				"accessing": {
+					"title": "Accessing",
+					"access_method": {
+						"label": "How did you gain access to the service?"
+					},
+					"qualification_process": {
+						"label": "Was there a qualification process?"
+					},
+					"qualification_experience": {
+						"label": "If so, what was the experience like?"
+					},
+					"appropriate_comment": {
+						"label": "Do you think this aspect of the service is appropriate?"
+					}
+				},
+				"using": {
+					"title": "Using",
+					"participate_experience": {
+						"label": "What was it like to use or participate in the service?"
+					},
+					"accessible_experience": {
+						"label": "Was the service accessible to you?"
+					},
+					"time_experience": {
+						"label": "Was the duration and frequencies of the service events or contacts OK?"
+					}
+				},
+				"evaluating": {
+					"title": "Evaluating",
+					"surveyed_opinions": {
+						"label": "Were you asked about your opinions about your experience of the service?",
+						"hint": "Think about where and when this was."
+					},
+					"service_experience": {
+						"label": "Was the service what you expected?"
+					},
+					"surprises_comments": {
+						"label": "Were there any surprises or disappointments in your experience?"
+					}
+				},
+				"instigating": {
+					"title": "Instigating",
+					"design_role": {
+						"label": "Did you play any role in the design and definition of the service? If yes, what were the occasions and channels that this occurred?"
+					},
+					"instigate_role": {
+						"label": "Did you have any role in instigating the project? If yes, were you part of any of the following options? You can choose as many as you like."
+					},
+					"comments": {
+						"label": "Comments"
+					}
 				}
 			}
 		},
