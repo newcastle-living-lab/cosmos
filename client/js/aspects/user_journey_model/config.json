@@ -3,6 +3,7 @@
 	"type": "model",
 	"routeName": "model",
 	"dashboardComponent": "UserJourneyDashboard",
+	"summaryComponent": "UserJourneySummaryView",
 	"stageSize": {
 		"width": 1285,
 		"height": 800

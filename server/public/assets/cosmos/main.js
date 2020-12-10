@@ -2275,17 +2275,108 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue":
+/*!*****************************************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/UserJourneySummaryView.vue ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _UserJourneySummaryView_vue_vue_type_template_id_5549a21c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true& */ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true&");
+/* harmony import */ var _UserJourneySummaryView_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserJourneySummaryView.vue?vue&type=script&lang=js& */ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _UserJourneySummaryView_vue_vue_type_style_index_0_id_5549a21c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true& */ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _UserJourneySummaryView_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _UserJourneySummaryView_vue_vue_type_template_id_5549a21c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _UserJourneySummaryView_vue_vue_type_template_id_5549a21c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "5549a21c",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "js/aspects/user_journey_model/components/UserJourneySummaryView.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./UserJourneySummaryView.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true&":
+/*!***************************************************************************************************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true& ***!
+  \***************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_style_index_0_id_5549a21c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_style_index_0_id_5549a21c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_style_index_0_id_5549a21c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_style_index_0_id_5549a21c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_style_index_0_id_5549a21c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_style_index_0_id_5549a21c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true&":
+/*!************************************************************************************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true& ***!
+  \************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_template_id_5549a21c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_template_id_5549a21c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_template_id_5549a21c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./js/aspects/user_journey_model/components/index.js":
 /*!***********************************************************!*\
   !*** ./js/aspects/user_journey_model/components/index.js ***!
   \***********************************************************/
-/*! exports provided: UserJourneyDashboard */
+/*! exports provided: UserJourneyDashboard, UserJourneySummaryView */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _UserJourneyDashboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UserJourneyDashboard */ "./js/aspects/user_journey_model/components/UserJourneyDashboard.vue");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UserJourneyDashboard", function() { return _UserJourneyDashboard__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _UserJourneySummaryView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserJourneySummaryView */ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UserJourneySummaryView", function() { return _UserJourneySummaryView__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
 
 
 
@@ -2296,10 +2387,10 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************************!*\
   !*** ./js/aspects/user_journey_model/config.json ***!
   \***************************************************/
-/*! exports provided: id, type, routeName, dashboardComponent, stageSize, default */
+/*! exports provided: id, type, routeName, dashboardComponent, summaryComponent, stageSize, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"id\":\"user_journey_model\",\"type\":\"model\",\"routeName\":\"model\",\"dashboardComponent\":\"UserJourneyDashboard\",\"stageSize\":{\"width\":1285,\"height\":800}}");
+module.exports = JSON.parse("{\"id\":\"user_journey_model\",\"type\":\"model\",\"routeName\":\"model\",\"dashboardComponent\":\"UserJourneyDashboard\",\"summaryComponent\":\"UserJourneySummaryView\",\"stageSize\":{\"width\":1285,\"height\":800}}");
 
 /***/ }),
 
@@ -12804,7 +12895,7 @@ var Icons = {
         config.political = true;
         config.government = true;
       } else {
-        config.discovering = this.aspectData.discovering.discovery_medium.length && this.aspectData.discovering.information_medium.length && this.aspectData.discovering.information_experience.length && this.aspectData.discovering.comments.length;
+        config.discovering = this.aspectData.discovering.discovery_medium.length && this.aspectData.discovering.information_medium.length && this.aspectData.discovering.information_experience.length && this.aspectData.discovering.comments.length ? true : false;
         config.accessing = this.aspectData.accessing.access_method.length && this.aspectData.accessing.qualification_process.length && this.aspectData.accessing.qualification_experience.length && this.aspectData.accessing.appropriate_comment.length;
         config.using = this.aspectData.using.participate_experience.length && this.aspectData.using.accessible_experience.length && this.aspectData.using.time_experience.length;
         config.evaluating = this.aspectData.evaluating.surveyed_opinions.length && this.aspectData.evaluating.service_experience.length && this.aspectData.evaluating.surprises_comments.length;
@@ -13439,6 +13530,11 @@ var Icons = {
         fontSize: 18
       });
 
+      var defaultValueConfig = _objectSpread({}, defaultTextConfig, {
+        fontStyle: 'normal',
+        fontSize: 18
+      });
+
       labels.push(_objectSpread({}, defaultLabelConfig, {
         text: 'Service Workflow',
         width: 100,
@@ -13476,8 +13572,17 @@ var Icons = {
         width: 100,
         align: 'right',
         x: 0,
-        y: 240,
+        y: 245,
         offsetX: 110
+      }));
+      var optionValue = this.aspectData.discovering.discovery_medium;
+      var langKey = "aspects.user_journey_model.options.mediums.".concat(optionValue);
+      labels.push(_objectSpread({}, defaultValueConfig, {
+        text: this.$t(langKey),
+        align: 'left',
+        x: 10,
+        y: 250,
+        offset: 0
       }));
       return labels;
     },
@@ -13486,23 +13591,51 @@ var Icons = {
       var defaultFaceConfig = {
         opacity: 1,
         scale: {
-          x: 0.4,
-          y: 0.4
+          x: 0.35,
+          y: 0.35
         },
         x: 0,
-        y: 165
+        y: 168
       };
+      var faceTypes = {
+        'negative': 'user-journey/face-frown.svg',
+        'neutral': 'user-journey/face-neutral.svg',
+        'positive': 'user-journey/face-smile.svg'
+      };
+
+      if (!this.aspectData) {
+        return faces;
+      }
+
+      var responses = {
+        discovering: this.aspectData.discovering.information_experience,
+        accessing: this.aspectData.accessing.qualification_experience,
+        using: this.aspectData.using.participate_experience,
+        evaluating: this.aspectData.evaluating.service_experience
+      };
+      var offset = 65;
       faces.push(_objectSpread({}, defaultFaceConfig, {
-        filename: 'user-journey/face-smile.svg',
-        x: -60
+        visible: responses.discovering.length ? true : false,
+        filename: faceTypes[responses.discovering],
+        x: offset
       }));
+      offset += 180;
       faces.push(_objectSpread({}, defaultFaceConfig, {
-        filename: 'user-journey/face-neutral.svg',
-        x: -110
+        visible: responses.accessing.length ? true : false,
+        filename: faceTypes[responses.accessing],
+        x: offset
       }));
+      offset += 180;
       faces.push(_objectSpread({}, defaultFaceConfig, {
-        filename: 'user-journey/face-frown.svg',
-        x: -160
+        visible: responses.using.length ? true : false,
+        filename: faceTypes[responses.using],
+        x: offset
+      }));
+      offset += 180;
+      faces.push(_objectSpread({}, defaultFaceConfig, {
+        visible: responses.evaluating.length ? true : false,
+        filename: faceTypes[responses.evaluating],
+        x: offset
       }));
       return faces;
     }
@@ -13510,6 +13643,254 @@ var Icons = {
   methods: {
     inArray: function inArray(arr, item) {
       return arr.indexOf(item) !== -1;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _plugins_linkify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/plugins/linkify */ "./js/plugins/linkify.js");
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
+/* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/find */ "./node_modules/lodash/find.js");
+/* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_find__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _aspects__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/aspects */ "./js/aspects/index.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+var FACE_TYPES = {
+  'negative': 'user-journey/face-frown.svg',
+  'neutral': 'user-journey/face-neutral.svg',
+  'positive': 'user-journey/face-smile.svg'
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "UserJourneySummaryView",
+  props: {
+    aspectId: [Boolean, String]
+  },
+  directives: {
+    linkify: _plugins_linkify__WEBPACK_IMPORTED_MODULE_0__["linkify"]
+  },
+  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_1__["get"])(['project']), {
+    /**
+     * Get aspect (ALL data - CONFIG + DEFS etc!) based on supplied editor ID
+     *
+     */
+    aspect: function aspect() {
+      var aspect = this.aspectId;
+
+      if (!this.aspectId) {
+        return null;
+      }
+
+      return _aspects__WEBPACK_IMPORTED_MODULE_3__["default"].get(aspect);
+    },
+    dataPath: function dataPath() {
+      return "project@data.".concat(this.aspectId);
+    },
+    aspectData: Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_1__["get"])(':dataPath'),
+    definitionsById: function definitionsById() {
+      var defs = {};
+      var children = {};
+      this.aspect.DEFINITIONS.forEach(function (item) {
+        if (item.children && Array.isArray(item.children)) {
+          children = {};
+          item.children.forEach(function (child) {
+            children[child.id] = child;
+          });
+          item.children = children;
+        }
+
+        defs[item.id] = item;
+      });
+      return defs;
+    }
+  }),
+  methods: {
+    experienceImage: function experienceImage(value) {
+      return FACE_TYPES[value] ? '/images/aspects/' + FACE_TYPES[value] : null;
     }
   }
 });
@@ -14386,6 +14767,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'CosmosImage',
+  _image: null,
   props: {
     options: Object,
     definitionName: String,
@@ -14395,6 +14777,9 @@ __webpack_require__.r(__webpack_exports__);
     return {
       image: null
     };
+  },
+  watch: {
+    'config.filename': 'setImage'
   },
   computed: {
     imageConfig: function imageConfig() {
@@ -14412,15 +14797,23 @@ __webpack_require__.r(__webpack_exports__);
       };
     }
   },
+  methods: {
+    setImage: function setImage() {
+      var _this = this;
+
+      if (!this._image) {
+        this._image = new window.Image();
+      }
+
+      this._image.src = "/images/aspects/".concat(this.config.filename);
+
+      this._image.onload = function () {
+        _this.image = _this._image;
+      };
+    }
+  },
   created: function created() {
-    var _this = this;
-
-    var image = new window.Image();
-    image.src = "/images/aspects/".concat(this.config.filename);
-
-    image.onload = function () {
-      _this.image = image;
-    };
+    this.setImage();
   }
 });
 
@@ -16147,16 +16540,13 @@ __webpack_require__.r(__webpack_exports__);
     return {
       options: [{
         value: 'negative',
-        img: 'user-journey/face-frown.svg',
-        label: '-'
+        img: 'user-journey/face-frown.svg'
       }, {
         value: 'neutral',
-        img: 'user-journey/face-neutral.svg',
-        label: '|'
+        img: 'user-journey/face-neutral.svg'
       }, {
         value: 'positive',
-        img: 'user-journey/face-smile.svg',
-        label: '+'
+        img: 'user-journey/face-smile.svg'
       }]
     };
   },
@@ -20210,6 +20600,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, ".group-title[data-v-cd9dbf10] {\n  font-size: 1.3rem;\n  padding-top: 0.6rem;\n}\n.group-prompt[data-v-cd9dbf10] {\n  font-size: 0.8rem;\n  font-weight: bold;\n  width: 50%;\n  vertical-align: top;\n}\n.group-value[data-v-cd9dbf10] {\n  vertical-align: top;\n}\n.group-value .link[data-v-cd9dbf10],\n.group-value a.link[data-v-cd9dbf10] {\n  color: #0074D9;\n  text-decoration: underline;\n}\n.like-pre[data-v-cd9dbf10] {\n  white-space: pre;\n}\ntable[data-v-cd9dbf10] {\n  margin-bottom: 2.4rem;\n}\n.divider[data-v-cd9dbf10] {\n  border-top-width: 0.1rem;\n  height: 0.1rem;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".group-title[data-v-5549a21c] {\n  font-size: 1.3rem;\n  padding-top: 0.6rem;\n}\n.group-prompt[data-v-5549a21c] {\n  font-size: 0.8rem;\n  font-weight: bold;\n  width: 50%;\n  vertical-align: top;\n}\n.group-value[data-v-5549a21c] {\n  vertical-align: top;\n}\n.group-value .link[data-v-5549a21c],\n.group-value a.link[data-v-5549a21c] {\n  color: #0074D9;\n  text-decoration: underline;\n}\n.like-pre[data-v-5549a21c] {\n  white-space: pre;\n}\ntable[data-v-5549a21c] {\n  margin-bottom: 2.4rem;\n}\n.divider[data-v-5549a21c] {\n  border-top-width: 0.1rem;\n  height: 0.1rem;\n}\n.img-experience[data-v-5549a21c] {\n  max-width: 48px;\n}", ""]);
 
 // exports
 
@@ -45692,6 +46101,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true&":
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true& ***!
@@ -52767,6 +53206,13 @@ var render = function() {
               key: "swimLaneLabel" + idx,
               attrs: { config: label }
             })
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.swimLaneSmileys, function(img, idx) {
+            return _c("CosmosImage", {
+              key: "swimLaneSmiley" + idx,
+              attrs: { config: img }
+            })
           })
         ],
         2
@@ -52859,6 +53305,597 @@ var render = function() {
     ],
     2
   )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm.aspectData
+    ? _c(
+        "main",
+        { ref: "container", staticClass: "app-content light moral-summary" },
+        [
+          _c("div", { staticClass: "scrollable scr-y" }, [
+            _c("div", { staticClass: "container grid-xl" }, [
+              _vm.aspectData.model
+                ? _c("h1", { staticClass: "h4 mb-8 mt-4" }, [
+                    _vm._v(_vm._s(_vm.aspectData.model.title))
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("div", { staticClass: "divider" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "columns" }, [
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t(
+                          "aspects.user_journey_model.definitions.discovering.title"
+                        )
+                      )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "column col-9" }, [
+                  _c("table", { staticClass: "table" }, [
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.discovering.discovery_medium.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.options.mediums." +
+                                  _vm.aspectData.discovering.discovery_medium
+                              )
+                            )
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.discovering.information_medium.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.options.mediums." +
+                                  _vm.aspectData.discovering.information_medium
+                              )
+                            )
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.discovering.information_experience.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _vm.aspectData.discovering.information_experience
+                            ? _c("img", {
+                                staticClass: "img-responsive img-experience",
+                                attrs: {
+                                  src: _vm.experienceImage(
+                                    _vm.aspectData.discovering
+                                      .information_experience
+                                  )
+                                }
+                              })
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.discovering.comments.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _c("span", {
+                            directives: [
+                              {
+                                name: "linkify",
+                                rawName: "v-linkify",
+                                value: _vm.aspectData.discovering.comments,
+                                expression: "aspectData.discovering.comments"
+                              }
+                            ]
+                          })
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "divider" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "columns" }, [
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t(
+                          "aspects.user_journey_model.definitions.accessing.title"
+                        )
+                      )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "column col-9" }, [
+                  _c("table", { staticClass: "table" }, [
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.accessing.access_method.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.options.access_methods." +
+                                  _vm.aspectData.accessing.access_method
+                              )
+                            )
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.accessing.qualification_process.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _c("span", {
+                            directives: [
+                              {
+                                name: "linkify",
+                                rawName: "v-linkify",
+                                value:
+                                  _vm.aspectData.accessing
+                                    .qualification_process,
+                                expression:
+                                  "aspectData.accessing.qualification_process"
+                              }
+                            ]
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.accessing.qualification_experience.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _vm.aspectData.accessing.qualification_experience
+                            ? _c("img", {
+                                staticClass: "img-responsive img-experience",
+                                attrs: {
+                                  src: _vm.experienceImage(
+                                    _vm.aspectData.accessing
+                                      .qualification_experience
+                                  )
+                                }
+                              })
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.accessing.appropriate_comment.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _c("span", {
+                            directives: [
+                              {
+                                name: "linkify",
+                                rawName: "v-linkify",
+                                value:
+                                  _vm.aspectData.accessing.appropriate_comment,
+                                expression:
+                                  "aspectData.accessing.appropriate_comment"
+                              }
+                            ]
+                          })
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "divider" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "columns" }, [
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t(
+                          "aspects.user_journey_model.definitions.using.title"
+                        )
+                      )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "column col-9" }, [
+                  _c("table", { staticClass: "table" }, [
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.using.participate_experience.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _vm.aspectData.using.participate_experience
+                            ? _c("img", {
+                                staticClass: "img-responsive img-experience",
+                                attrs: {
+                                  src: _vm.experienceImage(
+                                    _vm.aspectData.using.participate_experience
+                                  )
+                                }
+                              })
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.using.accessible_experience.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _vm.aspectData.using.accessible_experience
+                            ? _c("img", {
+                                staticClass: "img-responsive img-experience",
+                                attrs: {
+                                  src: _vm.experienceImage(
+                                    _vm.aspectData.using.accessible_experience
+                                  )
+                                }
+                              })
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.using.time_experience.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _vm.aspectData.using.time_experience
+                            ? _c("img", {
+                                staticClass: "img-responsive img-experience",
+                                attrs: {
+                                  src: _vm.experienceImage(
+                                    _vm.aspectData.using.time_experience
+                                  )
+                                }
+                              })
+                            : _vm._e()
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "divider" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "columns" }, [
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t(
+                          "aspects.user_journey_model.definitions.evaluating.title"
+                        )
+                      )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "column col-9" }, [
+                  _c("table", { staticClass: "table" }, [
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.evaluating.surveyed_opinions.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _c("span", {
+                            directives: [
+                              {
+                                name: "linkify",
+                                rawName: "v-linkify",
+                                value:
+                                  _vm.aspectData.evaluating.surveyed_opinions,
+                                expression:
+                                  "aspectData.evaluating.surveyed_opinions"
+                              }
+                            ]
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.evaluating.service_experience.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _vm.aspectData.evaluating.service_experience
+                            ? _c("img", {
+                                staticClass: "img-responsive img-experience",
+                                attrs: {
+                                  src: _vm.experienceImage(
+                                    _vm.aspectData.evaluating.service_experience
+                                  )
+                                }
+                              })
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.evaluating.surprises_comments.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _c("span", {
+                            directives: [
+                              {
+                                name: "linkify",
+                                rawName: "v-linkify",
+                                value:
+                                  _vm.aspectData.evaluating.surprises_comments,
+                                expression:
+                                  "aspectData.evaluating.surprises_comments"
+                              }
+                            ]
+                          })
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "divider" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "columns" }, [
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t(
+                          "aspects.user_journey_model.definitions.instigating.title"
+                        )
+                      )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "column col-9" }, [
+                  _c("table", { staticClass: "table" }, [
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.instigating.design_role.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _c("span", {
+                            directives: [
+                              {
+                                name: "linkify",
+                                rawName: "v-linkify",
+                                value: _vm.aspectData.instigating.design_role,
+                                expression: "aspectData.instigating.design_role"
+                              }
+                            ]
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.instigating.instigate_role.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value" }, [
+                          _c(
+                            "ul",
+                            _vm._l(
+                              _vm.aspectData.instigating.instigate_role,
+                              function(roleName) {
+                                return _c("li", [
+                                  _vm._v(
+                                    "\n\t\t\t\t\t\t\t\t\t\t\t" +
+                                      _vm._s(
+                                        _vm.$t(
+                                          "aspects.user_journey_model.options.instigate_roles." +
+                                            roleName
+                                        )
+                                      ) +
+                                      "\n\t\t\t\t\t\t\t\t\t\t"
+                                  )
+                                ])
+                              }
+                            ),
+                            0
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.instigating.comments.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _c("span", {
+                            directives: [
+                              {
+                                name: "linkify",
+                                rawName: "v-linkify",
+                                value: _vm.aspectData.instigating.comments,
+                                expression: "aspectData.instigating.comments"
+                              }
+                            ]
+                          })
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]
+      )
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true

@@ -42,9 +42,9 @@ export default {
 	data() {
 		return {
 			options: [
-				{ value: 'negative', img: 'user-journey/face-frown.svg', label: '-' },
-				{ value: 'neutral', img: 'user-journey/face-neutral.svg', label: '|' },
-				{ value: 'positive', img: 'user-journey/face-smile.svg', label: '+' },
+				{ value: 'negative', img: 'user-journey/face-frown.svg' },
+				{ value: 'neutral', img: 'user-journey/face-neutral.svg' },
+				{ value: 'positive', img: 'user-journey/face-smile.svg' },
 			]
 		};
 	},

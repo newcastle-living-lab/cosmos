@@ -16,11 +16,11 @@
 				:key="'swimLaneLabel' + idx"
 				:config="label"
 			/>
-			<!-- <CosmosImage
+			<CosmosImage
 				v-for="(img, idx) in swimLaneSmileys"
 				:key="'swimLaneSmiley' + idx"
 				:config="img"
-			/> -->
+			/>
 		</v-group>
 
 		<v-text :config="serviceLabelConfig" />
@@ -172,7 +172,7 @@ export default {
 					&& this.aspectData.discovering.information_medium.length
 					&& this.aspectData.discovering.information_experience.length
 					&& this.aspectData.discovering.comments.length
-				);
+				) ? true : false;
 
 				config.accessing = (
 					this.aspectData.accessing.access_method.length
@@ -856,7 +856,13 @@ export default {
 				...defaultTextConfig,
 				fontStyle: 'italic',
 				fontSize: 18,
-			}
+			};
+
+			const defaultValueConfig = {
+				...defaultTextConfig,
+				fontStyle: 'normal',
+				fontSize: 18,
+			};
 
 			labels.push({
 				...defaultLabelConfig,
@@ -904,8 +910,20 @@ export default {
 				width: 100,
 				align: 'right',
 				x: 0,
-				y: 240,
+				y: 245,
 				offsetX: 110,
+			});
+
+			var optionValue = this.aspectData.discovering.discovery_medium;
+			var langKey = `aspects.user_journey_model.options.mediums.${optionValue}`;
+
+			labels.push({
+				...defaultValueConfig,
+				text: this.$t(langKey),
+				align: 'left',
+				x: 10,
+				y: 250,
+				offset: 0,
 			});
 
 			return labels;
@@ -917,27 +935,58 @@ export default {
 
 			const defaultFaceConfig = {
 				opacity: 1,
-				scale: { x: 0.4, y: 0.4 },
+				scale: { x: 0.35, y: 0.35 },
 				x: 0,
-				y: 165,
+				y: 168,
 			};
 
+			const faceTypes = {
+				'negative': 'user-journey/face-frown.svg',
+				'neutral': 'user-journey/face-neutral.svg',
+				'positive': 'user-journey/face-smile.svg',
+			};
+
+			if ( ! this.aspectData) {
+				return faces;
+			}
+
+			const responses = {
+				discovering: this.aspectData.discovering.information_experience,
+				accessing: this.aspectData.accessing.qualification_experience,
+				using: this.aspectData.using.participate_experience,
+				evaluating: this.aspectData.evaluating.service_experience,
+			};
+
+			var offset = 65;
 			faces.push({
 				...defaultFaceConfig,
-				filename: 'user-journey/face-smile.svg',
-				x: -60,
+				visible: (responses.discovering.length ? true : false),
+				filename: faceTypes[responses.discovering],
+				x: offset,
 			});
 
+			offset += 180;
 			faces.push({
 				...defaultFaceConfig,
-				filename: 'user-journey/face-neutral.svg',
-				x: -110,
+				visible: (responses.accessing.length ? true : false),
+				filename: faceTypes[responses.accessing],
+				x: offset,
 			});
 
+			offset += 180;
 			faces.push({
 				...defaultFaceConfig,
-				filename: 'user-journey/face-frown.svg',
-				x: -160,
+				visible: (responses.using.length ? true : false),
+				filename: faceTypes[responses.using],
+				x: offset,
+			});
+
+			offset += 180;
+			faces.push({
+				...defaultFaceConfig,
+				visible: (responses.evaluating.length ? true : false),
+				filename: faceTypes[responses.evaluating],
+				x: offset,
 			});
 
 			return faces;
