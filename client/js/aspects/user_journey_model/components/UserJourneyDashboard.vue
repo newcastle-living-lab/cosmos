@@ -177,28 +177,27 @@ export default {
 				config.accessing = (
 					this.aspectData.accessing.access_method.length
 					&& this.aspectData.accessing.qualification_process.length
-					&& this.aspectData.accessing.qualification_experience.length
 					&& this.aspectData.accessing.appropriate_comment.length
-				);
+				) ? true : false;
 
 				config.using = (
 					this.aspectData.using.participate_experience.length
 					&& this.aspectData.using.accessible_experience.length
 					&& this.aspectData.using.time_experience.length
-				);
+				) ? true : false;
 
 				config.evaluating = (
 					this.aspectData.evaluating.surveyed_opinions.length
 					&& this.aspectData.evaluating.service_experience.length
 					&& this.aspectData.evaluating.surprises_comments.length
-				);
+				) ? true : false;
 
 				config.designing = config.evaluating;
 
 				config.instigating = (
 					this.aspectData.instigating.design_role.length
 					&& this.aspectData.instigating.comments.length
-				);
+				) ? true : false;
 
 				config.pressureGroup = this.inArray(this.aspectData.instigating.instigate_role, 'pressure_group');
 				config.political = this.inArray(this.aspectData.instigating.instigate_role, 'political_party');
