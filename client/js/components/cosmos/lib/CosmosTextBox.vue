@@ -53,7 +53,10 @@ export default {
 		},
 
 		groupConfig() {
+			var visible = typeof(this.config.visible) === undefined ? true : this.config.visible;
+
 			return {
+				visible: visible,
 				x: this.config.x ? this.config.x : 0,
 				y: this.config.y ? this.config.y : 0,
 			};

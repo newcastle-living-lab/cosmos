@@ -7,6 +7,6 @@ import * as Components from "./components";
 export default {
 	CONFIG,
 	DEFINITIONS,
-	// Guide,
+	Guide,
 	Components,
 };

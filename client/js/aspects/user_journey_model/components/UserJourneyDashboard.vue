@@ -44,7 +44,7 @@
 			<v-arrow :config="arrow" />
 		</v-group>
 
-		<v-group :config="{ x: 20, y: 85 }">
+		<v-group :config="sipConfig.group">
 			<v-rect :config="sipConfig.rect" />
 			<v-text :config="sipConfig.label" />
 			<CosmosTextBox
@@ -139,6 +139,77 @@ export default {
 
 		aspectData: get(':dataPath'),
 
+		visibility() {
+
+			var config = {
+				discovering: false,
+				accessing: false,
+				using: false,
+				evaluating: false,
+				designing: false,
+				instigating: false,
+				pressureGroup: false,
+				political: false,
+				government: false,
+			};
+
+			if (this.userGuide.isOpen) {
+
+				config.discovering = (this.userGuide.currentStep >= 0);
+				config.accessing = (this.userGuide.currentStep >= 1);
+				config.using = (this.userGuide.currentStep >= 2);
+				config.evaluating = (this.userGuide.currentStep >= 3);
+				config.designing = (this.userGuide.currentStep >= 5);
+				config.instigating = (this.userGuide.currentStep >= 6);
+				config.pressureGroup = true;
+				config.political = true;
+				config.government = true;
+
+			} else {
+
+				config.discovering = (
+					this.aspectData.discovering.discovery_medium.length
+					&& this.aspectData.discovering.information_medium.length
+					&& this.aspectData.discovering.information_experience.length
+					&& this.aspectData.discovering.comments.length
+				);
+
+				config.accessing = (
+					this.aspectData.accessing.access_method.length
+					&& this.aspectData.accessing.qualification_process.length
+					&& this.aspectData.accessing.qualification_experience.length
+					&& this.aspectData.accessing.appropriate_comment.length
+				);
+
+				config.using = (
+					this.aspectData.using.participate_experience.length
+					&& this.aspectData.using.accessible_experience.length
+					&& this.aspectData.using.time_experience.length
+				);
+
+				config.evaluating = (
+					this.aspectData.evaluating.surveyed_opinions.length
+					&& this.aspectData.evaluating.service_experience.length
+					&& this.aspectData.evaluating.surprises_comments.length
+				);
+
+				config.designing = config.evaluating;
+
+				config.instigating = (
+					this.aspectData.instigating.design_role.length
+					&& this.aspectData.instigating.comments.length
+				);
+
+				config.pressureGroup = this.inArray(this.aspectData.instigating.instigate_role, 'pressure_group');
+				config.political = this.inArray(this.aspectData.instigating.instigate_role, 'political_party');
+				config.government = this.inArray(this.aspectData.instigating.instigate_role, 'government_department');
+
+			}
+
+			return config;
+
+		},
+
 		bgConfig() {
 
 			var data = {};
@@ -149,6 +220,7 @@ export default {
 		serviceLabelConfig() {
 			return {
 				...defaultTextConfig,
+				visible: (this.visibility.designing || this.visibility.instigating),
 				fontStyle: 'italic',
 				fontSize: 18,
 				text: 'Service Co-creation Journey',
@@ -188,43 +260,45 @@ export default {
 
 			const yPos = 555;
 
+			const visibility = this.visibility;
+
 			data.evaluating = {
-				group: { visible: true },
+				group: { visible: visibility.evaluating },
 				label: { x: xPos(5), y: yPos, },
 				tag: { ...tagConfig, fill: '#604A7B', pointerHeight: 0 },
 				text: { ...textConfig, text: 'Evaluating' },
 			};
 
 			data.using = {
-				group: { visible: true },
+				group: { visible: visibility.using },
 				label: { x: xPos(4), y: yPos, },
 				tag: { ...tagConfig, fill: '#FAC090', },
 				text: { ...textConfig, text: 'Using' },
 			};
 
 			data.accessing = {
-				group: { visible: true },
+				group: { visible: visibility.accessing },
 				label: { x: xPos(3), y: yPos, },
 				tag: { ...tagConfig, fill: '#D99694', },
 				text: { ...textConfig, text: 'Accessing' },
 			};
 
 			data.discovering = {
-				group: { visible: true },
+				group: { visible: visibility.discovering },
 				label: { x: xPos(2), y: yPos, },
 				tag: { ...tagConfig, fill: '#4F81BD', },
 				text: { ...textConfig, text: 'Discovering' },
 			};
 
 			data.designing = {
-				group: { visible: true },
+				group: { visible: visibility.designing },
 				label: { x: xPos(1), y: yPos, },
 				tag: { ...tagConfig, fill: '#79C36F', },
 				text: { ...textConfig, text: 'Designing' },
 			};
 
 			data.instigating = {
-				group: { visible: true },
+				group: { visible: visibility.instigating },
 				label: { x: xPos(0), y: yPos, },
 				tag: { ...tagConfig, fill: '#DC5C52', },
 				text: { ...textConfig, text: 'Instigating' },
@@ -235,6 +309,8 @@ export default {
 
 		flowchartTextConfig() {
 
+			const visibility = this.visibility;
+
 			var data = [];
 
 			const defaultConfig = {
@@ -244,6 +320,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.designing,
 				label: "Service Definition",
 				x: 0,
 				y: 140,
@@ -254,6 +331,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.designing,
 				label: "Service Resourcing",
 				x: 130,
 				y: 30,
@@ -264,6 +342,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.designing,
 				label: "Reservation & Scheduling",
 				x: 305,
 				y: 30,
@@ -274,6 +353,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.using,
 				label: "Service Delivery",
 				x: 515,
 				y: 30,
@@ -284,6 +364,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.discovering,
 				label: "Service Publicity",
 				x: 130,
 				y: 150,
@@ -294,6 +375,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.accessing,
 				label: "Qualifying Agent",
 				x: 315,
 				y: 150,
@@ -304,6 +386,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.evaluating,
 				label: "Evaluating Agent",
 				x: 700,
 				y: 140,
@@ -314,6 +397,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.discovering,
 				label: "Potential Beneficiary",
 				x: 125,
 				y: 315,
@@ -324,6 +408,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.accessing,
 				label: "Applicant",
 				x: 315,
 				y: 325,
@@ -334,6 +419,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.using,
 				label: "Client",
 				x: 490,
 				y: 325,
@@ -346,6 +432,8 @@ export default {
 		},
 
 		flowchartLabelsConfig() {
+
+			const visibility = this.visibility;
 
 			var data = [];
 
@@ -361,6 +449,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.designing,
 				text: 'Budget',
 				x: 120,
 				y: 100,
@@ -368,6 +457,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.designing,
 				text: 'Service Definition',
 				x: 265,
 				y: 110,
@@ -375,6 +465,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.designing,
 				text: 'Outcome Reports',
 				x: 715,
 				y: 55,
@@ -383,6 +474,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.designing,
 				text: 'Provider views',
 				x: 600,
 				y: 145,
@@ -391,6 +483,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.discovering,
 				text: 'Service publication',
 				x: 155,
 				y: 235,
@@ -399,6 +492,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.accessing,
 				align: 'center',
 				text: 'Application',
 				x: 355,
@@ -407,6 +501,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.using,
 				text: 'Service Use',
 				x: 525,
 				y: 245,
@@ -414,6 +509,7 @@ export default {
 
 			data.push({
 				...defaultConfig,
+				visible: visibility.evaluating,
 				text: 'Clients\' views',
 				x: 715,
 				y: 235,
@@ -424,6 +520,8 @@ export default {
 		},
 
 		flowchartArrowsConfig() {
+
+			const visibility = this.visibility;
 
 			var data = [];
 
@@ -438,20 +536,21 @@ export default {
 			};
 
 			// Service Def -> Service Resourcing
-			data.push({ ...defaultConfig, points: [ 85, 130, 115, 110] });
+			data.push({ ...defaultConfig, visible: visibility.designing, points: [ 85, 130, 115, 110] });
 
 			// Service Definition -> Service Definition
-			data.push({ ...defaultConfig, points: [ 120, 135, 245, 120] });
+			data.push({ ...defaultConfig, visible: visibility.designing, points: [ 120, 135, 245, 120] });
 
 			// Service Definition -> Service Publicity
-			data.push({ ...defaultConfig, points: [ 275, 130, 275, 145] });
+			data.push({ ...defaultConfig, visible: visibility.designing, points: [ 275, 130, 275, 145] });
 
 			// Service Definition -> Qualifying
-			data.push({ ...defaultConfig, points: [ 370, 130, 370, 145] });
+			data.push({ ...defaultConfig, visible: visibility.designing, points: [ 370, 130, 370, 145] });
 
 			// Service Definition -> Service Delivery
 			data.push({
 				...defaultConfig,
+				visible: visibility.designing,
 				tension: 0.6,
 				points: [
 					430, 120,
@@ -461,11 +560,12 @@ export default {
 			});
 
 			// Service Delivery -> Service Use
-			data.push({ ...defaultConfig, points: [ 570, 100, 570, 240] });
+			data.push({ ...defaultConfig, visible: visibility.using, points: [ 570, 100, 570, 240] });
 
 			// Service Delivery -> Provider Views
 			data.push({
 				...defaultConfig,
+				visible: visibility.designing,
 				tension: 0.6,
 				points: [
 					575, 100,
@@ -475,17 +575,18 @@ export default {
 			});
 
 			// Provider views -> Evaluating Agent
-			data.push({ ...defaultConfig, points: [ 675, 165, 695, 165] });
+			data.push({ ...defaultConfig, visible: visibility.designing, points: [ 675, 165, 695, 165] });
 
 			// Evaluating Agent -> Outcome reports
-			data.push({ ...defaultConfig, points: [ 755, 130, 755, 105] });
+			data.push({ ...defaultConfig, visible: visibility.designing, points: [ 755, 130, 755, 105] });
 
 			// Clients views -> Evaluating Agent
-			data.push({ ...defaultConfig, points: [ 755, 230, 755, 210] });
+			data.push({ ...defaultConfig, visible: visibility.evaluating, points: [ 755, 230, 755, 210] });
 
 			// Client -> Clients Views
 			data.push({
 				...defaultConfig,
+				visible: visibility.evaluating,
 				tension: 0.3,
 				points: [
 					660, 350,
@@ -496,23 +597,24 @@ export default {
 			});
 
 			// Service Publicity -> Service publication
-			data.push({ ...defaultConfig, points: [ 205, 195, 205, 230] });
+			data.push({ ...defaultConfig, visible: visibility.discovering, points: [ 205, 195, 205, 230] });
 
 			// Service publication -> Potential Beneficiary
-			data.push({ ...defaultConfig, points: [ 205, 280, 205, 305] });
+			data.push({ ...defaultConfig, visible: visibility.discovering, points: [ 205, 280, 205, 305] });
 
 			// Applicant -> Application
-			data.push({ ...defaultConfig, points: [ 390, 315, 390, 275] });
+			data.push({ ...defaultConfig, visible: visibility.accessing, points: [ 390, 315, 390, 275] });
 
 			// Application -> Qualifying Agent
-			data.push({ ...defaultConfig, points: [ 390, 240, 390, 205] });
+			data.push({ ...defaultConfig, visible: visibility.accessing, points: [ 390, 240, 390, 205] });
 
 			// Service Use -> Client
-			data.push({ ...defaultConfig, points: [ 570, 275, 570, 315] });
+			data.push({ ...defaultConfig, visible: visibility.using, points: [ 570, 275, 570, 315] });
 
 			// Outcome reports -> Service definition
 			data.push({
 				...defaultConfig,
+				visible: visibility.designing,
 				tension: 0.4,
 				points: [
 					755, 45,
@@ -527,17 +629,25 @@ export default {
 			//
 
 			// Service Publication -> Application
-			data.push({ ...defaultConfig, points: [ 265, 255, 330, 255] });
+			// data.push({ ...defaultConfig, points: [ 265, 255, 330, 255] });
 
 			// Application -> Service Use
-			data.push({ ...defaultConfig, points: [ 455, 255, 510, 255] });
+			// data.push({ ...defaultConfig, points: [ 455, 255, 510, 255] });
 
 			return data;
 		},
 
 		sipConfig() {
 
+			const visibility = this.visibility;
+
 			var data = {};
+
+			data.group = {
+			 	x: 20,
+			 	y: 85,
+			 	visible: visibility.instigating,
+			};
 
 			// Outer container
 			//
@@ -573,6 +683,7 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
+				visible: visibility.pressureGroup,
 				label: "Pressure / Campaign Group",
 				x: 10,
 				y: 85,
@@ -583,6 +694,7 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
+				visible: visibility.government,
 				label: "Government Department",
 				x: 240,
 				y: 85,
@@ -593,6 +705,7 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
+				visible: visibility.political,
 				label: "Political Party",
 				x: 150,
 				y: 40,
@@ -645,18 +758,21 @@ export default {
 
 			data.connectors.push({
 				...defaultConnectorConfig,
+				visible: visibility.pressureGroup,
 				start: [105, 150],
 				end: [105, 370],
 			});
 
 			data.connectors.push({
 				...defaultConnectorConfig,
+				visible: visibility.political,
 				start: [220, 75],
 				end: [220, 370],
 			});
 
 			data.connectors.push({
 				...defaultConnectorConfig,
+				visible: visibility.government,
 				start: [315, 150],
 				end: [315, 370],
 			});
@@ -689,14 +805,14 @@ export default {
 				data: Icons.cross,
 			};
 
-			data.icons.push({ ...checkConfig, x: 60, y: 280 });
-			data.icons.push({ ...crossConfig, x: 105, y: 280 });
+			data.icons.push({ ...checkConfig, visible: visibility.pressureGroup, x: 60, y: 280 });
+			data.icons.push({ ...crossConfig, visible: visibility.pressureGroup, x: 105, y: 280 });
 
-			data.icons.push({ ...checkConfig, x: 180, y: 280 });
-			data.icons.push({ ...crossConfig, x: 220, y: 280 });
+			data.icons.push({ ...checkConfig, visible: visibility.political, x: 180, y: 280 });
+			data.icons.push({ ...crossConfig, visible: visibility.political, x: 220, y: 280 });
 
-			data.icons.push({ ...checkConfig, x: 275, y: 280 });
-			data.icons.push({ ...crossConfig, x: 315, y: 280 });
+			data.icons.push({ ...checkConfig, visible: visibility.government, x: 275, y: 280 });
+			data.icons.push({ ...crossConfig, visible: visibility.government, x: 315, y: 280 });
 
 			return data;
 		},

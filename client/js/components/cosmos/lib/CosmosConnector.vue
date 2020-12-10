@@ -1,6 +1,6 @@
 <template>
 
-	<v-group>
+	<v-group :config="{ visible: this.visible }">
 		<v-line ref="line" :config="lineConfig" />
 		<v-circle v-for="(circle, idx) in circlesConfig" :key="idx" :config="circle" />
 	</v-group>
@@ -39,6 +39,10 @@ export default {
 	},
 
 	computed: {
+
+		visible() {
+			return (typeof(this.mergedConfig.visible) === undefined ? true : this.mergedConfig.visible);
+		},
 
 		mergedConfig() {
 			return { ...defaultConfig, ...this.config };

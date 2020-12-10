@@ -29,31 +29,7 @@ export default {
 		{
 			'type': 'info',
 			'lang': 'step07',
-		},
-		{
-			'type': 'question',
-			'lang': 'step08',
-		},
-		{
-			'type': 'question',
-			'lang': 'step09',
-		},
-		{
-			'type': 'question',
-			'lang': 'step10',
-		},
-		{
-			'type': 'question',
-			'lang': 'step11',
-		},
-		{
-			'type': 'question',
-			'lang': 'step12',
-		},
-		{
-			'type': 'question',
-			'lang': 'step13',
-		},
+		}
 	]
 
 }

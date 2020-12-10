@@ -540,6 +540,15 @@
 			"title": "User Journey Model",
 			"dashboard": {
 			},
+			"guide": {
+				"step01": "Services are publicised to their intended users, this is the discovery phase.",
+				"step02": "Users who want the service make some sort of request or application, this is the accessing phase.",
+				"step03": "If the pervious stage is successful, the service is delivered and experienced, this is the using phase.",
+				"step04": "The experience of the use of the service is then evaluated.",
+				"step05": "The questions so far assume that the service has been defined and already exists. The next set of questions is about whether and how you participated in the processes by which the service was created in the first place.",
+				"step06": "First we can complete our service delivery model with the stages involved in creating. We call this the designing phase.",
+				"step07": "Then we can show the processes by which the service was identified and initiated in the first place. We call this the instigating phase."
+			},
 			"options": {
 				"mediums": {
 					"face": "Face to face",

@@ -9,6 +9,7 @@ import SocialEditor from "./SocialEditor";
 import SocialEditorItem from "./SocialEditorItem";
 import StakeholderEditor from "./StakeholderEditor";
 import StakeholderMultiEditor from "./StakeholderMultiEditor";
+import ExperienceEditor from "./ExperienceEditor";
 
 export {
 	MetaEditor,
@@ -22,4 +23,5 @@ export {
 	SocialEditorItem,
 	StakeholderEditor,
 	StakeholderMultiEditor,
+	ExperienceEditor,
 };
