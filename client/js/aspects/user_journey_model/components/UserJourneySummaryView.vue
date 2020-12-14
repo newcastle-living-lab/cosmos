@@ -16,11 +16,11 @@
 							<tbody>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.discovering.discovery_medium.label') }}</td>
-									<td class="group-value">{{ $t(`aspects.user_journey_model.options.mediums.${aspectData.discovering.discovery_medium}`) }}</td>
+									<td class="group-value"><span v-if="aspectData.discovering.discovery_medium">{{ $t(`aspects.user_journey_model.options.mediums.${aspectData.discovering.discovery_medium}`) }}</span></td>
 								</tr>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.discovering.information_medium.label') }}</td>
-									<td class="group-value">{{ $t(`aspects.user_journey_model.options.mediums.${aspectData.discovering.information_medium}`) }}</td>
+									<td class="group-value"><span v-if="aspectData.discovering.information_medium">{{ $t(`aspects.user_journey_model.options.mediums.${aspectData.discovering.information_medium}`) }}</span></td>
 								</tr>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.discovering.information_experience.label') }}</td>
@@ -48,7 +48,7 @@
 							<tbody>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.accessing.access_method.label') }}</td>
-									<td class="group-value">{{ $t(`aspects.user_journey_model.options.access_methods.${aspectData.accessing.access_method}`) }}</td>
+									<td class="group-value"><span v-if="aspectData.accessing.access_method">{{ $t(`aspects.user_journey_model.options.access_methods.${aspectData.accessing.access_method}`) }}</span></td>
 								</tr>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.accessing.qualification_process.label') }}</td>
@@ -108,11 +108,11 @@
 							<tbody>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.evaluating.opinions_asked.label') }}</td>
-									<td class="group-value">{{ $t(`aspects.user_journey_model.options.yes_no_maybe.${aspectData.evaluating.opinions_asked}`) }}</td>
+									<td class="group-value"><span v-if="aspectData.evaluating.opinions_asked">{{ $t(`aspects.user_journey_model.options.yes_no_maybe.${aspectData.evaluating.opinions_asked}`) }}</span></td>
 								</tr>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.evaluating.opinions_how.label') }}</td>
-									<td class="group-value">{{ $t(`aspects.user_journey_model.options.opinions_how.${aspectData.evaluating.opinions_how}`) }}</td>
+									<td class="group-value"><span v-if="aspectData.evaluating.opinions_how">{{ $t(`aspects.user_journey_model.options.opinions_how.${aspectData.evaluating.opinions_how}`) }}</span></td>
 								</tr>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.evaluating.service_experience.label') }}</td>
