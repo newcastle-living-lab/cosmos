@@ -30,21 +30,55 @@ export default {
 
 	computed: {
 
+		defaultText() {
+			return {
+				fontSize: 14,
+				fontStyle: 'bold',
+				fontFamily: this.options.fontFamily,
+				lineHeight: this.lineHeight,
+				align: 'center',
+				verticalAlign: 'middle',
+			};
+		},
+
+		defaultBorder() {
+			return {
+				strokeWidth: 2,
+				stroke: colours.black,
+			};
+		},
+
 		fontSize() {
 			return this.config.fontSize ? this.config.fontSize : 14;
 		},
 
 		groupConfig() {
+			var visible = typeof(this.config.visible) === undefined ? true : this.config.visible;
+
 			return {
+				visible: visible,
 				x: this.config.x ? this.config.x : 0,
 				y: this.config.y ? this.config.y : 0,
 			};
 		},
 
 		labelConfig() {
+
 			var x = this.config.width / 2;
 			x -= this.config.textWidth / 2;
 
+			var customConfig = this.config.labelConfig ? this.config.labelConfig : {};
+
+			return {
+				...this.defaultText,
+				...customConfig,
+				x: x,
+				y: 0,
+				width: this.config.textWidth,
+				height: this.config.height,
+				text: this.config.label,
+			};
+/*
 			return {
 				x: x,
 				y: 0,
@@ -57,11 +91,24 @@ export default {
 				lineHeight: this.lineHeight,
 				align: 'center',
 				verticalAlign: 'middle',
-			}
+			}*/
 		},
 
 		borderConfig() {
 
+			var customConfig = this.config.borderConfig ? this.config.borderConfig : {};
+
+			return {
+				...this.defaultBorder,
+				cornerRadius: Math.ceil(this.config.height / 2),
+				...customConfig,
+				x: 0,
+				y: 0,
+				width: this.config.width,
+				height: this.config.height,
+				text: this.config.label,
+			};
+/*
 			var height = this.labelHeight;
 
 			return {
@@ -72,7 +119,7 @@ export default {
 				cornerRadius: Math.ceil(this.config.height / 2),
 				stroke: colours.black,
 				strokeWidth: 2,
-			}
+			}*/
 
 		}
 

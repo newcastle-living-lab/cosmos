@@ -14,6 +14,8 @@ export default {
 
 	name: 'CosmosImage',
 
+	_image: null,
+
 	props: {
 		options: Object,
 		definitionName: String,
@@ -24,6 +26,10 @@ export default {
 		return {
 			image: null,
 		}
+	},
+
+	watch: {
+		'config.filename': 'setImage'
 	},
 
 	computed: {
@@ -40,12 +46,27 @@ export default {
 		},
 	},
 
+	methods: {
+		setImage() {
+			if ( ! this.config.filename) {
+				return;
+			}
+			if ( ! this._image) {
+				this._image = new window.Image();
+			}
+			if (/^\//.test(this.config.filename)) {
+				this._image.src = this.config.filename;
+			} else {
+				this._image.src = `/images/aspects/${this.config.filename}`;
+			}
+			this._image.onload = () => {
+				this.image = this._image;
+			};
+		}
+	},
+
 	created() {
-		const image = new window.Image();
-		image.src = `/images/aspects/${this.config.filename}`;
-		image.onload = () => {
-			this.image = image;
-		};
+		this.setImage();
 	}
 
 }

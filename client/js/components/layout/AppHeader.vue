@@ -49,6 +49,12 @@
 				</div>
 				<div v-if="project && project.id" class="input-group input-inline mr-4">
 					<label class="form-switch input-sm" v-show="activeTab == 'model'">
+						<input type="checkbox" v-model="showAnnotations">
+						<i class="form-icon"></i> <span class="text-small">{{ $t('app.more_details') }}</span>
+					</label>
+				</div>
+				<div v-if="project && project.id" class="input-group input-inline mr-4">
+					<label class="form-switch input-sm" v-show="activeTab == 'model'">
 						<input type="checkbox" v-model="scale">
 						<i class="form-icon"></i> <span class="text-small">{{ $t('app.scale_to_fit') }}</span>
 					</label>
@@ -153,6 +159,7 @@ export default {
 
 		...sync([
 			'scale',
+			'showAnnotations',
 		]),
 
 		hasProject() {

@@ -13,6 +13,20 @@
 		"pl": "Polish",
 		"sv_SE": "Swedish"
 	},
+	"countries": {
+		"el": "Greece",
+		"en_GB": "UK",
+		"fr": "France",
+		"de": "Germany",
+		"es": "Spain",
+		"et": "Estonia",
+		"fi": "Finland",
+		"hu": "Hungary",
+		"it": "Italy",
+		"nl": "Netherlands",
+		"pl": "Poland",
+		"sv_SE": "Sweden"
+	},
 	"app": {
 		"log_in": "Log in",
 		"project": "Project",
@@ -63,7 +77,10 @@
 		"add_new_item": "Add new item",
 		"add_new_actor": "Add new actor",
 		"maximum_items": "Maximum {count} items | Maxumum {count} item | Maximum {count} items",
-		"models": "Models"
+		"models": "Models",
+		"more_details": "More details",
+		"country": "Country",
+		"which_country": "Which country are you from?"
 	},
 	"user_guide": {
 		"show": "Show user guide",
@@ -530,6 +547,133 @@
 				"infsvc": {
 					"title": "Infrastructural Services",
 					"hint": "What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?"
+				}
+			}
+		},
+		"user_journey_model": {
+			"title": "User Journey Model",
+			"dashboard": {
+			},
+			"guide": {
+				"step01": "Services are publicised to their intended users, this is the discovery phase.",
+				"step02": "Users who want the service make some sort of request or application, this is the accessing phase.",
+				"step03": "If the previous stage is successful, the service is delivered and experienced, this is the using phase.",
+				"step04": "The experience of the use of the service is then evaluated.",
+				"step05": "The questions so far assume that the service has been defined and already exists. The next set of questions is about whether and how you participated in the processes by which the service was created in the first place.",
+				"step06": "First we can complete our service delivery model with the stages involved in creating. We call this the designing phase.",
+				"step07": "Then we can show the processes by which the service was identified and initiated in the first place. We call this the instigating phase."
+			},
+			"options": {
+				"mediums": {
+					"word_of_mouth": "Word of mouth",
+					"paper": "Paper publication",
+					"referral": "Referral",
+					"social": "Social media",
+					"other": "Other"
+				},
+				"access_methods": {
+					"referred": "Referred",
+					"applied": "Applied",
+					"other": "Other"
+				},
+				"where": {
+					"home": "Home",
+					"community": "Community",
+					"public": "Public",
+					"other": "Other"
+				},
+				"yes_no_maybe": {
+					"yes": "Yes",
+					"no": "No",
+					"maybe": "Maybe"
+				},
+				"opinions_how": {
+					"workshop": "Workshop",
+					"survey": "Survey",
+					"interview": "Interview"
+				},
+				"instigate_roles": {
+					"pressure_group": "Pressure/Campaigning Group",
+					"political_party": "Political Party",
+					"government_department": "Government Department"
+				}
+			},
+			"definitions": {
+				"model": {
+					"title": "Model"
+				},
+				"discovering": {
+					"title": "Discovering",
+					"discovery_medium": {
+						"label": "How did you find out about the service?"
+					},
+					"information_medium": {
+						"label": "How did you access information about the service?"
+					},
+					"information_experience": {
+						"label": "What is your opinion about the quality, completeness and accessibility of the information?"
+					},
+					"comments": {
+						"label": "Any further comments, observations?"
+					}
+				},
+				"accessing": {
+					"title": "Accessing",
+					"access_method": {
+						"label": "How did you gain access to the service?"
+					},
+					"qualification_process": {
+						"label": "Was there a qualification or selection process?"
+					},
+					"qualification_experience": {
+						"label": "If so, what was the experience like?"
+					},
+					"appropriate_comment": {
+						"label": "Do you think this aspect of the service is appropriate?"
+					}
+				},
+				"using": {
+					"title": "Using",
+					"participate_experience": {
+						"label": "What was it like to use or participate in the service?"
+					},
+					"accessible_experience": {
+						"label": "Was the service accessible to you?"
+					},
+					"time_experience": {
+						"label": "Was the duration and frequencies of the service events or contacts OK?"
+					},
+					"where": {
+						"label": "Where did you use the service?"
+					}
+				},
+				"evaluating": {
+					"title": "Evaluating",
+					"opinions_asked": {
+						"label": "Were you asked about your opinions about your experience of the service?",
+						"hint": "Think about where and when this was."
+					},
+					"opinions_how": {
+						"label": "If yes, how were you asked?"
+					},
+					"service_experience": {
+						"label": "Was the service what you expected?"
+					},
+					"surprises_comments": {
+						"label": "Were there any surprises or disappointments in your experience?"
+					}
+				},
+				"instigating": {
+					"title": "Instigating",
+					"design_role": {
+						"label": "Did you play any role in the design and definition of the service? If yes, what were the occasions and channels that this occurred?"
+					},
+					"instigate_role": {
+						"label": "Did you have any role in instigating the project? If yes, were you part of any of the following options? You can choose as many as you like."
+					},
+					"comments": {
+						"label": "Comments"
+					}
 				}
 			}
 		},

@@ -9,6 +9,7 @@
         "add_new_item": "Lisää uusi kohde",
         "all": "Kaikki",
         "colour": "Väri",
+        "country": "Maa",
         "create": "Luoda",
         "created_by": "Luonut",
         "delete": "Poistaa",
@@ -35,6 +36,7 @@
         "log_in": "Kirjaudu sisään",
         "maximum_items": "Enintään {count} kohdetta | Suurin {count} kohde | Enintään {count} kohdetta",
         "models": "Mallit",
+        "more_details": "Lisätietoja",
         "name": "Nimi",
         "new_project": "Luo uusi projekti",
         "next": "Seuraava",
@@ -54,7 +56,8 @@
         "try_again": "Yritä uudelleen",
         "type": "Tyyppi",
         "user_is_read_only": "Käyttäjän käyttöoikeustasosi on vain luku -tilassa.",
-        "web_address": "nettiosoite"
+        "web_address": "nettiosoite",
+        "which_country": "Mistä maasta olet kotoisin?"
     },
     "aspects": {
         "analytic_model": {
@@ -526,12 +529,155 @@
             },
             "title": "Muutoksen teoria"
         },
+        "user_journey_model": {
+            "dashboard": {
+                "one": "",
+                "other": ""
+            },
+            "definitions": {
+                "accessing": {
+                    "access_method": {
+                        "label": "Kuinka sait pääsyn palveluun?"
+                    },
+                    "appropriate_comment": {
+                        "label": "Luuletko, että tämä palvelun osa on sopiva?"
+                    },
+                    "qualification_experience": {
+                        "label": "Jos näin on, millainen kokemus oli?"
+                    },
+                    "qualification_process": {
+                        "label": "Oliko pätevyys- tai valintaprosessi?"
+                    },
+                    "title": "Pääsy"
+                },
+                "discovering": {
+                    "comments": {
+                        "label": "Muita kommentteja, huomautuksia?"
+                    },
+                    "discovery_medium": {
+                        "label": "Kuinka sait tietää palvelusta?"
+                    },
+                    "information_experience": {
+                        "label": "Mikä on mielipiteesi tietojen laadusta, täydellisyydestä ja saatavuudesta?"
+                    },
+                    "information_medium": {
+                        "label": "Kuinka sait palvelua koskevia tietoja?"
+                    },
+                    "title": "Löytäminen"
+                },
+                "evaluating": {
+                    "opinions_asked": {
+                        "hint": "Ajattele missä ja milloin tämä oli.",
+                        "label": "Onko sinulta kysytty mielipiteesi palvelukokemuksestasi?"
+                    },
+                    "opinions_how": {
+                        "label": "Jos kyllä, miten sinulta kysyttiin?"
+                    },
+                    "service_experience": {
+                        "label": "Oliko palvelu sitä mitä odotit?"
+                    },
+                    "surprises_comments": {
+                        "label": "Oliko kokemuksestasi yllätyksiä tai pettymyksiä?"
+                    },
+                    "title": "Arviointi"
+                },
+                "instigating": {
+                    "comments": {
+                        "label": "Kommentit"
+                    },
+                    "design_role": {
+                        "label": "Soititko mitään roolia palvelun suunnittelussa ja määrittelyssä? Jos kyllä, mitä tapauksia ja kanavia tämä tapahtui?"
+                    },
+                    "instigate_role": {
+                        "label": "Onko sinulla mitään roolia projektin käynnistämisessä? Jos kyllä, olitko osa jotakin seuraavista vaihtoehdoista? Voit valita niin monta kuin haluat."
+                    },
+                    "title": "Yllyttäminen"
+                },
+                "model": {
+                    "title": "Malli"
+                },
+                "using": {
+                    "accessible_experience": {
+                        "label": "Oliko palvelu sinulle saatavilla?"
+                    },
+                    "participate_experience": {
+                        "label": "Millaista oli käyttää tai osallistua palveluun?"
+                    },
+                    "time_experience": {
+                        "label": "Oliko palvelutapahtumien tai yhteystietojen kesto ja taajuudet kunnossa?"
+                    },
+                    "title": "Käyttämällä",
+                    "where": {
+                        "label": "Missä käytit palvelua?"
+                    }
+                }
+            },
+            "guide": {
+                "step01": "Palvelut julkistetaan niiden käyttäjille, tämä on etsintävaihe.",
+                "step02": "Palvelua haluavat käyttäjät tekevät jonkinlaisen pyynnön tai sovelluksen, tämä on pääsyvaihe.",
+                "step03": "Jos edellinen vaihe onnistuu, palvelu toimitetaan ja koetaan, tämä on käyttövaihe.",
+                "step04": "Sen jälkeen arvioidaan palvelun käytöstä saatu kokemus.",
+                "step05": "Tähän mennessä olettaa, että palvelu on määritelty ja jo olemassa. Seuraava kysymys koskee sitä, osallistuitko ja miten osallistuit palvelun luomiseen alun perin.",
+                "step06": "Ensin voimme täydentää palvelumme mallia luomisen vaiheilla. Kutsumme tätä suunnitteluvaiheeksi.",
+                "step07": "Sitten voimme näyttää prosessit, joiden avulla palvelu tunnistettiin ja aloitettiin. Kutsumme tätä käynnistäväksi vaiheeksi."
+            },
+            "options": {
+                "access_methods": {
+                    "applied": "Sovellettu",
+                    "other": "Muu",
+                    "referred": "Viitattu"
+                },
+                "instigate_roles": {
+                    "government_department": "Ministeriö",
+                    "political_party": "Poliittinen puolue",
+                    "pressure_group": "Paine- \/ kampanjaryhmä"
+                },
+                "mediums": {
+                    "other": "Muu",
+                    "paper": "Paperijulkaisu",
+                    "referral": "Lähetys",
+                    "social": "Sosiaalinen media",
+                    "word_of_mouth": "Suusanallisesti"
+                },
+                "opinions_how": {
+                    "interview": "Haastatella",
+                    "survey": "Tutkimus",
+                    "workshop": "Työpaja"
+                },
+                "where": {
+                    "community": "Yhteisö",
+                    "home": "Koti",
+                    "other": "Muu",
+                    "public": "Julkinen"
+                },
+                "yes_no_maybe": {
+                    "maybe": "Voi olla",
+                    "no": "Ei",
+                    "yes": "Joo"
+                }
+            },
+            "title": "Käyttäjän matkan malli"
+        },
         "welcome": {
             "dashboard": {
                 "summary": "Luonut {user} {date_time}"
             },
             "title": "Tervetuloa"
         }
+    },
+    "countries": {
+        "de": "Saksa",
+        "el": "Kreikka",
+        "en_GB": "Yhdistynyt kuningaskunta",
+        "es": "Espanja",
+        "et": "Viro",
+        "fi": "Suomi",
+        "fr": "Ranska",
+        "hu": "Unkari",
+        "it": "Italia",
+        "nl": "Alankomaat",
+        "pl": "Puola",
+        "sv_SE": "Ruotsi"
     },
     "hints": {
         "editor_double_click_edit": "Kaksoisnapsauta kohdetta muokataksesi sitä ja tallenna painamalla Enter",

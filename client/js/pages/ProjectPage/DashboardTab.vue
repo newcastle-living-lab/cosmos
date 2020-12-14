@@ -4,10 +4,19 @@
 
 		<div ref="container" class="canvas-container scrollable scr-x scr-y" v-if="aspect">
 
-			<v-stage ref="stage" :config="stageConfig">
+			<v-stage
+				ref="stage"
+				:config="stageConfig"
+				@click="setCurrentAnnotation(null)"
+				@tap="setCurrentAnnotation(null)"
+				@dblclick="handleAddAnnotate"
+				@dbltap="handleAddAnnotate"
+			>
+
 				<v-layer>
 					<v-rect :config="backgroundConfig" />
 				</v-layer>
+
 				<v-layer v-if="project.id && nodes.length">
 					<component
 						v-for="(node, idx) in nodes"
@@ -23,6 +32,7 @@
 						:aspectId="aspect.CONFIG.id"
 					></component>
 				</v-layer>
+
 				<v-layer v-if="project.id && aspect.CONFIG.dashboardComponent">
 					<component
 						v-bind:is="aspect.CONFIG.dashboardComponent"
@@ -32,10 +42,26 @@
 						:currentLanguage="currentLanguage"
 					/>
 				</v-layer>
+
+				<!-- annotation markers -->
+				<v-layer v-if="showAnnotations">
+					<CosmosVisualAnnotation
+						v-for="(annotation, idx) in filteredAnnotations"
+						:key="'annotation' + idx"
+						:annotation="annotation"
+						:currentAnnotation="currentAnnotation"
+						@activate="setCurrentAnnotation"
+					/>
+				</v-layer>
+
+				<v-layer v-show="countryConfig !== null">
+					<v-text v-if="countryConfig" :config="countryConfig.text" />
+					<CosmosImage v-if="countryConfig" :config="countryConfig.flag" />
+				</v-layer>
+
 			</v-stage>
 
 		</div>
-
 
 		<div class="modal modal-sm" :class="isExporting ? 'active' : ''">
 			<div class="modal-overlay"></div>
@@ -52,6 +78,13 @@
 			</div>
 		</div>
 
+		<AnnotationCard
+			:annotation="currentAnnotation"
+			:stageConfig="stageConfig"
+			@close="setCurrentAnnotation(null)"
+			@delete="deleteAnnotation"
+		/>
+
 	</main>
 
 </template>
@@ -59,6 +92,7 @@
 <script>
 
 import throttle from 'lodash/throttle';
+import filter from 'lodash/filter';
 import { get, set, sync, call } from 'vuex-pathify';
 import jsPDF from 'jspdf';
 
@@ -82,6 +116,7 @@ export default {
 
 	watch: {
 		'scale': 'resize',
+		'annotate': 'watchAnnotate',
 		'stageHover': 'setCursor',
 		'project.id': {
 			handler: function(newVal, oldVal) {
@@ -109,7 +144,8 @@ export default {
 					x: 1,
 					y: 1,
 				}
-			}
+			},
+			currentAnnotation: null,
 		}
 	},
 
@@ -117,14 +153,32 @@ export default {
 
 		...get([
 			'scale',
+			'showAnnotations',
 			'stageHover',
 			'options',
 			'project',
+			'userCanEdit',
 		]),
 
+
+		/**
+		 * All annotations. See @filteredAnnotations() for scoped ones.
+		 *
+		 */
+		annotations: sync('project@data.annotations'),
+
+
+		projectConfig: get('project@config'),
+
+
+		/**
+		 * Current language to pass to child components.
+		 *
+		 */
 		currentLanguage() {
 			return Trans.currentLanguage()
 		},
+
 
 		/**
 		 * Get aspect (ALL data - CONFIG + DEFS etc!) based on supplied editor ID
@@ -137,19 +191,21 @@ export default {
 			}
 			return Aspects.get(aspect);
 		},
-/*
-		template() {
-			if ( ! this.project.id) {
-				return false;
-			}
-			var template = Templates.get(this.project.template);
-			return template;
-		},*/
 
+
+		/**
+		 * Get dashboard nodes of the current aspect.
+		 *
+		 */
 		nodes() {
 			return (this.aspect && this.aspect.NODES ? this.aspect.NODES : []);
 		},
 
+
+		/**
+		 * Background layer config (just solid colour so it isn't transparent)
+		 *
+		 */
 		backgroundConfig() {
 			var config = {
 				fill: '#ffffff',
@@ -159,6 +215,60 @@ export default {
 				height: this.aspect.CONFIG.stageSize.height,
 			};
 			return config;
+		},
+
+
+		/**
+		 * List of 'visual' annotations for this aspect.
+		 *
+		 */
+		filteredAnnotations() {
+			return filter(this.annotations, { type: 'visual', aspect: this.aspectId });
+		},
+
+		countryConfig() {
+
+			const projectConfig = this.projectConfig;
+			const country = projectConfig ? projectConfig.country : null;
+			const langKey = `countries.${country}`;
+			const langExists = this.$te(langKey);
+
+			if ( ! langExists) {
+				console.debug("countryConfig: no lang");
+				return null;
+			}
+
+			// console.debug(`countryConfig: set as ${country}`);
+
+			var textConfig = {
+				fontSize: 14,
+				fontStyle: 'bold',
+				fontFamily: '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+				lineHeight: 1.35,
+				align: 'right',
+				x: 0,
+				y: 20,
+				width: this.stageConfig.width - 20 - 30 - 5,
+				text: this.$t(langKey),
+				fill: '#666666',
+			};
+
+
+			const flagName = Trans.codeToFlag(country);
+
+			var flagConfig = {
+				visible: langExists,
+				opacity: 1,
+				scale: { x: 0.12, y: 0.12 },
+				x: this.stageConfig.width - 20 - 30,
+				y: 20,
+				filename: `/images/flags/${flagName}.svg`,
+			};
+
+			return {
+				text: textConfig,
+				flag: flagConfig,
+			};
 		}
 
 	},
@@ -301,7 +411,83 @@ export default {
 
 			}
 
-		}
+		},
+
+
+		/**
+		 * On double-click of stage, add a new annotation.
+		 *
+		 */
+		handleAddAnnotate(event) {
+
+			if ( ! this.userCanEdit) {
+				return;
+			}
+
+			if ( ! this.showAnnotations) {
+				return;
+			}
+
+			if (event.evt.button && event.evt.button > 0) {
+				return;
+			}
+
+			const pos = this.$refs.stage.getStage().getPointerPosition();
+
+			if (this.scale) {
+				pos.x = Math.floor(pos.x / this.stageConfig.scale.x);
+				pos.y = Math.floor(pos.y / this.stageConfig.scale.y);
+			}
+
+			var newAnnotation = {
+				aspect: this.aspectId,
+				type: 'visual',
+				position: [ pos.x, pos.y ],
+				body: '',
+			};
+
+			this.annotations.push(newAnnotation);
+
+			this.currentAnnotation = newAnnotation;
+
+		},
+
+
+		/**
+		 * Handle showing the dialog for a given annotation.
+		 * Set the currentAnnotation to this object, which will show the dialog.
+		 *
+		 */
+		setCurrentAnnotation(annotation) {
+			this.currentAnnotation = annotation;
+		},
+
+
+		deleteAnnotation(annotation) {
+			if ( ! confirm("Delete this annotation?")) {
+				return;
+			}
+
+			let items = this.annotations;
+			if (items.indexOf(annotation) > -1) {
+				items.splice(items.indexOf(annotation), 1);
+				this.annotations = items;
+				this.setCurrentAnnotation(null);
+			}
+		},
+
+
+		/**
+		 * Watch the 'annotate' flag.
+		 * When `false`, set the current annotation to `null` - which will remove any visible window of it.
+		 *
+		 */
+		watchAnnotate() {
+			if ( ! this.annotate) {
+				this.currentAnnotation = null;
+			}
+		},
+
 	},
 
 	mounted() {

@@ -20,6 +20,7 @@ export const state = {
 		auto_save: false,
 	},
 	scale: false,
+	showAnnotations: true,
 	stageHover: false,
 	projects: [],
 	project: {},
@@ -312,7 +313,7 @@ export const actions = {
 		const hasProject = (state.project && state.project.id ? true : false);
 		const hasLastSave = (state.lastSave.hash !== null);
 
-		if ( ! isEditing || ! hasProject || ! hasLastSave) {
+		if ( ! hasProject || ! hasLastSave) {
 			commit('AUTO_SAVE_WAIT', false);
 			return;
 		}

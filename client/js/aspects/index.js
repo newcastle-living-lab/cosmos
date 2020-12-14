@@ -11,6 +11,7 @@ import AnalyticModel from './analytic_model';
 import InterventionTheoryModel from './intervention_theory_model';
 import ChangeModel from './change_model';
 import MoralOrderingModel from './moral_ordering_model';
+import UserJourneyModel from './user_journey_model';
 import TheoryOfChange from './theory_of_change';
 import CommunityReporting from './community_reporting';
 import SocialMedia from './social_media';
@@ -23,6 +24,7 @@ const allAspects = [
 	InterventionTheoryModel,
 	ChangeModel,
 	MoralOrderingModel,
+	UserJourneyModel,
 	TheoryOfChange,
 	CommunityReporting,
 	SocialMedia,
@@ -66,6 +68,10 @@ export default {
 				project.data[aspectConfig.id] = aspect.Functions.populateProject(project.data[aspectConfig.id]);
 			}
 		});
+
+		if (typeof(project.data.annotations) === 'undefined') {
+			project.data.annotations = [];
+		}
 
 		project = this.convertFromTemplate(project);
 

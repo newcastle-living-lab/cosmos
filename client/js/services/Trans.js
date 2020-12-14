@@ -119,6 +119,18 @@ const Trans = {
 	},
 
 
+	codeToFlag(lang) {
+		var code = lang;
+		switch (lang) {
+			case 'el': code = 'ee'; break;
+			case 'en_GB': code = 'gb'; break;
+			case 'sv_SE': code = 'se'; break;
+		}
+
+		return code;
+	}
+
+
 }
 
 // export { Trans }

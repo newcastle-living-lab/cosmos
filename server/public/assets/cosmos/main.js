@@ -580,7 +580,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! exports provided: id, type, title, routeName, dashboardComponent, summaryComponent, stageSize, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"id\":\"change_model\",\"type\":\"model\",\"title\":\"Change Model\",\"routeName\":\"model\",\"dashboardComponent\":\"TheoryOfChangeDashboard\",\"summaryComponent\":\"TheoryOfChangeSummaryView\",\"stageSize\":{\"width\":1280,\"height\":800}}");
+module.exports = JSON.parse("{\"id\":\"change_model\",\"type\":\"model\",\"title\":\"Change Model\",\"routeName\":\"model\",\"dashboardComponent\":\"TheoryOfChangeDashboard\",\"summaryComponent\":\"TheoryOfChangeSummaryView\",\"stageSize\":{\"width\":1285,\"height\":800}}");
 
 /***/ }),
 
@@ -916,10 +916,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _intervention_theory_model__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./intervention_theory_model */ "./js/aspects/intervention_theory_model/index.js");
 /* harmony import */ var _change_model__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./change_model */ "./js/aspects/change_model/index.js");
 /* harmony import */ var _moral_ordering_model__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./moral_ordering_model */ "./js/aspects/moral_ordering_model/index.js");
-/* harmony import */ var _theory_of_change__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./theory_of_change */ "./js/aspects/theory_of_change/index.js");
-/* harmony import */ var _community_reporting__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./community_reporting */ "./js/aspects/community_reporting/index.js");
-/* harmony import */ var _social_media__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./social_media */ "./js/aspects/social_media/index.js");
-/* harmony import */ var _documents__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./documents */ "./js/aspects/documents/index.js");
+/* harmony import */ var _user_journey_model__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./user_journey_model */ "./js/aspects/user_journey_model/index.js");
+/* harmony import */ var _theory_of_change__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./theory_of_change */ "./js/aspects/theory_of_change/index.js");
+/* harmony import */ var _community_reporting__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./community_reporting */ "./js/aspects/community_reporting/index.js");
+/* harmony import */ var _social_media__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./social_media */ "./js/aspects/social_media/index.js");
+/* harmony import */ var _documents__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./documents */ "./js/aspects/documents/index.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -942,7 +943,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var allAspects = [_welcome__WEBPACK_IMPORTED_MODULE_6__["default"], _service_model__WEBPACK_IMPORTED_MODULE_7__["default"], _analytic_model__WEBPACK_IMPORTED_MODULE_8__["default"], _intervention_theory_model__WEBPACK_IMPORTED_MODULE_9__["default"], _change_model__WEBPACK_IMPORTED_MODULE_10__["default"], _moral_ordering_model__WEBPACK_IMPORTED_MODULE_11__["default"], _theory_of_change__WEBPACK_IMPORTED_MODULE_12__["default"], _community_reporting__WEBPACK_IMPORTED_MODULE_13__["default"], _social_media__WEBPACK_IMPORTED_MODULE_14__["default"], _documents__WEBPACK_IMPORTED_MODULE_15__["default"]];
+
+var allAspects = [_welcome__WEBPACK_IMPORTED_MODULE_6__["default"], _service_model__WEBPACK_IMPORTED_MODULE_7__["default"], _analytic_model__WEBPACK_IMPORTED_MODULE_8__["default"], _intervention_theory_model__WEBPACK_IMPORTED_MODULE_9__["default"], _change_model__WEBPACK_IMPORTED_MODULE_10__["default"], _moral_ordering_model__WEBPACK_IMPORTED_MODULE_11__["default"], _user_journey_model__WEBPACK_IMPORTED_MODULE_12__["default"], _theory_of_change__WEBPACK_IMPORTED_MODULE_13__["default"], _community_reporting__WEBPACK_IMPORTED_MODULE_14__["default"], _social_media__WEBPACK_IMPORTED_MODULE_15__["default"], _documents__WEBPACK_IMPORTED_MODULE_16__["default"]];
 /* harmony default export */ __webpack_exports__["default"] = ({
   all: function all() {
     return lodash_map__WEBPACK_IMPORTED_MODULE_1___default()(allAspects, function (t) {
@@ -980,6 +982,11 @@ var allAspects = [_welcome__WEBPACK_IMPORTED_MODULE_6__["default"], _service_mod
         project.data[aspectConfig.id] = aspect.Functions.populateProject(project.data[aspectConfig.id]);
       }
     });
+
+    if (typeof project.data.annotations === 'undefined') {
+      project.data.annotations = [];
+    }
+
     project = this.convertFromTemplate(project);
     console.debug(JSON.parse(JSON.stringify(project)));
     return project;
@@ -2163,6 +2170,269 @@ var _definitions_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__we
 
 /***/ }),
 
+/***/ "./js/aspects/user_journey_model/Guide.js":
+/*!************************************************!*\
+  !*** ./js/aspects/user_journey_model/Guide.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  steps: [{
+    'type': 'info',
+    'lang': 'step01'
+  }, {
+    'type': 'info',
+    'lang': 'step02'
+  }, {
+    'type': 'info',
+    'lang': 'step03'
+  }, {
+    'type': 'info',
+    'lang': 'step04'
+  }, {
+    'type': 'info',
+    'lang': 'step05'
+  }, {
+    'type': 'info',
+    'lang': 'step06'
+  }, {
+    'type': 'info',
+    'lang': 'step07'
+  }]
+});
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/UserJourneyDashboard.vue":
+/*!***************************************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/UserJourneyDashboard.vue ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _UserJourneyDashboard_vue_vue_type_template_id_b843cd4a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UserJourneyDashboard.vue?vue&type=template&id=b843cd4a& */ "./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=template&id=b843cd4a&");
+/* harmony import */ var _UserJourneyDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserJourneyDashboard.vue?vue&type=script&lang=js& */ "./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _UserJourneyDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _UserJourneyDashboard_vue_vue_type_template_id_b843cd4a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _UserJourneyDashboard_vue_vue_type_template_id_b843cd4a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "js/aspects/user_journey_model/components/UserJourneyDashboard.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneyDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./UserJourneyDashboard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneyDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=template&id=b843cd4a&":
+/*!**********************************************************************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=template&id=b843cd4a& ***!
+  \**********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneyDashboard_vue_vue_type_template_id_b843cd4a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./UserJourneyDashboard.vue?vue&type=template&id=b843cd4a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=template&id=b843cd4a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneyDashboard_vue_vue_type_template_id_b843cd4a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneyDashboard_vue_vue_type_template_id_b843cd4a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue":
+/*!*****************************************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/UserJourneySummaryView.vue ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _UserJourneySummaryView_vue_vue_type_template_id_5549a21c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true& */ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true&");
+/* harmony import */ var _UserJourneySummaryView_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserJourneySummaryView.vue?vue&type=script&lang=js& */ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _UserJourneySummaryView_vue_vue_type_style_index_0_id_5549a21c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true& */ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _UserJourneySummaryView_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _UserJourneySummaryView_vue_vue_type_template_id_5549a21c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _UserJourneySummaryView_vue_vue_type_template_id_5549a21c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "5549a21c",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "js/aspects/user_journey_model/components/UserJourneySummaryView.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./UserJourneySummaryView.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true&":
+/*!***************************************************************************************************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true& ***!
+  \***************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_style_index_0_id_5549a21c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_style_index_0_id_5549a21c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_style_index_0_id_5549a21c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_style_index_0_id_5549a21c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_style_index_0_id_5549a21c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_style_index_0_id_5549a21c_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true&":
+/*!************************************************************************************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true& ***!
+  \************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_template_id_5549a21c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_template_id_5549a21c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UserJourneySummaryView_vue_vue_type_template_id_5549a21c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/components/index.js":
+/*!***********************************************************!*\
+  !*** ./js/aspects/user_journey_model/components/index.js ***!
+  \***********************************************************/
+/*! exports provided: UserJourneyDashboard, UserJourneySummaryView */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _UserJourneyDashboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UserJourneyDashboard */ "./js/aspects/user_journey_model/components/UserJourneyDashboard.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UserJourneyDashboard", function() { return _UserJourneyDashboard__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _UserJourneySummaryView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserJourneySummaryView */ "./js/aspects/user_journey_model/components/UserJourneySummaryView.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UserJourneySummaryView", function() { return _UserJourneySummaryView__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/config.json":
+/*!***************************************************!*\
+  !*** ./js/aspects/user_journey_model/config.json ***!
+  \***************************************************/
+/*! exports provided: id, type, routeName, dashboardComponent, summaryComponent, stageSize, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"id\":\"user_journey_model\",\"type\":\"model\",\"routeName\":\"model\",\"dashboardComponent\":\"UserJourneyDashboard\",\"summaryComponent\":\"UserJourneySummaryView\",\"stageSize\":{\"width\":1285,\"height\":800}}");
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/definitions.json":
+/*!********************************************************!*\
+  !*** ./js/aspects/user_journey_model/definitions.json ***!
+  \********************************************************/
+/*! exports provided: 0, 1, 2, 3, 4, 5, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("[{\"id\":\"model\",\"type\":\"model\",\"title\":\"Model\",\"hint\":null},{\"id\":\"discovering\",\"type\":\"group\",\"children\":[{\"id\":\"discovery_medium\",\"dataType\":\"string\",\"componentName\":\"VRadioList\",\"componentProps\":{\"options\":[{\"value\":\"word_of_mouth\",\"lang\":\"aspects.user_journey_model.options.mediums.word_of_mouth\"},{\"value\":\"paper\",\"lang\":\"aspects.user_journey_model.options.mediums.paper\"},{\"value\":\"referral\",\"lang\":\"aspects.user_journey_model.options.mediums.referral\"},{\"value\":\"social\",\"lang\":\"aspects.user_journey_model.options.mediums.social\"},{\"value\":\"other\",\"lang\":\"aspects.user_journey_model.options.mediums.other\"}]}},{\"id\":\"information_medium\",\"dataType\":\"string\",\"componentName\":\"VRadioList\",\"componentProps\":{\"options\":[{\"value\":\"word_of_mouth\",\"lang\":\"aspects.user_journey_model.options.mediums.word_of_mouth\"},{\"value\":\"paper\",\"lang\":\"aspects.user_journey_model.options.mediums.paper\"},{\"value\":\"referral\",\"lang\":\"aspects.user_journey_model.options.mediums.referral\"},{\"value\":\"social\",\"lang\":\"aspects.user_journey_model.options.mediums.social\"},{\"value\":\"other\",\"lang\":\"aspects.user_journey_model.options.mediums.other\"}]}},{\"id\":\"information_experience\",\"dataType\":\"string\",\"componentName\":\"ExperienceEditor\"},{\"id\":\"comments\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}}]},{\"id\":\"accessing\",\"type\":\"group\",\"children\":[{\"id\":\"access_method\",\"dataType\":\"string\",\"componentName\":\"VRadioList\",\"componentProps\":{\"options\":[{\"value\":\"referred\",\"lang\":\"aspects.user_journey_model.options.access_methods.referred\"},{\"value\":\"applied\",\"lang\":\"aspects.user_journey_model.options.access_methods.applied\"},{\"value\":\"other\",\"lang\":\"aspects.user_journey_model.options.access_methods.other\"}]}},{\"id\":\"qualification_process\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"qualification_experience\",\"dataType\":\"string\",\"componentName\":\"ExperienceEditor\"},{\"id\":\"appropriate_comment\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}}]},{\"id\":\"using\",\"type\":\"group\",\"children\":[{\"id\":\"participate_experience\",\"dataType\":\"string\",\"componentName\":\"ExperienceEditor\"},{\"id\":\"accessible_experience\",\"dataType\":\"string\",\"componentName\":\"ExperienceEditor\"},{\"id\":\"time_experience\",\"dataType\":\"string\",\"componentName\":\"ExperienceEditor\"},{\"id\":\"where\",\"dataType\":\"string\",\"componentName\":\"VRadioList\",\"componentProps\":{\"options\":[{\"value\":\"home\",\"lang\":\"aspects.user_journey_model.options.where.home\"},{\"value\":\"community\",\"lang\":\"aspects.user_journey_model.options.where.community\"},{\"value\":\"public\",\"lang\":\"aspects.user_journey_model.options.where.public\"},{\"value\":\"other\",\"lang\":\"aspects.user_journey_model.options.where.other\"}]}}]},{\"id\":\"evaluating\",\"type\":\"group\",\"children\":[{\"id\":\"opinions_asked\",\"dataType\":\"string\",\"componentName\":\"VRadioList\",\"componentProps\":{\"options\":[{\"value\":\"yes\",\"lang\":\"aspects.user_journey_model.options.yes_no_maybe.yes\"},{\"value\":\"no\",\"lang\":\"aspects.user_journey_model.options.yes_no_maybe.no\"},{\"value\":\"maybe\",\"lang\":\"aspects.user_journey_model.options.yes_no_maybe.maybe\"}]}},{\"id\":\"opinions_how\",\"dataType\":\"string\",\"componentName\":\"VRadioList\",\"componentProps\":{\"options\":[{\"value\":\"workshop\",\"lang\":\"aspects.user_journey_model.options.opinions_how.workshop\"},{\"value\":\"survey\",\"lang\":\"aspects.user_journey_model.options.opinions_how.survey\"},{\"value\":\"interview\",\"lang\":\"aspects.user_journey_model.options.opinions_how.interview\"}]}},{\"id\":\"service_experience\",\"dataType\":\"string\",\"componentName\":\"ExperienceEditor\"},{\"id\":\"surprises_comments\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}}]},{\"id\":\"instigating\",\"type\":\"group\",\"children\":[{\"id\":\"design_role\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}},{\"id\":\"instigate_role\",\"dataType\":\"array\",\"componentName\":\"VCheckList\",\"componentProps\":{\"options\":[{\"value\":\"pressure_group\",\"lang\":\"aspects.user_journey_model.options.instigate_roles.pressure_group\"},{\"value\":\"political_party\",\"lang\":\"aspects.user_journey_model.options.instigate_roles.political_party\"},{\"value\":\"government_department\",\"lang\":\"aspects.user_journey_model.options.instigate_roles.government_department\"}]}},{\"id\":\"comments\",\"dataType\":\"string\",\"componentName\":\"VTextarea\",\"componentProps\":{\"rows\":4}}]}]");
+
+/***/ }),
+
+/***/ "./js/aspects/user_journey_model/index.js":
+/*!************************************************!*\
+  !*** ./js/aspects/user_journey_model/index.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _config_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config.json */ "./js/aspects/user_journey_model/config.json");
+var _config_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./config.json */ "./js/aspects/user_journey_model/config.json", 1);
+/* harmony import */ var _definitions_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./definitions.json */ "./js/aspects/user_journey_model/definitions.json");
+var _definitions_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./definitions.json */ "./js/aspects/user_journey_model/definitions.json", 1);
+/* harmony import */ var _Guide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Guide */ "./js/aspects/user_journey_model/Guide.js");
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components */ "./js/aspects/user_journey_model/components/index.js");
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  CONFIG: _config_json__WEBPACK_IMPORTED_MODULE_0__,
+  DEFINITIONS: _definitions_json__WEBPACK_IMPORTED_MODULE_1__,
+  Guide: _Guide__WEBPACK_IMPORTED_MODULE_2__["default"],
+  Components: _components__WEBPACK_IMPORTED_MODULE_3__
+});
+
+/***/ }),
+
 /***/ "./js/aspects/welcome/config.json":
 /*!****************************************!*\
   !*** ./js/aspects/welcome/config.json ***!
@@ -2354,6 +2624,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosArrow_vue_vue_type_template_id_1a320f5e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosArrow_vue_vue_type_template_id_1a320f5e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./js/components/cosmos/lib/CosmosConnector.vue":
+/*!******************************************************!*\
+  !*** ./js/components/cosmos/lib/CosmosConnector.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CosmosConnector_vue_vue_type_template_id_4a6fc2d6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CosmosConnector.vue?vue&type=template&id=4a6fc2d6& */ "./js/components/cosmos/lib/CosmosConnector.vue?vue&type=template&id=4a6fc2d6&");
+/* harmony import */ var _CosmosConnector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CosmosConnector.vue?vue&type=script&lang=js& */ "./js/components/cosmos/lib/CosmosConnector.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CosmosConnector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CosmosConnector_vue_vue_type_template_id_4a6fc2d6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CosmosConnector_vue_vue_type_template_id_4a6fc2d6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "js/components/cosmos/lib/CosmosConnector.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./js/components/cosmos/lib/CosmosConnector.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./js/components/cosmos/lib/CosmosConnector.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosConnector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./CosmosConnector.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosConnector.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosConnector_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./js/components/cosmos/lib/CosmosConnector.vue?vue&type=template&id=4a6fc2d6&":
+/*!*************************************************************************************!*\
+  !*** ./js/components/cosmos/lib/CosmosConnector.vue?vue&type=template&id=4a6fc2d6& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosConnector_vue_vue_type_template_id_4a6fc2d6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./CosmosConnector.vue?vue&type=template&id=4a6fc2d6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosConnector.vue?vue&type=template&id=4a6fc2d6&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosConnector_vue_vue_type_template_id_4a6fc2d6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosConnector_vue_vue_type_template_id_4a6fc2d6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -3118,11 +3457,80 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./js/components/cosmos/lib/CosmosVisualAnnotation.vue":
+/*!*************************************************************!*\
+  !*** ./js/components/cosmos/lib/CosmosVisualAnnotation.vue ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CosmosVisualAnnotation_vue_vue_type_template_id_ab515512___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CosmosVisualAnnotation.vue?vue&type=template&id=ab515512& */ "./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=template&id=ab515512&");
+/* harmony import */ var _CosmosVisualAnnotation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CosmosVisualAnnotation.vue?vue&type=script&lang=js& */ "./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CosmosVisualAnnotation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CosmosVisualAnnotation_vue_vue_type_template_id_ab515512___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CosmosVisualAnnotation_vue_vue_type_template_id_ab515512___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "js/components/cosmos/lib/CosmosVisualAnnotation.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************!*\
+  !*** ./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosVisualAnnotation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./CosmosVisualAnnotation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosVisualAnnotation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=template&id=ab515512&":
+/*!********************************************************************************************!*\
+  !*** ./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=template&id=ab515512& ***!
+  \********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosVisualAnnotation_vue_vue_type_template_id_ab515512___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./CosmosVisualAnnotation.vue?vue&type=template&id=ab515512& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=template&id=ab515512&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosVisualAnnotation_vue_vue_type_template_id_ab515512___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CosmosVisualAnnotation_vue_vue_type_template_id_ab515512___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./js/components/cosmos/lib/index.js":
 /*!*******************************************!*\
   !*** ./js/components/cosmos/lib/index.js ***!
   \*******************************************/
-/*! exports provided: CosmosGroup, CosmosTitle, CosmosImage, CosmosInfoBox, CosmosTextBox, CosmosExternals, CosmosExternalsItem, CosmosStakeholder, CosmosNodeBracket, CosmosArrow, CosmosCurve */
+/*! exports provided: CosmosGroup, CosmosTitle, CosmosImage, CosmosInfoBox, CosmosTextBox, CosmosExternals, CosmosExternalsItem, CosmosStakeholder, CosmosNodeBracket, CosmosArrow, CosmosCurve, CosmosConnector, CosmosVisualAnnotation */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3159,6 +3567,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _CosmosCurve__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./CosmosCurve */ "./js/components/cosmos/lib/CosmosCurve.vue");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CosmosCurve", function() { return _CosmosCurve__WEBPACK_IMPORTED_MODULE_10__["default"]; });
+
+/* harmony import */ var _CosmosConnector__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./CosmosConnector */ "./js/components/cosmos/lib/CosmosConnector.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CosmosConnector", function() { return _CosmosConnector__WEBPACK_IMPORTED_MODULE_11__["default"]; });
+
+/* harmony import */ var _CosmosVisualAnnotation__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./CosmosVisualAnnotation */ "./js/components/cosmos/lib/CosmosVisualAnnotation.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CosmosVisualAnnotation", function() { return _CosmosVisualAnnotation__WEBPACK_IMPORTED_MODULE_12__["default"]; });
+
+
 
 
 
@@ -3538,6 +3954,93 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./js/components/project/AnnotationCard.vue":
+/*!**************************************************!*\
+  !*** ./js/components/project/AnnotationCard.vue ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AnnotationCard_vue_vue_type_template_id_3adb0916_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true& */ "./js/components/project/AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true&");
+/* harmony import */ var _AnnotationCard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AnnotationCard.vue?vue&type=script&lang=js& */ "./js/components/project/AnnotationCard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _AnnotationCard_vue_vue_type_style_index_0_id_3adb0916_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true& */ "./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _AnnotationCard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AnnotationCard_vue_vue_type_template_id_3adb0916_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AnnotationCard_vue_vue_type_template_id_3adb0916_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "3adb0916",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "js/components/project/AnnotationCard.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./js/components/project/AnnotationCard.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./js/components/project/AnnotationCard.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./AnnotationCard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true&":
+/*!************************************************************************************************************!*\
+  !*** ./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true& ***!
+  \************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_style_index_0_id_3adb0916_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_style_index_0_id_3adb0916_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_style_index_0_id_3adb0916_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_style_index_0_id_3adb0916_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_style_index_0_id_3adb0916_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_style_index_0_id_3adb0916_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./js/components/project/AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true&":
+/*!*********************************************************************************************!*\
+  !*** ./js/components/project/AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true& ***!
+  \*********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_template_id_3adb0916_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_template_id_3adb0916_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AnnotationCard_vue_vue_type_template_id_3adb0916_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./js/components/project/edit/index.js":
 /*!*********************************************!*\
   !*** ./js/components/project/edit/index.js ***!
@@ -3564,6 +4067,93 @@ var Editors = {
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (Editors);
+
+/***/ }),
+
+/***/ "./js/components/project/edit/lib/ExperienceEditor.vue":
+/*!*************************************************************!*\
+  !*** ./js/components/project/edit/lib/ExperienceEditor.vue ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ExperienceEditor_vue_vue_type_template_id_c51f4002_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ExperienceEditor.vue?vue&type=template&id=c51f4002&scoped=true& */ "./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=template&id=c51f4002&scoped=true&");
+/* harmony import */ var _ExperienceEditor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExperienceEditor.vue?vue&type=script&lang=js& */ "./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _ExperienceEditor_vue_vue_type_style_index_0_id_c51f4002_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ExperienceEditor.vue?vue&type=style&index=0&id=c51f4002&lang=scss&scoped=true& */ "./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=style&index=0&id=c51f4002&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _ExperienceEditor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ExperienceEditor_vue_vue_type_template_id_c51f4002_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ExperienceEditor_vue_vue_type_template_id_c51f4002_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "c51f4002",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "js/components/project/edit/lib/ExperienceEditor.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************!*\
+  !*** ./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExperienceEditor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ExperienceEditor.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExperienceEditor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=style&index=0&id=c51f4002&lang=scss&scoped=true&":
+/*!***********************************************************************************************************************!*\
+  !*** ./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=style&index=0&id=c51f4002&lang=scss&scoped=true& ***!
+  \***********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_ExperienceEditor_vue_vue_type_style_index_0_id_c51f4002_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader!../../../../../node_modules/css-loader!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ExperienceEditor.vue?vue&type=style&index=0&id=c51f4002&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=style&index=0&id=c51f4002&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_ExperienceEditor_vue_vue_type_style_index_0_id_c51f4002_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_ExperienceEditor_vue_vue_type_style_index_0_id_c51f4002_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_ExperienceEditor_vue_vue_type_style_index_0_id_c51f4002_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_ExperienceEditor_vue_vue_type_style_index_0_id_c51f4002_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_ExperienceEditor_vue_vue_type_style_index_0_id_c51f4002_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=template&id=c51f4002&scoped=true&":
+/*!********************************************************************************************************!*\
+  !*** ./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=template&id=c51f4002&scoped=true& ***!
+  \********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExperienceEditor_vue_vue_type_template_id_c51f4002_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ExperienceEditor.vue?vue&type=template&id=c51f4002&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=template&id=c51f4002&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExperienceEditor_vue_vue_type_template_id_c51f4002_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExperienceEditor_vue_vue_type_template_id_c51f4002_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
@@ -3976,6 +4566,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModelEditor_vue_vue_type_template_id_6372d61e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModelEditor_vue_vue_type_template_id_6372d61e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./js/components/project/edit/lib/ProjectCountryEditor.vue":
+/*!*****************************************************************!*\
+  !*** ./js/components/project/edit/lib/ProjectCountryEditor.vue ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ProjectCountryEditor_vue_vue_type_template_id_bd926ddc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProjectCountryEditor.vue?vue&type=template&id=bd926ddc& */ "./js/components/project/edit/lib/ProjectCountryEditor.vue?vue&type=template&id=bd926ddc&");
+/* harmony import */ var _ProjectCountryEditor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProjectCountryEditor.vue?vue&type=script&lang=js& */ "./js/components/project/edit/lib/ProjectCountryEditor.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ProjectCountryEditor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ProjectCountryEditor_vue_vue_type_template_id_bd926ddc___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ProjectCountryEditor_vue_vue_type_template_id_bd926ddc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "js/components/project/edit/lib/ProjectCountryEditor.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./js/components/project/edit/lib/ProjectCountryEditor.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************!*\
+  !*** ./js/components/project/edit/lib/ProjectCountryEditor.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProjectCountryEditor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ProjectCountryEditor.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/edit/lib/ProjectCountryEditor.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProjectCountryEditor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./js/components/project/edit/lib/ProjectCountryEditor.vue?vue&type=template&id=bd926ddc&":
+/*!************************************************************************************************!*\
+  !*** ./js/components/project/edit/lib/ProjectCountryEditor.vue?vue&type=template&id=bd926ddc& ***!
+  \************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProjectCountryEditor_vue_vue_type_template_id_bd926ddc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ProjectCountryEditor.vue?vue&type=template&id=bd926ddc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/edit/lib/ProjectCountryEditor.vue?vue&type=template&id=bd926ddc&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProjectCountryEditor_vue_vue_type_template_id_bd926ddc___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProjectCountryEditor_vue_vue_type_template_id_bd926ddc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -4399,7 +5058,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!*************************************************!*\
   !*** ./js/components/project/edit/lib/index.js ***!
   \*************************************************/
-/*! exports provided: MetaEditor, ProjectModelsEditor, ExternalsEditor, ExternalsEditorItem, GroupEditor, InfoEditor, ModelEditor, SocialEditor, SocialEditorItem, StakeholderEditor, StakeholderMultiEditor */
+/*! exports provided: MetaEditor, ProjectModelsEditor, ProjectCountryEditor, ExternalsEditor, ExternalsEditorItem, GroupEditor, InfoEditor, ModelEditor, SocialEditor, SocialEditorItem, StakeholderEditor, StakeholderMultiEditor, ExperienceEditor */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4410,32 +5069,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ProjectModelsEditor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProjectModelsEditor */ "./js/components/project/edit/lib/ProjectModelsEditor.vue");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ProjectModelsEditor", function() { return _ProjectModelsEditor__WEBPACK_IMPORTED_MODULE_1__["default"]; });
 
-/* harmony import */ var _ExternalsEditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ExternalsEditor */ "./js/components/project/edit/lib/ExternalsEditor.vue");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ExternalsEditor", function() { return _ExternalsEditor__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+/* harmony import */ var _ProjectCountryEditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProjectCountryEditor */ "./js/components/project/edit/lib/ProjectCountryEditor.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ProjectCountryEditor", function() { return _ProjectCountryEditor__WEBPACK_IMPORTED_MODULE_2__["default"]; });
 
-/* harmony import */ var _ExternalsEditorItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ExternalsEditorItem */ "./js/components/project/edit/lib/ExternalsEditorItem.vue");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ExternalsEditorItem", function() { return _ExternalsEditorItem__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+/* harmony import */ var _ExternalsEditor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ExternalsEditor */ "./js/components/project/edit/lib/ExternalsEditor.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ExternalsEditor", function() { return _ExternalsEditor__WEBPACK_IMPORTED_MODULE_3__["default"]; });
 
-/* harmony import */ var _GroupEditor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./GroupEditor */ "./js/components/project/edit/lib/GroupEditor.vue");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GroupEditor", function() { return _GroupEditor__WEBPACK_IMPORTED_MODULE_4__["default"]; });
+/* harmony import */ var _ExternalsEditorItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ExternalsEditorItem */ "./js/components/project/edit/lib/ExternalsEditorItem.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ExternalsEditorItem", function() { return _ExternalsEditorItem__WEBPACK_IMPORTED_MODULE_4__["default"]; });
 
-/* harmony import */ var _InfoEditor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./InfoEditor */ "./js/components/project/edit/lib/InfoEditor.vue");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "InfoEditor", function() { return _InfoEditor__WEBPACK_IMPORTED_MODULE_5__["default"]; });
+/* harmony import */ var _GroupEditor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./GroupEditor */ "./js/components/project/edit/lib/GroupEditor.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GroupEditor", function() { return _GroupEditor__WEBPACK_IMPORTED_MODULE_5__["default"]; });
 
-/* harmony import */ var _ModelEditor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ModelEditor */ "./js/components/project/edit/lib/ModelEditor.vue");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ModelEditor", function() { return _ModelEditor__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+/* harmony import */ var _InfoEditor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./InfoEditor */ "./js/components/project/edit/lib/InfoEditor.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "InfoEditor", function() { return _InfoEditor__WEBPACK_IMPORTED_MODULE_6__["default"]; });
 
-/* harmony import */ var _SocialEditor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./SocialEditor */ "./js/components/project/edit/lib/SocialEditor.vue");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SocialEditor", function() { return _SocialEditor__WEBPACK_IMPORTED_MODULE_7__["default"]; });
+/* harmony import */ var _ModelEditor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ModelEditor */ "./js/components/project/edit/lib/ModelEditor.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ModelEditor", function() { return _ModelEditor__WEBPACK_IMPORTED_MODULE_7__["default"]; });
 
-/* harmony import */ var _SocialEditorItem__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./SocialEditorItem */ "./js/components/project/edit/lib/SocialEditorItem.vue");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SocialEditorItem", function() { return _SocialEditorItem__WEBPACK_IMPORTED_MODULE_8__["default"]; });
+/* harmony import */ var _SocialEditor__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./SocialEditor */ "./js/components/project/edit/lib/SocialEditor.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SocialEditor", function() { return _SocialEditor__WEBPACK_IMPORTED_MODULE_8__["default"]; });
 
-/* harmony import */ var _StakeholderEditor__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./StakeholderEditor */ "./js/components/project/edit/lib/StakeholderEditor.vue");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StakeholderEditor", function() { return _StakeholderEditor__WEBPACK_IMPORTED_MODULE_9__["default"]; });
+/* harmony import */ var _SocialEditorItem__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./SocialEditorItem */ "./js/components/project/edit/lib/SocialEditorItem.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SocialEditorItem", function() { return _SocialEditorItem__WEBPACK_IMPORTED_MODULE_9__["default"]; });
 
-/* harmony import */ var _StakeholderMultiEditor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./StakeholderMultiEditor */ "./js/components/project/edit/lib/StakeholderMultiEditor.vue");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StakeholderMultiEditor", function() { return _StakeholderMultiEditor__WEBPACK_IMPORTED_MODULE_10__["default"]; });
+/* harmony import */ var _StakeholderEditor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./StakeholderEditor */ "./js/components/project/edit/lib/StakeholderEditor.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StakeholderEditor", function() { return _StakeholderEditor__WEBPACK_IMPORTED_MODULE_10__["default"]; });
+
+/* harmony import */ var _StakeholderMultiEditor__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./StakeholderMultiEditor */ "./js/components/project/edit/lib/StakeholderMultiEditor.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StakeholderMultiEditor", function() { return _StakeholderMultiEditor__WEBPACK_IMPORTED_MODULE_11__["default"]; });
+
+/* harmony import */ var _ExperienceEditor__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./ExperienceEditor */ "./js/components/project/edit/lib/ExperienceEditor.vue");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ExperienceEditor", function() { return _ExperienceEditor__WEBPACK_IMPORTED_MODULE_12__["default"]; });
+
+
 
 
 
@@ -5355,10 +6022,10 @@ var SUPPORTED_LANGUAGES = ['el', 'en_GB', 'es', 'et', 'fi', 'hu', 'it', 'nl', 'p
 /*!*************************!*\
   !*** ./js/lang/de.json ***!
   \*************************/
-/*! exports provided: activity_types, app, aspects, hints, languages, user_guide, default */
+/*! exports provided: activity_types, app, aspects, countries, hints, languages, user_guide, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisation\",\"service\":\"Bedienung\",\"user\":\"Nutzer\"},\"app\":{\"add_new_actor\":\"Neuen Schauspieler hinzufügen\",\"add_new_item\":\"Füge neuen Gegenstand hinzu\",\"all\":\"Alle\",\"colour\":\"Farbe\",\"create\":\"Erstellen\",\"created_by\":\"\",\"delete\":\"Löschen\",\"description\":\"\",\"download\":\"Herunterladen\",\"error\":\"Error\",\"error_message\":\"Fehler: {message}\",\"export\":\"Export\",\"exporting\":\"Exportieren\",\"exporting_project\":\"Projekt exportieren\",\"image\":\"Bild\",\"image_drag_prompt\":\"Ziehen Sie Ihr Bild hierher, um zu beginnen, oder klicken Sie, um es zu durchsuchen.\",\"image_is_uploading\":\"Bild hochladen\",\"image_remove\":\"Entferne Bild\",\"image_upload_error\":\"Fehler beim Hochladen\",\"import\":\"Importieren\",\"import_project\":\"Projekt importieren\",\"import_project_drag_hint\":\"Ziehen Sie Ihr CoSMoS-Projekt hierher, um zu beginnen, oder klicken Sie zum Durchsuchen.\",\"import_project_notes\":\"Hinweis: Sie sind der Eigentümer des importierten Projekts.\",\"import_project_success\":\"Das Projekt wurde erfolgreich importiert!\",\"just_mine\":\"Nur meins\",\"label\":\"Etikette\",\"last_saved_at\":\"Zuletzt gespeichert um {date_time}\",\"log_in\":\"\",\"maximum_items\":\"Maximal {count} Elemente | Maxumum {count} item | Maximal {count} Elemente\",\"models\":\"Modelle\",\"name\":\"\",\"new_project\":\"Neues Projekt erstellen\",\"next\":\"Nächster\",\"no_projects\":\"Keine Projekte gefunden.\",\"ok\":\"in Ordnung\",\"open_project\":\"Offenes Projekt\",\"please_wait_generate\":\"Bitte warten Sie, während die Datei generiert wird.\",\"processing\":\"wird bearbeitet\",\"project\":\"\",\"project_save_success\":\"Projekt gespeichert!\",\"save\":\"speichern\",\"saving\":\"Sparen\",\"scale_to_fit\":\"Passend skalieren\",\"search\":\"Suche\",\"title\":\"\",\"to_create_project\":\"ein Projekt erstellen.\",\"try_again\":\"Versuchen Sie es nochmal\",\"type\":\"Art\",\"user_is_read_only\":\"Ihre Benutzerzugriffsebene ist schreibgeschützt.\",\"web_address\":\"Webadresse\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Makro\"},\"meso\":{\"description\":\"Auf dieser Ebene kann es mehrere Stufen geben.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Mikro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Gibt es andere Begünstigte als den direkten Benutzer / die direkten Teilnehmer? Wenn ja, wer sind sie?\",\"title\":\"Begünstigte\"},\"broker\":{\"hint\":\"Gibt es einen aktiven Broker zwischen den Anstiftern des Wandels und den Veränderern? Wenn ja, wer sind sie?\",\"title\":\"Makler\"},\"changeMakers\":{\"hint\":\"Wer sind oder waren die Anstifter, die Ihre Interventionstätigkeit initiiert haben?\",\"title\":\"Macher wechseln\"},\"changeTheorists\":{\"hint\":\"Wer sind die Veränderungstheoretiker für die Intervention?\",\"title\":\"Theoretiker ändern\"},\"frontLineServiceDeliverer\":{\"hint\":\"Wer ist der Front-Line Service Deliverer?\",\"title\":\"Front-Line Service Deliverer\"},\"instigatorsOfChange\":{\"hint\":\"Wer sind oder waren die Anstifter, die Ihre Interventionstätigkeit initiiert haben?\",\"title\":\"Anstifter des Wandels\"},\"model\":{\"title\":\"Modell\"},\"serviceDeliveryManager\":{\"hint\":\"Wer ist der Service Delivery Manager, der für die Intervention verantwortlich ist?\",\"title\":\"Lieferservicemanager\"},\"serviceOrganisationManager\":{\"hint\":\"Wer ist der Service Organization Manager für die Intervention?\",\"title\":\"Service Organization Manager\"},\"servicePolicyMaker\":{\"hint\":\"Wer sind oder waren die Definierer der Servicerichtlinien und der Grundsätze, nach denen der Service betrieben wird?\",\"title\":\"Service Policy Maker\"},\"subjectsOfChange\":{\"hint\":\"Wer sind die identifizierten Themen des Wandels innerhalb der Intervention?\",\"title\":\"Themen der Veränderung\"},\"user\":{\"hint\":\"Wer ist der direkte Nutzer des Dienstes?\",\"title\":\"Kunde / Benutzer\"},\"victims\":{\"hint\":\"Gibt es identifizierte Opfer? Wenn ja, wer sind sie?\",\"title\":\"Die Opfer\"}},\"guide\":{\"step01\":\"In diesem Modell betrachten wir eine Cosie-Initiative in Bezug auf eine Reihe von Rollen und die Gesprächsbeziehungen, in denen sie sich engagieren.\",\"step02\":\"Zuerst haben wir einen Servicelieferanten an vorderster Front und einen Kunden.\",\"step03\":\"Der Zusteller hat einen Manager oder Vorgesetzten. Dieses Muster einer Person, die an zwei Gesprächen teilnimmt, wird wiederholt.\",\"step04\":\"Die Lieferung erfolgt in einem formellen oder informellen institutionellen Kontext.\",\"step05\":\"Schließlich gibt es den Dienst in einer umfassenderen Richtlinieneinstellung.\",\"step06\":\"Dies soll ein abstraktes Modell sein. In einigen Fällen kann es eine flache Organisation geben, in der Lieferung, Verwaltung und Richtlinien von allen Mitgliedern eines kleinen Teams übernommen werden, in anderen Fällen können sie unterschiedliche Personen und Kontexte repräsentieren.\",\"step07\":\"\",\"step08\":\"Wie findet die Kommunikation zwischen ihnen statt?\",\"step09\":\"Wie koordiniert und kohärent sind sie?\",\"step10\":\"Gibt es insbesondere Informationsflüsse und Gespräche zwischen Makro und Mikro, die nicht vom Meso vermittelt werden? Was bedeutet das?\",\"step11\":\"Das nächste Modell berücksichtigt Change Agency in Bezug auf Rollen und Gespräche.\",\"step12\":\"Eine Änderung muss angestiftet werden, dann wird sie ausgeführt.\",\"step13\":\"Die Änderungen, die wir in Betracht ziehen, betreffen eine Person, einen Ort oder eine Umgebung.\",\"step14\":\"Die Änderungen, die wir in Betracht ziehen, sind oft selbst komplex und betreffen komplexe Situationen. Oft basieren sie auf einer Theorie, die in die Situation eingeführt oder vermittelt wurde.\",\"step15\":\"Es gibt eine Reihe von vorgesehenen Begünstigten.\",\"step16\":\"Es gibt aber auch mögliche Nutznießer oder Opfer der Änderung.\",\"step17\":\"Dieses Modell dient als Sonde für das anfängliche Servicemodell, um die spezifischen Akteure zu identifizieren, die in verschiedenen Phasen der Entwicklung der Initiative eine oder mehrere dieser Rollen als Change Agency übernommen haben. Wer sind Sie?\"},\"title\":\"Analytisches Modell\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Mehrdeutigkeit\",\"ambivalence\":\"Ambivalenz\",\"committing\":\"Festschreiben\",\"execute\":\"Ausführen\",\"first_order\":\"Erste Bestellung\",\"fourth_order\":\"Vierte Ordnung!\",\"languaging\":\"\\\"Sprache\\\"\",\"measure\":\"Messen\",\"plan\":\"Planen\",\"risk\":\"Risiko\",\"second_order\":\"Zweite Bestellung\",\"sense_making\":\"Sinn machen\",\"third_order\":\"Dritte Ordnung\",\"vision\":\"Vision\",\"zero_order\":\"Nullordnung\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Wie wird der Plan ausgeführt?\"},\"measure\":{\"label\":\"Wie werden Beobachtungen und Messungen aufgezeichnet? Wenn nicht, was muss dafür aktiviert werden?\"},\"plan\":{\"label\":\"Wie wurde ein Plan aufgestellt, um die Vision zu verwirklichen?\"},\"vision\":{\"label\":\"Wie wurden die Vision und die Ziele festgelegt?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Was war der Ursprung der Veränderung? Und was war die Veränderung?\"},\"event_cause\":{\"label\":\"Was ist passiert, damit dieses Ereignis eintreten kann?\"},\"unexpected_events\":{\"label\":\"Gab es Fälle, in denen unerwartete Ereignisse aufgetreten sind?\"}},\"model\":{\"title\":\"Modell\"},\"second_order\":{\"committing\":{\"label\":\"\"},\"languaging\":{\"label\":\"Welche Änderungen wurden am Verständnis der Intervention vorgenommen?\"},\"sense_making\":{\"label\":\"Wann überprüfen Sie die Pläne und Visionen?\"}},\"third_order\":{\"processes\":{\"label\":\"\"}}},\"guide\":{\"step01\":\"Wir beginnen mit dem Standardmodell des zielgerichteten Handelns, mit dem wir alle sehr vertraut sind.\",\"step02\":\"Aber wir haben alle die Erfahrung gemacht, zurückzublicken und zu erkennen, dass sich die Dinge wirklich grundlegend geändert haben: Wir sprechen über den Paradigmenwechsel. Dies impliziert, dass wir uns bemüht haben, unsere Welt neu zu verstehen, und dies bedeutet oft, dass sich unsere Sprache ändert.\",\"step03\":\"Diese zwei verschiedenen Betriebsarten werden manchmal als erste und zweite Ordnung bezeichnet.\",\"step04\":\"In Bezug auf das Management haben wir einerseits das Risikomanagement und andererseits die Lösung von Widersprüchen und Unklarheiten.\",\"step05\":\"Wir führen nun die Idee von Aktivitäten dritter Ordnung ein, die die entsprechenden Übergänge zwischen erster und zweiter Arbeit ermöglichen und unterstützen und einen Schritt zurück ermöglichen, um unser Ethos und unsere Annahmen zu überdenken und, wenn wir dies getan haben, wieder in die Art der praktischen Planung und Durchführung zurückzukehren.\",\"step06\":\"Manchmal ist die Reaktion auf Mehrdeutigkeit und Widerspruch eine emotionale: Kampf oder Fliege nullter Ordnung oder Inspiration und Heldentum, die wir vierte Ordnung nennen werden.\",\"step07\":\"Auf der rechten Seite unseres Diagramms haben wir also das Spektrum emotionaler Arbeit und Reaktionen, während wir auf der linken Seite ko-produktive Gesprächsarbeit haben.\",\"step08\":\"Dieses Modell generiert eine Reihe offener Fragen darüber, wo die unterschiedliche Arbeit erster und zweiter Ordnung in Ihrer Initiative stattfindet, welche emotionale Arbeit erforderlich war und ist und wie und wo sie durchgeführt wird und wie und von wem die erforderlichen Interventionen dritter Ordnung sind unternommen?\"},\"title\":\"Modell ändern\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Infrastrukturelle Beziehungen, Ressourcen und Einrichtungen\",\"policy_law\":\"Politik & Recht\",\"resources\":\"Ressourcen\",\"service_definition\":\"Service Definition und Entwicklungsplattform\",\"service_delivery\":\"Service Delivery-Plattform\",\"structural_relationships\":\"Strukturelle Beziehungen und Anlässe\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Gibt es andere Begünstigte als den direkten Benutzer / die direkten Teilnehmer? Wenn ja, wer sind sie?\",\"title\":\"Begünstigter\"},\"delivery\":{\"hint\":\"Wer ist für die Zustellungsmechanismen, Kanäle und Rollen in Ihrem Piloten verantwortlich?\",\"title\":\"Zusteller\"},\"deployment\":{\"hint\":\"Wer stellt diese Prozesse und Ressourcen bereit / implementiert und aktiviert / aktiviert sie?\",\"title\":\"Bereitsteller\"},\"drivers\":{\"body\":{\"hint\":\"Was sind die Treiber und Motivationen?\",\"label\":\"Treiber und Motivationen\"},\"hint\":\"Was waren / sind die Treiber und Motivationen des Projekts? War es eine gesetzliche Anforderung, ein Bedürfnis oder eine Nachfrage zu erkennen, eine Gelegenheit zu ergreifen und eine Ungleichheit anzugehen?\",\"title\":\"Treiber und Motivationen\"},\"evaluation\":{\"hint\":\"Wer ist der / die Bewerter und Gouverneur des Dienstes?\",\"title\":\"Bewerter\"},\"extorg\":{\"hint\":\"Gibt es relevante Akteure, Stakeholder oder Agenturen, die für das Pilotprojekt relevant sind, aber außerhalb seiner Vision und seines Ethos bleiben?\",\"title\":\"Externe Organisationen\"},\"extsvc\":{\"hint\":\"Welche wiederverwendbaren Einrichtungen, (technischen und personellen) Ressourcen, Dienste und Informationsquellen wurden entwickelt und zur Unterstützung dieser Dienstdefinitions- und Entwicklungsprozesse verwendet? Welche externen Ressourcen und Dienste (z. B. Kommunikation und soziale Medien) wurden / werden verwendet?\",\"title\":\"Externe technische Dienste\"},\"infsvc\":{\"hint\":\"Welche externen Dienste, Kanäle und Einrichtungen nutzen Sie für die Bereitstellung Ihrer Dienste? Welche Informationsquellen nutzen Sie? Welche Informationen veröffentlichen Sie, für wen und über welche Kanäle und Medien?\",\"title\":\"Infrastrukturdienstleistungen\"},\"initiator\":{\"hint\":\"Wer sind oder waren die Anstifter, die Ihre Pilotaktivität initiiert haben?\",\"title\":\"Initiator\"},\"model\":{\"title\":\"Modell\"},\"policyDef\":{\"hint\":\"Wer sind oder waren die Definierer der Servicerichtlinien und der Grundsätze, nach denen der Service betrieben wird?\",\"title\":\"Policy Definer\"},\"specDes\":{\"hint\":\"Wer spezifiziert / spezifiziert und entwirft / gestaltet die Servicebereitstellungsprozesse und -ressourcen?\",\"title\":\"Spezifizierer und Designer\"},\"user\":{\"hint\":\"Wer ist der direkte Nutzer des Dienstes?\",\"title\":\"Nutzer\"}},\"title\":\"Mitgestaltung des Servicemodells\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Für dieses Projekt gibt es keine Community-Berichtselemente.\",\"manage\":\"Community-Berichterstellung verwalten\",\"title\":\"Community-Berichterstattung\"},\"definitions\":{\"data\":{\"hint\":\"Bitte fügen Sie alle Community-Berichte hinzu, die Ihr Projekt möglicherweise hat.\",\"title\":\"Community-Berichterstattung\"}},\"title\":\"Community-Berichterstattung\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Es gibt keine Dokumente oder Dateien für dieses Projekt.\",\"manage\":\"Dokumente und Dateien verwalten\",\"title\":\"Dokumente und Dateien\"},\"definitions\":{\"data\":{\"hint\":\"Bitte fügen Sie alle Dokumente und Dateien hinzu, die Ihr Projekt möglicherweise hat.\",\"title\":\"Dokumente und Dateien\"}},\"title\":\"Unterlagen\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Wohlbefinden\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Welche Aspekte des Service-Lebenszyklus sind für Ihre Innovation und Veränderung wichtig?\"},\"title\":\"Innovation und Veränderung\"},\"intervention\":{\"items\":{\"label\":\"Welche Art von Intervention findet statt?\"},\"title\":\"Intervention\"},\"learning\":{\"items\":{\"label\":\"Wie läuft das Lernen bei Ihrer Intervention ab?\"},\"title\":\"Lernen\"},\"model\":{\"title\":\"Modell\"},\"wellbeing\":{\"items\":{\"label\":\"Welche Aspekte des menschlichen Wohlbefindens und der Umwelt sind für Ihren Service relevant? Sind einige wichtiger als andere?\"},\"title\":\"Wohlbefinden und Umwelt des Menschen\"}},\"guide\":{\"step01\":\"Die von uns in Betracht gezogenen ko-kreativen Initiativen befassen sich alle mit der Verbesserung und Förderung des Wohlbefindens. Hier betrachten wir das Wohlbefinden von Individuen, aber dies kann auf Orte oder größere Umgebungen angewendet werden.\",\"step02\":\"Das Wohlbefinden hat verschiedene Facetten, die alle voneinander abhängig sind.\",\"step03\":\"Es interagiert auch mit der physischen und sozialen Umgebung.\",\"step04\":\"Bei einigen Diensten oder Interventionen geht es darum, Fehler zu beheben und den Status Quo wiederherzustellen.\",\"step05\":\"Es gibt aber auch andere Zwecke für Interventionen.\",\"step06\":\"Der Interventionsprozess umfasst verschiedene Phasen und Prozesse.\",\"step07\":\"Schließlich müssen wir lernen und uns verbessern, wenn unsere Innovationen aufrechterhalten werden sollen.\",\"step08\":\"Wer, was oder wo ist das Ziel Ihrer Intervention?\",\"step09\":\"Welche Aspekte des Wohlbefindens stehen im Mittelpunkt Ihrer Initiative?\",\"step10\":\"Welche Aspekte des Wohlbefindens Ihres Fachs sind relevant, gehen jedoch über den Rahmen Ihrer Initiative hinaus?\",\"step11\":\"Was sind die relevanten Umweltaspekte?\",\"step12\":\"Welche Kombinationen von Interventionen, von Prävention bis Transformation, sind für Ihre Initiative relevant?\",\"step13\":\"Inwieweit sind Lernen und Verbesserung in Ihre Entwicklungssteuerungs- und Bereitstellungsprozesse integriert?\"},\"options\":{\"innovation\":{\"development\":\"Entwicklung\",\"facilitation\":\"Erleichterung\",\"palliation\":\"Linderung\",\"prevention\":\"Verhütung\",\"rehabilitation\":\"Rehabilitation\",\"remedy\":\"Abhilfe\",\"transformation\":\"Transformation\"},\"intervention\":{\"coordination_delivery\":\"Koordination & Lieferung\",\"governance\":\"Führung\",\"identification\":\"Identifizierung & Planung\",\"learning\":\"Lernen\",\"management\":\"Management\"},\"learning\":{\"research_evidence\":\"Forschung & Evidenz\",\"service_improvement\":\"Serviceverbesserung\",\"trials\":\"Versuche\"},\"wellbeing\":{\"faculties_skills\":\"Fakultäten und Fähigkeiten\",\"mental_psych\":\"Geistig und psychisch\",\"physical_env\":\"Körperliche Umgebung\",\"physiological\":\"Physiologisch\",\"socio_cultural_env\":\"Soziokulturelles Umfeld\",\"socio_economic\":\"Sozioökonomisch\"}},\"title\":\"Modell der Interventionstheorie\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Ethos definieren\",\"define_ethos_items\":\"Werte\\n Prinzipien\\n Intentionen\\n Richtlinien\",\"deliver\":\"Liefern\",\"experience\":\"Erfahrung\",\"govern\":\"Regieren\",\"individual_cases\":\"Einzelfälle\",\"plan_manage\":\"Planen & Verwalten\",\"plan_manage_items\":\"Regeln\\n Ressourcen\\n Prozesse\\n Konten\",\"the_service_level\":\"Der Service Level\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Wie werden diese Werte definiert?\"},\"evidenceUrl\":{\"label\":\"Welche (externen) Beweise stehen dafür zur Verfügung?\"},\"title\":\"Ethos definieren\",\"values\":{\"label\":\"Welche Werte sind wichtig, auf die sich die Intervention bezieht?\"}},\"deliver\":{\"actors\":{\"label\":\"Von wem wird es geliefert?\"},\"evidenceUrl\":{\"label\":\"Welche (externen) Beweise stehen dafür zur Verfügung?\"},\"method\":{\"label\":\"Wie wird die Intervention durchgeführt?\"},\"title\":\"Liefern\"},\"govern\":{\"actions\":{\"label\":\"Wie ist die Intervention geregelt? Welche Maßnahmen werden ergriffen, um sicherzustellen, dass die Ergebnisse wie beabsichtigt waren?\"},\"actors\":{\"label\":\"Wer bewertet das?\"},\"evolution\":{\"label\":\"Wie wirkt sich dies auf die Entwicklung des Dienstes aus?\"},\"improvements\":{\"label\":\"Wie werden Verbesserungen festgestellt? Wie werden sie umgesetzt?\"},\"outcomes\":{\"label\":\"Sind die Ergebnisse in Zielen und Messungen enthalten? Und wenn ja, wessen?\"},\"title\":\"Regieren\"},\"model\":{\"title\":\"Modell\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Welche Aktionen werden jetzt innerhalb des Piloten durchgeführt?\"},\"actors\":{\"label\":\"Welche laufenden Maßnahmen werden ergriffen?\"},\"evidenceUrl\":{\"label\":\"Welche (externen) Beweise stehen dafür zur Verfügung?\"},\"title\":\"Planen und Verwalten - Aktuelle Aktionen\"},\"planManagePrior\":{\"actions\":{\"label\":\"Welche Maßnahmen wurden vor der Intervention ergriffen?\"},\"actors\":{\"label\":\"Wer war an diesen vorherigen Aktionen beteiligt?\"},\"evidenceUrl\":{\"label\":\"Welche (externen) Beweise stehen dafür zur Verfügung?\"},\"title\":\"Planen und Verwalten - Vorherige Aktionen\"}},\"guide\":{\"step01\":\"Es gibt eine Reihe von Kernprozessen, die an einer ko-kreativen Innovation beteiligt sind. Der erste befasst sich mit der Definition von Ethos.\",\"step02\":\"Die zweite betrifft Managementaktivitäten und Produkte.\",\"step03\":\"Bei der moralischen Ordnung geht es darum, wer an Aktivitäten teilnehmen darf. Wer ist also im Falle Ihrer Initiative an diesen Prozessen beteiligt? Wo und wann finden sie statt? Wie kommunizieren sie und wie werden sie aufgezeichnet?\",\"step04\":\"Als Ergebnis von Führung, Planung und Design werden Dienstleistungen oder Initiativen erbracht und erfahren.\",\"step05\":\"Wer ist hier wieder involviert und nimmt er an den ersten beiden Aktivitäten teil?\",\"step06\":\"Anstatt den Kreis einfach mit einem einfachen Bewertungsprozess zu schließen, schlagen wir vor, dass in Systemen des ko-produktiven Wohlbefindens und der Pflege alle Teilnehmer an den hier identifizierten Beziehungen an der Beantwortung der im Modell der moralischen Ordnung definierten Fragen beteiligt sind.\",\"step07\":\"Die Governance erfolgt auf der Ebene der einzelnen Service-Kundenbeziehungen.\",\"step08\":\"Es findet auch auf der gesamten Service-Ebene statt.\",\"step09\":\"Wie finden Governance-Prozesse in dem Sinne statt, wie wir sie hier beschreiben?\"},\"options\":{\"sources\":{\"meeting\":\"Treffen\",\"other\":\"Andere\",\"policy\":\"Politik\"}},\"title\":\"Moralische Ordnung\"},\"social_media\":{\"dashboard\":{\"title\":\"Sozialen Medien\"},\"definitions\":{\"data\":{\"title\":\"Sozialen Medien\"}},\"title\":\"Sozialen Medien\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Für dieses Projekt gibt es keine Theorie der Änderungselemente.\",\"manage\":\"Theorie der Veränderung verwalten\",\"title\":\"Theorie der Veränderung\"},\"definitions\":{\"data\":{\"hint\":\"Bitte fügen Sie alle Theorien zur Änderung Ihres Projekts hinzu.\",\"title\":\"Theorie der Veränderung\"}},\"title\":\"Theorie der Veränderung\"},\"welcome\":{\"dashboard\":{\"summary\":\"Erstellt von {user} am {date_time}\"},\"title\":\"Herzlich willkommen\"}},\"hints\":{\"editor_double_click_edit\":\"Doppelklicken Sie auf ein Element, um es zu bearbeiten, und geben Sie es zum Speichern ein\",\"social_facebook_add\":\"Fügen Sie Facebook-Gruppen oder -Seiten vollständige Links (URLs) hinzu.\",\"social_instagram_add\":\"Geben Sie einen Instagram-Hashtag mit oder ohne # ein. Drücken Sie die Eingabetaste, um hinzuzufügen.\",\"social_twitter_add\":\"Geben Sie einen Twitter-Hashtag mit oder ohne # ein. Drücken Sie die Eingabetaste, um hinzuzufügen.\",\"social_youtube_add\":\"Geben Sie einen Link zu einem YouTube-Video ein und drücken Sie die Eingabetaste, um es hinzuzufügen.\",\"type_and_enter\":\"Geben Sie den folgenden Namen ein und drücken Sie die Eingabetaste.\"},\"languages\":{\"de\":\"Deutsche\",\"el\":\"griechisch\",\"en_GB\":\"Englisch\",\"es\":\"Spanisch\",\"et\":\"Estnisch\",\"fi\":\"Finnisch\",\"fr\":\"Französisch\",\"hu\":\"Ungarisch\",\"it\":\"Italienisch\",\"nl\":\"Niederländisch\",\"pl\":\"Polieren\",\"sv_SE\":\"Schwedisch\"},\"user_guide\":{\"back\":\"Zurück\",\"close\":\"Schließen\",\"next\":\"Nächster\",\"show\":\"Benutzerhandbuch anzeigen\",\"skip\":\"Benutzerhandbuch überspringen\"}}");
+module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisation\",\"service\":\"Bedienung\",\"user\":\"Nutzer\"},\"app\":{\"add_new_actor\":\"Neuen Schauspieler hinzufügen\",\"add_new_item\":\"Füge neuen Gegenstand hinzu\",\"all\":\"Alle\",\"colour\":\"Farbe\",\"country\":\"Land\",\"create\":\"Erstellen\",\"created_by\":\"Erstellt von\",\"delete\":\"Löschen\",\"description\":\"Beschreibung\",\"download\":\"Herunterladen\",\"error\":\"Error\",\"error_message\":\"Fehler: {message}\",\"export\":\"Export\",\"exporting\":\"Exportieren\",\"exporting_project\":\"Projekt exportieren\",\"image\":\"Bild\",\"image_drag_prompt\":\"Ziehen Sie Ihr Bild hierher, um zu beginnen, oder klicken Sie, um es zu durchsuchen.\",\"image_is_uploading\":\"Bild hochladen\",\"image_remove\":\"Entferne Bild\",\"image_upload_error\":\"Fehler beim Hochladen\",\"import\":\"Importieren\",\"import_project\":\"Projekt importieren\",\"import_project_drag_hint\":\"Ziehen Sie Ihr CoSMoS-Projekt hierher, um zu beginnen, oder klicken Sie zum Durchsuchen.\",\"import_project_notes\":\"Hinweis: Sie sind der Eigentümer des importierten Projekts.\",\"import_project_success\":\"Das Projekt wurde erfolgreich importiert!\",\"just_mine\":\"Nur meins\",\"label\":\"Etikette\",\"last_saved_at\":\"Zuletzt gespeichert um {date_time}\",\"log_in\":\"Anmelden\",\"maximum_items\":\"Maximal {count} Elemente | Maxumum {count} item | Maximal {count} Elemente\",\"models\":\"Modelle\",\"more_details\":\"Mehr Details\",\"name\":\"Namen\",\"new_project\":\"Neues Projekt erstellen\",\"next\":\"Nächster\",\"no_projects\":\"Keine Projekte gefunden.\",\"ok\":\"in Ordnung\",\"open_project\":\"Offenes Projekt\",\"please_wait_generate\":\"Bitte warten Sie, während die Datei generiert wird.\",\"processing\":\"wird bearbeitet\",\"project\":\"Projekt\",\"project_save_success\":\"Projekt gespeichert!\",\"save\":\"speichern\",\"saving\":\"Sparen\",\"scale_to_fit\":\"Passend skalieren\",\"search\":\"Suche\",\"title\":\"Titel\",\"to_create_project\":\"ein Projekt erstellen.\",\"try_again\":\"Versuchen Sie es nochmal\",\"type\":\"Art\",\"user_is_read_only\":\"Ihre Benutzerzugriffsebene ist schreibgeschützt.\",\"web_address\":\"Webadresse\",\"which_country\":\"Aus welchem Land kommst du?\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Makro\"},\"meso\":{\"description\":\"Auf dieser Ebene kann es mehrere Stufen geben.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Mikro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Gibt es andere Begünstigte als den direkten Benutzer / die direkten Teilnehmer? Wenn ja, wer sind sie?\",\"title\":\"Begünstigte\"},\"broker\":{\"hint\":\"Gibt es einen aktiven Broker zwischen den Anstiftern des Wandels und den Veränderern? Wenn ja, wer sind sie?\",\"title\":\"Makler\"},\"changeMakers\":{\"hint\":\"Wer sind oder waren die Anstifter, die Ihre Interventionstätigkeit initiiert haben?\",\"title\":\"Macher wechseln\"},\"changeTheorists\":{\"hint\":\"Wer sind die Veränderungstheoretiker für die Intervention?\",\"title\":\"Theoretiker ändern\"},\"frontLineServiceDeliverer\":{\"hint\":\"Wer ist der Front-Line Service Deliverer?\",\"title\":\"Front-Line Service Deliverer\"},\"instigatorsOfChange\":{\"hint\":\"Wer sind oder waren die Anstifter, die Ihre Interventionstätigkeit initiiert haben?\",\"title\":\"Anstifter des Wandels\"},\"model\":{\"title\":\"Modell\"},\"serviceDeliveryManager\":{\"hint\":\"Wer ist der Service Delivery Manager, der für die Intervention verantwortlich ist?\",\"title\":\"Lieferservicemanager\"},\"serviceOrganisationManager\":{\"hint\":\"Wer ist der Service Organization Manager für die Intervention?\",\"title\":\"Service Organization Manager\"},\"servicePolicyMaker\":{\"hint\":\"Wer sind oder waren die Definierer der Servicerichtlinien und der Grundsätze, nach denen der Service betrieben wird?\",\"title\":\"Service Policy Maker\"},\"subjectsOfChange\":{\"hint\":\"Wer sind die identifizierten Themen des Wandels innerhalb der Intervention?\",\"title\":\"Themen der Veränderung\"},\"user\":{\"hint\":\"Wer ist der direkte Nutzer des Dienstes?\",\"title\":\"Kunde / Benutzer\"},\"victims\":{\"hint\":\"Gibt es identifizierte Opfer? Wenn ja, wer sind sie?\",\"title\":\"Die Opfer\"}},\"guide\":{\"step01\":\"In diesem Modell betrachten wir eine Cosie-Initiative in Bezug auf eine Reihe von Rollen und die Gesprächsbeziehungen, in denen sie sich engagieren.\",\"step02\":\"Zuerst haben wir einen Servicelieferanten an vorderster Front und einen Kunden.\",\"step03\":\"Der Zusteller hat einen Manager oder Vorgesetzten. Dieses Muster einer Person, die an zwei Gesprächen teilnimmt, wird wiederholt.\",\"step04\":\"Die Lieferung erfolgt in einem formellen oder informellen institutionellen Kontext.\",\"step05\":\"Schließlich gibt es den Dienst in einer umfassenderen Richtlinieneinstellung.\",\"step06\":\"Dies soll ein abstraktes Modell sein. In einigen Fällen kann es eine flache Organisation geben, in der Lieferung, Verwaltung und Richtlinien von allen Mitgliedern eines kleinen Teams übernommen werden, in anderen Fällen können sie unterschiedliche Personen und Kontexte repräsentieren.\",\"step07\":\"Wie fügen sich die Konzepte der Mikro-, Meso- und Makroebene in Ihre Initiative ein?\",\"step08\":\"Wie findet die Kommunikation zwischen ihnen statt?\",\"step09\":\"Wie koordiniert und kohärent sind sie?\",\"step10\":\"Gibt es insbesondere Informationsflüsse und Gespräche zwischen Makro und Mikro, die nicht vom Meso vermittelt werden? Was bedeutet das?\",\"step11\":\"Das nächste Modell berücksichtigt Change Agency in Bezug auf Rollen und Gespräche.\",\"step12\":\"Eine Änderung muss angestiftet werden, dann wird sie ausgeführt.\",\"step13\":\"Die Änderungen, die wir in Betracht ziehen, betreffen eine Person, einen Ort oder eine Umgebung.\",\"step14\":\"Die Änderungen, die wir in Betracht ziehen, sind oft selbst komplex und betreffen komplexe Situationen. Oft basieren sie auf einer Theorie, die in die Situation eingeführt oder vermittelt wurde.\",\"step15\":\"Es gibt eine Reihe von vorgesehenen Begünstigten.\",\"step16\":\"Es gibt aber auch mögliche Nutznießer oder Opfer der Änderung.\",\"step17\":\"Dieses Modell dient als Sonde für das anfängliche Servicemodell, um die spezifischen Akteure zu identifizieren, die in verschiedenen Phasen der Entwicklung der Initiative eine oder mehrere dieser Rollen als Change Agency übernommen haben. Wer sind Sie?\"},\"title\":\"Analytisches Modell\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Mehrdeutigkeit\",\"ambivalence\":\"Ambivalenz\",\"committing\":\"Festschreiben\",\"execute\":\"Ausführen\",\"first_order\":\"Erste Bestellung\",\"fourth_order\":\"Vierte Ordnung!\",\"languaging\":\"\\\"Sprache\\\"\",\"measure\":\"Messen\",\"plan\":\"Planen\",\"risk\":\"Risiko\",\"second_order\":\"Zweite Bestellung\",\"sense_making\":\"Sinn machen\",\"third_order\":\"Dritte Ordnung\",\"vision\":\"Vision\",\"zero_order\":\"Nullordnung\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Wie wird der Plan ausgeführt?\"},\"measure\":{\"label\":\"Wie werden Beobachtungen und Messungen aufgezeichnet? Wenn nicht, was muss dafür aktiviert werden?\"},\"plan\":{\"label\":\"Wie wurde ein Plan aufgestellt, um die Vision zu verwirklichen?\"},\"vision\":{\"label\":\"Wie wurden die Vision und die Ziele festgelegt?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Was war der Ursprung der Veränderung? Und was war die Veränderung?\"},\"event_cause\":{\"label\":\"Was ist passiert, damit dieses Ereignis eintreten kann?\"},\"unexpected_events\":{\"label\":\"Gab es Fälle, in denen unerwartete Ereignisse aufgetreten sind?\"}},\"model\":{\"title\":\"Modell\"},\"second_order\":{\"committing\":{\"label\":\"Wie hat sich die Leistungserbringung der Intervention gegenüber ihren ursprünglichen Plänen verändert?\"},\"languaging\":{\"label\":\"Welche Änderungen wurden am Verständnis der Intervention vorgenommen?\"},\"sense_making\":{\"label\":\"Wann überprüfen Sie die Pläne und Visionen?\"}},\"third_order\":{\"processes\":{\"label\":\"Welche Prozesse provozieren oder ermöglichen Befragungen zweiter Ordnung?\"}}},\"guide\":{\"step01\":\"Wir beginnen mit dem Standardmodell des zielgerichteten Handelns, mit dem wir alle sehr vertraut sind.\",\"step02\":\"Aber wir haben alle die Erfahrung gemacht, zurückzublicken und zu erkennen, dass sich die Dinge wirklich grundlegend geändert haben: Wir sprechen über den Paradigmenwechsel. Dies impliziert, dass wir uns bemüht haben, unsere Welt neu zu verstehen, und dies bedeutet oft, dass sich unsere Sprache ändert.\",\"step03\":\"Diese zwei verschiedenen Betriebsarten werden manchmal als erste und zweite Ordnung bezeichnet.\",\"step04\":\"In Bezug auf das Management haben wir einerseits das Risikomanagement und andererseits die Lösung von Widersprüchen und Unklarheiten.\",\"step05\":\"Wir führen nun die Idee von Aktivitäten dritter Ordnung ein, die die entsprechenden Übergänge zwischen erster und zweiter Arbeit ermöglichen und unterstützen und einen Schritt zurück ermöglichen, um unser Ethos und unsere Annahmen zu überdenken und, wenn wir dies getan haben, wieder in die Art der praktischen Planung und Durchführung zurückzukehren.\",\"step06\":\"Manchmal ist die Reaktion auf Mehrdeutigkeit und Widerspruch eine emotionale: Kampf oder Fliege nullter Ordnung oder Inspiration und Heldentum, die wir vierte Ordnung nennen werden.\",\"step07\":\"Auf der rechten Seite unseres Diagramms haben wir also das Spektrum emotionaler Arbeit und Reaktionen, während wir auf der linken Seite ko-produktive Gesprächsarbeit haben.\",\"step08\":\"Dieses Modell generiert eine Reihe offener Fragen darüber, wo die unterschiedliche Arbeit erster und zweiter Ordnung in Ihrer Initiative stattfindet, welche emotionale Arbeit erforderlich war und ist und wie und wo sie durchgeführt wird und wie und von wem die erforderlichen Interventionen dritter Ordnung sind unternommen?\"},\"title\":\"Modell ändern\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Infrastrukturelle Beziehungen, Ressourcen und Einrichtungen\",\"policy_law\":\"Politik & Recht\",\"resources\":\"Ressourcen\",\"service_definition\":\"Service Definition und Entwicklungsplattform\",\"service_delivery\":\"Service Delivery-Plattform\",\"structural_relationships\":\"Strukturelle Beziehungen und Anlässe\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Gibt es andere Begünstigte als den direkten Benutzer / die direkten Teilnehmer? Wenn ja, wer sind sie?\",\"title\":\"Begünstigter\"},\"delivery\":{\"hint\":\"Wer ist für die Zustellungsmechanismen, Kanäle und Rollen in Ihrem Piloten verantwortlich?\",\"title\":\"Zusteller\"},\"deployment\":{\"hint\":\"Wer stellt diese Prozesse und Ressourcen bereit / implementiert und aktiviert / aktiviert sie?\",\"title\":\"Bereitsteller\"},\"drivers\":{\"body\":{\"hint\":\"Was sind die Treiber und Motivationen?\",\"label\":\"Treiber und Motivationen\"},\"hint\":\"Was waren / sind die Treiber und Motivationen des Projekts? War es eine gesetzliche Anforderung, ein Bedürfnis oder eine Nachfrage zu erkennen, eine Gelegenheit zu ergreifen und eine Ungleichheit anzugehen?\",\"title\":\"Treiber und Motivationen\"},\"evaluation\":{\"hint\":\"Wer ist der / die Bewerter und Gouverneur des Dienstes?\",\"title\":\"Bewerter\"},\"extorg\":{\"hint\":\"Gibt es relevante Akteure, Stakeholder oder Agenturen, die für das Pilotprojekt relevant sind, aber außerhalb seiner Vision und seines Ethos bleiben?\",\"title\":\"Externe Organisationen\"},\"extsvc\":{\"hint\":\"Welche wiederverwendbaren Einrichtungen, (technischen und personellen) Ressourcen, Dienste und Informationsquellen wurden entwickelt und zur Unterstützung dieser Dienstdefinitions- und Entwicklungsprozesse verwendet? Welche externen Ressourcen und Dienste (z. B. Kommunikation und soziale Medien) wurden / werden verwendet?\",\"title\":\"Externe technische Dienste\"},\"infsvc\":{\"hint\":\"Welche externen Dienste, Kanäle und Einrichtungen nutzen Sie für die Bereitstellung Ihrer Dienste? Welche Informationsquellen nutzen Sie? Welche Informationen veröffentlichen Sie, für wen und über welche Kanäle und Medien?\",\"title\":\"Infrastrukturdienstleistungen\"},\"initiator\":{\"hint\":\"Wer sind oder waren die Anstifter, die Ihre Pilotaktivität initiiert haben?\",\"title\":\"Initiator\"},\"model\":{\"title\":\"Modell\"},\"policyDef\":{\"hint\":\"Wer sind oder waren die Definierer der Servicerichtlinien und der Grundsätze, nach denen der Service betrieben wird?\",\"title\":\"Policy Definer\"},\"specDes\":{\"hint\":\"Wer spezifiziert / spezifiziert und entwirft / gestaltet die Servicebereitstellungsprozesse und -ressourcen?\",\"title\":\"Spezifizierer und Designer\"},\"user\":{\"hint\":\"Wer ist der direkte Nutzer des Dienstes?\",\"title\":\"Nutzer\"}},\"title\":\"Mitgestaltung des Servicemodells\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Für dieses Projekt gibt es keine Community-Berichtselemente.\",\"manage\":\"Community-Berichterstellung verwalten\",\"title\":\"Community-Berichterstattung\"},\"definitions\":{\"data\":{\"hint\":\"Bitte fügen Sie alle Community-Berichte hinzu, die Ihr Projekt möglicherweise hat.\",\"title\":\"Community-Berichterstattung\"}},\"title\":\"Community-Berichterstattung\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Es gibt keine Dokumente oder Dateien für dieses Projekt.\",\"manage\":\"Dokumente und Dateien verwalten\",\"title\":\"Dokumente und Dateien\"},\"definitions\":{\"data\":{\"hint\":\"Bitte fügen Sie alle Dokumente und Dateien hinzu, die Ihr Projekt möglicherweise hat.\",\"title\":\"Dokumente und Dateien\"}},\"title\":\"Unterlagen\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Wohlbefinden\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Welche Aspekte des Service-Lebenszyklus sind für Ihre Innovation und Veränderung wichtig?\"},\"title\":\"Innovation und Veränderung\"},\"intervention\":{\"items\":{\"label\":\"Welche Art von Intervention findet statt?\"},\"title\":\"Intervention\"},\"learning\":{\"items\":{\"label\":\"Wie läuft das Lernen bei Ihrer Intervention ab?\"},\"title\":\"Lernen\"},\"model\":{\"title\":\"Modell\"},\"wellbeing\":{\"items\":{\"label\":\"Welche Aspekte des menschlichen Wohlbefindens und der Umwelt sind für Ihren Service relevant? Sind einige wichtiger als andere?\"},\"title\":\"Wohlbefinden und Umwelt des Menschen\"}},\"guide\":{\"step01\":\"Die von uns in Betracht gezogenen ko-kreativen Initiativen befassen sich alle mit der Verbesserung und Förderung des Wohlbefindens. Hier betrachten wir das Wohlbefinden von Individuen, aber dies kann auf Orte oder größere Umgebungen angewendet werden.\",\"step02\":\"Das Wohlbefinden hat verschiedene Facetten, die alle voneinander abhängig sind.\",\"step03\":\"Es interagiert auch mit der physischen und sozialen Umgebung.\",\"step04\":\"Bei einigen Diensten oder Interventionen geht es darum, Fehler zu beheben und den Status Quo wiederherzustellen.\",\"step05\":\"Es gibt aber auch andere Zwecke für Interventionen.\",\"step06\":\"Der Interventionsprozess umfasst verschiedene Phasen und Prozesse.\",\"step07\":\"Schließlich müssen wir lernen und uns verbessern, wenn unsere Innovationen aufrechterhalten werden sollen.\",\"step08\":\"Wer, was oder wo ist das Ziel Ihrer Intervention?\",\"step09\":\"Welche Aspekte des Wohlbefindens stehen im Mittelpunkt Ihrer Initiative?\",\"step10\":\"Welche Aspekte des Wohlbefindens Ihres Fachs sind relevant, gehen jedoch über den Rahmen Ihrer Initiative hinaus?\",\"step11\":\"Was sind die relevanten Umweltaspekte?\",\"step12\":\"Welche Kombinationen von Interventionen, von Prävention bis Transformation, sind für Ihre Initiative relevant?\",\"step13\":\"Inwieweit sind Lernen und Verbesserung in Ihre Entwicklungssteuerungs- und Bereitstellungsprozesse integriert?\"},\"options\":{\"innovation\":{\"development\":\"Entwicklung\",\"facilitation\":\"Erleichterung\",\"palliation\":\"Linderung\",\"prevention\":\"Verhütung\",\"rehabilitation\":\"Rehabilitation\",\"remedy\":\"Abhilfe\",\"transformation\":\"Transformation\"},\"intervention\":{\"coordination_delivery\":\"Koordination & Lieferung\",\"governance\":\"Führung\",\"identification\":\"Identifizierung & Planung\",\"learning\":\"Lernen\",\"management\":\"Management\"},\"learning\":{\"research_evidence\":\"Forschung & Evidenz\",\"service_improvement\":\"Serviceverbesserung\",\"trials\":\"Versuche\"},\"wellbeing\":{\"faculties_skills\":\"Fakultäten und Fähigkeiten\",\"mental_psych\":\"Geistig und psychisch\",\"physical_env\":\"Körperliche Umgebung\",\"physiological\":\"Physiologisch\",\"socio_cultural_env\":\"Soziokulturelles Umfeld\",\"socio_economic\":\"Sozioökonomisch\"}},\"title\":\"Modell der Interventionstheorie\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Ethos definieren\",\"define_ethos_items\":\"Werte\\n Prinzipien\\n Intentionen\\n Richtlinien\",\"deliver\":\"Liefern\",\"experience\":\"Erfahrung\",\"govern\":\"Regieren\",\"individual_cases\":\"Einzelfälle\",\"plan_manage\":\"Planen & Verwalten\",\"plan_manage_items\":\"Regeln\\n Ressourcen\\n Prozesse\\n Konten\",\"the_service_level\":\"Der Service Level\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Wie werden diese Werte definiert?\"},\"evidenceUrl\":{\"label\":\"Welche (externen) Beweise stehen dafür zur Verfügung?\"},\"title\":\"Ethos definieren\",\"values\":{\"label\":\"Welche Werte sind wichtig, auf die sich die Intervention bezieht?\"}},\"deliver\":{\"actors\":{\"label\":\"Von wem wird es geliefert?\"},\"evidenceUrl\":{\"label\":\"Welche (externen) Beweise stehen dafür zur Verfügung?\"},\"method\":{\"label\":\"Wie wird die Intervention durchgeführt?\"},\"title\":\"Liefern\"},\"govern\":{\"actions\":{\"label\":\"Wie ist die Intervention geregelt? Welche Maßnahmen werden ergriffen, um sicherzustellen, dass die Ergebnisse wie beabsichtigt waren?\"},\"actors\":{\"label\":\"Wer bewertet das?\"},\"evolution\":{\"label\":\"Wie wirkt sich dies auf die Entwicklung des Dienstes aus?\"},\"improvements\":{\"label\":\"Wie werden Verbesserungen festgestellt? Wie werden sie umgesetzt?\"},\"outcomes\":{\"label\":\"Sind die Ergebnisse in Zielen und Messungen enthalten? Und wenn ja, wessen?\"},\"title\":\"Regieren\"},\"model\":{\"title\":\"Modell\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Welche Aktionen werden jetzt innerhalb des Piloten durchgeführt?\"},\"actors\":{\"label\":\"Welche laufenden Maßnahmen werden ergriffen?\"},\"evidenceUrl\":{\"label\":\"Welche (externen) Beweise stehen dafür zur Verfügung?\"},\"title\":\"Planen und Verwalten - Aktuelle Aktionen\"},\"planManagePrior\":{\"actions\":{\"label\":\"Welche Maßnahmen wurden vor der Intervention ergriffen?\"},\"actors\":{\"label\":\"Wer war an diesen vorherigen Aktionen beteiligt?\"},\"evidenceUrl\":{\"label\":\"Welche (externen) Beweise stehen dafür zur Verfügung?\"},\"title\":\"Planen und Verwalten - Vorherige Aktionen\"}},\"guide\":{\"step01\":\"Es gibt eine Reihe von Kernprozessen, die an einer ko-kreativen Innovation beteiligt sind. Der erste befasst sich mit der Definition von Ethos.\",\"step02\":\"Die zweite betrifft Managementaktivitäten und Produkte.\",\"step03\":\"Bei der moralischen Ordnung geht es darum, wer an Aktivitäten teilnehmen darf. Wer ist also im Falle Ihrer Initiative an diesen Prozessen beteiligt? Wo und wann finden sie statt? Wie kommunizieren sie und wie werden sie aufgezeichnet?\",\"step04\":\"Als Ergebnis von Führung, Planung und Design werden Dienstleistungen oder Initiativen erbracht und erfahren.\",\"step05\":\"Wer ist hier wieder involviert und nimmt er an den ersten beiden Aktivitäten teil?\",\"step06\":\"Anstatt den Kreis einfach mit einem einfachen Bewertungsprozess zu schließen, schlagen wir vor, dass in Systemen des ko-produktiven Wohlbefindens und der Pflege alle Teilnehmer an den hier identifizierten Beziehungen an der Beantwortung der im Modell der moralischen Ordnung definierten Fragen beteiligt sind.\",\"step07\":\"Die Governance erfolgt auf der Ebene der einzelnen Service-Kundenbeziehungen.\",\"step08\":\"Es findet auch auf der gesamten Service-Ebene statt.\",\"step09\":\"Wie finden Governance-Prozesse in dem Sinne statt, wie wir sie hier beschreiben?\"},\"options\":{\"sources\":{\"meeting\":\"Treffen\",\"other\":\"Andere\",\"policy\":\"Politik\"}},\"title\":\"Moralische Ordnung\"},\"social_media\":{\"dashboard\":{\"title\":\"Sozialen Medien\"},\"definitions\":{\"data\":{\"title\":\"Sozialen Medien\"}},\"title\":\"Sozialen Medien\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Für dieses Projekt gibt es keine Theorie der Änderungselemente.\",\"manage\":\"Theorie der Veränderung verwalten\",\"title\":\"Theorie der Veränderung\"},\"definitions\":{\"data\":{\"hint\":\"Bitte fügen Sie alle Theorien zur Änderung Ihres Projekts hinzu.\",\"title\":\"Theorie der Veränderung\"}},\"title\":\"Theorie der Veränderung\"},\"user_journey_model\":{\"dashboard\":{\"one\":\"\",\"other\":\"\"},\"definitions\":{\"accessing\":{\"access_method\":{\"label\":\"Wie haben Sie Zugang zum Service erhalten?\"},\"appropriate_comment\":{\"label\":\"Halten Sie diesen Aspekt des Dienstes für angemessen?\"},\"qualification_experience\":{\"label\":\"Wenn ja, wie war die Erfahrung?\"},\"qualification_process\":{\"label\":\"Gab es ein Qualifizierungs- oder Auswahlverfahren?\"},\"title\":\"Zugriff\"},\"discovering\":{\"comments\":{\"label\":\"Weitere Kommentare, Beobachtungen?\"},\"discovery_medium\":{\"label\":\"Wie haben Sie von dem Service erfahren?\"},\"information_experience\":{\"label\":\"Wie beurteilen Sie die Qualität, Vollständigkeit und Zugänglichkeit der Informationen?\"},\"information_medium\":{\"label\":\"Wie haben Sie auf Informationen zum Service zugegriffen?\"},\"title\":\"Entdecken\"},\"evaluating\":{\"opinions_asked\":{\"hint\":\"Überlegen Sie, wo und wann dies war.\",\"label\":\"Wurden Sie nach Ihrer Meinung zu Ihren Erfahrungen mit dem Service gefragt?\"},\"opinions_how\":{\"label\":\"Wenn ja, wie wurden Sie gefragt?\"},\"service_experience\":{\"label\":\"War der Service das, was Sie erwartet hatten?\"},\"surprises_comments\":{\"label\":\"Gab es irgendwelche Überraschungen oder Enttäuschungen in Ihrer Erfahrung?\"},\"title\":\"Auswerten\"},\"instigating\":{\"comments\":{\"label\":\"Bemerkungen\"},\"design_role\":{\"label\":\"Haben Sie bei der Gestaltung und Definition des Dienstes eine Rolle gespielt? Wenn ja, zu welchen Anlässen und Kanälen ist dies geschehen?\"},\"instigate_role\":{\"label\":\"Hatten Sie eine Rolle bei der Initiierung des Projekts? Wenn ja, waren Sie Teil einer der folgenden Optionen? Sie können so viele auswählen, wie Sie möchten.\"},\"title\":\"Anstiftung\"},\"model\":{\"title\":\"Modell\"},\"using\":{\"accessible_experience\":{\"label\":\"War der Service für Sie zugänglich?\"},\"participate_experience\":{\"label\":\"Wie war es, den Dienst zu nutzen oder daran teilzunehmen?\"},\"time_experience\":{\"label\":\"War die Dauer und Häufigkeit der Serviceereignisse oder Kontakte in Ordnung?\"},\"title\":\"Verwenden von\",\"where\":{\"label\":\"Wo haben Sie den Service genutzt?\"}}},\"guide\":{\"step01\":\"Dienste werden ihren beabsichtigten Benutzern zur Verfügung gestellt. Dies ist die Erkennungsphase.\",\"step02\":\"Benutzer, die den Dienst wünschen, stellen eine Anfrage oder Anwendung. Dies ist die Zugriffsphase.\",\"step03\":\"Wenn die vorherige Phase erfolgreich ist, wird der Service bereitgestellt und erlebt. Dies ist die Nutzungsphase.\",\"step04\":\"Anschließend wird die Erfahrung mit der Nutzung des Dienstes ausgewertet.\",\"step05\":\"Die bisherigen Fragen setzen voraus, dass der Service definiert wurde und bereits existiert. Bei den nächsten Fragen geht es darum, ob und wie Sie an den Prozessen teilgenommen haben, mit denen der Service überhaupt erstellt wurde.\",\"step06\":\"Zunächst können wir unser Servicebereitstellungsmodell mit den Phasen der Erstellung vervollständigen. Wir nennen dies die Entwurfsphase.\",\"step07\":\"Dann können wir die Prozesse zeigen, durch die der Service überhaupt identifiziert und initiiert wurde. Wir nennen dies die Anstiftungsphase.\"},\"options\":{\"access_methods\":{\"applied\":\"Angewandt\",\"other\":\"Andere\",\"referred\":\"Weitergeleitet\"},\"instigate_roles\":{\"government_department\":\"Regierungsabteilung\",\"political_party\":\"Politische Partei\",\"pressure_group\":\"Druck- / Kampagnengruppe\"},\"mediums\":{\"other\":\"Andere\",\"paper\":\"Veröffentlichung in Papierform\",\"referral\":\"Verweisung\",\"social\":\"Sozialen Medien\",\"word_of_mouth\":\"Mundpropaganda\"},\"opinions_how\":{\"interview\":\"Interview\",\"survey\":\"Umfrage\",\"workshop\":\"Werkstatt\"},\"where\":{\"community\":\"Gemeinschaft\",\"home\":\"Zuhause\",\"other\":\"Andere\",\"public\":\"Öffentlichkeit\"},\"yes_no_maybe\":{\"maybe\":\"Vielleicht\",\"no\":\"Nein\",\"yes\":\"Ja\"}},\"title\":\"User Journey Model\"},\"welcome\":{\"dashboard\":{\"summary\":\"Erstellt von {user} am {date_time}\"},\"title\":\"Herzlich willkommen\"}},\"countries\":{\"de\":\"Deutschland\",\"el\":\"Griechenland\",\"en_GB\":\"Großbritannien\",\"es\":\"Spanien\",\"et\":\"Estland\",\"fi\":\"Finnland\",\"fr\":\"Frankreich\",\"hu\":\"Ungarn\",\"it\":\"Italien\",\"nl\":\"Niederlande\",\"pl\":\"Polen\",\"sv_SE\":\"Schweden\"},\"hints\":{\"editor_double_click_edit\":\"Doppelklicken Sie auf ein Element, um es zu bearbeiten, und geben Sie es zum Speichern ein\",\"social_facebook_add\":\"Fügen Sie Facebook-Gruppen oder -Seiten vollständige Links (URLs) hinzu.\",\"social_instagram_add\":\"Geben Sie einen Instagram-Hashtag mit oder ohne # ein. Drücken Sie die Eingabetaste, um hinzuzufügen.\",\"social_twitter_add\":\"Geben Sie einen Twitter-Hashtag mit oder ohne # ein. Drücken Sie die Eingabetaste, um hinzuzufügen.\",\"social_youtube_add\":\"Geben Sie einen Link zu einem YouTube-Video ein und drücken Sie die Eingabetaste, um es hinzuzufügen.\",\"type_and_enter\":\"Geben Sie den folgenden Namen ein und drücken Sie die Eingabetaste.\"},\"languages\":{\"de\":\"Deutsche\",\"el\":\"griechisch\",\"en_GB\":\"Englisch\",\"es\":\"Spanisch\",\"et\":\"Estnisch\",\"fi\":\"Finnisch\",\"fr\":\"Französisch\",\"hu\":\"Ungarisch\",\"it\":\"Italienisch\",\"nl\":\"Niederländisch\",\"pl\":\"Polieren\",\"sv_SE\":\"Schwedisch\"},\"user_guide\":{\"back\":\"Zurück\",\"close\":\"Schließen\",\"next\":\"Nächster\",\"show\":\"Benutzerhandbuch anzeigen\",\"skip\":\"Benutzerhandbuch überspringen\"}}");
 
 /***/ }),
 
@@ -5366,10 +6033,21 @@ module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisatio
 /*!*************************!*\
   !*** ./js/lang/el.json ***!
   \*************************/
-/*! exports provided: activity_types, app, aspects, hints, languages, user_guide, default */
+/*! exports provided: activity_types, app, aspects, countries, hints, languages, user_guide, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Οργάνωση\",\"service\":\"Υπηρεσία\",\"user\":\"Χρήστης\"},\"app\":{\"add_new_actor\":\"Προσθήκη νέου ηθοποιού\",\"add_new_item\":\"Προσθήκη νέου αντικειμένου\",\"all\":\"Ολα\",\"colour\":\"Χρώμα\",\"create\":\"Δημιουργώ\",\"created_by\":\"Δημιουργήθηκε από\",\"delete\":\"Διαγράφω\",\"description\":\"Περιγραφή\",\"download\":\"Κατεβάστε\",\"error\":\"Λάθος\",\"error_message\":\"Σφάλμα: {message}\",\"export\":\"Εξαγωγή\",\"exporting\":\"Εξαγωγή\",\"exporting_project\":\"Εξαγωγή έργου\",\"image\":\"Εικόνα\",\"image_drag_prompt\":\"Σύρετε την εικόνα σας εδώ για να ξεκινήσετε ή κάντε κλικ για περιήγηση.\",\"image_is_uploading\":\"Μεταφόρτωση εικόνας\",\"image_remove\":\"Αφαιρέστε την εικόνα\",\"image_upload_error\":\"Σφάλμα μεταφόρτωσης\",\"import\":\"Εισαγωγή\",\"import_project\":\"Εισαγωγή έργου\",\"import_project_drag_hint\":\"Σύρετε το έργο CoSMoS εδώ για να ξεκινήσετε ή κάντε κλικ για περιήγηση.\",\"import_project_notes\":\"Σημείωση: Θα είστε ο κάτοχος του έργου που εισάγεται.\",\"import_project_success\":\"Το έργο εισήχθη με επιτυχία!\",\"just_mine\":\"Μόνο δικό μου\",\"label\":\"Επιγραφή\",\"last_saved_at\":\"Τελευταία αποθήκευση στις {date_time}\",\"log_in\":\"Σύνδεση\",\"maximum_items\":\"Μέγιστο {count} αντικείμενα | Μέγιστο {count} αντικείμενο | Μέγιστα {count} στοιχεία\",\"models\":\"Μοντέλα\",\"name\":\"Ονομα\",\"new_project\":\"Δημιουργήστε νέο έργο\",\"next\":\"Επόμενο\",\"no_projects\":\"Δεν βρέθηκαν έργα.\",\"ok\":\"Εντάξει\",\"open_project\":\"Ανοιχτό έργο\",\"please_wait_generate\":\"Περιμένετε έως ότου δημιουργείται το αρχείο.\",\"processing\":\"Επεξεργασία\",\"project\":\"Εργο\",\"project_save_success\":\"Το έργο αποθηκεύτηκε!\",\"save\":\"Σώσει\",\"saving\":\"Οικονομία\",\"scale_to_fit\":\"Κλίμακα για εφαρμογή\",\"search\":\"Αναζήτηση\",\"title\":\"Τίτλος\",\"to_create_project\":\"για να δημιουργήσετε ένα έργο.\",\"try_again\":\"Προσπάθησε ξανά\",\"type\":\"Τύπος\",\"user_is_read_only\":\"Το επίπεδο πρόσβασης χρήστη είναι μόνο για ανάγνωση.\",\"web_address\":\"ηλεκτρονική διεύθυνση\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Μακροεντολή\"},\"meso\":{\"description\":\"Μπορεί να υπάρχουν διάφορα στάδια σε αυτό το επίπεδο.\",\"label\":\"Μέσο\"},\"micro\":{\"label\":\"Μικρο\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Υπάρχουν δικαιούχοι εκτός από τον άμεσο χρήστη / συμμετέχοντες Εάν ναι, ποιοι είναι αυτοί;\",\"title\":\"Δικαιούχοι\"},\"broker\":{\"hint\":\"Υπάρχει ενεργός μεσίτης μεταξύ των υποκινητών αλλαγής και αλλαγών; Εάν ναι, ποιοι είναι αυτοί;\",\"title\":\"Μεσίτης\"},\"changeMakers\":{\"hint\":\"Ποιοι είναι ή ήταν οι ηθικοί αυτουργοί που ξεκίνησαν την παρέμβασή σας;\",\"title\":\"Αλλαγή κατασκευαστών\"},\"changeTheorists\":{\"hint\":\"Ποιοι είναι οι θεωρητικοί της αλλαγής για την παρέμβαση;\",\"title\":\"Αλλαγή θεωρητικών\"},\"frontLineServiceDeliverer\":{\"hint\":\"Ποιος είναι ο πρώτος παράγοντας υπηρεσιών;\",\"title\":\"Παράδοση υπηρεσιών πρώτης γραμμής\"},\"instigatorsOfChange\":{\"hint\":\"Ποιοι είναι ή ήταν οι ηθικοί αυτουργοί που ξεκίνησαν την παρέμβαση σας;\",\"title\":\"Υποκινητές αλλαγής\"},\"model\":{\"title\":\"Μοντέλο\"},\"serviceDeliveryManager\":{\"hint\":\"Ποιος είναι ο υπεύθυνος παροχής υπηρεσιών που είναι υπεύθυνος για την παρέμβαση;\",\"title\":\"Διαχειριστής παράδοσης υπηρεσιών\"},\"serviceOrganisationManager\":{\"hint\":\"Ποιος είναι ο Διαχειριστής Οργανισμού Υπηρεσιών για την Παρέμβαση;\",\"title\":\"Υπεύθυνος οργάνωσης υπηρεσιών\"},\"servicePolicyMaker\":{\"hint\":\"Ποιοι είναι ή ήταν οι καθοριστές των πολιτικών υπηρεσιών και των αρχών βάσει των οποίων λειτουργεί η υπηρεσία;\",\"title\":\"Δημιουργός πολιτικής υπηρεσιών\"},\"subjectsOfChange\":{\"hint\":\"Ποια είναι τα αναγνωρισμένα θέματα αλλαγής στην παρέμβαση;\",\"title\":\"Θέματα αλλαγής\"},\"user\":{\"hint\":\"Ποιος είναι ο άμεσος χρήστης της υπηρεσίας;\",\"title\":\"Πελάτης / Χρήστης\"},\"victims\":{\"hint\":\"Υπάρχουν αναγνωρισμένα θύματα; Εάν ναι, ποιοι είναι αυτοί;\",\"title\":\"Θύματα\"}},\"guide\":{\"step01\":\"Σε αυτό το μοντέλο, θεωρούμε μια πρωτοβουλία Cosie όσον αφορά ένα σύνολο ρόλων και τις συνομιλίες στις οποίες εμπλέκονται.\",\"step02\":\"Πρώτα έχουμε έναν παροχέα υπηρεσιών πρώτης γραμμής και έναν πελάτη.\",\"step03\":\"Ο παραδότης έχει διευθυντή ή επόπτη. Αυτό το μοτίβο ενός ατόμου που συμμετέχει σε δύο συνομιλίες θα επαναληφθεί.\",\"step04\":\"Η παράδοση πραγματοποιείται σε κάποιο επίσημο ή ανεπίσημο θεσμικό πλαίσιο.\",\"step05\":\"Τέλος, η υπηρεσία υπάρχει σε κάποια ευρύτερη ρύθμιση πολιτικής.\",\"step06\":\"Αυτό προορίζεται να είναι ένα αφηρημένο μοντέλο. Σε ορισμένες περιπτώσεις μπορεί να υπάρχει μια επίπεδη οργάνωση όπου η παράδοση, η διαχείριση και η πολιτική αναλαμβάνονται από όλα τα μέλη μιας μικρής ομάδας, σε άλλες περιπτώσεις μπορεί να αντιπροσωπεύουν ξεχωριστά άτομα και περιβάλλοντα.\",\"step07\":\"Πώς χαρτογραφούν οι έννοιες των μικρο, μεσο και μακροεντολών στην πρωτοβουλία σας;\",\"step08\":\"Πώς πραγματοποιείται η επικοινωνία μεταξύ τους;\",\"step09\":\"Πόσο συντονισμένοι και συνεκτικοί είναι;\",\"step10\":\"Συγκεκριμένα, υπάρχουν ροές πληροφοριών και συνομιλίες μεταξύ μακροεντολών και μικροϋπολογιστών που δεν διαμεσολαβούνται από το meso; Ποιες είναι οι επιπτώσεις αυτού;\",\"step11\":\"Το επόμενο μοντέλο εξετάζει το πρακτορείο αλλαγών όσον αφορά τους ρόλους και τις συνομιλίες.\",\"step12\":\"Μια αλλαγή πρέπει να υποκινηθεί και μετά να εκτελεστεί.\",\"step13\":\"Οι αλλαγές που εξετάζουμε είναι σε ένα άτομο ή σε ένα μέρος ή περιβάλλον.\",\"step14\":\"Οι αλλαγές που εξετάζουμε είναι συχνά οι ίδιες περίπλοκες και αφορούν περίπλοκες καταστάσεις. Συχνά βασίζονται σε κάποια θεωρία που έχει εισαχθεί ή μελετηθεί στην κατάσταση.\",\"step15\":\"Υπάρχει ένα σύνολο προοριζόμενων δικαιούχων.\",\"step16\":\"Υπάρχουν όμως και πιθανοί αποδέκτες ή θύματα της αλλαγής.\",\"step17\":\"Αυτό το μοντέλο έχει σχεδιαστεί ως ανιχνευτής για το αρχικό μοντέλο υπηρεσίας για τον εντοπισμό των συγκεκριμένων παραγόντων που, σε διάφορα στάδια της ανάπτυξης της πρωτοβουλίας, έχουν αναλάβει έναν ή περισσότερους από αυτούς τους ρόλους της εταιρείας αλλαγής. Ποιοι είναι αυτοί?\"},\"title\":\"Αναλυτικό μοντέλο\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Ασάφεια\",\"ambivalence\":\"Αμφιθυμία\",\"committing\":\"Δέσμευση\",\"execute\":\"Εκτέλεση\",\"first_order\":\"Πρώτη σειρά\",\"fourth_order\":\"Τέταρτη παραγγελία!\",\"languaging\":\"\\\"Γλώσσα\\\"\",\"measure\":\"Μετρήσει\",\"plan\":\"Σχέδιο\",\"risk\":\"Κίνδυνος\",\"second_order\":\"Δεύτερη παραγγελία\",\"sense_making\":\"Βγαζει νοημα\",\"third_order\":\"Τρίτη παραγγελία\",\"vision\":\"Οραμα\",\"zero_order\":\"Μηδενική παραγγελία\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Πώς εκτελείται το σχέδιο;\"},\"measure\":{\"label\":\"Πώς καταγράφονται οι παρατηρήσεις και οι μετρήσεις; Εάν όχι, τι πρέπει να ενεργοποιηθεί για να γίνει αυτό;\"},\"plan\":{\"label\":\"Πώς δημιουργήθηκε ένα σχέδιο για να παραδώσει το όραμα;\"},\"vision\":{\"label\":\"Πώς καθορίστηκαν το όραμα και οι στόχοι;\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Ποια ήταν η προέλευση της αλλαγής; Και ποια ήταν η αλλαγή;\"},\"event_cause\":{\"label\":\"Τι συνέβη για να συμβεί αυτό το συμβάν;\"},\"unexpected_events\":{\"label\":\"Υπήρξαν περιπτώσεις όπου έχετε δει απρόβλεπτα γεγονότα;\"}},\"model\":{\"title\":\"Μοντέλο\"},\"second_order\":{\"committing\":{\"label\":\"Πώς άλλαξε η παροχή υπηρεσιών της παρέμβασης από τα αρχικά της σχέδια;\"},\"languaging\":{\"label\":\"Ποιες αλλαγές έχουν γίνει στο πώς έγινε κατανοητή η παρέμβαση;\"},\"sense_making\":{\"label\":\"Πότε αναθεωρείτε τα σχέδια και το όραμα;\"}},\"third_order\":{\"processes\":{\"label\":\"Ποιες διαδικασίες προκαλούν ή επιτρέπουν τη δεύτερη ερώτηση;\"}}},\"guide\":{\"step01\":\"Ξεκινάμε με το τυπικό μοντέλο σκόπιμης δράσης με το οποίο όλοι γνωρίζουμε.\",\"step02\":\"Όμως όλοι είχαμε την εμπειρία να κοιτάξουμε πίσω και να συνειδητοποιήσουμε ότι τα πράγματα έχουν αλλάξει με έναν πολύ θεμελιώδη τρόπο: μιλάμε για τη μετατόπιση του παραδείγματος. Αυτό σημαίνει ότι έχουμε δεσμευτεί να κάνουμε νέα αίσθηση του κόσμου μας και αυτό συχνά σημαίνει ότι η γλώσσα μας αλλάζει.\",\"step03\":\"Αυτοί οι δύο διαφορετικοί τρόποι λειτουργίας μερικές φορές αναφέρονται ως πρώτη και δεύτερη σειρά.\",\"step04\":\"Από πλευράς διαχείρισης, έχουμε τη διαχείριση κινδύνων από τη μία πλευρά και την επίλυση αντιφάσεων και αμφισημιών από την άλλη.\",\"step05\":\"Παρουσιάζουμε τώρα την ιδέα των δραστηριοτήτων τρίτης τάξης που επιτρέπουν και υποστηρίζουν τις κατάλληλες μεταβάσεις μεταξύ πρώτης και δεύτερης εργασίας επιτρέποντας ένα βήμα πίσω για να επανεξετάσουμε το ήθος και τις υποθέσεις μας και, όταν έχουμε, να επιστρέψουμε στον τρόπο πρακτικού σχεδιασμού και παράδοσης.\",\"step06\":\"Μερικές φορές η αντίδραση στην ασάφεια και την αντίφαση είναι συναισθηματική: πάλη ή πτήση που είναι μηδενική τάξη, ή έμπνευση και ηρωισμός που θα ονομάσουμε τέταρτη τάξη.\",\"step07\":\"Έτσι, στη δεξιά πλευρά του διαγράμματος έχουμε το φάσμα της συναισθηματικής εργασίας και των απαντήσεων, ενώ από την αριστερή πλευρά έχουμε συμπαραγωγική, συνομιλία.\",\"step08\":\"Αυτό το μοντέλο δημιουργεί μια σειρά από ανοιχτές ερωτήσεις σχετικά με το πού πραγματοποιείται η διαφορετική εργασία πρώτης και δεύτερης τάξης στην πρωτοβουλία σας, ποια είναι η συναισθηματική εργασία και τι απαιτείται και πώς και πού γίνεται και πώς και από ποιον είναι οι απαιτούμενες παρεμβάσεις τρίτης τάξης ανέλαβε;\"},\"title\":\"Αλλαγή μοντέλου\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ήθος\",\"infrastructural_relationships\":\"Υποδομικές σχέσεις, πόροι και εγκαταστάσεις\",\"policy_law\":\"Πολιτική και νόμος\",\"resources\":\"Πόροι\",\"service_definition\":\"Πλατφόρμα ορισμού και ανάπτυξης υπηρεσιών\",\"service_delivery\":\"Πλατφόρμα παροχής υπηρεσιών\",\"structural_relationships\":\"Διαρθρωτικές σχέσεις και ευκαιρίες\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Υπάρχουν δικαιούχοι εκτός από τον άμεσο χρήστη / συμμετέχοντες Εάν ναι, ποιοι είναι αυτοί;\",\"title\":\"Δικαιούχος\"},\"delivery\":{\"hint\":\"Ποιος είναι υπεύθυνος για τους μηχανισμούς παράδοσης, τα κανάλια και τους ρόλους του πιλότου σας;\",\"title\":\"Παράδοση\"},\"deployment\":{\"hint\":\"Ποιος αναπτύσσει / αναπτύσσει και ενεργοποιεί / ενεργοποιεί αυτές τις διαδικασίες και πόρους;\",\"title\":\"Αναπληρωτής\"},\"drivers\":{\"body\":{\"hint\":\"Ποιοι είναι οι οδηγοί και τα κίνητρα;\",\"label\":\"Οδηγοί και κίνητρα\"},\"hint\":\"Ποιοι ήταν / είναι οι οδηγοί και τα κίνητρα του έργου; Ήταν μια νομική απαίτηση, η αναγνώριση μιας ανάγκης ή μιας ζήτησης, η εκμετάλλευση μιας ευκαιρίας, η αντιμετώπιση μιας ανισότητας;\",\"title\":\"Οδηγοί και κίνητρα\"},\"evaluation\":{\"hint\":\"Ποιοι είναι οι αξιολογητές και οι διοικητές της υπηρεσίας;\",\"title\":\"Αξιολογητής\"},\"extorg\":{\"hint\":\"Υπάρχουν σχετικοί παράγοντες, ενδιαφερόμενοι φορείς ή φορείς που σχετίζονται με τον πιλότο, αλλά παραμένουν εκτός του οράματος και του ήθους;\",\"title\":\"Εξωτερικοί οργανισμοί\"},\"extsvc\":{\"hint\":\"Ποιες επαναχρησιμοποιήσιμες εγκαταστάσεις, τεχνικοί και ανθρώπινοι πόροι, υπηρεσίες και πηγές πληροφοριών αναπτύχθηκαν και χρησιμοποιήθηκαν για την υποστήριξη αυτών των διαδικασιών καθορισμού και ανάπτυξης υπηρεσιών; Ποιοι εξωτερικοί πόροι και υπηρεσίες (π.χ. επικοινωνίες και κοινωνικά μέσα) χρησιμοποιήθηκαν / χρησιμοποιήθηκαν;\",\"title\":\"Εξωτερικές τεχνικές υπηρεσίες\"},\"infsvc\":{\"hint\":\"Ποιες εξωτερικές υπηρεσίες, κανάλια και εγκαταστάσεις χρησιμοποιείτε κατά την παράδοση των υπηρεσιών σας; Ποιες πηγές πληροφοριών χρησιμοποιείτε; Ποιες πληροφορίες δημοσιεύετε, σε ποιον και χρησιμοποιώντας ποια κανάλια και μέσα;\",\"title\":\"Υπηρεσίες υποδομής\"},\"initiator\":{\"hint\":\"Ποιοι είναι ή ήταν οι υποκινητές που ξεκίνησαν την πιλοτική σας δραστηριότητα;\",\"title\":\"Μυητής\"},\"model\":{\"title\":\"Μοντέλο\"},\"policyDef\":{\"hint\":\"Ποιοι είναι ή ήταν οι καθοριστές των πολιτικών υπηρεσιών και των αρχών βάσει των οποίων λειτουργεί η υπηρεσία;\",\"title\":\"Καθορισμός πολιτικής\"},\"specDes\":{\"hint\":\"Ποιος καθορίζει / καθορίζει και σχεδιάζει / σχεδιάζει τις διαδικασίες και τους πόρους παροχής υπηρεσιών;\",\"title\":\"Καθορισμός και σχεδιαστής\"},\"user\":{\"hint\":\"Ποιος είναι ο άμεσος χρήστης της υπηρεσίας;\",\"title\":\"Χρήστης\"}},\"title\":\"Συν-Δημιουργία Μοντέλου Υπηρεσίας\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Δεν υπάρχουν στοιχεία αναφοράς κοινότητας για αυτό το έργο.\",\"manage\":\"Διαχείριση κοινοτικών αναφορών\",\"title\":\"Αναφορά κοινότητας\"},\"definitions\":{\"data\":{\"hint\":\"Προσθέστε τυχόν Αναφορές κοινότητας που μπορεί να έχει το έργο σας.\",\"title\":\"Αναφορά κοινότητας\"}},\"title\":\"Αναφορά κοινότητας\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Δεν υπάρχουν έγγραφα ή αρχεία για αυτό το έργο.\",\"manage\":\"Διαχείριση εγγράφων και αρχείων\",\"title\":\"Έγγραφα και αρχεία\"},\"definitions\":{\"data\":{\"hint\":\"Προσθέστε τυχόν έγγραφα και αρχεία που μπορεί να έχει το έργο σας.\",\"title\":\"Έγγραφα και αρχεία\"}},\"title\":\"Εγγραφα\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Ευεξία\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Ποιες πτυχές του κύκλου ζωής των υπηρεσιών είναι σημαντικές για την καινοτομία και την αλλαγή σας;\"},\"title\":\"Καινοτομία και αλλαγή\"},\"intervention\":{\"items\":{\"label\":\"Τι είδους παρέμβαση λαμβάνει χώρα;\"},\"title\":\"Παρέμβαση\"},\"learning\":{\"items\":{\"label\":\"Πώς συμβαίνει η μάθηση στην παρέμβασή σας;\"},\"title\":\"Μάθηση\"},\"model\":{\"title\":\"Μοντέλο\"},\"wellbeing\":{\"items\":{\"label\":\"Ποιες πτυχές της ανθρώπινης ευημερίας και του περιβάλλοντος σχετίζονται με την υπηρεσία σας; Είναι μερικά πιο σημαντικά από άλλα;\"},\"title\":\"Ανθρώπινη ευημερία και περιβάλλον\"}},\"guide\":{\"step01\":\"Οι συν-δημιουργικές πρωτοβουλίες που εξετάζουμε αφορούν όλες τη βελτίωση και την ανάπτυξη της ευημερίας. Εδώ εξετάζουμε την ευημερία των ατόμων, αλλά αυτό μπορεί να εφαρμοστεί σε μέρη ή σε ευρύτερα περιβάλλοντα.\",\"step02\":\"Η ευεξία έχει μια σειρά από διαφορετικές πτυχές που είναι όλες αλληλεξαρτώμενες.\",\"step03\":\"Αλληλεπιδρά επίσης με το φυσικό και κοινωνικό περιβάλλον.\",\"step04\":\"Ορισμένες υπηρεσίες ή παρεμβάσεις αφορούν την επιδιόρθωση κάτι που έχει πάει στραβά και την αποκατάσταση του status quo.\",\"step05\":\"Υπάρχουν όμως και άλλοι σκοποί για παρεμβάσεις.\",\"step06\":\"Η διαδικασία παρέμβασης περιλαμβάνει διάφορα διαφορετικά στάδια και διαδικασίες.\",\"step07\":\"Τέλος, για να διατηρηθούν οι καινοτομίες μας, πρέπει να μάθουμε και να βελτιώσουμε.\",\"step08\":\"Ποιος, τι ή πού είναι ο στόχος της παρέμβασής σας;\",\"step09\":\"Ποιες πτυχές της ευημερίας είναι το επίκεντρο της πρωτοβουλίας σας;\",\"step10\":\"Ποιες πτυχές της ευημερίας του αντικειμένου σας είναι σχετικές αλλά εκτός του πεδίου της πρωτοβουλίας σας;\",\"step11\":\"Ποιες είναι οι σχετικές περιβαλλοντικές πτυχές;\",\"step12\":\"Ποιοι συνδυασμοί παρεμβάσεων, από την πρόληψη έως τον μετασχηματισμό, σχετίζονται με την πρωτοβουλία σας;\",\"step13\":\"Σε ποιο βαθμό ενσωματώνεται η μάθηση και η βελτίωση στην αναπτυξιακή σας διακυβέρνηση και διαδικασίες παράδοσης;\"},\"options\":{\"innovation\":{\"development\":\"Ανάπτυξη\",\"facilitation\":\"Διευκόλυνση\",\"palliation\":\"Ανακούφιση\",\"prevention\":\"Πρόληψη\",\"rehabilitation\":\"Αναμόρφωση\",\"remedy\":\"Θεραπεία\",\"transformation\":\"Μεταμόρφωση\"},\"intervention\":{\"coordination_delivery\":\"Συντονισμός & παράδοση\",\"governance\":\"Διακυβέρνηση\",\"identification\":\"Αναγνώριση & σχεδιασμός\",\"learning\":\"Μάθηση\",\"management\":\"Διαχείριση\"},\"learning\":{\"research_evidence\":\"Έρευνα & στοιχεία\",\"service_improvement\":\"Βελτίωση υπηρεσιών\",\"trials\":\"Δοκιμές\"},\"wellbeing\":{\"faculties_skills\":\"Σχολές και δεξιότητες\",\"mental_psych\":\"Ψυχολογική και ψυχολογική\",\"physical_env\":\"Φυσικό περιβάλλον\",\"physiological\":\"Φυσιολογικός\",\"socio_cultural_env\":\"Κοινωνικοπολιτισμικό περιβάλλον\",\"socio_economic\":\"Κοινωνικοοικονομικό\"}},\"title\":\"Μοντέλο Θεωρίας Παρέμβασης\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Ορίστε το Ethos\",\"define_ethos_items\":\"Αξίες\\n Αρχές\\n Προθέσεις\\n Πολιτικές\",\"deliver\":\"Παραδίδω\",\"experience\":\"Εμπειρία\",\"govern\":\"Κυβερνώ\",\"individual_cases\":\"Μεμονωμένες περιπτώσεις\",\"plan_manage\":\"Σχεδιάστε και διαχειριστείτε\",\"plan_manage_items\":\"Κανόνες\\n Πόροι\\n Διαδικασίες\\n Λογαριασμοί\",\"the_service_level\":\"Το επίπεδο εξυπηρέτησης\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Πώς καθορίζονται αυτές οι τιμές;\"},\"evidenceUrl\":{\"label\":\"Ποια (εξωτερικά) αποδεικτικά στοιχεία είναι διαθέσιμα για την υποστήριξη αυτού;\"},\"title\":\"Ορίστε το Ethos\",\"values\":{\"label\":\"Ποιες τιμές είναι σημαντικές για την αντιμετώπιση της παρέμβασης;\"}},\"deliver\":{\"actors\":{\"label\":\"Από ποιον παραδίδεται;\"},\"evidenceUrl\":{\"label\":\"Ποια (εξωτερικά) αποδεικτικά στοιχεία είναι διαθέσιμα για την υποστήριξη αυτού;\"},\"method\":{\"label\":\"Πώς παρέχεται η παρέμβαση;\"},\"title\":\"Παραδίδω\"},\"govern\":{\"actions\":{\"label\":\"Πώς διέπεται η παρέμβαση; Ποια μέτρα έχουν τεθεί σε εφαρμογή για να διασφαλιστεί ότι τα αποτελέσματα ήταν όπως είχαν προβλεφθεί;\"},\"actors\":{\"label\":\"Ποιος το αξιολογεί;\"},\"evolution\":{\"label\":\"Πώς επηρεάζει αυτό την εξέλιξη της υπηρεσίας;\"},\"improvements\":{\"label\":\"Πώς αναγνωρίζονται οι βελτιώσεις; Πώς εφαρμόζονται;\"},\"outcomes\":{\"label\":\"Τα αποτελέσματα ενσωματώνονται σε στόχους και μετρήσεις; Και αν ναι, ποιος;\"},\"title\":\"Κυβερνώ\"},\"model\":{\"title\":\"Μοντέλο\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Ποιες ενέργειες αναλαμβάνονται τώρα στον πιλότο;\"},\"actors\":{\"label\":\"Ποιες είναι οι τρέχουσες ενέργειες που λαμβάνονται;\"},\"evidenceUrl\":{\"label\":\"Ποια (εξωτερικά) αποδεικτικά στοιχεία είναι διαθέσιμα για την υποστήριξη αυτού;\"},\"title\":\"Σχεδιασμός και διαχείριση - Τρέχουσες ενέργειες\"},\"planManagePrior\":{\"actions\":{\"label\":\"Ποιες ενέργειες είχαν αναληφθεί πριν από την παρέμβαση;\"},\"actors\":{\"label\":\"Ποιος συμμετείχε σε αυτές τις προηγούμενες ενέργειες;\"},\"evidenceUrl\":{\"label\":\"Ποια (εξωτερικά) αποδεικτικά στοιχεία είναι διαθέσιμα για την υποστήριξη αυτού;\"},\"title\":\"Σχεδιασμός και διαχείριση - Προηγούμενες ενέργειες\"}},\"guide\":{\"step01\":\"Υπάρχουν πολλές βασικές διαδικασίες που εμπλέκονται σε μια συν-δημιουργική καινοτομία. Το πρώτο αφορά τον ορισμό του ήθους.\",\"step02\":\"Το δεύτερο περιλαμβάνει δραστηριότητες διαχείρισης και προϊόντα.\",\"step03\":\"Η ηθική τάξη ασχολείται με το ποιος μπορεί να συμμετάσχει σε δραστηριότητες, οπότε, στην περίπτωση της πρωτοβουλίας σας, ποιος εμπλέκεται σε αυτές τις διαδικασίες; Πού και πότε πραγματοποιούνται; Πώς επικοινωνούν και πώς καταγράφονται;\",\"step04\":\"Ως αποτέλεσμα της ηγεσίας, του σχεδιασμού και του σχεδιασμού, οι υπηρεσίες ή οι πρωτοβουλίες παρέχονται και βιώνονται.\",\"step05\":\"Και πάλι ποιος ασχολείται εδώ και συμμετέχει στις δύο πρώτες ομάδες δραστηριοτήτων;\",\"step06\":\"Αντί να κλείσουμε απλώς το βρόχο με μια απλή διαδικασία αξιολόγησης, προτείνουμε ότι, σε συστήματα συμπαραγωγικής ευημερίας και φροντίδας, η διακυβέρνηση περιλαμβάνει όλους τους συμμετέχοντες στις σχέσεις που προσδιορίζονται εδώ, συμμετοχή στην αντιμετώπιση των ερωτήσεων που ορίζονται στο μοντέλο ηθικής παραγγελίας.\",\"step07\":\"Η διακυβέρνηση πραγματοποιείται σε επίπεδο σχέσης πελάτη μεμονωμένων υπηρεσιών.\",\"step08\":\"Πραγματοποιείται επίσης σε γενικό επίπεδο υπηρεσίας.\",\"step09\":\"Πώς πραγματοποιούνται οι διαδικασίες διακυβέρνησης, υπό την έννοια που τις περιγράφουμε εδώ, στην πρωτοβουλία σας;\"},\"options\":{\"sources\":{\"meeting\":\"Συνάντηση\",\"other\":\"Αλλα\",\"policy\":\"Πολιτική\"}},\"title\":\"Ηθική παραγγελία\"},\"social_media\":{\"dashboard\":{\"title\":\"Μεσα ΚΟΙΝΩΝΙΚΗΣ ΔΙΚΤΥΩΣΗΣ\"},\"definitions\":{\"data\":{\"title\":\"Μεσα ΚΟΙΝΩΝΙΚΗΣ ΔΙΚΤΥΩΣΗΣ\"}},\"title\":\"Μεσα ΚΟΙΝΩΝΙΚΗΣ ΔΙΚΤΥΩΣΗΣ\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Δεν υπάρχουν θεωρίες αλλαγής στοιχείων για αυτό το έργο.\",\"manage\":\"Διαχειριστείτε τη θεωρία της αλλαγής\",\"title\":\"Θεωρία της Αλλαγής\"},\"definitions\":{\"data\":{\"hint\":\"Προσθέστε τυχόν θεωρίες αλλαγής που μπορεί να έχει το έργο σας.\",\"title\":\"Θεωρία της Αλλαγής\"}},\"title\":\"Θεωρία της Αλλαγής\"},\"welcome\":{\"dashboard\":{\"summary\":\"Δημιουργήθηκε από {user} στις {date_time}\"},\"title\":\"καλως ΗΡΘΑΤΕ\"}},\"hints\":{\"editor_double_click_edit\":\"Κάντε διπλό κλικ σε ένα στοιχείο για να το επεξεργαστείτε και εισαγάγετε για αποθήκευση\",\"social_facebook_add\":\"Προσθέστε πλήρεις συνδέσμους (URL) σε ομάδες ή σελίδες Facebook.\",\"social_instagram_add\":\"Εισαγάγετε ένα hashtag Instagram, με ή χωρίς το #. Πατήστε enter για προσθήκη.\",\"social_twitter_add\":\"Εισαγάγετε ένα hashtag Twitter, με ή χωρίς το #. Πατήστε enter για προσθήκη.\",\"social_youtube_add\":\"Εισαγάγετε έναν σύνδεσμο για ένα βίντεο YouTube και πατήστε enter για προσθήκη\",\"type_and_enter\":\"Πληκτρολογήστε το παρακάτω όνομα και πατήστε enter.\"},\"languages\":{\"de\":\"Γερμανός\",\"el\":\"Ελληνικά\",\"en_GB\":\"Αγγλικά\",\"es\":\"Ισπανικά\",\"et\":\"Εσθονικά\",\"fi\":\"φινλανδικός\",\"fr\":\"γαλλική γλώσσα\",\"hu\":\"ουγγρικός\",\"it\":\"ιταλικός\",\"nl\":\"Ολλανδός\",\"pl\":\"Στίλβωση\",\"sv_SE\":\"Σουηδικά\"},\"user_guide\":{\"back\":\"Πίσω\",\"close\":\"Κλείσε\",\"next\":\"Επόμενο\",\"show\":\"Εμφάνιση οδηγού χρήστη\",\"skip\":\"Παράλειψη οδηγού χρήστη\"}}");
+module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Οργάνωση\",\"service\":\"Υπηρεσία\",\"user\":\"Χρήστης\"},\"app\":{\"add_new_actor\":\"Προσθήκη νέου ηθοποιού\",\"add_new_item\":\"Προσθήκη νέου αντικειμένου\",\"all\":\"Ολα\",\"colour\":\"Χρώμα\",\"country\":\"Χώρα\",\"create\":\"Δημιουργώ\",\"created_by\":\"Δημιουργήθηκε από\",\"delete\":\"Διαγράφω\",\"description\":\"Περιγραφή\",\"download\":\"Κατεβάστε\",\"error\":\"Λάθος\",\"error_message\":\"Σφάλμα: {message}\",\"export\":\"Εξαγωγή\",\"exporting\":\"Εξαγωγή\",\"exporting_project\":\"Εξαγωγή έργου\",\"image\":\"Εικόνα\",\"image_drag_prompt\":\"Σύρετε την εικόνα σας εδώ για να ξεκινήσετε ή κάντε κλικ για περιήγηση.\",\"image_is_uploading\":\"Μεταφόρτωση εικόνας\",\"image_remove\":\"Αφαιρέστε την εικόνα\",\"image_upload_error\":\"Σφάλμα μεταφόρτωσης\",\"import\":\"Εισαγωγή\",\"import_project\":\"Εισαγωγή έργου\",\"import_project_drag_hint\":\"Σύρετε το έργο CoSMoS εδώ για να ξεκινήσετε ή κάντε κλικ για περιήγηση.\",\"import_project_notes\":\"Σημείωση: Θα είστε ο κάτοχος του έργου που εισάγεται.\",\"import_project_success\":\"Το έργο εισήχθη με επιτυχία!\",\"just_mine\":\"Μόνο δικό μου\",\"label\":\"Επιγραφή\",\"last_saved_at\":\"Τελευταία αποθήκευση στις {date_time}\",\"log_in\":\"Σύνδεση\",\"maximum_items\":\"Μέγιστο {count} αντικείμενα | Μέγιστο {count} αντικείμενο | Μέγιστα {count} στοιχεία\",\"models\":\"Μοντέλα\",\"more_details\":\"Περισσότερες λεπτομέρειες\",\"name\":\"Ονομα\",\"new_project\":\"Δημιουργήστε νέο έργο\",\"next\":\"Επόμενο\",\"no_projects\":\"Δεν βρέθηκαν έργα.\",\"ok\":\"Εντάξει\",\"open_project\":\"Ανοιχτό έργο\",\"please_wait_generate\":\"Περιμένετε έως ότου δημιουργείται το αρχείο.\",\"processing\":\"Επεξεργασία\",\"project\":\"Εργο\",\"project_save_success\":\"Το έργο αποθηκεύτηκε!\",\"save\":\"Σώσει\",\"saving\":\"Οικονομία\",\"scale_to_fit\":\"Κλίμακα για εφαρμογή\",\"search\":\"Αναζήτηση\",\"title\":\"Τίτλος\",\"to_create_project\":\"για να δημιουργήσετε ένα έργο.\",\"try_again\":\"Προσπάθησε ξανά\",\"type\":\"Τύπος\",\"user_is_read_only\":\"Το επίπεδο πρόσβασης χρήστη είναι μόνο για ανάγνωση.\",\"web_address\":\"ηλεκτρονική διεύθυνση\",\"which_country\":\"Απο ποια χώρα είσαι?\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Μακροεντολή\"},\"meso\":{\"description\":\"Μπορεί να υπάρχουν διάφορα στάδια σε αυτό το επίπεδο.\",\"label\":\"Μέσο\"},\"micro\":{\"label\":\"Μικρο\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Υπάρχουν δικαιούχοι εκτός από τον άμεσο χρήστη / συμμετέχοντες Εάν ναι, ποιοι είναι αυτοί;\",\"title\":\"Δικαιούχοι\"},\"broker\":{\"hint\":\"Υπάρχει ενεργός μεσίτης μεταξύ των υποκινητών αλλαγής και αλλαγών; Εάν ναι, ποιοι είναι αυτοί;\",\"title\":\"Μεσίτης\"},\"changeMakers\":{\"hint\":\"Ποιοι είναι ή ήταν οι ηθικοί αυτουργοί που ξεκίνησαν την παρέμβασή σας;\",\"title\":\"Αλλαγή κατασκευαστών\"},\"changeTheorists\":{\"hint\":\"Ποιοι είναι οι θεωρητικοί της αλλαγής για την παρέμβαση;\",\"title\":\"Αλλαγή θεωρητικών\"},\"frontLineServiceDeliverer\":{\"hint\":\"Ποιος είναι ο πρώτος παράγοντας υπηρεσιών;\",\"title\":\"Παράδοση υπηρεσιών πρώτης γραμμής\"},\"instigatorsOfChange\":{\"hint\":\"Ποιοι είναι ή ήταν οι ηθικοί αυτουργοί που ξεκίνησαν την παρέμβαση σας;\",\"title\":\"Υποκινητές αλλαγής\"},\"model\":{\"title\":\"Μοντέλο\"},\"serviceDeliveryManager\":{\"hint\":\"Ποιος είναι ο υπεύθυνος παροχής υπηρεσιών που είναι υπεύθυνος για την παρέμβαση;\",\"title\":\"Διαχειριστής παράδοσης υπηρεσιών\"},\"serviceOrganisationManager\":{\"hint\":\"Ποιος είναι ο Διαχειριστής Οργανισμού Υπηρεσιών για την Παρέμβαση;\",\"title\":\"Υπεύθυνος οργάνωσης υπηρεσιών\"},\"servicePolicyMaker\":{\"hint\":\"Ποιοι είναι ή ήταν οι καθοριστές των πολιτικών υπηρεσιών και των αρχών βάσει των οποίων λειτουργεί η υπηρεσία;\",\"title\":\"Δημιουργός πολιτικής υπηρεσιών\"},\"subjectsOfChange\":{\"hint\":\"Ποια είναι τα αναγνωρισμένα θέματα αλλαγής στην παρέμβαση;\",\"title\":\"Θέματα αλλαγής\"},\"user\":{\"hint\":\"Ποιος είναι ο άμεσος χρήστης της υπηρεσίας;\",\"title\":\"Πελάτης / Χρήστης\"},\"victims\":{\"hint\":\"Υπάρχουν αναγνωρισμένα θύματα; Εάν ναι, ποιοι είναι αυτοί;\",\"title\":\"Θύματα\"}},\"guide\":{\"step01\":\"Σε αυτό το μοντέλο, θεωρούμε μια πρωτοβουλία Cosie όσον αφορά ένα σύνολο ρόλων και τις συνομιλίες στις οποίες εμπλέκονται.\",\"step02\":\"Πρώτα έχουμε έναν παροχέα υπηρεσιών πρώτης γραμμής και έναν πελάτη.\",\"step03\":\"Ο παραδότης έχει διευθυντή ή επόπτη. Αυτό το μοτίβο ενός ατόμου που συμμετέχει σε δύο συνομιλίες θα επαναληφθεί.\",\"step04\":\"Η παράδοση πραγματοποιείται σε κάποιο επίσημο ή ανεπίσημο θεσμικό πλαίσιο.\",\"step05\":\"Τέλος, η υπηρεσία υπάρχει σε κάποια ευρύτερη ρύθμιση πολιτικής.\",\"step06\":\"Αυτό προορίζεται να είναι ένα αφηρημένο μοντέλο. Σε ορισμένες περιπτώσεις μπορεί να υπάρχει μια επίπεδη οργάνωση όπου η παράδοση, η διαχείριση και η πολιτική αναλαμβάνονται από όλα τα μέλη μιας μικρής ομάδας, σε άλλες περιπτώσεις μπορεί να αντιπροσωπεύουν ξεχωριστά άτομα και περιβάλλοντα.\",\"step07\":\"Πώς χαρτογραφούν οι έννοιες των μικρο, μεσο και μακροεντολών στην πρωτοβουλία σας;\",\"step08\":\"Πώς πραγματοποιείται η επικοινωνία μεταξύ τους;\",\"step09\":\"Πόσο συντονισμένοι και συνεκτικοί είναι;\",\"step10\":\"Συγκεκριμένα, υπάρχουν ροές πληροφοριών και συνομιλίες μεταξύ μακροεντολών και μικροϋπολογιστών που δεν διαμεσολαβούνται από το meso; Ποιες είναι οι επιπτώσεις αυτού;\",\"step11\":\"Το επόμενο μοντέλο εξετάζει το πρακτορείο αλλαγών όσον αφορά τους ρόλους και τις συνομιλίες.\",\"step12\":\"Μια αλλαγή πρέπει να υποκινηθεί και μετά να εκτελεστεί.\",\"step13\":\"Οι αλλαγές που εξετάζουμε είναι σε ένα άτομο ή σε ένα μέρος ή περιβάλλον.\",\"step14\":\"Οι αλλαγές που εξετάζουμε είναι συχνά οι ίδιες περίπλοκες και αφορούν περίπλοκες καταστάσεις. Συχνά βασίζονται σε κάποια θεωρία που έχει εισαχθεί ή μελετηθεί στην κατάσταση.\",\"step15\":\"Υπάρχει ένα σύνολο προοριζόμενων δικαιούχων.\",\"step16\":\"Υπάρχουν όμως και πιθανοί αποδέκτες ή θύματα της αλλαγής.\",\"step17\":\"Αυτό το μοντέλο έχει σχεδιαστεί ως ανιχνευτής για το αρχικό μοντέλο υπηρεσίας για τον εντοπισμό των συγκεκριμένων παραγόντων που, σε διάφορα στάδια της ανάπτυξης της πρωτοβουλίας, έχουν αναλάβει έναν ή περισσότερους από αυτούς τους ρόλους της εταιρείας αλλαγής. Ποιοι είναι αυτοί?\"},\"title\":\"Αναλυτικό μοντέλο\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Ασάφεια\",\"ambivalence\":\"Αμφιθυμία\",\"committing\":\"Δέσμευση\",\"execute\":\"Εκτέλεση\",\"first_order\":\"Πρώτη σειρά\",\"fourth_order\":\"Τέταρτη παραγγελία!\",\"languaging\":\"\\\"Γλώσσα\\\"\",\"measure\":\"Μετρήσει\",\"plan\":\"Σχέδιο\",\"risk\":\"Κίνδυνος\",\"second_order\":\"Δεύτερη παραγγελία\",\"sense_making\":\"Βγαζει νοημα\",\"third_order\":\"Τρίτη παραγγελία\",\"vision\":\"Οραμα\",\"zero_order\":\"Μηδενική παραγγελία\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Πώς εκτελείται το σχέδιο;\"},\"measure\":{\"label\":\"Πώς καταγράφονται οι παρατηρήσεις και οι μετρήσεις; Εάν όχι, τι πρέπει να ενεργοποιηθεί για να γίνει αυτό;\"},\"plan\":{\"label\":\"Πώς δημιουργήθηκε ένα σχέδιο για να παραδώσει το όραμα;\"},\"vision\":{\"label\":\"Πώς καθορίστηκαν το όραμα και οι στόχοι;\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Ποια ήταν η προέλευση της αλλαγής; Και ποια ήταν η αλλαγή;\"},\"event_cause\":{\"label\":\"Τι συνέβη για να συμβεί αυτό το συμβάν;\"},\"unexpected_events\":{\"label\":\"Υπήρξαν περιπτώσεις όπου έχετε δει απρόβλεπτα γεγονότα;\"}},\"model\":{\"title\":\"Μοντέλο\"},\"second_order\":{\"committing\":{\"label\":\"Πώς άλλαξε η παροχή υπηρεσιών της παρέμβασης από τα αρχικά της σχέδια;\"},\"languaging\":{\"label\":\"Ποιες αλλαγές έχουν γίνει στο πώς έγινε κατανοητή η παρέμβαση;\"},\"sense_making\":{\"label\":\"Πότε αναθεωρείτε τα σχέδια και το όραμα;\"}},\"third_order\":{\"processes\":{\"label\":\"Ποιες διαδικασίες προκαλούν ή επιτρέπουν τη δεύτερη ερώτηση;\"}}},\"guide\":{\"step01\":\"Ξεκινάμε με το τυπικό μοντέλο σκόπιμης δράσης με το οποίο όλοι γνωρίζουμε.\",\"step02\":\"Όμως όλοι είχαμε την εμπειρία να κοιτάξουμε πίσω και να συνειδητοποιήσουμε ότι τα πράγματα έχουν αλλάξει με έναν πολύ θεμελιώδη τρόπο: μιλάμε για τη μετατόπιση του παραδείγματος. Αυτό σημαίνει ότι έχουμε δεσμευτεί να κάνουμε νέα αίσθηση του κόσμου μας και αυτό συχνά σημαίνει ότι η γλώσσα μας αλλάζει.\",\"step03\":\"Αυτοί οι δύο διαφορετικοί τρόποι λειτουργίας μερικές φορές αναφέρονται ως πρώτη και δεύτερη σειρά.\",\"step04\":\"Από πλευράς διαχείρισης, έχουμε τη διαχείριση κινδύνων από τη μία πλευρά και την επίλυση αντιφάσεων και αμφισημιών από την άλλη.\",\"step05\":\"Παρουσιάζουμε τώρα την ιδέα των δραστηριοτήτων τρίτης τάξης που επιτρέπουν και υποστηρίζουν τις κατάλληλες μεταβάσεις μεταξύ πρώτης και δεύτερης εργασίας επιτρέποντας ένα βήμα πίσω για να επανεξετάσουμε το ήθος και τις υποθέσεις μας και, όταν έχουμε, να επιστρέψουμε στον τρόπο πρακτικού σχεδιασμού και παράδοσης.\",\"step06\":\"Μερικές φορές η αντίδραση στην ασάφεια και την αντίφαση είναι συναισθηματική: πάλη ή πτήση που είναι μηδενική τάξη, ή έμπνευση και ηρωισμός που θα ονομάσουμε τέταρτη τάξη.\",\"step07\":\"Έτσι, στη δεξιά πλευρά του διαγράμματος έχουμε το φάσμα της συναισθηματικής εργασίας και των απαντήσεων, ενώ από την αριστερή πλευρά έχουμε συμπαραγωγική, συνομιλία.\",\"step08\":\"Αυτό το μοντέλο δημιουργεί μια σειρά από ανοιχτές ερωτήσεις σχετικά με το πού πραγματοποιείται η διαφορετική εργασία πρώτης και δεύτερης τάξης στην πρωτοβουλία σας, ποια είναι η συναισθηματική εργασία και τι απαιτείται και πώς και πού γίνεται και πώς και από ποιον είναι οι απαιτούμενες παρεμβάσεις τρίτης τάξης ανέλαβε;\"},\"title\":\"Αλλαγή μοντέλου\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ήθος\",\"infrastructural_relationships\":\"Υποδομικές σχέσεις, πόροι και εγκαταστάσεις\",\"policy_law\":\"Πολιτική και νόμος\",\"resources\":\"Πόροι\",\"service_definition\":\"Πλατφόρμα ορισμού και ανάπτυξης υπηρεσιών\",\"service_delivery\":\"Πλατφόρμα παροχής υπηρεσιών\",\"structural_relationships\":\"Διαρθρωτικές σχέσεις και ευκαιρίες\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Υπάρχουν δικαιούχοι εκτός από τον άμεσο χρήστη / συμμετέχοντες Εάν ναι, ποιοι είναι αυτοί;\",\"title\":\"Δικαιούχος\"},\"delivery\":{\"hint\":\"Ποιος είναι υπεύθυνος για τους μηχανισμούς παράδοσης, τα κανάλια και τους ρόλους του πιλότου σας;\",\"title\":\"Παράδοση\"},\"deployment\":{\"hint\":\"Ποιος αναπτύσσει / αναπτύσσει και ενεργοποιεί / ενεργοποιεί αυτές τις διαδικασίες και πόρους;\",\"title\":\"Αναπληρωτής\"},\"drivers\":{\"body\":{\"hint\":\"Ποιοι είναι οι οδηγοί και τα κίνητρα;\",\"label\":\"Οδηγοί και κίνητρα\"},\"hint\":\"Ποιοι ήταν / είναι οι οδηγοί και τα κίνητρα του έργου; Ήταν μια νομική απαίτηση, η αναγνώριση μιας ανάγκης ή μιας ζήτησης, η εκμετάλλευση μιας ευκαιρίας, η αντιμετώπιση μιας ανισότητας;\",\"title\":\"Οδηγοί και κίνητρα\"},\"evaluation\":{\"hint\":\"Ποιοι είναι οι αξιολογητές και οι διοικητές της υπηρεσίας;\",\"title\":\"Αξιολογητής\"},\"extorg\":{\"hint\":\"Υπάρχουν σχετικοί παράγοντες, ενδιαφερόμενοι φορείς ή φορείς που σχετίζονται με τον πιλότο, αλλά παραμένουν εκτός του οράματος και του ήθους;\",\"title\":\"Εξωτερικοί οργανισμοί\"},\"extsvc\":{\"hint\":\"Ποιες επαναχρησιμοποιήσιμες εγκαταστάσεις, τεχνικοί και ανθρώπινοι πόροι, υπηρεσίες και πηγές πληροφοριών αναπτύχθηκαν και χρησιμοποιήθηκαν για την υποστήριξη αυτών των διαδικασιών καθορισμού και ανάπτυξης υπηρεσιών; Ποιοι εξωτερικοί πόροι και υπηρεσίες (π.χ. επικοινωνίες και κοινωνικά μέσα) χρησιμοποιήθηκαν / χρησιμοποιήθηκαν;\",\"title\":\"Εξωτερικές τεχνικές υπηρεσίες\"},\"infsvc\":{\"hint\":\"Ποιες εξωτερικές υπηρεσίες, κανάλια και εγκαταστάσεις χρησιμοποιείτε κατά την παράδοση των υπηρεσιών σας; Ποιες πηγές πληροφοριών χρησιμοποιείτε; Ποιες πληροφορίες δημοσιεύετε, σε ποιον και χρησιμοποιώντας ποια κανάλια και μέσα;\",\"title\":\"Υπηρεσίες υποδομής\"},\"initiator\":{\"hint\":\"Ποιοι είναι ή ήταν οι υποκινητές που ξεκίνησαν την πιλοτική σας δραστηριότητα;\",\"title\":\"Μυητής\"},\"model\":{\"title\":\"Μοντέλο\"},\"policyDef\":{\"hint\":\"Ποιοι είναι ή ήταν οι καθοριστές των πολιτικών υπηρεσιών και των αρχών βάσει των οποίων λειτουργεί η υπηρεσία;\",\"title\":\"Καθορισμός πολιτικής\"},\"specDes\":{\"hint\":\"Ποιος καθορίζει / καθορίζει και σχεδιάζει / σχεδιάζει τις διαδικασίες και τους πόρους παροχής υπηρεσιών;\",\"title\":\"Καθορισμός και σχεδιαστής\"},\"user\":{\"hint\":\"Ποιος είναι ο άμεσος χρήστης της υπηρεσίας;\",\"title\":\"Χρήστης\"}},\"title\":\"Συν-Δημιουργία Μοντέλου Υπηρεσίας\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Δεν υπάρχουν στοιχεία αναφοράς κοινότητας για αυτό το έργο.\",\"manage\":\"Διαχείριση κοινοτικών αναφορών\",\"title\":\"Αναφορά κοινότητας\"},\"definitions\":{\"data\":{\"hint\":\"Προσθέστε τυχόν Αναφορές κοινότητας που μπορεί να έχει το έργο σας.\",\"title\":\"Αναφορά κοινότητας\"}},\"title\":\"Αναφορά κοινότητας\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Δεν υπάρχουν έγγραφα ή αρχεία για αυτό το έργο.\",\"manage\":\"Διαχείριση εγγράφων και αρχείων\",\"title\":\"Έγγραφα και αρχεία\"},\"definitions\":{\"data\":{\"hint\":\"Προσθέστε τυχόν έγγραφα και αρχεία που μπορεί να έχει το έργο σας.\",\"title\":\"Έγγραφα και αρχεία\"}},\"title\":\"Εγγραφα\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Ευεξία\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Ποιες πτυχές του κύκλου ζωής των υπηρεσιών είναι σημαντικές για την καινοτομία και την αλλαγή σας;\"},\"title\":\"Καινοτομία και αλλαγή\"},\"intervention\":{\"items\":{\"label\":\"Τι είδους παρέμβαση λαμβάνει χώρα;\"},\"title\":\"Παρέμβαση\"},\"learning\":{\"items\":{\"label\":\"Πώς συμβαίνει η μάθηση στην παρέμβασή σας;\"},\"title\":\"Μάθηση\"},\"model\":{\"title\":\"Μοντέλο\"},\"wellbeing\":{\"items\":{\"label\":\"Ποιες πτυχές της ανθρώπινης ευημερίας και του περιβάλλοντος σχετίζονται με την υπηρεσία σας; Είναι μερικά πιο σημαντικά από άλλα;\"},\"title\":\"Ανθρώπινη ευημερία και περιβάλλον\"}},\"guide\":{\"step01\":\"Οι συν-δημιουργικές πρωτοβουλίες που εξετάζουμε αφορούν όλες τη βελτίωση και την ανάπτυξη της ευημερίας. Εδώ εξετάζουμε την ευημερία των ατόμων, αλλά αυτό μπορεί να εφαρμοστεί σε μέρη ή σε ευρύτερα περιβάλλοντα.\",\"step02\":\"Η ευεξία έχει μια σειρά από διαφορετικές πτυχές που είναι όλες αλληλεξαρτώμενες.\",\"step03\":\"Αλληλεπιδρά επίσης με το φυσικό και κοινωνικό περιβάλλον.\",\"step04\":\"Ορισμένες υπηρεσίες ή παρεμβάσεις αφορούν την επιδιόρθωση κάτι που έχει πάει στραβά και την αποκατάσταση του status quo.\",\"step05\":\"Υπάρχουν όμως και άλλοι σκοποί για παρεμβάσεις.\",\"step06\":\"Η διαδικασία παρέμβασης περιλαμβάνει διάφορα διαφορετικά στάδια και διαδικασίες.\",\"step07\":\"Τέλος, για να διατηρηθούν οι καινοτομίες μας, πρέπει να μάθουμε και να βελτιώσουμε.\",\"step08\":\"Ποιος, τι ή πού είναι ο στόχος της παρέμβασής σας;\",\"step09\":\"Ποιες πτυχές της ευημερίας είναι το επίκεντρο της πρωτοβουλίας σας;\",\"step10\":\"Ποιες πτυχές της ευημερίας του αντικειμένου σας είναι σχετικές αλλά εκτός του πεδίου της πρωτοβουλίας σας;\",\"step11\":\"Ποιες είναι οι σχετικές περιβαλλοντικές πτυχές;\",\"step12\":\"Ποιοι συνδυασμοί παρεμβάσεων, από την πρόληψη έως τον μετασχηματισμό, σχετίζονται με την πρωτοβουλία σας;\",\"step13\":\"Σε ποιο βαθμό ενσωματώνεται η μάθηση και η βελτίωση στην αναπτυξιακή σας διακυβέρνηση και διαδικασίες παράδοσης;\"},\"options\":{\"innovation\":{\"development\":\"Ανάπτυξη\",\"facilitation\":\"Διευκόλυνση\",\"palliation\":\"Ανακούφιση\",\"prevention\":\"Πρόληψη\",\"rehabilitation\":\"Αναμόρφωση\",\"remedy\":\"Θεραπεία\",\"transformation\":\"Μεταμόρφωση\"},\"intervention\":{\"coordination_delivery\":\"Συντονισμός & παράδοση\",\"governance\":\"Διακυβέρνηση\",\"identification\":\"Αναγνώριση & σχεδιασμός\",\"learning\":\"Μάθηση\",\"management\":\"Διαχείριση\"},\"learning\":{\"research_evidence\":\"Έρευνα & στοιχεία\",\"service_improvement\":\"Βελτίωση υπηρεσιών\",\"trials\":\"Δοκιμές\"},\"wellbeing\":{\"faculties_skills\":\"Σχολές και δεξιότητες\",\"mental_psych\":\"Ψυχολογική και ψυχολογική\",\"physical_env\":\"Φυσικό περιβάλλον\",\"physiological\":\"Φυσιολογικός\",\"socio_cultural_env\":\"Κοινωνικοπολιτισμικό περιβάλλον\",\"socio_economic\":\"Κοινωνικοοικονομικό\"}},\"title\":\"Μοντέλο Θεωρίας Παρέμβασης\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Ορίστε το Ethos\",\"define_ethos_items\":\"Αξίες\\n Αρχές\\n Προθέσεις\\n Πολιτικές\",\"deliver\":\"Παραδίδω\",\"experience\":\"Εμπειρία\",\"govern\":\"Κυβερνώ\",\"individual_cases\":\"Μεμονωμένες περιπτώσεις\",\"plan_manage\":\"Σχεδιάστε και διαχειριστείτε\",\"plan_manage_items\":\"Κανόνες\\n Πόροι\\n Διαδικασίες\\n Λογαριασμοί\",\"the_service_level\":\"Το επίπεδο εξυπηρέτησης\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Πώς καθορίζονται αυτές οι τιμές;\"},\"evidenceUrl\":{\"label\":\"Ποια (εξωτερικά) αποδεικτικά στοιχεία είναι διαθέσιμα για την υποστήριξη αυτού;\"},\"title\":\"Ορίστε το Ethos\",\"values\":{\"label\":\"Ποιες τιμές είναι σημαντικές για την αντιμετώπιση της παρέμβασης;\"}},\"deliver\":{\"actors\":{\"label\":\"Από ποιον παραδίδεται;\"},\"evidenceUrl\":{\"label\":\"Ποια (εξωτερικά) αποδεικτικά στοιχεία είναι διαθέσιμα για την υποστήριξη αυτού;\"},\"method\":{\"label\":\"Πώς παρέχεται η παρέμβαση;\"},\"title\":\"Παραδίδω\"},\"govern\":{\"actions\":{\"label\":\"Πώς διέπεται η παρέμβαση; Ποια μέτρα έχουν τεθεί σε εφαρμογή για να διασφαλιστεί ότι τα αποτελέσματα ήταν όπως είχαν προβλεφθεί;\"},\"actors\":{\"label\":\"Ποιος το αξιολογεί;\"},\"evolution\":{\"label\":\"Πώς επηρεάζει αυτό την εξέλιξη της υπηρεσίας;\"},\"improvements\":{\"label\":\"Πώς αναγνωρίζονται οι βελτιώσεις; Πώς εφαρμόζονται;\"},\"outcomes\":{\"label\":\"Τα αποτελέσματα ενσωματώνονται σε στόχους και μετρήσεις; Και αν ναι, ποιος;\"},\"title\":\"Κυβερνώ\"},\"model\":{\"title\":\"Μοντέλο\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Ποιες ενέργειες αναλαμβάνονται τώρα στον πιλότο;\"},\"actors\":{\"label\":\"Ποιες είναι οι τρέχουσες ενέργειες που λαμβάνονται;\"},\"evidenceUrl\":{\"label\":\"Ποια (εξωτερικά) αποδεικτικά στοιχεία είναι διαθέσιμα για την υποστήριξη αυτού;\"},\"title\":\"Σχεδιασμός και διαχείριση - Τρέχουσες ενέργειες\"},\"planManagePrior\":{\"actions\":{\"label\":\"Ποιες ενέργειες είχαν αναληφθεί πριν από την παρέμβαση;\"},\"actors\":{\"label\":\"Ποιος συμμετείχε σε αυτές τις προηγούμενες ενέργειες;\"},\"evidenceUrl\":{\"label\":\"Ποια (εξωτερικά) αποδεικτικά στοιχεία είναι διαθέσιμα για την υποστήριξη αυτού;\"},\"title\":\"Σχεδιασμός και διαχείριση - Προηγούμενες ενέργειες\"}},\"guide\":{\"step01\":\"Υπάρχουν πολλές βασικές διαδικασίες που εμπλέκονται σε μια συν-δημιουργική καινοτομία. Το πρώτο αφορά τον ορισμό του ήθους.\",\"step02\":\"Το δεύτερο περιλαμβάνει δραστηριότητες διαχείρισης και προϊόντα.\",\"step03\":\"Η ηθική τάξη ασχολείται με το ποιος μπορεί να συμμετάσχει σε δραστηριότητες, οπότε, στην περίπτωση της πρωτοβουλίας σας, ποιος εμπλέκεται σε αυτές τις διαδικασίες; Πού και πότε πραγματοποιούνται; Πώς επικοινωνούν και πώς καταγράφονται;\",\"step04\":\"Ως αποτέλεσμα της ηγεσίας, του σχεδιασμού και του σχεδιασμού, οι υπηρεσίες ή οι πρωτοβουλίες παρέχονται και βιώνονται.\",\"step05\":\"Και πάλι ποιος ασχολείται εδώ και συμμετέχει στις δύο πρώτες ομάδες δραστηριοτήτων;\",\"step06\":\"Αντί να κλείσουμε απλώς το βρόχο με μια απλή διαδικασία αξιολόγησης, προτείνουμε ότι, σε συστήματα συμπαραγωγικής ευημερίας και φροντίδας, η διακυβέρνηση περιλαμβάνει όλους τους συμμετέχοντες στις σχέσεις που προσδιορίζονται εδώ, συμμετοχή στην αντιμετώπιση των ερωτήσεων που ορίζονται στο μοντέλο ηθικής παραγγελίας.\",\"step07\":\"Η διακυβέρνηση πραγματοποιείται σε επίπεδο σχέσης πελάτη μεμονωμένων υπηρεσιών.\",\"step08\":\"Πραγματοποιείται επίσης σε γενικό επίπεδο υπηρεσίας.\",\"step09\":\"Πώς πραγματοποιούνται οι διαδικασίες διακυβέρνησης, υπό την έννοια που τις περιγράφουμε εδώ, στην πρωτοβουλία σας;\"},\"options\":{\"sources\":{\"meeting\":\"Συνάντηση\",\"other\":\"Αλλα\",\"policy\":\"Πολιτική\"}},\"title\":\"Ηθική παραγγελία\"},\"social_media\":{\"dashboard\":{\"title\":\"Μεσα ΚΟΙΝΩΝΙΚΗΣ ΔΙΚΤΥΩΣΗΣ\"},\"definitions\":{\"data\":{\"title\":\"Μεσα ΚΟΙΝΩΝΙΚΗΣ ΔΙΚΤΥΩΣΗΣ\"}},\"title\":\"Μεσα ΚΟΙΝΩΝΙΚΗΣ ΔΙΚΤΥΩΣΗΣ\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Δεν υπάρχουν θεωρίες αλλαγής στοιχείων για αυτό το έργο.\",\"manage\":\"Διαχειριστείτε τη θεωρία της αλλαγής\",\"title\":\"Θεωρία της Αλλαγής\"},\"definitions\":{\"data\":{\"hint\":\"Προσθέστε τυχόν θεωρίες αλλαγής που μπορεί να έχει το έργο σας.\",\"title\":\"Θεωρία της Αλλαγής\"}},\"title\":\"Θεωρία της Αλλαγής\"},\"user_journey_model\":{\"dashboard\":{\"one\":\"\",\"other\":\"\"},\"definitions\":{\"accessing\":{\"access_method\":{\"label\":\"Πώς αποκτήσατε πρόσβαση στην υπηρεσία;\"},\"appropriate_comment\":{\"label\":\"Πιστεύετε ότι αυτή η πτυχή της υπηρεσίας είναι κατάλληλη;\"},\"qualification_experience\":{\"label\":\"Εάν ναι, πώς ήταν η εμπειρία;\"},\"qualification_process\":{\"label\":\"Υπήρξε διαδικασία προσόντων ή επιλογής;\"},\"title\":\"Πρόσβαση\"},\"discovering\":{\"comments\":{\"label\":\"Οποιαδήποτε περαιτέρω σχόλια, παρατηρήσεις;\"},\"discovery_medium\":{\"label\":\"Πώς μάθατε για την υπηρεσία;\"},\"information_experience\":{\"label\":\"Ποια είναι η γνώμη σας για την ποιότητα, την πληρότητα και την προσβασιμότητα των πληροφοριών;\"},\"information_medium\":{\"label\":\"Πώς αποκτήσατε πρόσβαση σε πληροφορίες σχετικά με την υπηρεσία;\"},\"title\":\"Ανακαλύπτοντας\"},\"evaluating\":{\"opinions_asked\":{\"hint\":\"Σκεφτείτε πού και πότε ήταν αυτό.\",\"label\":\"Σας ρωτήθηκαν για τις απόψεις σας σχετικά με την εμπειρία σας από την υπηρεσία;\"},\"opinions_how\":{\"label\":\"Εάν ναι, πώς σας ζητήθηκε;\"},\"service_experience\":{\"label\":\"Ήταν η υπηρεσία αυτό που περιμένατε;\"},\"surprises_comments\":{\"label\":\"Υπήρχαν εκπλήξεις ή απογοητεύσεις στην εμπειρία σας;\"},\"title\":\"Αξιολόγηση\"},\"instigating\":{\"comments\":{\"label\":\"Σχόλια\"},\"design_role\":{\"label\":\"Έπαιξες κάποιο ρόλο στο σχεδιασμό και τον ορισμό της υπηρεσίας; Εάν ναι, ποιες ήταν οι περιπτώσεις και τα κανάλια που συνέβη αυτό;\"},\"instigate_role\":{\"label\":\"Είχατε κάποιο ρόλο στην υποκίνηση του έργου; Εάν ναι, συμμετείχατε σε κάποια από τις παρακάτω επιλογές; Μπορείτε να επιλέξετε όσα θέλετε.\"},\"title\":\"Ενθάρρυνση\"},\"model\":{\"title\":\"Μοντέλο\"},\"using\":{\"accessible_experience\":{\"label\":\"Η υπηρεσία ήταν προσβάσιμη σε εσάς;\"},\"participate_experience\":{\"label\":\"Πώς ήταν να χρησιμοποιείτε ή να συμμετέχετε στην υπηρεσία;\"},\"time_experience\":{\"label\":\"Ήταν η διάρκεια και οι συχνότητες των συμβάντων υπηρεσίας ή των επαφών ΟΚ;\"},\"title\":\"Χρησιμοποιώντας\",\"where\":{\"label\":\"Πού χρησιμοποιήσατε την υπηρεσία;\"}}},\"guide\":{\"step01\":\"Οι υπηρεσίες δημοσιεύονται στους προοριζόμενους χρήστες τους, αυτή είναι η φάση ανακάλυψης.\",\"step02\":\"Οι χρήστες που θέλουν την υπηρεσία υποβάλλουν κάποιο αίτημα ή εφαρμογή, αυτή είναι η φάση πρόσβασης.\",\"step03\":\"Εάν το προηγούμενο στάδιο είναι επιτυχές, η υπηρεσία παρέχεται και έχει εμπειρία, αυτή είναι η φάση χρήσης.\",\"step04\":\"Στη συνέχεια αξιολογείται η εμπειρία από τη χρήση της υπηρεσίας.\",\"step05\":\"Οι ερωτήσεις μέχρι στιγμής υποθέτουν ότι η υπηρεσία έχει καθοριστεί και υπάρχει ήδη. Το επόμενο σύνολο ερωτήσεων αφορά το εάν και πώς συμμετείχατε στις διαδικασίες με τις οποίες δημιουργήθηκε η υπηρεσία.\",\"step06\":\"Πρώτα μπορούμε να ολοκληρώσουμε το μοντέλο παροχής υπηρεσιών μας με τα στάδια της δημιουργίας. Αυτό το ονομάζουμε φάση σχεδιασμού.\",\"step07\":\"Στη συνέχεια μπορούμε να δείξουμε τις διαδικασίες με τις οποίες η υπηρεσία εντοπίστηκε και ξεκίνησε αρχικά. Αυτό το αποκαλούμε φάση υποκίνησης.\"},\"options\":{\"access_methods\":{\"applied\":\"Εφαρμοσμένος\",\"other\":\"Αλλα\",\"referred\":\"Αναφέρεται\"},\"instigate_roles\":{\"government_department\":\"Κυβερνητικό Τμήμα\",\"political_party\":\"Πολιτικό κόμμα\",\"pressure_group\":\"Ομάδα πίεσης / εκστρατείας\"},\"mediums\":{\"other\":\"Αλλα\",\"paper\":\"Δημοσίευση σε χαρτί\",\"referral\":\"Παραπομπή\",\"social\":\"Μεσα ΚΟΙΝΩΝΙΚΗΣ ΔΙΚΤΥΩΣΗΣ\",\"word_of_mouth\":\"Από στόμα σε στόμα\"},\"opinions_how\":{\"interview\":\"Συνέντευξη\",\"survey\":\"Επισκόπηση\",\"workshop\":\"ΕΡΓΑΣΤΗΡΙ\"},\"where\":{\"community\":\"Κοινότητα\",\"home\":\"Σπίτι\",\"other\":\"Αλλα\",\"public\":\"Δημόσιο\"},\"yes_no_maybe\":{\"maybe\":\"Μπορεί\",\"no\":\"Οχι\",\"yes\":\"Ναί\"}},\"title\":\"Μοντέλο ταξιδιού χρήστη\"},\"welcome\":{\"dashboard\":{\"summary\":\"Δημιουργήθηκε από {user} στις {date_time}\"},\"title\":\"καλως ΗΡΘΑΤΕ\"}},\"countries\":{\"de\":\"Γερμανία\",\"el\":\"Ελλάδα\",\"en_GB\":\"Ηνωμένο Βασίλειο\",\"es\":\"Ισπανία\",\"et\":\"Εσθονία\",\"fi\":\"Φινλανδία\",\"fr\":\"Γαλλία\",\"hu\":\"Ουγγαρία\",\"it\":\"Ιταλία\",\"nl\":\"Ολλανδία\",\"pl\":\"Πολωνία\",\"sv_SE\":\"Σουηδία\"},\"hints\":{\"editor_double_click_edit\":\"Κάντε διπλό κλικ σε ένα στοιχείο για να το επεξεργαστείτε και εισαγάγετε για αποθήκευση\",\"social_facebook_add\":\"Προσθέστε πλήρεις συνδέσμους (URL) σε ομάδες ή σελίδες Facebook.\",\"social_instagram_add\":\"Εισαγάγετε ένα hashtag Instagram, με ή χωρίς το #. Πατήστε enter για προσθήκη.\",\"social_twitter_add\":\"Εισαγάγετε ένα hashtag Twitter, με ή χωρίς το #. Πατήστε enter για προσθήκη.\",\"social_youtube_add\":\"Εισαγάγετε έναν σύνδεσμο για ένα βίντεο YouTube και πατήστε enter για προσθήκη\",\"type_and_enter\":\"Πληκτρολογήστε το παρακάτω όνομα και πατήστε enter.\"},\"languages\":{\"de\":\"Γερμανός\",\"el\":\"Ελληνικά\",\"en_GB\":\"Αγγλικά\",\"es\":\"Ισπανικά\",\"et\":\"Εσθονικά\",\"fi\":\"φινλανδικός\",\"fr\":\"γαλλική γλώσσα\",\"hu\":\"ουγγρικός\",\"it\":\"ιταλικός\",\"nl\":\"Ολλανδός\",\"pl\":\"Στίλβωση\",\"sv_SE\":\"Σουηδικά\"},\"user_guide\":{\"back\":\"Πίσω\",\"close\":\"Κλείσε\",\"next\":\"Επόμενο\",\"show\":\"Εμφάνιση οδηγού χρήστη\",\"skip\":\"Παράλειψη οδηγού χρήστη\"}}");
+
+/***/ }),
+
+/***/ "./js/lang/en.json":
+/*!*************************!*\
+  !*** ./js/lang/en.json ***!
+  \*************************/
+/*! exports provided: languages, countries, app, user_guide, hints, activity_types, aspects, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"languages\":{\"el\":\"Greek\",\"en_GB\":\"English\",\"fr\":\"French\",\"de\":\"German\",\"es\":\"Spanish\",\"et\":\"Estonian\",\"fi\":\"Finnish\",\"hu\":\"Hungarian\",\"it\":\"Italian\",\"nl\":\"Dutch\",\"pl\":\"Polish\",\"sv_SE\":\"Swedish\"},\"countries\":{\"el\":\"Greece\",\"en_GB\":\"UK\",\"fr\":\"France\",\"de\":\"Germany\",\"es\":\"Spain\",\"et\":\"Estonia\",\"fi\":\"Finland\",\"hu\":\"Hungary\",\"it\":\"Italy\",\"nl\":\"Netherlands\",\"pl\":\"Poland\",\"sv_SE\":\"Sweden\"},\"app\":{\"log_in\":\"Log in\",\"project\":\"Project\",\"name\":\"Name\",\"title\":\"Title\",\"created_by\":\"Created by\",\"description\":\"Description\",\"label\":\"Label\",\"type\":\"Type\",\"colour\":\"Colour\",\"search\":\"Search\",\"web_address\":\"Web address\",\"image\":\"Image\",\"image_remove\":\"Remove image\",\"image_drag_prompt\":\"Drag your image here to begin or click to browse.\",\"image_is_uploading\":\"Uploading image\",\"image_upload_error\":\"Upload error\",\"next\":\"Next\",\"delete\":\"Delete\",\"ok\":\"OK\",\"save\":\"Save\",\"saving\":\"Saving\",\"create\":\"Create\",\"project_save_success\":\"Project saved!\",\"last_saved_at\":\"Last saved at {date_time}\",\"download\":\"Download\",\"export\":\"Export\",\"exporting\":\"Exporting\",\"import\":\"Import\",\"processing\":\"Processing\",\"import_project\":\"Import project\",\"import_project_success\":\"The project has been imported successfully!\",\"import_project_notes\":\"Note: You will be the owner of the project that is imported.\",\"import_project_drag_hint\":\"Drag your CoSMoS project here to begin or click to browse.\",\"open_project\":\"Open project\",\"all\":\"All\",\"just_mine\":\"Just mine\",\"no_projects\":\"No projects found.\",\"new_project\":\"Create new project\",\"to_create_project\":\"to create a project.\",\"user_is_read_only\":\"Your user access level is read-only.\",\"exporting_project\":\"Exporting project\",\"please_wait_generate\":\"Please wait while the file is being generated.\",\"error\":\"Error\",\"error_message\":\"Error: {message}\",\"scale_to_fit\":\"Scale to fit\",\"try_again\":\"Try again\",\"add_new_item\":\"Add new item\",\"add_new_actor\":\"Add new actor\",\"maximum_items\":\"Maximum {count} items | Maxumum {count} item | Maximum {count} items\",\"models\":\"Models\",\"more_details\":\"More details\",\"country\":\"Country\",\"which_country\":\"Which country are you from?\"},\"user_guide\":{\"show\":\"Show user guide\",\"skip\":\"Skip user guide\",\"back\":\"Back\",\"next\":\"Next\",\"close\":\"Close\"},\"hints\":{\"type_and_enter\":\"Type the name below and press enter.\",\"editor_double_click_edit\":\"Double-click an item to edit it, and enter to save\",\"social_twitter_add\":\"Enter a Twitter hashtag, with or without the #. Press enter to add.\",\"social_facebook_add\":\"Add full links (URLs) to Facebook groups or pages.\",\"social_instagram_add\":\"Enter an Instagram hashtag, with or without the #. Press enter to add.\",\"social_youtube_add\":\"Enter a link to a YouTube video and press enter to add.\"},\"activity_types\":{\"user\":\"User\",\"organisation\":\"Organisation\",\"service\":\"Service\"},\"aspects\":{\"analytic_model\":{\"title\":\"Analytic Model\",\"guide\":{\"step01\":\"In this model, we consider a Cosie initiative in terms of a set of roles and the conversational relationships in which they engage.\",\"step02\":\"First we have front line service deliverer and a client.\",\"step03\":\"The deliverer has a manager or supervisor. This pattern of an individual engaging in two conversations will be repeated.\",\"step04\":\"The delivery takes place in some formal or informal institutional context.\",\"step05\":\"Finally, the service exists in some wider policy setting.\",\"step06\":\"This is meant to be an abstract model. In some cases there may be a flat organisation where delivery, management and policy are undertaken by all the members of a small team, in other cases they may represent distinct individuals and contexts.\",\"step07\":\"How do the concepts of micro, meso and macro map onto your initiative?\",\"step08\":\"How does communication take place between them?\",\"step09\":\"How coordinated and coherent are they?\",\"step10\":\"In particular, are there information flows and conversations between macro and micro which are not mediated by the meso? What are the implications of this?\",\"step11\":\"The next model considers change agency in terms of roles and conversations.\",\"step12\":\"A change must be instigated, then it is executed.\",\"step13\":\"The changes we are considering are to a person, or a place or environment.\",\"step14\":\"The changes we are considering are often themselves complex and are about complex situations. Often they are based on some theory which has been introduced or brokered into the situation.\",\"step15\":\"There is a set of intended beneficiaries.\",\"step16\":\"But there are also possible dis-beneficiaries or victims of the change.\",\"step17\":\"This model is designed as a probe on the initial service model to identify the specific actors who, at various stages in the development of the initiative, have undertaken one or more of these change agency roles. Who are they?\"},\"dashboard\":{\"meso\":{\"label\":\"Meso\",\"description\":\"There may be a number of stages at this level.\"},\"macro\":{\"label\":\"Macro\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"title\":\"Service Delivery Manager\",\"hint\":\"Who is the Service Delivery Manager responsible for the Intervention?\"},\"frontLineServiceDeliverer\":{\"title\":\"Front-line Service Deliverer\",\"hint\":\"Who is the Front-line Service Deliverer?\"},\"user\":{\"title\":\"Client / User\",\"hint\":\"Who is the direct user of the service?\"},\"serviceOrganisationManager\":{\"title\":\"Service Organisation Manager\",\"hint\":\"Who is the Service Organisation Manager for the Intervention?\"},\"servicePolicyMaker\":{\"title\":\"Service Policy Maker\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"instigatorsOfChange\":{\"title\":\"Instigators of Change\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},\"changeMakers\":{\"title\":\"Change Makers\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},\"subjectsOfChange\":{\"title\":\"Subjects of Change\",\"hint\":\"Who are the idenitified subjects of change within the intervention?\"},\"broker\":{\"title\":\"Broker\",\"hint\":\"Is there an active Broker between the Instigators of Change and Change Makers? If so, who are they?\"},\"changeTheorists\":{\"title\":\"Change Theorists\",\"hint\":\"Who are the Change Theorists for the Intervention?\"},\"beneficiaries\":{\"title\":\"Beneficiaries\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"victims\":{\"title\":\"Victims\",\"hint\":\"Are there any identified victims? If so, who are they?\"}}},\"change_model\":{\"title\":\"Change Model\",\"guide\":{\"step01\":\"We start off with the standard model of purposeful action that we are all very familiar with.\",\"step02\":\"But we have all had the experience of looking back and realising that things have changed in a really fundamental way: we talk about the paradigm shifting. This implies that we have engaged in making new sense of our world and this often means that our language changes.\",\"step03\":\"These two different ways of operation are sometimes referred to as first order and second order.\",\"step04\":\"In management terms, we have risk management on one hand and the resolution of contradictions and ambiguities on the other.\",\"step05\":\"We now introduce the idea of third order activities which enable and support the appropriate transitions between first and second work allowing a step back to reconsider our ethos and assumptions and, when we have, to move back into the mode of practical planning and delivery.\",\"step06\":\"Sometimes the reaction to ambiguity and contradiction is an emotional one: fight or fly which is zero order, or inspiration and heroism which we will call fourth order.\",\"step07\":\"So, on the right hand side of our diagram we have the spectrum of emotional work and responses while of the left hand side we have co-productive, conversational work.\",\"step08\":\"This model generates a series of open ended questions about where the different first and second order work takes place in your initiative, what emotional work has been and is requires and how and where it is undertaken and how and by whom are the required third order interventions undertaken?\"},\"dashboard\":{\"first_order\":\"First Order\",\"risk\":\"Risk\",\"vision\":\"Vision\",\"plan\":\"Plan\",\"execute\":\"Execute\",\"measure\":\"Measure\",\"second_order\":\"Second Order\",\"ambiguity\":\"Ambiguity\",\"sense_making\":\"Sense-Making\",\"languaging\":\"\\\"Languaging\\\"\",\"committing\":\"Committing\",\"third_order\":\"Third Order\",\"ambivalence\":\"Ambivalence\",\"zero_order\":\"Zero Order\",\"fourth_order\":\"Fourth Order!\"},\"definitions\":{\"model\":{\"title\":\"Model\"},\"first_order\":{\"vision\":{\"label\":\"How were the vision and objectives set?\"},\"plan\":{\"label\":\"How was a plan set up to deliver the vision?\"},\"execute\":{\"label\":\"How is the plan being executed?\"},\"measure\":{\"label\":\"How are observations and measurements being recorded? If not, what needs to be enabled to do so?\"}},\"second_order\":{\"sense_making\":{\"label\":\"When do you review the plans and vision?\"},\"languaging\":{\"label\":\"What changes have been made to how the intervention has been understood?\"},\"committing\":{\"label\":\"How has the service delivery of the intervention changed from its original plans?\"}},\"third_order\":{\"processes\":{\"label\":\"What processes provoke or enable second order questioning?\"}},\"fourth_order\":{\"unexpected_events\":{\"label\":\"Have there been instances where you have seen unexpected events occurred?\"},\"event_cause\":{\"label\":\"What happened to allow this event to occur?\"},\"change_origin\":{\"label\":\"What was the origin of the change? And what was the change?\"}}}},\"community_reporting\":{\"title\":\"Community Reporting\",\"dashboard\":{\"title\":\"Community Reporting\",\"empty_set\":\"There are no community reporting items for this project.\",\"manage\":\"Manage Community Reporting\"},\"definitions\":{\"data\":{\"title\":\"Community Reporting\",\"hint\":\"Please add any Community Reports your project may have.\"}}},\"documents\":{\"title\":\"Documents\",\"dashboard\":{\"title\":\"Documents and Files\",\"empty_set\":\"There are no documents or files for this project.\",\"manage\":\"Manage documents and files\"},\"definitions\":{\"data\":{\"title\":\"Documents and Files\",\"hint\":\"Please add any Documents and Files your project may have.\"}}},\"intervention_theory_model\":{\"title\":\"Intervention Theory Model\",\"guide\":{\"step01\":\"The co-creative initiatives we are considering are all concerned with improving and nurturing wellbeing. Here we consider the wellbeing of individuals but this might be applied to places or to wider environments.\",\"step02\":\"Wellbeing has a number of different facets which are all interdependent.\",\"step03\":\"It also interacts with the physical and social environments.\",\"step04\":\"Some services or interventions are about mending something that has gone wrong and restoring the status quo.\",\"step05\":\"But there are other purposes for interventions.\",\"step06\":\"The intervention process involves a number of different stages and processes.\",\"step07\":\"Finally, if our innovations are to be sustained we must learn and improve.\",\"step08\":\"Who, what or where is the target of your intervention?\",\"step09\":\"Which aspects of wellbeing are the focus of your initiative?\",\"step10\":\"What aspects of the wellbeing of your subject are relevant but beyond the scope of your initiative?\",\"step11\":\"What are the relevant environmental aspects?\",\"step12\":\"Which combinations of interventions, from prevention to transformation, are relevant to your initiative?\",\"step13\":\"To what extent is learning and improvement built into your development governance and delivery processes?\"},\"dashboard\":{\"wellbeing\":\"Well Being\"},\"options\":{\"wellbeing\":{\"physical_env\":\"Physical Envrionment\",\"socio_cultural_env\":\"Socio-cultural Environment\",\"faculties_skills\":\"Faculties and Skills\",\"mental_psych\":\"Mental and Psychological\",\"physiological\":\"Physiological\",\"socio_economic\":\"Socio-Economic\"},\"innovation\":{\"transformation\":\"Transformation\",\"development\":\"Development\",\"facilitation\":\"Facilitation\",\"rehabilitation\":\"Rehabilitation\",\"remedy\":\"Remedy\",\"palliation\":\"Palliation\",\"prevention\":\"Prevention\"},\"intervention\":{\"identification\":\"Identification & Planning\",\"coordination_delivery\":\"Coordination & Delivery\",\"management\":\"Management\",\"governance\":\"Governance\",\"learning\":\"Learning\"},\"learning\":{\"research_evidence\":\"Research & Evidence\",\"trials\":\"Trials\",\"service_improvement\":\"Service Improvement\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"title\":\"Human well-being and Environment\",\"items\":{\"label\":\"Which aspects of human well-being and of the environment are relevant to your service? Are some more significant than others?\"}},\"innovation\":{\"title\":\"Innovation and change\",\"items\":{\"label\":\"What aspects of the service lifecycle are important regarding your innovation and change?\"}},\"intervention\":{\"title\":\"Intervention\",\"items\":{\"label\":\"What type of intervention is occuring?\"}},\"learning\":{\"title\":\"Learning\",\"items\":{\"label\":\"How is learning happening in your intervention?\"}}}},\"moral_ordering_model\":{\"title\":\"Moral Ordering\",\"guide\":{\"step01\":\"There are a number of core processes involved in a co-creative innovation. The first is concerned with the definition of ethos.\",\"step02\":\"The second involves management activities and products.\",\"step03\":\"Moral ordering is concerned with who gets to participate in activities so, in the case of your initiative, who is involved in these processes? Where and when do they take place? How do they communicate and how are they recorded?\",\"step04\":\"As a result of leadership, planning and design, services or initiatives are delivered and experienced.\",\"step05\":\"Again who is involved here and do they get any participation in the first two sets of activities?\",\"step06\":\"Rather than simply close the loop with a simple evaluation process, we are suggesting that, in systems of co-productive wellbeing and care, governance involves all the participants in the relationships identified here participation in addressing the questions defined in the moral ordering model.\",\"step07\":\"Governance takes place at the individual service client relationship level.\",\"step08\":\"It also takes place at the overall service level.\",\"step09\":\"How are governance processes, in the sense we are describing them here, take place in your initiative?\"},\"dashboard\":{\"govern\":\"Govern\",\"deliver\":\"Deliver\",\"define_ethos\":\"Define Ethos\",\"define_ethos_items\":\"Values\\nPrinciples\\nIntentions\\nPolicies\",\"plan_manage\":\"Plan & Manage\",\"plan_manage_items\":\"Rules\\nResources\\nProcesses\\nAccounts\",\"experience\":\"Experience\",\"individual_cases\":\"Individual Cases\",\"the_service_level\":\"The Service Level\"},\"options\":{\"sources\":{\"policy\":\"Policy\",\"meeting\":\"Meeting\",\"other\":\"Other\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"defineEthos\":{\"title\":\"Define Ethos\",\"values\":{\"label\":\"What values are important that the intervention comes to address?\"},\"definedBy\":{\"label\":\"How do these values come to be defined?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"planManagePrior\":{\"title\":\"Plan and Manage - Prior actions\",\"actions\":{\"label\":\"What actions were being undertaken prior to the intervention?\"},\"actors\":{\"label\":\"Who was involved with these prior actions?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"planManageCurrent\":{\"title\":\"Plan and Manage - Current actions\",\"actions\":{\"label\":\"What actions are now being undertaken within the pilot?\"},\"actors\":{\"label\":\"What ongoing actions are being taken?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"deliver\":{\"title\":\"Deliver\",\"method\":{\"label\":\"How is the intervention delivered?\"},\"actors\":{\"label\":\"By whom is it delivered?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"govern\":{\"title\":\"Govern\",\"actions\":{\"label\":\"How is the intervention governed? What measures are put in place to ensure the outcomes were as intended?\"},\"actors\":{\"label\":\"Who is evaluating this?\"},\"outcomes\":{\"label\":\"Are outcomes embodied in targets and measurements? And if so, whose?\"},\"evolution\":{\"label\":\"How does this impact on the evolution of the service?\"},\"improvements\":{\"label\":\"How are improvements identified? How are they implemented?\"}}}},\"co_creation_of_service_model\":{\"title\":\"Co-Creation of Service Model\",\"dashboard\":{\"structural_relationships\":\"Structural Relationships and Occasions\",\"infrastructural_relationships\":\"Infrastructural Relationships, Recourses and Facilities\",\"ethos\":\"Ethos\",\"policy_law\":\"Policy & Law\",\"resources\":\"Resources\",\"service_definition\":\"Service Definition and Development Platform\",\"service_delivery\":\"Service Delivery Platform\"},\"definitions\":{\"model\":{\"title\":\"Model\"},\"drivers\":{\"title\":\"Drivers and Motivations\",\"hint\":\"What were / are the drivers and motivations of the project? Was it a statutory requirement, recognition of a need or demand, seizing an opportunity, addressing an inequality?\",\"body\":{\"label\":\"Drivers and Motivations\",\"hint\":\"What are the drivers and motivations involved?\"}},\"policyDef\":{\"title\":\"Policy Definer\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"specDes\":{\"title\":\"Specifier and Designer\",\"hint\":\"Who specifies / specified and designs / designed the service delivery processes and resources?\"},\"deployment\":{\"title\":\"Deployer\",\"hint\":\"Who deploys / deployed and activates / activated those processes and resources?\"},\"delivery\":{\"title\":\"Deliverer\",\"hint\":\"Who is responsible for the delivery mechanism(s), channels and roles in your pilot?\"},\"evaluation\":{\"title\":\"Evaluator\",\"hint\":\"Who is the evaluator(s) and governors of the service?\"},\"user\":{\"title\":\"User\",\"hint\":\"Who is the direct user of the service?\"},\"beneficiary\":{\"title\":\"Beneficiary\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"initiator\":{\"title\":\"Initiator\",\"hint\":\"Who are, or were, the instigators who initiated your pilot activity?\"},\"extsvc\":{\"title\":\"External Technical Services\",\"hint\":\"What reusable facilities, (technical and human) resources, services and sources of information were developed and used in support of these service definition and development processes? What external resources and services (e.g. communications and social media) were/are used?\"},\"extorg\":{\"title\":\"External Organisations\",\"hint\":\"Are there any relevant actors, stakeholders or agencies which are relevant to the pilot, but which remain outside its vision and ethos?\"},\"infsvc\":{\"title\":\"Infrastructural Services\",\"hint\":\"What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?\"}}},\"user_journey_model\":{\"title\":\"User Journey Model\",\"dashboard\":{},\"guide\":{\"step01\":\"Services are publicised to their intended users, this is the discovery phase.\",\"step02\":\"Users who want the service make some sort of request or application, this is the accessing phase.\",\"step03\":\"If the previous stage is successful, the service is delivered and experienced, this is the using phase.\",\"step04\":\"The experience of the use of the service is then evaluated.\",\"step05\":\"The questions so far assume that the service has been defined and already exists. The next set of questions is about whether and how you participated in the processes by which the service was created in the first place.\",\"step06\":\"First we can complete our service delivery model with the stages involved in creating. We call this the designing phase.\",\"step07\":\"Then we can show the processes by which the service was identified and initiated in the first place. We call this the instigating phase.\"},\"options\":{\"mediums\":{\"word_of_mouth\":\"Word of mouth\",\"paper\":\"Paper publication\",\"referral\":\"Referral\",\"social\":\"Social media\",\"other\":\"Other\"},\"access_methods\":{\"referred\":\"Referred\",\"applied\":\"Applied\",\"other\":\"Other\"},\"where\":{\"home\":\"Home\",\"community\":\"Community\",\"public\":\"Public\",\"other\":\"Other\"},\"yes_no_maybe\":{\"yes\":\"Yes\",\"no\":\"No\",\"maybe\":\"Maybe\"},\"opinions_how\":{\"workshop\":\"Workshop\",\"survey\":\"Survey\",\"interview\":\"Interview\"},\"instigate_roles\":{\"pressure_group\":\"Pressure/Campaigning Group\",\"political_party\":\"Political Party\",\"government_department\":\"Government Department\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"discovering\":{\"title\":\"Discovering\",\"discovery_medium\":{\"label\":\"How did you find out about the service?\"},\"information_medium\":{\"label\":\"How did you access information about the service?\"},\"information_experience\":{\"label\":\"What is your opinion about the quality, completeness and accessibility of the information?\"},\"comments\":{\"label\":\"Any further comments, observations?\"}},\"accessing\":{\"title\":\"Accessing\",\"access_method\":{\"label\":\"How did you gain access to the service?\"},\"qualification_process\":{\"label\":\"Was there a qualification or selection process?\"},\"qualification_experience\":{\"label\":\"If so, what was the experience like?\"},\"appropriate_comment\":{\"label\":\"Do you think this aspect of the service is appropriate?\"}},\"using\":{\"title\":\"Using\",\"participate_experience\":{\"label\":\"What was it like to use or participate in the service?\"},\"accessible_experience\":{\"label\":\"Was the service accessible to you?\"},\"time_experience\":{\"label\":\"Was the duration and frequencies of the service events or contacts OK?\"},\"where\":{\"label\":\"Where did you use the service?\"}},\"evaluating\":{\"title\":\"Evaluating\",\"opinions_asked\":{\"label\":\"Were you asked about your opinions about your experience of the service?\",\"hint\":\"Think about where and when this was.\"},\"opinions_how\":{\"label\":\"If yes, how were you asked?\"},\"service_experience\":{\"label\":\"Was the service what you expected?\"},\"surprises_comments\":{\"label\":\"Were there any surprises or disappointments in your experience?\"}},\"instigating\":{\"title\":\"Instigating\",\"design_role\":{\"label\":\"Did you play any role in the design and definition of the service? If yes, what were the occasions and channels that this occurred?\"},\"instigate_role\":{\"label\":\"Did you have any role in instigating the project? If yes, were you part of any of the following options? You can choose as many as you like.\"},\"comments\":{\"label\":\"Comments\"}}}},\"social_media\":{\"title\":\"Social Media\",\"dashboard\":{\"title\":\"Social Media\"},\"definitions\":{\"data\":{\"title\":\"Social Media\"}}},\"theory_of_change\":{\"title\":\"Theory of Change\",\"dashboard\":{\"title\":\"Theory of Change\",\"empty_set\":\"There are no theory of change items for this project.\",\"manage\":\"Manage Theory of Change\"},\"definitions\":{\"data\":{\"title\":\"Theory of Change\",\"hint\":\"Please add any theories of change your project may have.\"}}},\"welcome\":{\"title\":\"Welcome\",\"dashboard\":{\"summary\":\"Created by {user} on {date_time}\"}}}}");
 
 /***/ }),
 
@@ -5377,10 +6055,10 @@ module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Οργάν�
 /*!****************************!*\
   !*** ./js/lang/en_GB.json ***!
   \****************************/
-/*! exports provided: activity_types, app, aspects, hints, languages, user_guide, default */
+/*! exports provided: activity_types, app, aspects, countries, hints, languages, user_guide, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisation\",\"service\":\"Service\",\"user\":\"User\"},\"app\":{\"add_new_actor\":\"Add new actor\",\"add_new_item\":\"Add new item\",\"all\":\"All\",\"colour\":\"Colour\",\"create\":\"Create\",\"created_by\":\"Created by\",\"delete\":\"Delete\",\"description\":\"Description\",\"download\":\"Download\",\"error\":\"Error\",\"error_message\":\"Error: {message}\",\"export\":\"Export\",\"exporting\":\"Exporting\",\"exporting_project\":\"Exporting project\",\"image\":\"Image\",\"image_drag_prompt\":\"Drag your image here to begin or click to browse.\",\"image_is_uploading\":\"Uploading image\",\"image_remove\":\"Remove image\",\"image_upload_error\":\"Upload error\",\"import\":\"Import\",\"import_project\":\"Import project\",\"import_project_drag_hint\":\"Drag your CoSMoS project here to begin or click to browse.\",\"import_project_notes\":\"Note: You will be the owner of the project that is imported.\",\"import_project_success\":\"The project has been imported successfully!\",\"just_mine\":\"Just mine\",\"label\":\"Label\",\"last_saved_at\":\"Last saved at {date_time}\",\"log_in\":\"Log in\",\"maximum_items\":\"Maximum {count} items | Maxumum {count} item | Maximum {count} items\",\"models\":\"Models\",\"name\":\"Name\",\"new_project\":\"Create new project\",\"next\":\"Next\",\"no_projects\":\"No projects found.\",\"ok\":\"OK\",\"open_project\":\"Open project\",\"please_wait_generate\":\"Please wait while the file is being generated.\",\"processing\":\"Processing\",\"project\":\"Project\",\"project_save_success\":\"Project saved!\",\"save\":\"Save\",\"saving\":\"Saving\",\"scale_to_fit\":\"Scale to fit\",\"search\":\"Search\",\"title\":\"Title\",\"to_create_project\":\"to create a project.\",\"try_again\":\"Try again\",\"type\":\"Type\",\"user_is_read_only\":\"Your user access level is read-only.\",\"web_address\":\"Web address\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Macro\"},\"meso\":{\"description\":\"There may be a number of stages at this level.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\",\"title\":\"Beneficiaries\"},\"broker\":{\"hint\":\"Is there an active Broker between the Instigators of Change and Change Makers? If so, who are they?\",\"title\":\"Broker\"},\"changeMakers\":{\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\",\"title\":\"Change Makers\"},\"changeTheorists\":{\"hint\":\"Who are the Change Theorists for the Intervention?\",\"title\":\"Change Theorists\"},\"frontLineServiceDeliverer\":{\"hint\":\"Who is the Front-line Service Deliverer?\",\"title\":\"Front-line Service Deliverer\"},\"instigatorsOfChange\":{\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\",\"title\":\"Instigators of Change\"},\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"hint\":\"Who is the Service Delivery Manager responsible for the Intervention?\",\"title\":\"Service Delivery Manager\"},\"serviceOrganisationManager\":{\"hint\":\"Who is the Service Organisation Manager for the Intervention?\",\"title\":\"Service Organisation Manager\"},\"servicePolicyMaker\":{\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\",\"title\":\"Service Policy Maker\"},\"subjectsOfChange\":{\"hint\":\"Who are the idenitified subjects of change within the intervention?\",\"title\":\"Subjects of Change\"},\"user\":{\"hint\":\"Who is the direct user of the service?\",\"title\":\"Client / User\"},\"victims\":{\"hint\":\"Are there any identified victims? If so, who are they?\",\"title\":\"Victims\"}},\"guide\":{\"step01\":\"In this model, we consider a Cosie initiative in terms of a set of roles and the conversational relationships in which they engage.\",\"step02\":\"First we have front line service deliverer and a client.\",\"step03\":\"The deliverer has a manager or supervisor. This pattern of an individual engaging in two conversations will be repeated.\",\"step04\":\"The delivery takes place in some formal or informal institutional context.\",\"step05\":\"Finally, the service exists in some wider policy setting.\",\"step06\":\"This is meant to be an abstract model. In some cases there may be a flat organisation where delivery, management and policy are undertaken by all the members of a small team, in other cases they may represent distinct individuals and contexts.\",\"step07\":\"How do the concepts of micro, meso and macro map onto your initiative?\",\"step08\":\"How does communication take place between them?\",\"step09\":\"How coordinated and coherent are they?\",\"step10\":\"In particular, are there information flows and conversations between macro and micro which are not mediated by the meso? What are the implications of this?\",\"step11\":\"The next model considers change agency in terms of roles and conversations.\",\"step12\":\"A change must be instigated, then it is executed.\",\"step13\":\"The changes we are considering are to a person, or a place or environment.\",\"step14\":\"The changes we are considering are often themselves complex and are about complex situations. Often they are based on some theory which has been introduced or brokered into the situation.\",\"step15\":\"There is a set of intended beneficiaries.\",\"step16\":\"But there are also possible dis-beneficiaries or victims of the change.\",\"step17\":\"This model is designed as a probe on the initial service model to identify the specific actors who, at various stages in the development of the initiative, have undertaken one or more of these change agency roles. Who are they?\"},\"title\":\"Analytic Model\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Ambiguity\",\"ambivalence\":\"Ambivalence\",\"committing\":\"Committing\",\"execute\":\"Execute\",\"first_order\":\"First Order\",\"fourth_order\":\"Fourth Order!\",\"languaging\":\"\\\"Languaging\\\"\",\"measure\":\"Measure\",\"plan\":\"Plan\",\"risk\":\"Risk\",\"second_order\":\"Second Order\",\"sense_making\":\"Sense-Making\",\"third_order\":\"Third Order\",\"vision\":\"Vision\",\"zero_order\":\"Zero Order\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"How is the plan being executed?\"},\"measure\":{\"label\":\"How are observations and measurements being recorded? If not, what needs to be enabled to do so?\"},\"plan\":{\"label\":\"How was a plan set up to deliver the vision?\"},\"vision\":{\"label\":\"How were the vision and objectives set?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"What was the origin of the change? And what was the change?\"},\"event_cause\":{\"label\":\"What happened to allow this event to occur?\"},\"unexpected_events\":{\"label\":\"Have there been instances where you have seen unexpected events occurred?\"}},\"model\":{\"title\":\"Model\"},\"second_order\":{\"committing\":{\"label\":\"How has the service delivery of the intervention changed from its original plans?\"},\"languaging\":{\"label\":\"What changes have been made to how the intervention has been understood?\"},\"sense_making\":{\"label\":\"When do you review the plans and vision?\"}},\"third_order\":{\"processes\":{\"label\":\"What processes provoke or enable second order questioning?\"}}},\"guide\":{\"step01\":\"We start off with the standard model of purposeful action that we are all very familiar with.\",\"step02\":\"But we have all had the experience of looking back and realising that things have changed in a really fundamental way: we talk about the paradigm shifting. This implies that we have engaged in making new sense of our world and this often means that our language changes.\",\"step03\":\"These two different ways of operation are sometimes referred to as first order and second order.\",\"step04\":\"In management terms, we have risk management on one hand and the resolution of contradictions and ambiguities on the other.\",\"step05\":\"We now introduce the idea of third order activities which enable and support the appropriate transitions between first and second work allowing a step back to reconsider our ethos and assumptions and, when we have, to move back into the mode of practical planning and delivery.\",\"step06\":\"Sometimes the reaction to ambiguity and contradiction is an emotional one: fight or fly which is zero order, or inspiration and heroism which we will call fourth order.\",\"step07\":\"So, on the right hand side of our diagram we have the spectrum of emotional work and responses while of the left hand side we have co-productive, conversational work.\",\"step08\":\"This model generates a series of open ended questions about where the different first and second order work takes place in your initiative, what emotional work has been and is requires and how and where it is undertaken and how and by whom are the required third order interventions undertaken?\"},\"title\":\"Change Model\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Infrastructural Relationships, Recourses and Facilities\",\"policy_law\":\"Policy & Law\",\"resources\":\"Resources\",\"service_definition\":\"Service Definition and Development Platform\",\"service_delivery\":\"Service Delivery Platform\",\"structural_relationships\":\"Structural Relationships and Occasions\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\",\"title\":\"Beneficiary\"},\"delivery\":{\"hint\":\"Who is responsible for the delivery mechanism(s), channels and roles in your pilot?\",\"title\":\"Deliverer\"},\"deployment\":{\"hint\":\"Who deploys / deployed and activates / activated those processes and resources?\",\"title\":\"Deployer\"},\"drivers\":{\"body\":{\"hint\":\"What are the drivers and motivations involved?\",\"label\":\"Drivers and Motivations\"},\"hint\":\"What were / are the drivers and motivations of the project? Was it a statutory requirement, recognition of a need or demand, seizing an opportunity, addressing an inequality?\",\"title\":\"Drivers and Motivations\"},\"evaluation\":{\"hint\":\"Who is the evaluator(s) and governors of the service?\",\"title\":\"Evaluator\"},\"extorg\":{\"hint\":\"Are there any relevant actors, stakeholders or agencies which are relevant to the pilot, but which remain outside its vision and ethos?\",\"title\":\"External Organisations\"},\"extsvc\":{\"hint\":\"What reusable facilities, (technical and human) resources, services and sources of information were developed and used in support of these service definition and development processes? What external resources and services (e.g. communications and social media) were/are used?\",\"title\":\"External Technical Services\"},\"infsvc\":{\"hint\":\"What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?\",\"title\":\"Infrastructural Services\"},\"initiator\":{\"hint\":\"Who are, or were, the instigators who initiated your pilot activity?\",\"title\":\"Initiator\"},\"model\":{\"title\":\"Model\"},\"policyDef\":{\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\",\"title\":\"Policy Definer\"},\"specDes\":{\"hint\":\"Who specifies / specified and designs / designed the service delivery processes and resources?\",\"title\":\"Specifier and Designer\"},\"user\":{\"hint\":\"Who is the direct user of the service?\",\"title\":\"User\"}},\"title\":\"Co-Creation of Service Model\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"There are no community reporting items for this project.\",\"manage\":\"Manage Community Reporting\",\"title\":\"Community Reporting\"},\"definitions\":{\"data\":{\"hint\":\"Please add any Community Reports your project may have.\",\"title\":\"Community Reporting\"}},\"title\":\"Community Reporting\"},\"documents\":{\"dashboard\":{\"empty_set\":\"There are no documents or files for this project.\",\"manage\":\"Manage documents and files\",\"title\":\"Documents and Files\"},\"definitions\":{\"data\":{\"hint\":\"Please add any Documents and Files your project may have.\",\"title\":\"Documents and Files\"}},\"title\":\"Documents\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Well Being\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"What aspects of the service lifecycle are important regarding your innovation and change?\"},\"title\":\"Innovation and change\"},\"intervention\":{\"items\":{\"label\":\"What type of intervention is occuring?\"},\"title\":\"Intervention\"},\"learning\":{\"items\":{\"label\":\"How is learning happening in your intervention?\"},\"title\":\"Learning\"},\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"items\":{\"label\":\"Which aspects of human well-being and of the environment are relevant to your service? Are some more significant than others?\"},\"title\":\"Human well-being and Environment\"}},\"guide\":{\"step01\":\"The co-creative initiatives we are considering are all concerned with improving and nurturing wellbeing. Here we consider the wellbeing of individuals but this might be applied to places or to wider environments.\",\"step02\":\"Wellbeing has a number of different facets which are all interdependent.\",\"step03\":\"It also interacts with the physical and social environments.\",\"step04\":\"Some services or interventions are about mending something that has gone wrong and restoring the status quo.\",\"step05\":\"But there are other purposes for interventions.\",\"step06\":\"The intervention process involves a number of different stages and processes.\",\"step07\":\"Finally, if our innovations are to be sustained we must learn and improve.\",\"step08\":\"Who, what or where is the target of your intervention?\",\"step09\":\"Which aspects of wellbeing are the focus of your initiative?\",\"step10\":\"What aspects of the wellbeing of your subject are relevant but beyond the scope of your initiative?\",\"step11\":\"What are the relevant environmental aspects?\",\"step12\":\"Which combinations of interventions, from prevention to transformation, are relevant to your initiative?\",\"step13\":\"To what extent is learning and improvement built into your development governance and delivery processes?\"},\"options\":{\"innovation\":{\"development\":\"Development\",\"facilitation\":\"Facilitation\",\"palliation\":\"Palliation\",\"prevention\":\"Prevention\",\"rehabilitation\":\"Rehabilitation\",\"remedy\":\"Remedy\",\"transformation\":\"Transformation\"},\"intervention\":{\"coordination_delivery\":\"Coordination & Delivery\",\"governance\":\"Governance\",\"identification\":\"Identification & Planning\",\"learning\":\"Learning\",\"management\":\"Management\"},\"learning\":{\"research_evidence\":\"Research & Evidence\",\"service_improvement\":\"Service Improvement\",\"trials\":\"Trials\"},\"wellbeing\":{\"faculties_skills\":\"Faculties and Skills\",\"mental_psych\":\"Mental and Psychological\",\"physical_env\":\"Physical Envrionment\",\"physiological\":\"Physiological\",\"socio_cultural_env\":\"Socio-cultural Environment\",\"socio_economic\":\"Socio-Economic\"}},\"title\":\"Intervention Theory Model\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Define Ethos\",\"define_ethos_items\":\"Values\\nPrinciples\\nIntentions\\nPolicies\",\"deliver\":\"Deliver\",\"experience\":\"Experience\",\"govern\":\"Govern\",\"individual_cases\":\"Individual Cases\",\"plan_manage\":\"Plan & Manage\",\"plan_manage_items\":\"Rules\\nResources\\nProcesses\\nAccounts\",\"the_service_level\":\"The Service Level\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"How do these values come to be defined?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"title\":\"Define Ethos\",\"values\":{\"label\":\"What values are important that the intervention comes to address?\"}},\"deliver\":{\"actors\":{\"label\":\"By whom is it delivered?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"method\":{\"label\":\"How is the intervention delivered?\"},\"title\":\"Deliver\"},\"govern\":{\"actions\":{\"label\":\"How is the intervention governed? What measures are put in place to ensure the outcomes were as intended?\"},\"actors\":{\"label\":\"Who is evaluating this?\"},\"evolution\":{\"label\":\"How does this impact on the evolution of the service?\"},\"improvements\":{\"label\":\"How are improvements identified? How are they implemented?\"},\"outcomes\":{\"label\":\"Are outcomes embodied in targets and measurements? And if so, whose?\"},\"title\":\"Govern\"},\"model\":{\"title\":\"Model\"},\"planManageCurrent\":{\"actions\":{\"label\":\"What actions are now being undertaken within the pilot?\"},\"actors\":{\"label\":\"What ongoing actions are being taken?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"title\":\"Plan and Manage - Current actions\"},\"planManagePrior\":{\"actions\":{\"label\":\"What actions were being undertaken prior to the intervention?\"},\"actors\":{\"label\":\"Who was involved with these prior actions?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"title\":\"Plan and Manage - Prior actions\"}},\"guide\":{\"step01\":\"There are a number of core processes involved in a co-creative innovation. The first is concerned with the definition of ethos.\",\"step02\":\"The second involves management activities and products.\",\"step03\":\"Moral ordering is concerned with who gets to participate in activities so, in the case of your initiative, who is involved in these processes? Where and when do they take place? How do they communicate and how are they recorded?\",\"step04\":\"As a result of leadership, planning and design, services or initiatives are delivered and experienced.\",\"step05\":\"Again who is involved here and do they get any participation in the first two sets of activities?\",\"step06\":\"Rather than simply close the loop with a simple evaluation process, we are suggesting that, in systems of co-productive wellbeing and care, governance involves all the participants in the relationships identified here participation in addressing the questions defined in the moral ordering model.\",\"step07\":\"Governance takes place at the individual service client relationship level.\",\"step08\":\"It also takes place at the overall service level.\",\"step09\":\"How are governance processes, in the sense we are describing them here, take place in your initiative?\"},\"options\":{\"sources\":{\"meeting\":\"Meeting\",\"other\":\"Other\",\"policy\":\"Policy\"}},\"title\":\"Moral Ordering\"},\"social_media\":{\"dashboard\":{\"title\":\"Social Media\"},\"definitions\":{\"data\":{\"title\":\"Social Media\"}},\"title\":\"Social Media\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"There are no theory of change items for this project.\",\"manage\":\"Manage Theory of Change\",\"title\":\"Theory of Change\"},\"definitions\":{\"data\":{\"hint\":\"Please add any theories of change your project may have.\",\"title\":\"Theory of Change\"}},\"title\":\"Theory of Change\"},\"welcome\":{\"dashboard\":{\"summary\":\"Created by {user} on {date_time}\"},\"title\":\"Welcome\"}},\"hints\":{\"editor_double_click_edit\":\"Double-click an item to edit it, and enter to save\",\"social_facebook_add\":\"Add full links (URLs) to Facebook groups or pages.\",\"social_instagram_add\":\"Enter an Instagram hashtag, with or without the #. Press enter to add.\",\"social_twitter_add\":\"Enter a Twitter hashtag, with or without the #. Press enter to add.\",\"social_youtube_add\":\"Enter a link to a YouTube video and press enter to add.\",\"type_and_enter\":\"Type the name below and press enter.\"},\"languages\":{\"de\":\"German\",\"el\":\"Greek\",\"en_GB\":\"English\",\"es\":\"Spanish\",\"et\":\"Estonian\",\"fi\":\"Finnish\",\"fr\":\"French\",\"hu\":\"Hungarian\",\"it\":\"Italian\",\"nl\":\"Dutch\",\"pl\":\"Polish\",\"sv_SE\":\"Swedish\"},\"user_guide\":{\"back\":\"Back\",\"close\":\"Close\",\"next\":\"Next\",\"show\":\"Show user guide\",\"skip\":\"Skip user guide\"}}");
+module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisation\",\"service\":\"Service\",\"user\":\"User\"},\"app\":{\"add_new_actor\":\"Add new actor\",\"add_new_item\":\"Add new item\",\"all\":\"All\",\"colour\":\"Colour\",\"country\":\"Country\",\"create\":\"Create\",\"created_by\":\"Created by\",\"delete\":\"Delete\",\"description\":\"Description\",\"download\":\"Download\",\"error\":\"Error\",\"error_message\":\"Error: {message}\",\"export\":\"Export\",\"exporting\":\"Exporting\",\"exporting_project\":\"Exporting project\",\"image\":\"Image\",\"image_drag_prompt\":\"Drag your image here to begin or click to browse.\",\"image_is_uploading\":\"Uploading image\",\"image_remove\":\"Remove image\",\"image_upload_error\":\"Upload error\",\"import\":\"Import\",\"import_project\":\"Import project\",\"import_project_drag_hint\":\"Drag your CoSMoS project here to begin or click to browse.\",\"import_project_notes\":\"Note: You will be the owner of the project that is imported.\",\"import_project_success\":\"The project has been imported successfully!\",\"just_mine\":\"Just mine\",\"label\":\"Label\",\"last_saved_at\":\"Last saved at {date_time}\",\"log_in\":\"Log in\",\"maximum_items\":\"Maximum {count} items | Maxumum {count} item | Maximum {count} items\",\"models\":\"Models\",\"more_details\":\"More details\",\"name\":\"Name\",\"new_project\":\"Create new project\",\"next\":\"Next\",\"no_projects\":\"No projects found.\",\"ok\":\"OK\",\"open_project\":\"Open project\",\"please_wait_generate\":\"Please wait while the file is being generated.\",\"processing\":\"Processing\",\"project\":\"Project\",\"project_save_success\":\"Project saved!\",\"save\":\"Save\",\"saving\":\"Saving\",\"scale_to_fit\":\"Scale to fit\",\"search\":\"Search\",\"title\":\"Title\",\"to_create_project\":\"to create a project.\",\"try_again\":\"Try again\",\"type\":\"Type\",\"user_is_read_only\":\"Your user access level is read-only.\",\"web_address\":\"Web address\",\"which_country\":\"Which country are you from?\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Macro\"},\"meso\":{\"description\":\"There may be a number of stages at this level.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\",\"title\":\"Beneficiaries\"},\"broker\":{\"hint\":\"Is there an active Broker between the Instigators of Change and Change Makers? If so, who are they?\",\"title\":\"Broker\"},\"changeMakers\":{\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\",\"title\":\"Change Makers\"},\"changeTheorists\":{\"hint\":\"Who are the Change Theorists for the Intervention?\",\"title\":\"Change Theorists\"},\"frontLineServiceDeliverer\":{\"hint\":\"Who is the Front-line Service Deliverer?\",\"title\":\"Front-line Service Deliverer\"},\"instigatorsOfChange\":{\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\",\"title\":\"Instigators of Change\"},\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"hint\":\"Who is the Service Delivery Manager responsible for the Intervention?\",\"title\":\"Service Delivery Manager\"},\"serviceOrganisationManager\":{\"hint\":\"Who is the Service Organisation Manager for the Intervention?\",\"title\":\"Service Organisation Manager\"},\"servicePolicyMaker\":{\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\",\"title\":\"Service Policy Maker\"},\"subjectsOfChange\":{\"hint\":\"Who are the idenitified subjects of change within the intervention?\",\"title\":\"Subjects of Change\"},\"user\":{\"hint\":\"Who is the direct user of the service?\",\"title\":\"Client / User\"},\"victims\":{\"hint\":\"Are there any identified victims? If so, who are they?\",\"title\":\"Victims\"}},\"guide\":{\"step01\":\"In this model, we consider a Cosie initiative in terms of a set of roles and the conversational relationships in which they engage.\",\"step02\":\"First we have front line service deliverer and a client.\",\"step03\":\"The deliverer has a manager or supervisor. This pattern of an individual engaging in two conversations will be repeated.\",\"step04\":\"The delivery takes place in some formal or informal institutional context.\",\"step05\":\"Finally, the service exists in some wider policy setting.\",\"step06\":\"This is meant to be an abstract model. In some cases there may be a flat organisation where delivery, management and policy are undertaken by all the members of a small team, in other cases they may represent distinct individuals and contexts.\",\"step07\":\"How do the concepts of micro, meso and macro map onto your initiative?\",\"step08\":\"How does communication take place between them?\",\"step09\":\"How coordinated and coherent are they?\",\"step10\":\"In particular, are there information flows and conversations between macro and micro which are not mediated by the meso? What are the implications of this?\",\"step11\":\"The next model considers change agency in terms of roles and conversations.\",\"step12\":\"A change must be instigated, then it is executed.\",\"step13\":\"The changes we are considering are to a person, or a place or environment.\",\"step14\":\"The changes we are considering are often themselves complex and are about complex situations. Often they are based on some theory which has been introduced or brokered into the situation.\",\"step15\":\"There is a set of intended beneficiaries.\",\"step16\":\"But there are also possible dis-beneficiaries or victims of the change.\",\"step17\":\"This model is designed as a probe on the initial service model to identify the specific actors who, at various stages in the development of the initiative, have undertaken one or more of these change agency roles. Who are they?\"},\"title\":\"Analytic Model\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Ambiguity\",\"ambivalence\":\"Ambivalence\",\"committing\":\"Committing\",\"execute\":\"Execute\",\"first_order\":\"First Order\",\"fourth_order\":\"Fourth Order!\",\"languaging\":\"\\\"Languaging\\\"\",\"measure\":\"Measure\",\"plan\":\"Plan\",\"risk\":\"Risk\",\"second_order\":\"Second Order\",\"sense_making\":\"Sense-Making\",\"third_order\":\"Third Order\",\"vision\":\"Vision\",\"zero_order\":\"Zero Order\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"How is the plan being executed?\"},\"measure\":{\"label\":\"How are observations and measurements being recorded? If not, what needs to be enabled to do so?\"},\"plan\":{\"label\":\"How was a plan set up to deliver the vision?\"},\"vision\":{\"label\":\"How were the vision and objectives set?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"What was the origin of the change? And what was the change?\"},\"event_cause\":{\"label\":\"What happened to allow this event to occur?\"},\"unexpected_events\":{\"label\":\"Have there been instances where you have seen unexpected events occurred?\"}},\"model\":{\"title\":\"Model\"},\"second_order\":{\"committing\":{\"label\":\"How has the service delivery of the intervention changed from its original plans?\"},\"languaging\":{\"label\":\"What changes have been made to how the intervention has been understood?\"},\"sense_making\":{\"label\":\"When do you review the plans and vision?\"}},\"third_order\":{\"processes\":{\"label\":\"What processes provoke or enable second order questioning?\"}}},\"guide\":{\"step01\":\"We start off with the standard model of purposeful action that we are all very familiar with.\",\"step02\":\"But we have all had the experience of looking back and realising that things have changed in a really fundamental way: we talk about the paradigm shifting. This implies that we have engaged in making new sense of our world and this often means that our language changes.\",\"step03\":\"These two different ways of operation are sometimes referred to as first order and second order.\",\"step04\":\"In management terms, we have risk management on one hand and the resolution of contradictions and ambiguities on the other.\",\"step05\":\"We now introduce the idea of third order activities which enable and support the appropriate transitions between first and second work allowing a step back to reconsider our ethos and assumptions and, when we have, to move back into the mode of practical planning and delivery.\",\"step06\":\"Sometimes the reaction to ambiguity and contradiction is an emotional one: fight or fly which is zero order, or inspiration and heroism which we will call fourth order.\",\"step07\":\"So, on the right hand side of our diagram we have the spectrum of emotional work and responses while of the left hand side we have co-productive, conversational work.\",\"step08\":\"This model generates a series of open ended questions about where the different first and second order work takes place in your initiative, what emotional work has been and is requires and how and where it is undertaken and how and by whom are the required third order interventions undertaken?\"},\"title\":\"Change Model\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Infrastructural Relationships, Recourses and Facilities\",\"policy_law\":\"Policy & Law\",\"resources\":\"Resources\",\"service_definition\":\"Service Definition and Development Platform\",\"service_delivery\":\"Service Delivery Platform\",\"structural_relationships\":\"Structural Relationships and Occasions\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\",\"title\":\"Beneficiary\"},\"delivery\":{\"hint\":\"Who is responsible for the delivery mechanism(s), channels and roles in your pilot?\",\"title\":\"Deliverer\"},\"deployment\":{\"hint\":\"Who deploys / deployed and activates / activated those processes and resources?\",\"title\":\"Deployer\"},\"drivers\":{\"body\":{\"hint\":\"What are the drivers and motivations involved?\",\"label\":\"Drivers and Motivations\"},\"hint\":\"What were / are the drivers and motivations of the project? Was it a statutory requirement, recognition of a need or demand, seizing an opportunity, addressing an inequality?\",\"title\":\"Drivers and Motivations\"},\"evaluation\":{\"hint\":\"Who is the evaluator(s) and governors of the service?\",\"title\":\"Evaluator\"},\"extorg\":{\"hint\":\"Are there any relevant actors, stakeholders or agencies which are relevant to the pilot, but which remain outside its vision and ethos?\",\"title\":\"External Organisations\"},\"extsvc\":{\"hint\":\"What reusable facilities, (technical and human) resources, services and sources of information were developed and used in support of these service definition and development processes? What external resources and services (e.g. communications and social media) were/are used?\",\"title\":\"External Technical Services\"},\"infsvc\":{\"hint\":\"What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?\",\"title\":\"Infrastructural Services\"},\"initiator\":{\"hint\":\"Who are, or were, the instigators who initiated your pilot activity?\",\"title\":\"Initiator\"},\"model\":{\"title\":\"Model\"},\"policyDef\":{\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\",\"title\":\"Policy Definer\"},\"specDes\":{\"hint\":\"Who specifies / specified and designs / designed the service delivery processes and resources?\",\"title\":\"Specifier and Designer\"},\"user\":{\"hint\":\"Who is the direct user of the service?\",\"title\":\"User\"}},\"title\":\"Co-Creation of Service Model\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"There are no community reporting items for this project.\",\"manage\":\"Manage Community Reporting\",\"title\":\"Community Reporting\"},\"definitions\":{\"data\":{\"hint\":\"Please add any Community Reports your project may have.\",\"title\":\"Community Reporting\"}},\"title\":\"Community Reporting\"},\"documents\":{\"dashboard\":{\"empty_set\":\"There are no documents or files for this project.\",\"manage\":\"Manage documents and files\",\"title\":\"Documents and Files\"},\"definitions\":{\"data\":{\"hint\":\"Please add any Documents and Files your project may have.\",\"title\":\"Documents and Files\"}},\"title\":\"Documents\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Well Being\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"What aspects of the service lifecycle are important regarding your innovation and change?\"},\"title\":\"Innovation and change\"},\"intervention\":{\"items\":{\"label\":\"What type of intervention is occuring?\"},\"title\":\"Intervention\"},\"learning\":{\"items\":{\"label\":\"How is learning happening in your intervention?\"},\"title\":\"Learning\"},\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"items\":{\"label\":\"Which aspects of human well-being and of the environment are relevant to your service? Are some more significant than others?\"},\"title\":\"Human well-being and Environment\"}},\"guide\":{\"step01\":\"The co-creative initiatives we are considering are all concerned with improving and nurturing wellbeing. Here we consider the wellbeing of individuals but this might be applied to places or to wider environments.\",\"step02\":\"Wellbeing has a number of different facets which are all interdependent.\",\"step03\":\"It also interacts with the physical and social environments.\",\"step04\":\"Some services or interventions are about mending something that has gone wrong and restoring the status quo.\",\"step05\":\"But there are other purposes for interventions.\",\"step06\":\"The intervention process involves a number of different stages and processes.\",\"step07\":\"Finally, if our innovations are to be sustained we must learn and improve.\",\"step08\":\"Who, what or where is the target of your intervention?\",\"step09\":\"Which aspects of wellbeing are the focus of your initiative?\",\"step10\":\"What aspects of the wellbeing of your subject are relevant but beyond the scope of your initiative?\",\"step11\":\"What are the relevant environmental aspects?\",\"step12\":\"Which combinations of interventions, from prevention to transformation, are relevant to your initiative?\",\"step13\":\"To what extent is learning and improvement built into your development governance and delivery processes?\"},\"options\":{\"innovation\":{\"development\":\"Development\",\"facilitation\":\"Facilitation\",\"palliation\":\"Palliation\",\"prevention\":\"Prevention\",\"rehabilitation\":\"Rehabilitation\",\"remedy\":\"Remedy\",\"transformation\":\"Transformation\"},\"intervention\":{\"coordination_delivery\":\"Coordination & Delivery\",\"governance\":\"Governance\",\"identification\":\"Identification & Planning\",\"learning\":\"Learning\",\"management\":\"Management\"},\"learning\":{\"research_evidence\":\"Research & Evidence\",\"service_improvement\":\"Service Improvement\",\"trials\":\"Trials\"},\"wellbeing\":{\"faculties_skills\":\"Faculties and Skills\",\"mental_psych\":\"Mental and Psychological\",\"physical_env\":\"Physical Envrionment\",\"physiological\":\"Physiological\",\"socio_cultural_env\":\"Socio-cultural Environment\",\"socio_economic\":\"Socio-Economic\"}},\"title\":\"Intervention Theory Model\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Define Ethos\",\"define_ethos_items\":\"Values\\nPrinciples\\nIntentions\\nPolicies\",\"deliver\":\"Deliver\",\"experience\":\"Experience\",\"govern\":\"Govern\",\"individual_cases\":\"Individual Cases\",\"plan_manage\":\"Plan & Manage\",\"plan_manage_items\":\"Rules\\nResources\\nProcesses\\nAccounts\",\"the_service_level\":\"The Service Level\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"How do these values come to be defined?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"title\":\"Define Ethos\",\"values\":{\"label\":\"What values are important that the intervention comes to address?\"}},\"deliver\":{\"actors\":{\"label\":\"By whom is it delivered?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"method\":{\"label\":\"How is the intervention delivered?\"},\"title\":\"Deliver\"},\"govern\":{\"actions\":{\"label\":\"How is the intervention governed? What measures are put in place to ensure the outcomes were as intended?\"},\"actors\":{\"label\":\"Who is evaluating this?\"},\"evolution\":{\"label\":\"How does this impact on the evolution of the service?\"},\"improvements\":{\"label\":\"How are improvements identified? How are they implemented?\"},\"outcomes\":{\"label\":\"Are outcomes embodied in targets and measurements? And if so, whose?\"},\"title\":\"Govern\"},\"model\":{\"title\":\"Model\"},\"planManageCurrent\":{\"actions\":{\"label\":\"What actions are now being undertaken within the pilot?\"},\"actors\":{\"label\":\"What ongoing actions are being taken?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"title\":\"Plan and Manage - Current actions\"},\"planManagePrior\":{\"actions\":{\"label\":\"What actions were being undertaken prior to the intervention?\"},\"actors\":{\"label\":\"Who was involved with these prior actions?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"},\"title\":\"Plan and Manage - Prior actions\"}},\"guide\":{\"step01\":\"There are a number of core processes involved in a co-creative innovation. The first is concerned with the definition of ethos.\",\"step02\":\"The second involves management activities and products.\",\"step03\":\"Moral ordering is concerned with who gets to participate in activities so, in the case of your initiative, who is involved in these processes? Where and when do they take place? How do they communicate and how are they recorded?\",\"step04\":\"As a result of leadership, planning and design, services or initiatives are delivered and experienced.\",\"step05\":\"Again who is involved here and do they get any participation in the first two sets of activities?\",\"step06\":\"Rather than simply close the loop with a simple evaluation process, we are suggesting that, in systems of co-productive wellbeing and care, governance involves all the participants in the relationships identified here participation in addressing the questions defined in the moral ordering model.\",\"step07\":\"Governance takes place at the individual service client relationship level.\",\"step08\":\"It also takes place at the overall service level.\",\"step09\":\"How are governance processes, in the sense we are describing them here, take place in your initiative?\"},\"options\":{\"sources\":{\"meeting\":\"Meeting\",\"other\":\"Other\",\"policy\":\"Policy\"}},\"title\":\"Moral Ordering\"},\"social_media\":{\"dashboard\":{\"title\":\"Social Media\"},\"definitions\":{\"data\":{\"title\":\"Social Media\"}},\"title\":\"Social Media\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"There are no theory of change items for this project.\",\"manage\":\"Manage Theory of Change\",\"title\":\"Theory of Change\"},\"definitions\":{\"data\":{\"hint\":\"Please add any theories of change your project may have.\",\"title\":\"Theory of Change\"}},\"title\":\"Theory of Change\"},\"user_journey_model\":{\"dashboard\":{\"one\":\"\",\"other\":\"\"},\"definitions\":{\"accessing\":{\"access_method\":{\"label\":\"How did you gain access to the service?\"},\"appropriate_comment\":{\"label\":\"Do you think this aspect of the service is appropriate?\"},\"qualification_experience\":{\"label\":\"If so, what was the experience like?\"},\"qualification_process\":{\"label\":\"Was there a qualification or selection process?\"},\"title\":\"Accessing\"},\"discovering\":{\"comments\":{\"label\":\"Any further comments, observations?\"},\"discovery_medium\":{\"label\":\"How did you find out about the service?\"},\"information_experience\":{\"label\":\"What is your opinion about the quality, completeness and accessibility of the information?\"},\"information_medium\":{\"label\":\"How did you access information about the service?\"},\"title\":\"Discovering\"},\"evaluating\":{\"opinions_asked\":{\"hint\":\"Think about where and when this was.\",\"label\":\"Were you asked about your opinions about your experience of the service?\"},\"opinions_how\":{\"label\":\"If yes, how were you asked?\"},\"service_experience\":{\"label\":\"Was the service what you expected?\"},\"surprises_comments\":{\"label\":\"Were there any surprises or disappointments in your experience?\"},\"title\":\"Evaluating\"},\"instigating\":{\"comments\":{\"label\":\"Comments\"},\"design_role\":{\"label\":\"Did you play any role in the design and definition of the service? If yes, what were the occasions and channels that this occurred?\"},\"instigate_role\":{\"label\":\"Did you have any role in instigating the project? If yes, were you part of any of the following options? You can choose as many as you like.\"},\"title\":\"Instigating\"},\"model\":{\"title\":\"Model\"},\"using\":{\"accessible_experience\":{\"label\":\"Was the service accessible to you?\"},\"participate_experience\":{\"label\":\"What was it like to use or participate in the service?\"},\"time_experience\":{\"label\":\"Was the duration and frequencies of the service events or contacts OK?\"},\"title\":\"Using\",\"where\":{\"label\":\"Where did you use the service?\"}}},\"guide\":{\"step01\":\"Services are publicised to their intended users, this is the discovery phase.\",\"step02\":\"Users who want the service make some sort of request or application, this is the accessing phase.\",\"step03\":\"If the previous stage is successful, the service is delivered and experienced, this is the using phase.\",\"step04\":\"The experience of the use of the service is then evaluated.\",\"step05\":\"The questions so far assume that the service has been defined and already exists. The next set of questions is about whether and how you participated in the processes by which the service was created in the first place.\",\"step06\":\"First we can complete our service delivery model with the stages involved in creating. We call this the designing phase.\",\"step07\":\"Then we can show the processes by which the service was identified and initiated in the first place. We call this the instigating phase.\"},\"options\":{\"access_methods\":{\"applied\":\"Applied\",\"other\":\"Other\",\"referred\":\"Referred\"},\"instigate_roles\":{\"government_department\":\"Government Department\",\"political_party\":\"Political Party\",\"pressure_group\":\"Pressure/Campaigning Group\"},\"mediums\":{\"other\":\"Other\",\"paper\":\"Paper publication\",\"referral\":\"Referral\",\"social\":\"Social media\",\"word_of_mouth\":\"Word of mouth\"},\"opinions_how\":{\"interview\":\"Interview\",\"survey\":\"Survey\",\"workshop\":\"Workshop\"},\"where\":{\"community\":\"Community\",\"home\":\"Home\",\"other\":\"Other\",\"public\":\"Public\"},\"yes_no_maybe\":{\"maybe\":\"Maybe\",\"no\":\"No\",\"yes\":\"Yes\"}},\"title\":\"User Journey Model\"},\"welcome\":{\"dashboard\":{\"summary\":\"Created by {user} on {date_time}\"},\"title\":\"Welcome\"}},\"countries\":{\"de\":\"Germany\",\"el\":\"Greece\",\"en_GB\":\"United Kingdom\",\"es\":\"Spain\",\"et\":\"Estonia\",\"fi\":\"Finland\",\"fr\":\"France\",\"hu\":\"Hungary\",\"it\":\"Italy\",\"nl\":\"Netherlands\",\"pl\":\"Poland\",\"sv_SE\":\"Sweden\"},\"hints\":{\"editor_double_click_edit\":\"Double-click an item to edit it, and enter to save\",\"social_facebook_add\":\"Add full links (URLs) to Facebook groups or pages.\",\"social_instagram_add\":\"Enter an Instagram hashtag, with or without the #. Press enter to add.\",\"social_twitter_add\":\"Enter a Twitter hashtag, with or without the #. Press enter to add.\",\"social_youtube_add\":\"Enter a link to a YouTube video and press enter to add.\",\"type_and_enter\":\"Type the name below and press enter.\"},\"languages\":{\"de\":\"German\",\"el\":\"Greek\",\"en_GB\":\"English\",\"es\":\"Spanish\",\"et\":\"Estonian\",\"fi\":\"Finnish\",\"fr\":\"French\",\"hu\":\"Hungarian\",\"it\":\"Italian\",\"nl\":\"Dutch\",\"pl\":\"Polish\",\"sv_SE\":\"Swedish\"},\"user_guide\":{\"back\":\"Back\",\"close\":\"Close\",\"next\":\"Next\",\"show\":\"Show user guide\",\"skip\":\"Skip user guide\"}}");
 
 /***/ }),
 
@@ -5388,10 +6066,10 @@ module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisatio
 /*!*************************!*\
   !*** ./js/lang/es.json ***!
   \*************************/
-/*! exports provided: activity_types, app, aspects, hints, languages, user_guide, default */
+/*! exports provided: activity_types, app, aspects, countries, hints, languages, user_guide, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organización\",\"service\":\"Servicio\",\"user\":\"Usuario\"},\"app\":{\"add_new_actor\":\"Agregar nuevo actor\",\"add_new_item\":\"agregar ítem nuevo\",\"all\":\"Todos\",\"colour\":\"Color\",\"create\":\"Crear\",\"created_by\":\"Creado por\",\"delete\":\"Eliminar\",\"description\":\"Descripción\",\"download\":\"Descargar\",\"error\":\"Error\",\"error_message\":\"Error: {message}\",\"export\":\"Exportar\",\"exporting\":\"Exportador\",\"exporting_project\":\"Exportar proyecto\",\"image\":\"Imagen\",\"image_drag_prompt\":\"Arrastre su imagen aquí para comenzar o haga clic para navegar.\",\"image_is_uploading\":\"Subiendo imagen\",\"image_remove\":\"Quita la imagen\",\"image_upload_error\":\"Error al Subir\",\"import\":\"Importar\",\"import_project\":\"Importar proyecto\",\"import_project_drag_hint\":\"Arrastre su proyecto CoSMoS aquí para comenzar o haga clic para navegar.\",\"import_project_notes\":\"Nota: Serás el propietario del proyecto que se importa.\",\"import_project_success\":\"¡El proyecto se ha importado correctamente!\",\"just_mine\":\"Sólo mía\",\"label\":\"Etiqueta\",\"last_saved_at\":\"Guardado por última vez a las {date_time}\",\"log_in\":\"Iniciar sesión\",\"maximum_items\":\"Máximo {count} elementos | Maxumum {count} elemento | Máximo de {count} elementos\",\"models\":\"Modelos\",\"name\":\"Nombre\",\"new_project\":\"Crear nuevo proyecto\",\"next\":\"próximo\",\"no_projects\":\"No se encontraron proyectos.\",\"ok\":\"Okay\",\"open_project\":\"Proyecto abierto\",\"please_wait_generate\":\"Espere mientras se genera el archivo.\",\"processing\":\"Procesando\",\"project\":\"Proyecto\",\"project_save_success\":\"Proyecto guardado!\",\"save\":\"Salvar\",\"saving\":\"Ahorro\",\"scale_to_fit\":\"Escalar para adaptarse\",\"search\":\"Buscar\",\"title\":\"Título\",\"to_create_project\":\"para crear un proyecto.\",\"try_again\":\"Inténtalo de nuevo\",\"type\":\"Tipo\",\"user_is_read_only\":\"Su nivel de acceso de usuario es de solo lectura.\",\"web_address\":\"dirección web\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Macro\"},\"meso\":{\"description\":\"Puede haber varias etapas en este nivel.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"¿Hay beneficiarios distintos del usuario / participantes directos? Si es así, ¿quiénes son?\",\"title\":\"Beneficiarios\"},\"broker\":{\"hint\":\"¿Existe un corredor activo entre los instigadores del cambio y los creadores del cambio? Si es así, ¿quiénes son?\",\"title\":\"Corredor\"},\"changeMakers\":{\"hint\":\"¿Quiénes son o fueron los instigadores que iniciaron su actividad de intervención?\",\"title\":\"Creadores de cambios\"},\"changeTheorists\":{\"hint\":\"¿Quiénes son los teóricos del cambio para la intervención?\",\"title\":\"Teóricos del cambio\"},\"frontLineServiceDeliverer\":{\"hint\":\"¿Quién es el repartidor de servicios de primera línea?\",\"title\":\"Distribuidor de servicios de primera línea\"},\"instigatorsOfChange\":{\"hint\":\"¿Quiénes son o fueron los instigadores que iniciaron su actividad de intervención?\",\"title\":\"Instigadores del cambio\"},\"model\":{\"title\":\"Modelo\"},\"serviceDeliveryManager\":{\"hint\":\"¿Quién es el Gerente de prestación de servicios responsable de la intervención?\",\"title\":\"Gerente de Servicio de Entregas\"},\"serviceOrganisationManager\":{\"hint\":\"¿Quién es el Gerente de Organización de Servicios para la Intervención?\",\"title\":\"Gerente de Organización de Servicios\"},\"servicePolicyMaker\":{\"hint\":\"¿Quiénes son, o fueron, quienes definieron las políticas de servicio y los principios bajo los cuales opera el servicio?\",\"title\":\"Creador de políticas de servicio\"},\"subjectsOfChange\":{\"hint\":\"¿Quiénes son los sujetos de cambio identificados dentro de la intervención?\",\"title\":\"Temas de cambio\"},\"user\":{\"hint\":\"¿Quién es el usuario directo del servicio?\",\"title\":\"Cliente / Usuario\"},\"victims\":{\"hint\":\"¿Hay víctimas identificadas? Si es así, ¿quiénes son?\",\"title\":\"Víctimas\"}},\"guide\":{\"step01\":\"En este modelo, consideramos una iniciativa de Cosie en términos de un conjunto de roles y las relaciones de conversación en las que participan.\",\"step02\":\"Primero tenemos un repartidor de servicios de primera línea y un cliente.\",\"step03\":\"El repartidor tiene un administrador o supervisor. Se repetirá este patrón de un individuo que participa en dos conversaciones.\",\"step04\":\"La entrega tiene lugar en algún contexto institucional formal o informal.\",\"step05\":\"Finalmente, el servicio existe en un marco de políticas más amplio.\",\"step06\":\"Este está destinado a ser un modelo abstracto. En algunos casos, puede haber una organización plana en la que la entrega, la gestión y la política son asumidas por todos los miembros de un equipo pequeño; en otros casos, pueden representar individuos y contextos distintos.\",\"step07\":\"¿Cómo se relacionan los conceptos de micro, meso y macro con su iniciativa?\",\"step08\":\"¿Cómo se produce la comunicación entre ellos?\",\"step09\":\"¿Qué tan coordinados y coherentes son?\",\"step10\":\"En particular, ¿existen flujos de información y conversaciones entre macro y micro que no están mediados por el meso? ¿Cuáles son las implicaciones de esto?\",\"step11\":\"El siguiente modelo considera la agencia de cambio en términos de roles y conversaciones.\",\"step12\":\"Se debe instigar un cambio, luego se ejecuta.\",\"step13\":\"Los cambios que estamos considerando son para una persona, un lugar o un entorno.\",\"step14\":\"Los cambios que estamos considerando son a menudo complejos en sí mismos y se refieren a situaciones complejas. A menudo, se basan en alguna teoría que se ha introducido o intervenido en la situación.\",\"step15\":\"Hay un conjunto de beneficiarios previstos.\",\"step16\":\"Pero también hay posibles desbeneficiarios o víctimas del cambio.\",\"step17\":\"Este modelo está diseñado como una sonda sobre el modelo de servicio inicial para identificar a los actores específicos que, en varias etapas del desarrollo de la iniciativa, han asumido uno o más de estos roles de agencia de cambio. ¿Quienes son?\"},\"title\":\"Modelo analítico\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Ambigüedad\",\"ambivalence\":\"Ambivalencia\",\"committing\":\"Comprometerse\",\"execute\":\"Ejecutar\",\"first_order\":\"Primer orden\",\"fourth_order\":\"¡Cuarto orden!\",\"languaging\":\"\\\"Idiomas\\\"\",\"measure\":\"Medida\",\"plan\":\"Plan\",\"risk\":\"Riesgo\",\"second_order\":\"Segundo orden\",\"sense_making\":\"Creación de sentido\",\"third_order\":\"Tercer orden\",\"vision\":\"Visión\",\"zero_order\":\"Orden cero\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"¿Cómo se está ejecutando el plan?\"},\"measure\":{\"label\":\"¿Cómo se registran las observaciones y mediciones? Si no es así, ¿qué se debe habilitar para hacerlo?\"},\"plan\":{\"label\":\"¿Cómo se estableció un plan para entregar la visión?\"},\"vision\":{\"label\":\"¿Cómo se establecieron la visión y los objetivos?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"¿Cuál fue el origen del cambio? ¿Y cuál fue el cambio?\"},\"event_cause\":{\"label\":\"¿Qué pasó para permitir que ocurriera este evento?\"},\"unexpected_events\":{\"label\":\"¿Ha habido casos en los que haya visto que ocurrieron eventos inesperados?\"}},\"model\":{\"title\":\"Modelo\"},\"second_order\":{\"committing\":{\"label\":\"¿Cómo ha cambiado la prestación del servicio de la intervención con respecto a sus planes originales?\"},\"languaging\":{\"label\":\"¿Qué cambios se han realizado sobre cómo se ha entendido la intervención?\"},\"sense_making\":{\"label\":\"¿Cuándo revisa los planes y la visión?\"}},\"third_order\":{\"processes\":{\"label\":\"¿Qué procesos provocan o permiten cuestionamientos de segundo orden?\"}}},\"guide\":{\"step01\":\"Comenzamos con el modelo estándar de acción con propósito con el que todos estamos muy familiarizados.\",\"step02\":\"Pero todos hemos tenido la experiencia de mirar hacia atrás y darnos cuenta de que las cosas han cambiado de una manera realmente fundamental: hablamos del cambio de paradigma. Esto implica que nos hemos comprometido a darle un nuevo sentido a nuestro mundo y esto a menudo significa que nuestro idioma cambia.\",\"step03\":\"Estas dos formas diferentes de funcionamiento se denominan a veces de primer y segundo orden.\",\"step04\":\"En términos de gestión, tenemos la gestión de riesgos por un lado y la resolución de contradicciones y ambigüedades por el otro.\",\"step05\":\"Ahora presentamos la idea de actividades de tercer orden que permiten y respaldan las transiciones apropiadas entre el primer y el segundo trabajo, lo que permite un paso atrás para reconsiderar nuestro espíritu y suposiciones y, cuando lo hemos hecho, volver al modo de planificación y ejecución prácticas.\",\"step06\":\"A veces, la reacción a la ambigüedad y la contradicción es emocional: luchar o volar, que es de orden cero, o inspiración y heroísmo, que llamaremos cuarto orden.\",\"step07\":\"Entonces, en el lado derecho de nuestro diagrama tenemos el espectro de trabajo emocional y respuestas, mientras que en el lado izquierdo tenemos trabajo coproductivo y conversacional.\",\"step08\":\"Este modelo genera una serie de preguntas abiertas sobre dónde tiene lugar el trabajo diferente de primer y segundo orden en su iniciativa, qué trabajo emocional ha sido y requiere y cómo y dónde se realiza y cómo y por quién se requieren las intervenciones de tercer orden. emprendido?\"},\"title\":\"Cambiar modelo\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Carácter distintivo\",\"infrastructural_relationships\":\"Relaciones de infraestructura, recursos e instalaciones\",\"policy_law\":\"Políticas y leyes\",\"resources\":\"Recursos\",\"service_definition\":\"Plataforma de desarrollo y definición de servicios\",\"service_delivery\":\"Plataforma de prestación de servicios\",\"structural_relationships\":\"Relaciones estructurales y ocasiones\"},\"definitions\":{\"beneficiary\":{\"hint\":\"¿Hay beneficiarios distintos del usuario / participantes directos? Si es así, ¿quiénes son?\",\"title\":\"Beneficiario\"},\"delivery\":{\"hint\":\"¿Quién es responsable de los mecanismos, canales y roles de entrega en su piloto?\",\"title\":\"Libertador\"},\"deployment\":{\"hint\":\"¿Quién despliega / despliega y activa / activa esos procesos y recursos?\",\"title\":\"Desplegador\"},\"drivers\":{\"body\":{\"hint\":\"¿Cuáles son los impulsores y las motivaciones involucradas?\",\"label\":\"Impulsores y motivaciones\"},\"hint\":\"¿Cuáles fueron / son los impulsores y motivaciones del proyecto? ¿Fue un requisito legal, el reconocimiento de una necesidad o demanda, aprovechar una oportunidad, abordar una desigualdad?\",\"title\":\"Impulsores y motivaciones\"},\"evaluation\":{\"hint\":\"¿Quiénes son los evaluadores y los gobernadores del servicio?\",\"title\":\"Evaluador\"},\"extorg\":{\"hint\":\"¿Hay actores, partes interesadas o agencias relevantes que sean relevantes para el piloto, pero que permanecen fuera de su visión y espíritu?\",\"title\":\"Organizaciones externas\"},\"extsvc\":{\"hint\":\"¿Qué instalaciones, recursos (técnicos y humanos), servicios y fuentes de información reutilizables se desarrollaron y utilizaron en apoyo de estos procesos de definición y desarrollo de servicios? ¿Qué recursos y servicios externos (por ejemplo, comunicaciones y redes sociales) se utilizaron o se utilizaron?\",\"title\":\"Servicios técnicos externos\"},\"infsvc\":{\"hint\":\"¿Qué servicios, canales e instalaciones externos utiliza en la prestación de su (s) servicio (s)? ¿Qué fuentes de información utilizas? ¿Qué información publica, a quién y con qué canales y medios?\",\"title\":\"Servicios de infraestructura\"},\"initiator\":{\"hint\":\"¿Quiénes son o fueron los instigadores que iniciaron su actividad piloto?\",\"title\":\"Iniciador\"},\"model\":{\"title\":\"Modelo\"},\"policyDef\":{\"hint\":\"¿Quiénes son, o fueron, quienes definieron las políticas de servicio y los principios bajo los cuales opera el servicio?\",\"title\":\"Definidor de políticas\"},\"specDes\":{\"hint\":\"¿Quién especifica / especifica y diseña / diseña los procesos y recursos de prestación de servicios?\",\"title\":\"Especificador y diseñador\"},\"user\":{\"hint\":\"¿Quién es el usuario directo del servicio?\",\"title\":\"Usuario\"}},\"title\":\"Modelo de co-creación de servicio\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"No hay elementos de informes de la comunidad para este proyecto.\",\"manage\":\"Gestionar informes de la comunidad\",\"title\":\"Informes de la comunidad\"},\"definitions\":{\"data\":{\"hint\":\"Agregue los informes de la comunidad que pueda tener su proyecto.\",\"title\":\"Informes de la comunidad\"}},\"title\":\"Informes de la comunidad\"},\"documents\":{\"dashboard\":{\"empty_set\":\"No hay documentos ni archivos para este proyecto.\",\"manage\":\"Gestionar documentos y archivos\",\"title\":\"Documentos y archivos\"},\"definitions\":{\"data\":{\"hint\":\"Agregue los documentos y archivos que pueda tener su proyecto.\",\"title\":\"Documentos y archivos\"}},\"title\":\"Documentos\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Bienestar\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"¿Qué aspectos del ciclo de vida del servicio son importantes con respecto a su innovación y cambio?\"},\"title\":\"Innovación y cambio\"},\"intervention\":{\"items\":{\"label\":\"¿Qué tipo de intervención está ocurriendo?\"},\"title\":\"Intervención\"},\"learning\":{\"items\":{\"label\":\"¿Cómo está sucediendo el aprendizaje en su intervención?\"},\"title\":\"Aprendizaje\"},\"model\":{\"title\":\"Modelo\"},\"wellbeing\":{\"items\":{\"label\":\"¿Qué aspectos del bienestar humano y del medio ambiente son relevantes para su servicio? ¿Son algunos más importantes que otros?\"},\"title\":\"Bienestar humano y medio ambiente\"}},\"guide\":{\"step01\":\"Todas las iniciativas co-creativas que estamos considerando están relacionadas con la mejora y el fomento del bienestar. Aquí consideramos el bienestar de las personas, pero esto podría aplicarse a lugares o entornos más amplios.\",\"step02\":\"El bienestar tiene una serie de facetas diferentes que son interdependientes.\",\"step03\":\"También interactúa con el entorno físico y social.\",\"step04\":\"Algunos servicios o intervenciones tratan de reparar algo que salió mal y restaurar el status quo.\",\"step05\":\"Pero hay otros propósitos para las intervenciones.\",\"step06\":\"El proceso de intervención implica una serie de etapas y procesos diferentes.\",\"step07\":\"Finalmente, si queremos mantener nuestras innovaciones, debemos aprender y mejorar.\",\"step08\":\"¿Quién, qué o dónde es el objetivo de su intervención?\",\"step09\":\"¿En qué aspectos del bienestar se centra su iniciativa?\",\"step10\":\"¿Qué aspectos del bienestar de su tema son relevantes pero más allá del alcance de su iniciativa?\",\"step11\":\"¿Cuáles son los aspectos ambientales relevantes?\",\"step12\":\"¿Qué combinaciones de intervenciones, desde la prevención hasta la transformación, son relevantes para su iniciativa?\",\"step13\":\"¿En qué medida se integran el aprendizaje y la mejora en los procesos de gestión y ejecución del desarrollo?\"},\"options\":{\"innovation\":{\"development\":\"Desarrollo\",\"facilitation\":\"Facilitación\",\"palliation\":\"Paliación\",\"prevention\":\"Prevención\",\"rehabilitation\":\"Rehabilitación\",\"remedy\":\"Remedio\",\"transformation\":\"Transformación\"},\"intervention\":{\"coordination_delivery\":\"Coordinación y entrega\",\"governance\":\"Gobernancia\",\"identification\":\"Identificación y planificación\",\"learning\":\"Aprendizaje\",\"management\":\"administración\"},\"learning\":{\"research_evidence\":\"Investigación y evidencia\",\"service_improvement\":\"Mejora del servicio\",\"trials\":\"Ensayos\"},\"wellbeing\":{\"faculties_skills\":\"Facultades y habilidades\",\"mental_psych\":\"Mental y psicológico\",\"physical_env\":\"Entorno físico\",\"physiological\":\"Fisiológico\",\"socio_cultural_env\":\"Entorno sociocultural\",\"socio_economic\":\"Socioeconómico\"}},\"title\":\"Modelo de teoría de la intervención\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Definir Ethos\",\"define_ethos_items\":\"Valores\\n Principios\\n Intenciones\\n Políticas\",\"deliver\":\"Entregar\",\"experience\":\"Experiencia\",\"govern\":\"Regir\",\"individual_cases\":\"Casos individuales\",\"plan_manage\":\"Planificar y administrar\",\"plan_manage_items\":\"Reglas\\n Recursos\\n Procesos\\n Cuentas\",\"the_service_level\":\"El nivel de servicio\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"¿Cómo se definen estos valores?\"},\"evidenceUrl\":{\"label\":\"¿Qué evidencia (externa) está disponible para respaldar esto?\"},\"title\":\"Definir Ethos\",\"values\":{\"label\":\"¿Qué valores son importantes a los que llega la intervención?\"}},\"deliver\":{\"actors\":{\"label\":\"¿Quién lo entrega?\"},\"evidenceUrl\":{\"label\":\"¿Qué evidencia (externa) está disponible para respaldar esto?\"},\"method\":{\"label\":\"¿Cómo se realiza la intervención?\"},\"title\":\"Entregar\"},\"govern\":{\"actions\":{\"label\":\"¿Cómo se rige la intervención? ¿Qué medidas se implementaron para asegurar que los resultados fueran los esperados?\"},\"actors\":{\"label\":\"¿Quién está evaluando esto?\"},\"evolution\":{\"label\":\"¿Cómo impacta esto en la evolución del servicio?\"},\"improvements\":{\"label\":\"¿Cómo se identifican las mejoras? ¿Cómo se implementan?\"},\"outcomes\":{\"label\":\"¿Se incorporan los resultados en metas y mediciones? Y si es así, ¿de quién?\"},\"title\":\"Regir\"},\"model\":{\"title\":\"Modelo\"},\"planManageCurrent\":{\"actions\":{\"label\":\"¿Qué acciones se están llevando a cabo ahora dentro del piloto?\"},\"actors\":{\"label\":\"¿Qué acciones en curso se están tomando?\"},\"evidenceUrl\":{\"label\":\"¿Qué evidencia (externa) está disponible para respaldar esto?\"},\"title\":\"Planificar y gestionar: acciones actuales\"},\"planManagePrior\":{\"actions\":{\"label\":\"¿Qué acciones se estaban realizando antes de la intervención?\"},\"actors\":{\"label\":\"¿Quién estuvo involucrado en estas acciones previas?\"},\"evidenceUrl\":{\"label\":\"¿Qué evidencia (externa) está disponible para respaldar esto?\"},\"title\":\"Planificar y gestionar: acciones anteriores\"}},\"guide\":{\"step01\":\"Hay una serie de procesos centrales involucrados en una innovación co-creativa. El primero tiene que ver con la definición de ethos.\",\"step02\":\"El segundo implica actividades y productos de gestión.\",\"step03\":\"El ordenamiento moral tiene que ver con quién puede participar en las actividades, entonces, en el caso de su iniciativa, ¿quién está involucrado en estos procesos? ¿Dónde y cuándo tienen lugar? ¿Cómo se comunican y cómo se registran?\",\"step04\":\"Como resultado del liderazgo, la planificación y el diseño, se brindan y experimentan servicios o iniciativas.\",\"step05\":\"Nuevamente, ¿quiénes están involucrados aquí y obtienen alguna participación en los dos primeros conjuntos de actividades?\",\"step06\":\"Más que simplemente cerrar el círculo con un simple proceso de evaluación, estamos sugiriendo que, en los sistemas de bienestar y cuidado coproductivo, la gobernanza involucra a todos los participantes en las relaciones aquí identificadas participación en el abordaje de las preguntas definidas en el modelo de ordenamiento moral.\",\"step07\":\"La gobernanza tiene lugar a nivel de relación con el cliente de servicio individual.\",\"step08\":\"También tiene lugar a nivel de servicio general.\",\"step09\":\"¿Cómo se llevan a cabo los procesos de gobernanza, en el sentido que los describimos aquí, en su iniciativa?\"},\"options\":{\"sources\":{\"meeting\":\"Reunión\",\"other\":\"Otro\",\"policy\":\"Política\"}},\"title\":\"Orden moral\"},\"social_media\":{\"dashboard\":{\"title\":\"Redes sociales\"},\"definitions\":{\"data\":{\"title\":\"Redes sociales\"}},\"title\":\"Redes sociales\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"No hay elementos de teoría de cambio para este proyecto.\",\"manage\":\"Gestionar la teoría del cambio\",\"title\":\"Teoría del cambio\"},\"definitions\":{\"data\":{\"hint\":\"Agregue cualquier teoría de cambio que pueda tener su proyecto.\",\"title\":\"Teoría del cambio\"}},\"title\":\"Teoría del cambio\"},\"welcome\":{\"dashboard\":{\"summary\":\"Creado por {user} el {date_time}\"},\"title\":\"Bienvenido\"}},\"hints\":{\"editor_double_click_edit\":\"Haga doble clic en un elemento para editarlo e ingrese para guardar\",\"social_facebook_add\":\"Agregue enlaces completos (URL) a grupos o páginas de Facebook.\",\"social_instagram_add\":\"Ingrese un hashtag de Instagram, con o sin #. Presione enter para agregar.\",\"social_twitter_add\":\"Ingrese un hashtag de Twitter, con o sin #. Presione enter para agregar.\",\"social_youtube_add\":\"Ingrese un enlace a un video de YouTube y presione enter para agregar.\",\"type_and_enter\":\"Escriba el nombre a continuación y presione Intro.\"},\"languages\":{\"de\":\"alemán\",\"el\":\"Griego\",\"en_GB\":\"Inglés\",\"es\":\"Español\",\"et\":\"Estonio\",\"fi\":\"Finlandés\",\"fr\":\"francés\",\"hu\":\"Húngaro\",\"it\":\"Italiano\",\"nl\":\"Holandés\",\"pl\":\"Polaco\",\"sv_SE\":\"Sueco\"},\"user_guide\":{\"back\":\"atrás\",\"close\":\"Cerca\",\"next\":\"próximo\",\"show\":\"Mostrar guía de usuario\",\"skip\":\"Saltar la guía del usuario\"}}");
+module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organización\",\"service\":\"Servicio\",\"user\":\"Usuario\"},\"app\":{\"add_new_actor\":\"Agregar nuevo actor\",\"add_new_item\":\"agregar ítem nuevo\",\"all\":\"Todos\",\"colour\":\"Color\",\"country\":\"País\",\"create\":\"Crear\",\"created_by\":\"Creado por\",\"delete\":\"Eliminar\",\"description\":\"Descripción\",\"download\":\"Descargar\",\"error\":\"Error\",\"error_message\":\"Error: {message}\",\"export\":\"Exportar\",\"exporting\":\"Exportador\",\"exporting_project\":\"Exportar proyecto\",\"image\":\"Imagen\",\"image_drag_prompt\":\"Arrastre su imagen aquí para comenzar o haga clic para navegar.\",\"image_is_uploading\":\"Subiendo imagen\",\"image_remove\":\"Quita la imagen\",\"image_upload_error\":\"Error al Subir\",\"import\":\"Importar\",\"import_project\":\"Importar proyecto\",\"import_project_drag_hint\":\"Arrastre su proyecto CoSMoS aquí para comenzar o haga clic para navegar.\",\"import_project_notes\":\"Nota: Serás el propietario del proyecto que se importa.\",\"import_project_success\":\"¡El proyecto se ha importado correctamente!\",\"just_mine\":\"Sólo mía\",\"label\":\"Etiqueta\",\"last_saved_at\":\"Guardado por última vez a las {date_time}\",\"log_in\":\"Iniciar sesión\",\"maximum_items\":\"Máximo {count} elementos | Maxumum {count} elemento | Máximo de {count} elementos\",\"models\":\"Modelos\",\"more_details\":\"Más detalles\",\"name\":\"Nombre\",\"new_project\":\"Crear nuevo proyecto\",\"next\":\"próximo\",\"no_projects\":\"No se encontraron proyectos.\",\"ok\":\"Okay\",\"open_project\":\"Proyecto abierto\",\"please_wait_generate\":\"Espere mientras se genera el archivo.\",\"processing\":\"Procesando\",\"project\":\"Proyecto\",\"project_save_success\":\"Proyecto guardado!\",\"save\":\"Salvar\",\"saving\":\"Ahorro\",\"scale_to_fit\":\"Escalar para adaptarse\",\"search\":\"Buscar\",\"title\":\"Título\",\"to_create_project\":\"para crear un proyecto.\",\"try_again\":\"Inténtalo de nuevo\",\"type\":\"Tipo\",\"user_is_read_only\":\"Su nivel de acceso de usuario es de solo lectura.\",\"web_address\":\"dirección web\",\"which_country\":\"¿De qué país eres?\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Macro\"},\"meso\":{\"description\":\"Puede haber varias etapas en este nivel.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"¿Hay beneficiarios distintos del usuario / participantes directos? Si es así, ¿quiénes son?\",\"title\":\"Beneficiarios\"},\"broker\":{\"hint\":\"¿Existe un corredor activo entre los instigadores del cambio y los creadores del cambio? Si es así, ¿quiénes son?\",\"title\":\"Corredor\"},\"changeMakers\":{\"hint\":\"¿Quiénes son o fueron los instigadores que iniciaron su actividad de intervención?\",\"title\":\"Creadores de cambios\"},\"changeTheorists\":{\"hint\":\"¿Quiénes son los teóricos del cambio para la intervención?\",\"title\":\"Teóricos del cambio\"},\"frontLineServiceDeliverer\":{\"hint\":\"¿Quién es el repartidor de servicios de primera línea?\",\"title\":\"Distribuidor de servicios de primera línea\"},\"instigatorsOfChange\":{\"hint\":\"¿Quiénes son o fueron los instigadores que iniciaron su actividad de intervención?\",\"title\":\"Instigadores del cambio\"},\"model\":{\"title\":\"Modelo\"},\"serviceDeliveryManager\":{\"hint\":\"¿Quién es el Gerente de prestación de servicios responsable de la intervención?\",\"title\":\"Gerente de Servicio de Entregas\"},\"serviceOrganisationManager\":{\"hint\":\"¿Quién es el Gerente de Organización de Servicios para la Intervención?\",\"title\":\"Gerente de Organización de Servicios\"},\"servicePolicyMaker\":{\"hint\":\"¿Quiénes son, o fueron, quienes definieron las políticas de servicio y los principios bajo los cuales opera el servicio?\",\"title\":\"Creador de políticas de servicio\"},\"subjectsOfChange\":{\"hint\":\"¿Quiénes son los sujetos de cambio identificados dentro de la intervención?\",\"title\":\"Temas de cambio\"},\"user\":{\"hint\":\"¿Quién es el usuario directo del servicio?\",\"title\":\"Cliente / Usuario\"},\"victims\":{\"hint\":\"¿Hay víctimas identificadas? Si es así, ¿quiénes son?\",\"title\":\"Víctimas\"}},\"guide\":{\"step01\":\"En este modelo, consideramos una iniciativa de Cosie en términos de un conjunto de roles y las relaciones de conversación en las que participan.\",\"step02\":\"Primero tenemos un repartidor de servicios de primera línea y un cliente.\",\"step03\":\"El repartidor tiene un administrador o supervisor. Se repetirá este patrón de un individuo que participa en dos conversaciones.\",\"step04\":\"La entrega tiene lugar en algún contexto institucional formal o informal.\",\"step05\":\"Finalmente, el servicio existe en un marco de políticas más amplio.\",\"step06\":\"Este está destinado a ser un modelo abstracto. En algunos casos, puede haber una organización plana en la que la entrega, la gestión y la política son asumidas por todos los miembros de un equipo pequeño; en otros casos, pueden representar individuos y contextos distintos.\",\"step07\":\"¿Cómo se relacionan los conceptos de micro, meso y macro con su iniciativa?\",\"step08\":\"¿Cómo se produce la comunicación entre ellos?\",\"step09\":\"¿Qué tan coordinados y coherentes son?\",\"step10\":\"En particular, ¿existen flujos de información y conversaciones entre macro y micro que no están mediados por el meso? ¿Cuáles son las implicaciones de esto?\",\"step11\":\"El siguiente modelo considera la agencia de cambio en términos de roles y conversaciones.\",\"step12\":\"Se debe instigar un cambio, luego se ejecuta.\",\"step13\":\"Los cambios que estamos considerando son para una persona, un lugar o un entorno.\",\"step14\":\"Los cambios que estamos considerando son a menudo complejos en sí mismos y se refieren a situaciones complejas. A menudo, se basan en alguna teoría que se ha introducido o intervenido en la situación.\",\"step15\":\"Hay un conjunto de beneficiarios previstos.\",\"step16\":\"Pero también hay posibles desbeneficiarios o víctimas del cambio.\",\"step17\":\"Este modelo está diseñado como una sonda sobre el modelo de servicio inicial para identificar a los actores específicos que, en varias etapas del desarrollo de la iniciativa, han asumido uno o más de estos roles de agencia de cambio. ¿Quienes son?\"},\"title\":\"Modelo analítico\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Ambigüedad\",\"ambivalence\":\"Ambivalencia\",\"committing\":\"Comprometerse\",\"execute\":\"Ejecutar\",\"first_order\":\"Primer orden\",\"fourth_order\":\"¡Cuarto orden!\",\"languaging\":\"\\\"Idiomas\\\"\",\"measure\":\"Medida\",\"plan\":\"Plan\",\"risk\":\"Riesgo\",\"second_order\":\"Segundo orden\",\"sense_making\":\"Creación de sentido\",\"third_order\":\"Tercer orden\",\"vision\":\"Visión\",\"zero_order\":\"Orden cero\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"¿Cómo se está ejecutando el plan?\"},\"measure\":{\"label\":\"¿Cómo se registran las observaciones y mediciones? Si no es así, ¿qué se debe habilitar para hacerlo?\"},\"plan\":{\"label\":\"¿Cómo se estableció un plan para entregar la visión?\"},\"vision\":{\"label\":\"¿Cómo se establecieron la visión y los objetivos?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"¿Cuál fue el origen del cambio? ¿Y cuál fue el cambio?\"},\"event_cause\":{\"label\":\"¿Qué pasó para permitir que ocurriera este evento?\"},\"unexpected_events\":{\"label\":\"¿Ha habido casos en los que haya visto que ocurrieron eventos inesperados?\"}},\"model\":{\"title\":\"Modelo\"},\"second_order\":{\"committing\":{\"label\":\"¿Cómo ha cambiado la prestación del servicio de la intervención con respecto a sus planes originales?\"},\"languaging\":{\"label\":\"¿Qué cambios se han realizado sobre cómo se ha entendido la intervención?\"},\"sense_making\":{\"label\":\"¿Cuándo revisa los planes y la visión?\"}},\"third_order\":{\"processes\":{\"label\":\"¿Qué procesos provocan o permiten cuestionamientos de segundo orden?\"}}},\"guide\":{\"step01\":\"Comenzamos con el modelo estándar de acción con propósito con el que todos estamos muy familiarizados.\",\"step02\":\"Pero todos hemos tenido la experiencia de mirar hacia atrás y darnos cuenta de que las cosas han cambiado de una manera realmente fundamental: hablamos del cambio de paradigma. Esto implica que nos hemos comprometido a darle un nuevo sentido a nuestro mundo y esto a menudo significa que nuestro idioma cambia.\",\"step03\":\"Estas dos formas diferentes de funcionamiento se denominan a veces de primer y segundo orden.\",\"step04\":\"En términos de gestión, tenemos la gestión de riesgos por un lado y la resolución de contradicciones y ambigüedades por el otro.\",\"step05\":\"Ahora presentamos la idea de actividades de tercer orden que permiten y respaldan las transiciones apropiadas entre el primer y el segundo trabajo, lo que permite un paso atrás para reconsiderar nuestro espíritu y suposiciones y, cuando lo hemos hecho, volver al modo de planificación y ejecución prácticas.\",\"step06\":\"A veces, la reacción a la ambigüedad y la contradicción es emocional: luchar o volar, que es de orden cero, o inspiración y heroísmo, que llamaremos cuarto orden.\",\"step07\":\"Entonces, en el lado derecho de nuestro diagrama tenemos el espectro de trabajo emocional y respuestas, mientras que en el lado izquierdo tenemos trabajo coproductivo y conversacional.\",\"step08\":\"Este modelo genera una serie de preguntas abiertas sobre dónde tiene lugar el trabajo diferente de primer y segundo orden en su iniciativa, qué trabajo emocional ha sido y requiere y cómo y dónde se realiza y cómo y por quién se requieren las intervenciones de tercer orden. emprendido?\"},\"title\":\"Cambiar modelo\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Carácter distintivo\",\"infrastructural_relationships\":\"Relaciones de infraestructura, recursos e instalaciones\",\"policy_law\":\"Políticas y leyes\",\"resources\":\"Recursos\",\"service_definition\":\"Plataforma de desarrollo y definición de servicios\",\"service_delivery\":\"Plataforma de prestación de servicios\",\"structural_relationships\":\"Relaciones estructurales y ocasiones\"},\"definitions\":{\"beneficiary\":{\"hint\":\"¿Hay beneficiarios distintos del usuario / participantes directos? Si es así, ¿quiénes son?\",\"title\":\"Beneficiario\"},\"delivery\":{\"hint\":\"¿Quién es responsable de los mecanismos, canales y roles de entrega en su piloto?\",\"title\":\"Libertador\"},\"deployment\":{\"hint\":\"¿Quién despliega / despliega y activa / activa esos procesos y recursos?\",\"title\":\"Desplegador\"},\"drivers\":{\"body\":{\"hint\":\"¿Cuáles son los impulsores y las motivaciones involucradas?\",\"label\":\"Impulsores y motivaciones\"},\"hint\":\"¿Cuáles fueron / son los impulsores y motivaciones del proyecto? ¿Fue un requisito legal, el reconocimiento de una necesidad o demanda, aprovechar una oportunidad, abordar una desigualdad?\",\"title\":\"Impulsores y motivaciones\"},\"evaluation\":{\"hint\":\"¿Quiénes son los evaluadores y los gobernadores del servicio?\",\"title\":\"Evaluador\"},\"extorg\":{\"hint\":\"¿Hay actores, partes interesadas o agencias relevantes que sean relevantes para el piloto, pero que permanecen fuera de su visión y espíritu?\",\"title\":\"Organizaciones externas\"},\"extsvc\":{\"hint\":\"¿Qué instalaciones, recursos (técnicos y humanos), servicios y fuentes de información reutilizables se desarrollaron y utilizaron en apoyo de estos procesos de definición y desarrollo de servicios? ¿Qué recursos y servicios externos (por ejemplo, comunicaciones y redes sociales) se utilizaron o se utilizaron?\",\"title\":\"Servicios técnicos externos\"},\"infsvc\":{\"hint\":\"¿Qué servicios, canales e instalaciones externos utiliza en la prestación de su (s) servicio (s)? ¿Qué fuentes de información utilizas? ¿Qué información publica, a quién y con qué canales y medios?\",\"title\":\"Servicios de infraestructura\"},\"initiator\":{\"hint\":\"¿Quiénes son o fueron los instigadores que iniciaron su actividad piloto?\",\"title\":\"Iniciador\"},\"model\":{\"title\":\"Modelo\"},\"policyDef\":{\"hint\":\"¿Quiénes son, o fueron, quienes definieron las políticas de servicio y los principios bajo los cuales opera el servicio?\",\"title\":\"Definidor de políticas\"},\"specDes\":{\"hint\":\"¿Quién especifica / especifica y diseña / diseña los procesos y recursos de prestación de servicios?\",\"title\":\"Especificador y diseñador\"},\"user\":{\"hint\":\"¿Quién es el usuario directo del servicio?\",\"title\":\"Usuario\"}},\"title\":\"Modelo de co-creación de servicio\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"No hay elementos de informes de la comunidad para este proyecto.\",\"manage\":\"Gestionar informes de la comunidad\",\"title\":\"Informes de la comunidad\"},\"definitions\":{\"data\":{\"hint\":\"Agregue los informes de la comunidad que pueda tener su proyecto.\",\"title\":\"Informes de la comunidad\"}},\"title\":\"Informes de la comunidad\"},\"documents\":{\"dashboard\":{\"empty_set\":\"No hay documentos ni archivos para este proyecto.\",\"manage\":\"Gestionar documentos y archivos\",\"title\":\"Documentos y archivos\"},\"definitions\":{\"data\":{\"hint\":\"Agregue los documentos y archivos que pueda tener su proyecto.\",\"title\":\"Documentos y archivos\"}},\"title\":\"Documentos\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Bienestar\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"¿Qué aspectos del ciclo de vida del servicio son importantes con respecto a su innovación y cambio?\"},\"title\":\"Innovación y cambio\"},\"intervention\":{\"items\":{\"label\":\"¿Qué tipo de intervención está ocurriendo?\"},\"title\":\"Intervención\"},\"learning\":{\"items\":{\"label\":\"¿Cómo está sucediendo el aprendizaje en su intervención?\"},\"title\":\"Aprendizaje\"},\"model\":{\"title\":\"Modelo\"},\"wellbeing\":{\"items\":{\"label\":\"¿Qué aspectos del bienestar humano y del medio ambiente son relevantes para su servicio? ¿Son algunos más importantes que otros?\"},\"title\":\"Bienestar humano y medio ambiente\"}},\"guide\":{\"step01\":\"Todas las iniciativas co-creativas que estamos considerando están relacionadas con la mejora y el fomento del bienestar. Aquí consideramos el bienestar de las personas, pero esto podría aplicarse a lugares o entornos más amplios.\",\"step02\":\"El bienestar tiene una serie de facetas diferentes que son interdependientes.\",\"step03\":\"También interactúa con el entorno físico y social.\",\"step04\":\"Algunos servicios o intervenciones tratan de reparar algo que salió mal y restaurar el status quo.\",\"step05\":\"Pero hay otros propósitos para las intervenciones.\",\"step06\":\"El proceso de intervención implica una serie de etapas y procesos diferentes.\",\"step07\":\"Finalmente, si queremos mantener nuestras innovaciones, debemos aprender y mejorar.\",\"step08\":\"¿Quién, qué o dónde es el objetivo de su intervención?\",\"step09\":\"¿En qué aspectos del bienestar se centra su iniciativa?\",\"step10\":\"¿Qué aspectos del bienestar de su tema son relevantes pero más allá del alcance de su iniciativa?\",\"step11\":\"¿Cuáles son los aspectos ambientales relevantes?\",\"step12\":\"¿Qué combinaciones de intervenciones, desde la prevención hasta la transformación, son relevantes para su iniciativa?\",\"step13\":\"¿En qué medida se integran el aprendizaje y la mejora en los procesos de gestión y ejecución del desarrollo?\"},\"options\":{\"innovation\":{\"development\":\"Desarrollo\",\"facilitation\":\"Facilitación\",\"palliation\":\"Paliación\",\"prevention\":\"Prevención\",\"rehabilitation\":\"Rehabilitación\",\"remedy\":\"Remedio\",\"transformation\":\"Transformación\"},\"intervention\":{\"coordination_delivery\":\"Coordinación y entrega\",\"governance\":\"Gobernancia\",\"identification\":\"Identificación y planificación\",\"learning\":\"Aprendizaje\",\"management\":\"administración\"},\"learning\":{\"research_evidence\":\"Investigación y evidencia\",\"service_improvement\":\"Mejora del servicio\",\"trials\":\"Ensayos\"},\"wellbeing\":{\"faculties_skills\":\"Facultades y habilidades\",\"mental_psych\":\"Mental y psicológico\",\"physical_env\":\"Entorno físico\",\"physiological\":\"Fisiológico\",\"socio_cultural_env\":\"Entorno sociocultural\",\"socio_economic\":\"Socioeconómico\"}},\"title\":\"Modelo de teoría de la intervención\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Definir Ethos\",\"define_ethos_items\":\"Valores\\n Principios\\n Intenciones\\n Políticas\",\"deliver\":\"Entregar\",\"experience\":\"Experiencia\",\"govern\":\"Regir\",\"individual_cases\":\"Casos individuales\",\"plan_manage\":\"Planificar y administrar\",\"plan_manage_items\":\"Reglas\\n Recursos\\n Procesos\\n Cuentas\",\"the_service_level\":\"El nivel de servicio\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"¿Cómo se definen estos valores?\"},\"evidenceUrl\":{\"label\":\"¿Qué evidencia (externa) está disponible para respaldar esto?\"},\"title\":\"Definir Ethos\",\"values\":{\"label\":\"¿Qué valores son importantes a los que llega la intervención?\"}},\"deliver\":{\"actors\":{\"label\":\"¿Quién lo entrega?\"},\"evidenceUrl\":{\"label\":\"¿Qué evidencia (externa) está disponible para respaldar esto?\"},\"method\":{\"label\":\"¿Cómo se realiza la intervención?\"},\"title\":\"Entregar\"},\"govern\":{\"actions\":{\"label\":\"¿Cómo se rige la intervención? ¿Qué medidas se implementaron para asegurar que los resultados fueran los esperados?\"},\"actors\":{\"label\":\"¿Quién está evaluando esto?\"},\"evolution\":{\"label\":\"¿Cómo impacta esto en la evolución del servicio?\"},\"improvements\":{\"label\":\"¿Cómo se identifican las mejoras? ¿Cómo se implementan?\"},\"outcomes\":{\"label\":\"¿Se incorporan los resultados en metas y mediciones? Y si es así, ¿de quién?\"},\"title\":\"Regir\"},\"model\":{\"title\":\"Modelo\"},\"planManageCurrent\":{\"actions\":{\"label\":\"¿Qué acciones se están llevando a cabo ahora dentro del piloto?\"},\"actors\":{\"label\":\"¿Qué acciones en curso se están tomando?\"},\"evidenceUrl\":{\"label\":\"¿Qué evidencia (externa) está disponible para respaldar esto?\"},\"title\":\"Planificar y gestionar: acciones actuales\"},\"planManagePrior\":{\"actions\":{\"label\":\"¿Qué acciones se estaban realizando antes de la intervención?\"},\"actors\":{\"label\":\"¿Quién estuvo involucrado en estas acciones previas?\"},\"evidenceUrl\":{\"label\":\"¿Qué evidencia (externa) está disponible para respaldar esto?\"},\"title\":\"Planificar y gestionar: acciones anteriores\"}},\"guide\":{\"step01\":\"Hay una serie de procesos centrales involucrados en una innovación co-creativa. El primero tiene que ver con la definición de ethos.\",\"step02\":\"El segundo implica actividades y productos de gestión.\",\"step03\":\"El ordenamiento moral tiene que ver con quién puede participar en las actividades, entonces, en el caso de su iniciativa, ¿quién está involucrado en estos procesos? ¿Dónde y cuándo tienen lugar? ¿Cómo se comunican y cómo se registran?\",\"step04\":\"Como resultado del liderazgo, la planificación y el diseño, se brindan y experimentan servicios o iniciativas.\",\"step05\":\"Nuevamente, ¿quiénes están involucrados aquí y obtienen alguna participación en los dos primeros conjuntos de actividades?\",\"step06\":\"Más que simplemente cerrar el círculo con un simple proceso de evaluación, estamos sugiriendo que, en los sistemas de bienestar y cuidado coproductivo, la gobernanza involucra a todos los participantes en las relaciones aquí identificadas participación en el abordaje de las preguntas definidas en el modelo de ordenamiento moral.\",\"step07\":\"La gobernanza tiene lugar a nivel de relación con el cliente de servicio individual.\",\"step08\":\"También tiene lugar a nivel de servicio general.\",\"step09\":\"¿Cómo se llevan a cabo los procesos de gobernanza, en el sentido que los describimos aquí, en su iniciativa?\"},\"options\":{\"sources\":{\"meeting\":\"Reunión\",\"other\":\"Otro\",\"policy\":\"Política\"}},\"title\":\"Orden moral\"},\"social_media\":{\"dashboard\":{\"title\":\"Redes sociales\"},\"definitions\":{\"data\":{\"title\":\"Redes sociales\"}},\"title\":\"Redes sociales\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"No hay elementos de teoría de cambio para este proyecto.\",\"manage\":\"Gestionar la teoría del cambio\",\"title\":\"Teoría del cambio\"},\"definitions\":{\"data\":{\"hint\":\"Agregue cualquier teoría de cambio que pueda tener su proyecto.\",\"title\":\"Teoría del cambio\"}},\"title\":\"Teoría del cambio\"},\"user_journey_model\":{\"dashboard\":{\"one\":\"\",\"other\":\"\"},\"definitions\":{\"accessing\":{\"access_method\":{\"label\":\"¿Cómo accedió al servicio?\"},\"appropriate_comment\":{\"label\":\"¿Crees que este aspecto del servicio es apropiado?\"},\"qualification_experience\":{\"label\":\"Si es así, ¿cómo fue la experiencia?\"},\"qualification_process\":{\"label\":\"¿Hubo un proceso de calificación o selección?\"},\"title\":\"Accediendo\"},\"discovering\":{\"comments\":{\"label\":\"¿Algún otro comentario, observación?\"},\"discovery_medium\":{\"label\":\"¿Cómo se enteró del servicio?\"},\"information_experience\":{\"label\":\"¿Cuál es su opinión sobre la calidad, integridad y accesibilidad de la información?\"},\"information_medium\":{\"label\":\"¿Cómo accedió a la información sobre el servicio?\"},\"title\":\"Descubriendo\"},\"evaluating\":{\"opinions_asked\":{\"hint\":\"Piense dónde y cuándo fue esto.\",\"label\":\"¿Le preguntaron sobre sus opiniones sobre su experiencia con el servicio?\"},\"opinions_how\":{\"label\":\"Si es así, ¿cómo se le preguntó?\"},\"service_experience\":{\"label\":\"¿Fue el servicio lo que esperaba?\"},\"surprises_comments\":{\"label\":\"¿Hubo alguna sorpresa o desilusión en su experiencia?\"},\"title\":\"Evaluar\"},\"instigating\":{\"comments\":{\"label\":\"Comentarios\"},\"design_role\":{\"label\":\"¿Jugó algún papel en el diseño y definición del servicio? En caso afirmativo, ¿cuáles fueron las ocasiones y canales en que esto ocurrió?\"},\"instigate_role\":{\"label\":\"¿Tuviste algún papel en la instigación del proyecto? En caso afirmativo, ¿formó parte de alguna de las siguientes opciones? Puedes elegir tantos como quieras.\"},\"title\":\"Instigar\"},\"model\":{\"title\":\"Modelo\"},\"using\":{\"accessible_experience\":{\"label\":\"¿El servicio fue accesible para usted?\"},\"participate_experience\":{\"label\":\"¿Cómo fue utilizar o participar en el servicio?\"},\"time_experience\":{\"label\":\"¿Fue correcta la duración y la frecuencia de los eventos o contactos del servicio?\"},\"title\":\"Utilizando\",\"where\":{\"label\":\"¿Dónde usaste el servicio?\"}}},\"guide\":{\"step01\":\"Los servicios se publicitan a los usuarios previstos, esta es la fase de descubrimiento.\",\"step02\":\"Los usuarios que desean el servicio realizan algún tipo de solicitud o solicitud, esta es la fase de acceso.\",\"step03\":\"Si la etapa anterior tiene éxito, el servicio se entrega y se experimenta, esta es la fase de uso.\",\"step04\":\"Luego se evalúa la experiencia del uso del servicio.\",\"step05\":\"Las preguntas hasta ahora asumen que el servicio ha sido definido y ya existe. El siguiente conjunto de preguntas trata sobre si participó y cómo participó en los procesos mediante los cuales se creó el servicio en primer lugar.\",\"step06\":\"Primero podemos completar nuestro modelo de prestación de servicios con las etapas involucradas en la creación. A esto lo llamamos la fase de diseño.\",\"step07\":\"Luego, podemos mostrar los procesos mediante los cuales se identificó e inició el servicio en primer lugar. A esto lo llamamos la fase de instigación.\"},\"options\":{\"access_methods\":{\"applied\":\"Aplicado\",\"other\":\"Otro\",\"referred\":\"Referido\"},\"instigate_roles\":{\"government_department\":\"Departamento de Gobierno\",\"political_party\":\"Partido político\",\"pressure_group\":\"Grupo de presión / campañas\"},\"mediums\":{\"other\":\"Otro\",\"paper\":\"Publicación en papel\",\"referral\":\"Remisión\",\"social\":\"Redes sociales\",\"word_of_mouth\":\"Boca a boca\"},\"opinions_how\":{\"interview\":\"Entrevista\",\"survey\":\"Encuesta\",\"workshop\":\"Taller\"},\"where\":{\"community\":\"Comunidad\",\"home\":\"Hogar\",\"other\":\"Otro\",\"public\":\"Público\"},\"yes_no_maybe\":{\"maybe\":\"Tal vez\",\"no\":\"No\",\"yes\":\"si\"}},\"title\":\"Modelo de viaje del usuario\"},\"welcome\":{\"dashboard\":{\"summary\":\"Creado por {user} el {date_time}\"},\"title\":\"Bienvenido\"}},\"countries\":{\"de\":\"Alemania\",\"el\":\"Grecia\",\"en_GB\":\"Reino Unido\",\"es\":\"España\",\"et\":\"Estonia\",\"fi\":\"Finlandia\",\"fr\":\"Francia\",\"hu\":\"Hungría\",\"it\":\"Italia\",\"nl\":\"Países Bajos\",\"pl\":\"Polonia\",\"sv_SE\":\"Suecia\"},\"hints\":{\"editor_double_click_edit\":\"Haga doble clic en un elemento para editarlo e ingrese para guardar\",\"social_facebook_add\":\"Agregue enlaces completos (URL) a grupos o páginas de Facebook.\",\"social_instagram_add\":\"Ingrese un hashtag de Instagram, con o sin #. Presione enter para agregar.\",\"social_twitter_add\":\"Ingrese un hashtag de Twitter, con o sin #. Presione enter para agregar.\",\"social_youtube_add\":\"Ingrese un enlace a un video de YouTube y presione enter para agregar.\",\"type_and_enter\":\"Escriba el nombre a continuación y presione Intro.\"},\"languages\":{\"de\":\"alemán\",\"el\":\"Griego\",\"en_GB\":\"Inglés\",\"es\":\"Español\",\"et\":\"Estonio\",\"fi\":\"Finlandés\",\"fr\":\"francés\",\"hu\":\"Húngaro\",\"it\":\"Italiano\",\"nl\":\"Holandés\",\"pl\":\"Polaco\",\"sv_SE\":\"Sueco\"},\"user_guide\":{\"back\":\"atrás\",\"close\":\"Cerca\",\"next\":\"próximo\",\"show\":\"Mostrar guía de usuario\",\"skip\":\"Saltar la guía del usuario\"}}");
 
 /***/ }),
 
@@ -5399,10 +6077,10 @@ module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organizaci�
 /*!*************************!*\
   !*** ./js/lang/et.json ***!
   \*************************/
-/*! exports provided: activity_types, app, aspects, hints, languages, user_guide, default */
+/*! exports provided: activity_types, app, aspects, countries, hints, languages, user_guide, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisatsioon\",\"service\":\"Teenus\",\"user\":\"Kasutaja\"},\"app\":{\"add_new_actor\":\"Lisage uus näitleja\",\"add_new_item\":\"Lisage uus üksus\",\"all\":\"Kõik\",\"colour\":\"Värv\",\"create\":\"Loo\",\"created_by\":\"Loodud\",\"delete\":\"Kustuta\",\"description\":\"Kirjeldus\",\"download\":\"Lae alla\",\"error\":\"Viga\",\"error_message\":\"Viga: {message}\",\"export\":\"Eksport\",\"exporting\":\"Eksportimine\",\"exporting_project\":\"Eksportiv projekt\",\"image\":\"Pilt\",\"image_drag_prompt\":\"Alustamiseks lohistage oma pilt siia või sirvimiseks klõpsake sellel.\",\"image_is_uploading\":\"Pildi üleslaadimine\",\"image_remove\":\"Eemalda pilt\",\"image_upload_error\":\"Üleslaadimise viga\",\"import\":\"Impordi\",\"import_project\":\"Importiprojekt\",\"import_project_drag_hint\":\"Alustamiseks lohistage oma CoSMoS-i projekt siia või klõpsake sirvimiseks klõpsamiseks.\",\"import_project_notes\":\"Märkus. Olete imporditud projekti omanik.\",\"import_project_success\":\"Projekt on edukalt imporditud!\",\"just_mine\":\"Lihtsalt minu\",\"label\":\"Silt\",\"last_saved_at\":\"Viimati salvestatud {date_time}\",\"log_in\":\"Logi sisse\",\"maximum_items\":\"Maksimaalselt {count} üksust | Maksimaalne üksus {count} | Maksimaalselt {count} üksust\",\"models\":\"Mudelid\",\"name\":\"Nimi\",\"new_project\":\"Looge uus projekt\",\"next\":\"Järgmine\",\"no_projects\":\"Ühtegi projekti ei leitud.\",\"ok\":\"Okei\",\"open_project\":\"Avatud projekt\",\"please_wait_generate\":\"Oodake, kuni fail luuakse.\",\"processing\":\"Töötlemine\",\"project\":\"Projekt\",\"project_save_success\":\"Projekt salvestatud!\",\"save\":\"Salvesta\",\"saving\":\"Säästmine\",\"scale_to_fit\":\"Skaala sobivaks\",\"search\":\"Otsing\",\"title\":\"Pealkiri\",\"to_create_project\":\"projekti loomiseks.\",\"try_again\":\"Proovi uuesti\",\"type\":\"Tüüp\",\"user_is_read_only\":\"Teie kasutaja juurdepääsutase on kirjutuskaitstud.\",\"web_address\":\"veebiaadress\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Makro\"},\"meso\":{\"description\":\"Sellel tasemel võib olla mitu etappi.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Mikro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Kas lisaks otsesele kasutajale / osalejatele on ka teisi kasusaajaid? Kui jah, siis kes nad on?\",\"title\":\"Abisaajad\"},\"broker\":{\"hint\":\"Kas muutuste õhutajate ja muudatuste tegijate vahel on aktiivne maakler? Kui jah, siis kes nad on?\",\"title\":\"Maakler\"},\"changeMakers\":{\"hint\":\"Kes on või olid õhutajad, kes algatasid teie sekkumistegevuse?\",\"title\":\"Muudatuste tegijad\"},\"changeTheorists\":{\"hint\":\"Kes on sekkumise teoreetikud?\",\"title\":\"Muutusteoreetikud\"},\"frontLineServiceDeliverer\":{\"hint\":\"Kes on eesliini teenuse osutaja?\",\"title\":\"Eesliini teenuse osutaja\"},\"instigatorsOfChange\":{\"hint\":\"Kes on või olid õhutajad, kes algatasid teie sekkumistegevuse?\",\"title\":\"Muutuste õhutajad\"},\"model\":{\"title\":\"Mudel\"},\"serviceDeliveryManager\":{\"hint\":\"Kes on sekkumise eest vastutav teenuse osutamise juht?\",\"title\":\"Teenuse osutamise juht\"},\"serviceOrganisationManager\":{\"hint\":\"Kes on sekkumise teenuse organisatsiooni juht?\",\"title\":\"Teenuse korraldamise juht\"},\"servicePolicyMaker\":{\"hint\":\"Kes on või kes olid teenuse poliitika ja teenuse toimimise põhimõtete määratlejad?\",\"title\":\"Teenuse eeskirjade looja\"},\"subjectsOfChange\":{\"hint\":\"Kes on sekkumise käigus kindlaks tehtud muutuste subjektid?\",\"title\":\"Muutuste subjektid\"},\"user\":{\"hint\":\"Kes on teenuse otsene kasutaja?\",\"title\":\"Klient / Kasutaja\"},\"victims\":{\"hint\":\"Kas on tuvastatud ohvreid? Kui jah, siis kes nad on?\",\"title\":\"Ohvrid\"}},\"guide\":{\"step01\":\"Selles mudelis käsitleme Cosie algatust rollide komplekti ja vestlussuhete osas, millega nad tegelevad.\",\"step02\":\"Esiteks on meil eesliini teenuse pakkuja ja klient.\",\"step03\":\"Toimetajal on juht või juhendaja. Seda kahes vestluses osaleva inimese mustrit korratakse.\",\"step04\":\"Kohaletoimetamine toimub mõnes ametlikus või mitteametlikus institutsioonilises kontekstis.\",\"step05\":\"Lõpuks on teenus olemas mõnes laiemas poliitilises keskkonnas.\",\"step06\":\"See on mõeldud abstraktseks mudeliks. Mõnel juhul võib olla lame organisatsioon, kus toimetamise, juhtimise ja poliitika eest vastutavad kõik väikese meeskonna liikmed, mõnel juhul võivad nad esindada erinevaid isikuid ja kontekste.\",\"step07\":\"Kuidas kaardistavad mikro-, meso- ja makromõisted teie algatuse?\",\"step08\":\"Kuidas toimub omavaheline suhtlus?\",\"step09\":\"Kui koordineeritud ja sidusad nad on?\",\"step10\":\"Kas makro ja mikro vahel on infovooge ja vestlusi, mida meso ei vahenda? Millised on selle tagajärjed?\",\"step11\":\"Järgmine mudel kaalub muutuste agentuuri rollide ja vestluste osas.\",\"step12\":\"Muudatus tuleb käivitada, seejärel see täidetakse.\",\"step13\":\"Muudatused, mida me kaalume, puudutavad inimest, kohta või keskkonda.\",\"step14\":\"Muudatused, mida me kaalume, on sageli iseenesest keerulised ja puudutavad keerukaid olukordi. Sageli põhinevad need mõnel teoorial, mis on olukorda sisse viidud või vahendatud.\",\"step15\":\"On olemas hulk kavandatud abisaajaid.\",\"step16\":\"Kuid on ka muudatustest võimalikke abisaajaid või ohvreid.\",\"step17\":\"See mudel on välja töötatud esialgse teenusemudeli proovina, et selgitada välja konkreetsed osalejad, kes algatuse väljatöötamise erinevates etappides on võtnud endale ühe või mitu neist agentuuri rollidest. Kes nad on?\"},\"title\":\"Analüütiline mudel\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Mitmetähenduslikkus\",\"ambivalence\":\"Ambivalentsus\",\"committing\":\"Pühendumine\",\"execute\":\"Täitke\",\"first_order\":\"Esimene tellimus\",\"fourth_order\":\"Neljas järjekord!\",\"languaging\":\"\\\"Keeled\\\"\",\"measure\":\"Mõõda\",\"plan\":\"Plaan\",\"risk\":\"Risk\",\"second_order\":\"Teine orden\",\"sense_making\":\"Mõistmine\",\"third_order\":\"Kolmas järjekord\",\"vision\":\"Visioon\",\"zero_order\":\"Nullkord\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Kuidas plaani täidetakse?\"},\"measure\":{\"label\":\"Kuidas vaatlusi ja mõõtmisi registreeritakse? Kui ei, siis mida peab selleks võimaldama?\"},\"plan\":{\"label\":\"Kuidas loodi visiooni esitamise plaan?\"},\"vision\":{\"label\":\"Kuidas visioon ja eesmärgid püstitati?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Millest muutus alguse sai? Ja mis oli muutus?\"},\"event_cause\":{\"label\":\"Mis juhtus selle sündmuse toimumiseks?\"},\"unexpected_events\":{\"label\":\"Kas on olnud juhtumeid, kus olete näinud ootamatuid sündmusi?\"}},\"model\":{\"title\":\"Mudel\"},\"second_order\":{\"committing\":{\"label\":\"Kuidas on sekkumise teenuse osutamine muutunud võrreldes algsete plaanidega?\"},\"languaging\":{\"label\":\"Milliseid muudatusi on sekkumise mõistmises tehtud?\"},\"sense_making\":{\"label\":\"Millal plaanid ja visioon üle vaatate?\"}},\"third_order\":{\"processes\":{\"label\":\"Millised protsessid kutsuvad esile või võimaldavad teist järku küsimist?\"}}},\"guide\":{\"step01\":\"Alustame sihipärase tegevuse standardmudelist, mis on meile kõigile väga tuttav.\",\"step02\":\"Kuid meil kõigil on olnud kogemus tagasi vaadata ja mõista, et asjad on muutunud tõeliselt põhimõttelisel viisil: räägime paradigma muutumisest. See tähendab, et oleme tegelenud oma maailma uue mõtestamisega ja see tähendab sageli, et meie keel muutub.\",\"step03\":\"Neid kahte erinevat toimimisviisi nimetatakse mõnikord esimeseks ja teiseks järjeks.\",\"step04\":\"Juhtimise mõttes on meil ühelt poolt riskijuhtimine ja teiselt poolt vastuolude ja ebaselguste lahendamine.\",\"step05\":\"Tutvustame nüüd kolmanda järgu tegevuste ideed, mis võimaldavad ja toetavad asjakohaseid üleminekuid esimese ja teise töö vahel, võimaldades sammu tagasi oma eetose ja eelduste uuesti läbi vaatamiseks ning võimaluse korral liikuda tagasi praktilise planeerimise ja teostamise režiimi.\",\"step06\":\"Mõnikord on ebaselgusele ja vastuoludele reageerimine emotsionaalne: võitlus või lendamine, mis on nulljärguline, või inspiratsioon ja kangelaslikkus, mida nimetame neljandaks järjekorraks.\",\"step07\":\"Seega on meie skeemi paremal küljel emotsionaalse töö ja reageeringute spekter, vasakul pool on aga kaastootlik ja vestlustöö.\",\"step08\":\"See mudel genereerib rea avatud küsimusi selle kohta, kus teie algatusel toimub erinev esimese ja teise järgu töö, milline emotsionaalne töö on olnud ja mida nõuab ning kuidas ja kus seda tehakse ning kuidas ja kes on nõutavad kolmanda järgu sekkumised ette võetud?\"},\"title\":\"Muuda mudelit\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Eetos\",\"infrastructural_relationships\":\"Infrastruktuurisuhted, abinõud ja rajatised\",\"policy_law\":\"Poliitika ja seadus\",\"resources\":\"Ressursid\",\"service_definition\":\"Teenuse määratlus ja arendusplatvorm\",\"service_delivery\":\"Teenuse osutamise platvorm\",\"structural_relationships\":\"Struktuursed suhted ja sündmused\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Kas lisaks otsesele kasutajale / osalejatele on ka teisi kasusaajaid? Kui jah, siis kes nad on?\",\"title\":\"Saaja\"},\"delivery\":{\"hint\":\"Kes vastutab teie piloodi kohaletoimetamise mehhanismi (de), kanalite ja rollide eest?\",\"title\":\"Tarnija\"},\"deployment\":{\"hint\":\"Kes neid protsesse ja ressursse juurutab / juurutab ja aktiveerib / aktiveerib?\",\"title\":\"Paigaldaja\"},\"drivers\":{\"body\":{\"hint\":\"Millised on ajurid ja motivatsioon?\",\"label\":\"Autojuhid ja motivatsioonid\"},\"hint\":\"Millised olid / on projekti ajendid ja motivatsioon? Kas see oli seadusest tulenev nõue, vajaduse või nõudmise tunnustamine, võimaluse ärakasutamine, ebavõrdsusega tegelemine?\",\"title\":\"Autojuhid ja motivatsioonid\"},\"evaluation\":{\"hint\":\"Kes on teenuse hindaja (d) ja juhid?\",\"title\":\"Hindaja\"},\"extorg\":{\"hint\":\"Kas on olemas asjakohaseid osalejaid, sidusrühmi või asutusi, kes on piloodi jaoks olulised, kuid jäävad väljaspool selle visiooni ja eetikat?\",\"title\":\"Välised organisatsioonid\"},\"extsvc\":{\"hint\":\"Milliseid korduvkasutatavaid rajatisi, (tehnilisi ja inimressursse), teenuseid ja teabeallikaid töötati välja ja kasutati nende teenuste määratlemise ja arendusprotsesside toetamiseks? Milliseid väliseid ressursse ja teenuseid (nt side ja sotsiaalmeedia) kasutati / kasutatakse?\",\"title\":\"Välised tehnilised teenused\"},\"infsvc\":{\"hint\":\"Milliseid väliseid teenuseid, kanaleid ja rajatisi kasutate oma teenuse (te) edastamisel? Milliseid teabeallikaid te kasutate? Millist teavet avaldate, kellele ja milliseid kanaleid ning meediume kasutades?\",\"title\":\"Infrastruktuuriteenused\"},\"initiator\":{\"hint\":\"Kes on või olid õhutajad, kes algatasid teie pilootide tegevuse?\",\"title\":\"Initsiaator\"},\"model\":{\"title\":\"Mudel\"},\"policyDef\":{\"hint\":\"Kes on või kes olid teenuse poliitika ja teenuse toimimise põhimõtete määratlejad?\",\"title\":\"Poliitika määratleja\"},\"specDes\":{\"hint\":\"Kes täpsustab / täpsustab ja kujundab / kujundab teenuste osutamise protsesse ja ressursse?\",\"title\":\"Täpsustaja ja kujundaja\"},\"user\":{\"hint\":\"Kes on teenuse otsene kasutaja?\",\"title\":\"Kasutaja\"}},\"title\":\"Teenuse mudeli kaasloome\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Selle projekti jaoks pole kogukonna aruandlusüksusi.\",\"manage\":\"Halda kogukonna aruandlust\",\"title\":\"Kogukonna aruandlus\"},\"definitions\":{\"data\":{\"hint\":\"Lisage kõik projektis olevad kogukonna aruanded.\",\"title\":\"Kogukonna aruandlus\"}},\"title\":\"Kogukonna aruandlus\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Selle projekti jaoks pole dokumente ega faile.\",\"manage\":\"Halda dokumente ja faile\",\"title\":\"Dokumendid ja toimikud\"},\"definitions\":{\"data\":{\"hint\":\"Lisage kõik teie projektis olevad dokumendid ja failid.\",\"title\":\"Dokumendid ja toimikud\"}},\"title\":\"Dokumendid\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Heaolu\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Millised teenuse elutsükli aspektid on teie innovatsiooni ja muutuste seisukohast olulised?\"},\"title\":\"Innovatsioon ja muutused\"},\"intervention\":{\"items\":{\"label\":\"Mis tüüpi sekkumine toimub?\"},\"title\":\"Sekkumine\"},\"learning\":{\"items\":{\"label\":\"Kuidas toimub õppimine teie sekkumisel?\"},\"title\":\"Õppimine\"},\"model\":{\"title\":\"Mudel\"},\"wellbeing\":{\"items\":{\"label\":\"Millised inimeste heaolu ja keskkonna aspektid on teie teenuse jaoks asjakohased? Kas mõned on olulisemad kui teised?\"},\"title\":\"Inimeste heaolu ja keskkond\"}},\"guide\":{\"step01\":\"Kaalutavad loomingulised algatused on kõik seotud heaolu parandamise ja hooldamisega. Siin käsitleme üksikisikute heaolu, kuid seda võib rakendada kohtades või laiemas keskkonnas.\",\"step02\":\"Heaolul on mitmeid erinevaid tahke, mis kõik on üksteisest sõltuvad.\",\"step03\":\"See suhtleb ka füüsilise ja sotsiaalse keskkonnaga.\",\"step04\":\"Mõni teenus või sekkumine on seotud valesti läinud asja parandamise ja status quo taastamisega.\",\"step05\":\"Kuid sekkumistel on ka muid eesmärke.\",\"step06\":\"Sekkumisprotsess hõlmab mitmeid erinevaid etappe ja protsesse.\",\"step07\":\"Lõpuks, kui soovime oma uuendusi jätkata, peame õppima ja arenema.\",\"step08\":\"Kes, mis või kus on teie sekkumise eesmärk?\",\"step09\":\"Millised heaolu aspektid on teie algatuse keskmes?\",\"step10\":\"Millised teie teema heaolu aspektid on asjakohased, kuid ületavad teie algatuse ulatust?\",\"step11\":\"Millised on asjakohased keskkonnaaspektid?\",\"step12\":\"Millised sekkumiste kombinatsioonid alates ennetamisest kuni ümberkujundamiseni on teie algatuse jaoks asjakohased?\",\"step13\":\"Mil määral on õppimine ja paranemine teie arengujuhtimise ja -protsesside sisseehitatud?\"},\"options\":{\"innovation\":{\"development\":\"Areng\",\"facilitation\":\"Hõlbustamine\",\"palliation\":\"Palliatsioon\",\"prevention\":\"Ärahoidmine\",\"rehabilitation\":\"Taastusravi\",\"remedy\":\"Parandus\",\"transformation\":\"Muutumine\"},\"intervention\":{\"coordination_delivery\":\"Koordineerimine ja kättetoimetamine\",\"governance\":\"Valitsemine\",\"identification\":\"Identifitseerimine ja planeerimine\",\"learning\":\"Õppimine\",\"management\":\"Juhtimine\"},\"learning\":{\"research_evidence\":\"Teadusuuringud ja tõendid\",\"service_improvement\":\"Teenuse täiustamine\",\"trials\":\"Kohtuprotsessid\"},\"wellbeing\":{\"faculties_skills\":\"Teaduskonnad ja oskused\",\"mental_psych\":\"Vaimne ja psühholoogiline\",\"physical_env\":\"Füüsiline ümbritsemine\",\"physiological\":\"Füsioloogiline\",\"socio_cultural_env\":\"Sotsiaal-kultuuriline keskkond\",\"socio_economic\":\"Sotsiaalmajanduslik\"}},\"title\":\"Sekkumisteooria mudel\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Määratlege eetos\",\"define_ethos_items\":\"Väärtused\\n Põhimõtted\\n Kavatsused\\n Poliitikad\",\"deliver\":\"Toimetama\",\"experience\":\"Kogemused\",\"govern\":\"Valitsus\",\"individual_cases\":\"Üksikjuhtumid\",\"plan_manage\":\"Planeerimine ja haldamine\",\"plan_manage_items\":\"Reeglid\\n Ressursid\\n Protsessid\\n Kontod\",\"the_service_level\":\"Teenuse tase\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Kuidas neid väärtusi defineeritakse?\"},\"evidenceUrl\":{\"label\":\"Millised (välised) tõendid on selle toetamiseks saadaval?\"},\"title\":\"Määratlege eetos\",\"values\":{\"label\":\"Millised väärtused on olulised, millele sekkumine tähelepanu pöörab?\"}},\"deliver\":{\"actors\":{\"label\":\"Kelle poolt see toimetatakse?\"},\"evidenceUrl\":{\"label\":\"Millised (välised) tõendid on selle toetamiseks saadaval?\"},\"method\":{\"label\":\"Kuidas sekkumine toimub?\"},\"title\":\"Toimetama\"},\"govern\":{\"actions\":{\"label\":\"Kuidas sekkumist juhitakse? Milliseid meetmeid võetakse selleks, et tulemused oleksid kavandatud?\"},\"actors\":{\"label\":\"Kes seda hindab?\"},\"evolution\":{\"label\":\"Kuidas mõjutab see teenuse arengut?\"},\"improvements\":{\"label\":\"Kuidas tehakse kindlaks parandused? Kuidas neid rakendatakse?\"},\"outcomes\":{\"label\":\"Kas tulemused kajastuvad sihtmärkides ja mõõtmistes? Ja kui jah, siis kelle?\"},\"title\":\"Valitsus\"},\"model\":{\"title\":\"Mudel\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Milliseid toiminguid piloodis praegu tehakse?\"},\"actors\":{\"label\":\"Milliseid käimasolevaid toiminguid tehakse?\"},\"evidenceUrl\":{\"label\":\"Millised (välised) tõendid on selle toetamiseks saadaval?\"},\"title\":\"Planeeri ja halda - praegused toimingud\"},\"planManagePrior\":{\"actions\":{\"label\":\"Milliseid toiminguid tehti enne sekkumist?\"},\"actors\":{\"label\":\"Kes olid nende varasemate toimingutega seotud?\"},\"evidenceUrl\":{\"label\":\"Millised (välised) tõendid on selle toetamiseks saadaval?\"},\"title\":\"Planeerimine ja haldamine - eelnevad toimingud\"}},\"guide\":{\"step01\":\"Kaasloovasse innovatsiooni on kaasatud mitmeid põhiprotsesse. Esimene on seotud eetose määratlusega.\",\"step02\":\"Teine hõlmab juhtimistegevusi ja tooteid.\",\"step03\":\"Moraalne korraldus on seotud sellega, kes saavad tegevustes osaleda, kes siis teie initsiatiivi korral nendes protsessides osalevad? Kus ja millal need toimuvad? Kuidas nad suhtlevad ja kuidas neid salvestatakse?\",\"step04\":\"Juhtimise, planeerimise ja kujundamise tulemusel pakutakse ja kogetakse teenuseid või algatusi.\",\"step05\":\"Jällegi, kes on siin seotud ja kas nad osalevad kahes esimeses tegevuskomplektis?\",\"step06\":\"Selle asemel, et lihtsa hindamisprotsessiga silmus lihtsalt sulgeda, soovitame, et kaasproduktiivse heaolu ja hoolduse süsteemides kaasab juhtimine kõik siin tuvastatud suhetes osalejad osalema moraalse korrastamise mudelis määratletud küsimustes.\",\"step07\":\"Juhtimine toimub individuaalse teenuse kliendisuhete tasandil.\",\"step08\":\"See toimub ka teenuse üldisel tasemel.\",\"step09\":\"Kuidas valitsemisprotsessid selles mõttes, nagu me neid siin kirjeldame, teie algatusel toimuvad?\"},\"options\":{\"sources\":{\"meeting\":\"Kohtumine\",\"other\":\"Muu\",\"policy\":\"Poliitika\"}},\"title\":\"Moraalne tellimine\"},\"social_media\":{\"dashboard\":{\"title\":\"Sotsiaalmeedia\"},\"definitions\":{\"data\":{\"title\":\"Sotsiaalmeedia\"}},\"title\":\"Sotsiaalmeedia\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Selle projekti jaoks pole muudatuste teooriat.\",\"manage\":\"Halda muutuste teooriat\",\"title\":\"Muutuste teooria\"},\"definitions\":{\"data\":{\"hint\":\"Palun lisage kõik projekti teooriad muudatuste kohta.\",\"title\":\"Muutuste teooria\"}},\"title\":\"Muutuste teooria\"},\"welcome\":{\"dashboard\":{\"summary\":\"Loonud {user} kuupäeval {date_time}\"},\"title\":\"Tere tulemast\"}},\"hints\":{\"editor_double_click_edit\":\"Selle muutmiseks topeltklõpsake üksust ja salvestamiseks sisestage sisestusklahv\",\"social_facebook_add\":\"Lisage täielikud lingid (URL-id) Facebooki gruppidesse või lehtedele.\",\"social_instagram_add\":\"Sisestage Instagrami räsimärk # -ga või ilma. Lisamiseks vajutage sisestusklahvi.\",\"social_twitter_add\":\"Sisestage Twitteri hashtag kas # -ga või ilma. Lisamiseks vajutage sisestusklahvi.\",\"social_youtube_add\":\"Sisestage YouTube'i video link ja vajutage lisamiseks sisestusklahvi.\",\"type_and_enter\":\"Sisestage nimi allpool ja vajutage sisestusklahvi.\"},\"languages\":{\"de\":\"Saksa keel\",\"el\":\"Kreeka keel\",\"en_GB\":\"Inglise\",\"es\":\"Hispaania keel\",\"et\":\"Eestlane\",\"fi\":\"Soome keel\",\"fr\":\"Prantsuse keel\",\"hu\":\"Ungari keel\",\"it\":\"Itaalia keel\",\"nl\":\"Hollandi\",\"pl\":\"Poola keel\",\"sv_SE\":\"Rootsi keel\"},\"user_guide\":{\"back\":\"tagasi\",\"close\":\"Sulge\",\"next\":\"Järgmine\",\"show\":\"Kuva kasutusjuhend\",\"skip\":\"Jäta kasutusjuhend vahele\"}}");
+module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisatsioon\",\"service\":\"Teenus\",\"user\":\"Kasutaja\"},\"app\":{\"add_new_actor\":\"Lisage uus näitleja\",\"add_new_item\":\"Lisage uus üksus\",\"all\":\"Kõik\",\"colour\":\"Värv\",\"country\":\"Riik\",\"create\":\"Loo\",\"created_by\":\"Loodud\",\"delete\":\"Kustuta\",\"description\":\"Kirjeldus\",\"download\":\"Lae alla\",\"error\":\"Viga\",\"error_message\":\"Viga: {message}\",\"export\":\"Eksport\",\"exporting\":\"Eksportimine\",\"exporting_project\":\"Eksportiv projekt\",\"image\":\"Pilt\",\"image_drag_prompt\":\"Alustamiseks lohistage oma pilt siia või sirvimiseks klõpsake sellel.\",\"image_is_uploading\":\"Pildi üleslaadimine\",\"image_remove\":\"Eemalda pilt\",\"image_upload_error\":\"Üleslaadimise viga\",\"import\":\"Impordi\",\"import_project\":\"Importiprojekt\",\"import_project_drag_hint\":\"Alustamiseks lohistage oma CoSMoS-i projekt siia või klõpsake sirvimiseks klõpsamiseks.\",\"import_project_notes\":\"Märkus. Olete imporditud projekti omanik.\",\"import_project_success\":\"Projekt on edukalt imporditud!\",\"just_mine\":\"Lihtsalt minu\",\"label\":\"Silt\",\"last_saved_at\":\"Viimati salvestatud {date_time}\",\"log_in\":\"Logi sisse\",\"maximum_items\":\"Maksimaalselt {count} üksust | Maksimaalne üksus {count} | Maksimaalselt {count} üksust\",\"models\":\"Mudelid\",\"more_details\":\"Rohkem detaile\",\"name\":\"Nimi\",\"new_project\":\"Looge uus projekt\",\"next\":\"Järgmine\",\"no_projects\":\"Ühtegi projekti ei leitud.\",\"ok\":\"Okei\",\"open_project\":\"Avatud projekt\",\"please_wait_generate\":\"Oodake, kuni fail luuakse.\",\"processing\":\"Töötlemine\",\"project\":\"Projekt\",\"project_save_success\":\"Projekt salvestatud!\",\"save\":\"Salvesta\",\"saving\":\"Säästmine\",\"scale_to_fit\":\"Skaala sobivaks\",\"search\":\"Otsing\",\"title\":\"Pealkiri\",\"to_create_project\":\"projekti loomiseks.\",\"try_again\":\"Proovi uuesti\",\"type\":\"Tüüp\",\"user_is_read_only\":\"Teie kasutaja juurdepääsutase on kirjutuskaitstud.\",\"web_address\":\"veebiaadress\",\"which_country\":\"Millisest riigist sa pärit oled?\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Makro\"},\"meso\":{\"description\":\"Sellel tasemel võib olla mitu etappi.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Mikro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Kas lisaks otsesele kasutajale / osalejatele on ka teisi kasusaajaid? Kui jah, siis kes nad on?\",\"title\":\"Abisaajad\"},\"broker\":{\"hint\":\"Kas muutuste õhutajate ja muudatuste tegijate vahel on aktiivne maakler? Kui jah, siis kes nad on?\",\"title\":\"Maakler\"},\"changeMakers\":{\"hint\":\"Kes on või olid õhutajad, kes algatasid teie sekkumistegevuse?\",\"title\":\"Muudatuste tegijad\"},\"changeTheorists\":{\"hint\":\"Kes on sekkumise teoreetikud?\",\"title\":\"Muutusteoreetikud\"},\"frontLineServiceDeliverer\":{\"hint\":\"Kes on eesliini teenuse osutaja?\",\"title\":\"Eesliini teenuse osutaja\"},\"instigatorsOfChange\":{\"hint\":\"Kes on või olid õhutajad, kes algatasid teie sekkumistegevuse?\",\"title\":\"Muutuste õhutajad\"},\"model\":{\"title\":\"Mudel\"},\"serviceDeliveryManager\":{\"hint\":\"Kes on sekkumise eest vastutav teenuse osutamise juht?\",\"title\":\"Teenuse osutamise juht\"},\"serviceOrganisationManager\":{\"hint\":\"Kes on sekkumise teenuse organisatsiooni juht?\",\"title\":\"Teenuse korraldamise juht\"},\"servicePolicyMaker\":{\"hint\":\"Kes on või kes olid teenuse poliitika ja teenuse toimimise põhimõtete määratlejad?\",\"title\":\"Teenuse eeskirjade looja\"},\"subjectsOfChange\":{\"hint\":\"Kes on sekkumise käigus kindlaks tehtud muutuste subjektid?\",\"title\":\"Muutuste subjektid\"},\"user\":{\"hint\":\"Kes on teenuse otsene kasutaja?\",\"title\":\"Klient / Kasutaja\"},\"victims\":{\"hint\":\"Kas on tuvastatud ohvreid? Kui jah, siis kes nad on?\",\"title\":\"Ohvrid\"}},\"guide\":{\"step01\":\"Selles mudelis käsitleme Cosie algatust rollide komplekti ja vestlussuhete osas, millega nad tegelevad.\",\"step02\":\"Esiteks on meil eesliini teenuse pakkuja ja klient.\",\"step03\":\"Toimetajal on juht või juhendaja. Seda kahes vestluses osaleva inimese mustrit korratakse.\",\"step04\":\"Kohaletoimetamine toimub mõnes ametlikus või mitteametlikus institutsioonilises kontekstis.\",\"step05\":\"Lõpuks on teenus olemas mõnes laiemas poliitilises keskkonnas.\",\"step06\":\"See on mõeldud abstraktseks mudeliks. Mõnel juhul võib olla lame organisatsioon, kus toimetamise, juhtimise ja poliitika eest vastutavad kõik väikese meeskonna liikmed, mõnel juhul võivad nad esindada erinevaid isikuid ja kontekste.\",\"step07\":\"Kuidas kaardistavad mikro-, meso- ja makromõisted teie algatuse?\",\"step08\":\"Kuidas toimub omavaheline suhtlus?\",\"step09\":\"Kui koordineeritud ja sidusad nad on?\",\"step10\":\"Kas makro ja mikro vahel on infovooge ja vestlusi, mida meso ei vahenda? Millised on selle tagajärjed?\",\"step11\":\"Järgmine mudel kaalub muutuste agentuuri rollide ja vestluste osas.\",\"step12\":\"Muudatus tuleb käivitada, seejärel see täidetakse.\",\"step13\":\"Muudatused, mida me kaalume, puudutavad inimest, kohta või keskkonda.\",\"step14\":\"Muudatused, mida me kaalume, on sageli iseenesest keerulised ja puudutavad keerukaid olukordi. Sageli põhinevad need mõnel teoorial, mis on olukorda sisse viidud või vahendatud.\",\"step15\":\"On olemas hulk kavandatud abisaajaid.\",\"step16\":\"Kuid on ka muudatustest võimalikke abisaajaid või ohvreid.\",\"step17\":\"See mudel on välja töötatud esialgse teenusemudeli proovina, et selgitada välja konkreetsed osalejad, kes algatuse väljatöötamise erinevates etappides on võtnud endale ühe või mitu neist agentuuri rollidest. Kes nad on?\"},\"title\":\"Analüütiline mudel\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Mitmetähenduslikkus\",\"ambivalence\":\"Ambivalentsus\",\"committing\":\"Pühendumine\",\"execute\":\"Täitke\",\"first_order\":\"Esimene tellimus\",\"fourth_order\":\"Neljas järjekord!\",\"languaging\":\"\\\"Keeled\\\"\",\"measure\":\"Mõõda\",\"plan\":\"Plaan\",\"risk\":\"Risk\",\"second_order\":\"Teine orden\",\"sense_making\":\"Mõistmine\",\"third_order\":\"Kolmas järjekord\",\"vision\":\"Visioon\",\"zero_order\":\"Nullkord\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Kuidas plaani täidetakse?\"},\"measure\":{\"label\":\"Kuidas vaatlusi ja mõõtmisi registreeritakse? Kui ei, siis mida peab selleks võimaldama?\"},\"plan\":{\"label\":\"Kuidas loodi visiooni esitamise plaan?\"},\"vision\":{\"label\":\"Kuidas visioon ja eesmärgid püstitati?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Millest muutus alguse sai? Ja mis oli muutus?\"},\"event_cause\":{\"label\":\"Mis juhtus selle sündmuse toimumiseks?\"},\"unexpected_events\":{\"label\":\"Kas on olnud juhtumeid, kus olete näinud ootamatuid sündmusi?\"}},\"model\":{\"title\":\"Mudel\"},\"second_order\":{\"committing\":{\"label\":\"Kuidas on sekkumise teenuse osutamine muutunud võrreldes algsete plaanidega?\"},\"languaging\":{\"label\":\"Milliseid muudatusi on sekkumise mõistmises tehtud?\"},\"sense_making\":{\"label\":\"Millal plaanid ja visioon üle vaatate?\"}},\"third_order\":{\"processes\":{\"label\":\"Millised protsessid kutsuvad esile või võimaldavad teist järku küsimist?\"}}},\"guide\":{\"step01\":\"Alustame sihipärase tegevuse standardmudelist, mis on meile kõigile väga tuttav.\",\"step02\":\"Kuid meil kõigil on olnud kogemus tagasi vaadata ja mõista, et asjad on muutunud tõeliselt põhimõttelisel viisil: räägime paradigma muutumisest. See tähendab, et oleme tegelenud oma maailma uue mõtestamisega ja see tähendab sageli, et meie keel muutub.\",\"step03\":\"Neid kahte erinevat toimimisviisi nimetatakse mõnikord esimeseks ja teiseks järjeks.\",\"step04\":\"Juhtimise mõttes on meil ühelt poolt riskijuhtimine ja teiselt poolt vastuolude ja ebaselguste lahendamine.\",\"step05\":\"Tutvustame nüüd kolmanda järgu tegevuste ideed, mis võimaldavad ja toetavad asjakohaseid üleminekuid esimese ja teise töö vahel, võimaldades sammu tagasi oma eetose ja eelduste uuesti läbi vaatamiseks ning võimaluse korral liikuda tagasi praktilise planeerimise ja teostamise režiimi.\",\"step06\":\"Mõnikord on ebaselgusele ja vastuoludele reageerimine emotsionaalne: võitlus või lendamine, mis on nulljärguline, või inspiratsioon ja kangelaslikkus, mida nimetame neljandaks järjekorraks.\",\"step07\":\"Seega on meie skeemi paremal küljel emotsionaalse töö ja reageeringute spekter, vasakul pool on aga kaastootlik ja vestlustöö.\",\"step08\":\"See mudel genereerib rea avatud küsimusi selle kohta, kus teie algatusel toimub erinev esimese ja teise järgu töö, milline emotsionaalne töö on olnud ja mida nõuab ning kuidas ja kus seda tehakse ning kuidas ja kes on nõutavad kolmanda järgu sekkumised ette võetud?\"},\"title\":\"Muuda mudelit\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Eetos\",\"infrastructural_relationships\":\"Infrastruktuurisuhted, abinõud ja rajatised\",\"policy_law\":\"Poliitika ja seadus\",\"resources\":\"Ressursid\",\"service_definition\":\"Teenuse määratlus ja arendusplatvorm\",\"service_delivery\":\"Teenuse osutamise platvorm\",\"structural_relationships\":\"Struktuursed suhted ja sündmused\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Kas lisaks otsesele kasutajale / osalejatele on ka teisi kasusaajaid? Kui jah, siis kes nad on?\",\"title\":\"Saaja\"},\"delivery\":{\"hint\":\"Kes vastutab teie piloodi kohaletoimetamise mehhanismi (de), kanalite ja rollide eest?\",\"title\":\"Tarnija\"},\"deployment\":{\"hint\":\"Kes neid protsesse ja ressursse juurutab / juurutab ja aktiveerib / aktiveerib?\",\"title\":\"Paigaldaja\"},\"drivers\":{\"body\":{\"hint\":\"Millised on ajurid ja motivatsioon?\",\"label\":\"Autojuhid ja motivatsioonid\"},\"hint\":\"Millised olid / on projekti ajendid ja motivatsioon? Kas see oli seadusest tulenev nõue, vajaduse või nõudmise tunnustamine, võimaluse ärakasutamine, ebavõrdsusega tegelemine?\",\"title\":\"Autojuhid ja motivatsioonid\"},\"evaluation\":{\"hint\":\"Kes on teenuse hindaja (d) ja juhid?\",\"title\":\"Hindaja\"},\"extorg\":{\"hint\":\"Kas on olemas asjakohaseid osalejaid, sidusrühmi või asutusi, kes on piloodi jaoks olulised, kuid jäävad väljaspool selle visiooni ja eetikat?\",\"title\":\"Välised organisatsioonid\"},\"extsvc\":{\"hint\":\"Milliseid korduvkasutatavaid rajatisi, (tehnilisi ja inimressursse), teenuseid ja teabeallikaid töötati välja ja kasutati nende teenuste määratlemise ja arendusprotsesside toetamiseks? Milliseid väliseid ressursse ja teenuseid (nt side ja sotsiaalmeedia) kasutati / kasutatakse?\",\"title\":\"Välised tehnilised teenused\"},\"infsvc\":{\"hint\":\"Milliseid väliseid teenuseid, kanaleid ja rajatisi kasutate oma teenuse (te) edastamisel? Milliseid teabeallikaid te kasutate? Millist teavet avaldate, kellele ja milliseid kanaleid ning meediume kasutades?\",\"title\":\"Infrastruktuuriteenused\"},\"initiator\":{\"hint\":\"Kes on või olid õhutajad, kes algatasid teie pilootide tegevuse?\",\"title\":\"Initsiaator\"},\"model\":{\"title\":\"Mudel\"},\"policyDef\":{\"hint\":\"Kes on või kes olid teenuse poliitika ja teenuse toimimise põhimõtete määratlejad?\",\"title\":\"Poliitika määratleja\"},\"specDes\":{\"hint\":\"Kes täpsustab / täpsustab ja kujundab / kujundab teenuste osutamise protsesse ja ressursse?\",\"title\":\"Täpsustaja ja kujundaja\"},\"user\":{\"hint\":\"Kes on teenuse otsene kasutaja?\",\"title\":\"Kasutaja\"}},\"title\":\"Teenuse mudeli kaasloome\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Selle projekti jaoks pole kogukonna aruandlusüksusi.\",\"manage\":\"Halda kogukonna aruandlust\",\"title\":\"Kogukonna aruandlus\"},\"definitions\":{\"data\":{\"hint\":\"Lisage kõik projektis olevad kogukonna aruanded.\",\"title\":\"Kogukonna aruandlus\"}},\"title\":\"Kogukonna aruandlus\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Selle projekti jaoks pole dokumente ega faile.\",\"manage\":\"Halda dokumente ja faile\",\"title\":\"Dokumendid ja toimikud\"},\"definitions\":{\"data\":{\"hint\":\"Lisage kõik teie projektis olevad dokumendid ja failid.\",\"title\":\"Dokumendid ja toimikud\"}},\"title\":\"Dokumendid\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Heaolu\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Millised teenuse elutsükli aspektid on teie innovatsiooni ja muutuste seisukohast olulised?\"},\"title\":\"Innovatsioon ja muutused\"},\"intervention\":{\"items\":{\"label\":\"Mis tüüpi sekkumine toimub?\"},\"title\":\"Sekkumine\"},\"learning\":{\"items\":{\"label\":\"Kuidas toimub õppimine teie sekkumisel?\"},\"title\":\"Õppimine\"},\"model\":{\"title\":\"Mudel\"},\"wellbeing\":{\"items\":{\"label\":\"Millised inimeste heaolu ja keskkonna aspektid on teie teenuse jaoks asjakohased? Kas mõned on olulisemad kui teised?\"},\"title\":\"Inimeste heaolu ja keskkond\"}},\"guide\":{\"step01\":\"Kaalutavad loomingulised algatused on kõik seotud heaolu parandamise ja hooldamisega. Siin käsitleme üksikisikute heaolu, kuid seda võib rakendada kohtades või laiemas keskkonnas.\",\"step02\":\"Heaolul on mitmeid erinevaid tahke, mis kõik on üksteisest sõltuvad.\",\"step03\":\"See suhtleb ka füüsilise ja sotsiaalse keskkonnaga.\",\"step04\":\"Mõni teenus või sekkumine on seotud valesti läinud asja parandamise ja status quo taastamisega.\",\"step05\":\"Kuid sekkumistel on ka muid eesmärke.\",\"step06\":\"Sekkumisprotsess hõlmab mitmeid erinevaid etappe ja protsesse.\",\"step07\":\"Lõpuks, kui soovime oma uuendusi jätkata, peame õppima ja arenema.\",\"step08\":\"Kes, mis või kus on teie sekkumise eesmärk?\",\"step09\":\"Millised heaolu aspektid on teie algatuse keskmes?\",\"step10\":\"Millised teie teema heaolu aspektid on asjakohased, kuid ületavad teie algatuse ulatust?\",\"step11\":\"Millised on asjakohased keskkonnaaspektid?\",\"step12\":\"Millised sekkumiste kombinatsioonid alates ennetamisest kuni ümberkujundamiseni on teie algatuse jaoks asjakohased?\",\"step13\":\"Mil määral on õppimine ja paranemine teie arengujuhtimise ja -protsesside sisseehitatud?\"},\"options\":{\"innovation\":{\"development\":\"Areng\",\"facilitation\":\"Hõlbustamine\",\"palliation\":\"Palliatsioon\",\"prevention\":\"Ärahoidmine\",\"rehabilitation\":\"Taastusravi\",\"remedy\":\"Parandus\",\"transformation\":\"Muutumine\"},\"intervention\":{\"coordination_delivery\":\"Koordineerimine ja kättetoimetamine\",\"governance\":\"Valitsemine\",\"identification\":\"Identifitseerimine ja planeerimine\",\"learning\":\"Õppimine\",\"management\":\"Juhtimine\"},\"learning\":{\"research_evidence\":\"Teadusuuringud ja tõendid\",\"service_improvement\":\"Teenuse täiustamine\",\"trials\":\"Kohtuprotsessid\"},\"wellbeing\":{\"faculties_skills\":\"Teaduskonnad ja oskused\",\"mental_psych\":\"Vaimne ja psühholoogiline\",\"physical_env\":\"Füüsiline ümbritsemine\",\"physiological\":\"Füsioloogiline\",\"socio_cultural_env\":\"Sotsiaal-kultuuriline keskkond\",\"socio_economic\":\"Sotsiaalmajanduslik\"}},\"title\":\"Sekkumisteooria mudel\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Määratlege eetos\",\"define_ethos_items\":\"Väärtused\\n Põhimõtted\\n Kavatsused\\n Poliitikad\",\"deliver\":\"Toimetama\",\"experience\":\"Kogemused\",\"govern\":\"Valitsus\",\"individual_cases\":\"Üksikjuhtumid\",\"plan_manage\":\"Planeerimine ja haldamine\",\"plan_manage_items\":\"Reeglid\\n Ressursid\\n Protsessid\\n Kontod\",\"the_service_level\":\"Teenuse tase\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Kuidas neid väärtusi defineeritakse?\"},\"evidenceUrl\":{\"label\":\"Millised (välised) tõendid on selle toetamiseks saadaval?\"},\"title\":\"Määratlege eetos\",\"values\":{\"label\":\"Millised väärtused on olulised, millele sekkumine tähelepanu pöörab?\"}},\"deliver\":{\"actors\":{\"label\":\"Kelle poolt see toimetatakse?\"},\"evidenceUrl\":{\"label\":\"Millised (välised) tõendid on selle toetamiseks saadaval?\"},\"method\":{\"label\":\"Kuidas sekkumine toimub?\"},\"title\":\"Toimetama\"},\"govern\":{\"actions\":{\"label\":\"Kuidas sekkumist juhitakse? Milliseid meetmeid võetakse selleks, et tulemused oleksid kavandatud?\"},\"actors\":{\"label\":\"Kes seda hindab?\"},\"evolution\":{\"label\":\"Kuidas mõjutab see teenuse arengut?\"},\"improvements\":{\"label\":\"Kuidas tehakse kindlaks parandused? Kuidas neid rakendatakse?\"},\"outcomes\":{\"label\":\"Kas tulemused kajastuvad sihtmärkides ja mõõtmistes? Ja kui jah, siis kelle?\"},\"title\":\"Valitsus\"},\"model\":{\"title\":\"Mudel\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Milliseid toiminguid piloodis praegu tehakse?\"},\"actors\":{\"label\":\"Milliseid käimasolevaid toiminguid tehakse?\"},\"evidenceUrl\":{\"label\":\"Millised (välised) tõendid on selle toetamiseks saadaval?\"},\"title\":\"Planeeri ja halda - praegused toimingud\"},\"planManagePrior\":{\"actions\":{\"label\":\"Milliseid toiminguid tehti enne sekkumist?\"},\"actors\":{\"label\":\"Kes olid nende varasemate toimingutega seotud?\"},\"evidenceUrl\":{\"label\":\"Millised (välised) tõendid on selle toetamiseks saadaval?\"},\"title\":\"Planeerimine ja haldamine - eelnevad toimingud\"}},\"guide\":{\"step01\":\"Kaasloovasse innovatsiooni on kaasatud mitmeid põhiprotsesse. Esimene on seotud eetose määratlusega.\",\"step02\":\"Teine hõlmab juhtimistegevusi ja tooteid.\",\"step03\":\"Moraalne korraldus on seotud sellega, kes saavad tegevustes osaleda, kes siis teie initsiatiivi korral nendes protsessides osalevad? Kus ja millal need toimuvad? Kuidas nad suhtlevad ja kuidas neid salvestatakse?\",\"step04\":\"Juhtimise, planeerimise ja kujundamise tulemusel pakutakse ja kogetakse teenuseid või algatusi.\",\"step05\":\"Jällegi, kes on siin seotud ja kas nad osalevad kahes esimeses tegevuskomplektis?\",\"step06\":\"Selle asemel, et lihtsa hindamisprotsessiga silmus lihtsalt sulgeda, soovitame, et kaasproduktiivse heaolu ja hoolduse süsteemides kaasab juhtimine kõik siin tuvastatud suhetes osalejad osalema moraalse korrastamise mudelis määratletud küsimustes.\",\"step07\":\"Juhtimine toimub individuaalse teenuse kliendisuhete tasandil.\",\"step08\":\"See toimub ka teenuse üldisel tasemel.\",\"step09\":\"Kuidas valitsemisprotsessid selles mõttes, nagu me neid siin kirjeldame, teie algatusel toimuvad?\"},\"options\":{\"sources\":{\"meeting\":\"Kohtumine\",\"other\":\"Muu\",\"policy\":\"Poliitika\"}},\"title\":\"Moraalne tellimine\"},\"social_media\":{\"dashboard\":{\"title\":\"Sotsiaalmeedia\"},\"definitions\":{\"data\":{\"title\":\"Sotsiaalmeedia\"}},\"title\":\"Sotsiaalmeedia\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Selle projekti jaoks pole muudatuste teooriat.\",\"manage\":\"Halda muutuste teooriat\",\"title\":\"Muutuste teooria\"},\"definitions\":{\"data\":{\"hint\":\"Palun lisage kõik projekti teooriad muudatuste kohta.\",\"title\":\"Muutuste teooria\"}},\"title\":\"Muutuste teooria\"},\"user_journey_model\":{\"dashboard\":{\"one\":\"\",\"other\":\"\"},\"definitions\":{\"accessing\":{\"access_method\":{\"label\":\"Kuidas te teenusele juurde pääsesite?\"},\"appropriate_comment\":{\"label\":\"Kas see teenuse aspekt on teie arvates asjakohane?\"},\"qualification_experience\":{\"label\":\"Kui jah, siis milline oli kogemus?\"},\"qualification_process\":{\"label\":\"Kas toimus kvalifikatsioon või valikuprotsess?\"},\"title\":\"Juurdepääs\"},\"discovering\":{\"comments\":{\"label\":\"Kas on veel märkusi, tähelepanekuid?\"},\"discovery_medium\":{\"label\":\"Kuidas said teenusest teada?\"},\"information_experience\":{\"label\":\"Milline on teie arvamus teabe kvaliteedi, täielikkuse ja kättesaadavuse kohta?\"},\"information_medium\":{\"label\":\"Kuidas pääsesite teenuse kohta käivale teabele juurde?\"},\"title\":\"Avastamine\"},\"evaluating\":{\"opinions_asked\":{\"hint\":\"Mõelge, kus ja millal see oli.\",\"label\":\"Kas teie käest küsiti teie arvamuse kohta teenuse kasutamise kogemuse kohta?\"},\"opinions_how\":{\"label\":\"Kui jah, siis kuidas teilt küsiti?\"},\"service_experience\":{\"label\":\"Kas teenus oli see, mida ootasite?\"},\"surprises_comments\":{\"label\":\"Kas teie kogemuses oli üllatusi või pettumusi?\"},\"title\":\"Hindamine\"},\"instigating\":{\"comments\":{\"label\":\"Kommentaarid\"},\"design_role\":{\"label\":\"Kas mängisite mingit rolli teenuse kujundamisel ja määratlemisel? Kui jah, siis milliseid juhtumeid ja kanaleid see juhtus?\"},\"instigate_role\":{\"label\":\"Kas teil oli projekti käivitamisel mingit rolli? Kui jah, kas kuulusite mõnda järgmistest võimalustest? Saate valida nii palju kui soovite.\"},\"title\":\"Kihutamine\"},\"model\":{\"title\":\"Mudel\"},\"using\":{\"accessible_experience\":{\"label\":\"Kas teenus oli teile kättesaadav?\"},\"participate_experience\":{\"label\":\"Kuidas oli teenust kasutada või selles osaleda?\"},\"time_experience\":{\"label\":\"Kas teenindusürituste või kontaktide kestus ja sagedused olid korras?\"},\"title\":\"Kasutamine\",\"where\":{\"label\":\"Kus te seda teenust kasutasite?\"}}},\"guide\":{\"step01\":\"Teenuseid reklaamitakse nende mõeldud kasutajatele, see on avastamise etapp.\",\"step02\":\"Teenust soovivad kasutajad esitavad mingisuguse taotluse või rakenduse, see on juurdepääsu faas.\",\"step03\":\"Kui eelmine etapp on edukas, teenus osutatakse ja kogetakse, on see kasutamisetapp.\",\"step04\":\"Seejärel hinnatakse teenuse kasutamise kogemust.\",\"step05\":\"Senistes küsimustes eeldatakse, et teenus on määratletud ja on juba olemas. Järgmine küsimus on selle kohta, kas ja kuidas osalesite protsessides, mille abil teenus kõigepealt loodi.\",\"step06\":\"Kõigepealt saame täiendada oma teenuse osutamise mudelit koos loomise etappidega. Nimetame seda projekteerimisetapiks.\",\"step07\":\"Seejärel saame näidata protsesse, mille abil teenus üldse tuvastati ja algatati. Nimetame seda kihutamisfaasiks.\"},\"options\":{\"access_methods\":{\"applied\":\"Rakendatud\",\"other\":\"Muu\",\"referred\":\"Viidatud\"},\"instigate_roles\":{\"government_department\":\"Valitsuse osakond\",\"political_party\":\"Erakond\",\"pressure_group\":\"Surve- / kampaaniarühm\"},\"mediums\":{\"other\":\"Muu\",\"paper\":\"Paberväljaanne\",\"referral\":\"Suunamine\",\"social\":\"Sotsiaalmeedia\",\"word_of_mouth\":\"Suusõnaliselt\"},\"opinions_how\":{\"interview\":\"Intervjuu\",\"survey\":\"Uuring\",\"workshop\":\"Töötuba\"},\"where\":{\"community\":\"Kogukond\",\"home\":\"Kodu\",\"other\":\"Muu\",\"public\":\"Avalik\"},\"yes_no_maybe\":{\"maybe\":\"Võib olla\",\"no\":\"Ei\",\"yes\":\"Jah\"}},\"title\":\"Kasutaja teekonna mudel\"},\"welcome\":{\"dashboard\":{\"summary\":\"Loonud {user} kuupäeval {date_time}\"},\"title\":\"Tere tulemast\"}},\"countries\":{\"de\":\"Saksamaa\",\"el\":\"Kreeka\",\"en_GB\":\"Ühendkuningriik\",\"es\":\"Hispaania\",\"et\":\"Eesti\",\"fi\":\"Soome\",\"fr\":\"Prantsusmaa\",\"hu\":\"Ungari\",\"it\":\"Itaalia\",\"nl\":\"Holland\",\"pl\":\"Poola\",\"sv_SE\":\"Rootsi\"},\"hints\":{\"editor_double_click_edit\":\"Selle muutmiseks topeltklõpsake üksust ja salvestamiseks sisestage sisestusklahv\",\"social_facebook_add\":\"Lisage täielikud lingid (URL-id) Facebooki gruppidesse või lehtedele.\",\"social_instagram_add\":\"Sisestage Instagrami räsimärk # -ga või ilma. Lisamiseks vajutage sisestusklahvi.\",\"social_twitter_add\":\"Sisestage Twitteri hashtag kas # -ga või ilma. Lisamiseks vajutage sisestusklahvi.\",\"social_youtube_add\":\"Sisestage YouTube'i video link ja vajutage lisamiseks sisestusklahvi.\",\"type_and_enter\":\"Sisestage nimi allpool ja vajutage sisestusklahvi.\"},\"languages\":{\"de\":\"Saksa keel\",\"el\":\"Kreeka keel\",\"en_GB\":\"Inglise\",\"es\":\"Hispaania keel\",\"et\":\"Eestlane\",\"fi\":\"Soome keel\",\"fr\":\"Prantsuse keel\",\"hu\":\"Ungari keel\",\"it\":\"Itaalia keel\",\"nl\":\"Hollandi\",\"pl\":\"Poola keel\",\"sv_SE\":\"Rootsi keel\"},\"user_guide\":{\"back\":\"tagasi\",\"close\":\"Sulge\",\"next\":\"Järgmine\",\"show\":\"Kuva kasutusjuhend\",\"skip\":\"Jäta kasutusjuhend vahele\"}}");
 
 /***/ }),
 
@@ -5410,10 +6088,10 @@ module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisatsi
 /*!*************************!*\
   !*** ./js/lang/fi.json ***!
   \*************************/
-/*! exports provided: activity_types, app, aspects, hints, languages, user_guide, default */
+/*! exports provided: activity_types, app, aspects, countries, hints, languages, user_guide, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisaatio\",\"service\":\"Palvelu\",\"user\":\"Käyttäjä\"},\"app\":{\"add_new_actor\":\"Lisää uusi näyttelijä\",\"add_new_item\":\"Lisää uusi kohde\",\"all\":\"Kaikki\",\"colour\":\"Väri\",\"create\":\"Luoda\",\"created_by\":\"Luonut\",\"delete\":\"Poistaa\",\"description\":\"Kuvaus\",\"download\":\"ladata\",\"error\":\"Virhe\",\"error_message\":\"Virhe: {message}\",\"export\":\"Viedä\",\"exporting\":\"Vie\",\"exporting_project\":\"Vie projekti\",\"image\":\"Kuva\",\"image_drag_prompt\":\"Aloita vetämällä kuvasi tähän tai selaa napsauttamalla.\",\"image_is_uploading\":\"Lähetetään kuvaa\",\"image_remove\":\"Poista kuva\",\"image_upload_error\":\"Latausvirhe\",\"import\":\"Tuonti\",\"import_project\":\"Tuo projekti\",\"import_project_drag_hint\":\"Aloita vetämällä CoSMoS-projektisi tähän tai napsauttamalla selaa.\",\"import_project_notes\":\"Huomaa: Sinä olet tuotavan projektin omistaja.\",\"import_project_success\":\"Projekti on tuotu onnistuneesti!\",\"just_mine\":\"Vain minun\",\"label\":\"Tarra\",\"last_saved_at\":\"Viimeksi tallennettu {date_time}\",\"log_in\":\"Kirjaudu sisään\",\"maximum_items\":\"Enintään {count} kohdetta | Suurin {count} kohde | Enintään {count} kohdetta\",\"models\":\"Mallit\",\"name\":\"Nimi\",\"new_project\":\"Luo uusi projekti\",\"next\":\"Seuraava\",\"no_projects\":\"Ei löytynyt projekteja.\",\"ok\":\"OK\",\"open_project\":\"Avoin projekti\",\"please_wait_generate\":\"Odota, kun tiedostoa luodaan.\",\"processing\":\"Käsittely\",\"project\":\"Projekti\",\"project_save_success\":\"Projekti tallennettu!\",\"save\":\"Tallentaa\",\"saving\":\"Tallentaa\",\"scale_to_fit\":\"Skaalaa sopivaksi\",\"search\":\"Hae\",\"title\":\"Otsikko\",\"to_create_project\":\"luoda projekti.\",\"try_again\":\"Yritä uudelleen\",\"type\":\"Tyyppi\",\"user_is_read_only\":\"Käyttäjän käyttöoikeustasosi on vain luku -tilassa.\",\"web_address\":\"nettiosoite\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Makro\"},\"meso\":{\"description\":\"Tällä tasolla voi olla useita vaiheita.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Mikro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Onko muita edunsaajia kuin suorat käyttäjät / osallistujat? Jos on, keitä he ovat?\",\"title\":\"Edunsaajat\"},\"broker\":{\"hint\":\"Onko muutoksen aloittajien välillä aktiivista välittäjää? Jos on, keitä he ovat?\",\"title\":\"Välittäjä\"},\"changeMakers\":{\"hint\":\"Keitä ovat tai olivat alullepanijoita, jotka aloittivat interventiotoimintasi?\",\"title\":\"Change Makers\"},\"changeTheorists\":{\"hint\":\"Keitä ovat muutoksen teoreetikot interventioon?\",\"title\":\"Muutosten teoreetikot\"},\"frontLineServiceDeliverer\":{\"hint\":\"Kuka on etulinjan palvelun toimittaja?\",\"title\":\"Etupalvelun toimittaja\"},\"instigatorsOfChange\":{\"hint\":\"Keitä ovat tai olivat alullepanijoita, jotka aloittivat interventiotoimintasi?\",\"title\":\"Muutoksen yllyttäjät\"},\"model\":{\"title\":\"Malli\"},\"serviceDeliveryManager\":{\"hint\":\"Kuka on palvelujen toimitusjohtaja, joka on vastuussa interventiosta?\",\"title\":\"Palvelun toimitusjohtaja\"},\"serviceOrganisationManager\":{\"hint\":\"Kuka on palveluorganisaation johtaja interventiolle?\",\"title\":\"Palvelun organisaation johtaja\"},\"servicePolicyMaker\":{\"hint\":\"Keitä palvelupolitiikkojen ja palveluperiaatteiden määrittelijät ovat tai olivatko?\",\"title\":\"Service Policy Maker\"},\"subjectsOfChange\":{\"hint\":\"Ketkä ovat yksilöityjä muutoksen aiheita interventiossa?\",\"title\":\"Muutoksen aiheet\"},\"user\":{\"hint\":\"Kuka on palvelun suora käyttäjä?\",\"title\":\"Asiakas / Käyttäjä\"},\"victims\":{\"hint\":\"Onko uhreja tunnistettu? Jos on, keitä he ovat?\",\"title\":\"Uhrit\"}},\"guide\":{\"step01\":\"Tässä mallissa tarkastelemme Cosie-aloitetta roolien joukossa ja keskustelusuhteissa, joihin he osallistuvat.\",\"step02\":\"Ensin meillä on etulinjan palvelujen toimittaja ja asiakas.\",\"step03\":\"Toimittajalla on johtaja tai esimies. Tämä kahdessa keskustelussa mukana olevan henkilön malli toistetaan.\",\"step04\":\"Toimitus tapahtuu jossakin virallisessa tai epävirallisessa institutionaalisessa yhteydessä.\",\"step05\":\"Lopuksi, palvelu on olemassa joissakin laajemmissa käytäntöissä.\",\"step06\":\"Tämän on tarkoitus olla abstrakti malli. Joissakin tapauksissa voi olla tasainen organisaatio, jossa toimituksen, johtamisen ja politiikan toteuttavat kaikki pienen ryhmän jäsenet, toisissa tapauksissa ne voivat edustaa erillisiä yksilöitä ja asiayhteyksiä.\",\"step07\":\"Kuinka mikro, meso ja makro käsitteet kartoittavat aloitteesi?\",\"step08\":\"Kuinka heidän välinen kommunikointi tapahtuu?\",\"step09\":\"Kuinka koordinoituja ja johdonmukaisia ne ovat?\",\"step10\":\"Erityisesti, onko makron ja mikrojen välillä tietovirtoja ja keskusteluja, joita meso ei välitä? Mitkä ovat tämän seuraukset?\",\"step11\":\"Seuraava malli ottaa huomioon muutostoiminnan roolien ja keskustelujen suhteen.\",\"step12\":\"Muutos on käynnistettävä, sitten se suoritetaan.\",\"step13\":\"Tarkastelemamme muutokset koskevat henkilöä, paikkaa tai ympäristöä.\",\"step14\":\"Tarkastelemamme muutokset ovat usein itse monimutkaisia ja koskevat monimutkaisia tilanteita. Usein ne perustuvat johonkin teoriaan, joka on otettu käyttöön tai välitetty tilanteeseen.\",\"step15\":\"On joukko aiottuja edunsaajia.\",\"step16\":\"Mutta muutoksesta voi myös olla hyötyä tai uhreja.\",\"step17\":\"Tämä malli on suunniteltu koettimeksi alkuperäisestä palvelumallista, jotta voidaan tunnistaa ne toimijat, jotka ovat aloitteen kehittämisen eri vaiheissa omaksuneet yhden tai useamman näistä agentuurirooleista. Keitä he ovat?\"},\"title\":\"Analyyttinen malli\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Epäselvyys\",\"ambivalence\":\"Ambivalenssi\",\"committing\":\"Sitoutuminen\",\"execute\":\"Suorittaa\",\"first_order\":\"Ensimmäinen tilaus\",\"fourth_order\":\"Neljäs järjestys!\",\"languaging\":\"\\\"Kielitaito\\\"\",\"measure\":\"Mitata\",\"plan\":\"Suunnitelma\",\"risk\":\"Riski\",\"second_order\":\"Toinen tilaus\",\"sense_making\":\"Aistien tekeminen\",\"third_order\":\"Kolmas järjestys\",\"vision\":\"Näkemys\",\"zero_order\":\"Nolla tilaus\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Kuinka suunnitelma toteutetaan?\"},\"measure\":{\"label\":\"Kuinka havainnot ja mittaukset kirjataan? Jos ei, mitä on sallittava tehdä niin?\"},\"plan\":{\"label\":\"Kuinka visio toimitettiin suunnitelmaksi?\"},\"vision\":{\"label\":\"Kuinka visio ja tavoitteet asetettiin?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Mikä oli muutoksen alkuperä? Ja mikä muutos oli?\"},\"event_cause\":{\"label\":\"Mitä tapahtui tämän tapahtuman sallimiseksi?\"},\"unexpected_events\":{\"label\":\"Onko ollut tapauksia, joissa olet nähnyt odottamattomia tapahtumia?\"}},\"model\":{\"title\":\"Malli\"},\"second_order\":{\"committing\":{\"label\":\"Kuinka intervention palveluiden toimittaminen on muuttunut alkuperäisistä suunnitelmistaan?\"},\"languaging\":{\"label\":\"Mitä muutoksia on tehty siihen, miten interventio on ymmärretty?\"},\"sense_making\":{\"label\":\"Milloin tarkastelet suunnitelmia ja visiota?\"}},\"third_order\":{\"processes\":{\"label\":\"Mitkä prosessit herättävät tai mahdollistavat toisen asteen kyselyn?\"}}},\"guide\":{\"step01\":\"Aloitamme tavallisen toiminnan vakiomallilla, joka tunnemme kaikki hyvin.\",\"step02\":\"Mutta meillä kaikilla on ollut kokemusta katsoa taaksepäin ja ymmärtää, että asiat ovat muuttuneet todella perustavanlaatuisella tavalla: puhumme paradigman muutoksesta. Tämä tarkoittaa sitä, että olemme sitoutuneet luomaan uuden käsityksen maailmastamme, ja tämä tarkoittaa usein, että kielemme muuttuu.\",\"step03\":\"Näitä kahta erilaista toimintatapaa kutsutaan joskus ensimmäiseksi ja toiseksi.\",\"step04\":\"Johtamisen kannalta meillä on toisaalta riskienhallinta ja toisaalta ristiriitojen ja epäselvyyksien ratkaiseminen.\",\"step05\":\"Esittelemme nyt ajatuksen kolmannen kertaluvun toiminnoista, jotka mahdollistavat ja tukevat sopivia siirtymiä ensimmäisen ja toisen työn välillä, mikä antaa mahdollisuuden palata eetoksen ja oletusten uudelleen tarkastelemiseen ja, kun meillä on, siirtyä takaisin käytännön suunnitteluun ja toimitukseen.\",\"step06\":\"Joskus epäselvyyteen ja ristiriitaan liittyvä reaktio on emotionaalinen: taistelu tai lentäminen, joka on nollajärjestys, tai inspiraatio ja sankaruus, jota kutsumme neljänneksi järjestykseksi.\",\"step07\":\"Joten kaavion oikealla puolella on emotionaalisen työn ja vastausten kirjo, kun taas vasemmalla puolella on yhteistuotantoa, keskustelutyö.\",\"step08\":\"Tämä malli tuottaa sarjan avoimia kysymyksiä siitä, missä eri ensimmäisen ja toisen asteen työt tapahtuvat aloitteessasi, mitä emotionaalista työtä on ollut ja tarvitaan ja miten ja missä sitä tehdään ja miten ja kuka vaaditut kolmannen asteen toimet toteutettu?\"},\"title\":\"Vaihda malli\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Infrastruktuurisuhteet, resurssit ja palvelut\",\"policy_law\":\"Politiikka ja laki\",\"resources\":\"Resurssit\",\"service_definition\":\"Palvelun määrittely ja kehitysalusta\",\"service_delivery\":\"Palvelun toimitusalusta\",\"structural_relationships\":\"Rakenteelliset suhteet ja tilanteet\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Onko muita edunsaajia kuin suorat käyttäjät / osallistujat? Jos on, keitä he ovat?\",\"title\":\"Edunsaaja\"},\"delivery\":{\"hint\":\"Kuka on vastuussa pilotin toimitusmekanismeista, kanavista ja rooleista?\",\"title\":\"Toimittaja\"},\"deployment\":{\"hint\":\"Kuka ottaa käyttöön / ottaa käyttöön ja aktivoi / aktivoi nuo prosessit ja resurssit?\",\"title\":\"Asentaja\"},\"drivers\":{\"body\":{\"hint\":\"Mitkä ovat kuljettajat ja motivaatiot?\",\"label\":\"Kuljettajat ja motivaatiot\"},\"hint\":\"Mitkä olivat / ovat projektin ajurit ja motivaatiot? Oliko se lakisääteinen vaatimus, tarpeen tai vaatimuksen tunnustaminen, mahdollisuuden tarttuminen, epätasa-arvon puuttuminen?\",\"title\":\"Kuljettajat ja motivaatiot\"},\"evaluation\":{\"hint\":\"Kuka on palvelun arvioija (t) ja kuvernöörit?\",\"title\":\"Arvioija\"},\"extorg\":{\"hint\":\"Onko olemassa asiaankuuluvia toimijoita, sidosryhmiä tai virastoja, jotka ovat merkityksellisiä pilotin kannalta, mutta jotka jäävät sen vision ja eetoksen ulkopuolelle?\",\"title\":\"Ulkoiset organisaatiot\"},\"extsvc\":{\"hint\":\"Mitä uudelleenkäytettäviä tiloja, (teknisiä ja inhimillisiä) resursseja, palveluja ja tietolähteitä kehitettiin ja käytettiin näiden palvelujen määrittely- ja kehitysprosessien tukena? Mitä ulkoisia resursseja ja palveluja (esim. Viestintä ja sosiaalinen media) käytettiin / käytetään?\",\"title\":\"Ulkoiset tekniset palvelut\"},\"infsvc\":{\"hint\":\"Mitä ulkoisia palveluita, kanavia ja palveluita käytät palvelujen toimittamisessa? Mitä tietolähteitä käytät? Mitä tietoja julkaiset, kenelle ja mitä kanavia ja mediaa käyttämällä?\",\"title\":\"Infrastruktuuripalvelut\"},\"initiator\":{\"hint\":\"Keitä ovat tai olivatko aloittajat, jotka aloittivat lentotoimintasi?\",\"title\":\"Aloittaja\"},\"model\":{\"title\":\"Malli\"},\"policyDef\":{\"hint\":\"Keitä palvelupolitiikkojen ja palveluperiaatteiden määrittelijät ovat tai olivatko?\",\"title\":\"Käytännön määrittelijä\"},\"specDes\":{\"hint\":\"Kuka määrittelee / määrittelee ja suunnittelee / suunnittelee palvelujen toimitusprosessit ja resurssit?\",\"title\":\"Määrittelijä ja suunnittelija\"},\"user\":{\"hint\":\"Kuka on palvelun suora käyttäjä?\",\"title\":\"Käyttäjä\"}},\"title\":\"Palvelumallin yhteisluonti\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Tätä projektia varten ei ole yhteisön raportointikohteita.\",\"manage\":\"Hallitse yhteisön raportointia\",\"title\":\"Yhteisön raportointi\"},\"definitions\":{\"data\":{\"hint\":\"Lisää projektisi mahdolliset yhteisöraportit.\",\"title\":\"Yhteisön raportointi\"}},\"title\":\"Yhteisön raportointi\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Tätä projektia varten ei ole dokumentteja tai tiedostoja.\",\"manage\":\"Hallitse asiakirjoja ja tiedostoja\",\"title\":\"Asiakirjat ja tiedostot\"},\"definitions\":{\"data\":{\"hint\":\"Lisää kaikki projektissasi mahdollisesti olevat asiakirjat ja tiedostot.\",\"title\":\"Asiakirjat ja tiedostot\"}},\"title\":\"Asiakirjat\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Hyvinvointi\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Mitkä palvelun elinkaaren näkökohdat ovat tärkeitä innovaatioidesi ja muutoksesi kannalta?\"},\"title\":\"Innovaatiot ja muutokset\"},\"intervention\":{\"items\":{\"label\":\"Minkä tyyppisiä toimia tapahtuu?\"},\"title\":\"Interventio\"},\"learning\":{\"items\":{\"label\":\"Kuinka oppiminen tapahtuu interventiossasi?\"},\"title\":\"Oppiminen\"},\"model\":{\"title\":\"Malli\"},\"wellbeing\":{\"items\":{\"label\":\"Mitkä ihmisen hyvinvoinnin ja ympäristön näkökohdat ovat merkityksellisiä palvelullesi? Ovatko jotkut merkittävämpiä kuin toiset?\"},\"title\":\"Ihmisen hyvinvointi ja ympäristö\"}},\"guide\":{\"step01\":\"Harkitsemamme yhteisluovat aloitteet koskevat kaikki hyvinvoinnin parantamista ja vaalimista. Tässä tarkastellaan yksilöiden hyvinvointia, mutta tätä voidaan soveltaa paikkoihin tai laajempiin ympäristöihin.\",\"step02\":\"Hyvinvoinnilla on useita eri puolia, jotka kaikki ovat riippuvaisia toisistaan.\",\"step03\":\"Se on myös vuorovaikutuksessa fyysisen ja sosiaalisen ympäristön kanssa.\",\"step04\":\"Joissakin palveluissa tai interventioissa pyritään korjaamaan jotain vikaa ja palauttamaan nykytila.\",\"step05\":\"Interventioihin on kuitenkin muita tarkoituksia.\",\"step06\":\"Interventioprosessi käsittää useita eri vaiheita ja prosesseja.\",\"step07\":\"Lopuksi, jos innovaatioitamme halutaan ylläpitää, meidän on opittava ja parannettava.\",\"step08\":\"Kuka, mikä tai missä on interventiosi kohde?\",\"step09\":\"Mitkä hyvinvoinnin osa-alueet ovat aloitteenne painopiste?\",\"step10\":\"Mitkä aiheenne hyvinvoinnista ovat merkityksellisiä, mutta eivät aloitteesi puitteissa?\",\"step11\":\"Mitkä ovat merkitykselliset ympäristönäkökohdat?\",\"step12\":\"Mitkä toimenpiteiden yhdistelmät ennaltaehkäisystä muutokseen ovat merkityksellisiä aloitteellesi?\",\"step13\":\"Missä määrin oppiminen ja parantaminen ovat osa kehityksen hallinto- ja toimitusprosesseja?\"},\"options\":{\"innovation\":{\"development\":\"Kehitys\",\"facilitation\":\"Helpottaminen\",\"palliation\":\"Palliation\",\"prevention\":\"Ehkäisy\",\"rehabilitation\":\"Kuntoutus\",\"remedy\":\"Korjauskeino\",\"transformation\":\"Muutos\"},\"intervention\":{\"coordination_delivery\":\"Koordinointi ja toimitus\",\"governance\":\"Hallinto\",\"identification\":\"Tunnistaminen ja suunnittelu\",\"learning\":\"Oppiminen\",\"management\":\"Johto\"},\"learning\":{\"research_evidence\":\"Tutkimus ja todisteet\",\"service_improvement\":\"Palvelun parantaminen\",\"trials\":\"Kokeilut\"},\"wellbeing\":{\"faculties_skills\":\"Tiedekunnat ja taidot\",\"mental_psych\":\"Henkinen ja psykologinen\",\"physical_env\":\"Fyysinen ympäristö\",\"physiological\":\"Fysiologinen\",\"socio_cultural_env\":\"Sosiokulttuurinen ympäristö\",\"socio_economic\":\"Sosioekonominen\"}},\"title\":\"Interventioteorian malli\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Määritä eetos\",\"define_ethos_items\":\"Arvot\\n Periaatteet\\n Aikomukset\\n Politiikat\",\"deliver\":\"Toimita\",\"experience\":\"Kokea\",\"govern\":\"Hallitus\",\"individual_cases\":\"Yksittäiset tapaukset\",\"plan_manage\":\"Suunnittele ja hallinnoi\",\"plan_manage_items\":\"Säännöt\\n Resurssit\\n Prosessit\\n Tilit\",\"the_service_level\":\"Palvelutaso\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Kuinka nämä arvot määritetään?\"},\"evidenceUrl\":{\"label\":\"Mitä (ulkoisia) todisteita on saatavilla tämän tueksi?\"},\"title\":\"Määritä eetos\",\"values\":{\"label\":\"Mitkä arvot ovat tärkeitä, joihin puuttuminen puuttuu?\"}},\"deliver\":{\"actors\":{\"label\":\"Kenen toimesta se toimitetaan?\"},\"evidenceUrl\":{\"label\":\"Mitä (ulkoisia) todisteita on saatavilla tämän tueksi?\"},\"method\":{\"label\":\"Kuinka interventio toteutetaan?\"},\"title\":\"Toimita\"},\"govern\":{\"actions\":{\"label\":\"Kuinka interventiota hallitaan? Mitä toimenpiteitä toteutetaan sen varmistamiseksi, että tulokset olivat tarkoituksenmukaisia?\"},\"actors\":{\"label\":\"Kuka arvioi tätä?\"},\"evolution\":{\"label\":\"Kuinka tämä vaikuttaa palvelun kehitykseen?\"},\"improvements\":{\"label\":\"Kuinka parannukset tunnistetaan? Kuinka ne toteutetaan?\"},\"outcomes\":{\"label\":\"Sisältyvätkö tulokset kohteisiin ja mittauksiin? Ja jos on, kenen?\"},\"title\":\"Hallitus\"},\"model\":{\"title\":\"Malli\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Mitä toimia nyt tehdään pilotissa?\"},\"actors\":{\"label\":\"Mitä meneillään olevia toimia tehdään?\"},\"evidenceUrl\":{\"label\":\"Mitä (ulkoisia) todisteita on saatavilla tämän tueksi?\"},\"title\":\"Suunnittele ja hallinnoi - Nykyiset toimet\"},\"planManagePrior\":{\"actions\":{\"label\":\"Mitä toimia tehtiin ennen puuttumista?\"},\"actors\":{\"label\":\"Kuka oli mukana näissä aikaisemmissa toimissa?\"},\"evidenceUrl\":{\"label\":\"Mitä (ulkoisia) todisteita on saatavilla tämän tueksi?\"},\"title\":\"Suunnittele ja hallinnoi - Aiemmat toimet\"}},\"guide\":{\"step01\":\"Luovaan innovaatioon liittyy useita ydinprosesseja. Ensimmäinen koskee eetoksen määritelmää.\",\"step02\":\"Toinen sisältää hallintotoimia ja tuotteita.\",\"step03\":\"Moraalinen järjestys koskee sitä, kuka saa osallistua toimintaan, joten kuka on aloitteesi tapauksessa mukana näissä prosesseissa? Missä ja milloin ne tapahtuvat? Kuinka he kommunikoivat ja miten ne tallennetaan?\",\"step04\":\"Johtamisen, suunnittelun ja suunnittelun tuloksena palvelut ja aloitteet toimitetaan ja koetaan.\",\"step05\":\"Jälleen kuka on täällä mukana ja saavatko he osallistumista kahteen ensimmäiseen toimintaryhmään?\",\"step06\":\"Sen sijaan, että yksinkertaisesti sulkisimme piirin yksinkertaisella arviointiprosessilla, ehdotamme, että yhteistuotannollisen hyvinvoinnin ja hoidon järjestelmissä hallinto ottaa kaikki tässä tunnistettujen suhteiden osallistujat osallistumaan moraalisen järjestysmallissa määriteltyjen kysymysten käsittelyyn.\",\"step07\":\"Hallinnointi tapahtuu yksittäisen palvelusuhteen tasolla.\",\"step08\":\"Se tapahtuu myös koko palvelutasolla.\",\"step09\":\"Kuinka hallintoprosessit, siinä mielessä kuin kuvailemme niitä, tapahtuvat aloitteessasi?\"},\"options\":{\"sources\":{\"meeting\":\"Tapaaminen\",\"other\":\"Muu\",\"policy\":\"Käytäntö\"}},\"title\":\"Moraalinen järjestys\"},\"social_media\":{\"dashboard\":{\"title\":\"Sosiaalinen media\"},\"definitions\":{\"data\":{\"title\":\"Sosiaalinen media\"}},\"title\":\"Sosiaalinen media\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Tälle projektille ei ole teoriaa muutoskohteista.\",\"manage\":\"Hallitse muutosteoriaa\",\"title\":\"Muutoksen teoria\"},\"definitions\":{\"data\":{\"hint\":\"Ole hyvä ja lisää kaikki projektisi muutosteoriat.\",\"title\":\"Muutoksen teoria\"}},\"title\":\"Muutoksen teoria\"},\"welcome\":{\"dashboard\":{\"summary\":\"Luonut {user} {date_time}\"},\"title\":\"Tervetuloa\"}},\"hints\":{\"editor_double_click_edit\":\"Kaksoisnapsauta kohdetta muokataksesi sitä ja tallenna painamalla Enter\",\"social_facebook_add\":\"Lisää täydelliset linkit (URL-osoitteet) Facebook-ryhmiin tai -sivuihin.\",\"social_instagram_add\":\"Anna Instagram-hashtag, # -merkillä tai ilman. Paina Enter lisätäksesi.\",\"social_twitter_add\":\"Kirjoita Twitter-hashtag, # -merkillä tai ilman. Paina Enter lisätäksesi.\",\"social_youtube_add\":\"Kirjoita linkki YouTube-videoon ja lisää se painamalla Enter-näppäintä.\",\"type_and_enter\":\"Kirjoita nimi alla ja paina Enter.\"},\"languages\":{\"de\":\"Saksan kieli\",\"el\":\"Kreikka\",\"en_GB\":\"Englanti\",\"es\":\"Espanja\",\"et\":\"Virolainen\",\"fi\":\"Suomalainen\",\"fr\":\"Ranskan kieli\",\"hu\":\"Unkarin kieli\",\"it\":\"italialainen\",\"nl\":\"Hollannin kieli\",\"pl\":\"Kiillottaa\",\"sv_SE\":\"Ruotsin kieli\"},\"user_guide\":{\"back\":\"Takaisin\",\"close\":\"kiinni\",\"next\":\"Seuraava\",\"show\":\"Näytä käyttöopas\",\"skip\":\"Ohita käyttöopas\"}}");
+module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisaatio\",\"service\":\"Palvelu\",\"user\":\"Käyttäjä\"},\"app\":{\"add_new_actor\":\"Lisää uusi näyttelijä\",\"add_new_item\":\"Lisää uusi kohde\",\"all\":\"Kaikki\",\"colour\":\"Väri\",\"country\":\"Maa\",\"create\":\"Luoda\",\"created_by\":\"Luonut\",\"delete\":\"Poistaa\",\"description\":\"Kuvaus\",\"download\":\"ladata\",\"error\":\"Virhe\",\"error_message\":\"Virhe: {message}\",\"export\":\"Viedä\",\"exporting\":\"Vie\",\"exporting_project\":\"Vie projekti\",\"image\":\"Kuva\",\"image_drag_prompt\":\"Aloita vetämällä kuvasi tähän tai selaa napsauttamalla.\",\"image_is_uploading\":\"Lähetetään kuvaa\",\"image_remove\":\"Poista kuva\",\"image_upload_error\":\"Latausvirhe\",\"import\":\"Tuonti\",\"import_project\":\"Tuo projekti\",\"import_project_drag_hint\":\"Aloita vetämällä CoSMoS-projektisi tähän tai napsauttamalla selaa.\",\"import_project_notes\":\"Huomaa: Sinä olet tuotavan projektin omistaja.\",\"import_project_success\":\"Projekti on tuotu onnistuneesti!\",\"just_mine\":\"Vain minun\",\"label\":\"Tarra\",\"last_saved_at\":\"Viimeksi tallennettu {date_time}\",\"log_in\":\"Kirjaudu sisään\",\"maximum_items\":\"Enintään {count} kohdetta | Suurin {count} kohde | Enintään {count} kohdetta\",\"models\":\"Mallit\",\"more_details\":\"Lisätietoja\",\"name\":\"Nimi\",\"new_project\":\"Luo uusi projekti\",\"next\":\"Seuraava\",\"no_projects\":\"Ei löytynyt projekteja.\",\"ok\":\"OK\",\"open_project\":\"Avoin projekti\",\"please_wait_generate\":\"Odota, kun tiedostoa luodaan.\",\"processing\":\"Käsittely\",\"project\":\"Projekti\",\"project_save_success\":\"Projekti tallennettu!\",\"save\":\"Tallentaa\",\"saving\":\"Tallentaa\",\"scale_to_fit\":\"Skaalaa sopivaksi\",\"search\":\"Hae\",\"title\":\"Otsikko\",\"to_create_project\":\"luoda projekti.\",\"try_again\":\"Yritä uudelleen\",\"type\":\"Tyyppi\",\"user_is_read_only\":\"Käyttäjän käyttöoikeustasosi on vain luku -tilassa.\",\"web_address\":\"nettiosoite\",\"which_country\":\"Mistä maasta olet kotoisin?\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Makro\"},\"meso\":{\"description\":\"Tällä tasolla voi olla useita vaiheita.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Mikro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Onko muita edunsaajia kuin suorat käyttäjät / osallistujat? Jos on, keitä he ovat?\",\"title\":\"Edunsaajat\"},\"broker\":{\"hint\":\"Onko muutoksen aloittajien välillä aktiivista välittäjää? Jos on, keitä he ovat?\",\"title\":\"Välittäjä\"},\"changeMakers\":{\"hint\":\"Keitä ovat tai olivat alullepanijoita, jotka aloittivat interventiotoimintasi?\",\"title\":\"Change Makers\"},\"changeTheorists\":{\"hint\":\"Keitä ovat muutoksen teoreetikot interventioon?\",\"title\":\"Muutosten teoreetikot\"},\"frontLineServiceDeliverer\":{\"hint\":\"Kuka on etulinjan palvelun toimittaja?\",\"title\":\"Etupalvelun toimittaja\"},\"instigatorsOfChange\":{\"hint\":\"Keitä ovat tai olivat alullepanijoita, jotka aloittivat interventiotoimintasi?\",\"title\":\"Muutoksen yllyttäjät\"},\"model\":{\"title\":\"Malli\"},\"serviceDeliveryManager\":{\"hint\":\"Kuka on palvelujen toimitusjohtaja, joka on vastuussa interventiosta?\",\"title\":\"Palvelun toimitusjohtaja\"},\"serviceOrganisationManager\":{\"hint\":\"Kuka on palveluorganisaation johtaja interventiolle?\",\"title\":\"Palvelun organisaation johtaja\"},\"servicePolicyMaker\":{\"hint\":\"Keitä palvelupolitiikkojen ja palveluperiaatteiden määrittelijät ovat tai olivatko?\",\"title\":\"Service Policy Maker\"},\"subjectsOfChange\":{\"hint\":\"Ketkä ovat yksilöityjä muutoksen aiheita interventiossa?\",\"title\":\"Muutoksen aiheet\"},\"user\":{\"hint\":\"Kuka on palvelun suora käyttäjä?\",\"title\":\"Asiakas / Käyttäjä\"},\"victims\":{\"hint\":\"Onko uhreja tunnistettu? Jos on, keitä he ovat?\",\"title\":\"Uhrit\"}},\"guide\":{\"step01\":\"Tässä mallissa tarkastelemme Cosie-aloitetta roolien joukossa ja keskustelusuhteissa, joihin he osallistuvat.\",\"step02\":\"Ensin meillä on etulinjan palvelujen toimittaja ja asiakas.\",\"step03\":\"Toimittajalla on johtaja tai esimies. Tämä kahdessa keskustelussa mukana olevan henkilön malli toistetaan.\",\"step04\":\"Toimitus tapahtuu jossakin virallisessa tai epävirallisessa institutionaalisessa yhteydessä.\",\"step05\":\"Lopuksi, palvelu on olemassa joissakin laajemmissa käytäntöissä.\",\"step06\":\"Tämän on tarkoitus olla abstrakti malli. Joissakin tapauksissa voi olla tasainen organisaatio, jossa toimituksen, johtamisen ja politiikan toteuttavat kaikki pienen ryhmän jäsenet, toisissa tapauksissa ne voivat edustaa erillisiä yksilöitä ja asiayhteyksiä.\",\"step07\":\"Kuinka mikro, meso ja makro käsitteet kartoittavat aloitteesi?\",\"step08\":\"Kuinka heidän välinen kommunikointi tapahtuu?\",\"step09\":\"Kuinka koordinoituja ja johdonmukaisia ne ovat?\",\"step10\":\"Erityisesti, onko makron ja mikrojen välillä tietovirtoja ja keskusteluja, joita meso ei välitä? Mitkä ovat tämän seuraukset?\",\"step11\":\"Seuraava malli ottaa huomioon muutostoiminnan roolien ja keskustelujen suhteen.\",\"step12\":\"Muutos on käynnistettävä, sitten se suoritetaan.\",\"step13\":\"Tarkastelemamme muutokset koskevat henkilöä, paikkaa tai ympäristöä.\",\"step14\":\"Tarkastelemamme muutokset ovat usein itse monimutkaisia ja koskevat monimutkaisia tilanteita. Usein ne perustuvat johonkin teoriaan, joka on otettu käyttöön tai välitetty tilanteeseen.\",\"step15\":\"On joukko aiottuja edunsaajia.\",\"step16\":\"Mutta muutoksesta voi myös olla hyötyä tai uhreja.\",\"step17\":\"Tämä malli on suunniteltu koettimeksi alkuperäisestä palvelumallista, jotta voidaan tunnistaa ne toimijat, jotka ovat aloitteen kehittämisen eri vaiheissa omaksuneet yhden tai useamman näistä agentuurirooleista. Keitä he ovat?\"},\"title\":\"Analyyttinen malli\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Epäselvyys\",\"ambivalence\":\"Ambivalenssi\",\"committing\":\"Sitoutuminen\",\"execute\":\"Suorittaa\",\"first_order\":\"Ensimmäinen tilaus\",\"fourth_order\":\"Neljäs järjestys!\",\"languaging\":\"\\\"Kielitaito\\\"\",\"measure\":\"Mitata\",\"plan\":\"Suunnitelma\",\"risk\":\"Riski\",\"second_order\":\"Toinen tilaus\",\"sense_making\":\"Aistien tekeminen\",\"third_order\":\"Kolmas järjestys\",\"vision\":\"Näkemys\",\"zero_order\":\"Nolla tilaus\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Kuinka suunnitelma toteutetaan?\"},\"measure\":{\"label\":\"Kuinka havainnot ja mittaukset kirjataan? Jos ei, mitä on sallittava tehdä niin?\"},\"plan\":{\"label\":\"Kuinka visio toimitettiin suunnitelmaksi?\"},\"vision\":{\"label\":\"Kuinka visio ja tavoitteet asetettiin?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Mikä oli muutoksen alkuperä? Ja mikä muutos oli?\"},\"event_cause\":{\"label\":\"Mitä tapahtui tämän tapahtuman sallimiseksi?\"},\"unexpected_events\":{\"label\":\"Onko ollut tapauksia, joissa olet nähnyt odottamattomia tapahtumia?\"}},\"model\":{\"title\":\"Malli\"},\"second_order\":{\"committing\":{\"label\":\"Kuinka intervention palveluiden toimittaminen on muuttunut alkuperäisistä suunnitelmistaan?\"},\"languaging\":{\"label\":\"Mitä muutoksia on tehty siihen, miten interventio on ymmärretty?\"},\"sense_making\":{\"label\":\"Milloin tarkastelet suunnitelmia ja visiota?\"}},\"third_order\":{\"processes\":{\"label\":\"Mitkä prosessit herättävät tai mahdollistavat toisen asteen kyselyn?\"}}},\"guide\":{\"step01\":\"Aloitamme tavallisen toiminnan vakiomallilla, joka tunnemme kaikki hyvin.\",\"step02\":\"Mutta meillä kaikilla on ollut kokemusta katsoa taaksepäin ja ymmärtää, että asiat ovat muuttuneet todella perustavanlaatuisella tavalla: puhumme paradigman muutoksesta. Tämä tarkoittaa sitä, että olemme sitoutuneet luomaan uuden käsityksen maailmastamme, ja tämä tarkoittaa usein, että kielemme muuttuu.\",\"step03\":\"Näitä kahta erilaista toimintatapaa kutsutaan joskus ensimmäiseksi ja toiseksi.\",\"step04\":\"Johtamisen kannalta meillä on toisaalta riskienhallinta ja toisaalta ristiriitojen ja epäselvyyksien ratkaiseminen.\",\"step05\":\"Esittelemme nyt ajatuksen kolmannen kertaluvun toiminnoista, jotka mahdollistavat ja tukevat sopivia siirtymiä ensimmäisen ja toisen työn välillä, mikä antaa mahdollisuuden palata eetoksen ja oletusten uudelleen tarkastelemiseen ja, kun meillä on, siirtyä takaisin käytännön suunnitteluun ja toimitukseen.\",\"step06\":\"Joskus epäselvyyteen ja ristiriitaan liittyvä reaktio on emotionaalinen: taistelu tai lentäminen, joka on nollajärjestys, tai inspiraatio ja sankaruus, jota kutsumme neljänneksi järjestykseksi.\",\"step07\":\"Joten kaavion oikealla puolella on emotionaalisen työn ja vastausten kirjo, kun taas vasemmalla puolella on yhteistuotantoa, keskustelutyö.\",\"step08\":\"Tämä malli tuottaa sarjan avoimia kysymyksiä siitä, missä eri ensimmäisen ja toisen asteen työt tapahtuvat aloitteessasi, mitä emotionaalista työtä on ollut ja tarvitaan ja miten ja missä sitä tehdään ja miten ja kuka vaaditut kolmannen asteen toimet toteutettu?\"},\"title\":\"Vaihda malli\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Infrastruktuurisuhteet, resurssit ja palvelut\",\"policy_law\":\"Politiikka ja laki\",\"resources\":\"Resurssit\",\"service_definition\":\"Palvelun määrittely ja kehitysalusta\",\"service_delivery\":\"Palvelun toimitusalusta\",\"structural_relationships\":\"Rakenteelliset suhteet ja tilanteet\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Onko muita edunsaajia kuin suorat käyttäjät / osallistujat? Jos on, keitä he ovat?\",\"title\":\"Edunsaaja\"},\"delivery\":{\"hint\":\"Kuka on vastuussa pilotin toimitusmekanismeista, kanavista ja rooleista?\",\"title\":\"Toimittaja\"},\"deployment\":{\"hint\":\"Kuka ottaa käyttöön / ottaa käyttöön ja aktivoi / aktivoi nuo prosessit ja resurssit?\",\"title\":\"Asentaja\"},\"drivers\":{\"body\":{\"hint\":\"Mitkä ovat kuljettajat ja motivaatiot?\",\"label\":\"Kuljettajat ja motivaatiot\"},\"hint\":\"Mitkä olivat / ovat projektin ajurit ja motivaatiot? Oliko se lakisääteinen vaatimus, tarpeen tai vaatimuksen tunnustaminen, mahdollisuuden tarttuminen, epätasa-arvon puuttuminen?\",\"title\":\"Kuljettajat ja motivaatiot\"},\"evaluation\":{\"hint\":\"Kuka on palvelun arvioija (t) ja kuvernöörit?\",\"title\":\"Arvioija\"},\"extorg\":{\"hint\":\"Onko olemassa asiaankuuluvia toimijoita, sidosryhmiä tai virastoja, jotka ovat merkityksellisiä pilotin kannalta, mutta jotka jäävät sen vision ja eetoksen ulkopuolelle?\",\"title\":\"Ulkoiset organisaatiot\"},\"extsvc\":{\"hint\":\"Mitä uudelleenkäytettäviä tiloja, (teknisiä ja inhimillisiä) resursseja, palveluja ja tietolähteitä kehitettiin ja käytettiin näiden palvelujen määrittely- ja kehitysprosessien tukena? Mitä ulkoisia resursseja ja palveluja (esim. Viestintä ja sosiaalinen media) käytettiin / käytetään?\",\"title\":\"Ulkoiset tekniset palvelut\"},\"infsvc\":{\"hint\":\"Mitä ulkoisia palveluita, kanavia ja palveluita käytät palvelujen toimittamisessa? Mitä tietolähteitä käytät? Mitä tietoja julkaiset, kenelle ja mitä kanavia ja mediaa käyttämällä?\",\"title\":\"Infrastruktuuripalvelut\"},\"initiator\":{\"hint\":\"Keitä ovat tai olivatko aloittajat, jotka aloittivat lentotoimintasi?\",\"title\":\"Aloittaja\"},\"model\":{\"title\":\"Malli\"},\"policyDef\":{\"hint\":\"Keitä palvelupolitiikkojen ja palveluperiaatteiden määrittelijät ovat tai olivatko?\",\"title\":\"Käytännön määrittelijä\"},\"specDes\":{\"hint\":\"Kuka määrittelee / määrittelee ja suunnittelee / suunnittelee palvelujen toimitusprosessit ja resurssit?\",\"title\":\"Määrittelijä ja suunnittelija\"},\"user\":{\"hint\":\"Kuka on palvelun suora käyttäjä?\",\"title\":\"Käyttäjä\"}},\"title\":\"Palvelumallin yhteisluonti\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Tätä projektia varten ei ole yhteisön raportointikohteita.\",\"manage\":\"Hallitse yhteisön raportointia\",\"title\":\"Yhteisön raportointi\"},\"definitions\":{\"data\":{\"hint\":\"Lisää projektisi mahdolliset yhteisöraportit.\",\"title\":\"Yhteisön raportointi\"}},\"title\":\"Yhteisön raportointi\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Tätä projektia varten ei ole dokumentteja tai tiedostoja.\",\"manage\":\"Hallitse asiakirjoja ja tiedostoja\",\"title\":\"Asiakirjat ja tiedostot\"},\"definitions\":{\"data\":{\"hint\":\"Lisää kaikki projektissasi mahdollisesti olevat asiakirjat ja tiedostot.\",\"title\":\"Asiakirjat ja tiedostot\"}},\"title\":\"Asiakirjat\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Hyvinvointi\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Mitkä palvelun elinkaaren näkökohdat ovat tärkeitä innovaatioidesi ja muutoksesi kannalta?\"},\"title\":\"Innovaatiot ja muutokset\"},\"intervention\":{\"items\":{\"label\":\"Minkä tyyppisiä toimia tapahtuu?\"},\"title\":\"Interventio\"},\"learning\":{\"items\":{\"label\":\"Kuinka oppiminen tapahtuu interventiossasi?\"},\"title\":\"Oppiminen\"},\"model\":{\"title\":\"Malli\"},\"wellbeing\":{\"items\":{\"label\":\"Mitkä ihmisen hyvinvoinnin ja ympäristön näkökohdat ovat merkityksellisiä palvelullesi? Ovatko jotkut merkittävämpiä kuin toiset?\"},\"title\":\"Ihmisen hyvinvointi ja ympäristö\"}},\"guide\":{\"step01\":\"Harkitsemamme yhteisluovat aloitteet koskevat kaikki hyvinvoinnin parantamista ja vaalimista. Tässä tarkastellaan yksilöiden hyvinvointia, mutta tätä voidaan soveltaa paikkoihin tai laajempiin ympäristöihin.\",\"step02\":\"Hyvinvoinnilla on useita eri puolia, jotka kaikki ovat riippuvaisia toisistaan.\",\"step03\":\"Se on myös vuorovaikutuksessa fyysisen ja sosiaalisen ympäristön kanssa.\",\"step04\":\"Joissakin palveluissa tai interventioissa pyritään korjaamaan jotain vikaa ja palauttamaan nykytila.\",\"step05\":\"Interventioihin on kuitenkin muita tarkoituksia.\",\"step06\":\"Interventioprosessi käsittää useita eri vaiheita ja prosesseja.\",\"step07\":\"Lopuksi, jos innovaatioitamme halutaan ylläpitää, meidän on opittava ja parannettava.\",\"step08\":\"Kuka, mikä tai missä on interventiosi kohde?\",\"step09\":\"Mitkä hyvinvoinnin osa-alueet ovat aloitteenne painopiste?\",\"step10\":\"Mitkä aiheenne hyvinvoinnista ovat merkityksellisiä, mutta eivät aloitteesi puitteissa?\",\"step11\":\"Mitkä ovat merkitykselliset ympäristönäkökohdat?\",\"step12\":\"Mitkä toimenpiteiden yhdistelmät ennaltaehkäisystä muutokseen ovat merkityksellisiä aloitteellesi?\",\"step13\":\"Missä määrin oppiminen ja parantaminen ovat osa kehityksen hallinto- ja toimitusprosesseja?\"},\"options\":{\"innovation\":{\"development\":\"Kehitys\",\"facilitation\":\"Helpottaminen\",\"palliation\":\"Palliation\",\"prevention\":\"Ehkäisy\",\"rehabilitation\":\"Kuntoutus\",\"remedy\":\"Korjauskeino\",\"transformation\":\"Muutos\"},\"intervention\":{\"coordination_delivery\":\"Koordinointi ja toimitus\",\"governance\":\"Hallinto\",\"identification\":\"Tunnistaminen ja suunnittelu\",\"learning\":\"Oppiminen\",\"management\":\"Johto\"},\"learning\":{\"research_evidence\":\"Tutkimus ja todisteet\",\"service_improvement\":\"Palvelun parantaminen\",\"trials\":\"Kokeilut\"},\"wellbeing\":{\"faculties_skills\":\"Tiedekunnat ja taidot\",\"mental_psych\":\"Henkinen ja psykologinen\",\"physical_env\":\"Fyysinen ympäristö\",\"physiological\":\"Fysiologinen\",\"socio_cultural_env\":\"Sosiokulttuurinen ympäristö\",\"socio_economic\":\"Sosioekonominen\"}},\"title\":\"Interventioteorian malli\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Määritä eetos\",\"define_ethos_items\":\"Arvot\\n Periaatteet\\n Aikomukset\\n Politiikat\",\"deliver\":\"Toimita\",\"experience\":\"Kokea\",\"govern\":\"Hallitus\",\"individual_cases\":\"Yksittäiset tapaukset\",\"plan_manage\":\"Suunnittele ja hallinnoi\",\"plan_manage_items\":\"Säännöt\\n Resurssit\\n Prosessit\\n Tilit\",\"the_service_level\":\"Palvelutaso\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Kuinka nämä arvot määritetään?\"},\"evidenceUrl\":{\"label\":\"Mitä (ulkoisia) todisteita on saatavilla tämän tueksi?\"},\"title\":\"Määritä eetos\",\"values\":{\"label\":\"Mitkä arvot ovat tärkeitä, joihin puuttuminen puuttuu?\"}},\"deliver\":{\"actors\":{\"label\":\"Kenen toimesta se toimitetaan?\"},\"evidenceUrl\":{\"label\":\"Mitä (ulkoisia) todisteita on saatavilla tämän tueksi?\"},\"method\":{\"label\":\"Kuinka interventio toteutetaan?\"},\"title\":\"Toimita\"},\"govern\":{\"actions\":{\"label\":\"Kuinka interventiota hallitaan? Mitä toimenpiteitä toteutetaan sen varmistamiseksi, että tulokset olivat tarkoituksenmukaisia?\"},\"actors\":{\"label\":\"Kuka arvioi tätä?\"},\"evolution\":{\"label\":\"Kuinka tämä vaikuttaa palvelun kehitykseen?\"},\"improvements\":{\"label\":\"Kuinka parannukset tunnistetaan? Kuinka ne toteutetaan?\"},\"outcomes\":{\"label\":\"Sisältyvätkö tulokset kohteisiin ja mittauksiin? Ja jos on, kenen?\"},\"title\":\"Hallitus\"},\"model\":{\"title\":\"Malli\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Mitä toimia nyt tehdään pilotissa?\"},\"actors\":{\"label\":\"Mitä meneillään olevia toimia tehdään?\"},\"evidenceUrl\":{\"label\":\"Mitä (ulkoisia) todisteita on saatavilla tämän tueksi?\"},\"title\":\"Suunnittele ja hallinnoi - Nykyiset toimet\"},\"planManagePrior\":{\"actions\":{\"label\":\"Mitä toimia tehtiin ennen puuttumista?\"},\"actors\":{\"label\":\"Kuka oli mukana näissä aikaisemmissa toimissa?\"},\"evidenceUrl\":{\"label\":\"Mitä (ulkoisia) todisteita on saatavilla tämän tueksi?\"},\"title\":\"Suunnittele ja hallinnoi - Aiemmat toimet\"}},\"guide\":{\"step01\":\"Luovaan innovaatioon liittyy useita ydinprosesseja. Ensimmäinen koskee eetoksen määritelmää.\",\"step02\":\"Toinen sisältää hallintotoimia ja tuotteita.\",\"step03\":\"Moraalinen järjestys koskee sitä, kuka saa osallistua toimintaan, joten kuka on aloitteesi tapauksessa mukana näissä prosesseissa? Missä ja milloin ne tapahtuvat? Kuinka he kommunikoivat ja miten ne tallennetaan?\",\"step04\":\"Johtamisen, suunnittelun ja suunnittelun tuloksena palvelut ja aloitteet toimitetaan ja koetaan.\",\"step05\":\"Jälleen kuka on täällä mukana ja saavatko he osallistumista kahteen ensimmäiseen toimintaryhmään?\",\"step06\":\"Sen sijaan, että yksinkertaisesti sulkisimme piirin yksinkertaisella arviointiprosessilla, ehdotamme, että yhteistuotannollisen hyvinvoinnin ja hoidon järjestelmissä hallinto ottaa kaikki tässä tunnistettujen suhteiden osallistujat osallistumaan moraalisen järjestysmallissa määriteltyjen kysymysten käsittelyyn.\",\"step07\":\"Hallinnointi tapahtuu yksittäisen palvelusuhteen tasolla.\",\"step08\":\"Se tapahtuu myös koko palvelutasolla.\",\"step09\":\"Kuinka hallintoprosessit, siinä mielessä kuin kuvailemme niitä, tapahtuvat aloitteessasi?\"},\"options\":{\"sources\":{\"meeting\":\"Tapaaminen\",\"other\":\"Muu\",\"policy\":\"Käytäntö\"}},\"title\":\"Moraalinen järjestys\"},\"social_media\":{\"dashboard\":{\"title\":\"Sosiaalinen media\"},\"definitions\":{\"data\":{\"title\":\"Sosiaalinen media\"}},\"title\":\"Sosiaalinen media\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Tälle projektille ei ole teoriaa muutoskohteista.\",\"manage\":\"Hallitse muutosteoriaa\",\"title\":\"Muutoksen teoria\"},\"definitions\":{\"data\":{\"hint\":\"Ole hyvä ja lisää kaikki projektisi muutosteoriat.\",\"title\":\"Muutoksen teoria\"}},\"title\":\"Muutoksen teoria\"},\"user_journey_model\":{\"dashboard\":{\"one\":\"\",\"other\":\"\"},\"definitions\":{\"accessing\":{\"access_method\":{\"label\":\"Kuinka sait pääsyn palveluun?\"},\"appropriate_comment\":{\"label\":\"Luuletko, että tämä palvelun osa on sopiva?\"},\"qualification_experience\":{\"label\":\"Jos näin on, millainen kokemus oli?\"},\"qualification_process\":{\"label\":\"Oliko pätevyys- tai valintaprosessi?\"},\"title\":\"Pääsy\"},\"discovering\":{\"comments\":{\"label\":\"Muita kommentteja, huomautuksia?\"},\"discovery_medium\":{\"label\":\"Kuinka sait tietää palvelusta?\"},\"information_experience\":{\"label\":\"Mikä on mielipiteesi tietojen laadusta, täydellisyydestä ja saatavuudesta?\"},\"information_medium\":{\"label\":\"Kuinka sait palvelua koskevia tietoja?\"},\"title\":\"Löytäminen\"},\"evaluating\":{\"opinions_asked\":{\"hint\":\"Ajattele missä ja milloin tämä oli.\",\"label\":\"Onko sinulta kysytty mielipiteesi palvelukokemuksestasi?\"},\"opinions_how\":{\"label\":\"Jos kyllä, miten sinulta kysyttiin?\"},\"service_experience\":{\"label\":\"Oliko palvelu sitä mitä odotit?\"},\"surprises_comments\":{\"label\":\"Oliko kokemuksestasi yllätyksiä tai pettymyksiä?\"},\"title\":\"Arviointi\"},\"instigating\":{\"comments\":{\"label\":\"Kommentit\"},\"design_role\":{\"label\":\"Soititko mitään roolia palvelun suunnittelussa ja määrittelyssä? Jos kyllä, mitä tapauksia ja kanavia tämä tapahtui?\"},\"instigate_role\":{\"label\":\"Onko sinulla mitään roolia projektin käynnistämisessä? Jos kyllä, olitko osa jotakin seuraavista vaihtoehdoista? Voit valita niin monta kuin haluat.\"},\"title\":\"Yllyttäminen\"},\"model\":{\"title\":\"Malli\"},\"using\":{\"accessible_experience\":{\"label\":\"Oliko palvelu sinulle saatavilla?\"},\"participate_experience\":{\"label\":\"Millaista oli käyttää tai osallistua palveluun?\"},\"time_experience\":{\"label\":\"Oliko palvelutapahtumien tai yhteystietojen kesto ja taajuudet kunnossa?\"},\"title\":\"Käyttämällä\",\"where\":{\"label\":\"Missä käytit palvelua?\"}}},\"guide\":{\"step01\":\"Palvelut julkistetaan niiden käyttäjille, tämä on etsintävaihe.\",\"step02\":\"Palvelua haluavat käyttäjät tekevät jonkinlaisen pyynnön tai sovelluksen, tämä on pääsyvaihe.\",\"step03\":\"Jos edellinen vaihe onnistuu, palvelu toimitetaan ja koetaan, tämä on käyttövaihe.\",\"step04\":\"Sen jälkeen arvioidaan palvelun käytöstä saatu kokemus.\",\"step05\":\"Tähän mennessä olettaa, että palvelu on määritelty ja jo olemassa. Seuraava kysymys koskee sitä, osallistuitko ja miten osallistuit palvelun luomiseen alun perin.\",\"step06\":\"Ensin voimme täydentää palvelumme mallia luomisen vaiheilla. Kutsumme tätä suunnitteluvaiheeksi.\",\"step07\":\"Sitten voimme näyttää prosessit, joiden avulla palvelu tunnistettiin ja aloitettiin. Kutsumme tätä käynnistäväksi vaiheeksi.\"},\"options\":{\"access_methods\":{\"applied\":\"Sovellettu\",\"other\":\"Muu\",\"referred\":\"Viitattu\"},\"instigate_roles\":{\"government_department\":\"Ministeriö\",\"political_party\":\"Poliittinen puolue\",\"pressure_group\":\"Paine- / kampanjaryhmä\"},\"mediums\":{\"other\":\"Muu\",\"paper\":\"Paperijulkaisu\",\"referral\":\"Lähetys\",\"social\":\"Sosiaalinen media\",\"word_of_mouth\":\"Suusanallisesti\"},\"opinions_how\":{\"interview\":\"Haastatella\",\"survey\":\"Tutkimus\",\"workshop\":\"Työpaja\"},\"where\":{\"community\":\"Yhteisö\",\"home\":\"Koti\",\"other\":\"Muu\",\"public\":\"Julkinen\"},\"yes_no_maybe\":{\"maybe\":\"Voi olla\",\"no\":\"Ei\",\"yes\":\"Joo\"}},\"title\":\"Käyttäjän matkan malli\"},\"welcome\":{\"dashboard\":{\"summary\":\"Luonut {user} {date_time}\"},\"title\":\"Tervetuloa\"}},\"countries\":{\"de\":\"Saksa\",\"el\":\"Kreikka\",\"en_GB\":\"Yhdistynyt kuningaskunta\",\"es\":\"Espanja\",\"et\":\"Viro\",\"fi\":\"Suomi\",\"fr\":\"Ranska\",\"hu\":\"Unkari\",\"it\":\"Italia\",\"nl\":\"Alankomaat\",\"pl\":\"Puola\",\"sv_SE\":\"Ruotsi\"},\"hints\":{\"editor_double_click_edit\":\"Kaksoisnapsauta kohdetta muokataksesi sitä ja tallenna painamalla Enter\",\"social_facebook_add\":\"Lisää täydelliset linkit (URL-osoitteet) Facebook-ryhmiin tai -sivuihin.\",\"social_instagram_add\":\"Anna Instagram-hashtag, # -merkillä tai ilman. Paina Enter lisätäksesi.\",\"social_twitter_add\":\"Kirjoita Twitter-hashtag, # -merkillä tai ilman. Paina Enter lisätäksesi.\",\"social_youtube_add\":\"Kirjoita linkki YouTube-videoon ja lisää se painamalla Enter-näppäintä.\",\"type_and_enter\":\"Kirjoita nimi alla ja paina Enter.\"},\"languages\":{\"de\":\"Saksan kieli\",\"el\":\"Kreikka\",\"en_GB\":\"Englanti\",\"es\":\"Espanja\",\"et\":\"Virolainen\",\"fi\":\"Suomalainen\",\"fr\":\"Ranskan kieli\",\"hu\":\"Unkarin kieli\",\"it\":\"italialainen\",\"nl\":\"Hollannin kieli\",\"pl\":\"Kiillottaa\",\"sv_SE\":\"Ruotsin kieli\"},\"user_guide\":{\"back\":\"Takaisin\",\"close\":\"kiinni\",\"next\":\"Seuraava\",\"show\":\"Näytä käyttöopas\",\"skip\":\"Ohita käyttöopas\"}}");
 
 /***/ }),
 
@@ -5421,10 +6099,10 @@ module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisaati
 /*!*************************!*\
   !*** ./js/lang/fr.json ***!
   \*************************/
-/*! exports provided: activity_types, app, aspects, hints, languages, user_guide, default */
+/*! exports provided: activity_types, app, aspects, countries, hints, languages, user_guide, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisation\",\"service\":\"Un service\",\"user\":\"Utilisateur\"},\"app\":{\"add_new_actor\":\"Ajouter un nouvel acteur\",\"add_new_item\":\"Ajouter un nouvel élément\",\"all\":\"Tout\",\"colour\":\"Couleur\",\"create\":\"Créer\",\"created_by\":\"\",\"delete\":\"Effacer\",\"description\":\"\",\"download\":\"Télécharger\",\"error\":\"Erreur\",\"error_message\":\"Erreur: {message}\",\"export\":\"Exportation\",\"exporting\":\"Exporter\",\"exporting_project\":\"Projet d'exportation\",\"image\":\"Image\",\"image_drag_prompt\":\"Faites glisser votre image ici pour commencer ou cliquez pour parcourir.\",\"image_is_uploading\":\"Téléchargement de l'image\",\"image_remove\":\"Supprimer l'image\",\"image_upload_error\":\"Erreur de téléversement\",\"import\":\"Importer\",\"import_project\":\"Importer un projet\",\"import_project_drag_hint\":\"Faites glisser votre projet CoSMoS ici pour commencer ou cliquez pour parcourir.\",\"import_project_notes\":\"Remarque: vous serez le propriétaire du projet importé.\",\"import_project_success\":\"Le projet a été importé avec succès!\",\"just_mine\":\"Seulement le mien\",\"label\":\"Étiquette\",\"last_saved_at\":\"Dernier enregistrement à {date_time}\",\"log_in\":\"\",\"maximum_items\":\"Maximum {count} éléments | Maxumum {count} élément | {count} éléments au maximum\",\"models\":\"Des modèles\",\"name\":\"\",\"new_project\":\"Créer un nouveau projet\",\"next\":\"Suivant\",\"no_projects\":\"Aucun projet trouvé.\",\"ok\":\"D'accord\",\"open_project\":\"Projet ouvert\",\"please_wait_generate\":\"Veuillez patienter pendant la génération du fichier.\",\"processing\":\"En traitement\",\"project\":\"\",\"project_save_success\":\"Projet enregistré!\",\"save\":\"sauvegarder\",\"saving\":\"Économie\",\"scale_to_fit\":\"Échelle pour s'adapter\",\"search\":\"Chercher\",\"title\":\"\",\"to_create_project\":\"pour créer un projet.\",\"try_again\":\"Réessayer\",\"type\":\"Type\",\"user_is_read_only\":\"Votre niveau d'accès utilisateur est en lecture seule.\",\"web_address\":\"Adresse web\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Macro\"},\"meso\":{\"description\":\"Il peut y avoir plusieurs étapes à ce niveau.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Y a-t-il des bénéficiaires autres que l'utilisateur / les participants directs? Si oui, qui sont-ils?\",\"title\":\"Les bénéficiaires\"},\"broker\":{\"hint\":\"Existe-t-il un courtier actif entre les instigateurs du changement et les acteurs du changement? Si oui, qui sont-ils?\",\"title\":\"Courtier\"},\"changeMakers\":{\"hint\":\"Qui sont, ou étaient, les instigateurs qui ont initié votre activité d'intervention?\",\"title\":\"Changer les créateurs\"},\"changeTheorists\":{\"hint\":\"Qui sont les théoriciens du changement pour l'intervention?\",\"title\":\"Les théoriciens du changement\"},\"frontLineServiceDeliverer\":{\"hint\":\"Qui est le fournisseur de services de première ligne?\",\"title\":\"Prestataire de services de première ligne\"},\"instigatorsOfChange\":{\"hint\":\"Qui sont, ou étaient, les instigateurs qui ont initié votre activité d'intervention?\",\"title\":\"Instigateurs de changement\"},\"model\":{\"title\":\"Modèle\"},\"serviceDeliveryManager\":{\"hint\":\"Qui est le gestionnaire de la prestation de services responsable de l'intervention?\",\"title\":\"Gestionnaire de prestation de services\"},\"serviceOrganisationManager\":{\"hint\":\"Qui est le responsable de l'organisation de service pour l'intervention?\",\"title\":\"Responsable de l'organisation des services\"},\"servicePolicyMaker\":{\"hint\":\"Qui sont, ou ont été, les définisseurs des politiques de service et des principes selon lesquels le service fonctionne?\",\"title\":\"Créateur de politiques de service\"},\"subjectsOfChange\":{\"hint\":\"Quels sont les sujets de changement identifiés au sein de l'intervention?\",\"title\":\"Sujets de changement\"},\"user\":{\"hint\":\"Qui est l'utilisateur direct du service?\",\"title\":\"Client / Utilisateur\"},\"victims\":{\"hint\":\"Y a-t-il des victimes identifiées? Si oui, qui sont-ils?\",\"title\":\"Victimes\"}},\"guide\":{\"step01\":\"Dans ce modèle, nous considérons une initiative Cosie en termes d'un ensemble de rôles et des relations conversationnelles dans lesquelles ils s'engagent.\",\"step02\":\"Premièrement, nous avons un fournisseur de services de première ligne et un client.\",\"step03\":\"Le livreur a un gestionnaire ou un superviseur. Ce modèle d'un individu s'engageant dans deux conversations sera répété.\",\"step04\":\"La livraison a lieu dans un contexte institutionnel formel ou informel.\",\"step05\":\"Enfin, le service existe dans un cadre de stratégie plus large.\",\"step06\":\"Ceci est censé être un modèle abstrait. Dans certains cas, il peut y avoir une organisation plate où la prestation, la gestion et la politique sont entreprises par tous les membres d'une petite équipe, dans d'autres cas, ils peuvent représenter des individus et des contextes distincts.\",\"step07\":\"\",\"step08\":\"Comment se déroule la communication entre eux?\",\"step09\":\"Dans quelle mesure sont-ils coordonnés et cohérents?\",\"step10\":\"En particulier, y a-t-il des flux d'informations et des conversations entre macro et micro qui ne sont pas médiatisés par le méso? Quelles sont les conséquences de cela?\",\"step11\":\"Le modèle suivant considère l'agence de changement en termes de rôles et de conversations.\",\"step12\":\"Un changement doit être initié, puis il est exécuté.\",\"step13\":\"Les changements que nous envisageons concernent une personne, un lieu ou un environnement.\",\"step14\":\"Les changements que nous envisageons sont souvent eux-mêmes complexes et concernent des situations complexes. Souvent, ils sont basés sur une théorie qui a été introduite ou négociée dans la situation.\",\"step15\":\"Il existe un ensemble de bénéficiaires visés.\",\"step16\":\"Mais il y a aussi de possibles dis-bénéficiaires ou victimes du changement.\",\"step17\":\"Ce modèle est conçu comme une sonde sur le modèle de service initial pour identifier les acteurs spécifiques qui, à différentes étapes du développement de l'initiative, ont assumé un ou plusieurs de ces rôles d'agence de changement. Qui sont-ils?\"},\"title\":\"Modèle analytique\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Ambiguïté\",\"ambivalence\":\"Ambivalence\",\"committing\":\"S'engager\",\"execute\":\"Exécuter\",\"first_order\":\"Premier ordre\",\"fourth_order\":\"Quatrième ordre!\",\"languaging\":\"\\\"Languaging\\\"\",\"measure\":\"Mesure\",\"plan\":\"Plan\",\"risk\":\"Risque\",\"second_order\":\"Deuxième ordre\",\"sense_making\":\"Donner un sens\",\"third_order\":\"Troisième ordre\",\"vision\":\"Vision\",\"zero_order\":\"Ordre zéro\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Comment le plan est-il exécuté?\"},\"measure\":{\"label\":\"Comment les observations et les mesures sont-elles enregistrées? Sinon, que faut-il activer pour ce faire?\"},\"plan\":{\"label\":\"Comment un plan a-t-il été mis en place pour concrétiser la vision?\"},\"vision\":{\"label\":\"Comment la vision et les objectifs ont-ils été définis?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Quelle était l'origine du changement? Et quel a été le changement?\"},\"event_cause\":{\"label\":\"Que s'est-il passé pour permettre à cet événement de se produire?\"},\"unexpected_events\":{\"label\":\"Y a-t-il eu des cas où vous avez vu des événements inattendus se produire?\"}},\"model\":{\"title\":\"Modèle\"},\"second_order\":{\"committing\":{\"label\":\"\"},\"languaging\":{\"label\":\"Quels changements ont été apportés à la façon dont l'intervention a été comprise?\"},\"sense_making\":{\"label\":\"Quand révisez-vous les plans et la vision?\"}},\"third_order\":{\"processes\":{\"label\":\"\"}}},\"guide\":{\"step01\":\"Nous commençons avec le modèle standard d'action intentionnelle que nous connaissons tous très bien.\",\"step02\":\"Mais nous avons tous eu l'expérience de regarder en arrière et de réaliser que les choses ont changé d'une manière vraiment fondamentale: nous parlons de changement de paradigme. Cela implique que nous nous sommes engagés à donner un nouveau sens à notre monde et cela signifie souvent que notre langue change.\",\"step03\":\"Ces deux modes de fonctionnement différents sont parfois appelés premier et second ordre.\",\"step04\":\"En termes de gestion, nous avons la gestion des risques d'une part et la résolution des contradictions et des ambiguïtés d'autre part.\",\"step05\":\"Nous introduisons maintenant l'idée d'activités de troisième ordre qui permettent et soutiennent les transitions appropriées entre le premier et le deuxième travail, permettant un pas en arrière pour reconsidérer notre éthique et nos hypothèses et, lorsque c'est le cas, revenir au mode de planification pratique et de livraison.\",\"step06\":\"Parfois, la réaction à l'ambiguïté et à la contradiction est une réaction émotionnelle: se battre ou voler qui est d'ordre zéro, ou inspiration et héroïsme que nous appellerons le quatrième ordre.\",\"step07\":\"Ainsi, sur le côté droit de notre diagramme, nous avons le spectre du travail émotionnel et des réponses, tandis que du côté gauche, nous avons un travail conversationnel coproductif.\",\"step08\":\"Ce modèle génère une série de questions ouvertes sur l'endroit où les différents travaux de premier et de deuxième ordre ont lieu dans votre initiative, quel travail émotionnel a été et est nécessaire et comment et où il est entrepris et comment et par qui sont les interventions de troisième ordre requises. entrepris?\"},\"title\":\"Changer de modèle\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Relations infrastructurelles, recours et installations\",\"policy_law\":\"Politique et loi\",\"resources\":\"Ressources\",\"service_definition\":\"Plateforme de définition et de développement de services\",\"service_delivery\":\"Plateforme de prestation de services\",\"structural_relationships\":\"Relations structurelles et occasions\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Y a-t-il des bénéficiaires autres que l'utilisateur / les participants directs? Si oui, qui sont-ils?\",\"title\":\"Bénéficiaire\"},\"delivery\":{\"hint\":\"Qui est responsable du (des) mécanisme (s) de prestation, des canaux et des rôles dans votre projet pilote?\",\"title\":\"Livreur\"},\"deployment\":{\"hint\":\"Qui déploie / déployé et active / active ces processus et ressources?\",\"title\":\"Déployeur\"},\"drivers\":{\"body\":{\"hint\":\"Quels sont les moteurs et les motivations impliqués?\",\"label\":\"Pilotes et motivations\"},\"hint\":\"Quels étaient / sont les moteurs et les motivations du projet? S'agit-il d'une exigence légale, de la reconnaissance d'un besoin ou d'une demande, de saisir une opportunité, de remédier à une inégalité?\",\"title\":\"Pilotes et motivations\"},\"evaluation\":{\"hint\":\"Qui sont les évaluateurs et les administrateurs du service?\",\"title\":\"Évaluateur\"},\"extorg\":{\"hint\":\"Y a-t-il des acteurs, parties prenantes ou agences pertinents qui sont pertinents pour le pilote, mais qui restent en dehors de sa vision et de sa philosophie?\",\"title\":\"Organisations externes\"},\"extsvc\":{\"hint\":\"Quelles installations, ressources (techniques et humaines), services et sources d'information réutilisables ont été développés et utilisés à l'appui de ces processus de définition et de développement de services? Quelles ressources et services externes (par exemple, communications et médias sociaux) ont été / sont utilisés?\",\"title\":\"Services techniques externes\"},\"infsvc\":{\"hint\":\"Quels services, canaux et installations externes utilisez-vous dans la fourniture de vos services? Quelles sources d'information utilisez-vous? Quelles informations publiez-vous, à qui et en utilisant quels canaux et médias?\",\"title\":\"Services d'infrastructure\"},\"initiator\":{\"hint\":\"Qui sont, ou étaient, les instigateurs qui ont lancé votre activité pilote?\",\"title\":\"Initiateur\"},\"model\":{\"title\":\"Modèle\"},\"policyDef\":{\"hint\":\"Qui sont, ou ont été, les définisseurs des politiques de service et des principes selon lesquels le service fonctionne?\",\"title\":\"Définisseur de politique\"},\"specDes\":{\"hint\":\"Qui spécifie / spécifie et conçoit / conçoit les processus et les ressources de prestation de services?\",\"title\":\"Spécificateur et concepteur\"},\"user\":{\"hint\":\"Qui est l'utilisateur direct du service?\",\"title\":\"Utilisateur\"}},\"title\":\"Co-création de modèle de service\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Il n'y a aucun élément de rapport de communauté pour ce projet.\",\"manage\":\"Gérer les rapports de communauté\",\"title\":\"Reporting communautaire\"},\"definitions\":{\"data\":{\"hint\":\"Veuillez ajouter les rapports de communauté que votre projet peut avoir.\",\"title\":\"Reporting communautaire\"}},\"title\":\"Reporting communautaire\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Il n'y a aucun document ou fichier pour ce projet.\",\"manage\":\"Gérer les documents et les fichiers\",\"title\":\"Documents et fichiers\"},\"definitions\":{\"data\":{\"hint\":\"Veuillez ajouter tous les documents et fichiers que votre projet peut avoir.\",\"title\":\"Documents et fichiers\"}},\"title\":\"Des documents\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Bien-être\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Quels aspects du cycle de vie des services sont importants pour votre innovation et votre changement?\"},\"title\":\"Innovation et changement\"},\"intervention\":{\"items\":{\"label\":\"Quel type d'intervention est en cours?\"},\"title\":\"Intervention\"},\"learning\":{\"items\":{\"label\":\"Comment se déroule l'apprentissage dans votre intervention?\"},\"title\":\"Apprentissage\"},\"model\":{\"title\":\"Modèle\"},\"wellbeing\":{\"items\":{\"label\":\"Quels aspects du bien-être humain et de l'environnement sont pertinents pour votre service? Certains sont-ils plus importants que d'autres?\"},\"title\":\"Bien-être humain et environnement\"}},\"guide\":{\"step01\":\"Les initiatives cocréatives que nous envisageons visent toutes à améliorer et à entretenir le bien-être. Ici, nous considérons le bien-être des individus, mais cela pourrait s'appliquer à des lieux ou à des environnements plus larges.\",\"step02\":\"Le bien-être a un certain nombre de facettes différentes qui sont toutes interdépendantes.\",\"step03\":\"Il interagit également avec les environnements physiques et sociaux.\",\"step04\":\"Certains services ou interventions visent à réparer quelque chose qui a mal tourné et à rétablir le statu quo.\",\"step05\":\"Mais les interventions ont d’autres fins.\",\"step06\":\"Le processus d'intervention comporte un certain nombre d'étapes et de processus différents.\",\"step07\":\"Enfin, pour que nos innovations soient durables, nous devons apprendre et nous améliorer.\",\"step08\":\"Qui, quoi ou où est la cible de votre intervention?\",\"step09\":\"Quels aspects du bien-être sont au centre de votre initiative?\",\"step10\":\"Quels aspects du bien-être de votre sujet sont pertinents mais sortent du cadre de votre initiative?\",\"step11\":\"Quels sont les aspects environnementaux pertinents?\",\"step12\":\"Quelles combinaisons d'interventions, de la prévention à la transformation, sont pertinentes pour votre initiative?\",\"step13\":\"Dans quelle mesure l'apprentissage et l'amélioration sont-ils intégrés à vos processus de gouvernance et de prestation de développement?\"},\"options\":{\"innovation\":{\"development\":\"Développement\",\"facilitation\":\"Facilitation\",\"palliation\":\"Palliatif\",\"prevention\":\"La prévention\",\"rehabilitation\":\"Réhabilitation\",\"remedy\":\"Remède\",\"transformation\":\"Transformation\"},\"intervention\":{\"coordination_delivery\":\"Coordination et livraison\",\"governance\":\"Gouvernance\",\"identification\":\"Identification et planification\",\"learning\":\"Apprentissage\",\"management\":\"La gestion\"},\"learning\":{\"research_evidence\":\"Recherche et preuves\",\"service_improvement\":\"Amélioration du service\",\"trials\":\"Essais\"},\"wellbeing\":{\"faculties_skills\":\"Facultés et compétences\",\"mental_psych\":\"Mentale et psychologique\",\"physical_env\":\"Environnement physique\",\"physiological\":\"Physiologique\",\"socio_cultural_env\":\"Environnement socio-culturel\",\"socio_economic\":\"Socio-économique\"}},\"title\":\"Modèle de théorie d'intervention\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Définir Ethos\",\"define_ethos_items\":\"Valeurs\\n Des principes\\n Intentions\\n Stratégies\",\"deliver\":\"Livrer\",\"experience\":\"Expérience\",\"govern\":\"Gouverne\",\"individual_cases\":\"Cas individuels\",\"plan_manage\":\"Planifier et gérer\",\"plan_manage_items\":\"Règles\\n Ressources\\n Processus\\n Comptes\",\"the_service_level\":\"Le niveau de service\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Comment ces valeurs se définissent-elles?\"},\"evidenceUrl\":{\"label\":\"Quelles preuves (externes) sont disponibles pour étayer cela?\"},\"title\":\"Définir Ethos\",\"values\":{\"label\":\"Quelles sont les valeurs importantes que l'intervention doit aborder?\"}},\"deliver\":{\"actors\":{\"label\":\"Par qui est-il délivré?\"},\"evidenceUrl\":{\"label\":\"Quelles preuves (externes) sont disponibles pour étayer cela?\"},\"method\":{\"label\":\"Comment l'intervention est-elle délivrée?\"},\"title\":\"Livrer\"},\"govern\":{\"actions\":{\"label\":\"Comment l'intervention est-elle régie? Quelles mesures sont mises en place pour garantir que les résultats sont conformes aux attentes?\"},\"actors\":{\"label\":\"Qui évalue cela?\"},\"evolution\":{\"label\":\"Quel impact cela a-t-il sur l'évolution du service?\"},\"improvements\":{\"label\":\"Comment les améliorations sont-elles identifiées? Comment sont-ils mis en œuvre?\"},\"outcomes\":{\"label\":\"Les résultats sont-ils incorporés dans les cibles et les mesures? Et si oui, à qui?\"},\"title\":\"Gouverne\"},\"model\":{\"title\":\"Modèle\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Quelles actions sont actuellement entreprises dans le cadre du pilote?\"},\"actors\":{\"label\":\"Quelles sont les actions en cours?\"},\"evidenceUrl\":{\"label\":\"Quelles preuves (externes) sont disponibles pour étayer cela?\"},\"title\":\"Planifier et gérer - Actions en cours\"},\"planManagePrior\":{\"actions\":{\"label\":\"Quelles actions étaient entreprises avant l'intervention?\"},\"actors\":{\"label\":\"Qui était impliqué dans ces actions antérieures?\"},\"evidenceUrl\":{\"label\":\"Quelles preuves (externes) sont disponibles pour étayer cela?\"},\"title\":\"Planifier et gérer - Actions préalables\"}},\"guide\":{\"step01\":\"Il existe un certain nombre de processus de base impliqués dans une innovation co-créative. Le premier concerne la définition de l'éthos.\",\"step02\":\"Le second concerne les activités de gestion et les produits.\",\"step03\":\"L'ordre moral concerne les personnes qui participent aux activités. Dans le cas de votre initiative, qui est impliqué dans ces processus? Où et quand ont-ils lieu? Comment communiquent-ils et comment sont-ils enregistrés?\",\"step04\":\"Grâce au leadership, à la planification et à la conception, les services ou les initiatives sont fournis et expérimentés.\",\"step05\":\"Encore une fois, qui est impliqué ici et obtient-il une participation aux deux premières séries d'activités?\",\"step06\":\"Plutôt que de simplement boucler la boucle avec un simple processus d'évaluation, nous suggérons que, dans les systèmes de bien-être et de soins coproductifs, la gouvernance implique tous les acteurs des relations identifiées ici, la participation à la réponse aux questions définies dans le modèle d'ordre moral.\",\"step07\":\"La gouvernance a lieu au niveau de la relation client de service individuel.\",\"step08\":\"Il a également lieu au niveau du service global.\",\"step09\":\"Comment les processus de gouvernance, au sens où nous les décrivons ici, se déroulent-ils dans votre initiative?\"},\"options\":{\"sources\":{\"meeting\":\"Réunion\",\"other\":\"Autre\",\"policy\":\"Politique\"}},\"title\":\"Ordre moral\"},\"social_media\":{\"dashboard\":{\"title\":\"Des médias sociaux\"},\"definitions\":{\"data\":{\"title\":\"Des médias sociaux\"}},\"title\":\"Des médias sociaux\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Il n'y a pas de théorie des éléments de changement pour ce projet.\",\"manage\":\"Gérer la théorie du changement\",\"title\":\"Théorie du changement\"},\"definitions\":{\"data\":{\"hint\":\"Veuillez ajouter toutes les théories du changement que votre projet pourrait avoir.\",\"title\":\"Théorie du changement\"}},\"title\":\"Théorie du changement\"},\"welcome\":{\"dashboard\":{\"summary\":\"Créé par {user} le {date_time}\"},\"title\":\"Bienvenue\"}},\"hints\":{\"editor_double_click_edit\":\"Double-cliquez sur un élément pour le modifier et entrez pour enregistrer\",\"social_facebook_add\":\"Ajoutez des liens complets (URL) vers des groupes ou des pages Facebook.\",\"social_instagram_add\":\"Entrez un hashtag Instagram, avec ou sans le #. Appuyez sur Entrée pour ajouter.\",\"social_twitter_add\":\"Saisissez un hashtag Twitter, avec ou sans le #. Appuyez sur Entrée pour ajouter.\",\"social_youtube_add\":\"Entrez un lien vers une vidéo YouTube et appuyez sur Entrée pour l'ajouter.\",\"type_and_enter\":\"Tapez le nom ci-dessous et appuyez sur Entrée.\"},\"languages\":{\"de\":\"allemand\",\"el\":\"grec\",\"en_GB\":\"Anglais\",\"es\":\"Espagnol\",\"et\":\"Estonien\",\"fi\":\"Finlandais\",\"fr\":\"français\",\"hu\":\"Hongrois\",\"it\":\"Italien\",\"nl\":\"Néerlandais\",\"pl\":\"Polonais\",\"sv_SE\":\"Suédois\"},\"user_guide\":{\"back\":\"Retour\",\"close\":\"proche\",\"next\":\"Suivant\",\"show\":\"Afficher le guide de l'utilisateur\",\"skip\":\"Passer le guide de l'utilisateur\"}}");
+module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisation\",\"service\":\"Un service\",\"user\":\"Utilisateur\"},\"app\":{\"add_new_actor\":\"Ajouter un nouvel acteur\",\"add_new_item\":\"Ajouter un nouvel élément\",\"all\":\"Tout\",\"colour\":\"Couleur\",\"country\":\"Pays\",\"create\":\"Créer\",\"created_by\":\"Créé par\",\"delete\":\"Effacer\",\"description\":\"Description\",\"download\":\"Télécharger\",\"error\":\"Erreur\",\"error_message\":\"Erreur: {message}\",\"export\":\"Exportation\",\"exporting\":\"Exporter\",\"exporting_project\":\"Projet d'exportation\",\"image\":\"Image\",\"image_drag_prompt\":\"Faites glisser votre image ici pour commencer ou cliquez pour parcourir.\",\"image_is_uploading\":\"Téléchargement de l'image\",\"image_remove\":\"Supprimer l'image\",\"image_upload_error\":\"Erreur de téléversement\",\"import\":\"Importer\",\"import_project\":\"Importer un projet\",\"import_project_drag_hint\":\"Faites glisser votre projet CoSMoS ici pour commencer ou cliquez pour parcourir.\",\"import_project_notes\":\"Remarque: vous serez le propriétaire du projet importé.\",\"import_project_success\":\"Le projet a été importé avec succès!\",\"just_mine\":\"Seulement le mien\",\"label\":\"Étiquette\",\"last_saved_at\":\"Dernier enregistrement à {date_time}\",\"log_in\":\"Connectez-vous\",\"maximum_items\":\"Maximum {count} éléments | Maxumum {count} élément | {count} éléments au maximum\",\"models\":\"Des modèles\",\"more_details\":\"Plus de détails\",\"name\":\"Nom\",\"new_project\":\"Créer un nouveau projet\",\"next\":\"Suivant\",\"no_projects\":\"Aucun projet trouvé.\",\"ok\":\"D'accord\",\"open_project\":\"Projet ouvert\",\"please_wait_generate\":\"Veuillez patienter pendant la génération du fichier.\",\"processing\":\"En traitement\",\"project\":\"Projet\",\"project_save_success\":\"Projet enregistré!\",\"save\":\"sauvegarder\",\"saving\":\"Économie\",\"scale_to_fit\":\"Échelle pour s'adapter\",\"search\":\"Chercher\",\"title\":\"Titre\",\"to_create_project\":\"pour créer un projet.\",\"try_again\":\"Réessayer\",\"type\":\"Type\",\"user_is_read_only\":\"Votre niveau d'accès utilisateur est en lecture seule.\",\"web_address\":\"Adresse web\",\"which_country\":\"De quel pays êtes-vous?\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Macro\"},\"meso\":{\"description\":\"Il peut y avoir plusieurs étapes à ce niveau.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Y a-t-il des bénéficiaires autres que l'utilisateur / les participants directs? Si oui, qui sont-ils?\",\"title\":\"Les bénéficiaires\"},\"broker\":{\"hint\":\"Existe-t-il un courtier actif entre les instigateurs du changement et les acteurs du changement? Si oui, qui sont-ils?\",\"title\":\"Courtier\"},\"changeMakers\":{\"hint\":\"Qui sont, ou étaient, les instigateurs qui ont initié votre activité d'intervention?\",\"title\":\"Changer les créateurs\"},\"changeTheorists\":{\"hint\":\"Qui sont les théoriciens du changement pour l'intervention?\",\"title\":\"Les théoriciens du changement\"},\"frontLineServiceDeliverer\":{\"hint\":\"Qui est le fournisseur de services de première ligne?\",\"title\":\"Prestataire de services de première ligne\"},\"instigatorsOfChange\":{\"hint\":\"Qui sont, ou étaient, les instigateurs qui ont initié votre activité d'intervention?\",\"title\":\"Instigateurs de changement\"},\"model\":{\"title\":\"Modèle\"},\"serviceDeliveryManager\":{\"hint\":\"Qui est le gestionnaire de la prestation de services responsable de l'intervention?\",\"title\":\"Gestionnaire de prestation de services\"},\"serviceOrganisationManager\":{\"hint\":\"Qui est le responsable de l'organisation de service pour l'intervention?\",\"title\":\"Responsable de l'organisation des services\"},\"servicePolicyMaker\":{\"hint\":\"Qui sont, ou ont été, les définisseurs des politiques de service et des principes selon lesquels le service fonctionne?\",\"title\":\"Créateur de politiques de service\"},\"subjectsOfChange\":{\"hint\":\"Quels sont les sujets de changement identifiés au sein de l'intervention?\",\"title\":\"Sujets de changement\"},\"user\":{\"hint\":\"Qui est l'utilisateur direct du service?\",\"title\":\"Client / Utilisateur\"},\"victims\":{\"hint\":\"Y a-t-il des victimes identifiées? Si oui, qui sont-ils?\",\"title\":\"Victimes\"}},\"guide\":{\"step01\":\"Dans ce modèle, nous considérons une initiative Cosie en termes d'un ensemble de rôles et des relations conversationnelles dans lesquelles ils s'engagent.\",\"step02\":\"Premièrement, nous avons un fournisseur de services de première ligne et un client.\",\"step03\":\"Le livreur a un gestionnaire ou un superviseur. Ce modèle d'un individu s'engageant dans deux conversations sera répété.\",\"step04\":\"La livraison a lieu dans un contexte institutionnel formel ou informel.\",\"step05\":\"Enfin, le service existe dans un cadre de stratégie plus large.\",\"step06\":\"Ceci est censé être un modèle abstrait. Dans certains cas, il peut y avoir une organisation plate où la prestation, la gestion et la politique sont entreprises par tous les membres d'une petite équipe, dans d'autres cas, ils peuvent représenter des individus et des contextes distincts.\",\"step07\":\"Comment les concepts de micro, méso et macro carte sur votre initiative?\",\"step08\":\"Comment se déroule la communication entre eux?\",\"step09\":\"Dans quelle mesure sont-ils coordonnés et cohérents?\",\"step10\":\"En particulier, y a-t-il des flux d'informations et des conversations entre macro et micro qui ne sont pas médiatisés par le méso? Quelles sont les conséquences de cela?\",\"step11\":\"Le modèle suivant considère l'agence de changement en termes de rôles et de conversations.\",\"step12\":\"Un changement doit être initié, puis il est exécuté.\",\"step13\":\"Les changements que nous envisageons concernent une personne, un lieu ou un environnement.\",\"step14\":\"Les changements que nous envisageons sont souvent eux-mêmes complexes et concernent des situations complexes. Souvent, ils sont basés sur une théorie qui a été introduite ou négociée dans la situation.\",\"step15\":\"Il existe un ensemble de bénéficiaires visés.\",\"step16\":\"Mais il y a aussi de possibles dis-bénéficiaires ou victimes du changement.\",\"step17\":\"Ce modèle est conçu comme une sonde sur le modèle de service initial pour identifier les acteurs spécifiques qui, à différentes étapes du développement de l'initiative, ont assumé un ou plusieurs de ces rôles d'agence de changement. Qui sont-ils?\"},\"title\":\"Modèle analytique\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Ambiguïté\",\"ambivalence\":\"Ambivalence\",\"committing\":\"S'engager\",\"execute\":\"Exécuter\",\"first_order\":\"Premier ordre\",\"fourth_order\":\"Quatrième ordre!\",\"languaging\":\"\\\"Languaging\\\"\",\"measure\":\"Mesure\",\"plan\":\"Plan\",\"risk\":\"Risque\",\"second_order\":\"Deuxième ordre\",\"sense_making\":\"Donner un sens\",\"third_order\":\"Troisième ordre\",\"vision\":\"Vision\",\"zero_order\":\"Ordre zéro\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Comment le plan est-il exécuté?\"},\"measure\":{\"label\":\"Comment les observations et les mesures sont-elles enregistrées? Sinon, que faut-il activer pour ce faire?\"},\"plan\":{\"label\":\"Comment un plan a-t-il été mis en place pour concrétiser la vision?\"},\"vision\":{\"label\":\"Comment la vision et les objectifs ont-ils été définis?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Quelle était l'origine du changement? Et quel a été le changement?\"},\"event_cause\":{\"label\":\"Que s'est-il passé pour permettre à cet événement de se produire?\"},\"unexpected_events\":{\"label\":\"Y a-t-il eu des cas où vous avez vu des événements inattendus se produire?\"}},\"model\":{\"title\":\"Modèle\"},\"second_order\":{\"committing\":{\"label\":\"Comment la prestation des services de l’intervention a-t-elle changé par rapport à ses plans originaux?\"},\"languaging\":{\"label\":\"Quels changements ont été apportés à la façon dont l'intervention a été comprise?\"},\"sense_making\":{\"label\":\"Quand révisez-vous les plans et la vision?\"}},\"third_order\":{\"processes\":{\"label\":\"Quels processus provoquent ou permettent un questionnement de second ordre?\"}}},\"guide\":{\"step01\":\"Nous commençons avec le modèle standard d'action intentionnelle que nous connaissons tous très bien.\",\"step02\":\"Mais nous avons tous eu l'expérience de regarder en arrière et de réaliser que les choses ont changé d'une manière vraiment fondamentale: nous parlons de changement de paradigme. Cela implique que nous nous sommes engagés à donner un nouveau sens à notre monde et cela signifie souvent que notre langue change.\",\"step03\":\"Ces deux modes de fonctionnement différents sont parfois appelés premier et second ordre.\",\"step04\":\"En termes de gestion, nous avons la gestion des risques d'une part et la résolution des contradictions et des ambiguïtés d'autre part.\",\"step05\":\"Nous introduisons maintenant l'idée d'activités de troisième ordre qui permettent et soutiennent les transitions appropriées entre le premier et le deuxième travail, permettant un pas en arrière pour reconsidérer notre éthique et nos hypothèses et, lorsque c'est le cas, revenir au mode de planification pratique et de livraison.\",\"step06\":\"Parfois, la réaction à l'ambiguïté et à la contradiction est une réaction émotionnelle: se battre ou voler qui est d'ordre zéro, ou inspiration et héroïsme que nous appellerons le quatrième ordre.\",\"step07\":\"Ainsi, sur le côté droit de notre diagramme, nous avons le spectre du travail émotionnel et des réponses, tandis que du côté gauche, nous avons un travail conversationnel coproductif.\",\"step08\":\"Ce modèle génère une série de questions ouvertes sur l'endroit où les différents travaux de premier et de deuxième ordre ont lieu dans votre initiative, quel travail émotionnel a été et est nécessaire et comment et où il est entrepris et comment et par qui sont les interventions de troisième ordre requises. entrepris?\"},\"title\":\"Changer de modèle\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Relations infrastructurelles, recours et installations\",\"policy_law\":\"Politique et loi\",\"resources\":\"Ressources\",\"service_definition\":\"Plateforme de définition et de développement de services\",\"service_delivery\":\"Plateforme de prestation de services\",\"structural_relationships\":\"Relations structurelles et occasions\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Y a-t-il des bénéficiaires autres que l'utilisateur / les participants directs? Si oui, qui sont-ils?\",\"title\":\"Bénéficiaire\"},\"delivery\":{\"hint\":\"Qui est responsable du (des) mécanisme (s) de prestation, des canaux et des rôles dans votre projet pilote?\",\"title\":\"Livreur\"},\"deployment\":{\"hint\":\"Qui déploie / déployé et active / active ces processus et ressources?\",\"title\":\"Déployeur\"},\"drivers\":{\"body\":{\"hint\":\"Quels sont les moteurs et les motivations impliqués?\",\"label\":\"Pilotes et motivations\"},\"hint\":\"Quels étaient / sont les moteurs et les motivations du projet? S'agit-il d'une exigence légale, de la reconnaissance d'un besoin ou d'une demande, de saisir une opportunité, de remédier à une inégalité?\",\"title\":\"Pilotes et motivations\"},\"evaluation\":{\"hint\":\"Qui sont les évaluateurs et les administrateurs du service?\",\"title\":\"Évaluateur\"},\"extorg\":{\"hint\":\"Y a-t-il des acteurs, parties prenantes ou agences pertinents qui sont pertinents pour le pilote, mais qui restent en dehors de sa vision et de sa philosophie?\",\"title\":\"Organisations externes\"},\"extsvc\":{\"hint\":\"Quelles installations, ressources (techniques et humaines), services et sources d'information réutilisables ont été développés et utilisés à l'appui de ces processus de définition et de développement de services? Quelles ressources et services externes (par exemple, communications et médias sociaux) ont été / sont utilisés?\",\"title\":\"Services techniques externes\"},\"infsvc\":{\"hint\":\"Quels services, canaux et installations externes utilisez-vous dans la fourniture de vos services? Quelles sources d'information utilisez-vous? Quelles informations publiez-vous, à qui et en utilisant quels canaux et médias?\",\"title\":\"Services d'infrastructure\"},\"initiator\":{\"hint\":\"Qui sont, ou étaient, les instigateurs qui ont lancé votre activité pilote?\",\"title\":\"Initiateur\"},\"model\":{\"title\":\"Modèle\"},\"policyDef\":{\"hint\":\"Qui sont, ou ont été, les définisseurs des politiques de service et des principes selon lesquels le service fonctionne?\",\"title\":\"Définisseur de politique\"},\"specDes\":{\"hint\":\"Qui spécifie / spécifie et conçoit / conçoit les processus et les ressources de prestation de services?\",\"title\":\"Spécificateur et concepteur\"},\"user\":{\"hint\":\"Qui est l'utilisateur direct du service?\",\"title\":\"Utilisateur\"}},\"title\":\"Co-création de modèle de service\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Il n'y a aucun élément de rapport de communauté pour ce projet.\",\"manage\":\"Gérer les rapports de communauté\",\"title\":\"Reporting communautaire\"},\"definitions\":{\"data\":{\"hint\":\"Veuillez ajouter les rapports de communauté que votre projet peut avoir.\",\"title\":\"Reporting communautaire\"}},\"title\":\"Reporting communautaire\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Il n'y a aucun document ou fichier pour ce projet.\",\"manage\":\"Gérer les documents et les fichiers\",\"title\":\"Documents et fichiers\"},\"definitions\":{\"data\":{\"hint\":\"Veuillez ajouter tous les documents et fichiers que votre projet peut avoir.\",\"title\":\"Documents et fichiers\"}},\"title\":\"Des documents\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Bien-être\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Quels aspects du cycle de vie des services sont importants pour votre innovation et votre changement?\"},\"title\":\"Innovation et changement\"},\"intervention\":{\"items\":{\"label\":\"Quel type d'intervention est en cours?\"},\"title\":\"Intervention\"},\"learning\":{\"items\":{\"label\":\"Comment se déroule l'apprentissage dans votre intervention?\"},\"title\":\"Apprentissage\"},\"model\":{\"title\":\"Modèle\"},\"wellbeing\":{\"items\":{\"label\":\"Quels aspects du bien-être humain et de l'environnement sont pertinents pour votre service? Certains sont-ils plus importants que d'autres?\"},\"title\":\"Bien-être humain et environnement\"}},\"guide\":{\"step01\":\"Les initiatives cocréatives que nous envisageons visent toutes à améliorer et à entretenir le bien-être. Ici, nous considérons le bien-être des individus, mais cela pourrait s'appliquer à des lieux ou à des environnements plus larges.\",\"step02\":\"Le bien-être a un certain nombre de facettes différentes qui sont toutes interdépendantes.\",\"step03\":\"Il interagit également avec les environnements physiques et sociaux.\",\"step04\":\"Certains services ou interventions visent à réparer quelque chose qui a mal tourné et à rétablir le statu quo.\",\"step05\":\"Mais les interventions ont d’autres fins.\",\"step06\":\"Le processus d'intervention comporte un certain nombre d'étapes et de processus différents.\",\"step07\":\"Enfin, pour que nos innovations soient durables, nous devons apprendre et nous améliorer.\",\"step08\":\"Qui, quoi ou où est la cible de votre intervention?\",\"step09\":\"Quels aspects du bien-être sont au centre de votre initiative?\",\"step10\":\"Quels aspects du bien-être de votre sujet sont pertinents mais sortent du cadre de votre initiative?\",\"step11\":\"Quels sont les aspects environnementaux pertinents?\",\"step12\":\"Quelles combinaisons d'interventions, de la prévention à la transformation, sont pertinentes pour votre initiative?\",\"step13\":\"Dans quelle mesure l'apprentissage et l'amélioration sont-ils intégrés à vos processus de gouvernance et de prestation de développement?\"},\"options\":{\"innovation\":{\"development\":\"Développement\",\"facilitation\":\"Facilitation\",\"palliation\":\"Palliatif\",\"prevention\":\"La prévention\",\"rehabilitation\":\"Réhabilitation\",\"remedy\":\"Remède\",\"transformation\":\"Transformation\"},\"intervention\":{\"coordination_delivery\":\"Coordination et livraison\",\"governance\":\"Gouvernance\",\"identification\":\"Identification et planification\",\"learning\":\"Apprentissage\",\"management\":\"La gestion\"},\"learning\":{\"research_evidence\":\"Recherche et preuves\",\"service_improvement\":\"Amélioration du service\",\"trials\":\"Essais\"},\"wellbeing\":{\"faculties_skills\":\"Facultés et compétences\",\"mental_psych\":\"Mentale et psychologique\",\"physical_env\":\"Environnement physique\",\"physiological\":\"Physiologique\",\"socio_cultural_env\":\"Environnement socio-culturel\",\"socio_economic\":\"Socio-économique\"}},\"title\":\"Modèle de théorie d'intervention\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Définir Ethos\",\"define_ethos_items\":\"Valeurs\\n Des principes\\n Intentions\\n Stratégies\",\"deliver\":\"Livrer\",\"experience\":\"Expérience\",\"govern\":\"Gouverne\",\"individual_cases\":\"Cas individuels\",\"plan_manage\":\"Planifier et gérer\",\"plan_manage_items\":\"Règles\\n Ressources\\n Processus\\n Comptes\",\"the_service_level\":\"Le niveau de service\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Comment ces valeurs se définissent-elles?\"},\"evidenceUrl\":{\"label\":\"Quelles preuves (externes) sont disponibles pour étayer cela?\"},\"title\":\"Définir Ethos\",\"values\":{\"label\":\"Quelles sont les valeurs importantes que l'intervention doit aborder?\"}},\"deliver\":{\"actors\":{\"label\":\"Par qui est-il délivré?\"},\"evidenceUrl\":{\"label\":\"Quelles preuves (externes) sont disponibles pour étayer cela?\"},\"method\":{\"label\":\"Comment l'intervention est-elle délivrée?\"},\"title\":\"Livrer\"},\"govern\":{\"actions\":{\"label\":\"Comment l'intervention est-elle régie? Quelles mesures sont mises en place pour garantir que les résultats sont conformes aux attentes?\"},\"actors\":{\"label\":\"Qui évalue cela?\"},\"evolution\":{\"label\":\"Quel impact cela a-t-il sur l'évolution du service?\"},\"improvements\":{\"label\":\"Comment les améliorations sont-elles identifiées? Comment sont-ils mis en œuvre?\"},\"outcomes\":{\"label\":\"Les résultats sont-ils incorporés dans les cibles et les mesures? Et si oui, à qui?\"},\"title\":\"Gouverne\"},\"model\":{\"title\":\"Modèle\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Quelles actions sont actuellement entreprises dans le cadre du pilote?\"},\"actors\":{\"label\":\"Quelles sont les actions en cours?\"},\"evidenceUrl\":{\"label\":\"Quelles preuves (externes) sont disponibles pour étayer cela?\"},\"title\":\"Planifier et gérer - Actions en cours\"},\"planManagePrior\":{\"actions\":{\"label\":\"Quelles actions étaient entreprises avant l'intervention?\"},\"actors\":{\"label\":\"Qui était impliqué dans ces actions antérieures?\"},\"evidenceUrl\":{\"label\":\"Quelles preuves (externes) sont disponibles pour étayer cela?\"},\"title\":\"Planifier et gérer - Actions préalables\"}},\"guide\":{\"step01\":\"Il existe un certain nombre de processus de base impliqués dans une innovation co-créative. Le premier concerne la définition de l'éthos.\",\"step02\":\"Le second concerne les activités de gestion et les produits.\",\"step03\":\"L'ordre moral concerne les personnes qui participent aux activités. Dans le cas de votre initiative, qui est impliqué dans ces processus? Où et quand ont-ils lieu? Comment communiquent-ils et comment sont-ils enregistrés?\",\"step04\":\"Grâce au leadership, à la planification et à la conception, les services ou les initiatives sont fournis et expérimentés.\",\"step05\":\"Encore une fois, qui est impliqué ici et obtient-il une participation aux deux premières séries d'activités?\",\"step06\":\"Plutôt que de simplement boucler la boucle avec un simple processus d'évaluation, nous suggérons que, dans les systèmes de bien-être et de soins coproductifs, la gouvernance implique tous les acteurs des relations identifiées ici, la participation à la réponse aux questions définies dans le modèle d'ordre moral.\",\"step07\":\"La gouvernance a lieu au niveau de la relation client de service individuel.\",\"step08\":\"Il a également lieu au niveau du service global.\",\"step09\":\"Comment les processus de gouvernance, au sens où nous les décrivons ici, se déroulent-ils dans votre initiative?\"},\"options\":{\"sources\":{\"meeting\":\"Réunion\",\"other\":\"Autre\",\"policy\":\"Politique\"}},\"title\":\"Ordre moral\"},\"social_media\":{\"dashboard\":{\"title\":\"Des médias sociaux\"},\"definitions\":{\"data\":{\"title\":\"Des médias sociaux\"}},\"title\":\"Des médias sociaux\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Il n'y a pas de théorie des éléments de changement pour ce projet.\",\"manage\":\"Gérer la théorie du changement\",\"title\":\"Théorie du changement\"},\"definitions\":{\"data\":{\"hint\":\"Veuillez ajouter toutes les théories du changement que votre projet pourrait avoir.\",\"title\":\"Théorie du changement\"}},\"title\":\"Théorie du changement\"},\"user_journey_model\":{\"dashboard\":{\"one\":\"\",\"other\":\"\"},\"definitions\":{\"accessing\":{\"access_method\":{\"label\":\"Comment avez-vous eu accès au service?\"},\"appropriate_comment\":{\"label\":\"Pensez-vous que cet aspect du service est approprié?\"},\"qualification_experience\":{\"label\":\"Si oui, à quoi ressemble l'expérience?\"},\"qualification_process\":{\"label\":\"Y a-t-il eu un processus de qualification ou de sélection?\"},\"title\":\"Accès\"},\"discovering\":{\"comments\":{\"label\":\"D'autres commentaires, observations?\"},\"discovery_medium\":{\"label\":\"Comment avez-vous découvert le service?\"},\"information_experience\":{\"label\":\"Quelle est votre opinion sur la qualité, l'exhaustivité et l'accessibilité des informations?\"},\"information_medium\":{\"label\":\"Comment avez-vous accédé aux informations sur le service?\"},\"title\":\"Découvrir\"},\"evaluating\":{\"opinions_asked\":{\"hint\":\"Pensez à où et quand cela s'est passé.\",\"label\":\"Avez-vous été interrogé sur votre opinion sur votre expérience du service?\"},\"opinions_how\":{\"label\":\"Si oui, comment vous a-t-on demandé?\"},\"service_experience\":{\"label\":\"Le service était-il ce à quoi vous vous attendiez?\"},\"surprises_comments\":{\"label\":\"Y a-t-il eu des surprises ou des déceptions dans votre expérience?\"},\"title\":\"Évaluer\"},\"instigating\":{\"comments\":{\"label\":\"Commentaires\"},\"design_role\":{\"label\":\"Avez-vous joué un rôle dans la conception et la définition du service? Si oui, quelles ont été les occasions et les canaux où cela s'est produit?\"},\"instigate_role\":{\"label\":\"Avez-vous joué un rôle dans la mise en place du projet? Si oui, faisiez-vous partie de l'une des options suivantes? Vous pouvez en choisir autant que vous le souhaitez.\"},\"title\":\"Instiguer\"},\"model\":{\"title\":\"Modèle\"},\"using\":{\"accessible_experience\":{\"label\":\"Le service vous était-il accessible?\"},\"participate_experience\":{\"label\":\"Comment était-ce d'utiliser ou de participer au service?\"},\"time_experience\":{\"label\":\"La durée et la fréquence des événements de service ou des contacts étaient-elles correctes?\"},\"title\":\"En utilisant\",\"where\":{\"label\":\"Où avez-vous utilisé le service?\"}}},\"guide\":{\"step01\":\"Les services sont rendus publics aux utilisateurs visés, c'est la phase de découverte.\",\"step02\":\"Les utilisateurs qui veulent que le service fasse une sorte de demande ou d'application, c'est la phase d'accès.\",\"step03\":\"Si l'étape précédente est réussie, le service est livré et expérimenté, c'est la phase d'utilisation.\",\"step04\":\"L'expérience de l'utilisation du service est ensuite évaluée.\",\"step05\":\"Les questions jusqu'à présent supposent que le service a été défini et existe déjà. La prochaine série de questions consiste à savoir si et comment vous avez participé aux processus par lesquels le service a été créé en premier lieu.\",\"step06\":\"Tout d'abord, nous pouvons compléter notre modèle de prestation de services avec les étapes de création. Nous appelons cela la phase de conception.\",\"step07\":\"Ensuite, nous pouvons montrer les processus par lesquels le service a été identifié et lancé en premier lieu. Nous appelons cela la phase de lancement.\"},\"options\":{\"access_methods\":{\"applied\":\"Appliqué\",\"other\":\"Autre\",\"referred\":\"Référé\"},\"instigate_roles\":{\"government_department\":\"Ministère\",\"political_party\":\"Parti politique\",\"pressure_group\":\"Groupe de pression / campagne\"},\"mediums\":{\"other\":\"Autre\",\"paper\":\"Publication papier\",\"referral\":\"Référence\",\"social\":\"Des médias sociaux\",\"word_of_mouth\":\"Bouche à oreille\"},\"opinions_how\":{\"interview\":\"Entrevue\",\"survey\":\"Sondage\",\"workshop\":\"Atelier\"},\"where\":{\"community\":\"Communauté\",\"home\":\"Accueil\",\"other\":\"Autre\",\"public\":\"Publique\"},\"yes_no_maybe\":{\"maybe\":\"Peut être\",\"no\":\"Non\",\"yes\":\"Oui\"}},\"title\":\"Modèle de parcours utilisateur\"},\"welcome\":{\"dashboard\":{\"summary\":\"Créé par {user} le {date_time}\"},\"title\":\"Bienvenue\"}},\"countries\":{\"de\":\"Allemagne\",\"el\":\"Grèce\",\"en_GB\":\"Royaume-Uni\",\"es\":\"Espagne\",\"et\":\"Estonie\",\"fi\":\"Finlande\",\"fr\":\"France\",\"hu\":\"Hongrie\",\"it\":\"Italie\",\"nl\":\"Pays-Bas\",\"pl\":\"Pologne\",\"sv_SE\":\"Suède\"},\"hints\":{\"editor_double_click_edit\":\"Double-cliquez sur un élément pour le modifier et entrez pour enregistrer\",\"social_facebook_add\":\"Ajoutez des liens complets (URL) vers des groupes ou des pages Facebook.\",\"social_instagram_add\":\"Entrez un hashtag Instagram, avec ou sans le #. Appuyez sur Entrée pour ajouter.\",\"social_twitter_add\":\"Saisissez un hashtag Twitter, avec ou sans le #. Appuyez sur Entrée pour ajouter.\",\"social_youtube_add\":\"Entrez un lien vers une vidéo YouTube et appuyez sur Entrée pour l'ajouter.\",\"type_and_enter\":\"Tapez le nom ci-dessous et appuyez sur Entrée.\"},\"languages\":{\"de\":\"allemand\",\"el\":\"grec\",\"en_GB\":\"Anglais\",\"es\":\"Espagnol\",\"et\":\"Estonien\",\"fi\":\"Finlandais\",\"fr\":\"français\",\"hu\":\"Hongrois\",\"it\":\"Italien\",\"nl\":\"Néerlandais\",\"pl\":\"Polonais\",\"sv_SE\":\"Suédois\"},\"user_guide\":{\"back\":\"Retour\",\"close\":\"proche\",\"next\":\"Suivant\",\"show\":\"Afficher le guide de l'utilisateur\",\"skip\":\"Passer le guide de l'utilisateur\"}}");
 
 /***/ }),
 
@@ -5432,10 +6110,10 @@ module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisatio
 /*!*************************!*\
   !*** ./js/lang/hu.json ***!
   \*************************/
-/*! exports provided: activity_types, app, aspects, hints, languages, user_guide, default */
+/*! exports provided: activity_types, app, aspects, countries, hints, languages, user_guide, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Szervezet\",\"service\":\"Szolgáltatás\",\"user\":\"Felhasználó\"},\"app\":{\"add_new_actor\":\"Új szereplő hozzáadása\",\"add_new_item\":\"Új elem hozzáadása\",\"all\":\"Összes\",\"colour\":\"Szín\",\"create\":\"Teremt\",\"created_by\":\"Készítette\",\"delete\":\"Töröl\",\"description\":\"Leírás\",\"download\":\"Letöltés\",\"error\":\"Hiba\",\"error_message\":\"Hiba: {message}\",\"export\":\"Export\",\"exporting\":\"Exportálás\",\"exporting_project\":\"Projekt exportálása\",\"image\":\"Kép\",\"image_drag_prompt\":\"A kezdéshez húzza ide a képét, vagy kattintson a böngészéshez.\",\"image_is_uploading\":\"Kép feltöltése\",\"image_remove\":\"Kép eltávolítása\",\"image_upload_error\":\"Feltöltési hiba\",\"import\":\"Importálás\",\"import_project\":\"Projekt importálása\",\"import_project_drag_hint\":\"A kezdéshez húzza ide a CoSMoS projektjét, vagy kattintson a böngészéshez.\",\"import_project_notes\":\"Megjegyzés: Ön lesz az importált projekt tulajdonosa.\",\"import_project_success\":\"A projekt importálása sikeres volt!\",\"just_mine\":\"Csak az enyém\",\"label\":\"Címke\",\"last_saved_at\":\"Utoljára mentve: {date_time}\",\"log_in\":\"Belépés\",\"maximum_items\":\"Legfeljebb {count} elem | Maximális {count} elem | Legfeljebb {count} elem\",\"models\":\"Modellek\",\"name\":\"Név\",\"new_project\":\"Hozzon létre új projektet\",\"next\":\"Következő\",\"no_projects\":\"Nem található projekt.\",\"ok\":\"rendben\",\"open_project\":\"Nyitott projekt\",\"please_wait_generate\":\"Kérjük, várja meg, amíg a fájlt létrehozzák.\",\"processing\":\"Feldolgozás\",\"project\":\"Projekt\",\"project_save_success\":\"Projekt mentve!\",\"save\":\"Megment\",\"saving\":\"Megtakarítás\",\"scale_to_fit\":\"Méretre igazítás\",\"search\":\"Keresés\",\"title\":\"Cím\",\"to_create_project\":\"projekt létrehozására.\",\"try_again\":\"Próbáld újra\",\"type\":\"típus\",\"user_is_read_only\":\"A felhasználói hozzáférési szint csak olvasható.\",\"web_address\":\"webcím\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Makró\"},\"meso\":{\"description\":\"Ezen a szinten számos szakasz állhat fenn.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Vannak a közvetlen felhasználó / résztvevők kivételével kedvezményezettek? Ha igen, kik ők?\",\"title\":\"Kedvezményezettek\"},\"broker\":{\"hint\":\"Van-e aktív bróker a Változtatók és a Változtatók Készítői között? Ha igen, kik ők?\",\"title\":\"Bróker\"},\"changeMakers\":{\"hint\":\"Kik azok a kezdeményezők, akik kezdeményezték a beavatkozást?\",\"title\":\"Change Makers\"},\"changeTheorists\":{\"hint\":\"Kik a beavatkozás változáselméletei?\",\"title\":\"Változáselméletek\"},\"frontLineServiceDeliverer\":{\"hint\":\"Ki a front-line szolgáltató?\",\"title\":\"Front-line szolgáltató\"},\"instigatorsOfChange\":{\"hint\":\"Kik azok a kezdeményezők, akik kezdeményezték a beavatkozást?\",\"title\":\"A változás felbujtói\"},\"model\":{\"title\":\"Modell\"},\"serviceDeliveryManager\":{\"hint\":\"Ki a szolgáltatásnyújtás menedzser a beavatkozásért?\",\"title\":\"Szolgáltatás-kezelő\"},\"serviceOrganisationManager\":{\"hint\":\"Ki az intervenció szervizmenedzsere?\",\"title\":\"Szolgáltatásszervezési menedzser\"},\"servicePolicyMaker\":{\"hint\":\"Kik határozzák meg vagy voltak a szolgáltatási irányelvek és az elvek, amelyek alapján a szolgáltatás működik?\",\"title\":\"Service Policy Maker\"},\"subjectsOfChange\":{\"hint\":\"Kik a beavatkozáson belül a változás azonosított alanyai?\",\"title\":\"A változás alanyai\"},\"user\":{\"hint\":\"Ki a szolgáltatás közvetlen felhasználója?\",\"title\":\"Ügyfél / Felhasználó\"},\"victims\":{\"hint\":\"Van-e azonosított áldozat? Ha igen, kik ők?\",\"title\":\"Áldozatok\"}},\"guide\":{\"step01\":\"Ebben a modellben egy Cosie-kezdeményezést tekintünk a szerepkörök és a beszélgetési kapcsolatok szempontjából, amelyekben részt vesznek.\",\"step02\":\"Először van frontvonalbeli szolgáltatónk és ügyfelünk.\",\"step03\":\"A szállítónak van vezetője vagy felügyelője. Ez a két beszélgetésben résztvevő egyén megismétlődik.\",\"step04\":\"A kézbesítés valamilyen formális vagy informális intézményi környezetben történik.\",\"step05\":\"Végül a szolgáltatás valamilyen szélesebb körű politikai környezetben létezik.\",\"step06\":\"Ez egy elvont modell. Bizonyos esetekben lehet egy lapos szervezet, ahol a teljesítést, az irányítást és a politikát egy kis csapat minden tagja vállalja, más esetekben különálló egyéneket és összefüggéseket képviselhetnek.\",\"step07\":\"Hogyan viszonyulnak a mikro, a mezo és a makró fogalmai az ön kezdeményezéséhez?\",\"step08\":\"Hogyan zajlik a kommunikáció közöttük?\",\"step09\":\"Mennyire összehangoltak és koherensek?\",\"step10\":\"Különösen vannak olyan információáramlások és beszélgetések a makro és a mikro között, amelyeket nem közvetít a mezo? Milyen következményei vannak ennek?\",\"step11\":\"A következő modell a változásügynökséget veszi figyelembe a szerepek és a beszélgetések szempontjából.\",\"step12\":\"A változást ösztönözni kell, majd végrehajtani.\",\"step13\":\"Azok a változások, amelyeket mérlegelünk egy személy, egy hely vagy egy környezet szempontjából.\",\"step14\":\"Az általunk figyelembe vett változások gyakran maguk is összetettek, és összetett helyzetekről szólnak. Gyakran valamilyen elméleten alapulnak, amelyet bevezettek vagy közvetítettek a helyzetben.\",\"step15\":\"Van egy sor tervezett kedvezményezett.\",\"step16\":\"De vannak a hátrányos helyzetű kedvezményezettek vagy a változás áldozatai is.\",\"step17\":\"Ezt a modellt a kezdeti szolgáltatási modell próbájaként tervezték azon konkrét szereplők azonosítására, akik a kezdeményezés fejlesztésének különböző szakaszaiban vállalták ezeket az ügynökségi szerepek közül egyet vagy többet. Kik ők?\"},\"title\":\"Analitikai modell\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Kétértelműség\",\"ambivalence\":\"Ambivalencia\",\"committing\":\"Elköteleződés\",\"execute\":\"Végrehajt\",\"first_order\":\"Első rendelés\",\"fourth_order\":\"Negyedik rend!\",\"languaging\":\"\\\"Nyelv\\\"\",\"measure\":\"Intézkedés\",\"plan\":\"Terv\",\"risk\":\"Kockázat\",\"second_order\":\"Második rend\",\"sense_making\":\"Értelmet adni\",\"third_order\":\"Harmadik rend\",\"vision\":\"Látomás\",\"zero_order\":\"Zero Order\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Hogyan hajtják végre a tervet?\"},\"measure\":{\"label\":\"Hogyan rögzítik a megfigyeléseket és a méréseket? Ha nem, mit kell engedélyezni ehhez?\"},\"plan\":{\"label\":\"Hogyan készült egy terv a jövőkép megvalósítására?\"},\"vision\":{\"label\":\"Hogyan határozták meg a jövőképet és a célokat?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Mi okozta a változást? És mi volt a változás?\"},\"event_cause\":{\"label\":\"Mi történt, hogy ez az esemény bekövetkezhessen?\"},\"unexpected_events\":{\"label\":\"Voltak olyan esetek, amikor váratlan eseményeket látott?\"}},\"model\":{\"title\":\"Modell\"},\"second_order\":{\"committing\":{\"label\":\"Hogyan változott a beavatkozás szolgáltatásnyújtása az eredeti tervekhez képest?\"},\"languaging\":{\"label\":\"Milyen változások történtek a beavatkozás megértésében?\"},\"sense_making\":{\"label\":\"Mikor tekinti át a terveket és a jövőképet?\"}},\"third_order\":{\"processes\":{\"label\":\"Milyen folyamatok váltják ki vagy teszik lehetővé a másodrendű kérdezést?\"}}},\"guide\":{\"step01\":\"A céltudatos cselekvés szokásos modelljével indulunk, amelyet mindannyian nagyon ismerünk.\",\"step02\":\"De mindannyiunknak megvan a tapasztalata, hogy visszatekintünk és rájövünk, hogy a dolgok valóban alapvető módon változtak: a paradigmaváltásról beszélünk. Ez azt jelenti, hogy részt vettünk világunk új értelmezésében, és ez gyakran azt jelenti, hogy nyelvünk megváltozik.\",\"step03\":\"Ezt a két különböző működési módot néha elsőrendűnek és másodrendűnek nevezik.\",\"step04\":\"Menedzsment szempontból egyrészt kockázatkezeléssel, másrészt ellentmondások és kétértelműségek feloldásával rendelkezünk.\",\"step05\":\"Bemutatjuk a harmadrendű tevékenységek ötletét, amelyek lehetővé teszik és támogatják az első és a második munka közötti megfelelő átmenetet, lehetővé téve a visszalépést, hogy átgondoljuk az etosz és feltételezéseket, és amikor van rá lehetőségünk, visszatérjünk a gyakorlati tervezés és megvalósítás módjára.\",\"step06\":\"Néha a kétértelműségre és az ellentmondásra érzelmi reakció adódik: harcolj vagy légy, ami nulla rend, vagy inspiráció és hősiesség, amelyet negyedik rendnek fogunk nevezni.\",\"step07\":\"Tehát diagramunk jobb oldalán az érzelmi munka és a válaszok spektruma található, míg a bal oldalon koproduktív, beszélgetős munka.\",\"step08\":\"Ez a modell egy sor nyitott kérdést generál arról, hogy a különböző első és másodrendű munka hol zajlik az ön kezdeményezésében, milyen érzelmi munka volt és szükséges, és hogyan és hol végezzük el, és hogyan és ki végzi a szükséges harmadik rendű beavatkozásokat vállalták?\"},\"title\":\"Modell módosítása\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Infrastrukturális kapcsolatok, források és létesítmények\",\"policy_law\":\"Politika és jog\",\"resources\":\"Erőforrások\",\"service_definition\":\"Szolgáltatásdefiníció és fejlesztési platform\",\"service_delivery\":\"Szolgáltatásnyújtási platform\",\"structural_relationships\":\"Strukturális kapcsolatok és alkalmak\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Vannak a közvetlen felhasználó / résztvevők kivételével kedvezményezettek? Ha igen, kik ők?\",\"title\":\"Kedvezményezett\"},\"delivery\":{\"hint\":\"Ki felel a pilóta kézbesítési mechanizmusáért, csatornáinak és szerepeiért?\",\"title\":\"Szállító\"},\"deployment\":{\"hint\":\"Ki telepíti / telepíti és aktiválja / aktiválja ezeket a folyamatokat és erőforrásokat?\",\"title\":\"Deployer\"},\"drivers\":{\"body\":{\"hint\":\"Melyek a mozgatórugók és a motivációk?\",\"label\":\"Illesztőprogramok és motivációk\"},\"hint\":\"Mik voltak / vannak a projekt mozgatórugói és motivációi? Törvényi követelmény volt-e, szükséglet vagy igény felismerése, lehetőség megragadása, egyenlőtlenség kezelése?\",\"title\":\"Illesztőprogramok és motivációk\"},\"evaluation\":{\"hint\":\"Ki az értékelő (k) és a szolgáltatás irányítói?\",\"title\":\"Kiértékelő\"},\"extorg\":{\"hint\":\"Vannak-e olyan releváns szereplők, érdekeltek vagy ügynökségek, amelyek relevánsak a kísérlet szempontjából, de kívül esnek a jövőképén és az etoszon?\",\"title\":\"Külső szervezetek\"},\"extsvc\":{\"hint\":\"Milyen újrafelhasználható létesítményeket, (műszaki és emberi) erőforrásokat, szolgáltatásokat és információforrásokat fejlesztettek ki és használtak fel e szolgáltatások meghatározásának és fejlesztési folyamatainak támogatására? Milyen külső forrásokat és szolgáltatásokat (pl. Kommunikáció és közösségi média) használtak / használnak?\",\"title\":\"Külső műszaki szolgáltatások\"},\"infsvc\":{\"hint\":\"Milyen külső szolgáltatásokat, csatornákat és szolgáltatásokat vesz igénybe szolgáltatása (i) átadásakor? Milyen információforrásokat használ fel? Milyen információkat tesz közzé, kinek és milyen csatornákat és médiákat használ?\",\"title\":\"Infrastrukturális szolgáltatások\"},\"initiator\":{\"hint\":\"Kik azok a kezdeményezők, akik kezdeményezték a kísérleti tevékenységet?\",\"title\":\"Kezdeményező\"},\"model\":{\"title\":\"Modell\"},\"policyDef\":{\"hint\":\"Kik határozzák meg vagy voltak a szolgáltatási irányelvek és az elvek, amelyek alapján a szolgáltatás működik?\",\"title\":\"Policy Definer\"},\"specDes\":{\"hint\":\"Ki határozza meg / határozta meg és tervezi / tervezi a szolgáltatásnyújtási folyamatokat és erőforrásokat?\",\"title\":\"Meghatározó és tervező\"},\"user\":{\"hint\":\"Ki a szolgáltatás közvetlen felhasználója?\",\"title\":\"Felhasználó\"}},\"title\":\"Szolgáltatási modell együttalkotása\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Ehhez a projekthez nincsenek közösségi jelentési elemek.\",\"manage\":\"Közösségi jelentések kezelése\",\"title\":\"Közösségi jelentések\"},\"definitions\":{\"data\":{\"hint\":\"Kérjük, vegye fel a projekt összes közösségi jelentését.\",\"title\":\"Közösségi jelentések\"}},\"title\":\"Közösségi jelentések\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Nincsenek dokumentumok vagy fájlok ehhez a projekthez.\",\"manage\":\"Dokumentumok és fájlok kezelése\",\"title\":\"Dokumentumok és akták\"},\"definitions\":{\"data\":{\"hint\":\"Kérjük, adjon hozzá minden olyan dokumentumot és fájlt, amely a projektjéhez tartozik.\",\"title\":\"Dokumentumok és akták\"}},\"title\":\"Dokumentumok\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Jólét\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"A szolgáltatás életciklusának mely szempontjai fontosak az innováció és a változás szempontjából?\"},\"title\":\"Innováció és változás\"},\"intervention\":{\"items\":{\"label\":\"Milyen típusú beavatkozás történik?\"},\"title\":\"Közbelépés\"},\"learning\":{\"items\":{\"label\":\"Hogyan történik a tanulás a beavatkozásod során?\"},\"title\":\"Tanulás\"},\"model\":{\"title\":\"Modell\"},\"wellbeing\":{\"items\":{\"label\":\"Az emberi jólét és a környezet mely szempontjai relevánsak az Ön szolgálatában? Vannak jelentősebbek, mint mások?\"},\"title\":\"Az emberi jólét és a környezetvédelem\"}},\"guide\":{\"step01\":\"Az általunk fontolóra vett kreatív kezdeményezések mind a jólét javításával és ápolásával foglalkoznak. Itt az egyének jólétét vesszük figyelembe, de ez alkalmazható helyeken vagy tágabb környezetekben is.\",\"step02\":\"A jólétnek számos különféle aspektusa van, amelyek egymástól függenek.\",\"step03\":\"Interakcióba lép a fizikai és társadalmi környezettel is.\",\"step04\":\"Egyes szolgáltatások vagy beavatkozások arról szólnak, hogy javítsanak valamit, ami rosszul esett, és helyreállították a status quo-t.\",\"step05\":\"De a beavatkozásoknak más céljai is vannak.\",\"step06\":\"A beavatkozási folyamat számos különböző szakaszból és folyamatból áll.\",\"step07\":\"Végül, ha fenntartjuk innovációinkat, meg kell tanulnunk és fejlődnünk kell.\",\"step08\":\"Ki, mi vagy hol célozza meg beavatkozását?\",\"step09\":\"A jólét mely szempontjai állnak a kezdeményezés középpontjában?\",\"step10\":\"A téma jólétének milyen szempontjai relevánsak, de meghaladják a kezdeményezés kereteit?\",\"step11\":\"Melyek a releváns környezeti szempontok?\",\"step12\":\"A beavatkozások mely kombinációi, a megelőzéstől az átalakulásig, relevánsak a kezdeményezés szempontjából?\",\"step13\":\"Mennyire épül be a tanulás és a fejlődés a fejlesztési irányítási és megvalósítási folyamataiba?\"},\"options\":{\"innovation\":{\"development\":\"Fejlődés\",\"facilitation\":\"Könnyítés\",\"palliation\":\"Palliation\",\"prevention\":\"Megelőzés\",\"rehabilitation\":\"Rehabilitáció\",\"remedy\":\"Jogorvoslat\",\"transformation\":\"átalakítás\"},\"intervention\":{\"coordination_delivery\":\"Koordináció és kézbesítés\",\"governance\":\"Kormányzás\",\"identification\":\"Azonosítás és tervezés\",\"learning\":\"Tanulás\",\"management\":\"Menedzsment\"},\"learning\":{\"research_evidence\":\"Kutatás és bizonyíték\",\"service_improvement\":\"Szolgáltatás fejlesztése\",\"trials\":\"Próbák\"},\"wellbeing\":{\"faculties_skills\":\"Karok és készségek\",\"mental_psych\":\"Mentális és pszichológiai\",\"physical_env\":\"Fizikai környezetek\",\"physiological\":\"Fiziológiai\",\"socio_cultural_env\":\"Szociokulturális környezet\",\"socio_economic\":\"Társadalmi-gazdasági\"}},\"title\":\"Beavatkozáselméleti modell\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"ÉTHOSZ MEGHATÁROZÁSA\",\"define_ethos_items\":\"Értékek\\n Alapelvek\\n Szándékok\\n Tervek\",\"deliver\":\"Megvalósítás\",\"experience\":\"Tapasztalat\",\"govern\":\"Irányítás\",\"individual_cases\":\"Egyéni eset\",\"plan_manage\":\"TERV ÉS MENEDZSMENT – ELŐKÉSZÍTŐ TEVÉKENYSÉGEK\",\"plan_manage_items\":\"Szabályok\\nForrások\\nFolyamatok\\nBeszámolók\",\"the_service_level\":\"A szolgáltatás szintje\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Helyi szinten milyen célokat fogalmaztak meg és milyen értékekekt követtek?\"},\"evidenceUrl\":{\"label\":\"Ki határozta meg ezeket a célokat és értékeket?\"},\"title\":\"ÉTHOSZ MEGHATÁROZÁSA\",\"values\":{\"label\":\"Milyen célok és értékek írnák le legjobban a COSIE projekt lényegét?\"}},\"deliver\":{\"actors\":{\"label\":\"Ki vesz részt benne?\"},\"evidenceUrl\":{\"label\":\"Milyen támogató szolgáltatáselemek jelentek meg a megvalósítás során?\"},\"method\":{\"label\":\"Hogyan történik a beavatkozás?\"},\"title\":\"MEGVALÓSÍTÁS\"},\"govern\":{\"actions\":{\"label\":\"Hogyan zajlik a döntéshozatal szolgáltatásfejesztés helyi és projekt szintjén?\"},\"actors\":{\"label\":\"Ki értékeli a program megvalósítását helyi és projekt szinten?\"},\"evolution\":{\"label\":\"Hogyan befolyásolják az eredmények a szolgáltatás fejlődését?\"},\"improvements\":{\"label\":\"Hogyan azonosítják a fejlesztendő területeket? Hogyan valósítják meg?\"},\"outcomes\":{\"label\":\"Hogyan jelennek meg és hogyan mérhetőek az eredmények?\"},\"title\":\"IRÁNYÍTÁS\"},\"model\":{\"title\":\"Modell\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Hogyan foglalná össze a lényegét annak, amit a programban csinálnak?\"},\"actors\":{\"label\":\"Mi az, ami még most is működik a projektből?\"},\"evidenceUrl\":{\"label\":\"Mi bizonyítja ennek a fennmaradó elemnek a működését?\"},\"title\":\"TERV ÉS MENEDZSMENT – JELENLEGI TEVÉKENYSÉGEK\"},\"planManagePrior\":{\"actions\":{\"label\":\"Milyen tevékenységek készítették elő a programot?\"},\"actors\":{\"label\":\"Milyen szereplőket mozgósítottak az előkészítés során? \"},\"evidenceUrl\":{\"label\":\"Miért pont ezeket a tevékenységeket tartották fontosnak és miért pont ezeket a szereplőket vontták be?\"},\"title\":\"TERV ÉS MENEDZSMENT – ELŐKÉSZÍTŐ TEVÉKENYSÉGEK\"}},\"guide\":{\"step01\":\"A társ-kreatív innovációban számos alapvető folyamat vesz részt. Az első az etosz meghatározásával foglalkozik.\",\"step02\":\"A második irányítási tevékenységeket és termékeket tartalmaz.\",\"step03\":\"Az erkölcsi rendezés azzal foglalkozik, hogy ki vehet részt a tevékenységekben, tehát az ön kezdeményezése esetén ki vesz részt ezekben a folyamatokban? Hol és mikor zajlanak? Hogyan kommunikálnak és hogyan rögzítik őket?\",\"step04\":\"A vezetés, tervezés és tervezés eredményeként szolgáltatásokat vagy kezdeményezéseket nyújtunk és tapasztalunk.\",\"step05\":\"Ismét kik vesznek részt itt, és részt vesznek-e az első két tevékenységcsoportban?\",\"step06\":\"Ahelyett, hogy egyszerűen lezárnánk a kört egy egyszerű értékelési folyamattal, azt javasoljuk, hogy a koproduktív jólét és gondozás rendszereiben a kormányzás bevonja az itt meghatározott kapcsolatok összes résztvevőjét az erkölcsi rendezési modellben meghatározott kérdések megválaszolásába.\",\"step07\":\"Az irányítás az egyéni szolgáltatási ügyfélkapcsolati szinten zajlik.\",\"step08\":\"Ez a szolgáltatás teljes szintjén is zajlik.\",\"step09\":\"Hogyan zajlanak az ön kezdeményezésében a kormányzási folyamatok abban az értelemben, ahogyan itt leírjuk őket?\"},\"options\":{\"sources\":{\"meeting\":\"Találkozó\",\"other\":\"Más\",\"policy\":\"Közpolitika\"}},\"title\":\"MORÁLIS RENDSZER\"},\"social_media\":{\"dashboard\":{\"title\":\"Közösségi média\"},\"definitions\":{\"data\":{\"title\":\"Közösségi média\"}},\"title\":\"Közösségi média\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Ehhez a projekthez nincs elmélet a változás tételeiről.\",\"manage\":\"Kezelje a változás elméletét\",\"title\":\"A változás elmélete\"},\"definitions\":{\"data\":{\"hint\":\"Kérjük, adjon hozzá bármilyen elméletet a projekt változásairól.\",\"title\":\"A változás elmélete\"}},\"title\":\"A változás elmélete\"},\"welcome\":{\"dashboard\":{\"summary\":\"Készítette: {user} napon: {date_time}\"},\"title\":\"Üdvözöljük\"}},\"hints\":{\"editor_double_click_edit\":\"Kattintson duplán egy elemre a szerkesztéshez, majd az Enter gombra a mentéshez\",\"social_facebook_add\":\"Adjon hozzá teljes linkeket (URL-eket) a Facebook-csoportokhoz vagy oldalakhoz.\",\"social_instagram_add\":\"Írjon be egy Instagram hashtaget a # -nel vagy anélkül A hozzáadáshoz nyomja meg az Enter billentyűt.\",\"social_twitter_add\":\"Írjon be egy Twitter-hashtaget a # -nel vagy anélkül. A hozzáadáshoz nyomja meg az Enter billentyűt.\",\"social_youtube_add\":\"Írjon be egy linket egy YouTube-videóhoz, és nyomja meg az Enter billentyűt a hozzáadáshoz.\",\"type_and_enter\":\"Írja be az alábbi nevet, és nyomja meg az Enter billentyűt.\"},\"languages\":{\"de\":\"német\",\"el\":\"görög\",\"en_GB\":\"angol\",\"es\":\"spanyol\",\"et\":\"észt\",\"fi\":\"finn\",\"fr\":\"Francia\",\"hu\":\"Magyar\",\"it\":\"olasz\",\"nl\":\"holland\",\"pl\":\"fényesít\",\"sv_SE\":\"svéd\"},\"user_guide\":{\"back\":\"Vissza\",\"close\":\"Bezárás\",\"next\":\"Következő\",\"show\":\"Felhasználói útmutató megjelenítése\",\"skip\":\"A felhasználói útmutató kihagyása\"}}");
+module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Szervezet\",\"service\":\"Szolgáltatás\",\"user\":\"Felhasználó\"},\"app\":{\"add_new_actor\":\"Új szereplő hozzáadása\",\"add_new_item\":\"Új elem hozzáadása\",\"all\":\"Összes\",\"colour\":\"Szín\",\"country\":\"Ország\",\"create\":\"Teremt\",\"created_by\":\"Készítette\",\"delete\":\"Töröl\",\"description\":\"Leírás\",\"download\":\"Letöltés\",\"error\":\"Hiba\",\"error_message\":\"Hiba: {message}\",\"export\":\"Export\",\"exporting\":\"Exportálás\",\"exporting_project\":\"Projekt exportálása\",\"image\":\"Kép\",\"image_drag_prompt\":\"A kezdéshez húzza ide a képét, vagy kattintson a böngészéshez.\",\"image_is_uploading\":\"Kép feltöltése\",\"image_remove\":\"Kép eltávolítása\",\"image_upload_error\":\"Feltöltési hiba\",\"import\":\"Importálás\",\"import_project\":\"Projekt importálása\",\"import_project_drag_hint\":\"A kezdéshez húzza ide a CoSMoS projektjét, vagy kattintson a böngészéshez.\",\"import_project_notes\":\"Megjegyzés: Ön lesz az importált projekt tulajdonosa.\",\"import_project_success\":\"A projekt importálása sikeres volt!\",\"just_mine\":\"Csak az enyém\",\"label\":\"Címke\",\"last_saved_at\":\"Utoljára mentve: {date_time}\",\"log_in\":\"Belépés\",\"maximum_items\":\"Legfeljebb {count} elem | Maximális {count} elem | Legfeljebb {count} elem\",\"models\":\"Modellek\",\"more_details\":\"További részletek\",\"name\":\"Név\",\"new_project\":\"Hozzon létre új projektet\",\"next\":\"Következő\",\"no_projects\":\"Nem található projekt.\",\"ok\":\"rendben\",\"open_project\":\"Nyitott projekt\",\"please_wait_generate\":\"Kérjük, várja meg, amíg a fájlt létrehozzák.\",\"processing\":\"Feldolgozás\",\"project\":\"Projekt\",\"project_save_success\":\"Projekt mentve!\",\"save\":\"Megment\",\"saving\":\"Megtakarítás\",\"scale_to_fit\":\"Méretre igazítás\",\"search\":\"Keresés\",\"title\":\"Cím\",\"to_create_project\":\"projekt létrehozására.\",\"try_again\":\"Próbáld újra\",\"type\":\"típus\",\"user_is_read_only\":\"A felhasználói hozzáférési szint csak olvasható.\",\"web_address\":\"webcím\",\"which_country\":\"Melyik országból jöttél?\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Makró\"},\"meso\":{\"description\":\"Ezen a szinten számos szakasz állhat fenn.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Vannak a közvetlen felhasználó / résztvevők kivételével kedvezményezettek? Ha igen, kik ők?\",\"title\":\"Kedvezményezettek\"},\"broker\":{\"hint\":\"Van-e aktív bróker a Változtatók és a Változtatók Készítői között? Ha igen, kik ők?\",\"title\":\"Bróker\"},\"changeMakers\":{\"hint\":\"Kik azok a kezdeményezők, akik kezdeményezték a beavatkozást?\",\"title\":\"Change Makers\"},\"changeTheorists\":{\"hint\":\"Kik a beavatkozás változáselméletei?\",\"title\":\"Változáselméletek\"},\"frontLineServiceDeliverer\":{\"hint\":\"Ki a front-line szolgáltató?\",\"title\":\"Front-line szolgáltató\"},\"instigatorsOfChange\":{\"hint\":\"Kik azok a kezdeményezők, akik kezdeményezték a beavatkozást?\",\"title\":\"A változás felbujtói\"},\"model\":{\"title\":\"Modell\"},\"serviceDeliveryManager\":{\"hint\":\"Ki a szolgáltatásnyújtás menedzser a beavatkozásért?\",\"title\":\"Szolgáltatás-kezelő\"},\"serviceOrganisationManager\":{\"hint\":\"Ki az intervenció szervizmenedzsere?\",\"title\":\"Szolgáltatásszervezési menedzser\"},\"servicePolicyMaker\":{\"hint\":\"Kik határozzák meg vagy voltak a szolgáltatási irányelvek és az elvek, amelyek alapján a szolgáltatás működik?\",\"title\":\"Service Policy Maker\"},\"subjectsOfChange\":{\"hint\":\"Kik a beavatkozáson belül a változás azonosított alanyai?\",\"title\":\"A változás alanyai\"},\"user\":{\"hint\":\"Ki a szolgáltatás közvetlen felhasználója?\",\"title\":\"Ügyfél / Felhasználó\"},\"victims\":{\"hint\":\"Van-e azonosított áldozat? Ha igen, kik ők?\",\"title\":\"Áldozatok\"}},\"guide\":{\"step01\":\"Ebben a modellben egy Cosie-kezdeményezést tekintünk a szerepkörök és a beszélgetési kapcsolatok szempontjából, amelyekben részt vesznek.\",\"step02\":\"Először van frontvonalbeli szolgáltatónk és ügyfelünk.\",\"step03\":\"A szállítónak van vezetője vagy felügyelője. Ez a két beszélgetésben résztvevő egyén megismétlődik.\",\"step04\":\"A kézbesítés valamilyen formális vagy informális intézményi környezetben történik.\",\"step05\":\"Végül a szolgáltatás valamilyen szélesebb körű politikai környezetben létezik.\",\"step06\":\"Ez egy elvont modell. Bizonyos esetekben lehet egy lapos szervezet, ahol a teljesítést, az irányítást és a politikát egy kis csapat minden tagja vállalja, más esetekben különálló egyéneket és összefüggéseket képviselhetnek.\",\"step07\":\"Hogyan viszonyulnak a mikro, a mezo és a makró fogalmai az ön kezdeményezéséhez?\",\"step08\":\"Hogyan zajlik a kommunikáció közöttük?\",\"step09\":\"Mennyire összehangoltak és koherensek?\",\"step10\":\"Különösen vannak olyan információáramlások és beszélgetések a makro és a mikro között, amelyeket nem közvetít a mezo? Milyen következményei vannak ennek?\",\"step11\":\"A következő modell a változásügynökséget veszi figyelembe a szerepek és a beszélgetések szempontjából.\",\"step12\":\"A változást ösztönözni kell, majd végrehajtani.\",\"step13\":\"Azok a változások, amelyeket mérlegelünk egy személy, egy hely vagy egy környezet szempontjából.\",\"step14\":\"Az általunk figyelembe vett változások gyakran maguk is összetettek, és összetett helyzetekről szólnak. Gyakran valamilyen elméleten alapulnak, amelyet bevezettek vagy közvetítettek a helyzetben.\",\"step15\":\"Van egy sor tervezett kedvezményezett.\",\"step16\":\"De vannak a hátrányos helyzetű kedvezményezettek vagy a változás áldozatai is.\",\"step17\":\"Ezt a modellt a kezdeti szolgáltatási modell próbájaként tervezték azon konkrét szereplők azonosítására, akik a kezdeményezés fejlesztésének különböző szakaszaiban vállalták ezeket az ügynökségi szerepek közül egyet vagy többet. Kik ők?\"},\"title\":\"Analitikai modell\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Kétértelműség\",\"ambivalence\":\"Ambivalencia\",\"committing\":\"Elköteleződés\",\"execute\":\"Végrehajt\",\"first_order\":\"Első rendelés\",\"fourth_order\":\"Negyedik rend!\",\"languaging\":\"\\\"Nyelv\\\"\",\"measure\":\"Intézkedés\",\"plan\":\"Terv\",\"risk\":\"Kockázat\",\"second_order\":\"Második rend\",\"sense_making\":\"Értelmet adni\",\"third_order\":\"Harmadik rend\",\"vision\":\"Látomás\",\"zero_order\":\"Zero Order\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Hogyan hajtják végre a tervet?\"},\"measure\":{\"label\":\"Hogyan rögzítik a megfigyeléseket és a méréseket? Ha nem, mit kell engedélyezni ehhez?\"},\"plan\":{\"label\":\"Hogyan készült egy terv a jövőkép megvalósítására?\"},\"vision\":{\"label\":\"Hogyan határozták meg a jövőképet és a célokat?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Mi okozta a változást? És mi volt a változás?\"},\"event_cause\":{\"label\":\"Mi történt, hogy ez az esemény bekövetkezhessen?\"},\"unexpected_events\":{\"label\":\"Voltak olyan esetek, amikor váratlan eseményeket látott?\"}},\"model\":{\"title\":\"Modell\"},\"second_order\":{\"committing\":{\"label\":\"Hogyan változott a beavatkozás szolgáltatásnyújtása az eredeti tervekhez képest?\"},\"languaging\":{\"label\":\"Milyen változások történtek a beavatkozás megértésében?\"},\"sense_making\":{\"label\":\"Mikor tekinti át a terveket és a jövőképet?\"}},\"third_order\":{\"processes\":{\"label\":\"Milyen folyamatok váltják ki vagy teszik lehetővé a másodrendű kérdezést?\"}}},\"guide\":{\"step01\":\"A céltudatos cselekvés szokásos modelljével indulunk, amelyet mindannyian nagyon ismerünk.\",\"step02\":\"De mindannyiunknak megvan a tapasztalata, hogy visszatekintünk és rájövünk, hogy a dolgok valóban alapvető módon változtak: a paradigmaváltásról beszélünk. Ez azt jelenti, hogy részt vettünk világunk új értelmezésében, és ez gyakran azt jelenti, hogy nyelvünk megváltozik.\",\"step03\":\"Ezt a két különböző működési módot néha elsőrendűnek és másodrendűnek nevezik.\",\"step04\":\"Menedzsment szempontból egyrészt kockázatkezeléssel, másrészt ellentmondások és kétértelműségek feloldásával rendelkezünk.\",\"step05\":\"Bemutatjuk a harmadrendű tevékenységek ötletét, amelyek lehetővé teszik és támogatják az első és a második munka közötti megfelelő átmenetet, lehetővé téve a visszalépést, hogy átgondoljuk az etosz és feltételezéseket, és amikor van rá lehetőségünk, visszatérjünk a gyakorlati tervezés és megvalósítás módjára.\",\"step06\":\"Néha a kétértelműségre és az ellentmondásra érzelmi reakció adódik: harcolj vagy légy, ami nulla rend, vagy inspiráció és hősiesség, amelyet negyedik rendnek fogunk nevezni.\",\"step07\":\"Tehát diagramunk jobb oldalán az érzelmi munka és a válaszok spektruma található, míg a bal oldalon koproduktív, beszélgetős munka.\",\"step08\":\"Ez a modell egy sor nyitott kérdést generál arról, hogy a különböző első és másodrendű munka hol zajlik az ön kezdeményezésében, milyen érzelmi munka volt és szükséges, és hogyan és hol végezzük el, és hogyan és ki végzi a szükséges harmadik rendű beavatkozásokat vállalták?\"},\"title\":\"Modell módosítása\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Infrastrukturális kapcsolatok, források és létesítmények\",\"policy_law\":\"Politika és jog\",\"resources\":\"Erőforrások\",\"service_definition\":\"Szolgáltatásdefiníció és fejlesztési platform\",\"service_delivery\":\"Szolgáltatásnyújtási platform\",\"structural_relationships\":\"Strukturális kapcsolatok és alkalmak\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Vannak a közvetlen felhasználó / résztvevők kivételével kedvezményezettek? Ha igen, kik ők?\",\"title\":\"Kedvezményezett\"},\"delivery\":{\"hint\":\"Ki felel a pilóta kézbesítési mechanizmusáért, csatornáinak és szerepeiért?\",\"title\":\"Szállító\"},\"deployment\":{\"hint\":\"Ki telepíti / telepíti és aktiválja / aktiválja ezeket a folyamatokat és erőforrásokat?\",\"title\":\"Deployer\"},\"drivers\":{\"body\":{\"hint\":\"Melyek a mozgatórugók és a motivációk?\",\"label\":\"Illesztőprogramok és motivációk\"},\"hint\":\"Mik voltak / vannak a projekt mozgatórugói és motivációi? Törvényi követelmény volt-e, szükséglet vagy igény felismerése, lehetőség megragadása, egyenlőtlenség kezelése?\",\"title\":\"Illesztőprogramok és motivációk\"},\"evaluation\":{\"hint\":\"Ki az értékelő (k) és a szolgáltatás irányítói?\",\"title\":\"Kiértékelő\"},\"extorg\":{\"hint\":\"Vannak-e olyan releváns szereplők, érdekeltek vagy ügynökségek, amelyek relevánsak a kísérlet szempontjából, de kívül esnek a jövőképén és az etoszon?\",\"title\":\"Külső szervezetek\"},\"extsvc\":{\"hint\":\"Milyen újrafelhasználható létesítményeket, (műszaki és emberi) erőforrásokat, szolgáltatásokat és információforrásokat fejlesztettek ki és használtak fel e szolgáltatások meghatározásának és fejlesztési folyamatainak támogatására? Milyen külső forrásokat és szolgáltatásokat (pl. Kommunikáció és közösségi média) használtak / használnak?\",\"title\":\"Külső műszaki szolgáltatások\"},\"infsvc\":{\"hint\":\"Milyen külső szolgáltatásokat, csatornákat és szolgáltatásokat vesz igénybe szolgáltatása (i) átadásakor? Milyen információforrásokat használ fel? Milyen információkat tesz közzé, kinek és milyen csatornákat és médiákat használ?\",\"title\":\"Infrastrukturális szolgáltatások\"},\"initiator\":{\"hint\":\"Kik azok a kezdeményezők, akik kezdeményezték a kísérleti tevékenységet?\",\"title\":\"Kezdeményező\"},\"model\":{\"title\":\"Modell\"},\"policyDef\":{\"hint\":\"Kik határozzák meg vagy voltak a szolgáltatási irányelvek és az elvek, amelyek alapján a szolgáltatás működik?\",\"title\":\"Policy Definer\"},\"specDes\":{\"hint\":\"Ki határozza meg / határozta meg és tervezi / tervezi a szolgáltatásnyújtási folyamatokat és erőforrásokat?\",\"title\":\"Meghatározó és tervező\"},\"user\":{\"hint\":\"Ki a szolgáltatás közvetlen felhasználója?\",\"title\":\"Felhasználó\"}},\"title\":\"Szolgáltatási modell együttalkotása\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Ehhez a projekthez nincsenek közösségi jelentési elemek.\",\"manage\":\"Közösségi jelentések kezelése\",\"title\":\"Közösségi jelentések\"},\"definitions\":{\"data\":{\"hint\":\"Kérjük, vegye fel a projekt összes közösségi jelentését.\",\"title\":\"Közösségi jelentések\"}},\"title\":\"Közösségi jelentések\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Nincsenek dokumentumok vagy fájlok ehhez a projekthez.\",\"manage\":\"Dokumentumok és fájlok kezelése\",\"title\":\"Dokumentumok és akták\"},\"definitions\":{\"data\":{\"hint\":\"Kérjük, adjon hozzá minden olyan dokumentumot és fájlt, amely a projektjéhez tartozik.\",\"title\":\"Dokumentumok és akták\"}},\"title\":\"Dokumentumok\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Jólét\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"A szolgáltatás életciklusának mely szempontjai fontosak az innováció és a változás szempontjából?\"},\"title\":\"Innováció és változás\"},\"intervention\":{\"items\":{\"label\":\"Milyen típusú beavatkozás történik?\"},\"title\":\"Közbelépés\"},\"learning\":{\"items\":{\"label\":\"Hogyan történik a tanulás a beavatkozásod során?\"},\"title\":\"Tanulás\"},\"model\":{\"title\":\"Modell\"},\"wellbeing\":{\"items\":{\"label\":\"Az emberi jólét és a környezet mely szempontjai relevánsak az Ön szolgálatában? Vannak jelentősebbek, mint mások?\"},\"title\":\"Az emberi jólét és a környezetvédelem\"}},\"guide\":{\"step01\":\"Az általunk fontolóra vett kreatív kezdeményezések mind a jólét javításával és ápolásával foglalkoznak. Itt az egyének jólétét vesszük figyelembe, de ez alkalmazható helyeken vagy tágabb környezetekben is.\",\"step02\":\"A jólétnek számos különféle aspektusa van, amelyek egymástól függenek.\",\"step03\":\"Interakcióba lép a fizikai és társadalmi környezettel is.\",\"step04\":\"Egyes szolgáltatások vagy beavatkozások arról szólnak, hogy javítsanak valamit, ami rosszul esett, és helyreállították a status quo-t.\",\"step05\":\"De a beavatkozásoknak más céljai is vannak.\",\"step06\":\"A beavatkozási folyamat számos különböző szakaszból és folyamatból áll.\",\"step07\":\"Végül, ha fenntartjuk innovációinkat, meg kell tanulnunk és fejlődnünk kell.\",\"step08\":\"Ki, mi vagy hol célozza meg beavatkozását?\",\"step09\":\"A jólét mely szempontjai állnak a kezdeményezés középpontjában?\",\"step10\":\"A téma jólétének milyen szempontjai relevánsak, de meghaladják a kezdeményezés kereteit?\",\"step11\":\"Melyek a releváns környezeti szempontok?\",\"step12\":\"A beavatkozások mely kombinációi, a megelőzéstől az átalakulásig, relevánsak a kezdeményezés szempontjából?\",\"step13\":\"Mennyire épül be a tanulás és a fejlődés a fejlesztési irányítási és megvalósítási folyamataiba?\"},\"options\":{\"innovation\":{\"development\":\"Fejlődés\",\"facilitation\":\"Könnyítés\",\"palliation\":\"Palliation\",\"prevention\":\"Megelőzés\",\"rehabilitation\":\"Rehabilitáció\",\"remedy\":\"Jogorvoslat\",\"transformation\":\"átalakítás\"},\"intervention\":{\"coordination_delivery\":\"Koordináció és kézbesítés\",\"governance\":\"Kormányzás\",\"identification\":\"Azonosítás és tervezés\",\"learning\":\"Tanulás\",\"management\":\"Menedzsment\"},\"learning\":{\"research_evidence\":\"Kutatás és bizonyíték\",\"service_improvement\":\"Szolgáltatás fejlesztése\",\"trials\":\"Próbák\"},\"wellbeing\":{\"faculties_skills\":\"Karok és készségek\",\"mental_psych\":\"Mentális és pszichológiai\",\"physical_env\":\"Fizikai környezetek\",\"physiological\":\"Fiziológiai\",\"socio_cultural_env\":\"Szociokulturális környezet\",\"socio_economic\":\"Társadalmi-gazdasági\"}},\"title\":\"Beavatkozáselméleti modell\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"ÉTHOSZ MEGHATÁROZÁSA\",\"define_ethos_items\":\"Értékek\\n Alapelvek\\n Szándékok\\n Tervek\",\"deliver\":\"Megvalósítás\",\"experience\":\"Tapasztalat\",\"govern\":\"Irányítás\",\"individual_cases\":\"Egyéni eset\",\"plan_manage\":\"TERV ÉS MENEDZSMENT – ELŐKÉSZÍTŐ TEVÉKENYSÉGEK\",\"plan_manage_items\":\"Szabályok\\nForrások\\nFolyamatok\\nBeszámolók\",\"the_service_level\":\"A szolgáltatás szintje\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Helyi szinten milyen célokat fogalmaztak meg és milyen értékekekt követtek?\"},\"evidenceUrl\":{\"label\":\"Ki határozta meg ezeket a célokat és értékeket?\"},\"title\":\"ÉTHOSZ MEGHATÁROZÁSA\",\"values\":{\"label\":\"Milyen célok és értékek írnák le legjobban a COSIE projekt lényegét?\"}},\"deliver\":{\"actors\":{\"label\":\"Ki vesz részt benne?\"},\"evidenceUrl\":{\"label\":\"Milyen támogató szolgáltatáselemek jelentek meg a megvalósítás során?\"},\"method\":{\"label\":\"Hogyan történik a beavatkozás?\"},\"title\":\"MEGVALÓSÍTÁS\"},\"govern\":{\"actions\":{\"label\":\"Hogyan zajlik a döntéshozatal szolgáltatásfejesztés helyi és projekt szintjén?\"},\"actors\":{\"label\":\"Ki értékeli a program megvalósítását helyi és projekt szinten?\"},\"evolution\":{\"label\":\"Hogyan befolyásolják az eredmények a szolgáltatás fejlődését?\"},\"improvements\":{\"label\":\"Hogyan azonosítják a fejlesztendő területeket? Hogyan valósítják meg?\"},\"outcomes\":{\"label\":\"Hogyan jelennek meg és hogyan mérhetőek az eredmények?\"},\"title\":\"IRÁNYÍTÁS\"},\"model\":{\"title\":\"Modell\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Hogyan foglalná össze a lényegét annak, amit a programban csinálnak?\"},\"actors\":{\"label\":\"Mi az, ami még most is működik a projektből?\"},\"evidenceUrl\":{\"label\":\"Mi bizonyítja ennek a fennmaradó elemnek a működését?\"},\"title\":\"TERV ÉS MENEDZSMENT – JELENLEGI TEVÉKENYSÉGEK\"},\"planManagePrior\":{\"actions\":{\"label\":\"Milyen tevékenységek készítették elő a programot?\"},\"actors\":{\"label\":\"Milyen szereplőket mozgósítottak az előkészítés során? \"},\"evidenceUrl\":{\"label\":\"Miért pont ezeket a tevékenységeket tartották fontosnak és miért pont ezeket a szereplőket vontták be?\"},\"title\":\"TERV ÉS MENEDZSMENT – ELŐKÉSZÍTŐ TEVÉKENYSÉGEK\"}},\"guide\":{\"step01\":\"A társ-kreatív innovációban számos alapvető folyamat vesz részt. Az első az etosz meghatározásával foglalkozik.\",\"step02\":\"A második irányítási tevékenységeket és termékeket tartalmaz.\",\"step03\":\"Az erkölcsi rendezés azzal foglalkozik, hogy ki vehet részt a tevékenységekben, tehát az ön kezdeményezése esetén ki vesz részt ezekben a folyamatokban? Hol és mikor zajlanak? Hogyan kommunikálnak és hogyan rögzítik őket?\",\"step04\":\"A vezetés, tervezés és tervezés eredményeként szolgáltatásokat vagy kezdeményezéseket nyújtunk és tapasztalunk.\",\"step05\":\"Ismét kik vesznek részt itt, és részt vesznek-e az első két tevékenységcsoportban?\",\"step06\":\"Ahelyett, hogy egyszerűen lezárnánk a kört egy egyszerű értékelési folyamattal, azt javasoljuk, hogy a koproduktív jólét és gondozás rendszereiben a kormányzás bevonja az itt meghatározott kapcsolatok összes résztvevőjét az erkölcsi rendezési modellben meghatározott kérdések megválaszolásába.\",\"step07\":\"Az irányítás az egyéni szolgáltatási ügyfélkapcsolati szinten zajlik.\",\"step08\":\"Ez a szolgáltatás teljes szintjén is zajlik.\",\"step09\":\"Hogyan zajlanak az ön kezdeményezésében a kormányzási folyamatok abban az értelemben, ahogyan itt leírjuk őket?\"},\"options\":{\"sources\":{\"meeting\":\"Találkozó\",\"other\":\"Más\",\"policy\":\"Közpolitika\"}},\"title\":\"MORÁLIS RENDSZER\"},\"social_media\":{\"dashboard\":{\"title\":\"Közösségi média\"},\"definitions\":{\"data\":{\"title\":\"Közösségi média\"}},\"title\":\"Közösségi média\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Ehhez a projekthez nincs elmélet a változás tételeiről.\",\"manage\":\"Kezelje a változás elméletét\",\"title\":\"A változás elmélete\"},\"definitions\":{\"data\":{\"hint\":\"Kérjük, adjon hozzá bármilyen elméletet a projekt változásairól.\",\"title\":\"A változás elmélete\"}},\"title\":\"A változás elmélete\"},\"user_journey_model\":{\"dashboard\":{\"one\":\"\",\"other\":\"\"},\"definitions\":{\"accessing\":{\"access_method\":{\"label\":\"Hogyan juthatott hozzá a szolgáltatáshoz?\"},\"appropriate_comment\":{\"label\":\"Ön szerint megfelelő ez a szolgáltatás-szempont?\"},\"qualification_experience\":{\"label\":\"Ha igen, milyen volt a tapasztalat?\"},\"qualification_process\":{\"label\":\"Volt-e minősítés vagy kiválasztási folyamat?\"},\"title\":\"Hozzáférés\"},\"discovering\":{\"comments\":{\"label\":\"További észrevételek, észrevételek?\"},\"discovery_medium\":{\"label\":\"Hogyan értesült a szolgáltatásról?\"},\"information_experience\":{\"label\":\"Mi a véleménye az információk minőségéről, teljességéről és hozzáférhetőségéről?\"},\"information_medium\":{\"label\":\"Hogyan jutott hozzá a szolgáltatással kapcsolatos információkhoz?\"},\"title\":\"Felfedezés\"},\"evaluating\":{\"opinions_asked\":{\"hint\":\"Gondold át, hol és mikor volt ez.\",\"label\":\"Megkérdezték a szolgáltatással kapcsolatos tapasztalatairól?\"},\"opinions_how\":{\"label\":\"Ha igen, hogyan kérdezték?\"},\"service_experience\":{\"label\":\"Olyan volt a szolgáltatás, amire számítottál?\"},\"surprises_comments\":{\"label\":\"Voltak-e meglepetések vagy csalódások tapasztalatai alapján?\"},\"title\":\"Értékelő\"},\"instigating\":{\"comments\":{\"label\":\"Hozzászólások\"},\"design_role\":{\"label\":\"Játszott valamilyen szerepet a szolgáltatás tervezésében és meghatározásában? Ha igen, milyen alkalmak és csatornák történtek?\"},\"instigate_role\":{\"label\":\"Volt valamilyen szerepe a projekt kezdeményezésében? Ha igen, részese volt-e az alábbi lehetőségek bármelyikének? Választhat annyit, amennyit csak akar.\"},\"title\":\"Felbujtás\"},\"model\":{\"title\":\"Modell\"},\"using\":{\"accessible_experience\":{\"label\":\"Hozzáférhető volt a szolgáltatás?\"},\"participate_experience\":{\"label\":\"Milyen volt használni vagy részt venni a szolgáltatásban?\"},\"time_experience\":{\"label\":\"Rendben volt-e a szolgáltatási események vagy kapcsolattartók időtartama és gyakorisága?\"},\"title\":\"Használata\",\"where\":{\"label\":\"Hol használta a szolgáltatást?\"}}},\"guide\":{\"step01\":\"A szolgáltatásokat nyilvánosságra hozzák a tervezett felhasználók számára, ez a felfedezés fázisa.\",\"step02\":\"Azok a felhasználók, akik szeretnék a szolgáltatást, valamiféle kérést vagy alkalmazást nyújtanak be, ez a hozzáférési szakasz.\",\"step03\":\"Ha az előző szakasz sikeres volt, a szolgáltatást átadták és megtapasztalták, ez a felhasználási szakasz.\",\"step04\":\"Ezután értékelik a szolgáltatás használatának tapasztalatait.\",\"step05\":\"Az eddigi kérdések azt feltételezik, hogy a szolgáltatás definiálva van és már létezik. A következő kérdéssor arról szól, hogy részt vett-e és hogyan vett részt a szolgáltatás létrejöttében.\",\"step06\":\"Először kiegészíthetjük szolgáltatásnyújtási modellünket a létrehozás szakaszaival. Ezt hívjuk tervezési szakasznak.\",\"step07\":\"Ezután megmutathatjuk azokat a folyamatokat, amelyek alapján a szolgáltatást először azonosították és elindították. Ezt hívjuk felbujtó szakasznak.\"},\"options\":{\"access_methods\":{\"applied\":\"Alkalmazott\",\"other\":\"Egyéb\",\"referred\":\"Hivatkozva\"},\"instigate_roles\":{\"government_department\":\"Kormányhivatal\",\"political_party\":\"Politikai párt\",\"pressure_group\":\"Nyomás / Kampánycsoport\"},\"mediums\":{\"other\":\"Egyéb\",\"paper\":\"Papír kiadvány\",\"referral\":\"Áttétel\",\"social\":\"Közösségi média\",\"word_of_mouth\":\"Szájról szájra\"},\"opinions_how\":{\"interview\":\"Interjú\",\"survey\":\"Felmérés\",\"workshop\":\"Műhely\"},\"where\":{\"community\":\"Közösség\",\"home\":\"itthon\",\"other\":\"Egyéb\",\"public\":\"Nyilvános\"},\"yes_no_maybe\":{\"maybe\":\"Talán\",\"no\":\"Nem\",\"yes\":\"Igen\"}},\"title\":\"Felhasználói utazási modell\"},\"welcome\":{\"dashboard\":{\"summary\":\"Készítette: {user} napon: {date_time}\"},\"title\":\"Üdvözöljük\"}},\"countries\":{\"de\":\"Németország\",\"el\":\"Görögország\",\"en_GB\":\"Egyesült Királyság\",\"es\":\"Spanyolország\",\"et\":\"Észtország\",\"fi\":\"Finnország\",\"fr\":\"Franciaország\",\"hu\":\"Magyarország\",\"it\":\"Olaszország\",\"nl\":\"Hollandia\",\"pl\":\"Lengyelország\",\"sv_SE\":\"Svédország\"},\"hints\":{\"editor_double_click_edit\":\"Kattintson duplán egy elemre a szerkesztéshez, majd az Enter gombra a mentéshez\",\"social_facebook_add\":\"Adjon hozzá teljes linkeket (URL-eket) a Facebook-csoportokhoz vagy oldalakhoz.\",\"social_instagram_add\":\"Írjon be egy Instagram hashtaget a # -nel vagy anélkül A hozzáadáshoz nyomja meg az Enter billentyűt.\",\"social_twitter_add\":\"Írjon be egy Twitter-hashtaget a # -nel vagy anélkül. A hozzáadáshoz nyomja meg az Enter billentyűt.\",\"social_youtube_add\":\"Írjon be egy linket egy YouTube-videóhoz, és nyomja meg az Enter billentyűt a hozzáadáshoz.\",\"type_and_enter\":\"Írja be az alábbi nevet, és nyomja meg az Enter billentyűt.\"},\"languages\":{\"de\":\"német\",\"el\":\"görög\",\"en_GB\":\"angol\",\"es\":\"spanyol\",\"et\":\"észt\",\"fi\":\"finn\",\"fr\":\"Francia\",\"hu\":\"Magyar\",\"it\":\"olasz\",\"nl\":\"holland\",\"pl\":\"fényesít\",\"sv_SE\":\"svéd\"},\"user_guide\":{\"back\":\"Vissza\",\"close\":\"Bezárás\",\"next\":\"Következő\",\"show\":\"Felhasználói útmutató megjelenítése\",\"skip\":\"A felhasználói útmutató kihagyása\"}}");
 
 /***/ }),
 
@@ -5505,10 +6183,10 @@ var _de_json__WEBPACK_IMPORTED_MODULE_11___namespace = /*#__PURE__*/__webpack_re
 /*!*************************!*\
   !*** ./js/lang/it.json ***!
   \*************************/
-/*! exports provided: activity_types, app, aspects, hints, languages, user_guide, default */
+/*! exports provided: activity_types, app, aspects, countries, hints, languages, user_guide, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organizzazione\",\"service\":\"Servizio\",\"user\":\"Utente\"},\"app\":{\"add_new_actor\":\"Aggiungi nuovo attore\",\"add_new_item\":\"Aggiungi un nuovo elemento\",\"all\":\"Tutti\",\"colour\":\"Colore\",\"create\":\"Creare\",\"created_by\":\"Creato da\",\"delete\":\"Elimina\",\"description\":\"Descrizione\",\"download\":\"Scarica\",\"error\":\"Errore\",\"error_message\":\"Errore: {message}\",\"export\":\"Esportare\",\"exporting\":\"Esportazione\",\"exporting_project\":\"Esportazione del progetto\",\"image\":\"Immagine\",\"image_drag_prompt\":\"Trascina qui la tua immagine per iniziare o fai clic per sfogliarla.\",\"image_is_uploading\":\"Caricamento immagine\",\"image_remove\":\"Rimuovi immagine\",\"image_upload_error\":\"Errore di caricamento\",\"import\":\"Importare\",\"import_project\":\"Importa progetto\",\"import_project_drag_hint\":\"Trascina qui il tuo progetto CoSMoS per iniziare o fai clic per sfogliarlo.\",\"import_project_notes\":\"Nota: sarai il proprietario del progetto importato.\",\"import_project_success\":\"Il progetto è stato importato con successo!\",\"just_mine\":\"Solo mio\",\"label\":\"Etichetta\",\"last_saved_at\":\"Ultimo salvataggio alle {date_time}\",\"log_in\":\"Accesso\",\"maximum_items\":\"{count} massimo di {count} elementi | Numero massimo {count} elemento | {count} massimo di {count} elementi\",\"models\":\"Modelli\",\"name\":\"Nome\",\"new_project\":\"Crea nuovo progetto\",\"next\":\"Il prossimo\",\"no_projects\":\"Nessun progetto trovato.\",\"ok\":\"ok\",\"open_project\":\"Progetto aperto\",\"please_wait_generate\":\"Attendi mentre il file viene generato.\",\"processing\":\"in lavorazione\",\"project\":\"Progetto\",\"project_save_success\":\"Progetto salvato!\",\"save\":\"Salva\",\"saving\":\"Salvataggio\",\"scale_to_fit\":\"Scala per adattarla\",\"search\":\"Ricerca\",\"title\":\"Titolo\",\"to_create_project\":\"per creare un progetto.\",\"try_again\":\"Riprova\",\"type\":\"genere\",\"user_is_read_only\":\"Il tuo livello di accesso utente è di sola lettura.\",\"web_address\":\"indirizzo Web\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Macro\"},\"meso\":{\"description\":\"Potrebbero esserci diverse fasi a questo livello.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Ci sono beneficiari diversi dagli utenti / partecipanti diretti? se è così, chi sono loro?\",\"title\":\"Beneficiari\"},\"broker\":{\"hint\":\"Esiste un broker attivo tra gli istigatori del cambiamento e i creatori del cambiamento? se è così, chi sono loro?\",\"title\":\"Broker\"},\"changeMakers\":{\"hint\":\"Chi sono o sono stati gli istigatori che hanno avviato la tua attività di intervento?\",\"title\":\"Creatori di cambiamento\"},\"changeTheorists\":{\"hint\":\"Chi sono i teorici del cambiamento per l'intervento?\",\"title\":\"Teorici del cambiamento\"},\"frontLineServiceDeliverer\":{\"hint\":\"Chi è il fornitore di servizi in prima linea?\",\"title\":\"Fornitore di servizi in prima linea\"},\"instigatorsOfChange\":{\"hint\":\"Chi sono o sono stati gli istigatori che hanno avviato la tua attività di intervento?\",\"title\":\"Istigatori del cambiamento\"},\"model\":{\"title\":\"Modello\"},\"serviceDeliveryManager\":{\"hint\":\"Chi è il Service Delivery Manager responsabile dell'intervento?\",\"title\":\"Service Delivery Manager\"},\"serviceOrganisationManager\":{\"hint\":\"Chi è il responsabile dell'organizzazione del servizio per l'intervento?\",\"title\":\"Responsabile organizzazione servizi\"},\"servicePolicyMaker\":{\"hint\":\"Chi sono, o erano, i definitori delle politiche di servizio e dei principi in base ai quali il servizio opera?\",\"title\":\"Service Policy Maker\"},\"subjectsOfChange\":{\"hint\":\"Quali sono i soggetti di cambiamento identificati all'interno dell'intervento?\",\"title\":\"Soggetti del cambiamento\"},\"user\":{\"hint\":\"Chi è l'utente diretto del servizio?\",\"title\":\"Cliente / Utente\"},\"victims\":{\"hint\":\"Ci sono vittime identificate? se è così, chi sono loro?\",\"title\":\"Vittime\"}},\"guide\":{\"step01\":\"In questo modello, consideriamo un'iniziativa Cosie in termini di un insieme di ruoli e delle relazioni di conversazione in cui si impegnano.\",\"step02\":\"Per prima cosa abbiamo un fornitore di servizi in prima linea e un cliente.\",\"step03\":\"Il fattorino ha un manager o un supervisore. Questo schema di un individuo impegnato in due conversazioni verrà ripetuto.\",\"step04\":\"La consegna avviene in un contesto istituzionale formale o informale.\",\"step05\":\"Infine, il servizio esiste in un contesto politico più ampio.\",\"step06\":\"Questo vuole essere un modello astratto. In alcuni casi può esserci un'organizzazione piatta in cui la consegna, la gestione e la politica sono intraprese da tutti i membri di un piccolo team, in altri casi possono rappresentare individui e contesti distinti.\",\"step07\":\"In che modo i concetti di micro, meso e macro si mappa sulla tua iniziativa?\",\"step08\":\"Come avviene la comunicazione tra di loro?\",\"step09\":\"Quanto sono coordinati e coerenti?\",\"step10\":\"In particolare, ci sono flussi informativi e conversazioni tra macro e micro non mediati dal meso? Che cosa implica ciò?\",\"step11\":\"Il modello successivo considera l'agenzia del cambiamento in termini di ruoli e conversazioni.\",\"step12\":\"È necessario avviare una modifica, quindi viene eseguita.\",\"step13\":\"I cambiamenti che stiamo considerando riguardano una persona, un luogo o un ambiente.\",\"step14\":\"I cambiamenti che stiamo considerando sono spesso essi stessi complessi e riguardano situazioni complesse. Spesso si basano su una teoria che è stata introdotta o mediata nella situazione.\",\"step15\":\"C'è una serie di beneficiari previsti.\",\"step16\":\"Ma ci sono anche possibili diseredati o vittime del cambiamento.\",\"step17\":\"Questo modello è concepito come una sonda sul modello di servizio iniziale per identificare gli attori specifici che, nelle varie fasi dello sviluppo dell'iniziativa, hanno assunto uno o più di questi ruoli di agenzia di cambiamento. Loro chi sono?\"},\"title\":\"Modello analitico\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Ambiguità\",\"ambivalence\":\"Ambivalenza\",\"committing\":\"Impegnarsi\",\"execute\":\"Eseguire\",\"first_order\":\"Primo ordine\",\"fourth_order\":\"Quarto Ordine!\",\"languaging\":\"\\\"Linguaggio\\\"\",\"measure\":\"Misurare\",\"plan\":\"Piano\",\"risk\":\"Rischio\",\"second_order\":\"Secondo ordine\",\"sense_making\":\"Sensazione\",\"third_order\":\"Terzo Ordine\",\"vision\":\"Visione\",\"zero_order\":\"Ordine zero\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Come viene eseguito il piano?\"},\"measure\":{\"label\":\"Come vengono registrate le osservazioni e le misurazioni? In caso negativo, cosa è necessario abilitare per farlo?\"},\"plan\":{\"label\":\"Come è stato impostato un piano per realizzare la visione?\"},\"vision\":{\"label\":\"Come sono stati fissati la visione e gli obiettivi?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Qual è stata l'origine del cambiamento? E qual è stato il cambiamento?\"},\"event_cause\":{\"label\":\"Cosa è successo per consentire a questo evento di verificarsi?\"},\"unexpected_events\":{\"label\":\"Ci sono stati casi in cui hai assistito a eventi imprevisti?\"}},\"model\":{\"title\":\"Modello\"},\"second_order\":{\"committing\":{\"label\":\"Come è cambiata l'erogazione del servizio dell'intervento rispetto ai suoi piani originali?\"},\"languaging\":{\"label\":\"Quali cambiamenti sono stati apportati al modo in cui è stato inteso l'intervento?\"},\"sense_making\":{\"label\":\"Quando rivedi i piani e la visione?\"}},\"third_order\":{\"processes\":{\"label\":\"Quali processi provocano o abilitano l'interrogatorio di secondo ordine?\"}}},\"guide\":{\"step01\":\"Iniziamo con il modello standard di azione mirata che tutti conosciamo molto bene.\",\"step02\":\"Ma tutti abbiamo fatto l'esperienza di guardarci indietro e di renderci conto che le cose sono cambiate in un modo davvero fondamentale: parliamo del cambio di paradigma. Ciò implica che ci siamo impegnati a dare un nuovo senso al nostro mondo e questo spesso significa che la nostra lingua cambia.\",\"step03\":\"Questi due diversi modi di funzionamento sono talvolta indicati come primo e secondo ordine.\",\"step04\":\"In termini di gestione, abbiamo da un lato la gestione del rischio e dall'altro la risoluzione di contraddizioni e ambiguità.\",\"step05\":\"Introduciamo ora l'idea di attività del terzo ordine che abilitano e supportano le transizioni appropriate tra il primo e il secondo lavoro, consentendo un passo indietro per riconsiderare la nostra filosofia e le nostre ipotesi e, quando è necessario, tornare alla modalità di pianificazione e consegna pratica.\",\"step06\":\"A volte la reazione all'ambiguità e alla contraddizione è emotiva: combatti o vola che è ordine zero, o ispirazione ed eroismo che chiameremo quarto ordine.\",\"step07\":\"Quindi, sul lato destro del nostro diagramma abbiamo lo spettro del lavoro emotivo e delle risposte, mentre sul lato sinistro abbiamo il lavoro co-produttivo e conversazionale.\",\"step08\":\"Questo modello genera una serie di domande aperte su dove si svolge il diverso lavoro di primo e secondo ordine nella tua iniziativa, quale lavoro emotivo è stato e richiede e come e dove viene intrapreso e come e da chi sono gli interventi di terzo ordine richiesti intrapreso?\"},\"title\":\"Cambia modello\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Rapporti infrastrutturali, ricorsi e strutture\",\"policy_law\":\"Politica e legge\",\"resources\":\"Risorse\",\"service_definition\":\"Piattaforma di definizione e sviluppo del servizio\",\"service_delivery\":\"Piattaforma di fornitura di servizi\",\"structural_relationships\":\"Relazioni strutturali e occasioni\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Ci sono beneficiari diversi dagli utenti / partecipanti diretti? se è così, chi sono loro?\",\"title\":\"Beneficiario\"},\"delivery\":{\"hint\":\"Chi è responsabile dei meccanismi di consegna, dei canali e dei ruoli nel progetto pilota?\",\"title\":\"Liberatore\"},\"deployment\":{\"hint\":\"Chi distribuisce / distribuisce e attiva / attivato tali processi e risorse?\",\"title\":\"Deployer\"},\"drivers\":{\"body\":{\"hint\":\"Quali sono i driver e le motivazioni coinvolte?\",\"label\":\"Driver e motivazioni\"},\"hint\":\"Quali erano / sono i driver e le motivazioni del progetto? Era un requisito legale, il riconoscimento di un bisogno o una richiesta, cogliere un'opportunità, affrontare una disuguaglianza?\",\"title\":\"Driver e motivazioni\"},\"evaluation\":{\"hint\":\"Chi sono i valutatori e i governatori del servizio?\",\"title\":\"Valutatore\"},\"extorg\":{\"hint\":\"Esistono attori, stakeholder o agenzie rilevanti per il progetto pilota, ma che rimangono al di fuori della sua visione e della sua etica?\",\"title\":\"Organizzazioni esterne\"},\"extsvc\":{\"hint\":\"Quali strutture riutilizzabili, risorse (tecniche e umane), servizi e fonti di informazioni sono state sviluppate e utilizzate a supporto di questi processi di definizione e sviluppo dei servizi? Quali risorse e servizi esterni (es. Comunicazioni e social media) sono stati / vengono utilizzati?\",\"title\":\"Servizi tecnici esterni\"},\"infsvc\":{\"hint\":\"Di quali servizi esterni, canali e strutture utilizzi nella fornitura dei tuoi servizi? Quali fonti di informazione utilizzi? Quali informazioni pubblichi, a chi e con quali canali e media?\",\"title\":\"Servizi infrastrutturali\"},\"initiator\":{\"hint\":\"Chi sono o sono stati gli istigatori che hanno avviato la tua attività pilota?\",\"title\":\"Iniziatore\"},\"model\":{\"title\":\"Modello\"},\"policyDef\":{\"hint\":\"Chi sono, o erano, i definitori delle politiche di servizio e dei principi in base ai quali il servizio opera?\",\"title\":\"Policy Definer\"},\"specDes\":{\"hint\":\"Chi specifica / specificato e progetta / progettato i processi e le risorse di erogazione del servizio?\",\"title\":\"Specifier e designer\"},\"user\":{\"hint\":\"Chi è l'utente diretto del servizio?\",\"title\":\"Utente\"}},\"title\":\"Co-creazione del modello di servizio\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Non ci sono elementi di reporting della comunità per questo progetto.\",\"manage\":\"Gestisci i rapporti della comunità\",\"title\":\"Reporting della comunità\"},\"definitions\":{\"data\":{\"hint\":\"Aggiungi eventuali rapporti della community del tuo progetto.\",\"title\":\"Reporting della comunità\"}},\"title\":\"Reporting della comunità\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Non ci sono documenti o file per questo progetto.\",\"manage\":\"Gestisci documenti e file\",\"title\":\"Documenti e file\"},\"definitions\":{\"data\":{\"hint\":\"Aggiungi eventuali documenti e file che il tuo progetto potrebbe avere.\",\"title\":\"Documenti e file\"}},\"title\":\"Documenti\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Benessere\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Quali aspetti del ciclo di vita del servizio sono importanti per quanto riguarda l'innovazione e il cambiamento?\"},\"title\":\"Innovazione e cambiamento\"},\"intervention\":{\"items\":{\"label\":\"Che tipo di intervento si sta verificando?\"},\"title\":\"Intervento\"},\"learning\":{\"items\":{\"label\":\"Come sta avvenendo l'apprendimento nel tuo intervento?\"},\"title\":\"Apprendimento\"},\"model\":{\"title\":\"Modello\"},\"wellbeing\":{\"items\":{\"label\":\"Quali aspetti del benessere umano e dell'ambiente sono rilevanti per il tuo servizio? Alcuni sono più significativi di altri?\"},\"title\":\"Benessere umano e ambiente\"}},\"guide\":{\"step01\":\"Le iniziative co-creative che stiamo prendendo in considerazione riguardano tutte il miglioramento e la crescita del benessere. Qui consideriamo il benessere degli individui ma questo potrebbe essere applicato a luoghi o ad ambienti più ampi.\",\"step02\":\"Il benessere ha una serie di sfaccettature diverse che sono tutte interdipendenti.\",\"step03\":\"Interagisce anche con l'ambiente fisico e sociale.\",\"step04\":\"Alcuni servizi o interventi riguardano la riparazione di qualcosa che è andato storto e il ripristino dello status quo.\",\"step05\":\"Ma ci sono altri scopi per gli interventi.\",\"step06\":\"Il processo di intervento prevede una serie di fasi e processi differenti.\",\"step07\":\"Infine, se le nostre innovazioni devono essere sostenute, dobbiamo imparare e migliorare.\",\"step08\":\"Chi, cosa o dove è il target del tuo intervento?\",\"step09\":\"Quali aspetti del benessere sono al centro della tua iniziativa?\",\"step10\":\"Quali aspetti del benessere del tuo soggetto sono rilevanti ma oltre lo scopo della tua iniziativa?\",\"step11\":\"Quali sono gli aspetti ambientali rilevanti?\",\"step12\":\"Quali combinazioni di interventi, dalla prevenzione alla trasformazione, sono rilevanti per la tua iniziativa?\",\"step13\":\"In che misura l'apprendimento e il miglioramento sono integrati nella governance dello sviluppo e nei processi di consegna?\"},\"options\":{\"innovation\":{\"development\":\"Sviluppo\",\"facilitation\":\"Facilitazione\",\"palliation\":\"Palliazione\",\"prevention\":\"Prevenzione\",\"rehabilitation\":\"Riabilitazione\",\"remedy\":\"Rimedio\",\"transformation\":\"Trasformazione\"},\"intervention\":{\"coordination_delivery\":\"Coordinamento e consegna\",\"governance\":\"Governance\",\"identification\":\"Identificazione e pianificazione\",\"learning\":\"Apprendimento\",\"management\":\"Gestione\"},\"learning\":{\"research_evidence\":\"Ricerca e prove\",\"service_improvement\":\"Miglioramento del servizio\",\"trials\":\"Prove\"},\"wellbeing\":{\"faculties_skills\":\"Facoltà e abilità\",\"mental_psych\":\"Mentale e psicologico\",\"physical_env\":\"Ambiente fisico\",\"physiological\":\"Fisiologico\",\"socio_cultural_env\":\"Ambiente socio-culturale\",\"socio_economic\":\"Socioeconomico\"}},\"title\":\"Modello di teoria dell'intervento\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Definisci Ethos\",\"define_ethos_items\":\"Valori\\n I principi\\n Intenzioni\\n Politiche\",\"deliver\":\"Consegnare\",\"experience\":\"Esperienza\",\"govern\":\"Governare\",\"individual_cases\":\"Casi individuali\",\"plan_manage\":\"Pianifica e gestisci\",\"plan_manage_items\":\"Regole\\n Risorse\\n Processi\\n Conti\",\"the_service_level\":\"Il livello di servizio\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Come vengono definiti questi valori?\"},\"evidenceUrl\":{\"label\":\"Quali prove (esterne) sono disponibili a sostegno di ciò?\"},\"title\":\"Definisci Ethos\",\"values\":{\"label\":\"Quali sono i valori importanti che l'intervento viene ad affrontare?\"}},\"deliver\":{\"actors\":{\"label\":\"Da chi viene consegnato?\"},\"evidenceUrl\":{\"label\":\"Quali prove (esterne) sono disponibili a sostegno di ciò?\"},\"method\":{\"label\":\"Come viene consegnato l'intervento?\"},\"title\":\"Consegnare\"},\"govern\":{\"actions\":{\"label\":\"Come viene governato l'intervento? Quali misure vengono messe in atto per garantire che i risultati siano quelli previsti?\"},\"actors\":{\"label\":\"Chi lo valuta?\"},\"evolution\":{\"label\":\"In che modo questo impatto sull'evoluzione del servizio?\"},\"improvements\":{\"label\":\"Come vengono identificati i miglioramenti? Come vengono implementati?\"},\"outcomes\":{\"label\":\"I risultati sono incorporati in obiettivi e misurazioni? E se sì, di chi?\"},\"title\":\"Governare\"},\"model\":{\"title\":\"Modello\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Quali azioni vengono intraprese ora nell'ambito del progetto pilota?\"},\"actors\":{\"label\":\"Quali azioni in corso vengono intraprese?\"},\"evidenceUrl\":{\"label\":\"Quali prove (esterne) sono disponibili a sostegno di ciò?\"},\"title\":\"Pianifica e gestisci: azioni correnti\"},\"planManagePrior\":{\"actions\":{\"label\":\"Quali azioni erano state intraprese prima dell'intervento?\"},\"actors\":{\"label\":\"Chi è stato coinvolto in queste azioni precedenti?\"},\"evidenceUrl\":{\"label\":\"Quali prove (esterne) sono disponibili a sostegno di ciò?\"},\"title\":\"Pianificare e gestire - Azioni precedenti\"}},\"guide\":{\"step01\":\"Ci sono una serie di processi fondamentali coinvolti in un'innovazione co-creativa. Il primo riguarda la definizione di ethos.\",\"step02\":\"Il secondo riguarda attività e prodotti di gestione.\",\"step03\":\"L'ordinamento morale riguarda chi può partecipare alle attività quindi, nel caso della vostra iniziativa, chi è coinvolto in questi processi? Dove e quando si svolgono? Come comunicano e come vengono registrati?\",\"step04\":\"Come risultato della leadership, della pianificazione e del design, i servizi o le iniziative vengono forniti e sperimentati.\",\"step05\":\"Ancora una volta chi è coinvolto qui e ottiene qualche partecipazione nelle prime due serie di attività?\",\"step06\":\"Piuttosto che chiudere semplicemente il cerchio con un semplice processo di valutazione, stiamo suggerendo che, nei sistemi di benessere e cura co-produttivi, la governance coinvolge tutti i partecipanti nelle relazioni qui identificate, la partecipazione nell'affrontare le domande definite nel modello di ordinamento morale.\",\"step07\":\"La governance avviene a livello di relazione con il cliente del servizio individuale.\",\"step08\":\"Si svolge anche a livello di servizio generale.\",\"step09\":\"Come si svolgono nella vostra iniziativa i processi di governance, nel senso che li descriviamo qui?\"},\"options\":{\"sources\":{\"meeting\":\"Incontro\",\"other\":\"Altro\",\"policy\":\"Politica\"}},\"title\":\"Ordinamento morale\"},\"social_media\":{\"dashboard\":{\"title\":\"Social media\"},\"definitions\":{\"data\":{\"title\":\"Social media\"}},\"title\":\"Social media\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Non esiste una teoria degli elementi di modifica per questo progetto.\",\"manage\":\"Gestisci la teoria del cambiamento\",\"title\":\"Teoria del cambiamento\"},\"definitions\":{\"data\":{\"hint\":\"Aggiungi eventuali teorie di cambiamento che il tuo progetto potrebbe avere.\",\"title\":\"Teoria del cambiamento\"}},\"title\":\"Teoria del cambiamento\"},\"welcome\":{\"dashboard\":{\"summary\":\"Creato da {user} il {date_time}\"},\"title\":\"benvenuto\"}},\"hints\":{\"editor_double_click_edit\":\"Fare doppio clic su un elemento per modificarlo e immettere per salvare\",\"social_facebook_add\":\"Aggiungi link completi (URL) a gruppi o pagine di Facebook.\",\"social_instagram_add\":\"Inserisci un hashtag di Instagram, con o senza il #. Premi Invio per aggiungere.\",\"social_twitter_add\":\"Inserisci un hashtag di Twitter, con o senza il #. Premi Invio per aggiungere.\",\"social_youtube_add\":\"Immettere un collegamento a un video di YouTube e premere Invio per aggiungerlo.\",\"type_and_enter\":\"Digita il nome di seguito e premi invio.\"},\"languages\":{\"de\":\"Tedesco\",\"el\":\"Greco\",\"en_GB\":\"Inglese\",\"es\":\"Spagnolo\",\"et\":\"Estone\",\"fi\":\"Finlandese\",\"fr\":\"francese\",\"hu\":\"Ungherese\",\"it\":\"Italiano\",\"nl\":\"Olandese\",\"pl\":\"Polacco\",\"sv_SE\":\"Svedese\"},\"user_guide\":{\"back\":\"Indietro\",\"close\":\"Vicino\",\"next\":\"Il prossimo\",\"show\":\"Mostra la guida per l'utente\",\"skip\":\"Salta la guida per l'utente\"}}");
+module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organizzazione\",\"service\":\"Servizio\",\"user\":\"Utente\"},\"app\":{\"add_new_actor\":\"Aggiungi nuovo attore\",\"add_new_item\":\"Aggiungi un nuovo elemento\",\"all\":\"Tutti\",\"colour\":\"Colore\",\"country\":\"Nazione\",\"create\":\"Creare\",\"created_by\":\"Creato da\",\"delete\":\"Elimina\",\"description\":\"Descrizione\",\"download\":\"Scarica\",\"error\":\"Errore\",\"error_message\":\"Errore: {message}\",\"export\":\"Esportare\",\"exporting\":\"Esportazione\",\"exporting_project\":\"Esportazione del progetto\",\"image\":\"Immagine\",\"image_drag_prompt\":\"Trascina qui la tua immagine per iniziare o fai clic per sfogliarla.\",\"image_is_uploading\":\"Caricamento immagine\",\"image_remove\":\"Rimuovi immagine\",\"image_upload_error\":\"Errore di caricamento\",\"import\":\"Importare\",\"import_project\":\"Importa progetto\",\"import_project_drag_hint\":\"Trascina qui il tuo progetto CoSMoS per iniziare o fai clic per sfogliarlo.\",\"import_project_notes\":\"Nota: sarai il proprietario del progetto importato.\",\"import_project_success\":\"Il progetto è stato importato con successo!\",\"just_mine\":\"Solo mio\",\"label\":\"Etichetta\",\"last_saved_at\":\"Ultimo salvataggio alle {date_time}\",\"log_in\":\"Accesso\",\"maximum_items\":\"{count} massimo di {count} elementi | Numero massimo {count} elemento | {count} massimo di {count} elementi\",\"models\":\"Modelli\",\"more_details\":\"Più dettagli\",\"name\":\"Nome\",\"new_project\":\"Crea nuovo progetto\",\"next\":\"Il prossimo\",\"no_projects\":\"Nessun progetto trovato.\",\"ok\":\"ok\",\"open_project\":\"Progetto aperto\",\"please_wait_generate\":\"Attendi mentre il file viene generato.\",\"processing\":\"in lavorazione\",\"project\":\"Progetto\",\"project_save_success\":\"Progetto salvato!\",\"save\":\"Salva\",\"saving\":\"Salvataggio\",\"scale_to_fit\":\"Scala per adattarla\",\"search\":\"Ricerca\",\"title\":\"Titolo\",\"to_create_project\":\"per creare un progetto.\",\"try_again\":\"Riprova\",\"type\":\"genere\",\"user_is_read_only\":\"Il tuo livello di accesso utente è di sola lettura.\",\"web_address\":\"indirizzo Web\",\"which_country\":\"Da quale paese vieni?\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Macro\"},\"meso\":{\"description\":\"Potrebbero esserci diverse fasi a questo livello.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Ci sono beneficiari diversi dagli utenti / partecipanti diretti? se è così, chi sono loro?\",\"title\":\"Beneficiari\"},\"broker\":{\"hint\":\"Esiste un broker attivo tra gli istigatori del cambiamento e i creatori del cambiamento? se è così, chi sono loro?\",\"title\":\"Broker\"},\"changeMakers\":{\"hint\":\"Chi sono o sono stati gli istigatori che hanno avviato la tua attività di intervento?\",\"title\":\"Creatori di cambiamento\"},\"changeTheorists\":{\"hint\":\"Chi sono i teorici del cambiamento per l'intervento?\",\"title\":\"Teorici del cambiamento\"},\"frontLineServiceDeliverer\":{\"hint\":\"Chi è il fornitore di servizi in prima linea?\",\"title\":\"Fornitore di servizi in prima linea\"},\"instigatorsOfChange\":{\"hint\":\"Chi sono o sono stati gli istigatori che hanno avviato la tua attività di intervento?\",\"title\":\"Istigatori del cambiamento\"},\"model\":{\"title\":\"Modello\"},\"serviceDeliveryManager\":{\"hint\":\"Chi è il Service Delivery Manager responsabile dell'intervento?\",\"title\":\"Service Delivery Manager\"},\"serviceOrganisationManager\":{\"hint\":\"Chi è il responsabile dell'organizzazione del servizio per l'intervento?\",\"title\":\"Responsabile organizzazione servizi\"},\"servicePolicyMaker\":{\"hint\":\"Chi sono, o erano, i definitori delle politiche di servizio e dei principi in base ai quali il servizio opera?\",\"title\":\"Service Policy Maker\"},\"subjectsOfChange\":{\"hint\":\"Quali sono i soggetti di cambiamento identificati all'interno dell'intervento?\",\"title\":\"Soggetti del cambiamento\"},\"user\":{\"hint\":\"Chi è l'utente diretto del servizio?\",\"title\":\"Cliente / Utente\"},\"victims\":{\"hint\":\"Ci sono vittime identificate? se è così, chi sono loro?\",\"title\":\"Vittime\"}},\"guide\":{\"step01\":\"In questo modello, consideriamo un'iniziativa Cosie in termini di un insieme di ruoli e delle relazioni di conversazione in cui si impegnano.\",\"step02\":\"Per prima cosa abbiamo un fornitore di servizi in prima linea e un cliente.\",\"step03\":\"Il fattorino ha un manager o un supervisore. Questo schema di un individuo impegnato in due conversazioni verrà ripetuto.\",\"step04\":\"La consegna avviene in un contesto istituzionale formale o informale.\",\"step05\":\"Infine, il servizio esiste in un contesto politico più ampio.\",\"step06\":\"Questo vuole essere un modello astratto. In alcuni casi può esserci un'organizzazione piatta in cui la consegna, la gestione e la politica sono intraprese da tutti i membri di un piccolo team, in altri casi possono rappresentare individui e contesti distinti.\",\"step07\":\"In che modo i concetti di micro, meso e macro si mappa sulla tua iniziativa?\",\"step08\":\"Come avviene la comunicazione tra di loro?\",\"step09\":\"Quanto sono coordinati e coerenti?\",\"step10\":\"In particolare, ci sono flussi informativi e conversazioni tra macro e micro non mediati dal meso? Che cosa implica ciò?\",\"step11\":\"Il modello successivo considera l'agenzia del cambiamento in termini di ruoli e conversazioni.\",\"step12\":\"È necessario avviare una modifica, quindi viene eseguita.\",\"step13\":\"I cambiamenti che stiamo considerando riguardano una persona, un luogo o un ambiente.\",\"step14\":\"I cambiamenti che stiamo considerando sono spesso essi stessi complessi e riguardano situazioni complesse. Spesso si basano su una teoria che è stata introdotta o mediata nella situazione.\",\"step15\":\"C'è una serie di beneficiari previsti.\",\"step16\":\"Ma ci sono anche possibili diseredati o vittime del cambiamento.\",\"step17\":\"Questo modello è concepito come una sonda sul modello di servizio iniziale per identificare gli attori specifici che, nelle varie fasi dello sviluppo dell'iniziativa, hanno assunto uno o più di questi ruoli di agenzia di cambiamento. Loro chi sono?\"},\"title\":\"Modello analitico\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Ambiguità\",\"ambivalence\":\"Ambivalenza\",\"committing\":\"Impegnarsi\",\"execute\":\"Eseguire\",\"first_order\":\"Primo ordine\",\"fourth_order\":\"Quarto Ordine!\",\"languaging\":\"\\\"Linguaggio\\\"\",\"measure\":\"Misurare\",\"plan\":\"Piano\",\"risk\":\"Rischio\",\"second_order\":\"Secondo ordine\",\"sense_making\":\"Sensazione\",\"third_order\":\"Terzo Ordine\",\"vision\":\"Visione\",\"zero_order\":\"Ordine zero\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Come viene eseguito il piano?\"},\"measure\":{\"label\":\"Come vengono registrate le osservazioni e le misurazioni? In caso negativo, cosa è necessario abilitare per farlo?\"},\"plan\":{\"label\":\"Come è stato impostato un piano per realizzare la visione?\"},\"vision\":{\"label\":\"Come sono stati fissati la visione e gli obiettivi?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Qual è stata l'origine del cambiamento? E qual è stato il cambiamento?\"},\"event_cause\":{\"label\":\"Cosa è successo per consentire a questo evento di verificarsi?\"},\"unexpected_events\":{\"label\":\"Ci sono stati casi in cui hai assistito a eventi imprevisti?\"}},\"model\":{\"title\":\"Modello\"},\"second_order\":{\"committing\":{\"label\":\"Come è cambiata l'erogazione del servizio dell'intervento rispetto ai suoi piani originali?\"},\"languaging\":{\"label\":\"Quali cambiamenti sono stati apportati al modo in cui è stato inteso l'intervento?\"},\"sense_making\":{\"label\":\"Quando rivedi i piani e la visione?\"}},\"third_order\":{\"processes\":{\"label\":\"Quali processi provocano o abilitano l'interrogatorio di secondo ordine?\"}}},\"guide\":{\"step01\":\"Iniziamo con il modello standard di azione mirata che tutti conosciamo molto bene.\",\"step02\":\"Ma tutti abbiamo fatto l'esperienza di guardarci indietro e di renderci conto che le cose sono cambiate in un modo davvero fondamentale: parliamo del cambio di paradigma. Ciò implica che ci siamo impegnati a dare un nuovo senso al nostro mondo e questo spesso significa che la nostra lingua cambia.\",\"step03\":\"Questi due diversi modi di funzionamento sono talvolta indicati come primo e secondo ordine.\",\"step04\":\"In termini di gestione, abbiamo da un lato la gestione del rischio e dall'altro la risoluzione di contraddizioni e ambiguità.\",\"step05\":\"Introduciamo ora l'idea di attività del terzo ordine che abilitano e supportano le transizioni appropriate tra il primo e il secondo lavoro, consentendo un passo indietro per riconsiderare la nostra filosofia e le nostre ipotesi e, quando è necessario, tornare alla modalità di pianificazione e consegna pratica.\",\"step06\":\"A volte la reazione all'ambiguità e alla contraddizione è emotiva: combatti o vola che è ordine zero, o ispirazione ed eroismo che chiameremo quarto ordine.\",\"step07\":\"Quindi, sul lato destro del nostro diagramma abbiamo lo spettro del lavoro emotivo e delle risposte, mentre sul lato sinistro abbiamo il lavoro co-produttivo e conversazionale.\",\"step08\":\"Questo modello genera una serie di domande aperte su dove si svolge il diverso lavoro di primo e secondo ordine nella tua iniziativa, quale lavoro emotivo è stato e richiede e come e dove viene intrapreso e come e da chi sono gli interventi di terzo ordine richiesti intrapreso?\"},\"title\":\"Cambia modello\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Rapporti infrastrutturali, ricorsi e strutture\",\"policy_law\":\"Politica e legge\",\"resources\":\"Risorse\",\"service_definition\":\"Piattaforma di definizione e sviluppo del servizio\",\"service_delivery\":\"Piattaforma di fornitura di servizi\",\"structural_relationships\":\"Relazioni strutturali e occasioni\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Ci sono beneficiari diversi dagli utenti / partecipanti diretti? se è così, chi sono loro?\",\"title\":\"Beneficiario\"},\"delivery\":{\"hint\":\"Chi è responsabile dei meccanismi di consegna, dei canali e dei ruoli nel progetto pilota?\",\"title\":\"Liberatore\"},\"deployment\":{\"hint\":\"Chi distribuisce / distribuisce e attiva / attivato tali processi e risorse?\",\"title\":\"Deployer\"},\"drivers\":{\"body\":{\"hint\":\"Quali sono i driver e le motivazioni coinvolte?\",\"label\":\"Driver e motivazioni\"},\"hint\":\"Quali erano / sono i driver e le motivazioni del progetto? Era un requisito legale, il riconoscimento di un bisogno o una richiesta, cogliere un'opportunità, affrontare una disuguaglianza?\",\"title\":\"Driver e motivazioni\"},\"evaluation\":{\"hint\":\"Chi sono i valutatori e i governatori del servizio?\",\"title\":\"Valutatore\"},\"extorg\":{\"hint\":\"Esistono attori, stakeholder o agenzie rilevanti per il progetto pilota, ma che rimangono al di fuori della sua visione e della sua etica?\",\"title\":\"Organizzazioni esterne\"},\"extsvc\":{\"hint\":\"Quali strutture riutilizzabili, risorse (tecniche e umane), servizi e fonti di informazioni sono state sviluppate e utilizzate a supporto di questi processi di definizione e sviluppo dei servizi? Quali risorse e servizi esterni (es. Comunicazioni e social media) sono stati / vengono utilizzati?\",\"title\":\"Servizi tecnici esterni\"},\"infsvc\":{\"hint\":\"Di quali servizi esterni, canali e strutture utilizzi nella fornitura dei tuoi servizi? Quali fonti di informazione utilizzi? Quali informazioni pubblichi, a chi e con quali canali e media?\",\"title\":\"Servizi infrastrutturali\"},\"initiator\":{\"hint\":\"Chi sono o sono stati gli istigatori che hanno avviato la tua attività pilota?\",\"title\":\"Iniziatore\"},\"model\":{\"title\":\"Modello\"},\"policyDef\":{\"hint\":\"Chi sono, o erano, i definitori delle politiche di servizio e dei principi in base ai quali il servizio opera?\",\"title\":\"Policy Definer\"},\"specDes\":{\"hint\":\"Chi specifica / specificato e progetta / progettato i processi e le risorse di erogazione del servizio?\",\"title\":\"Specifier e designer\"},\"user\":{\"hint\":\"Chi è l'utente diretto del servizio?\",\"title\":\"Utente\"}},\"title\":\"Co-creazione del modello di servizio\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Non ci sono elementi di reporting della comunità per questo progetto.\",\"manage\":\"Gestisci i rapporti della comunità\",\"title\":\"Reporting della comunità\"},\"definitions\":{\"data\":{\"hint\":\"Aggiungi eventuali rapporti della community del tuo progetto.\",\"title\":\"Reporting della comunità\"}},\"title\":\"Reporting della comunità\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Non ci sono documenti o file per questo progetto.\",\"manage\":\"Gestisci documenti e file\",\"title\":\"Documenti e file\"},\"definitions\":{\"data\":{\"hint\":\"Aggiungi eventuali documenti e file che il tuo progetto potrebbe avere.\",\"title\":\"Documenti e file\"}},\"title\":\"Documenti\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Benessere\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Quali aspetti del ciclo di vita del servizio sono importanti per quanto riguarda l'innovazione e il cambiamento?\"},\"title\":\"Innovazione e cambiamento\"},\"intervention\":{\"items\":{\"label\":\"Che tipo di intervento si sta verificando?\"},\"title\":\"Intervento\"},\"learning\":{\"items\":{\"label\":\"Come sta avvenendo l'apprendimento nel tuo intervento?\"},\"title\":\"Apprendimento\"},\"model\":{\"title\":\"Modello\"},\"wellbeing\":{\"items\":{\"label\":\"Quali aspetti del benessere umano e dell'ambiente sono rilevanti per il tuo servizio? Alcuni sono più significativi di altri?\"},\"title\":\"Benessere umano e ambiente\"}},\"guide\":{\"step01\":\"Le iniziative co-creative che stiamo prendendo in considerazione riguardano tutte il miglioramento e la crescita del benessere. Qui consideriamo il benessere degli individui ma questo potrebbe essere applicato a luoghi o ad ambienti più ampi.\",\"step02\":\"Il benessere ha una serie di sfaccettature diverse che sono tutte interdipendenti.\",\"step03\":\"Interagisce anche con l'ambiente fisico e sociale.\",\"step04\":\"Alcuni servizi o interventi riguardano la riparazione di qualcosa che è andato storto e il ripristino dello status quo.\",\"step05\":\"Ma ci sono altri scopi per gli interventi.\",\"step06\":\"Il processo di intervento prevede una serie di fasi e processi differenti.\",\"step07\":\"Infine, se le nostre innovazioni devono essere sostenute, dobbiamo imparare e migliorare.\",\"step08\":\"Chi, cosa o dove è il target del tuo intervento?\",\"step09\":\"Quali aspetti del benessere sono al centro della tua iniziativa?\",\"step10\":\"Quali aspetti del benessere del tuo soggetto sono rilevanti ma oltre lo scopo della tua iniziativa?\",\"step11\":\"Quali sono gli aspetti ambientali rilevanti?\",\"step12\":\"Quali combinazioni di interventi, dalla prevenzione alla trasformazione, sono rilevanti per la tua iniziativa?\",\"step13\":\"In che misura l'apprendimento e il miglioramento sono integrati nella governance dello sviluppo e nei processi di consegna?\"},\"options\":{\"innovation\":{\"development\":\"Sviluppo\",\"facilitation\":\"Facilitazione\",\"palliation\":\"Palliazione\",\"prevention\":\"Prevenzione\",\"rehabilitation\":\"Riabilitazione\",\"remedy\":\"Rimedio\",\"transformation\":\"Trasformazione\"},\"intervention\":{\"coordination_delivery\":\"Coordinamento e consegna\",\"governance\":\"Governance\",\"identification\":\"Identificazione e pianificazione\",\"learning\":\"Apprendimento\",\"management\":\"Gestione\"},\"learning\":{\"research_evidence\":\"Ricerca e prove\",\"service_improvement\":\"Miglioramento del servizio\",\"trials\":\"Prove\"},\"wellbeing\":{\"faculties_skills\":\"Facoltà e abilità\",\"mental_psych\":\"Mentale e psicologico\",\"physical_env\":\"Ambiente fisico\",\"physiological\":\"Fisiologico\",\"socio_cultural_env\":\"Ambiente socio-culturale\",\"socio_economic\":\"Socioeconomico\"}},\"title\":\"Modello di teoria dell'intervento\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Definisci Ethos\",\"define_ethos_items\":\"Valori\\n I principi\\n Intenzioni\\n Politiche\",\"deliver\":\"Consegnare\",\"experience\":\"Esperienza\",\"govern\":\"Governare\",\"individual_cases\":\"Casi individuali\",\"plan_manage\":\"Pianifica e gestisci\",\"plan_manage_items\":\"Regole\\n Risorse\\n Processi\\n Conti\",\"the_service_level\":\"Il livello di servizio\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Come vengono definiti questi valori?\"},\"evidenceUrl\":{\"label\":\"Quali prove (esterne) sono disponibili a sostegno di ciò?\"},\"title\":\"Definisci Ethos\",\"values\":{\"label\":\"Quali sono i valori importanti che l'intervento viene ad affrontare?\"}},\"deliver\":{\"actors\":{\"label\":\"Da chi viene consegnato?\"},\"evidenceUrl\":{\"label\":\"Quali prove (esterne) sono disponibili a sostegno di ciò?\"},\"method\":{\"label\":\"Come viene consegnato l'intervento?\"},\"title\":\"Consegnare\"},\"govern\":{\"actions\":{\"label\":\"Come viene governato l'intervento? Quali misure vengono messe in atto per garantire che i risultati siano quelli previsti?\"},\"actors\":{\"label\":\"Chi lo valuta?\"},\"evolution\":{\"label\":\"In che modo questo impatto sull'evoluzione del servizio?\"},\"improvements\":{\"label\":\"Come vengono identificati i miglioramenti? Come vengono implementati?\"},\"outcomes\":{\"label\":\"I risultati sono incorporati in obiettivi e misurazioni? E se sì, di chi?\"},\"title\":\"Governare\"},\"model\":{\"title\":\"Modello\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Quali azioni vengono intraprese ora nell'ambito del progetto pilota?\"},\"actors\":{\"label\":\"Quali azioni in corso vengono intraprese?\"},\"evidenceUrl\":{\"label\":\"Quali prove (esterne) sono disponibili a sostegno di ciò?\"},\"title\":\"Pianifica e gestisci: azioni correnti\"},\"planManagePrior\":{\"actions\":{\"label\":\"Quali azioni erano state intraprese prima dell'intervento?\"},\"actors\":{\"label\":\"Chi è stato coinvolto in queste azioni precedenti?\"},\"evidenceUrl\":{\"label\":\"Quali prove (esterne) sono disponibili a sostegno di ciò?\"},\"title\":\"Pianificare e gestire - Azioni precedenti\"}},\"guide\":{\"step01\":\"Ci sono una serie di processi fondamentali coinvolti in un'innovazione co-creativa. Il primo riguarda la definizione di ethos.\",\"step02\":\"Il secondo riguarda attività e prodotti di gestione.\",\"step03\":\"L'ordinamento morale riguarda chi può partecipare alle attività quindi, nel caso della vostra iniziativa, chi è coinvolto in questi processi? Dove e quando si svolgono? Come comunicano e come vengono registrati?\",\"step04\":\"Come risultato della leadership, della pianificazione e del design, i servizi o le iniziative vengono forniti e sperimentati.\",\"step05\":\"Ancora una volta chi è coinvolto qui e ottiene qualche partecipazione nelle prime due serie di attività?\",\"step06\":\"Piuttosto che chiudere semplicemente il cerchio con un semplice processo di valutazione, stiamo suggerendo che, nei sistemi di benessere e cura co-produttivi, la governance coinvolge tutti i partecipanti nelle relazioni qui identificate, la partecipazione nell'affrontare le domande definite nel modello di ordinamento morale.\",\"step07\":\"La governance avviene a livello di relazione con il cliente del servizio individuale.\",\"step08\":\"Si svolge anche a livello di servizio generale.\",\"step09\":\"Come si svolgono nella vostra iniziativa i processi di governance, nel senso che li descriviamo qui?\"},\"options\":{\"sources\":{\"meeting\":\"Incontro\",\"other\":\"Altro\",\"policy\":\"Politica\"}},\"title\":\"Ordinamento morale\"},\"social_media\":{\"dashboard\":{\"title\":\"Social media\"},\"definitions\":{\"data\":{\"title\":\"Social media\"}},\"title\":\"Social media\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Non esiste una teoria degli elementi di modifica per questo progetto.\",\"manage\":\"Gestisci la teoria del cambiamento\",\"title\":\"Teoria del cambiamento\"},\"definitions\":{\"data\":{\"hint\":\"Aggiungi eventuali teorie di cambiamento che il tuo progetto potrebbe avere.\",\"title\":\"Teoria del cambiamento\"}},\"title\":\"Teoria del cambiamento\"},\"user_journey_model\":{\"dashboard\":{\"one\":\"\",\"other\":\"\"},\"definitions\":{\"accessing\":{\"access_method\":{\"label\":\"Come hai avuto accesso al servizio?\"},\"appropriate_comment\":{\"label\":\"Pensi che questo aspetto del servizio sia appropriato?\"},\"qualification_experience\":{\"label\":\"In caso affermativo, com'è stata l'esperienza?\"},\"qualification_process\":{\"label\":\"C'era un processo di qualificazione o selezione?\"},\"title\":\"Accesso\"},\"discovering\":{\"comments\":{\"label\":\"Eventuali ulteriori commenti, osservazioni?\"},\"discovery_medium\":{\"label\":\"Come hai scoperto il servizio?\"},\"information_experience\":{\"label\":\"Qual è la tua opinione sulla qualità, completezza e accessibilità delle informazioni?\"},\"information_medium\":{\"label\":\"Come hai avuto accesso alle informazioni sul servizio?\"},\"title\":\"Alla scoperta\"},\"evaluating\":{\"opinions_asked\":{\"hint\":\"Pensa a dove e quando è stato.\",\"label\":\"Ti è stato chiesto quali sono le tue opinioni sulla tua esperienza con il servizio?\"},\"opinions_how\":{\"label\":\"Se sì, come ti è stato chiesto?\"},\"service_experience\":{\"label\":\"Il servizio era quello che ti aspettavi?\"},\"surprises_comments\":{\"label\":\"Ci sono state sorprese o delusioni nella tua esperienza?\"},\"title\":\"Valutare\"},\"instigating\":{\"comments\":{\"label\":\"Commenti\"},\"design_role\":{\"label\":\"Hai avuto un ruolo nella progettazione e definizione del servizio? Se sì, quali sono state le occasioni e i canali in cui ciò è avvenuto?\"},\"instigate_role\":{\"label\":\"Hai avuto qualche ruolo nell'istigare il progetto? Se sì, facevi parte di una delle seguenti opzioni? Puoi sceglierne quante ne vuoi.\"},\"title\":\"Istigante\"},\"model\":{\"title\":\"Modello\"},\"using\":{\"accessible_experience\":{\"label\":\"Il servizio era accessibile a te?\"},\"participate_experience\":{\"label\":\"Com'è stato utilizzare o partecipare al servizio?\"},\"time_experience\":{\"label\":\"La durata e la frequenza degli eventi di servizio o dei contatti erano corrette?\"},\"title\":\"Utilizzando\",\"where\":{\"label\":\"Dove hai utilizzato il servizio?\"}}},\"guide\":{\"step01\":\"I servizi sono pubblicizzati agli utenti previsti, questa è la fase di scoperta.\",\"step02\":\"Gli utenti che desiderano il servizio fanno una sorta di richiesta o applicazione, questa è la fase di accesso.\",\"step03\":\"Se la fase precedente ha esito positivo, il servizio viene fornito e sperimentato, questa è la fase di utilizzo.\",\"step04\":\"Viene quindi valutata l'esperienza di utilizzo del servizio.\",\"step05\":\"Le domande finora presuppongono che il servizio sia stato definito ed esista già. La prossima serie di domande riguarda se e come hai partecipato ai processi con cui il servizio è stato creato in primo luogo.\",\"step06\":\"Per prima cosa possiamo completare il nostro modello di erogazione dei servizi con le fasi coinvolte nella creazione. Chiamiamo questa fase di progettazione.\",\"step07\":\"Quindi possiamo mostrare i processi con cui il servizio è stato identificato e avviato in primo luogo. Chiamiamo questa la fase di istigazione.\"},\"options\":{\"access_methods\":{\"applied\":\"Applicato\",\"other\":\"Altro\",\"referred\":\"Riferito\"},\"instigate_roles\":{\"government_department\":\"Dipartimento del governo\",\"political_party\":\"Partito politico\",\"pressure_group\":\"Gruppo di pressione / campagna\"},\"mediums\":{\"other\":\"Altro\",\"paper\":\"Pubblicazione cartacea\",\"referral\":\"Rinvio\",\"social\":\"Social media\",\"word_of_mouth\":\"Passaparola\"},\"opinions_how\":{\"interview\":\"Colloquio\",\"survey\":\"Sondaggio\",\"workshop\":\"Workshop\"},\"where\":{\"community\":\"Comunità\",\"home\":\"Casa\",\"other\":\"Altro\",\"public\":\"Pubblico\"},\"yes_no_maybe\":{\"maybe\":\"Può essere\",\"no\":\"No\",\"yes\":\"sì\"}},\"title\":\"Modello di viaggio dell'utente\"},\"welcome\":{\"dashboard\":{\"summary\":\"Creato da {user} il {date_time}\"},\"title\":\"benvenuto\"}},\"countries\":{\"de\":\"Germania\",\"el\":\"Grecia\",\"en_GB\":\"Regno Unito\",\"es\":\"Spagna\",\"et\":\"Estonia\",\"fi\":\"Finlandia\",\"fr\":\"Francia\",\"hu\":\"Ungheria\",\"it\":\"Italia\",\"nl\":\"Olanda\",\"pl\":\"Polonia\",\"sv_SE\":\"Svezia\"},\"hints\":{\"editor_double_click_edit\":\"Fare doppio clic su un elemento per modificarlo e immettere per salvare\",\"social_facebook_add\":\"Aggiungi link completi (URL) a gruppi o pagine di Facebook.\",\"social_instagram_add\":\"Inserisci un hashtag di Instagram, con o senza il #. Premi Invio per aggiungere.\",\"social_twitter_add\":\"Inserisci un hashtag di Twitter, con o senza il #. Premi Invio per aggiungere.\",\"social_youtube_add\":\"Immettere un collegamento a un video di YouTube e premere Invio per aggiungerlo.\",\"type_and_enter\":\"Digita il nome di seguito e premi invio.\"},\"languages\":{\"de\":\"Tedesco\",\"el\":\"Greco\",\"en_GB\":\"Inglese\",\"es\":\"Spagnolo\",\"et\":\"Estone\",\"fi\":\"Finlandese\",\"fr\":\"francese\",\"hu\":\"Ungherese\",\"it\":\"Italiano\",\"nl\":\"Olandese\",\"pl\":\"Polacco\",\"sv_SE\":\"Svedese\"},\"user_guide\":{\"back\":\"Indietro\",\"close\":\"Vicino\",\"next\":\"Il prossimo\",\"show\":\"Mostra la guida per l'utente\",\"skip\":\"Salta la guida per l'utente\"}}");
 
 /***/ }),
 
@@ -5516,10 +6194,10 @@ module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organizzazi
 /*!*************************!*\
   !*** ./js/lang/nl.json ***!
   \*************************/
-/*! exports provided: activity_types, app, aspects, hints, languages, user_guide, default */
+/*! exports provided: activity_types, app, aspects, countries, hints, languages, user_guide, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisatie\",\"service\":\"Onderhoud\",\"user\":\"Gebruiker\"},\"app\":{\"add_new_actor\":\"Voeg een nieuwe acteur toe\",\"add_new_item\":\"Voeg een nieuw item toe\",\"all\":\"Alle\",\"colour\":\"Kleur\",\"create\":\"Creëer\",\"created_by\":\"Gemaakt door\",\"delete\":\"Verwijderen\",\"description\":\"Omschrijving\",\"download\":\"Downloaden\",\"error\":\"Fout\",\"error_message\":\"Fout: {message}\",\"export\":\"Exporteren\",\"exporting\":\"Exporteren\",\"exporting_project\":\"Project exporteren\",\"image\":\"Beeld\",\"image_drag_prompt\":\"Sleep uw afbeelding hierheen om te beginnen of klik om te bladeren.\",\"image_is_uploading\":\"Afbeelding uploaden\",\"image_remove\":\"Afbeelding verwijderen\",\"image_upload_error\":\"Uploadfout\",\"import\":\"Importeren\",\"import_project\":\"Project importeren\",\"import_project_drag_hint\":\"Sleep uw CoSMoS-project hierheen om te beginnen of klik om te bladeren.\",\"import_project_notes\":\"Opmerking: u bent de eigenaar van het project dat wordt geïmporteerd.\",\"import_project_success\":\"Het project is succesvol geïmporteerd!\",\"just_mine\":\"Alleen de mijne\",\"label\":\"Etiket\",\"last_saved_at\":\"Laatst opgeslagen om {date_time}\",\"log_in\":\"Log in\",\"maximum_items\":\"Maximaal {count} items | Maxumum {count} item | Maximaal {count} items\",\"models\":\"Modellen\",\"name\":\"Naam\",\"new_project\":\"Maak een nieuw project\",\"next\":\"De volgende\",\"no_projects\":\"Geen projecten gevonden.\",\"ok\":\"OK\",\"open_project\":\"Open project\",\"please_wait_generate\":\"Een ogenblik geduld terwijl het bestand wordt gegenereerd.\",\"processing\":\"Verwerken\",\"project\":\"Project\",\"project_save_success\":\"Project opgeslagen!\",\"save\":\"Opslaan\",\"saving\":\"Besparing\",\"scale_to_fit\":\"Schaal om passend te maken\",\"search\":\"Zoeken\",\"title\":\"Titel\",\"to_create_project\":\"om een project te maken.\",\"try_again\":\"Probeer het nog eens\",\"type\":\"Type\",\"user_is_read_only\":\"Uw gebruikerstoegangsniveau is alleen-lezen.\",\"web_address\":\"webadres\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Macro\"},\"meso\":{\"description\":\"Op dit niveau kunnen er een aantal fasen zijn.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Zijn er andere begunstigden dan de directe gebruiker / deelnemers? Zo ja, wie zijn dat?\",\"title\":\"Begunstigden\"},\"broker\":{\"hint\":\"Is er een actieve makelaar tussen de aanstichters van verandering en veranderingsmakers? Zo ja, wie zijn dat?\",\"title\":\"Makelaar\"},\"changeMakers\":{\"hint\":\"Wie zijn of waren de aanstichters die uw interventieactiviteit hebben geïnitieerd?\",\"title\":\"Veranderaars\"},\"changeTheorists\":{\"hint\":\"Wie zijn de veranderingstheoretici voor de interventie?\",\"title\":\"Verandering Theoretici\"},\"frontLineServiceDeliverer\":{\"hint\":\"Wie is de eerstelijns dienstverlener?\",\"title\":\"Eerstelijns dienstverlener\"},\"instigatorsOfChange\":{\"hint\":\"Wie zijn of waren de aanstichters die uw interventieactiviteit hebben geïnitieerd?\",\"title\":\"Aanjagers van verandering\"},\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"hint\":\"Wie is de Service Delivery Manager die verantwoordelijk is voor de interventie?\",\"title\":\"Service Delivery Manager\"},\"serviceOrganisationManager\":{\"hint\":\"Wie is de serviceorganisatie-manager voor de interventie?\",\"title\":\"Service Organisatie Manager\"},\"servicePolicyMaker\":{\"hint\":\"Wie zijn of waren de definities van het servicebeleid en de principes waaronder de service werkt?\",\"title\":\"Maker van servicebeleid\"},\"subjectsOfChange\":{\"hint\":\"Wie zijn de geïdentificeerde onderwerpen van verandering binnen de interventie?\",\"title\":\"Onderwerpen van verandering\"},\"user\":{\"hint\":\"Wie is de directe gebruiker van de dienst?\",\"title\":\"Klant / gebruiker\"},\"victims\":{\"hint\":\"Zijn er geïdentificeerde slachtoffers? Zo ja, wie zijn dat?\",\"title\":\"Slachtoffers\"}},\"guide\":{\"step01\":\"In dit model beschouwen we een Cosie-initiatief in termen van een reeks rollen en de gespreksrelaties waarin ze betrokken zijn.\",\"step02\":\"Ten eerste hebben we een eerstelijns dienstverlener en een klant.\",\"step03\":\"De bezorger heeft een leidinggevende of leidinggevende. Dit patroon van een persoon die twee gesprekken voert, zal worden herhaald.\",\"step04\":\"De levering vindt plaats in een formele of informele institutionele context.\",\"step05\":\"Ten slotte bestaat de service in een bredere beleidsomgeving.\",\"step06\":\"Dit is bedoeld als een abstract model. In sommige gevallen kan er een platte organisatie zijn waar levering, beheer en beleid worden uitgevoerd door alle leden van een klein team, in andere gevallen kunnen ze verschillende individuen en contexten vertegenwoordigen.\",\"step07\":\"Hoe passen de concepten micro, meso en macro toe op uw initiatief?\",\"step08\":\"Hoe verloopt de communicatie tussen hen?\",\"step09\":\"Hoe gecoördineerd en samenhangend zijn ze?\",\"step10\":\"Zijn er in het bijzonder informatiestromen en gesprekken tussen macro en micro die niet gemedieerd worden door de meso? Wat zijn de gevolgen hiervan?\",\"step11\":\"Het volgende model beschouwt veranderingsagentschap in termen van rollen en gesprekken.\",\"step12\":\"Er moet een wijziging worden doorgevoerd, daarna wordt deze uitgevoerd.\",\"step13\":\"De veranderingen die we overwegen, hebben betrekking op een persoon, of een plaats of omgeving.\",\"step14\":\"De veranderingen die we overwegen zijn vaak zelf complex en gaan over complexe situaties. Vaak zijn ze gebaseerd op een of andere theorie die in de situatie is geïntroduceerd of erin is onderhandeld.\",\"step15\":\"Er is een reeks beoogde begunstigden.\",\"step16\":\"Maar er zijn ook mogelijke begunstigden of slachtoffers van de verandering.\",\"step17\":\"Dit model is ontworpen als een onderzoek naar het initiële servicemodel om de specifieke actoren te identificeren die, in verschillende stadia van de ontwikkeling van het initiatief, een of meer van deze rollen van veranderingsagentschappen hebben vervuld. Wie zijn zij?\"},\"title\":\"Analytisch model\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Dubbelzinnigheid\",\"ambivalence\":\"Ambivalentie\",\"committing\":\"Vastleggen\",\"execute\":\"Uitvoeren\",\"first_order\":\"Eerste bestelling\",\"fourth_order\":\"Vierde Orde!\",\"languaging\":\"\\\"Talen\\\"\",\"measure\":\"Meten\",\"plan\":\"Plan\",\"risk\":\"Risico\",\"second_order\":\"Tweede bestelling\",\"sense_making\":\"Zin maken\",\"third_order\":\"Derde Orde\",\"vision\":\"Visie\",\"zero_order\":\"Geen bestelling\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Hoe wordt het plan uitgevoerd?\"},\"measure\":{\"label\":\"Hoe worden waarnemingen en metingen geregistreerd? Zo nee, wat moet hiervoor worden ingeschakeld?\"},\"plan\":{\"label\":\"Hoe is een plan opgesteld om de visie te realiseren?\"},\"vision\":{\"label\":\"Hoe werden de visie en doelstellingen bepaald?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Wat was de oorsprong van de verandering? En wat was de verandering?\"},\"event_cause\":{\"label\":\"Wat is er gebeurd om deze gebeurtenis te laten plaatsvinden?\"},\"unexpected_events\":{\"label\":\"Zijn er gevallen geweest waarin u onverwachte gebeurtenissen heeft gezien?\"}},\"model\":{\"title\":\"Model\"},\"second_order\":{\"committing\":{\"label\":\"Hoe is de dienstverlening van de interventie veranderd ten opzichte van de oorspronkelijke plannen?\"},\"languaging\":{\"label\":\"Welke veranderingen zijn er aangebracht in de manier waarop de interventie is begrepen?\"},\"sense_making\":{\"label\":\"Wanneer herzie je de plannen en visie?\"}},\"third_order\":{\"processes\":{\"label\":\"Welke processen lokken of maken tweede orde bevraging mogelijk?\"}}},\"guide\":{\"step01\":\"We beginnen met het standaardmodel van doelgericht handelen dat we allemaal goed kennen.\",\"step02\":\"Maar we hebben allemaal de ervaring gehad om terug te kijken en te beseffen dat de dingen op een heel fundamentele manier zijn veranderd: we hebben het over de verschuiving van het paradigma. Dit houdt in dat we ons hebben beziggehouden met het maken van een nieuwe betekenis aan onze wereld en dit betekent vaak dat onze taal verandert.\",\"step03\":\"Deze twee verschillende manieren van werken worden soms eerste orde en tweede orde genoemd.\",\"step04\":\"In managementtermen hebben we enerzijds risicomanagement en anderzijds het oplossen van tegenstrijdigheden en onduidelijkheden.\",\"step05\":\"We introduceren nu het idee van activiteiten van de derde orde die de juiste overgangen tussen het eerste en het tweede werk mogelijk maken en ondersteunen, waardoor we een stap terug kunnen doen om ons ethos en onze aannames te heroverwegen en, als we dat hebben, terug te gaan naar de modus van praktische planning en levering.\",\"step06\":\"Soms is de reactie op ambiguïteit en tegenspraak emotioneel: vechten of vliegen, dat is nul-orde, of inspiratie en heldendom die we de vierde orde zullen noemen.\",\"step07\":\"Dus aan de rechterkant van ons diagram hebben we het spectrum van emotioneel werk en reacties, terwijl we aan de linkerkant coproductief, gesprekswerk hebben.\",\"step08\":\"Dit model genereert een reeks open vragen over waar de verschillende eerste- en tweede-orde-werkzaamheden plaatsvinden in uw initiatief, wat emotioneel werk was en vereist en hoe en waar het wordt uitgevoerd en hoe en door wie de vereiste derde-orde-interventies zijn. ondernomen?\"},\"title\":\"Model wijzigen\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Infrastructurele relaties, middelen en faciliteiten\",\"policy_law\":\"Beleid en recht\",\"resources\":\"Middelen\",\"service_definition\":\"Servicedefinitie en ontwikkelingsplatform\",\"service_delivery\":\"Serviceleveringsplatform\",\"structural_relationships\":\"Structurele relaties en gelegenheden\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Zijn er andere begunstigden dan de directe gebruiker / deelnemers? Zo ja, wie zijn dat?\",\"title\":\"Begunstigde\"},\"delivery\":{\"hint\":\"Wie is verantwoordelijk voor de leveringsmechanismen, kanalen en rollen in uw pilot?\",\"title\":\"Bezorger\"},\"deployment\":{\"hint\":\"Wie implementeert / implementeert en activeert / activeert die processen en bronnen?\",\"title\":\"Deployer\"},\"drivers\":{\"body\":{\"hint\":\"Wat zijn de drijfveren en motivaties?\",\"label\":\"Drijfveren en motivaties\"},\"hint\":\"Wat waren / zijn de drijfveren en motivaties van het project? Was het een wettelijke vereiste, erkenning van een behoefte of eis, een kans grijpen, een ongelijkheid aanpakken?\",\"title\":\"Drijfveren en motivaties\"},\"evaluation\":{\"hint\":\"Wie zijn de evaluator (en) en de bestuurders van de dienst?\",\"title\":\"Evaluator\"},\"extorg\":{\"hint\":\"Zijn er relevante actoren, belanghebbenden of agentschappen die relevant zijn voor de pilot, maar die buiten de visie en ethos blijven?\",\"title\":\"Externe organisaties\"},\"extsvc\":{\"hint\":\"Welke herbruikbare faciliteiten, (technische en personele) middelen, diensten en informatiebronnen zijn ontwikkeld en gebruikt ter ondersteuning van deze dienstdefinitie- en ontwikkelingsprocessen? Welke externe middelen en diensten (bijv. Communicatie en sociale media) werden / worden gebruikt?\",\"title\":\"Externe technische diensten\"},\"infsvc\":{\"hint\":\"Van welke externe diensten, kanalen en faciliteiten maakt u gebruik bij het leveren van uw dienst (en)? Van welke informatiebronnen maakt u gebruik? Welke informatie publiceert u, aan wie en via welke kanalen en media?\",\"title\":\"Infrastructurele diensten\"},\"initiator\":{\"hint\":\"Wie zijn of waren de aanstichters die uw pilootactiviteit hebben geïnitieerd?\",\"title\":\"Initiator\"},\"model\":{\"title\":\"Model\"},\"policyDef\":{\"hint\":\"Wie zijn, of waren, de definities van het servicebeleid en de principes waaronder de service opereert?\",\"title\":\"Beleidsbepaler\"},\"specDes\":{\"hint\":\"Wie specificeert / specificeert en ontwerpt / ontwierp de serviceleveringsprocessen en -middelen?\",\"title\":\"Specifier en Designer\"},\"user\":{\"hint\":\"Wie is de directe gebruiker van de dienst?\",\"title\":\"Gebruiker\"}},\"title\":\"Co-creatie van servicemodel\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Er zijn geen community-rapportage-items voor dit project.\",\"manage\":\"Beheer communityrapportage\",\"title\":\"Communityrapportage\"},\"definitions\":{\"data\":{\"hint\":\"Voeg alstublieft alle communityrapporten toe die uw project heeft.\",\"title\":\"Communityrapportage\"}},\"title\":\"Communityrapportage\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Er zijn geen documenten of bestanden voor dit project.\",\"manage\":\"Beheer documenten en bestanden\",\"title\":\"Documenten en bestanden\"},\"definitions\":{\"data\":{\"hint\":\"Voeg alle documenten en bestanden toe die uw project heeft.\",\"title\":\"Documenten en bestanden\"}},\"title\":\"Documenten\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Welzijn\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Welke aspecten van de servicelevenscyclus zijn belangrijk met betrekking tot uw innovatie en verandering?\"},\"title\":\"Innovatie en verandering\"},\"intervention\":{\"items\":{\"label\":\"Welk type interventie vindt plaats?\"},\"title\":\"Interventie\"},\"learning\":{\"items\":{\"label\":\"Hoe verloopt het leren tijdens uw interventie?\"},\"title\":\"Aan het leren\"},\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"items\":{\"label\":\"Welke aspecten van het menselijk welzijn en van het milieu zijn relevant voor uw dienstverlening? Zijn sommige belangrijker dan andere?\"},\"title\":\"Menselijk welzijn en milieu\"}},\"guide\":{\"step01\":\"De co-creatieve initiatieven die we overwegen, zijn allemaal gericht op het verbeteren en koesteren van welzijn. Hier kijken we naar het welzijn van individuen, maar dit kan worden toegepast op plaatsen of op grotere omgevingen.\",\"step02\":\"Welzijn heeft een aantal verschillende facetten die allemaal van elkaar afhankelijk zijn.\",\"step03\":\"Het heeft ook interactie met de fysieke en sociale omgevingen.\",\"step04\":\"Sommige diensten of interventies gaan over het herstellen van iets dat is misgegaan en het herstellen van de status quo.\",\"step05\":\"Maar er zijn andere doeleinden voor interventies.\",\"step06\":\"Het interventieproces omvat een aantal verschillende fasen en processen.\",\"step07\":\"Ten slotte, als we onze innovaties willen voortzetten, moeten we leren en verbeteren.\",\"step08\":\"Wie, wat of waar is het doelwit van uw interventie?\",\"step09\":\"Welke aspecten van welzijn zijn de focus van uw initiatief?\",\"step10\":\"Welke aspecten van het welzijn van uw onderwerp zijn relevant, maar vallen buiten het bestek van uw initiatief?\",\"step11\":\"Wat zijn de relevante milieuaspecten?\",\"step12\":\"Welke combinaties van interventies, van preventie tot transformatie, zijn relevant voor uw initiatief?\",\"step13\":\"In hoeverre zijn leren en verbeteren ingebouwd in uw ontwikkelbeheer en leveringsprocessen?\"},\"options\":{\"innovation\":{\"development\":\"Ontwikkeling\",\"facilitation\":\"Faciliteren\",\"palliation\":\"Palliation\",\"prevention\":\"Preventie\",\"rehabilitation\":\"Rehabilitatie\",\"remedy\":\"Remedie\",\"transformation\":\"Transformatie\"},\"intervention\":{\"coordination_delivery\":\"Coördinatie en levering\",\"governance\":\"Bestuur\",\"identification\":\"Identificatie en planning\",\"learning\":\"Aan het leren\",\"management\":\"Beheer\"},\"learning\":{\"research_evidence\":\"Onderzoek en bewijs\",\"service_improvement\":\"Serviceverbetering\",\"trials\":\"Proeven\"},\"wellbeing\":{\"faculties_skills\":\"Faculteiten en vaardigheden\",\"mental_psych\":\"Mentaal en psychologisch\",\"physical_env\":\"Fysieke omgeving\",\"physiological\":\"Fysiologisch\",\"socio_cultural_env\":\"Socio-culturele omgeving\",\"socio_economic\":\"Socio-economisch\"}},\"title\":\"Interventietheorie Model\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Definieer Ethos\",\"define_ethos_items\":\"Waarden\\n Principes\\n Intenties\\n Beleid\",\"deliver\":\"Leveren\",\"experience\":\"Ervaring\",\"govern\":\"Regeren\",\"individual_cases\":\"Individuele gevallen\",\"plan_manage\":\"Plannen en beheren\",\"plan_manage_items\":\"Reglement\\n Middelen\\n Processen\\n Accounts\",\"the_service_level\":\"Het serviceniveau\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Hoe worden deze waarden gedefinieerd?\"},\"evidenceUrl\":{\"label\":\"Welk (extern) bewijs is er om dit te ondersteunen?\"},\"title\":\"Definieer Ethos\",\"values\":{\"label\":\"Welke waarden zijn belangrijk waarop de interventie komt te staan?\"}},\"deliver\":{\"actors\":{\"label\":\"Door wie wordt het geleverd?\"},\"evidenceUrl\":{\"label\":\"Welk (extern) bewijs is er om dit te ondersteunen?\"},\"method\":{\"label\":\"Hoe wordt de interventie geleverd?\"},\"title\":\"Leveren\"},\"govern\":{\"actions\":{\"label\":\"Hoe wordt de interventie geregeld? Welke maatregelen zijn genomen om ervoor te zorgen dat de resultaten waren zoals bedoeld?\"},\"actors\":{\"label\":\"Wie evalueert dit?\"},\"evolution\":{\"label\":\"Hoe beïnvloedt dit de evolutie van de dienst?\"},\"improvements\":{\"label\":\"Hoe worden verbeteringen geïdentificeerd? Hoe worden ze geïmplementeerd?\"},\"outcomes\":{\"label\":\"Zijn de resultaten belichaamd in doelen en metingen? En zo ja, van wie?\"},\"title\":\"Govern\"},\"model\":{\"title\":\"Model\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Welke acties worden er nu ondernomen binnen de pilot?\"},\"actors\":{\"label\":\"Welke lopende acties worden er ondernomen?\"},\"evidenceUrl\":{\"label\":\"Welk (extern) bewijs is er om dit te ondersteunen?\"},\"title\":\"Plannen en beheren - Huidige acties\"},\"planManagePrior\":{\"actions\":{\"label\":\"Welke acties werden er ondernomen voorafgaand aan de interventie?\"},\"actors\":{\"label\":\"Wie was er bij deze eerdere acties betrokken?\"},\"evidenceUrl\":{\"label\":\"Welk (extern) bewijs is er om dit te ondersteunen?\"},\"title\":\"Plannen en beheren - Voorafgaande acties\"}},\"guide\":{\"step01\":\"Er zijn een aantal kernprocessen betrokken bij een co-creatieve innovatie. De eerste betreft de definitie van ethos.\",\"step02\":\"De tweede betreft managementactiviteiten en producten.\",\"step03\":\"Morele ordening gaat over wie er mag deelnemen aan activiteiten, dus in het geval van uw initiatief, wie is er bij deze processen betrokken? Waar en wanneer vinden ze plaats? Hoe communiceren ze en hoe worden ze opgenomen?\",\"step04\":\"Als resultaat van leiderschap, planning en ontwerp worden diensten of initiatieven geleverd en ervaren.\",\"step05\":\"Nogmaals, wie is hier bij betrokken en krijgen zij enige deelname aan de eerste twee reeksen activiteiten?\",\"step06\":\"In plaats van simpelweg de cirkel rond te maken met een eenvoudig evaluatieproces, suggereren we dat, in systemen van coproductief welzijn en zorg, governance alle deelnemers in de hier geïdentificeerde relaties betrekt bij het beantwoorden van de vragen die zijn gedefinieerd in het morele ordeningsmodel.\",\"step07\":\"Governance vindt plaats op het niveau van de individuele klantrelatie.\",\"step08\":\"Het vindt ook plaats op het algehele serviceniveau.\",\"step09\":\"Hoe vinden bestuursprocessen, in de zin dat we ze hier beschrijven, plaats in uw initiatief?\"},\"options\":{\"sources\":{\"meeting\":\"Vergadering\",\"other\":\"Andere\",\"policy\":\"Het beleid\"}},\"title\":\"Morele ordening\"},\"social_media\":{\"dashboard\":{\"title\":\"Sociale media\"},\"definitions\":{\"data\":{\"title\":\"Sociale media\"}},\"title\":\"Sociale media\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Er zijn geen theorie van veranderingsitems voor dit project.\",\"manage\":\"Beheer Theory of Change\",\"title\":\"Theorie van verandering\"},\"definitions\":{\"data\":{\"hint\":\"Voeg alstublieft eventuele theorieën toe over de verandering die uw project heeft.\",\"title\":\"Theorie van verandering\"}},\"title\":\"Theorie van verandering\"},\"welcome\":{\"dashboard\":{\"summary\":\"Gemaakt door {user} op {date_time}\"},\"title\":\"Welkom\"}},\"hints\":{\"editor_double_click_edit\":\"Dubbelklik op een item om het te bewerken en voer het in om het op te slaan\",\"social_facebook_add\":\"Voeg volledige links (URL's) toe aan Facebook-groepen of -pagina's.\",\"social_instagram_add\":\"Voer een Instagram-hashtag in, met of zonder de #. Druk op enter om toe te voegen.\",\"social_twitter_add\":\"Voer een Twitter-hashtag in, met of zonder de #. Druk op enter om toe te voegen.\",\"social_youtube_add\":\"Voer een link naar een YouTube-video in en druk op Enter om toe te voegen.\",\"type_and_enter\":\"Typ de naam hieronder en druk op enter.\"},\"languages\":{\"de\":\"Duitse\",\"el\":\"Grieks\",\"en_GB\":\"Engels\",\"es\":\"Spaans\",\"et\":\"Ests\",\"fi\":\"Fins\",\"fr\":\"Frans\",\"hu\":\"Hongaars\",\"it\":\"Italiaans\",\"nl\":\"Nederlands\",\"pl\":\"Pools\",\"sv_SE\":\"Zweeds\"},\"user_guide\":{\"back\":\"Terug\",\"close\":\"Dichtbij\",\"next\":\"De volgende\",\"show\":\"Toon gebruikershandleiding\",\"skip\":\"Sla de gebruikershandleiding over\"}}");
+module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisatie\",\"service\":\"Onderhoud\",\"user\":\"Gebruiker\"},\"app\":{\"add_new_actor\":\"Voeg een nieuwe acteur toe\",\"add_new_item\":\"Voeg een nieuw item toe\",\"all\":\"Alle\",\"colour\":\"Kleur\",\"country\":\"Land\",\"create\":\"Creëer\",\"created_by\":\"Gemaakt door\",\"delete\":\"Verwijderen\",\"description\":\"Omschrijving\",\"download\":\"Downloaden\",\"error\":\"Fout\",\"error_message\":\"Fout: {message}\",\"export\":\"Exporteren\",\"exporting\":\"Exporteren\",\"exporting_project\":\"Project exporteren\",\"image\":\"Beeld\",\"image_drag_prompt\":\"Sleep uw afbeelding hierheen om te beginnen of klik om te bladeren.\",\"image_is_uploading\":\"Afbeelding uploaden\",\"image_remove\":\"Afbeelding verwijderen\",\"image_upload_error\":\"Uploadfout\",\"import\":\"Importeren\",\"import_project\":\"Project importeren\",\"import_project_drag_hint\":\"Sleep uw CoSMoS-project hierheen om te beginnen of klik om te bladeren.\",\"import_project_notes\":\"Opmerking: u bent de eigenaar van het project dat wordt geïmporteerd.\",\"import_project_success\":\"Het project is succesvol geïmporteerd!\",\"just_mine\":\"Alleen de mijne\",\"label\":\"Etiket\",\"last_saved_at\":\"Laatst opgeslagen om {date_time}\",\"log_in\":\"Log in\",\"maximum_items\":\"Maximaal {count} items | Maxumum {count} item | Maximaal {count} items\",\"models\":\"Modellen\",\"more_details\":\"Meer details\",\"name\":\"Naam\",\"new_project\":\"Maak een nieuw project\",\"next\":\"De volgende\",\"no_projects\":\"Geen projecten gevonden.\",\"ok\":\"OK\",\"open_project\":\"Open project\",\"please_wait_generate\":\"Een ogenblik geduld terwijl het bestand wordt gegenereerd.\",\"processing\":\"Verwerken\",\"project\":\"Project\",\"project_save_success\":\"Project opgeslagen!\",\"save\":\"Opslaan\",\"saving\":\"Besparing\",\"scale_to_fit\":\"Schaal om passend te maken\",\"search\":\"Zoeken\",\"title\":\"Titel\",\"to_create_project\":\"om een project te maken.\",\"try_again\":\"Probeer het nog eens\",\"type\":\"Type\",\"user_is_read_only\":\"Uw gebruikerstoegangsniveau is alleen-lezen.\",\"web_address\":\"webadres\",\"which_country\":\"Uit welk land kom je?\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Macro\"},\"meso\":{\"description\":\"Op dit niveau kunnen er een aantal fasen zijn.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Zijn er andere begunstigden dan de directe gebruiker / deelnemers? Zo ja, wie zijn dat?\",\"title\":\"Begunstigden\"},\"broker\":{\"hint\":\"Is er een actieve makelaar tussen de aanstichters van verandering en veranderingsmakers? Zo ja, wie zijn dat?\",\"title\":\"Makelaar\"},\"changeMakers\":{\"hint\":\"Wie zijn of waren de aanstichters die uw interventieactiviteit hebben geïnitieerd?\",\"title\":\"Veranderaars\"},\"changeTheorists\":{\"hint\":\"Wie zijn de veranderingstheoretici voor de interventie?\",\"title\":\"Verandering Theoretici\"},\"frontLineServiceDeliverer\":{\"hint\":\"Wie is de eerstelijns dienstverlener?\",\"title\":\"Eerstelijns dienstverlener\"},\"instigatorsOfChange\":{\"hint\":\"Wie zijn of waren de aanstichters die uw interventieactiviteit hebben geïnitieerd?\",\"title\":\"Aanjagers van verandering\"},\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"hint\":\"Wie is de Service Delivery Manager die verantwoordelijk is voor de interventie?\",\"title\":\"Service Delivery Manager\"},\"serviceOrganisationManager\":{\"hint\":\"Wie is de serviceorganisatie-manager voor de interventie?\",\"title\":\"Service Organisatie Manager\"},\"servicePolicyMaker\":{\"hint\":\"Wie zijn of waren de definities van het servicebeleid en de principes waaronder de service werkt?\",\"title\":\"Maker van servicebeleid\"},\"subjectsOfChange\":{\"hint\":\"Wie zijn de geïdentificeerde onderwerpen van verandering binnen de interventie?\",\"title\":\"Onderwerpen van verandering\"},\"user\":{\"hint\":\"Wie is de directe gebruiker van de dienst?\",\"title\":\"Klant / gebruiker\"},\"victims\":{\"hint\":\"Zijn er geïdentificeerde slachtoffers? Zo ja, wie zijn dat?\",\"title\":\"Slachtoffers\"}},\"guide\":{\"step01\":\"In dit model beschouwen we een Cosie-initiatief in termen van een reeks rollen en de gespreksrelaties waarin ze betrokken zijn.\",\"step02\":\"Ten eerste hebben we een eerstelijns dienstverlener en een klant.\",\"step03\":\"De bezorger heeft een leidinggevende of leidinggevende. Dit patroon van een persoon die twee gesprekken voert, zal worden herhaald.\",\"step04\":\"De levering vindt plaats in een formele of informele institutionele context.\",\"step05\":\"Ten slotte bestaat de service in een bredere beleidsomgeving.\",\"step06\":\"Dit is bedoeld als een abstract model. In sommige gevallen kan er een platte organisatie zijn waar levering, beheer en beleid worden uitgevoerd door alle leden van een klein team, in andere gevallen kunnen ze verschillende individuen en contexten vertegenwoordigen.\",\"step07\":\"Hoe passen de concepten micro, meso en macro toe op uw initiatief?\",\"step08\":\"Hoe verloopt de communicatie tussen hen?\",\"step09\":\"Hoe gecoördineerd en samenhangend zijn ze?\",\"step10\":\"Zijn er in het bijzonder informatiestromen en gesprekken tussen macro en micro die niet gemedieerd worden door de meso? Wat zijn de gevolgen hiervan?\",\"step11\":\"Het volgende model beschouwt veranderingsagentschap in termen van rollen en gesprekken.\",\"step12\":\"Er moet een wijziging worden doorgevoerd, daarna wordt deze uitgevoerd.\",\"step13\":\"De veranderingen die we overwegen, hebben betrekking op een persoon, of een plaats of omgeving.\",\"step14\":\"De veranderingen die we overwegen zijn vaak zelf complex en gaan over complexe situaties. Vaak zijn ze gebaseerd op een of andere theorie die in de situatie is geïntroduceerd of erin is onderhandeld.\",\"step15\":\"Er is een reeks beoogde begunstigden.\",\"step16\":\"Maar er zijn ook mogelijke begunstigden of slachtoffers van de verandering.\",\"step17\":\"Dit model is ontworpen als een onderzoek naar het initiële servicemodel om de specifieke actoren te identificeren die, in verschillende stadia van de ontwikkeling van het initiatief, een of meer van deze rollen van veranderingsagentschappen hebben vervuld. Wie zijn zij?\"},\"title\":\"Analytisch model\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Dubbelzinnigheid\",\"ambivalence\":\"Ambivalentie\",\"committing\":\"Vastleggen\",\"execute\":\"Uitvoeren\",\"first_order\":\"Eerste bestelling\",\"fourth_order\":\"Vierde Orde!\",\"languaging\":\"\\\"Talen\\\"\",\"measure\":\"Meten\",\"plan\":\"Plan\",\"risk\":\"Risico\",\"second_order\":\"Tweede bestelling\",\"sense_making\":\"Zin maken\",\"third_order\":\"Derde Orde\",\"vision\":\"Visie\",\"zero_order\":\"Geen bestelling\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Hoe wordt het plan uitgevoerd?\"},\"measure\":{\"label\":\"Hoe worden waarnemingen en metingen geregistreerd? Zo nee, wat moet hiervoor worden ingeschakeld?\"},\"plan\":{\"label\":\"Hoe is een plan opgesteld om de visie te realiseren?\"},\"vision\":{\"label\":\"Hoe werden de visie en doelstellingen bepaald?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Wat was de oorsprong van de verandering? En wat was de verandering?\"},\"event_cause\":{\"label\":\"Wat is er gebeurd om deze gebeurtenis te laten plaatsvinden?\"},\"unexpected_events\":{\"label\":\"Zijn er gevallen geweest waarin u onverwachte gebeurtenissen heeft gezien?\"}},\"model\":{\"title\":\"Model\"},\"second_order\":{\"committing\":{\"label\":\"Hoe is de dienstverlening van de interventie veranderd ten opzichte van de oorspronkelijke plannen?\"},\"languaging\":{\"label\":\"Welke veranderingen zijn er aangebracht in de manier waarop de interventie is begrepen?\"},\"sense_making\":{\"label\":\"Wanneer herzie je de plannen en visie?\"}},\"third_order\":{\"processes\":{\"label\":\"Welke processen lokken of maken tweede orde bevraging mogelijk?\"}}},\"guide\":{\"step01\":\"We beginnen met het standaardmodel van doelgericht handelen dat we allemaal goed kennen.\",\"step02\":\"Maar we hebben allemaal de ervaring gehad om terug te kijken en te beseffen dat de dingen op een heel fundamentele manier zijn veranderd: we hebben het over de verschuiving van het paradigma. Dit houdt in dat we ons hebben beziggehouden met het maken van een nieuwe betekenis aan onze wereld en dit betekent vaak dat onze taal verandert.\",\"step03\":\"Deze twee verschillende manieren van werken worden soms eerste orde en tweede orde genoemd.\",\"step04\":\"In managementtermen hebben we enerzijds risicomanagement en anderzijds het oplossen van tegenstrijdigheden en onduidelijkheden.\",\"step05\":\"We introduceren nu het idee van activiteiten van de derde orde die de juiste overgangen tussen het eerste en het tweede werk mogelijk maken en ondersteunen, waardoor we een stap terug kunnen doen om ons ethos en onze aannames te heroverwegen en, als we dat hebben, terug te gaan naar de modus van praktische planning en levering.\",\"step06\":\"Soms is de reactie op ambiguïteit en tegenspraak emotioneel: vechten of vliegen, dat is nul-orde, of inspiratie en heldendom die we de vierde orde zullen noemen.\",\"step07\":\"Dus aan de rechterkant van ons diagram hebben we het spectrum van emotioneel werk en reacties, terwijl we aan de linkerkant coproductief, gesprekswerk hebben.\",\"step08\":\"Dit model genereert een reeks open vragen over waar de verschillende eerste- en tweede-orde-werkzaamheden plaatsvinden in uw initiatief, wat emotioneel werk was en vereist en hoe en waar het wordt uitgevoerd en hoe en door wie de vereiste derde-orde-interventies zijn. ondernomen?\"},\"title\":\"Model wijzigen\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Ethos\",\"infrastructural_relationships\":\"Infrastructurele relaties, middelen en faciliteiten\",\"policy_law\":\"Beleid en recht\",\"resources\":\"Middelen\",\"service_definition\":\"Servicedefinitie en ontwikkelingsplatform\",\"service_delivery\":\"Serviceleveringsplatform\",\"structural_relationships\":\"Structurele relaties en gelegenheden\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Zijn er andere begunstigden dan de directe gebruiker / deelnemers? Zo ja, wie zijn dat?\",\"title\":\"Begunstigde\"},\"delivery\":{\"hint\":\"Wie is verantwoordelijk voor de leveringsmechanismen, kanalen en rollen in uw pilot?\",\"title\":\"Bezorger\"},\"deployment\":{\"hint\":\"Wie implementeert / implementeert en activeert / activeert die processen en bronnen?\",\"title\":\"Deployer\"},\"drivers\":{\"body\":{\"hint\":\"Wat zijn de drijfveren en motivaties?\",\"label\":\"Drijfveren en motivaties\"},\"hint\":\"Wat waren / zijn de drijfveren en motivaties van het project? Was het een wettelijke vereiste, erkenning van een behoefte of eis, een kans grijpen, een ongelijkheid aanpakken?\",\"title\":\"Drijfveren en motivaties\"},\"evaluation\":{\"hint\":\"Wie zijn de evaluator (en) en de bestuurders van de dienst?\",\"title\":\"Evaluator\"},\"extorg\":{\"hint\":\"Zijn er relevante actoren, belanghebbenden of agentschappen die relevant zijn voor de pilot, maar die buiten de visie en ethos blijven?\",\"title\":\"Externe organisaties\"},\"extsvc\":{\"hint\":\"Welke herbruikbare faciliteiten, (technische en personele) middelen, diensten en informatiebronnen zijn ontwikkeld en gebruikt ter ondersteuning van deze dienstdefinitie- en ontwikkelingsprocessen? Welke externe middelen en diensten (bijv. Communicatie en sociale media) werden / worden gebruikt?\",\"title\":\"Externe technische diensten\"},\"infsvc\":{\"hint\":\"Van welke externe diensten, kanalen en faciliteiten maakt u gebruik bij het leveren van uw dienst (en)? Van welke informatiebronnen maakt u gebruik? Welke informatie publiceert u, aan wie en via welke kanalen en media?\",\"title\":\"Infrastructurele diensten\"},\"initiator\":{\"hint\":\"Wie zijn of waren de aanstichters die uw pilootactiviteit hebben geïnitieerd?\",\"title\":\"Initiator\"},\"model\":{\"title\":\"Model\"},\"policyDef\":{\"hint\":\"Wie zijn, of waren, de definities van het servicebeleid en de principes waaronder de service opereert?\",\"title\":\"Beleidsbepaler\"},\"specDes\":{\"hint\":\"Wie specificeert / specificeert en ontwerpt / ontwierp de serviceleveringsprocessen en -middelen?\",\"title\":\"Specifier en Designer\"},\"user\":{\"hint\":\"Wie is de directe gebruiker van de dienst?\",\"title\":\"Gebruiker\"}},\"title\":\"Co-creatie van servicemodel\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Er zijn geen community-rapportage-items voor dit project.\",\"manage\":\"Beheer communityrapportage\",\"title\":\"Communityrapportage\"},\"definitions\":{\"data\":{\"hint\":\"Voeg alstublieft alle communityrapporten toe die uw project heeft.\",\"title\":\"Communityrapportage\"}},\"title\":\"Communityrapportage\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Er zijn geen documenten of bestanden voor dit project.\",\"manage\":\"Beheer documenten en bestanden\",\"title\":\"Documenten en bestanden\"},\"definitions\":{\"data\":{\"hint\":\"Voeg alle documenten en bestanden toe die uw project heeft.\",\"title\":\"Documenten en bestanden\"}},\"title\":\"Documenten\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Welzijn\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Welke aspecten van de servicelevenscyclus zijn belangrijk met betrekking tot uw innovatie en verandering?\"},\"title\":\"Innovatie en verandering\"},\"intervention\":{\"items\":{\"label\":\"Welk type interventie vindt plaats?\"},\"title\":\"Interventie\"},\"learning\":{\"items\":{\"label\":\"Hoe verloopt het leren tijdens uw interventie?\"},\"title\":\"Aan het leren\"},\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"items\":{\"label\":\"Welke aspecten van het menselijk welzijn en van het milieu zijn relevant voor uw dienstverlening? Zijn sommige belangrijker dan andere?\"},\"title\":\"Menselijk welzijn en milieu\"}},\"guide\":{\"step01\":\"De co-creatieve initiatieven die we overwegen, zijn allemaal gericht op het verbeteren en koesteren van welzijn. Hier kijken we naar het welzijn van individuen, maar dit kan worden toegepast op plaatsen of op grotere omgevingen.\",\"step02\":\"Welzijn heeft een aantal verschillende facetten die allemaal van elkaar afhankelijk zijn.\",\"step03\":\"Het heeft ook interactie met de fysieke en sociale omgevingen.\",\"step04\":\"Sommige diensten of interventies gaan over het herstellen van iets dat is misgegaan en het herstellen van de status quo.\",\"step05\":\"Maar er zijn andere doeleinden voor interventies.\",\"step06\":\"Het interventieproces omvat een aantal verschillende fasen en processen.\",\"step07\":\"Ten slotte, als we onze innovaties willen voortzetten, moeten we leren en verbeteren.\",\"step08\":\"Wie, wat of waar is het doelwit van uw interventie?\",\"step09\":\"Welke aspecten van welzijn zijn de focus van uw initiatief?\",\"step10\":\"Welke aspecten van het welzijn van uw onderwerp zijn relevant, maar vallen buiten het bestek van uw initiatief?\",\"step11\":\"Wat zijn de relevante milieuaspecten?\",\"step12\":\"Welke combinaties van interventies, van preventie tot transformatie, zijn relevant voor uw initiatief?\",\"step13\":\"In hoeverre zijn leren en verbeteren ingebouwd in uw ontwikkelbeheer en leveringsprocessen?\"},\"options\":{\"innovation\":{\"development\":\"Ontwikkeling\",\"facilitation\":\"Faciliteren\",\"palliation\":\"Palliation\",\"prevention\":\"Preventie\",\"rehabilitation\":\"Rehabilitatie\",\"remedy\":\"Remedie\",\"transformation\":\"Transformatie\"},\"intervention\":{\"coordination_delivery\":\"Coördinatie en levering\",\"governance\":\"Bestuur\",\"identification\":\"Identificatie en planning\",\"learning\":\"Aan het leren\",\"management\":\"Beheer\"},\"learning\":{\"research_evidence\":\"Onderzoek en bewijs\",\"service_improvement\":\"Serviceverbetering\",\"trials\":\"Proeven\"},\"wellbeing\":{\"faculties_skills\":\"Faculteiten en vaardigheden\",\"mental_psych\":\"Mentaal en psychologisch\",\"physical_env\":\"Fysieke omgeving\",\"physiological\":\"Fysiologisch\",\"socio_cultural_env\":\"Socio-culturele omgeving\",\"socio_economic\":\"Socio-economisch\"}},\"title\":\"Interventietheorie Model\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Definieer Ethos\",\"define_ethos_items\":\"Waarden\\n Principes\\n Intenties\\n Beleid\",\"deliver\":\"Leveren\",\"experience\":\"Ervaring\",\"govern\":\"Regeren\",\"individual_cases\":\"Individuele gevallen\",\"plan_manage\":\"Plannen en beheren\",\"plan_manage_items\":\"Reglement\\n Middelen\\n Processen\\n Accounts\",\"the_service_level\":\"Het serviceniveau\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Hoe worden deze waarden gedefinieerd?\"},\"evidenceUrl\":{\"label\":\"Welk (extern) bewijs is er om dit te ondersteunen?\"},\"title\":\"Definieer Ethos\",\"values\":{\"label\":\"Welke waarden zijn belangrijk waarop de interventie komt te staan?\"}},\"deliver\":{\"actors\":{\"label\":\"Door wie wordt het geleverd?\"},\"evidenceUrl\":{\"label\":\"Welk (extern) bewijs is er om dit te ondersteunen?\"},\"method\":{\"label\":\"Hoe wordt de interventie geleverd?\"},\"title\":\"Leveren\"},\"govern\":{\"actions\":{\"label\":\"Hoe wordt de interventie geregeld? Welke maatregelen zijn genomen om ervoor te zorgen dat de resultaten waren zoals bedoeld?\"},\"actors\":{\"label\":\"Wie evalueert dit?\"},\"evolution\":{\"label\":\"Hoe beïnvloedt dit de evolutie van de dienst?\"},\"improvements\":{\"label\":\"Hoe worden verbeteringen geïdentificeerd? Hoe worden ze geïmplementeerd?\"},\"outcomes\":{\"label\":\"Zijn de resultaten belichaamd in doelen en metingen? En zo ja, van wie?\"},\"title\":\"Govern\"},\"model\":{\"title\":\"Model\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Welke acties worden er nu ondernomen binnen de pilot?\"},\"actors\":{\"label\":\"Welke lopende acties worden er ondernomen?\"},\"evidenceUrl\":{\"label\":\"Welk (extern) bewijs is er om dit te ondersteunen?\"},\"title\":\"Plannen en beheren - Huidige acties\"},\"planManagePrior\":{\"actions\":{\"label\":\"Welke acties werden er ondernomen voorafgaand aan de interventie?\"},\"actors\":{\"label\":\"Wie was er bij deze eerdere acties betrokken?\"},\"evidenceUrl\":{\"label\":\"Welk (extern) bewijs is er om dit te ondersteunen?\"},\"title\":\"Plannen en beheren - Voorafgaande acties\"}},\"guide\":{\"step01\":\"Er zijn een aantal kernprocessen betrokken bij een co-creatieve innovatie. De eerste betreft de definitie van ethos.\",\"step02\":\"De tweede betreft managementactiviteiten en producten.\",\"step03\":\"Morele ordening gaat over wie er mag deelnemen aan activiteiten, dus in het geval van uw initiatief, wie is er bij deze processen betrokken? Waar en wanneer vinden ze plaats? Hoe communiceren ze en hoe worden ze opgenomen?\",\"step04\":\"Als resultaat van leiderschap, planning en ontwerp worden diensten of initiatieven geleverd en ervaren.\",\"step05\":\"Nogmaals, wie is hier bij betrokken en krijgen zij enige deelname aan de eerste twee reeksen activiteiten?\",\"step06\":\"In plaats van simpelweg de cirkel rond te maken met een eenvoudig evaluatieproces, suggereren we dat, in systemen van coproductief welzijn en zorg, governance alle deelnemers in de hier geïdentificeerde relaties betrekt bij het beantwoorden van de vragen die zijn gedefinieerd in het morele ordeningsmodel.\",\"step07\":\"Governance vindt plaats op het niveau van de individuele klantrelatie.\",\"step08\":\"Het vindt ook plaats op het algehele serviceniveau.\",\"step09\":\"Hoe vinden bestuursprocessen, in de zin dat we ze hier beschrijven, plaats in uw initiatief?\"},\"options\":{\"sources\":{\"meeting\":\"Vergadering\",\"other\":\"Andere\",\"policy\":\"Het beleid\"}},\"title\":\"Morele ordening\"},\"social_media\":{\"dashboard\":{\"title\":\"Sociale media\"},\"definitions\":{\"data\":{\"title\":\"Sociale media\"}},\"title\":\"Sociale media\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Er zijn geen theorie van veranderingsitems voor dit project.\",\"manage\":\"Beheer Theory of Change\",\"title\":\"Theorie van verandering\"},\"definitions\":{\"data\":{\"hint\":\"Voeg alstublieft eventuele theorieën toe over de verandering die uw project heeft.\",\"title\":\"Theorie van verandering\"}},\"title\":\"Theorie van verandering\"},\"user_journey_model\":{\"dashboard\":{\"one\":\"\",\"other\":\"\"},\"definitions\":{\"accessing\":{\"access_method\":{\"label\":\"Hoe heeft u toegang gekregen tot de dienst?\"},\"appropriate_comment\":{\"label\":\"Vindt u dit aspect van de service passend?\"},\"qualification_experience\":{\"label\":\"Zo ja, hoe was de ervaring?\"},\"qualification_process\":{\"label\":\"Was er een kwalificatie- of selectieproces?\"},\"title\":\"Toegang verkrijgen\"},\"discovering\":{\"comments\":{\"label\":\"Nog meer opmerkingen, opmerkingen?\"},\"discovery_medium\":{\"label\":\"Hoe ben je op de hoogte van de dienst gekomen?\"},\"information_experience\":{\"label\":\"Wat is uw mening over de kwaliteit, volledigheid en toegankelijkheid van de informatie?\"},\"information_medium\":{\"label\":\"Hoe heeft u toegang gekregen tot informatie over de dienst?\"},\"title\":\"Ontdekken\"},\"evaluating\":{\"opinions_asked\":{\"hint\":\"Bedenk waar en wanneer dit was.\",\"label\":\"Werd u gevraagd naar uw mening over uw ervaring met de dienst?\"},\"opinions_how\":{\"label\":\"Zo ja, hoe werd u gevraagd?\"},\"service_experience\":{\"label\":\"Was de service wat je had verwacht?\"},\"surprises_comments\":{\"label\":\"Waren er verrassingen of teleurstellingen in uw ervaring?\"},\"title\":\"Evalueren\"},\"instigating\":{\"comments\":{\"label\":\"Opmerkingen\"},\"design_role\":{\"label\":\"Heeft u een rol gespeeld bij het ontwerp en de definitie van de dienst? Zo ja, wat waren de gelegenheden en kanalen dat dit plaatsvond?\"},\"instigate_role\":{\"label\":\"Heeft u een rol gespeeld bij het opzetten van het project? Zo ja, maakte u deel uit van een van de volgende opties? U kunt er zoveel kiezen als u wilt.\"},\"title\":\"Aanzetten\"},\"model\":{\"title\":\"Model\"},\"using\":{\"accessible_experience\":{\"label\":\"Was de dienst voor u toegankelijk?\"},\"participate_experience\":{\"label\":\"Hoe was het om de dienst te gebruiken of eraan deel te nemen?\"},\"time_experience\":{\"label\":\"Was de duur en frequentie van de servicegebeurtenissen of contacten in orde?\"},\"title\":\"Gebruik makend van\",\"where\":{\"label\":\"Waar heb je de service gebruikt?\"}}},\"guide\":{\"step01\":\"Services worden bekendgemaakt aan de beoogde gebruikers, dit is de ontdekkingsfase.\",\"step02\":\"Gebruikers die de service willen, doen een soort verzoek of toepassing, dit is de toegangsfase.\",\"step03\":\"Als de vorige fase succesvol is, wordt de dienst geleverd en ervaren, dit is de gebruiksfase.\",\"step04\":\"De ervaring met het gebruik van de dienst wordt vervolgens geëvalueerd.\",\"step05\":\"De vragen tot nu toe gaan ervan uit dat de service is gedefinieerd en al bestaat. De volgende reeks vragen gaat over of en hoe u hebt deelgenomen aan de processen waarmee de service in de eerste plaats is gemaakt.\",\"step06\":\"Ten eerste kunnen we ons serviceleveringsmodel voltooien met de fasen die betrokken zijn bij het creëren. We noemen dit de ontwerpfase.\",\"step07\":\"Vervolgens kunnen we de processen laten zien waarmee de service in de eerste plaats is geïdentificeerd en geïnitieerd. Dit noemen we de aanzetfase.\"},\"options\":{\"access_methods\":{\"applied\":\"Toegepast\",\"other\":\"Andere\",\"referred\":\"Doorverwezen\"},\"instigate_roles\":{\"government_department\":\"Overheidsdienst\",\"political_party\":\"Politieke partij\",\"pressure_group\":\"Druk / campagnegroep\"},\"mediums\":{\"other\":\"Andere\",\"paper\":\"Papieren publicatie\",\"referral\":\"Doorverwijzing\",\"social\":\"Sociale media\",\"word_of_mouth\":\"Mond op mond\"},\"opinions_how\":{\"interview\":\"Interview\",\"survey\":\"Enquête\",\"workshop\":\"Werkplaats\"},\"where\":{\"community\":\"Gemeenschap\",\"home\":\"Huis\",\"other\":\"Andere\",\"public\":\"Openbaar\"},\"yes_no_maybe\":{\"maybe\":\"Kan zijn\",\"no\":\"Nee\",\"yes\":\"Ja\"}},\"title\":\"User Journey Model\"},\"welcome\":{\"dashboard\":{\"summary\":\"Gemaakt door {user} op {date_time}\"},\"title\":\"Welkom\"}},\"countries\":{\"de\":\"Duitsland\",\"el\":\"Griekenland\",\"en_GB\":\"Verenigd Koninkrijk\",\"es\":\"Spanje\",\"et\":\"Estland\",\"fi\":\"Finland\",\"fr\":\"Frankrijk\",\"hu\":\"Hongarije\",\"it\":\"Italië\",\"nl\":\"Nederland\",\"pl\":\"Polen\",\"sv_SE\":\"Zweden\"},\"hints\":{\"editor_double_click_edit\":\"Dubbelklik op een item om het te bewerken en voer het in om het op te slaan\",\"social_facebook_add\":\"Voeg volledige links (URL's) toe aan Facebook-groepen of -pagina's.\",\"social_instagram_add\":\"Voer een Instagram-hashtag in, met of zonder de #. Druk op enter om toe te voegen.\",\"social_twitter_add\":\"Voer een Twitter-hashtag in, met of zonder de #. Druk op enter om toe te voegen.\",\"social_youtube_add\":\"Voer een link naar een YouTube-video in en druk op Enter om toe te voegen.\",\"type_and_enter\":\"Typ de naam hieronder en druk op enter.\"},\"languages\":{\"de\":\"Duitse\",\"el\":\"Grieks\",\"en_GB\":\"Engels\",\"es\":\"Spaans\",\"et\":\"Ests\",\"fi\":\"Fins\",\"fr\":\"Frans\",\"hu\":\"Hongaars\",\"it\":\"Italiaans\",\"nl\":\"Nederlands\",\"pl\":\"Pools\",\"sv_SE\":\"Zweeds\"},\"user_guide\":{\"back\":\"Terug\",\"close\":\"Dichtbij\",\"next\":\"De volgende\",\"show\":\"Toon gebruikershandleiding\",\"skip\":\"Sla de gebruikershandleiding over\"}}");
 
 /***/ }),
 
@@ -5527,10 +6205,10 @@ module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisatie
 /*!*************************!*\
   !*** ./js/lang/pl.json ***!
   \*************************/
-/*! exports provided: activity_types, app, aspects, hints, languages, user_guide, default */
+/*! exports provided: activity_types, app, aspects, countries, hints, languages, user_guide, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organizacja\",\"service\":\"Usługa\",\"user\":\"Użytkownik\"},\"app\":{\"add_new_actor\":\"Dodaj nowego aktora\",\"add_new_item\":\"Dodaj nową pozycję\",\"all\":\"Wszystko\",\"colour\":\"Kolor\",\"create\":\"Stwórz\",\"created_by\":\"Stworzone przez\",\"delete\":\"Kasować\",\"description\":\"Opis\",\"download\":\"Ściągnij\",\"error\":\"Błąd\",\"error_message\":\"Błąd: {message}\",\"export\":\"Eksport\",\"exporting\":\"Eksport\",\"exporting_project\":\"Eksportowanie projektu\",\"image\":\"Wizerunek\",\"image_drag_prompt\":\"Przeciągnij tutaj swój obraz, aby rozpocząć, lub kliknij, aby przeglądać.\",\"image_is_uploading\":\"Przesyłanie obrazu\",\"image_remove\":\"Usuń obraz\",\"image_upload_error\":\"Błąd przesyłania\",\"import\":\"Import\",\"import_project\":\"Importuj projekt\",\"import_project_drag_hint\":\"Przeciągnij tutaj swój projekt CoSMoS, aby rozpocząć, lub kliknij, aby przeglądać.\",\"import_project_notes\":\"Uwaga: będziesz właścicielem importowanego projektu.\",\"import_project_success\":\"Projekt został pomyślnie zaimportowany!\",\"just_mine\":\"Tylko mój\",\"label\":\"Etykieta\",\"last_saved_at\":\"Ostatnio zapisano o {date_time}\",\"log_in\":\"Zaloguj sie\",\"maximum_items\":\"Maksymalnie {count} elementów | Maxumum {count} element | Maksymalnie {count} elementów\",\"models\":\"Modele\",\"name\":\"Nazwa\",\"new_project\":\"Utwórz nowy projekt\",\"next\":\"Kolejny\",\"no_projects\":\"Nie znaleziono projektów.\",\"ok\":\"ok\",\"open_project\":\"Otwarty projekt\",\"please_wait_generate\":\"Proszę czekać, trwa generowanie pliku.\",\"processing\":\"Przetwarzanie\",\"project\":\"Projekt\",\"project_save_success\":\"Projekt zapisany!\",\"save\":\"Zapisać\",\"saving\":\"Oszczędność\",\"scale_to_fit\":\"Skalowanie w celu dopasowania\",\"search\":\"Szukaj\",\"title\":\"Tytuł\",\"to_create_project\":\"stworzyć projekt.\",\"try_again\":\"Spróbuj ponownie\",\"type\":\"Rodzaj\",\"user_is_read_only\":\"Twój poziom dostępu użytkownika jest tylko do odczytu.\",\"web_address\":\"adres internetowy\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Makro\"},\"meso\":{\"description\":\"Na tym poziomie może być kilka etapów.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Czy istnieją beneficjenci inni niż bezpośredni użytkownik / uczestnicy? Jeśli tak, kim oni są?\",\"title\":\"Beneficjenci\"},\"broker\":{\"hint\":\"Czy istnieje aktywny pośrednik między inicjatorami zmian a twórcami zmian? Jeśli tak, kim oni są?\",\"title\":\"Pośrednik\"},\"changeMakers\":{\"hint\":\"Kim są lub byli inicjatorami, którzy zainicjowali Twoją interwencję?\",\"title\":\"Zmień twórców\"},\"changeTheorists\":{\"hint\":\"Kim są teoretycy zmiany dla interwencji?\",\"title\":\"Teoretyków zmian\"},\"frontLineServiceDeliverer\":{\"hint\":\"Kto jest dostawcą usług na pierwszej linii?\",\"title\":\"Dostawca usług pierwszej linii\"},\"instigatorsOfChange\":{\"hint\":\"Kim są lub byli inicjatorami, którzy zainicjowali Twoją interwencję?\",\"title\":\"Podżegacze zmian\"},\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"hint\":\"Kto jest kierownikiem ds. Usług serwisowych odpowiedzialnym za interwencję?\",\"title\":\"Kierownik ds. Usług serwisowych\"},\"serviceOrganisationManager\":{\"hint\":\"Kto jest kierownikiem organizacji usługowej ds. Interwencji?\",\"title\":\"Menedżer organizacji usług\"},\"servicePolicyMaker\":{\"hint\":\"Kto jest lub był, definiuje zasady świadczenia usług i zasady, na których działa usługa?\",\"title\":\"Kreator zasad usług\"},\"subjectsOfChange\":{\"hint\":\"Kim są zidentyfikowani podmioty zmiany w ramach interwencji?\",\"title\":\"Podmioty zmian\"},\"user\":{\"hint\":\"Kto jest bezpośrednim użytkownikiem serwisu?\",\"title\":\"Klient / Użytkownik\"},\"victims\":{\"hint\":\"Czy są jakieś zidentyfikowane ofiary? Jeśli tak, kim oni są?\",\"title\":\"Ofiary\"}},\"guide\":{\"step01\":\"W tym modelu rozważamy inicjatywę Cosie w kategoriach zestawu ról i relacji konwersacyjnych, w które się angażują.\",\"step02\":\"Najpierw mamy dostawcę usług na pierwszej linii i klienta.\",\"step03\":\"Dostawca ma kierownika lub przełożonego. Ten wzorzec osoby prowadzącej dwie rozmowy zostanie powtórzony.\",\"step04\":\"Dostawa odbywa się w jakimś formalnym lub nieformalnym kontekście instytucjonalnym.\",\"step05\":\"Wreszcie usługa istnieje w szerszym kontekście politycznym.\",\"step06\":\"To ma być abstrakcyjny model. W niektórych przypadkach może istnieć płaska organizacja, w której dostawa, zarządzanie i polityka są podejmowane przez wszystkich członków małego zespołu, w innych przypadkach mogą reprezentować różne osoby i konteksty.\",\"step07\":\"W jaki sposób koncepcje mikro, mezo i makro przekładają się na Twoją inicjatywę?\",\"step08\":\"Jak przebiega komunikacja między nimi?\",\"step09\":\"Jak są skoordynowane i spójne?\",\"step10\":\"W szczególności, czy istnieją przepływy informacji i konwersacje między makro i mikro, które nie są zapośredniczone przez mezo? Jakie są tego konsekwencje?\",\"step11\":\"Kolejny model rozważa agencję zmiany w kategoriach ról i rozmów.\",\"step12\":\"Zmiana musi zostać zainicjowana, a następnie zostaje wykonana.\",\"step13\":\"Zmiany, które rozważamy, dotyczą osoby, miejsca lub środowiska.\",\"step14\":\"Zmiany, które rozważamy, są często same w sobie złożone i dotyczą złożonych sytuacji. Często opierają się na jakiejś teorii, która została wprowadzona lub wbita w sytuację.\",\"step15\":\"Istnieje zbiór zamierzonych beneficjentów.\",\"step16\":\"Ale są też potencjalni beneficjenci lub ofiary zmiany.\",\"step17\":\"Model ten jest pomyślany jako próbka wstępnego modelu usług w celu zidentyfikowania konkretnych podmiotów, które na różnych etapach rozwoju inicjatywy podjęły jedną lub więcej z tych ról agencji zmiany. Kim oni są?\"},\"title\":\"Model analityczny\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Dwuznaczność\",\"ambivalence\":\"Ambiwalencja\",\"committing\":\"Zobowiązanie się\",\"execute\":\"Wykonać\",\"first_order\":\"Pierwsze zamówienie\",\"fourth_order\":\"Czwarty Porządek!\",\"languaging\":\"„Językowe”\",\"measure\":\"Pomiar\",\"plan\":\"Plan\",\"risk\":\"Ryzyko\",\"second_order\":\"Drugie zamówienie\",\"sense_making\":\"Tworzenie zmysłów\",\"third_order\":\"Trzecie zamówienie\",\"vision\":\"Wizja\",\"zero_order\":\"Zero Order\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Jak realizowany jest plan?\"},\"measure\":{\"label\":\"W jaki sposób rejestrowane są obserwacje i pomiary? Jeśli nie, co należy włączyć, aby to zrobić?\"},\"plan\":{\"label\":\"Jak powstał plan realizacji wizji?\"},\"vision\":{\"label\":\"Jak wyznaczono wizję i cele?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Skąd ta zmiana? Jaka była zmiana?\"},\"event_cause\":{\"label\":\"Co się stało, aby to wydarzenie mogło nastąpić?\"},\"unexpected_events\":{\"label\":\"Czy były przypadki, w których widziałeś nieoczekiwane zdarzenia?\"}},\"model\":{\"title\":\"Model\"},\"second_order\":{\"committing\":{\"label\":\"Jak zmieniło się świadczenie usług w ramach interwencji w stosunku do pierwotnych planów?\"},\"languaging\":{\"label\":\"Jakie zmiany wprowadzono w rozumieniu interwencji?\"},\"sense_making\":{\"label\":\"Kiedy przeglądasz plany i wizję?\"}},\"third_order\":{\"processes\":{\"label\":\"Jakie procesy powodują lub umożliwiają przesłuchanie drugiego rzędu?\"}}},\"guide\":{\"step01\":\"Zaczynamy od standardowego modelu celowego działania, który wszyscy dobrze znamy.\",\"step02\":\"Ale wszyscy mieliśmy doświadczenie spojrzenia wstecz i uświadomienia sobie, że rzeczy zmieniły się w naprawdę fundamentalny sposób: mówimy o zmianie paradygmatu. Oznacza to, że zaangażowaliśmy się w nadawanie nowego sensu naszemu światu, a to często oznacza, że nasz język się zmienia.\",\"step03\":\"Te dwa różne sposoby działania są czasami nazywane pierwszym i drugim rzędem.\",\"step04\":\"W zakresie zarządzania mamy z jednej strony zarządzanie ryzykiem, z drugiej rozwiązywanie sprzeczności i niejasności.\",\"step05\":\"Przedstawiamy teraz ideę działań trzeciego rzędu, które umożliwiają i wspierają odpowiednie przejścia między pierwszą a drugą pracą, umożliwiając cofnięcie się do ponownego przemyślenia naszego etosu i założeń, a gdy już mamy, powrót do trybu praktycznego planowania i realizacji.\",\"step06\":\"Czasami reakcja na dwuznaczność i sprzeczność ma charakter emocjonalny: walcz lub lataj, który jest zerowym porządkiem, lub inspiracja i bohaterstwo, które nazwiemy czwartym porządkiem.\",\"step07\":\"Tak więc po prawej stronie naszego diagramu mamy spektrum pracy emocjonalnej i odpowiedzi, podczas gdy po lewej stronie mamy pracę koprodukcyjną, konwersacyjną.\",\"step08\":\"Model ten generuje serię otwartych pytań o to, gdzie w twojej inicjatywie odbywa się inna praca pierwszego i drugiego rzędu, jaka praca emocjonalna była i jest wymagana oraz jak i gdzie jest podejmowana oraz jak i przez kogo są wymagane interwencje trzeciego rzędu. podjęte?\"},\"title\":\"Zmień model\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Etos\",\"infrastructural_relationships\":\"Relacje infrastrukturalne, zasoby i udogodnienia\",\"policy_law\":\"Polityka i prawo\",\"resources\":\"Zasoby\",\"service_definition\":\"Definicja usługi i platforma programistyczna\",\"service_delivery\":\"Platforma świadczenia usług\",\"structural_relationships\":\"Strukturalne relacje i okazje\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Czy istnieją beneficjenci inni niż bezpośredni użytkownik / uczestnicy? Jeśli tak, kim oni są?\",\"title\":\"Beneficjant\"},\"delivery\":{\"hint\":\"Kto jest odpowiedzialny za mechanizm (y) realizacji, kanały i role w Twoim pilocie?\",\"title\":\"Dostawca\"},\"deployment\":{\"hint\":\"Kto wdraża / wdraża i aktywuje / aktywuje te procesy i zasoby?\",\"title\":\"Wdrażający\"},\"drivers\":{\"body\":{\"hint\":\"Jakie są zaangażowane czynniki i motywacje?\",\"label\":\"Kierowcy i motywacje\"},\"hint\":\"Jakie były / są motory i motywacje projektu? Czy był to wymóg ustawowy, uznanie potrzeby lub żądania, skorzystanie z okazji, zajęcie się nierównością?\",\"title\":\"Kierowcy i motywacje\"},\"evaluation\":{\"hint\":\"Kim jest ewaluator (e) i zarządcy usługi?\",\"title\":\"Ewaluator\"},\"extorg\":{\"hint\":\"Czy istnieją odpowiednie podmioty, zainteresowane strony lub agencje, które są istotne dla pilota, ale pozostają poza jego wizją i etosem?\",\"title\":\"Organizacje zewnętrzne\"},\"extsvc\":{\"hint\":\"Jakie obiekty wielokrotnego użytku, zasoby (techniczne i ludzkie), usługi i źródła informacji zostały opracowane i wykorzystane w celu wsparcia tych procesów definiowania i rozwoju usług? Jakie zasoby i usługi zewnętrzne (np. Komunikacja i media społecznościowe) były / są wykorzystywane?\",\"title\":\"Zewnętrzne usługi techniczne\"},\"infsvc\":{\"hint\":\"Z jakich zewnętrznych usług, kanałów i udogodnień korzystasz przy świadczeniu swoich usług? Z jakich źródeł informacji korzystasz? Jakie informacje publikujesz, komu i za pomocą jakich kanałów i mediów?\",\"title\":\"Usługi infrastrukturalne\"},\"initiator\":{\"hint\":\"Kim są lub byli inicjatorami, którzy zainicjowali Twoją działalność pilotażową?\",\"title\":\"Inicjator\"},\"model\":{\"title\":\"Model\"},\"policyDef\":{\"hint\":\"Kto jest lub był, definiuje zasady świadczenia usług i zasady, na których działa usługa?\",\"title\":\"Policy Definer\"},\"specDes\":{\"hint\":\"Kto określa / określa i projektuje / zaprojektował procesy i zasoby świadczenia usług?\",\"title\":\"Specyfikator i projektant\"},\"user\":{\"hint\":\"Kto jest bezpośrednim użytkownikiem serwisu?\",\"title\":\"Użytkownik\"}},\"title\":\"Współtworzenie modelu usług\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"W tym projekcie nie ma elementów raportowania przez społeczność.\",\"manage\":\"Zarządzaj raportowaniem społeczności\",\"title\":\"Raportowanie społeczności\"},\"definitions\":{\"data\":{\"hint\":\"Dodaj wszelkie raporty społeczności, które może mieć Twój projekt.\",\"title\":\"Raportowanie społeczności\"}},\"title\":\"Raportowanie społeczności\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Nie ma dokumentów ani plików dla tego projektu.\",\"manage\":\"Zarządzaj dokumentami i plikami\",\"title\":\"Dokumenty i pliki\"},\"definitions\":{\"data\":{\"hint\":\"Dodaj wszystkie dokumenty i pliki, które może mieć Twój projekt.\",\"title\":\"Dokumenty i pliki\"}},\"title\":\"Dokumenty\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Dobre samopoczucie\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Jakie aspekty cyklu życia usługi są ważne z punktu widzenia innowacji i zmian?\"},\"title\":\"Innowacja i zmiana\"},\"intervention\":{\"items\":{\"label\":\"Jaki rodzaj interwencji ma miejsce?\"},\"title\":\"Interwencja\"},\"learning\":{\"items\":{\"label\":\"Jak przebiega proces uczenia się podczas Twojej interwencji?\"},\"title\":\"Uczenie się\"},\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"items\":{\"label\":\"Które aspekty dobrobytu ludzi i środowiska są istotne dla Twojej usługi? Czy niektóre są ważniejsze od innych?\"},\"title\":\"Dobrostan człowieka i środowisko\"}},\"guide\":{\"step01\":\"Wszystkie rozważane przez nas inicjatywy współtwórcze dotyczą poprawy i pielęgnowania dobrostanu. W tym miejscu bierzemy pod uwagę dobrostan jednostek, ale można to zastosować do miejsc lub szerszych środowisk.\",\"step02\":\"Dobre samopoczucie ma wiele różnych aspektów, które są od siebie zależne.\",\"step03\":\"Oddziałuje również ze środowiskiem fizycznym i społecznym.\",\"step04\":\"Niektóre usługi lub interwencje mają na celu naprawienie czegoś, co poszło nie tak i przywrócenie status quo.\",\"step05\":\"Ale są też inne cele interwencji.\",\"step06\":\"Proces interwencji obejmuje wiele różnych etapów i procesów.\",\"step07\":\"Wreszcie, jeśli nasze innowacje mają być trwałe, musimy się uczyć i doskonalić.\",\"step08\":\"Kto, co lub gdzie jest celem Twojej interwencji?\",\"step09\":\"Na jakich aspektach dobrego samopoczucia koncentruje się Twoja inicjatywa?\",\"step10\":\"Jakie aspekty dobrostanu twojego przedmiotu są istotne, ale wykraczają poza zakres twojej inicjatywy?\",\"step11\":\"Jakie są istotne aspekty środowiskowe?\",\"step12\":\"Które kombinacje interwencji, od zapobiegania po transformację, są odpowiednie dla Twojej inicjatywy?\",\"step13\":\"W jakim stopniu uczenie się i doskonalenie są wbudowane w zarządzanie rozwojem i procesy dostarczania?\"},\"options\":{\"innovation\":{\"development\":\"Rozwój\",\"facilitation\":\"Ułatwienie\",\"palliation\":\"Uśmierzenie\",\"prevention\":\"Zapobieganie\",\"rehabilitation\":\"Rehabilitacja\",\"remedy\":\"Zaradzić\",\"transformation\":\"Transformacja\"},\"intervention\":{\"coordination_delivery\":\"Koordynacja i dostawa\",\"governance\":\"Zarządzanie\",\"identification\":\"Identyfikacja i planowanie\",\"learning\":\"Uczenie się\",\"management\":\"Zarządzanie\"},\"learning\":{\"research_evidence\":\"Badania i dowody\",\"service_improvement\":\"Poprawa usług\",\"trials\":\"Trials\"},\"wellbeing\":{\"faculties_skills\":\"Wydziały i umiejętności\",\"mental_psych\":\"Mentalne i psychologiczne\",\"physical_env\":\"Środowisko fizyczne\",\"physiological\":\"Fizjologiczny\",\"socio_cultural_env\":\"Środowisko społeczno-kulturowe\",\"socio_economic\":\"Społeczno-ekonomiczne\"}},\"title\":\"Model teorii interwencji\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Zdefiniuj Ethos\",\"define_ethos_items\":\"Wartości\\n Zasady\\n Intencje\\n Zasady\",\"deliver\":\"Dostarczyć\",\"experience\":\"Doświadczenie\",\"govern\":\"Rządzić\",\"individual_cases\":\"Indywidualne przypadki\",\"plan_manage\":\"Planuj i zarządzaj\",\"plan_manage_items\":\"Zasady\\n Zasoby\\n Procesy\\n Konta\",\"the_service_level\":\"Poziom usług\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Jak określa się te wartości?\"},\"evidenceUrl\":{\"label\":\"Jakie (zewnętrzne) dowody są dostępne na poparcie tego?\"},\"title\":\"Zdefiniuj Ethos\",\"values\":{\"label\":\"Jakie wartości są ważne, których dotyczy interwencja?\"}},\"deliver\":{\"actors\":{\"label\":\"Przez kogo jest dostarczany?\"},\"evidenceUrl\":{\"label\":\"Jakie (zewnętrzne) dowody są dostępne na poparcie tego?\"},\"method\":{\"label\":\"W jaki sposób przeprowadzana jest interwencja?\"},\"title\":\"Dostarczyć\"},\"govern\":{\"actions\":{\"label\":\"Jak zarządzana jest interwencja? Jakie środki podjęto, aby zapewnić zgodne z zamierzeniami wyniki?\"},\"actors\":{\"label\":\"Kto to ocenia?\"},\"evolution\":{\"label\":\"Jak to wpływa na ewolucję usługi?\"},\"improvements\":{\"label\":\"W jaki sposób identyfikuje się ulepszenia? Jak są wdrażane?\"},\"outcomes\":{\"label\":\"Czy wyniki są zawarte w celach i pomiarach? A jeśli tak, to kogo?\"},\"title\":\"Rządzić\"},\"model\":{\"title\":\"Model\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Jakie działania są obecnie podejmowane w ramach pilota?\"},\"actors\":{\"label\":\"Jakie bieżące działania są podejmowane?\"},\"evidenceUrl\":{\"label\":\"Jakie (zewnętrzne) dowody są dostępne na poparcie tego?\"},\"title\":\"Planuj i zarządzaj - bieżące działania\"},\"planManagePrior\":{\"actions\":{\"label\":\"Jakie działania były podejmowane przed interwencją?\"},\"actors\":{\"label\":\"Kto był zaangażowany w te wcześniejsze działania?\"},\"evidenceUrl\":{\"label\":\"Jakie (zewnętrzne) dowody są dostępne na poparcie tego?\"},\"title\":\"Planuj i zarządzaj - wcześniejsze działania\"}},\"guide\":{\"step01\":\"Istnieje wiele podstawowych procesów związanych z współtwórczą innowacją. Pierwsza dotyczy definicji etosu.\",\"step02\":\"Drugi dotyczy działań zarządczych i produktów.\",\"step03\":\"Porządek moralny dotyczy tego, kto bierze udział w działaniach, więc w przypadku Twojej inicjatywy, kto jest zaangażowany w te procesy? Gdzie i kiedy się odbywają? Jak się komunikują i jak są nagrywane?\",\"step04\":\"W wyniku przywództwa, planowania i projektowania, usługi lub inicjatywy są dostarczane i doświadczane.\",\"step05\":\"Znowu kto jest tutaj zaangażowany i czy bierze udział w pierwszych dwóch zestawach działań?\",\"step06\":\"Zamiast po prostu zamknąć pętlę prostym procesem ewaluacji, sugerujemy, że w systemach współproduktywnego dobrostanu i opieki, zarządzanie angażuje wszystkich uczestników w zidentyfikowane tu relacje, uczestnicząc w odpowiadaniu na pytania zdefiniowane w modelu porządku moralnego.\",\"step07\":\"Zarządzanie odbywa się na poziomie relacji z klientem indywidualnym.\",\"step08\":\"Odbywa się również na ogólnym poziomie usług.\",\"step09\":\"W jaki sposób procesy zarządzania, w sensie, który je tutaj opisujemy, przebiegają w Twojej inicjatywie?\"},\"options\":{\"sources\":{\"meeting\":\"Spotkanie\",\"other\":\"Inny\",\"policy\":\"Polityka\"}},\"title\":\"Porządek moralny\"},\"social_media\":{\"dashboard\":{\"title\":\"Media społecznościowe\"},\"definitions\":{\"data\":{\"title\":\"Media społecznościowe\"}},\"title\":\"Media społecznościowe\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"W tym projekcie nie ma teorii elementów zmian.\",\"manage\":\"Zarządzaj teorią zmiany\",\"title\":\"Teoria zmiany\"},\"definitions\":{\"data\":{\"hint\":\"Dodaj wszelkie teorie zmian, jakie może mieć Twój projekt.\",\"title\":\"Teoria zmiany\"}},\"title\":\"Teoria zmiany\"},\"welcome\":{\"dashboard\":{\"summary\":\"Utworzone przez {user} dnia {date_time}\"},\"title\":\"Witamy\"}},\"hints\":{\"editor_double_click_edit\":\"Kliknij dwukrotnie element, aby go edytować, i wprowadź, aby zapisać\",\"social_facebook_add\":\"Dodaj pełne linki (adresy URL) do grup lub stron na Facebooku.\",\"social_instagram_add\":\"Wpisz hashtag na Instagramie, z # lub bez. Naciśnij Enter, aby dodać.\",\"social_twitter_add\":\"Wpisz hashtag Twittera, z # lub bez. Naciśnij Enter, aby dodać.\",\"social_youtube_add\":\"Wprowadź link do filmu z YouTube i naciśnij Enter, aby dodać.\",\"type_and_enter\":\"Wpisz nazwę poniżej i naciśnij Enter.\"},\"languages\":{\"de\":\"Niemiecki\",\"el\":\"Grecki\",\"en_GB\":\"Angielski\",\"es\":\"Hiszpański\",\"et\":\"Estoński\",\"fi\":\"Fiński\",\"fr\":\"Francuski\",\"hu\":\"Węgierski\",\"it\":\"Włoski\",\"nl\":\"Holenderski\",\"pl\":\"Polskie\",\"sv_SE\":\"Szwedzki\"},\"user_guide\":{\"back\":\"Z powrotem\",\"close\":\"Blisko\",\"next\":\"Kolejny\",\"show\":\"Pokaż podręcznik użytkownika\",\"skip\":\"Pomiń podręcznik użytkownika\"}}");
+module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organizacja\",\"service\":\"Usługa\",\"user\":\"Użytkownik\"},\"app\":{\"add_new_actor\":\"Dodaj nowego aktora\",\"add_new_item\":\"Dodaj nową pozycję\",\"all\":\"Wszystko\",\"colour\":\"Kolor\",\"country\":\"Kraj\",\"create\":\"Stwórz\",\"created_by\":\"Stworzone przez\",\"delete\":\"Kasować\",\"description\":\"Opis\",\"download\":\"Ściągnij\",\"error\":\"Błąd\",\"error_message\":\"Błąd: {message}\",\"export\":\"Eksport\",\"exporting\":\"Eksport\",\"exporting_project\":\"Eksportowanie projektu\",\"image\":\"Wizerunek\",\"image_drag_prompt\":\"Przeciągnij tutaj swój obraz, aby rozpocząć, lub kliknij, aby przeglądać.\",\"image_is_uploading\":\"Przesyłanie obrazu\",\"image_remove\":\"Usuń obraz\",\"image_upload_error\":\"Błąd przesyłania\",\"import\":\"Import\",\"import_project\":\"Importuj projekt\",\"import_project_drag_hint\":\"Przeciągnij tutaj swój projekt CoSMoS, aby rozpocząć, lub kliknij, aby przeglądać.\",\"import_project_notes\":\"Uwaga: będziesz właścicielem importowanego projektu.\",\"import_project_success\":\"Projekt został pomyślnie zaimportowany!\",\"just_mine\":\"Tylko mój\",\"label\":\"Etykieta\",\"last_saved_at\":\"Ostatnio zapisano o {date_time}\",\"log_in\":\"Zaloguj sie\",\"maximum_items\":\"Maksymalnie {count} elementów | Maxumum {count} element | Maksymalnie {count} elementów\",\"models\":\"Modele\",\"more_details\":\"Więcej szczegółów\",\"name\":\"Nazwa\",\"new_project\":\"Utwórz nowy projekt\",\"next\":\"Kolejny\",\"no_projects\":\"Nie znaleziono projektów.\",\"ok\":\"ok\",\"open_project\":\"Otwarty projekt\",\"please_wait_generate\":\"Proszę czekać, trwa generowanie pliku.\",\"processing\":\"Przetwarzanie\",\"project\":\"Projekt\",\"project_save_success\":\"Projekt zapisany!\",\"save\":\"Zapisać\",\"saving\":\"Oszczędność\",\"scale_to_fit\":\"Skalowanie w celu dopasowania\",\"search\":\"Szukaj\",\"title\":\"Tytuł\",\"to_create_project\":\"stworzyć projekt.\",\"try_again\":\"Spróbuj ponownie\",\"type\":\"Rodzaj\",\"user_is_read_only\":\"Twój poziom dostępu użytkownika jest tylko do odczytu.\",\"web_address\":\"adres internetowy\",\"which_country\":\"Z jakiego kraju pochodzisz?\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Makro\"},\"meso\":{\"description\":\"Na tym poziomie może być kilka etapów.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Czy istnieją beneficjenci inni niż bezpośredni użytkownik / uczestnicy? Jeśli tak, kim oni są?\",\"title\":\"Beneficjenci\"},\"broker\":{\"hint\":\"Czy istnieje aktywny pośrednik między inicjatorami zmian a twórcami zmian? Jeśli tak, kim oni są?\",\"title\":\"Pośrednik\"},\"changeMakers\":{\"hint\":\"Kim są lub byli inicjatorami, którzy zainicjowali Twoją interwencję?\",\"title\":\"Zmień twórców\"},\"changeTheorists\":{\"hint\":\"Kim są teoretycy zmiany dla interwencji?\",\"title\":\"Teoretyków zmian\"},\"frontLineServiceDeliverer\":{\"hint\":\"Kto jest dostawcą usług na pierwszej linii?\",\"title\":\"Dostawca usług pierwszej linii\"},\"instigatorsOfChange\":{\"hint\":\"Kim są lub byli inicjatorami, którzy zainicjowali Twoją interwencję?\",\"title\":\"Podżegacze zmian\"},\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"hint\":\"Kto jest kierownikiem ds. Usług serwisowych odpowiedzialnym za interwencję?\",\"title\":\"Kierownik ds. Usług serwisowych\"},\"serviceOrganisationManager\":{\"hint\":\"Kto jest kierownikiem organizacji usługowej ds. Interwencji?\",\"title\":\"Menedżer organizacji usług\"},\"servicePolicyMaker\":{\"hint\":\"Kto jest lub był, definiuje zasady świadczenia usług i zasady, na których działa usługa?\",\"title\":\"Kreator zasad usług\"},\"subjectsOfChange\":{\"hint\":\"Kim są zidentyfikowani podmioty zmiany w ramach interwencji?\",\"title\":\"Podmioty zmian\"},\"user\":{\"hint\":\"Kto jest bezpośrednim użytkownikiem serwisu?\",\"title\":\"Klient / Użytkownik\"},\"victims\":{\"hint\":\"Czy są jakieś zidentyfikowane ofiary? Jeśli tak, kim oni są?\",\"title\":\"Ofiary\"}},\"guide\":{\"step01\":\"W tym modelu rozważamy inicjatywę Cosie w kategoriach zestawu ról i relacji konwersacyjnych, w które się angażują.\",\"step02\":\"Najpierw mamy dostawcę usług na pierwszej linii i klienta.\",\"step03\":\"Dostawca ma kierownika lub przełożonego. Ten wzorzec osoby prowadzącej dwie rozmowy zostanie powtórzony.\",\"step04\":\"Dostawa odbywa się w jakimś formalnym lub nieformalnym kontekście instytucjonalnym.\",\"step05\":\"Wreszcie usługa istnieje w szerszym kontekście politycznym.\",\"step06\":\"To ma być abstrakcyjny model. W niektórych przypadkach może istnieć płaska organizacja, w której dostawa, zarządzanie i polityka są podejmowane przez wszystkich członków małego zespołu, w innych przypadkach mogą reprezentować różne osoby i konteksty.\",\"step07\":\"W jaki sposób koncepcje mikro, mezo i makro przekładają się na Twoją inicjatywę?\",\"step08\":\"Jak przebiega komunikacja między nimi?\",\"step09\":\"Jak są skoordynowane i spójne?\",\"step10\":\"W szczególności, czy istnieją przepływy informacji i konwersacje między makro i mikro, które nie są zapośredniczone przez mezo? Jakie są tego konsekwencje?\",\"step11\":\"Kolejny model rozważa agencję zmiany w kategoriach ról i rozmów.\",\"step12\":\"Zmiana musi zostać zainicjowana, a następnie zostaje wykonana.\",\"step13\":\"Zmiany, które rozważamy, dotyczą osoby, miejsca lub środowiska.\",\"step14\":\"Zmiany, które rozważamy, są często same w sobie złożone i dotyczą złożonych sytuacji. Często opierają się na jakiejś teorii, która została wprowadzona lub wbita w sytuację.\",\"step15\":\"Istnieje zbiór zamierzonych beneficjentów.\",\"step16\":\"Ale są też potencjalni beneficjenci lub ofiary zmiany.\",\"step17\":\"Model ten jest pomyślany jako próbka wstępnego modelu usług w celu zidentyfikowania konkretnych podmiotów, które na różnych etapach rozwoju inicjatywy podjęły jedną lub więcej z tych ról agencji zmiany. Kim oni są?\"},\"title\":\"Model analityczny\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Dwuznaczność\",\"ambivalence\":\"Ambiwalencja\",\"committing\":\"Zobowiązanie się\",\"execute\":\"Wykonać\",\"first_order\":\"Pierwsze zamówienie\",\"fourth_order\":\"Czwarty Porządek!\",\"languaging\":\"„Językowe”\",\"measure\":\"Pomiar\",\"plan\":\"Plan\",\"risk\":\"Ryzyko\",\"second_order\":\"Drugie zamówienie\",\"sense_making\":\"Tworzenie zmysłów\",\"third_order\":\"Trzecie zamówienie\",\"vision\":\"Wizja\",\"zero_order\":\"Zero Order\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Jak realizowany jest plan?\"},\"measure\":{\"label\":\"W jaki sposób rejestrowane są obserwacje i pomiary? Jeśli nie, co należy włączyć, aby to zrobić?\"},\"plan\":{\"label\":\"Jak powstał plan realizacji wizji?\"},\"vision\":{\"label\":\"Jak wyznaczono wizję i cele?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Skąd ta zmiana? Jaka była zmiana?\"},\"event_cause\":{\"label\":\"Co się stało, aby to wydarzenie mogło nastąpić?\"},\"unexpected_events\":{\"label\":\"Czy były przypadki, w których widziałeś nieoczekiwane zdarzenia?\"}},\"model\":{\"title\":\"Model\"},\"second_order\":{\"committing\":{\"label\":\"Jak zmieniło się świadczenie usług w ramach interwencji w stosunku do pierwotnych planów?\"},\"languaging\":{\"label\":\"Jakie zmiany wprowadzono w rozumieniu interwencji?\"},\"sense_making\":{\"label\":\"Kiedy przeglądasz plany i wizję?\"}},\"third_order\":{\"processes\":{\"label\":\"Jakie procesy powodują lub umożliwiają przesłuchanie drugiego rzędu?\"}}},\"guide\":{\"step01\":\"Zaczynamy od standardowego modelu celowego działania, który wszyscy dobrze znamy.\",\"step02\":\"Ale wszyscy mieliśmy doświadczenie spojrzenia wstecz i uświadomienia sobie, że rzeczy zmieniły się w naprawdę fundamentalny sposób: mówimy o zmianie paradygmatu. Oznacza to, że zaangażowaliśmy się w nadawanie nowego sensu naszemu światu, a to często oznacza, że nasz język się zmienia.\",\"step03\":\"Te dwa różne sposoby działania są czasami nazywane pierwszym i drugim rzędem.\",\"step04\":\"W zakresie zarządzania mamy z jednej strony zarządzanie ryzykiem, z drugiej rozwiązywanie sprzeczności i niejasności.\",\"step05\":\"Przedstawiamy teraz ideę działań trzeciego rzędu, które umożliwiają i wspierają odpowiednie przejścia między pierwszą a drugą pracą, umożliwiając cofnięcie się do ponownego przemyślenia naszego etosu i założeń, a gdy już mamy, powrót do trybu praktycznego planowania i realizacji.\",\"step06\":\"Czasami reakcja na dwuznaczność i sprzeczność ma charakter emocjonalny: walcz lub lataj, który jest zerowym porządkiem, lub inspiracja i bohaterstwo, które nazwiemy czwartym porządkiem.\",\"step07\":\"Tak więc po prawej stronie naszego diagramu mamy spektrum pracy emocjonalnej i odpowiedzi, podczas gdy po lewej stronie mamy pracę koprodukcyjną, konwersacyjną.\",\"step08\":\"Model ten generuje serię otwartych pytań o to, gdzie w twojej inicjatywie odbywa się inna praca pierwszego i drugiego rzędu, jaka praca emocjonalna była i jest wymagana oraz jak i gdzie jest podejmowana oraz jak i przez kogo są wymagane interwencje trzeciego rzędu. podjęte?\"},\"title\":\"Zmień model\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Etos\",\"infrastructural_relationships\":\"Relacje infrastrukturalne, zasoby i udogodnienia\",\"policy_law\":\"Polityka i prawo\",\"resources\":\"Zasoby\",\"service_definition\":\"Definicja usługi i platforma programistyczna\",\"service_delivery\":\"Platforma świadczenia usług\",\"structural_relationships\":\"Strukturalne relacje i okazje\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Czy istnieją beneficjenci inni niż bezpośredni użytkownik / uczestnicy? Jeśli tak, kim oni są?\",\"title\":\"Beneficjant\"},\"delivery\":{\"hint\":\"Kto jest odpowiedzialny za mechanizm (y) realizacji, kanały i role w Twoim pilocie?\",\"title\":\"Dostawca\"},\"deployment\":{\"hint\":\"Kto wdraża / wdraża i aktywuje / aktywuje te procesy i zasoby?\",\"title\":\"Wdrażający\"},\"drivers\":{\"body\":{\"hint\":\"Jakie są zaangażowane czynniki i motywacje?\",\"label\":\"Kierowcy i motywacje\"},\"hint\":\"Jakie były / są motory i motywacje projektu? Czy był to wymóg ustawowy, uznanie potrzeby lub żądania, skorzystanie z okazji, zajęcie się nierównością?\",\"title\":\"Kierowcy i motywacje\"},\"evaluation\":{\"hint\":\"Kim jest ewaluator (e) i zarządcy usługi?\",\"title\":\"Ewaluator\"},\"extorg\":{\"hint\":\"Czy istnieją odpowiednie podmioty, zainteresowane strony lub agencje, które są istotne dla pilota, ale pozostają poza jego wizją i etosem?\",\"title\":\"Organizacje zewnętrzne\"},\"extsvc\":{\"hint\":\"Jakie obiekty wielokrotnego użytku, zasoby (techniczne i ludzkie), usługi i źródła informacji zostały opracowane i wykorzystane w celu wsparcia tych procesów definiowania i rozwoju usług? Jakie zasoby i usługi zewnętrzne (np. Komunikacja i media społecznościowe) były / są wykorzystywane?\",\"title\":\"Zewnętrzne usługi techniczne\"},\"infsvc\":{\"hint\":\"Z jakich zewnętrznych usług, kanałów i udogodnień korzystasz przy świadczeniu swoich usług? Z jakich źródeł informacji korzystasz? Jakie informacje publikujesz, komu i za pomocą jakich kanałów i mediów?\",\"title\":\"Usługi infrastrukturalne\"},\"initiator\":{\"hint\":\"Kim są lub byli inicjatorami, którzy zainicjowali Twoją działalność pilotażową?\",\"title\":\"Inicjator\"},\"model\":{\"title\":\"Model\"},\"policyDef\":{\"hint\":\"Kto jest lub był, definiuje zasady świadczenia usług i zasady, na których działa usługa?\",\"title\":\"Policy Definer\"},\"specDes\":{\"hint\":\"Kto określa / określa i projektuje / zaprojektował procesy i zasoby świadczenia usług?\",\"title\":\"Specyfikator i projektant\"},\"user\":{\"hint\":\"Kto jest bezpośrednim użytkownikiem serwisu?\",\"title\":\"Użytkownik\"}},\"title\":\"Współtworzenie modelu usług\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"W tym projekcie nie ma elementów raportowania przez społeczność.\",\"manage\":\"Zarządzaj raportowaniem społeczności\",\"title\":\"Raportowanie społeczności\"},\"definitions\":{\"data\":{\"hint\":\"Dodaj wszelkie raporty społeczności, które może mieć Twój projekt.\",\"title\":\"Raportowanie społeczności\"}},\"title\":\"Raportowanie społeczności\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Nie ma dokumentów ani plików dla tego projektu.\",\"manage\":\"Zarządzaj dokumentami i plikami\",\"title\":\"Dokumenty i pliki\"},\"definitions\":{\"data\":{\"hint\":\"Dodaj wszystkie dokumenty i pliki, które może mieć Twój projekt.\",\"title\":\"Dokumenty i pliki\"}},\"title\":\"Dokumenty\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Dobre samopoczucie\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Jakie aspekty cyklu życia usługi są ważne z punktu widzenia innowacji i zmian?\"},\"title\":\"Innowacja i zmiana\"},\"intervention\":{\"items\":{\"label\":\"Jaki rodzaj interwencji ma miejsce?\"},\"title\":\"Interwencja\"},\"learning\":{\"items\":{\"label\":\"Jak przebiega proces uczenia się podczas Twojej interwencji?\"},\"title\":\"Uczenie się\"},\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"items\":{\"label\":\"Które aspekty dobrobytu ludzi i środowiska są istotne dla Twojej usługi? Czy niektóre są ważniejsze od innych?\"},\"title\":\"Dobrostan człowieka i środowisko\"}},\"guide\":{\"step01\":\"Wszystkie rozważane przez nas inicjatywy współtwórcze dotyczą poprawy i pielęgnowania dobrostanu. W tym miejscu bierzemy pod uwagę dobrostan jednostek, ale można to zastosować do miejsc lub szerszych środowisk.\",\"step02\":\"Dobre samopoczucie ma wiele różnych aspektów, które są od siebie zależne.\",\"step03\":\"Oddziałuje również ze środowiskiem fizycznym i społecznym.\",\"step04\":\"Niektóre usługi lub interwencje mają na celu naprawienie czegoś, co poszło nie tak i przywrócenie status quo.\",\"step05\":\"Ale są też inne cele interwencji.\",\"step06\":\"Proces interwencji obejmuje wiele różnych etapów i procesów.\",\"step07\":\"Wreszcie, jeśli nasze innowacje mają być trwałe, musimy się uczyć i doskonalić.\",\"step08\":\"Kto, co lub gdzie jest celem Twojej interwencji?\",\"step09\":\"Na jakich aspektach dobrego samopoczucia koncentruje się Twoja inicjatywa?\",\"step10\":\"Jakie aspekty dobrostanu twojego przedmiotu są istotne, ale wykraczają poza zakres twojej inicjatywy?\",\"step11\":\"Jakie są istotne aspekty środowiskowe?\",\"step12\":\"Które kombinacje interwencji, od zapobiegania po transformację, są odpowiednie dla Twojej inicjatywy?\",\"step13\":\"W jakim stopniu uczenie się i doskonalenie są wbudowane w zarządzanie rozwojem i procesy dostarczania?\"},\"options\":{\"innovation\":{\"development\":\"Rozwój\",\"facilitation\":\"Ułatwienie\",\"palliation\":\"Uśmierzenie\",\"prevention\":\"Zapobieganie\",\"rehabilitation\":\"Rehabilitacja\",\"remedy\":\"Zaradzić\",\"transformation\":\"Transformacja\"},\"intervention\":{\"coordination_delivery\":\"Koordynacja i dostawa\",\"governance\":\"Zarządzanie\",\"identification\":\"Identyfikacja i planowanie\",\"learning\":\"Uczenie się\",\"management\":\"Zarządzanie\"},\"learning\":{\"research_evidence\":\"Badania i dowody\",\"service_improvement\":\"Poprawa usług\",\"trials\":\"Trials\"},\"wellbeing\":{\"faculties_skills\":\"Wydziały i umiejętności\",\"mental_psych\":\"Mentalne i psychologiczne\",\"physical_env\":\"Środowisko fizyczne\",\"physiological\":\"Fizjologiczny\",\"socio_cultural_env\":\"Środowisko społeczno-kulturowe\",\"socio_economic\":\"Społeczno-ekonomiczne\"}},\"title\":\"Model teorii interwencji\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Zdefiniuj Ethos\",\"define_ethos_items\":\"Wartości\\n Zasady\\n Intencje\\n Zasady\",\"deliver\":\"Dostarczyć\",\"experience\":\"Doświadczenie\",\"govern\":\"Rządzić\",\"individual_cases\":\"Indywidualne przypadki\",\"plan_manage\":\"Planuj i zarządzaj\",\"plan_manage_items\":\"Zasady\\n Zasoby\\n Procesy\\n Konta\",\"the_service_level\":\"Poziom usług\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Jak określa się te wartości?\"},\"evidenceUrl\":{\"label\":\"Jakie (zewnętrzne) dowody są dostępne na poparcie tego?\"},\"title\":\"Zdefiniuj Ethos\",\"values\":{\"label\":\"Jakie wartości są ważne, których dotyczy interwencja?\"}},\"deliver\":{\"actors\":{\"label\":\"Przez kogo jest dostarczany?\"},\"evidenceUrl\":{\"label\":\"Jakie (zewnętrzne) dowody są dostępne na poparcie tego?\"},\"method\":{\"label\":\"W jaki sposób przeprowadzana jest interwencja?\"},\"title\":\"Dostarczyć\"},\"govern\":{\"actions\":{\"label\":\"Jak zarządzana jest interwencja? Jakie środki podjęto, aby zapewnić zgodne z zamierzeniami wyniki?\"},\"actors\":{\"label\":\"Kto to ocenia?\"},\"evolution\":{\"label\":\"Jak to wpływa na ewolucję usługi?\"},\"improvements\":{\"label\":\"W jaki sposób identyfikuje się ulepszenia? Jak są wdrażane?\"},\"outcomes\":{\"label\":\"Czy wyniki są zawarte w celach i pomiarach? A jeśli tak, to kogo?\"},\"title\":\"Rządzić\"},\"model\":{\"title\":\"Model\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Jakie działania są obecnie podejmowane w ramach pilota?\"},\"actors\":{\"label\":\"Jakie bieżące działania są podejmowane?\"},\"evidenceUrl\":{\"label\":\"Jakie (zewnętrzne) dowody są dostępne na poparcie tego?\"},\"title\":\"Planuj i zarządzaj - bieżące działania\"},\"planManagePrior\":{\"actions\":{\"label\":\"Jakie działania były podejmowane przed interwencją?\"},\"actors\":{\"label\":\"Kto był zaangażowany w te wcześniejsze działania?\"},\"evidenceUrl\":{\"label\":\"Jakie (zewnętrzne) dowody są dostępne na poparcie tego?\"},\"title\":\"Planuj i zarządzaj - wcześniejsze działania\"}},\"guide\":{\"step01\":\"Istnieje wiele podstawowych procesów związanych z współtwórczą innowacją. Pierwsza dotyczy definicji etosu.\",\"step02\":\"Drugi dotyczy działań zarządczych i produktów.\",\"step03\":\"Porządek moralny dotyczy tego, kto bierze udział w działaniach, więc w przypadku Twojej inicjatywy, kto jest zaangażowany w te procesy? Gdzie i kiedy się odbywają? Jak się komunikują i jak są nagrywane?\",\"step04\":\"W wyniku przywództwa, planowania i projektowania, usługi lub inicjatywy są dostarczane i doświadczane.\",\"step05\":\"Znowu kto jest tutaj zaangażowany i czy bierze udział w pierwszych dwóch zestawach działań?\",\"step06\":\"Zamiast po prostu zamknąć pętlę prostym procesem ewaluacji, sugerujemy, że w systemach współproduktywnego dobrostanu i opieki, zarządzanie angażuje wszystkich uczestników w zidentyfikowane tu relacje, uczestnicząc w odpowiadaniu na pytania zdefiniowane w modelu porządku moralnego.\",\"step07\":\"Zarządzanie odbywa się na poziomie relacji z klientem indywidualnym.\",\"step08\":\"Odbywa się również na ogólnym poziomie usług.\",\"step09\":\"W jaki sposób procesy zarządzania, w sensie, który je tutaj opisujemy, przebiegają w Twojej inicjatywie?\"},\"options\":{\"sources\":{\"meeting\":\"Spotkanie\",\"other\":\"Inny\",\"policy\":\"Polityka\"}},\"title\":\"Porządek moralny\"},\"social_media\":{\"dashboard\":{\"title\":\"Media społecznościowe\"},\"definitions\":{\"data\":{\"title\":\"Media społecznościowe\"}},\"title\":\"Media społecznościowe\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"W tym projekcie nie ma teorii elementów zmian.\",\"manage\":\"Zarządzaj teorią zmiany\",\"title\":\"Teoria zmiany\"},\"definitions\":{\"data\":{\"hint\":\"Dodaj wszelkie teorie zmian, jakie może mieć Twój projekt.\",\"title\":\"Teoria zmiany\"}},\"title\":\"Teoria zmiany\"},\"user_journey_model\":{\"dashboard\":{\"one\":\"\",\"few\":\"\",\"many\":\"\",\"other\":\"\"},\"definitions\":{\"accessing\":{\"access_method\":{\"label\":\"Jak uzyskałeś dostęp do usługi?\"},\"appropriate_comment\":{\"label\":\"Czy uważasz, że ten aspekt usługi jest odpowiedni?\"},\"qualification_experience\":{\"label\":\"Jeśli tak, jakie to było doświadczenie?\"},\"qualification_process\":{\"label\":\"Czy był proces kwalifikacji lub selekcji?\"},\"title\":\"Dostęp\"},\"discovering\":{\"comments\":{\"label\":\"Jakieś dalsze uwagi, spostrzeżenia?\"},\"discovery_medium\":{\"label\":\"Jak dowiedziałeś się o usłudze?\"},\"information_experience\":{\"label\":\"Jaka jest Twoja opinia na temat jakości, kompletności i dostępności informacji?\"},\"information_medium\":{\"label\":\"W jaki sposób uzyskałeś informacje o usłudze?\"},\"title\":\"Odkrywanie\"},\"evaluating\":{\"opinions_asked\":{\"hint\":\"Pomyśl, gdzie i kiedy to było.\",\"label\":\"Czy zapytano Cię o opinie na temat Twojego doświadczenia z usługą?\"},\"opinions_how\":{\"label\":\"Jeśli tak, w jaki sposób zostałeś zapytany?\"},\"service_experience\":{\"label\":\"Czy usługa była tym, czego się spodziewałeś?\"},\"surprises_comments\":{\"label\":\"Czy w twoim doświadczeniu były jakieś niespodzianki lub rozczarowania?\"},\"title\":\"Ocenianie\"},\"instigating\":{\"comments\":{\"label\":\"Komentarze\"},\"design_role\":{\"label\":\"Czy odegrałeś jakąś rolę w projektowaniu i definiowaniu usługi? Jeśli tak, jakie były okazje i kanały, w których to się działo?\"},\"instigate_role\":{\"label\":\"Czy odegrałeś jakąś rolę w zainicjowaniu projektu? Jeśli tak, czy uczestniczyłeś w którejś z poniższych opcji? Możesz wybrać tyle, ile chcesz.\"},\"title\":\"Inspirujące\"},\"model\":{\"title\":\"Model\"},\"using\":{\"accessible_experience\":{\"label\":\"Czy usługa była dla Ciebie dostępna?\"},\"participate_experience\":{\"label\":\"Jak to było korzystać z usługi lub w niej uczestniczyć?\"},\"time_experience\":{\"label\":\"Czy czas trwania i częstotliwość wydarzeń serwisowych lub kontaktów były prawidłowe?\"},\"title\":\"Za pomocą\",\"where\":{\"label\":\"Gdzie korzystałeś z usługi?\"}}},\"guide\":{\"step01\":\"Usługi są upubliczniane dla ich zamierzonych użytkowników, jest to faza wykrywania.\",\"step02\":\"Użytkownicy, którzy chcą, aby usługa złożyła jakąś prośbę lub aplikację, jest to faza dostępu.\",\"step03\":\"Jeśli poprzedni etap się powiódł, usługa jest dostarczona i doświadczona, jest to faza użytkowania.\",\"step04\":\"Następnie oceniane jest doświadczenie w korzystaniu z usługi.\",\"step05\":\"Dotychczasowe pytania zakładają, że usługa została zdefiniowana i już istnieje. Kolejny zestaw pytań dotyczy tego, czy iw jaki sposób uczestniczyłeś w procesach, dzięki którym usługa została stworzona w pierwszej kolejności.\",\"step06\":\"Najpierw możemy uzupełnić nasz model świadczenia usług o etapy tworzenia. Nazywamy to fazą projektowania.\",\"step07\":\"Następnie możemy pokazać procesy, przez które usługa została zidentyfikowana i zainicjowana w pierwszej kolejności. Nazywamy to fazą pobudzającą.\"},\"options\":{\"access_methods\":{\"applied\":\"Stosowany\",\"other\":\"Inny\",\"referred\":\"Polecony\"},\"instigate_roles\":{\"government_department\":\"Departament rządu\",\"political_party\":\"Partia polityczna\",\"pressure_group\":\"Grupa nacisku / kampanii\"},\"mediums\":{\"other\":\"Inny\",\"paper\":\"Publikacja papierowa\",\"referral\":\"Skierowanie\",\"social\":\"Media społecznościowe\",\"word_of_mouth\":\"Plotka\"},\"opinions_how\":{\"interview\":\"Wywiad\",\"survey\":\"Ankieta\",\"workshop\":\"Warsztat\"},\"where\":{\"community\":\"Społeczność\",\"home\":\"Dom\",\"other\":\"Inny\",\"public\":\"Publiczny\"},\"yes_no_maybe\":{\"maybe\":\"Może\",\"no\":\"Nie\",\"yes\":\"tak\"}},\"title\":\"Model podróży użytkownika\"},\"welcome\":{\"dashboard\":{\"summary\":\"Utworzone przez {user} dnia {date_time}\"},\"title\":\"Witamy\"}},\"countries\":{\"de\":\"Niemcy\",\"el\":\"Grecja\",\"en_GB\":\"Zjednoczone Królestwo\",\"es\":\"Hiszpania\",\"et\":\"Estonia\",\"fi\":\"Finlandia\",\"fr\":\"Francja\",\"hu\":\"Węgry\",\"it\":\"Włochy\",\"nl\":\"Holandia\",\"pl\":\"Polska\",\"sv_SE\":\"Szwecja\"},\"hints\":{\"editor_double_click_edit\":\"Kliknij dwukrotnie element, aby go edytować, i wprowadź, aby zapisać\",\"social_facebook_add\":\"Dodaj pełne linki (adresy URL) do grup lub stron na Facebooku.\",\"social_instagram_add\":\"Wpisz hashtag na Instagramie, z # lub bez. Naciśnij Enter, aby dodać.\",\"social_twitter_add\":\"Wpisz hashtag Twittera, z # lub bez. Naciśnij Enter, aby dodać.\",\"social_youtube_add\":\"Wprowadź link do filmu z YouTube i naciśnij Enter, aby dodać.\",\"type_and_enter\":\"Wpisz nazwę poniżej i naciśnij Enter.\"},\"languages\":{\"de\":\"Niemiecki\",\"el\":\"Grecki\",\"en_GB\":\"Angielski\",\"es\":\"Hiszpański\",\"et\":\"Estoński\",\"fi\":\"Fiński\",\"fr\":\"Francuski\",\"hu\":\"Węgierski\",\"it\":\"Włoski\",\"nl\":\"Holenderski\",\"pl\":\"Polskie\",\"sv_SE\":\"Szwedzki\"},\"user_guide\":{\"back\":\"Z powrotem\",\"close\":\"Blisko\",\"next\":\"Kolejny\",\"show\":\"Pokaż podręcznik użytkownika\",\"skip\":\"Pomiń podręcznik użytkownika\"}}");
 
 /***/ }),
 
@@ -5538,10 +6216,10 @@ module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organizacja
 /*!****************************!*\
   !*** ./js/lang/sv_SE.json ***!
   \****************************/
-/*! exports provided: activity_types, app, aspects, hints, languages, user_guide, default */
+/*! exports provided: activity_types, app, aspects, countries, hints, languages, user_guide, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisation\",\"service\":\"Service\",\"user\":\"Användare\"},\"app\":{\"add_new_actor\":\"Lägg till ny skådespelare\",\"add_new_item\":\"Lägg till nytt föremål\",\"all\":\"Allt\",\"colour\":\"Färg\",\"create\":\"Skapa\",\"created_by\":\"Skapad av\",\"delete\":\"Radera\",\"description\":\"Beskrivning\",\"download\":\"Ladda ner\",\"error\":\"Fel\",\"error_message\":\"Fel: {message}\",\"export\":\"Exportera\",\"exporting\":\"Exporterar\",\"exporting_project\":\"Exporterar projekt\",\"image\":\"Bild\",\"image_drag_prompt\":\"Dra din bild hit för att börja eller klicka för att bläddra.\",\"image_is_uploading\":\"Överför bild\",\"image_remove\":\"Ta bort bilden\",\"image_upload_error\":\"Uppladdningsfel\",\"import\":\"Importera\",\"import_project\":\"Importera projekt\",\"import_project_drag_hint\":\"Dra ditt CoSMoS-projekt hit för att börja eller klicka för att bläddra.\",\"import_project_notes\":\"Obs! Du kommer att äga projektet som importeras.\",\"import_project_success\":\"Projektet har importerats framgångsrikt!\",\"just_mine\":\"Bara min\",\"label\":\"Märka\",\"last_saved_at\":\"Senast sparad {date_time}\",\"log_in\":\"Logga in\",\"maximum_items\":\"Högst {count} objekt | Maxumum {count} artikel | Högst {count} objekt\",\"models\":\"Modeller\",\"name\":\"namn\",\"new_project\":\"Skapa nytt projekt\",\"next\":\"Nästa\",\"no_projects\":\"Inga projekt hittades.\",\"ok\":\"OK\",\"open_project\":\"Öppet projekt\",\"please_wait_generate\":\"Vänta medan filen genereras.\",\"processing\":\"Bearbetning\",\"project\":\"Projekt\",\"project_save_success\":\"Projektet sparades!\",\"save\":\"Spara\",\"saving\":\"Sparande\",\"scale_to_fit\":\"Skala för att passa\",\"search\":\"Sök\",\"title\":\"Titel\",\"to_create_project\":\"för att skapa ett projekt.\",\"try_again\":\"Försök igen\",\"type\":\"Typ\",\"user_is_read_only\":\"Din användaråtkomstnivå är skrivskyddad.\",\"web_address\":\"webbadress\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Makro\"},\"meso\":{\"description\":\"Det kan finnas ett antal steg på denna nivå.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Finns det andra förmånstagare än den direkta användaren / deltagarna? Om så är fallet, vem är de?\",\"title\":\"Förmånstagare\"},\"broker\":{\"hint\":\"Finns det en aktiv mäklare mellan initiativtagarna till förändring och förändringsskapare? Om så är fallet, vem är de?\",\"title\":\"Mäklare\"},\"changeMakers\":{\"hint\":\"Vem är, eller var, initiativtagarna som inledde din intervention?\",\"title\":\"Change Makers\"},\"changeTheorists\":{\"hint\":\"Vilka är förändringsteoretikerna för interventionen?\",\"title\":\"Ändra teoretiker\"},\"frontLineServiceDeliverer\":{\"hint\":\"Vem är tjänsteleverantören i frontlinjen?\",\"title\":\"Serviceleverantör i frontlinjen\"},\"instigatorsOfChange\":{\"hint\":\"Vem är, eller var, initiativtagarna som inledde din intervention?\",\"title\":\"Påbörjare av förändring\"},\"model\":{\"title\":\"Modell\"},\"serviceDeliveryManager\":{\"hint\":\"Vem är Service Delivery Manager ansvarig för interventionen?\",\"title\":\"Service Delivery Manager\"},\"serviceOrganisationManager\":{\"hint\":\"Vem är Service Organization Manager för interventionen?\",\"title\":\"Service Organisationschef\"},\"servicePolicyMaker\":{\"hint\":\"Vem är, eller var, definierarna för servicepolicyn och de principer enligt vilka tjänsten fungerar?\",\"title\":\"Service Policy Maker\"},\"subjectsOfChange\":{\"hint\":\"Vilka är de identifierade ämnena för förändring inom interventionen?\",\"title\":\"Ämnen för förändring\"},\"user\":{\"hint\":\"Vem är den direkta användaren av tjänsten?\",\"title\":\"Kund / användare\"},\"victims\":{\"hint\":\"Finns det några identifierade offer? Om så är fallet, vem är de?\",\"title\":\"Offer\"}},\"guide\":{\"step01\":\"I den här modellen överväger vi ett Cosie-initiativ i termer av en uppsättning roller och samtalsförhållanden som de engagerar sig i.\",\"step02\":\"Först har vi tjänsteleverantör i frontlinjen och en klient.\",\"step03\":\"Leverantören har en chef eller handledare. Detta mönster för en individ som deltar i två konversationer kommer att upprepas.\",\"step04\":\"Leveransen sker i något formellt eller informellt institutionellt sammanhang.\",\"step05\":\"Slutligen finns tjänsten i en bredare policyinställning.\",\"step06\":\"Detta är tänkt att vara en abstrakt modell. I vissa fall kan det finnas en platt organisation där leverans, ledning och policy genomförs av alla medlemmar i ett litet team, i andra fall kan de representera distinkta individer och sammanhang.\",\"step07\":\"Hur kartläggs begreppen mikro, meso och makro på ditt initiativ?\",\"step08\":\"Hur sker kommunikation mellan dem?\",\"step09\":\"Hur samordnade och sammanhängande är de?\",\"step10\":\"Finns det särskilt informationsflöden och konversationer mellan makro och mikro som inte förmedlas av meso? Vilka är konsekvenserna av detta?\",\"step11\":\"Nästa modell tar hänsyn till förändringsbyrå i termer av roller och konversationer.\",\"step12\":\"En förändring måste initieras och sedan körs den.\",\"step13\":\"De förändringar vi överväger är till en person, eller en plats eller miljö.\",\"step14\":\"De förändringar vi överväger är ofta själva komplexa och handlar om komplexa situationer. Ofta bygger de på någon teori som har införts eller förmedlats i situationen.\",\"step15\":\"Det finns en uppsättning avsedda förmånstagare.\",\"step16\":\"Men det finns också möjliga missmottagare eller offer för förändringen.\",\"step17\":\"Denna modell är utformad som en sond på den ursprungliga servicemodellen för att identifiera de specifika aktörerna som i olika steg i utvecklingen av initiativet har genomfört en eller flera av dessa förändringsbyråroller. Vilka är dom?\"},\"title\":\"Analytisk modell\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Tvetydighet\",\"ambivalence\":\"Ambivalens\",\"committing\":\"Åtar sig\",\"execute\":\"Kör\",\"first_order\":\"Första beställning\",\"fourth_order\":\"Fjärde ordern!\",\"languaging\":\"\\\"Språk\\\"\",\"measure\":\"Mäta\",\"plan\":\"Planen\",\"risk\":\"Risk\",\"second_order\":\"Andra beställning\",\"sense_making\":\"Sense-Making\",\"third_order\":\"Tredje ordningen\",\"vision\":\"Syn\",\"zero_order\":\"Noll ordning\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Hur genomförs planen?\"},\"measure\":{\"label\":\"Hur registreras observationer och mätningar? Om inte, vad behöver göras för att göra det?\"},\"plan\":{\"label\":\"Hur skapades en plan för att leverera visionen?\"},\"vision\":{\"label\":\"Hur fastställdes visionen och målen?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Vad var ursprunget till förändringen? Och vad var förändringen?\"},\"event_cause\":{\"label\":\"Vad hände för att denna händelse skulle inträffa?\"},\"unexpected_events\":{\"label\":\"Har det förekommit fall där du har sett oväntade händelser inträffat?\"}},\"model\":{\"title\":\"Modell\"},\"second_order\":{\"committing\":{\"label\":\"Hur har tjänsteleveransen för interventionen förändrats från de ursprungliga planerna?\"},\"languaging\":{\"label\":\"Vilka förändringar har gjorts i hur insatsen har förstått?\"},\"sense_making\":{\"label\":\"När granskar du planerna och visionen?\"}},\"third_order\":{\"processes\":{\"label\":\"Vilka processer framkallar eller möjliggör frågan om andra ordningen?\"}}},\"guide\":{\"step01\":\"Vi börjar med den standardmodell för målmedveten handling som vi alla är mycket bekanta med.\",\"step02\":\"Men vi har alla haft erfarenhet av att se tillbaka och inse att saker har förändrats på ett riktigt fundamentalt sätt: vi pratar om paradigmskiftet. Detta innebär att vi har åtagit oss att göra en ny känsla av vår värld och detta innebär ofta att vårt språk förändras.\",\"step03\":\"Dessa två olika sätt att fungera kallas ibland första ordning och andra ordning.\",\"step04\":\"När det gäller ledningen har vi å ena sidan riskhantering och å andra sidan lösningen på motsägelser och tvetydigheter.\",\"step05\":\"Vi introducerar nu idén om tredje ordningens aktiviteter som möjliggör och stöder lämpliga övergångar mellan första och andra arbetet, vilket möjliggör ett steg tillbaka för att ompröva vår etos och antaganden och, när vi har det, gå tillbaka till läget för praktisk planering och leverans.\",\"step06\":\"Ibland är reaktionen på tvetydighet och motsägelse en känslomässig reaktion: slåss eller flyga som är nollordning, eller inspiration och hjältemod som vi kommer att kalla fjärde ordningen.\",\"step07\":\"Så på höger sida av vårt diagram har vi ett spektrum av känslomässigt arbete och svar medan vi på vänster sida har samproduktivt, konversationsarbete.\",\"step08\":\"Denna modell genererar en serie öppna frågor om var de olika första och andra ordningens arbete äger rum i ditt initiativ, vad känslomässigt arbete har varit och vad som krävs och hur och var det utförs och hur och av vem är de erforderliga tredje ordningens insatser genomfört?\"},\"title\":\"Byt modell\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Livssyn\",\"infrastructural_relationships\":\"Infrastrukturrelationer, resurser och anläggningar\",\"policy_law\":\"Policy & lag\",\"resources\":\"Resurser\",\"service_definition\":\"Service Definition and Development Platform\",\"service_delivery\":\"Serviceleveransplattform\",\"structural_relationships\":\"Strukturella relationer och tillfällen\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Finns det andra förmånstagare än den direkta användaren / deltagarna? Om så är fallet, vem är de?\",\"title\":\"Förmånstagare\"},\"delivery\":{\"hint\":\"Vem är ansvarig för leveransmekanismen, kanalerna och rollerna i din pilot?\",\"title\":\"Leverantör\"},\"deployment\":{\"hint\":\"Vem distribuerar / distribuerar och aktiverar / aktiverade dessa processer och resurser?\",\"title\":\"Distributör\"},\"drivers\":{\"body\":{\"hint\":\"Vilka drivkrafter och motiv är inblandade?\",\"label\":\"Drivrutiner och motivationer\"},\"hint\":\"Vilka var / är drivkrafterna och motivationen för projektet? Var det ett lagstadgat krav, erkännande av ett behov eller krav, att ta tillfället i akt, ta itu med en ojämlikhet?\",\"title\":\"Drivrutiner och motivationer\"},\"evaluation\":{\"hint\":\"Vem är utvärderaren (arna) och guvernörerna för tjänsten?\",\"title\":\"Utvärderare\"},\"extorg\":{\"hint\":\"Finns det några relevanta aktörer, intressenter eller byråer som är relevanta för piloten, men som fortfarande ligger utanför dess vision och etos?\",\"title\":\"Externa organisationer\"},\"extsvc\":{\"hint\":\"Vilka återanvändbara anläggningar, (tekniska och mänskliga) resurser, tjänster och informationskällor utvecklades och användes för att stödja dessa definitioner av tjänster och utvecklingsprocesser? Vilka externa resurser och tjänster (t.ex. kommunikation och sociala medier) användes / användes?\",\"title\":\"Externa tekniska tjänster\"},\"infsvc\":{\"hint\":\"Vilka externa tjänster, kanaler och faciliteter använder du vid leveransen av dina tjänster? Vilka informationskällor använder du? Vilken information publicerar du, till vem och vilka kanaler och media använder du?\",\"title\":\"Infrastrukturtjänster\"},\"initiator\":{\"hint\":\"Vem är, eller var, initiativtagarna som initierade din pilotaktivitet?\",\"title\":\"Initiator\"},\"model\":{\"title\":\"Modell\"},\"policyDef\":{\"hint\":\"Vem är, eller var, definierarna för servicepolicyn och de principer enligt vilka tjänsten fungerar?\",\"title\":\"Policy Definition\"},\"specDes\":{\"hint\":\"Vem specificerar / specificerar och designar / utformade processer och resurser för tjänsteleverans?\",\"title\":\"Specifier och Designer\"},\"user\":{\"hint\":\"Vem är den direkta användaren av tjänsten?\",\"title\":\"Användare\"}},\"title\":\"Co-Creation of Service Model\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Det finns inga gemenskapsrapporteringsobjekt för detta projekt.\",\"manage\":\"Hantera gemenskapsrapportering\",\"title\":\"Gemenskapsrapportering\"},\"definitions\":{\"data\":{\"hint\":\"Lägg till eventuella gemenskapsrapporter som ditt projekt kan ha.\",\"title\":\"Gemenskapsrapportering\"}},\"title\":\"Gemenskapsrapportering\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Det finns inga dokument eller filer för detta projekt.\",\"manage\":\"Hantera dokument och filer\",\"title\":\"Dokument och filer\"},\"definitions\":{\"data\":{\"hint\":\"Lägg till alla dokument och filer som ditt projekt kan ha.\",\"title\":\"Dokument och filer\"}},\"title\":\"Dokument\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Välbefinnande\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Vilka aspekter av tjänstens livscykel är viktiga för din innovation och förändring?\"},\"title\":\"Innovation och förändring\"},\"intervention\":{\"items\":{\"label\":\"Vilken typ av intervention sker?\"},\"title\":\"Intervention\"},\"learning\":{\"items\":{\"label\":\"Hur sker lärande i ditt ingripande?\"},\"title\":\"Inlärning\"},\"model\":{\"title\":\"Modell\"},\"wellbeing\":{\"items\":{\"label\":\"Vilka aspekter av människans välbefinnande och miljön är relevanta för din tjänst? Är några mer betydelsefulla än andra?\"},\"title\":\"Människors välbefinnande och miljö\"}},\"guide\":{\"step01\":\"De samkreativa initiativ vi överväger handlar om att förbättra och vårda välbefinnandet. Här tar vi hänsyn till individers välbefinnande men detta kan tillämpas på platser eller i större miljöer.\",\"step02\":\"Välbefinnande har ett antal olika aspekter som alla är beroende av varandra.\",\"step03\":\"Det interagerar också med de fysiska och sociala miljöerna.\",\"step04\":\"Vissa tjänster eller ingripanden handlar om att reparera något som har gått fel och återställa status quo.\",\"step05\":\"Men det finns andra syften för ingripanden.\",\"step06\":\"Interventionsprocessen involverar ett antal olika steg och processer.\",\"step07\":\"Slutligen, om våra innovationer ska upprätthållas måste vi lära oss och förbättra.\",\"step08\":\"Vem, vad eller var är målet för din intervention?\",\"step09\":\"Vilka aspekter av välbefinnande är fokus för ditt initiativ?\",\"step10\":\"Vilka aspekter av ditt ämnes välbefinnande är relevanta men utanför ditt initiativ?\",\"step11\":\"Vilka är de relevanta miljöaspekterna?\",\"step12\":\"Vilka kombinationer av insatser, från förebyggande till transformation, är relevanta för ditt initiativ?\",\"step13\":\"I vilken utsträckning är inlärning och förbättring inbyggd i dina utvecklingsstyrning och leveransprocesser?\"},\"options\":{\"innovation\":{\"development\":\"Utveckling\",\"facilitation\":\"Underlättande\",\"palliation\":\"Lindring\",\"prevention\":\"Förebyggande\",\"rehabilitation\":\"Rehabilitering\",\"remedy\":\"Avhjälpa\",\"transformation\":\"Omvandling\"},\"intervention\":{\"coordination_delivery\":\"Koordinering och leverans\",\"governance\":\"Styrning\",\"identification\":\"Identifiering och planering\",\"learning\":\"Inlärning\",\"management\":\"Förvaltning\"},\"learning\":{\"research_evidence\":\"Forskning och bevis\",\"service_improvement\":\"Förbättring av tjänster\",\"trials\":\"Försök\"},\"wellbeing\":{\"faculties_skills\":\"Fakulteter och färdigheter\",\"mental_psych\":\"Mental och psykologisk\",\"physical_env\":\"Fysisk miljö\",\"physiological\":\"Fysiologisk\",\"socio_cultural_env\":\"Sociokulturell miljö\",\"socio_economic\":\"Socioekonomisk\"}},\"title\":\"Interventionsteorimodell\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Definiera etos\",\"define_ethos_items\":\"Värden\\n Principer\\n Avsikter\\n Policyer\",\"deliver\":\"Leverera\",\"experience\":\"Erfarenhet\",\"govern\":\"Styra\",\"individual_cases\":\"Enskilda fall\",\"plan_manage\":\"Planera och hantera\",\"plan_manage_items\":\"Regler\\n Resurser\\n Processer\\n Konton\",\"the_service_level\":\"Servicenivån\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Hur kommer dessa värden att definieras?\"},\"evidenceUrl\":{\"label\":\"Vilka (externa) bevis finns tillgängliga för att stödja detta?\"},\"title\":\"Definiera etos\",\"values\":{\"label\":\"Vilka värden är viktiga att ingripandet kommer att ta itu med?\"}},\"deliver\":{\"actors\":{\"label\":\"Av vem levereras det?\"},\"evidenceUrl\":{\"label\":\"Vilka (externa) bevis finns tillgängliga för att stödja detta?\"},\"method\":{\"label\":\"Hur levereras interventionen?\"},\"title\":\"Leverera\"},\"govern\":{\"actions\":{\"label\":\"Hur styrs ingripandet? Vilka åtgärder vidtas för att säkerställa att resultaten var som avsedda?\"},\"actors\":{\"label\":\"Vem utvärderar detta?\"},\"evolution\":{\"label\":\"Hur påverkar detta utvecklingen av tjänsten?\"},\"improvements\":{\"label\":\"Hur identifieras förbättringar? Hur implementeras de?\"},\"outcomes\":{\"label\":\"Ingår resultaten i mål och mätningar? Och i så fall vem?\"},\"title\":\"Styra\"},\"model\":{\"title\":\"Modell\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Vilka åtgärder genomförs nu inom piloten?\"},\"actors\":{\"label\":\"Vilka pågående åtgärder vidtas?\"},\"evidenceUrl\":{\"label\":\"Vilka (externa) bevis finns tillgängliga för att stödja detta?\"},\"title\":\"Planera och hantera - nuvarande åtgärder\"},\"planManagePrior\":{\"actions\":{\"label\":\"Vilka åtgärder vidtogs före ingripandet?\"},\"actors\":{\"label\":\"Vem var inblandad i dessa tidigare åtgärder?\"},\"evidenceUrl\":{\"label\":\"Vilka (externa) bevis finns tillgängliga för att stödja detta?\"},\"title\":\"Planera och hantera - Tidigare åtgärder\"}},\"guide\":{\"step01\":\"Det finns ett antal kärnprocesser involverade i en kreativ innovation. Den första handlar om definitionen av etos.\",\"step02\":\"Den andra handlar om ledningsaktiviteter och produkter.\",\"step03\":\"Moralisk ordning handlar om vem som får delta i aktiviteter så vem deltar i dessa processer, när det gäller ditt initiativ? Var och när äger de rum? Hur kommunicerar de och hur spelas de in?\",\"step04\":\"Som ett resultat av ledarskap, planering och design levereras och upplevs tjänster eller initiativ.\",\"step05\":\"Återigen vem är inblandad här och får de delta i de två första uppsättningarna av aktiviteter?\",\"step06\":\"I stället för att helt enkelt stänga slingan med en enkel utvärderingsprocess, föreslår vi att i system för samproduktivt välbefinnande och vård involverar styrning alla deltagare i relationerna som identifieras här, deltagande i frågor som definieras i den moraliska ordningsmodellen.\",\"step07\":\"Styrning sker på den individuella servicekundrelationsnivån.\",\"step08\":\"Det sker också på den övergripande servicenivån.\",\"step09\":\"Hur sker styrningsprocesser, i den mening som vi beskriver dem här, i ditt initiativ?\"},\"options\":{\"sources\":{\"meeting\":\"Möte\",\"other\":\"Övrig\",\"policy\":\"Politik\"}},\"title\":\"Moralisk ordning\"},\"social_media\":{\"dashboard\":{\"title\":\"Sociala media\"},\"definitions\":{\"data\":{\"title\":\"Sociala media\"}},\"title\":\"Sociala media\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Det finns ingen teori om förändringsartiklar för detta projekt.\",\"manage\":\"Hantera förändringsteori\",\"title\":\"Teori om förändring\"},\"definitions\":{\"data\":{\"hint\":\"Lägg till eventuella förändringsteorier som ditt projekt kan ha.\",\"title\":\"Teori om förändring\"}},\"title\":\"Teori om förändring\"},\"welcome\":{\"dashboard\":{\"summary\":\"Skapad av {user} den {date_time}\"},\"title\":\"Välkommen\"}},\"hints\":{\"editor_double_click_edit\":\"Dubbelklicka på ett objekt för att redigera det och gå in för att spara\",\"social_facebook_add\":\"Lägg till fullständiga länkar (URL: er) till Facebook-grupper eller -sidor.\",\"social_instagram_add\":\"Ange en Instagram-hashtag, med eller utan #. Tryck på Enter för att lägga till.\",\"social_twitter_add\":\"Ange en Twitter-hashtag, med eller utan #. Tryck på Enter för att lägga till.\",\"social_youtube_add\":\"Ange en länk till en YouTube-video och tryck på Enter för att lägga till.\",\"type_and_enter\":\"Skriv namnet nedan och tryck på enter.\"},\"languages\":{\"de\":\"tysk\",\"el\":\"Grekiska\",\"en_GB\":\"Engelska\",\"es\":\"Spanska\",\"et\":\"Estniska\",\"fi\":\"Finska\",\"fr\":\"Franska\",\"hu\":\"Ungerska\",\"it\":\"Italienska\",\"nl\":\"Nederländska\",\"pl\":\"Polska\",\"sv_SE\":\"Svenska\"},\"user_guide\":{\"back\":\"Tillbaka\",\"close\":\"Stänga\",\"next\":\"Nästa\",\"show\":\"Visa användarhandbok\",\"skip\":\"Hoppa över användarhandboken\"}}");
+module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Organisation\",\"service\":\"Service\",\"user\":\"Användare\"},\"app\":{\"add_new_actor\":\"Lägg till ny skådespelare\",\"add_new_item\":\"Lägg till nytt föremål\",\"all\":\"Allt\",\"colour\":\"Färg\",\"country\":\"Land\",\"create\":\"Skapa\",\"created_by\":\"Skapad av\",\"delete\":\"Radera\",\"description\":\"Beskrivning\",\"download\":\"Ladda ner\",\"error\":\"Fel\",\"error_message\":\"Fel: {message}\",\"export\":\"Exportera\",\"exporting\":\"Exporterar\",\"exporting_project\":\"Exporterar projekt\",\"image\":\"Bild\",\"image_drag_prompt\":\"Dra din bild hit för att börja eller klicka för att bläddra.\",\"image_is_uploading\":\"Överför bild\",\"image_remove\":\"Ta bort bilden\",\"image_upload_error\":\"Uppladdningsfel\",\"import\":\"Importera\",\"import_project\":\"Importera projekt\",\"import_project_drag_hint\":\"Dra ditt CoSMoS-projekt hit för att börja eller klicka för att bläddra.\",\"import_project_notes\":\"Obs! Du kommer att äga projektet som importeras.\",\"import_project_success\":\"Projektet har importerats framgångsrikt!\",\"just_mine\":\"Bara min\",\"label\":\"Märka\",\"last_saved_at\":\"Senast sparad {date_time}\",\"log_in\":\"Logga in\",\"maximum_items\":\"Högst {count} objekt | Maxumum {count} artikel | Högst {count} objekt\",\"models\":\"Modeller\",\"more_details\":\"Fler detaljer\",\"name\":\"namn\",\"new_project\":\"Skapa nytt projekt\",\"next\":\"Nästa\",\"no_projects\":\"Inga projekt hittades.\",\"ok\":\"OK\",\"open_project\":\"Öppet projekt\",\"please_wait_generate\":\"Vänta medan filen genereras.\",\"processing\":\"Bearbetning\",\"project\":\"Projekt\",\"project_save_success\":\"Projektet sparades!\",\"save\":\"Spara\",\"saving\":\"Sparande\",\"scale_to_fit\":\"Skala för att passa\",\"search\":\"Sök\",\"title\":\"Titel\",\"to_create_project\":\"för att skapa ett projekt.\",\"try_again\":\"Försök igen\",\"type\":\"Typ\",\"user_is_read_only\":\"Din användaråtkomstnivå är skrivskyddad.\",\"web_address\":\"webbadress\",\"which_country\":\"Vilket land kommer du ifrån?\"},\"aspects\":{\"analytic_model\":{\"dashboard\":{\"macro\":{\"label\":\"Makro\"},\"meso\":{\"description\":\"Det kan finnas ett antal steg på denna nivå.\",\"label\":\"Meso\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"beneficiaries\":{\"hint\":\"Finns det andra förmånstagare än den direkta användaren / deltagarna? Om så är fallet, vem är de?\",\"title\":\"Förmånstagare\"},\"broker\":{\"hint\":\"Finns det en aktiv mäklare mellan initiativtagarna till förändring och förändringsskapare? Om så är fallet, vem är de?\",\"title\":\"Mäklare\"},\"changeMakers\":{\"hint\":\"Vem är, eller var, initiativtagarna som inledde din intervention?\",\"title\":\"Change Makers\"},\"changeTheorists\":{\"hint\":\"Vilka är förändringsteoretikerna för interventionen?\",\"title\":\"Ändra teoretiker\"},\"frontLineServiceDeliverer\":{\"hint\":\"Vem är tjänsteleverantören i frontlinjen?\",\"title\":\"Serviceleverantör i frontlinjen\"},\"instigatorsOfChange\":{\"hint\":\"Vem är, eller var, initiativtagarna som inledde din intervention?\",\"title\":\"Påbörjare av förändring\"},\"model\":{\"title\":\"Modell\"},\"serviceDeliveryManager\":{\"hint\":\"Vem är Service Delivery Manager ansvarig för interventionen?\",\"title\":\"Service Delivery Manager\"},\"serviceOrganisationManager\":{\"hint\":\"Vem är Service Organization Manager för interventionen?\",\"title\":\"Service Organisationschef\"},\"servicePolicyMaker\":{\"hint\":\"Vem är, eller var, definierarna för servicepolicyn och de principer enligt vilka tjänsten fungerar?\",\"title\":\"Service Policy Maker\"},\"subjectsOfChange\":{\"hint\":\"Vilka är de identifierade ämnena för förändring inom interventionen?\",\"title\":\"Ämnen för förändring\"},\"user\":{\"hint\":\"Vem är den direkta användaren av tjänsten?\",\"title\":\"Kund / användare\"},\"victims\":{\"hint\":\"Finns det några identifierade offer? Om så är fallet, vem är de?\",\"title\":\"Offer\"}},\"guide\":{\"step01\":\"I den här modellen överväger vi ett Cosie-initiativ i termer av en uppsättning roller och samtalsförhållanden som de engagerar sig i.\",\"step02\":\"Först har vi tjänsteleverantör i frontlinjen och en klient.\",\"step03\":\"Leverantören har en chef eller handledare. Detta mönster för en individ som deltar i två konversationer kommer att upprepas.\",\"step04\":\"Leveransen sker i något formellt eller informellt institutionellt sammanhang.\",\"step05\":\"Slutligen finns tjänsten i en bredare policyinställning.\",\"step06\":\"Detta är tänkt att vara en abstrakt modell. I vissa fall kan det finnas en platt organisation där leverans, ledning och policy genomförs av alla medlemmar i ett litet team, i andra fall kan de representera distinkta individer och sammanhang.\",\"step07\":\"Hur kartläggs begreppen mikro, meso och makro på ditt initiativ?\",\"step08\":\"Hur sker kommunikation mellan dem?\",\"step09\":\"Hur samordnade och sammanhängande är de?\",\"step10\":\"Finns det särskilt informationsflöden och konversationer mellan makro och mikro som inte förmedlas av meso? Vilka är konsekvenserna av detta?\",\"step11\":\"Nästa modell tar hänsyn till förändringsbyrå i termer av roller och konversationer.\",\"step12\":\"En förändring måste initieras och sedan körs den.\",\"step13\":\"De förändringar vi överväger är till en person, eller en plats eller miljö.\",\"step14\":\"De förändringar vi överväger är ofta själva komplexa och handlar om komplexa situationer. Ofta bygger de på någon teori som har införts eller förmedlats i situationen.\",\"step15\":\"Det finns en uppsättning avsedda förmånstagare.\",\"step16\":\"Men det finns också möjliga missmottagare eller offer för förändringen.\",\"step17\":\"Denna modell är utformad som en sond på den ursprungliga servicemodellen för att identifiera de specifika aktörerna som i olika steg i utvecklingen av initiativet har genomfört en eller flera av dessa förändringsbyråroller. Vilka är dom?\"},\"title\":\"Analytisk modell\"},\"change_model\":{\"dashboard\":{\"ambiguity\":\"Tvetydighet\",\"ambivalence\":\"Ambivalens\",\"committing\":\"Åtar sig\",\"execute\":\"Kör\",\"first_order\":\"Första beställning\",\"fourth_order\":\"Fjärde ordern!\",\"languaging\":\"\\\"Språk\\\"\",\"measure\":\"Mäta\",\"plan\":\"Planen\",\"risk\":\"Risk\",\"second_order\":\"Andra beställning\",\"sense_making\":\"Sense-Making\",\"third_order\":\"Tredje ordningen\",\"vision\":\"Syn\",\"zero_order\":\"Noll ordning\"},\"definitions\":{\"first_order\":{\"execute\":{\"label\":\"Hur genomförs planen?\"},\"measure\":{\"label\":\"Hur registreras observationer och mätningar? Om inte, vad behöver göras för att göra det?\"},\"plan\":{\"label\":\"Hur skapades en plan för att leverera visionen?\"},\"vision\":{\"label\":\"Hur fastställdes visionen och målen?\"}},\"fourth_order\":{\"change_origin\":{\"label\":\"Vad var ursprunget till förändringen? Och vad var förändringen?\"},\"event_cause\":{\"label\":\"Vad hände för att denna händelse skulle inträffa?\"},\"unexpected_events\":{\"label\":\"Har det förekommit fall där du har sett oväntade händelser inträffat?\"}},\"model\":{\"title\":\"Modell\"},\"second_order\":{\"committing\":{\"label\":\"Hur har tjänsteleveransen för interventionen förändrats från de ursprungliga planerna?\"},\"languaging\":{\"label\":\"Vilka förändringar har gjorts i hur insatsen har förstått?\"},\"sense_making\":{\"label\":\"När granskar du planerna och visionen?\"}},\"third_order\":{\"processes\":{\"label\":\"Vilka processer framkallar eller möjliggör frågan om andra ordningen?\"}}},\"guide\":{\"step01\":\"Vi börjar med den standardmodell för målmedveten handling som vi alla är mycket bekanta med.\",\"step02\":\"Men vi har alla haft erfarenhet av att se tillbaka och inse att saker har förändrats på ett riktigt fundamentalt sätt: vi pratar om paradigmskiftet. Detta innebär att vi har åtagit oss att göra en ny känsla av vår värld och detta innebär ofta att vårt språk förändras.\",\"step03\":\"Dessa två olika sätt att fungera kallas ibland första ordning och andra ordning.\",\"step04\":\"När det gäller ledningen har vi å ena sidan riskhantering och å andra sidan lösningen på motsägelser och tvetydigheter.\",\"step05\":\"Vi introducerar nu idén om tredje ordningens aktiviteter som möjliggör och stöder lämpliga övergångar mellan första och andra arbetet, vilket möjliggör ett steg tillbaka för att ompröva vår etos och antaganden och, när vi har det, gå tillbaka till läget för praktisk planering och leverans.\",\"step06\":\"Ibland är reaktionen på tvetydighet och motsägelse en känslomässig reaktion: slåss eller flyga som är nollordning, eller inspiration och hjältemod som vi kommer att kalla fjärde ordningen.\",\"step07\":\"Så på höger sida av vårt diagram har vi ett spektrum av känslomässigt arbete och svar medan vi på vänster sida har samproduktivt, konversationsarbete.\",\"step08\":\"Denna modell genererar en serie öppna frågor om var de olika första och andra ordningens arbete äger rum i ditt initiativ, vad känslomässigt arbete har varit och vad som krävs och hur och var det utförs och hur och av vem är de erforderliga tredje ordningens insatser genomfört?\"},\"title\":\"Byt modell\"},\"co_creation_of_service_model\":{\"dashboard\":{\"ethos\":\"Livssyn\",\"infrastructural_relationships\":\"Infrastrukturrelationer, resurser och anläggningar\",\"policy_law\":\"Policy & lag\",\"resources\":\"Resurser\",\"service_definition\":\"Service Definition and Development Platform\",\"service_delivery\":\"Serviceleveransplattform\",\"structural_relationships\":\"Strukturella relationer och tillfällen\"},\"definitions\":{\"beneficiary\":{\"hint\":\"Finns det andra förmånstagare än den direkta användaren / deltagarna? Om så är fallet, vem är de?\",\"title\":\"Förmånstagare\"},\"delivery\":{\"hint\":\"Vem är ansvarig för leveransmekanismen, kanalerna och rollerna i din pilot?\",\"title\":\"Leverantör\"},\"deployment\":{\"hint\":\"Vem distribuerar / distribuerar och aktiverar / aktiverade dessa processer och resurser?\",\"title\":\"Distributör\"},\"drivers\":{\"body\":{\"hint\":\"Vilka drivkrafter och motiv är inblandade?\",\"label\":\"Drivrutiner och motivationer\"},\"hint\":\"Vilka var / är drivkrafterna och motivationen för projektet? Var det ett lagstadgat krav, erkännande av ett behov eller krav, att ta tillfället i akt, ta itu med en ojämlikhet?\",\"title\":\"Drivrutiner och motivationer\"},\"evaluation\":{\"hint\":\"Vem är utvärderaren (arna) och guvernörerna för tjänsten?\",\"title\":\"Utvärderare\"},\"extorg\":{\"hint\":\"Finns det några relevanta aktörer, intressenter eller byråer som är relevanta för piloten, men som fortfarande ligger utanför dess vision och etos?\",\"title\":\"Externa organisationer\"},\"extsvc\":{\"hint\":\"Vilka återanvändbara anläggningar, (tekniska och mänskliga) resurser, tjänster och informationskällor utvecklades och användes för att stödja dessa definitioner av tjänster och utvecklingsprocesser? Vilka externa resurser och tjänster (t.ex. kommunikation och sociala medier) användes / användes?\",\"title\":\"Externa tekniska tjänster\"},\"infsvc\":{\"hint\":\"Vilka externa tjänster, kanaler och faciliteter använder du vid leveransen av dina tjänster? Vilka informationskällor använder du? Vilken information publicerar du, till vem och vilka kanaler och media använder du?\",\"title\":\"Infrastrukturtjänster\"},\"initiator\":{\"hint\":\"Vem är, eller var, initiativtagarna som initierade din pilotaktivitet?\",\"title\":\"Initiator\"},\"model\":{\"title\":\"Modell\"},\"policyDef\":{\"hint\":\"Vem är, eller var, definierarna för servicepolicyn och de principer enligt vilka tjänsten fungerar?\",\"title\":\"Policy Definition\"},\"specDes\":{\"hint\":\"Vem specificerar / specificerar och designar / utformade processer och resurser för tjänsteleverans?\",\"title\":\"Specifier och Designer\"},\"user\":{\"hint\":\"Vem är den direkta användaren av tjänsten?\",\"title\":\"Användare\"}},\"title\":\"Co-Creation of Service Model\"},\"community_reporting\":{\"dashboard\":{\"empty_set\":\"Det finns inga gemenskapsrapporteringsobjekt för detta projekt.\",\"manage\":\"Hantera gemenskapsrapportering\",\"title\":\"Gemenskapsrapportering\"},\"definitions\":{\"data\":{\"hint\":\"Lägg till eventuella gemenskapsrapporter som ditt projekt kan ha.\",\"title\":\"Gemenskapsrapportering\"}},\"title\":\"Gemenskapsrapportering\"},\"documents\":{\"dashboard\":{\"empty_set\":\"Det finns inga dokument eller filer för detta projekt.\",\"manage\":\"Hantera dokument och filer\",\"title\":\"Dokument och filer\"},\"definitions\":{\"data\":{\"hint\":\"Lägg till alla dokument och filer som ditt projekt kan ha.\",\"title\":\"Dokument och filer\"}},\"title\":\"Dokument\"},\"intervention_theory_model\":{\"dashboard\":{\"wellbeing\":\"Välbefinnande\"},\"definitions\":{\"innovation\":{\"items\":{\"label\":\"Vilka aspekter av tjänstens livscykel är viktiga för din innovation och förändring?\"},\"title\":\"Innovation och förändring\"},\"intervention\":{\"items\":{\"label\":\"Vilken typ av intervention sker?\"},\"title\":\"Intervention\"},\"learning\":{\"items\":{\"label\":\"Hur sker lärande i ditt ingripande?\"},\"title\":\"Inlärning\"},\"model\":{\"title\":\"Modell\"},\"wellbeing\":{\"items\":{\"label\":\"Vilka aspekter av människans välbefinnande och miljön är relevanta för din tjänst? Är några mer betydelsefulla än andra?\"},\"title\":\"Människors välbefinnande och miljö\"}},\"guide\":{\"step01\":\"De samkreativa initiativ vi överväger handlar om att förbättra och vårda välbefinnandet. Här tar vi hänsyn till individers välbefinnande men detta kan tillämpas på platser eller i större miljöer.\",\"step02\":\"Välbefinnande har ett antal olika aspekter som alla är beroende av varandra.\",\"step03\":\"Det interagerar också med de fysiska och sociala miljöerna.\",\"step04\":\"Vissa tjänster eller ingripanden handlar om att reparera något som har gått fel och återställa status quo.\",\"step05\":\"Men det finns andra syften för ingripanden.\",\"step06\":\"Interventionsprocessen involverar ett antal olika steg och processer.\",\"step07\":\"Slutligen, om våra innovationer ska upprätthållas måste vi lära oss och förbättra.\",\"step08\":\"Vem, vad eller var är målet för din intervention?\",\"step09\":\"Vilka aspekter av välbefinnande är fokus för ditt initiativ?\",\"step10\":\"Vilka aspekter av ditt ämnes välbefinnande är relevanta men utanför ditt initiativ?\",\"step11\":\"Vilka är de relevanta miljöaspekterna?\",\"step12\":\"Vilka kombinationer av insatser, från förebyggande till transformation, är relevanta för ditt initiativ?\",\"step13\":\"I vilken utsträckning är inlärning och förbättring inbyggd i dina utvecklingsstyrning och leveransprocesser?\"},\"options\":{\"innovation\":{\"development\":\"Utveckling\",\"facilitation\":\"Underlättande\",\"palliation\":\"Lindring\",\"prevention\":\"Förebyggande\",\"rehabilitation\":\"Rehabilitering\",\"remedy\":\"Avhjälpa\",\"transformation\":\"Omvandling\"},\"intervention\":{\"coordination_delivery\":\"Koordinering och leverans\",\"governance\":\"Styrning\",\"identification\":\"Identifiering och planering\",\"learning\":\"Inlärning\",\"management\":\"Förvaltning\"},\"learning\":{\"research_evidence\":\"Forskning och bevis\",\"service_improvement\":\"Förbättring av tjänster\",\"trials\":\"Försök\"},\"wellbeing\":{\"faculties_skills\":\"Fakulteter och färdigheter\",\"mental_psych\":\"Mental och psykologisk\",\"physical_env\":\"Fysisk miljö\",\"physiological\":\"Fysiologisk\",\"socio_cultural_env\":\"Sociokulturell miljö\",\"socio_economic\":\"Socioekonomisk\"}},\"title\":\"Interventionsteorimodell\"},\"moral_ordering_model\":{\"dashboard\":{\"define_ethos\":\"Definiera etos\",\"define_ethos_items\":\"Värden\\n Principer\\n Avsikter\\n Policyer\",\"deliver\":\"Leverera\",\"experience\":\"Erfarenhet\",\"govern\":\"Styra\",\"individual_cases\":\"Enskilda fall\",\"plan_manage\":\"Planera och hantera\",\"plan_manage_items\":\"Regler\\n Resurser\\n Processer\\n Konton\",\"the_service_level\":\"Servicenivån\"},\"definitions\":{\"defineEthos\":{\"definedBy\":{\"label\":\"Hur kommer dessa värden att definieras?\"},\"evidenceUrl\":{\"label\":\"Vilka (externa) bevis finns tillgängliga för att stödja detta?\"},\"title\":\"Definiera etos\",\"values\":{\"label\":\"Vilka värden är viktiga att ingripandet kommer att ta itu med?\"}},\"deliver\":{\"actors\":{\"label\":\"Av vem levereras det?\"},\"evidenceUrl\":{\"label\":\"Vilka (externa) bevis finns tillgängliga för att stödja detta?\"},\"method\":{\"label\":\"Hur levereras interventionen?\"},\"title\":\"Leverera\"},\"govern\":{\"actions\":{\"label\":\"Hur styrs ingripandet? Vilka åtgärder vidtas för att säkerställa att resultaten var som avsedda?\"},\"actors\":{\"label\":\"Vem utvärderar detta?\"},\"evolution\":{\"label\":\"Hur påverkar detta utvecklingen av tjänsten?\"},\"improvements\":{\"label\":\"Hur identifieras förbättringar? Hur implementeras de?\"},\"outcomes\":{\"label\":\"Ingår resultaten i mål och mätningar? Och i så fall vem?\"},\"title\":\"Styra\"},\"model\":{\"title\":\"Modell\"},\"planManageCurrent\":{\"actions\":{\"label\":\"Vilka åtgärder genomförs nu inom piloten?\"},\"actors\":{\"label\":\"Vilka pågående åtgärder vidtas?\"},\"evidenceUrl\":{\"label\":\"Vilka (externa) bevis finns tillgängliga för att stödja detta?\"},\"title\":\"Planera och hantera - nuvarande åtgärder\"},\"planManagePrior\":{\"actions\":{\"label\":\"Vilka åtgärder vidtogs före ingripandet?\"},\"actors\":{\"label\":\"Vem var inblandad i dessa tidigare åtgärder?\"},\"evidenceUrl\":{\"label\":\"Vilka (externa) bevis finns tillgängliga för att stödja detta?\"},\"title\":\"Planera och hantera - Tidigare åtgärder\"}},\"guide\":{\"step01\":\"Det finns ett antal kärnprocesser involverade i en kreativ innovation. Den första handlar om definitionen av etos.\",\"step02\":\"Den andra handlar om ledningsaktiviteter och produkter.\",\"step03\":\"Moralisk ordning handlar om vem som får delta i aktiviteter så vem deltar i dessa processer, när det gäller ditt initiativ? Var och när äger de rum? Hur kommunicerar de och hur spelas de in?\",\"step04\":\"Som ett resultat av ledarskap, planering och design levereras och upplevs tjänster eller initiativ.\",\"step05\":\"Återigen vem är inblandad här och får de delta i de två första uppsättningarna av aktiviteter?\",\"step06\":\"I stället för att helt enkelt stänga slingan med en enkel utvärderingsprocess, föreslår vi att i system för samproduktivt välbefinnande och vård involverar styrning alla deltagare i relationerna som identifieras här, deltagande i frågor som definieras i den moraliska ordningsmodellen.\",\"step07\":\"Styrning sker på den individuella servicekundrelationsnivån.\",\"step08\":\"Det sker också på den övergripande servicenivån.\",\"step09\":\"Hur sker styrningsprocesser, i den mening som vi beskriver dem här, i ditt initiativ?\"},\"options\":{\"sources\":{\"meeting\":\"Möte\",\"other\":\"Övrig\",\"policy\":\"Politik\"}},\"title\":\"Moralisk ordning\"},\"social_media\":{\"dashboard\":{\"title\":\"Sociala media\"},\"definitions\":{\"data\":{\"title\":\"Sociala media\"}},\"title\":\"Sociala media\"},\"theory_of_change\":{\"dashboard\":{\"empty_set\":\"Det finns ingen teori om förändringsartiklar för detta projekt.\",\"manage\":\"Hantera förändringsteori\",\"title\":\"Teori om förändring\"},\"definitions\":{\"data\":{\"hint\":\"Lägg till eventuella förändringsteorier som ditt projekt kan ha.\",\"title\":\"Teori om förändring\"}},\"title\":\"Teori om förändring\"},\"user_journey_model\":{\"dashboard\":{\"one\":\"\",\"other\":\"\"},\"definitions\":{\"accessing\":{\"access_method\":{\"label\":\"Hur fick du tillgång till tjänsten?\"},\"appropriate_comment\":{\"label\":\"Tror du att den här aspekten av tjänsten är lämplig?\"},\"qualification_experience\":{\"label\":\"Om så är fallet, hur var upplevelsen?\"},\"qualification_process\":{\"label\":\"Fanns det en kvalificerings- eller urvalsprocess?\"},\"title\":\"Åtkomst\"},\"discovering\":{\"comments\":{\"label\":\"Några ytterligare kommentarer, observationer?\"},\"discovery_medium\":{\"label\":\"Hur fick du reda på tjänsten?\"},\"information_experience\":{\"label\":\"Vad tycker du om informationens kvalitet, fullständighet och tillgänglighet?\"},\"information_medium\":{\"label\":\"Hur fick du tillgång till information om tjänsten?\"},\"title\":\"Upptäcka\"},\"evaluating\":{\"opinions_asked\":{\"hint\":\"Tänk på var och när detta var.\",\"label\":\"Frågades du om dina åsikter om din upplevelse av tjänsten?\"},\"opinions_how\":{\"label\":\"Om ja, hur blev du tillfrågad?\"},\"service_experience\":{\"label\":\"Var tjänsten vad du förväntade dig?\"},\"surprises_comments\":{\"label\":\"Fanns det några överraskningar eller besvikelser i din upplevelse?\"},\"title\":\"Utvärderar\"},\"instigating\":{\"comments\":{\"label\":\"Kommentarer\"},\"design_role\":{\"label\":\"Spelade du någon roll i utformningen och definitionen av tjänsten? Om ja, vad var de tillfällen och kanaler som detta inträffade?\"},\"instigate_role\":{\"label\":\"Hade du någon roll i att starta projektet? Om ja, ingick du i något av följande alternativ? Du kan välja så många du vill.\"},\"title\":\"Inledande\"},\"model\":{\"title\":\"Modell\"},\"using\":{\"accessible_experience\":{\"label\":\"Var tjänsten tillgänglig för dig?\"},\"participate_experience\":{\"label\":\"Hur var det att använda eller delta i tjänsten?\"},\"time_experience\":{\"label\":\"Var varaktigheten och frekvensen för servicehändelserna eller kontakterna OK?\"},\"title\":\"Använder sig av\",\"where\":{\"label\":\"Var använde du tjänsten?\"}}},\"guide\":{\"step01\":\"Tjänsterna publiceras för deras avsedda användare, detta är upptäcktsfasen.\",\"step02\":\"Användare som vill ha tjänsten gör någon form av begäran eller applikation, detta är åtkomstfasen.\",\"step03\":\"Om det föregående steget är framgångsrikt levereras tjänsten och upplevs, detta är användningsfasen.\",\"step04\":\"Upplevelsen av användningen av tjänsten utvärderas sedan.\",\"step05\":\"Frågorna har hittills antagit att tjänsten har definierats och redan finns. Nästa uppsättning frågor handlar om huruvida och hur du deltog i de processer som tjänsten skapades i första hand.\",\"step06\":\"Först kan vi slutföra vår leveransmodell med de steg som är involverade i skapandet. Vi kallar detta designfasen.\",\"step07\":\"Sedan kan vi visa de processer genom vilka tjänsten identifierades och initierades i första hand. Vi kallar detta den inledande fasen.\"},\"options\":{\"access_methods\":{\"applied\":\"Applicerad\",\"other\":\"Övrig\",\"referred\":\"Hänvisad\"},\"instigate_roles\":{\"government_department\":\"Myndighet\",\"political_party\":\"Politiskt parti\",\"pressure_group\":\"Tryck / Kampanjgrupp\"},\"mediums\":{\"other\":\"Övrig\",\"paper\":\"Papperspublikation\",\"referral\":\"Hänvisning\",\"social\":\"Sociala media\",\"word_of_mouth\":\"Ord från mun\"},\"opinions_how\":{\"interview\":\"Intervju\",\"survey\":\"Undersökning\",\"workshop\":\"Verkstad\"},\"where\":{\"community\":\"gemenskap\",\"home\":\"Hem\",\"other\":\"Övrig\",\"public\":\"offentlig\"},\"yes_no_maybe\":{\"maybe\":\"Kanske\",\"no\":\"Nej\",\"yes\":\"Ja\"}},\"title\":\"Användarens resemodell\"},\"welcome\":{\"dashboard\":{\"summary\":\"Skapad av {user} den {date_time}\"},\"title\":\"Välkommen\"}},\"countries\":{\"de\":\"Tyskland\",\"el\":\"Grekland\",\"en_GB\":\"Storbritannien\",\"es\":\"Spanien\",\"et\":\"Estland\",\"fi\":\"Finland\",\"fr\":\"Frankrike\",\"hu\":\"Ungern\",\"it\":\"Italien\",\"nl\":\"Nederländerna\",\"pl\":\"Polen\",\"sv_SE\":\"Sverige\"},\"hints\":{\"editor_double_click_edit\":\"Dubbelklicka på ett objekt för att redigera det och gå in för att spara\",\"social_facebook_add\":\"Lägg till fullständiga länkar (URL: er) till Facebook-grupper eller -sidor.\",\"social_instagram_add\":\"Ange en Instagram-hashtag, med eller utan #. Tryck på Enter för att lägga till.\",\"social_twitter_add\":\"Ange en Twitter-hashtag, med eller utan #. Tryck på Enter för att lägga till.\",\"social_youtube_add\":\"Ange en länk till en YouTube-video och tryck på Enter för att lägga till.\",\"type_and_enter\":\"Skriv namnet nedan och tryck på enter.\"},\"languages\":{\"de\":\"tysk\",\"el\":\"Grekiska\",\"en_GB\":\"Engelska\",\"es\":\"Spanska\",\"et\":\"Estniska\",\"fi\":\"Finska\",\"fr\":\"Franska\",\"hu\":\"Ungerska\",\"it\":\"Italienska\",\"nl\":\"Nederländska\",\"pl\":\"Polska\",\"sv_SE\":\"Svenska\"},\"user_guide\":{\"back\":\"Tillbaka\",\"close\":\"Stänga\",\"next\":\"Nästa\",\"show\":\"Visa användarhandbok\",\"skip\":\"Hoppa över användarhandboken\"}}");
 
 /***/ }),
 
@@ -5565,12 +6243,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_cosmos__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/cosmos */ "./js/components/cosmos/index.js");
 /* harmony import */ var _components_project_edit__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/project/edit */ "./js/components/project/edit/index.js");
 /* harmony import */ var _aspects__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./aspects */ "./js/aspects/index.js");
-/* harmony import */ var _plugins_i18n__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./plugins/i18n */ "./js/plugins/i18n.js");
-/* harmony import */ var _plugins_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./plugins/router */ "./js/plugins/router.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./store */ "./js/store/index.js");
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./App */ "./js/App.vue");
-/* harmony import */ var _services_Network__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/Network */ "./js/services/Network.js");
-/* harmony import */ var _services_Trans__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/Trans */ "./js/services/Trans.js");
+/* harmony import */ var _components_project_AnnotationCard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/project/AnnotationCard */ "./js/components/project/AnnotationCard.vue");
+/* harmony import */ var _plugins_i18n__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./plugins/i18n */ "./js/plugins/i18n.js");
+/* harmony import */ var _plugins_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./plugins/router */ "./js/plugins/router.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./store */ "./js/store/index.js");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./App */ "./js/App.vue");
+/* harmony import */ var _services_Network__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/Network */ "./js/services/Network.js");
+/* harmony import */ var _services_Trans__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./services/Trans */ "./js/services/Trans.js");
 
 
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.config.productionTip = false;
@@ -5588,6 +6267,8 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(_components_cosmos__WEBPACK_IMPOR
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(_components_project_edit__WEBPACK_IMPORTED_MODULE_6__["default"]);
 
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(_aspects__WEBPACK_IMPORTED_MODULE_7__["default"].Components);
+
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('AnnotationCard', _components_project_AnnotationCard__WEBPACK_IMPORTED_MODULE_8__["default"]);
 
 
 
@@ -5635,18 +6316,18 @@ var getParams = function getParams(elt) {
   return data;
 };
 
-_services_Network__WEBPACK_IMPORTED_MODULE_12__["default"].getAuthUser().then(function (user) {
-  var lang = _services_Trans__WEBPACK_IMPORTED_MODULE_13__["default"].getUserSupportedLang();
-  _services_Trans__WEBPACK_IMPORTED_MODULE_13__["default"].changeLanguage(lang);
+_services_Network__WEBPACK_IMPORTED_MODULE_13__["default"].getAuthUser().then(function (user) {
+  var lang = _services_Trans__WEBPACK_IMPORTED_MODULE_14__["default"].getUserSupportedLang();
+  _services_Trans__WEBPACK_IMPORTED_MODULE_14__["default"].changeLanguage(lang);
   new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
-    i18n: _plugins_i18n__WEBPACK_IMPORTED_MODULE_8__["default"],
-    router: _plugins_router__WEBPACK_IMPORTED_MODULE_9__["default"],
-    store: Object(_store__WEBPACK_IMPORTED_MODULE_10__["default"])({
+    i18n: _plugins_i18n__WEBPACK_IMPORTED_MODULE_9__["default"],
+    router: _plugins_router__WEBPACK_IMPORTED_MODULE_10__["default"],
+    store: Object(_store__WEBPACK_IMPORTED_MODULE_11__["default"])({
       authUser: user,
       config: getParams('cosmos')
     }),
     render: function render(h) {
-      return h(_App__WEBPACK_IMPORTED_MODULE_11__["default"]);
+      return h(_App__WEBPACK_IMPORTED_MODULE_12__["default"]);
     }
   }).$mount('#cosmos');
 }); // console.log(`env: ${process.env.NODE_ENV}`);
@@ -6617,8 +7298,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-i18n */ "./node_modules/vue-i18n/dist/vue-i18n.esm.js");
 /* harmony import */ var _data_languages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/data/languages */ "./js/data/languages.js");
-/* harmony import */ var _lang_en_GB_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/lang/en_GB.json */ "./js/lang/en_GB.json");
-var _lang_en_GB_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! @/lang/en_GB.json */ "./js/lang/en_GB.json", 1);
+/* harmony import */ var _lang_en_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/lang/en.json */ "./js/lang/en.json");
+var _lang_en_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! @/lang/en.json */ "./js/lang/en.json", 1);
 
 
 
@@ -6629,7 +7310,7 @@ var i18n = new vue_i18n__WEBPACK_IMPORTED_MODULE_1__["default"]({
   locale: _data_languages__WEBPACK_IMPORTED_MODULE_2__["DEFAULT_LANGUAGE"],
   fallbackLocale: _data_languages__WEBPACK_IMPORTED_MODULE_2__["FALLBACK_LANGUAGE"],
   messages: {
-    en_GB: _lang_en_GB_json__WEBPACK_IMPORTED_MODULE_3__
+    en_GB: _lang_en_json__WEBPACK_IMPORTED_MODULE_3__
   }
 });
 /* harmony default export */ __webpack_exports__["default"] = (i18n);
@@ -6953,6 +7634,25 @@ var Trans = {
   */
   isLangSupported: function isLangSupported(lang) {
     return Trans.supportedLanguages().includes(lang);
+  },
+  codeToFlag: function codeToFlag(lang) {
+    var code = lang;
+
+    switch (lang) {
+      case 'el':
+        code = 'ee';
+        break;
+
+      case 'en_GB':
+        code = 'gb';
+        break;
+
+      case 'sv_SE':
+        code = 'se';
+        break;
+    }
+
+    return code;
   }
 }; // export { Trans }
 
@@ -7008,6 +7708,7 @@ var state = {
     auto_save: false
   },
   scale: false,
+  showAnnotations: true,
   stageHover: false,
   projects: [],
   project: {},
@@ -7308,7 +8009,7 @@ var actions = {
     var hasProject = state.project && state.project.id ? true : false;
     var hasLastSave = state.lastSave.hash !== null;
 
-    if (!isEditing || !hasProject || !hasLastSave) {
+    if (!hasProject || !hasLastSave) {
       commit('AUTO_SAVE_WAIT', false);
       return;
     }
@@ -11166,13 +11867,13 @@ var defaultTextConfig = {
       } else {
         data.individualCases.visible = true;
         data.serviceLevel.visible = true;
-        data.govern.visible = this.userValues.hasGovern;
-        data.deliver.visible = this.userValues.hasDeliver;
-        data.experience.visible = this.userValues.hasDeliver;
-        data.ethosLabel.visible = this.userValues.hasEthos;
-        data.ethosItems.visible = this.userValues.hasEthos;
-        data.planLabel.visible = this.userValues.hasPlanManage;
-        data.planItems.visible = this.userValues.hasPlanManage;
+        data.govern.visible = this.userValues.hasGovern ? true : false;
+        data.deliver.visible = this.userValues.hasDeliver ? true : false;
+        data.experience.visible = this.userValues.hasDeliver ? true : false;
+        data.ethosLabel.visible = this.userValues.hasEthos ? true : false;
+        data.ethosItems.visible = this.userValues.hasEthos ? true : false;
+        data.planLabel.visible = this.userValues.hasPlanManage ? true : false;
+        data.planItems.visible = this.userValues.hasPlanManage ? true : false;
       }
 
       return data;
@@ -12112,6 +12813,1152 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/map */ "./node_modules/lodash/map.js");
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_map__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/find */ "./node_modules/lodash/find.js");
+/* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_find__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/filter */ "./node_modules/lodash/filter.js");
+/* harmony import */ var lodash_filter__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_filter__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! colors.css */ "./node_modules/colors.css/js/colors.js");
+/* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(colors_css__WEBPACK_IMPORTED_MODULE_4__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+var defaultTextConfig = {
+  fontSize: 24,
+  fontStyle: 'bold',
+  fontFamily: '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+  lineHeight: 1.2,
+  align: 'center'
+};
+var Icons = {
+  check: 'M5 13l4 4L19 7',
+  cross: 'M6 18L18 6M6 6l12 12'
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'UserJourneyDashboard',
+  props: {
+    aspectId: [Boolean, String],
+    options: Object,
+    definitions: [Object, Array]
+  },
+  data: function data() {
+    return {
+      labelConfig: {
+        x: 170,
+        y: 75,
+        opacity: 0.75
+      },
+      tagConfig: {
+        fill: "black",
+        pointerDirection: "down",
+        pointerWidth: 10,
+        pointerHeight: 10,
+        lineJoin: "round"
+      },
+      textConfig: {
+        text: "Tooltip pointing down",
+        fontFamily: "Calibri",
+        fontSize: 18,
+        padding: 5,
+        fill: "white"
+      }
+    };
+  },
+  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(['userGuide']), {
+    dataPath: function dataPath() {
+      if (this.userGuide.isOpen) {
+        return "userGuide@project.data.".concat(this.aspectId);
+      } else {
+        return "project@data.".concat(this.aspectId);
+      }
+    },
+    aspectData: Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(':dataPath'),
+    visibility: function visibility() {
+      var config = {
+        discovering: false,
+        accessing: false,
+        using: false,
+        evaluating: false,
+        designing: false,
+        instigating: false,
+        pressureGroup: false,
+        political: false,
+        government: false
+      };
+
+      if (this.userGuide.isOpen) {
+        config.discovering = this.userGuide.currentStep >= 0 ? true : false;
+        config.accessing = this.userGuide.currentStep >= 1 ? true : false;
+        config.using = this.userGuide.currentStep >= 2 ? true : false;
+        config.evaluating = this.userGuide.currentStep >= 3 ? true : false;
+        config.designing = this.userGuide.currentStep >= 5 ? true : false;
+        config.instigating = this.userGuide.currentStep >= 6 ? true : false;
+        config.pressureGroup = true;
+        config.political = true;
+        config.government = true;
+      } else {
+        config.discovering = this.aspectData.discovering.discovery_medium.length && this.aspectData.discovering.information_medium.length && this.aspectData.discovering.information_experience.length && this.aspectData.discovering.comments.length ? true : false;
+        config.accessing = this.aspectData.accessing.access_method.length && this.aspectData.accessing.qualification_process.length && this.aspectData.accessing.appropriate_comment.length ? true : false;
+        config.using = this.aspectData.using.participate_experience.length && this.aspectData.using.accessible_experience.length && this.aspectData.using.time_experience.length ? true : false;
+        config.evaluating = this.aspectData.evaluating.opinions_asked.length && this.aspectData.evaluating.service_experience.length && this.aspectData.evaluating.surprises_comments.length ? true : false;
+        config.designing = config.evaluating;
+        config.instigating = this.aspectData.instigating.design_role.length && this.aspectData.instigating.comments.length ? true : false;
+        config.pressureGroup = this.inArray(this.aspectData.instigating.instigate_role, 'pressure_group');
+        config.political = this.inArray(this.aspectData.instigating.instigate_role, 'political_party');
+        config.government = this.inArray(this.aspectData.instigating.instigate_role, 'government_department');
+      }
+
+      return config;
+    },
+    bgConfig: function bgConfig() {
+      var data = {};
+      return data;
+    },
+    serviceLabelConfig: function serviceLabelConfig() {
+      return _objectSpread({}, defaultTextConfig, {
+        visible: this.visibility.designing || this.visibility.instigating,
+        fontStyle: 'italic',
+        fontSize: 18,
+        text: 'Service Co-creation Journey',
+        width: 175,
+        align: 'right',
+        x: 0,
+        y: 535
+      });
+    },
+    journeyStagesConfig: function journeyStagesConfig() {
+      var data = {};
+      var tagConfig = {
+        fill: '#aaaaaa',
+        pointerDirection: 'right',
+        pointerWidth: 18,
+        pointerHeight: 56,
+        lineJoin: 'round'
+      };
+
+      var textConfig = _objectSpread({}, defaultTextConfig, {
+        width: 180,
+        text: 'STAGE',
+        fontStyle: 'normal',
+        fontSize: 20,
+        padding: 18,
+        fill: '#ffffff'
+      });
+
+      function xPos(itemNum) {
+        var offset = 385;
+        return offset + itemNum * 180;
+      }
+
+      ;
+      var yPos = 555;
+      var visibility = this.visibility;
+      data.evaluating = {
+        group: {
+          visible: visibility.evaluating
+        },
+        label: {
+          x: xPos(5),
+          y: yPos
+        },
+        tag: _objectSpread({}, tagConfig, {
+          fill: '#604A7B',
+          pointerHeight: 0
+        }),
+        text: _objectSpread({}, textConfig, {
+          text: 'Evaluating'
+        })
+      };
+      data.using = {
+        group: {
+          visible: visibility.using
+        },
+        label: {
+          x: xPos(4),
+          y: yPos
+        },
+        tag: _objectSpread({}, tagConfig, {
+          fill: '#FAC090'
+        }),
+        text: _objectSpread({}, textConfig, {
+          text: 'Using'
+        })
+      };
+      data.accessing = {
+        group: {
+          visible: visibility.accessing
+        },
+        label: {
+          x: xPos(3),
+          y: yPos
+        },
+        tag: _objectSpread({}, tagConfig, {
+          fill: '#D99694'
+        }),
+        text: _objectSpread({}, textConfig, {
+          text: 'Accessing'
+        })
+      };
+      data.discovering = {
+        group: {
+          visible: visibility.discovering
+        },
+        label: {
+          x: xPos(2),
+          y: yPos
+        },
+        tag: _objectSpread({}, tagConfig, {
+          fill: '#4F81BD'
+        }),
+        text: _objectSpread({}, textConfig, {
+          text: 'Discovering'
+        })
+      };
+      data.designing = {
+        group: {
+          visible: visibility.designing
+        },
+        label: {
+          x: xPos(1),
+          y: yPos
+        },
+        tag: _objectSpread({}, tagConfig, {
+          fill: '#79C36F'
+        }),
+        text: _objectSpread({}, textConfig, {
+          text: 'Designing'
+        })
+      };
+      data.instigating = {
+        group: {
+          visible: visibility.instigating
+        },
+        label: {
+          x: xPos(0),
+          y: yPos
+        },
+        tag: _objectSpread({}, tagConfig, {
+          fill: '#DC5C52'
+        }),
+        text: _objectSpread({}, textConfig, {
+          text: 'Instigating'
+        })
+      };
+      return data;
+    },
+    flowchartTextConfig: function flowchartTextConfig() {
+      var visibility = this.visibility;
+      var data = [];
+      var defaultConfig = {
+        labelConfig: {
+          fontStyle: 'normal',
+          fontSize: 16
+        },
+        borderConfig: {
+          cornerRadius: 0,
+          strokeWidth: 2
+        }
+      };
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        label: "Service Definition",
+        x: 0,
+        y: 140,
+        textWidth: 105,
+        width: 115,
+        height: 60
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        label: "Service Resourcing",
+        x: 130,
+        y: 30,
+        textWidth: 125,
+        width: 155,
+        height: 60
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        label: "Reservation & Scheduling",
+        x: 305,
+        y: 30,
+        textWidth: 175,
+        width: 185,
+        height: 60
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.using,
+        label: "Service Delivery",
+        x: 515,
+        y: 30,
+        textWidth: 100,
+        width: 130,
+        height: 60
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.discovering,
+        label: "Service Publicity",
+        x: 130,
+        y: 150,
+        textWidth: 135,
+        width: 165,
+        height: 40
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.accessing,
+        label: "Qualifying Agent",
+        x: 315,
+        y: 150,
+        textWidth: 135,
+        width: 165,
+        height: 40
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.evaluating,
+        label: "Evaluating Agent",
+        x: 700,
+        y: 140,
+        textWidth: 100,
+        width: 125,
+        height: 60
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.discovering,
+        label: "Potential Beneficiary",
+        x: 125,
+        y: 315,
+        textWidth: 130,
+        width: 165,
+        height: 60
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.accessing,
+        label: "Applicant",
+        x: 315,
+        y: 325,
+        textWidth: 130,
+        width: 165,
+        height: 40
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.using,
+        label: "Client",
+        x: 490,
+        y: 325,
+        textWidth: 130,
+        width: 165,
+        height: 40
+      }));
+      return data;
+    },
+    flowchartLabelsConfig: function flowchartLabelsConfig() {
+      var visibility = this.visibility;
+      var data = [];
+
+      var defaultConfig = _objectSpread({}, defaultTextConfig, {
+        text: '',
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontStyle: 'italic',
+        fontSize: 16,
+        fill: '#c00000'
+      });
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        text: 'Budget',
+        x: 120,
+        y: 100
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        text: 'Service Definition',
+        x: 265,
+        y: 110
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        text: 'Outcome Reports',
+        x: 715,
+        y: 55,
+        width: 80
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        text: 'Provider views',
+        x: 600,
+        y: 145,
+        width: 75
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.discovering,
+        text: 'Service publication',
+        x: 155,
+        y: 235,
+        width: 100
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.accessing,
+        align: 'center',
+        text: 'Application',
+        x: 355,
+        y: 245
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.using,
+        text: 'Service Use',
+        x: 525,
+        y: 245
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.evaluating,
+        text: 'Clients\' views',
+        x: 715,
+        y: 235,
+        width: 90
+      }));
+      return data;
+    },
+    flowchartArrowsConfig: function flowchartArrowsConfig() {
+      var visibility = this.visibility;
+      var data = [];
+      var defaultConfig = {
+        x: 0,
+        y: 0,
+        pointerLength: 8,
+        pointerWidth: 8,
+        fill: 'black',
+        stroke: 'black',
+        strokeWidth: 1
+      }; // Service Def -> Service Resourcing
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        points: [85, 130, 115, 110]
+      })); // Service Definition -> Service Definition
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        points: [120, 135, 245, 120]
+      })); // Service Definition -> Service Publicity
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        points: [275, 130, 275, 145]
+      })); // Service Definition -> Qualifying
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        points: [370, 130, 370, 145]
+      })); // Service Definition -> Service Delivery
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        tension: 0.6,
+        points: [430, 120, 525, 115, 565, 100]
+      })); // Service Delivery -> Service Use
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.using,
+        points: [570, 100, 570, 240]
+      })); // Service Delivery -> Provider Views
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        tension: 0.6,
+        points: [575, 100, 585, 140, 600, 155]
+      })); // Provider views -> Evaluating Agent
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        points: [675, 165, 695, 165]
+      })); // Evaluating Agent -> Outcome reports
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        points: [755, 130, 755, 105]
+      })); // Clients views -> Evaluating Agent
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.evaluating,
+        points: [755, 230, 755, 210]
+      })); // Client -> Clients Views
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.evaluating,
+        tension: 0.3,
+        points: [660, 350, 715, 350, 755, 325, 760, 285]
+      })); // Service Publicity -> Service publication
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.discovering,
+        points: [205, 195, 205, 230]
+      })); // Service publication -> Potential Beneficiary
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.discovering,
+        points: [205, 280, 205, 305]
+      })); // Applicant -> Application
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.accessing,
+        points: [390, 315, 390, 275]
+      })); // Application -> Qualifying Agent
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.accessing,
+        points: [390, 240, 390, 205]
+      })); // Service Use -> Client
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.using,
+        points: [570, 275, 570, 315]
+      })); // Outcome reports -> Service definition
+
+      data.push(_objectSpread({}, defaultConfig, {
+        visible: visibility.designing,
+        tension: 0.4,
+        points: [755, 45, 745, 20, 700, 0, 105, 0, 75, 130]
+      })); // Arrows from initial screen
+      //
+      // Service Publication -> Application
+      // data.push({ ...defaultConfig, points: [ 265, 255, 330, 255] });
+      // Application -> Service Use
+      // data.push({ ...defaultConfig, points: [ 455, 255, 510, 255] });
+
+      return data;
+    },
+    sipConfig: function sipConfig() {
+      var visibility = this.visibility;
+      var data = {};
+      data.group = {
+        x: 20,
+        y: 85,
+        visible: visibility.instigating
+      }; // Outer container
+      //
+
+      data.rect = {
+        width: 400,
+        height: 160,
+        fill: '#eeece1',
+        strokeWidth: 2,
+        stroke: '#000000'
+      };
+      data.label = _objectSpread({}, defaultTextConfig, {
+        width: 400,
+        align: 'center',
+        lineHeight: 1.3,
+        padding: 10,
+        fontSize: 18,
+        fontStyle: 'normal',
+        text: 'Service Instigation and Policymaking'
+      }); // Inner boxes
+      //
+
+      data.boxes = [];
+      var defaultConfig = {
+        labelConfig: {
+          fontStyle: 'normal',
+          fontSize: 16
+        },
+        borderConfig: {
+          fill: '#ffffff',
+          cornerRadius: 0,
+          strokeWidth: 2
+        }
+      };
+      data.boxes.push(_objectSpread({}, defaultConfig, {
+        label: "Pressure / Campaign Group",
+        x: 10,
+        y: 85,
+        textWidth: 170,
+        width: 190,
+        height: 65
+      }));
+      data.boxes.push(_objectSpread({}, defaultConfig, {
+        label: "Government Department",
+        x: 240,
+        y: 85,
+        textWidth: 130,
+        width: 150,
+        height: 65
+      }));
+      data.boxes.push(_objectSpread({}, defaultConfig, {
+        label: "Political Party",
+        x: 150,
+        y: 40,
+        textWidth: 125,
+        width: 145,
+        height: 35
+      }));
+      data.boxes.push(_objectSpread({}, defaultConfig, {
+        label: "Activist",
+        x: 55,
+        y: 370,
+        textWidth: 95,
+        width: 100,
+        height: 35
+      }));
+      data.boxes.push(_objectSpread({}, defaultConfig, {
+        label: "Voter",
+        x: 160,
+        y: 370,
+        textWidth: 95,
+        width: 100,
+        height: 35
+      }));
+      data.boxes.push(_objectSpread({}, defaultConfig, {
+        label: "Citizen",
+        x: 265,
+        y: 370,
+        textWidth: 95,
+        width: 100,
+        height: 35
+      })); // Blue connecting lines
+      //
+
+      data.connectors = [];
+      var defaultConnectorConfig = {
+        colour: '#4a7ebb',
+        radius: 6,
+        strokeWidth: 2,
+        dash: [6, 3]
+      };
+      data.connectors.push(_objectSpread({}, defaultConnectorConfig, {
+        visible: visibility.pressureGroup,
+        start: [105, 150],
+        end: [105, 370]
+      }));
+      data.connectors.push(_objectSpread({}, defaultConnectorConfig, {
+        visible: visibility.political,
+        start: [220, 75],
+        end: [220, 370]
+      }));
+      data.connectors.push(_objectSpread({}, defaultConnectorConfig, {
+        visible: visibility.government,
+        start: [315, 150],
+        end: [315, 370]
+      }));
+      return data;
+    },
+    swimLanesConfig: function swimLanesConfig() {
+      var lanes = [];
+      lanes.push({
+        x: 0,
+        y: 0,
+        width: 720,
+        height: 90,
+        fill: '#edfdfb'
+      });
+      lanes.push({
+        x: 0,
+        y: 160,
+        width: 720,
+        height: 65,
+        fill: '#d7e4bd'
+      });
+      lanes.push({
+        x: 0,
+        y: 230,
+        width: 720,
+        height: 65,
+        fill: '#ffe07d'
+      });
+      return lanes;
+    },
+    swimLaneLabelsConfig: function swimLaneLabelsConfig() {
+      var labels = [];
+
+      var defaultLabelConfig = _objectSpread({}, defaultTextConfig, {
+        fontStyle: 'italic',
+        fontSize: 18
+      });
+
+      var defaultValueConfig = _objectSpread({}, defaultTextConfig, {
+        fontStyle: 'normal',
+        fontSize: 18
+      });
+
+      var xOffset = 520;
+      labels.push(_objectSpread({}, defaultLabelConfig, {
+        text: 'Service Workflow',
+        width: 100,
+        align: 'right',
+        x: 0,
+        y: -130,
+        offsetX: 110
+      }));
+      labels.push(_objectSpread({}, defaultLabelConfig, {
+        text: 'Touch Points',
+        width: 100,
+        align: 'right',
+        x: 0,
+        y: 30,
+        offsetX: 110
+      }));
+      labels.push(_objectSpread({}, defaultLabelConfig, {
+        text: 'Service User Journey',
+        width: 100,
+        align: 'right',
+        x: 0,
+        y: 105,
+        offsetX: xOffset
+      }));
+      labels.push(_objectSpread({}, defaultLabelConfig, {
+        text: 'Service Experience',
+        width: 100,
+        align: 'right',
+        x: 0,
+        y: 175,
+        offsetX: xOffset
+      }));
+      labels.push(_objectSpread({}, defaultLabelConfig, {
+        text: 'Carrier of Experience',
+        width: 100,
+        align: 'right',
+        x: 0,
+        y: 245,
+        offsetX: xOffset
+      })); // How did you find out about the service?
+      //
+
+      var optionValue = this.aspectData.discovering.discovery_medium;
+      var langKey = "aspects.user_journey_model.options.mediums.".concat(optionValue);
+      labels.push(_objectSpread({}, defaultValueConfig, {
+        text: this.$te(langKey) ? this.$t(langKey) : '',
+        visible: optionValue && optionValue.length && this.$te(langKey) ? true : false,
+        align: 'left',
+        x: 10,
+        y: 250 // offset: 0,
+
+      })); // How did you gain access to the service?
+      //
+
+      var optionValue = this.aspectData.accessing.access_method;
+      var langKey = "aspects.user_journey_model.options.access_methods.".concat(optionValue);
+      labels.push(_objectSpread({}, defaultValueConfig, {
+        text: this.$te(langKey) ? this.$t(langKey) : '',
+        visible: optionValue && optionValue.length && this.$te(langKey) ? true : false,
+        align: 'left',
+        x: 220,
+        y: 250 // offset: 0,
+
+      })); // Where did you use the service?
+      //
+
+      var optionValue = this.aspectData.using.where;
+      var langKey = "aspects.user_journey_model.options.where.".concat(optionValue);
+      labels.push(_objectSpread({}, defaultValueConfig, {
+        text: this.$te(langKey) ? this.$t(langKey) : '',
+        visible: optionValue && optionValue.length && this.$te(langKey) ? true : false,
+        align: 'left',
+        x: 400,
+        y: 250 // offset: 0,
+
+      }));
+      return labels;
+    },
+    swimLaneSmileys: function swimLaneSmileys() {
+      var faces = [];
+      var defaultFaceConfig = {
+        opacity: 1,
+        scale: {
+          x: 0.35,
+          y: 0.35
+        },
+        x: 0,
+        y: 168
+      };
+      var faceTypes = {
+        'negative': 'user-journey/face-frown.svg',
+        'neutral': 'user-journey/face-neutral.svg',
+        'positive': 'user-journey/face-smile.svg'
+      };
+
+      if (!this.aspectData) {
+        return faces;
+      }
+
+      var responses = {
+        discovering: this.aspectData.discovering.information_experience,
+        accessing: this.aspectData.accessing.qualification_experience,
+        using: this.aspectData.using.participate_experience,
+        evaluating: this.aspectData.evaluating.service_experience
+      };
+      var offset = 65;
+      faces.push(_objectSpread({}, defaultFaceConfig, {
+        visible: responses.discovering.length ? true : false,
+        filename: faceTypes[responses.discovering],
+        x: offset
+      }));
+      offset += 180;
+      faces.push(_objectSpread({}, defaultFaceConfig, {
+        visible: responses.accessing.length ? true : false,
+        filename: faceTypes[responses.accessing],
+        x: offset
+      }));
+      offset += 180;
+      faces.push(_objectSpread({}, defaultFaceConfig, {
+        visible: responses.using.length ? true : false,
+        filename: faceTypes[responses.using],
+        x: offset
+      }));
+      offset += 180;
+      faces.push(_objectSpread({}, defaultFaceConfig, {
+        visible: responses.evaluating.length ? true : false,
+        filename: faceTypes[responses.evaluating],
+        x: offset
+      }));
+      return faces;
+    }
+  }),
+  methods: {
+    inArray: function inArray(arr, item) {
+      return arr.indexOf(item) !== -1;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _plugins_linkify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/plugins/linkify */ "./js/plugins/linkify.js");
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
+/* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/find */ "./node_modules/lodash/find.js");
+/* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_find__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _aspects__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/aspects */ "./js/aspects/index.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+var FACE_TYPES = {
+  'negative': 'user-journey/face-frown.svg',
+  'neutral': 'user-journey/face-neutral.svg',
+  'positive': 'user-journey/face-smile.svg'
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "UserJourneySummaryView",
+  props: {
+    aspectId: [Boolean, String]
+  },
+  directives: {
+    linkify: _plugins_linkify__WEBPACK_IMPORTED_MODULE_0__["linkify"]
+  },
+  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_1__["get"])(['project']), {
+    /**
+     * Get aspect (ALL data - CONFIG + DEFS etc!) based on supplied editor ID
+     *
+     */
+    aspect: function aspect() {
+      var aspect = this.aspectId;
+
+      if (!this.aspectId) {
+        return null;
+      }
+
+      return _aspects__WEBPACK_IMPORTED_MODULE_3__["default"].get(aspect);
+    },
+    dataPath: function dataPath() {
+      return "project@data.".concat(this.aspectId);
+    },
+    aspectData: Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_1__["get"])(':dataPath'),
+    definitionsById: function definitionsById() {
+      var defs = {};
+      var children = {};
+      this.aspect.DEFINITIONS.forEach(function (item) {
+        if (item.children && Array.isArray(item.children)) {
+          children = {};
+          item.children.forEach(function (child) {
+            children[child.id] = child;
+          });
+          item.children = children;
+        }
+
+        defs[item.id] = item;
+      });
+      return defs;
+    }
+  }),
+  methods: {
+    experienceImage: function experienceImage(value) {
+      return FACE_TYPES[value] ? '/images/aspects/' + FACE_TYPES[value] : null;
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/UserGuide.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/components/UserGuide.vue?vue&type=script&lang=js& ***!
@@ -12426,6 +14273,95 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.moveLabel();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosConnector.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/components/cosmos/lib/CosmosConnector.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var defaultConfig = {
+  color: '#cccccc',
+  dash: [10, 5],
+  strokeWidth: 1,
+  start: [],
+  end: [],
+  radius: 10
+};
+var defaultLineConfig = {
+  x: 0,
+  y: 0,
+  strokeWidth: 1,
+  dash: [6, 3]
+};
+var defaultCircleConfig = {
+  fill: '#cccccc'
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'CosmosConnector',
+  props: {
+    options: Object,
+    config: Object
+  },
+  computed: {
+    visible: function visible() {
+      return _typeof(this.mergedConfig.visible) === undefined ? true : this.mergedConfig.visible;
+    },
+    mergedConfig: function mergedConfig() {
+      return _objectSpread({}, defaultConfig, {}, this.config);
+    },
+    circlesConfig: function circlesConfig() {
+      var circles = [];
+      circles.push(_objectSpread({}, defaultCircleConfig, {
+        x: this.mergedConfig.start[0],
+        y: this.mergedConfig.start[1],
+        fill: this.mergedConfig.colour,
+        radius: this.mergedConfig.radius
+      }));
+      circles.push(_objectSpread({}, defaultCircleConfig, {
+        x: this.mergedConfig.end[0],
+        y: this.mergedConfig.end[1],
+        fill: this.mergedConfig.colour,
+        radius: this.mergedConfig.radius
+      }));
+      return circles;
+    },
+    lineConfig: function lineConfig() {
+      var mergedConfig = this.mergedConfig;
+
+      var config = _objectSpread({}, defaultLineConfig, {
+        stroke: mergedConfig.colour,
+        strokeWidth: mergedConfig.strokeWidth,
+        dash: mergedConfig.dash,
+        points: [mergedConfig.start[0], mergedConfig.start[1], mergedConfig.end[0], mergedConfig.end[1]]
+      });
+
+      return config;
+    }
   }
 });
 
@@ -12893,6 +14829,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'CosmosImage',
+  _image: null,
   props: {
     options: Object,
     definitionName: String,
@@ -12902,6 +14839,9 @@ __webpack_require__.r(__webpack_exports__);
     return {
       image: null
     };
+  },
+  watch: {
+    'config.filename': 'setImage'
   },
   computed: {
     imageConfig: function imageConfig() {
@@ -12919,15 +14859,31 @@ __webpack_require__.r(__webpack_exports__);
       };
     }
   },
+  methods: {
+    setImage: function setImage() {
+      var _this = this;
+
+      if (!this.config.filename) {
+        return;
+      }
+
+      if (!this._image) {
+        this._image = new window.Image();
+      }
+
+      if (/^\//.test(this.config.filename)) {
+        this._image.src = this.config.filename;
+      } else {
+        this._image.src = "/images/aspects/".concat(this.config.filename);
+      }
+
+      this._image.onload = function () {
+        _this.image = _this._image;
+      };
+    }
+  },
   created: function created() {
-    var _this = this;
-
-    var image = new window.Image();
-    image.src = "/images/aspects/".concat(this.config.filename);
-
-    image.onload = function () {
-      _this.image = image;
-    };
+    this.setImage();
   }
 });
 
@@ -13668,6 +15624,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
 /* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! colors.css */ "./node_modules/colors.css/js/colors.js");
 /* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(colors_css__WEBPACK_IMPORTED_MODULE_1__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 //
 //
 //
@@ -13692,25 +15656,9 @@ __webpack_require__.r(__webpack_exports__);
     config: Object
   },
   computed: {
-    fontSize: function fontSize() {
-      return this.config.fontSize ? this.config.fontSize : 14;
-    },
-    groupConfig: function groupConfig() {
+    defaultText: function defaultText() {
       return {
-        x: this.config.x ? this.config.x : 0,
-        y: this.config.y ? this.config.y : 0
-      };
-    },
-    labelConfig: function labelConfig() {
-      var x = this.config.width / 2;
-      x -= this.config.textWidth / 2;
-      return {
-        x: x,
-        y: 0,
-        width: this.config.textWidth,
-        height: this.config.height,
-        text: this.config.label,
-        fontSize: this.fontSize,
+        fontSize: 14,
         fontStyle: 'bold',
         fontFamily: this.options.fontFamily,
         lineHeight: this.lineHeight,
@@ -13718,17 +15666,72 @@ __webpack_require__.r(__webpack_exports__);
         verticalAlign: 'middle'
       };
     },
-    borderConfig: function borderConfig() {
-      var height = this.labelHeight;
+    defaultBorder: function defaultBorder() {
       return {
+        strokeWidth: 2,
+        stroke: colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.black
+      };
+    },
+    fontSize: function fontSize() {
+      return this.config.fontSize ? this.config.fontSize : 14;
+    },
+    groupConfig: function groupConfig() {
+      var visible = _typeof(this.config.visible) === undefined ? true : this.config.visible;
+      return {
+        visible: visible,
+        x: this.config.x ? this.config.x : 0,
+        y: this.config.y ? this.config.y : 0
+      };
+    },
+    labelConfig: function labelConfig() {
+      var x = this.config.width / 2;
+      x -= this.config.textWidth / 2;
+      var customConfig = this.config.labelConfig ? this.config.labelConfig : {};
+      return _objectSpread({}, this.defaultText, {}, customConfig, {
+        x: x,
+        y: 0,
+        width: this.config.textWidth,
+        height: this.config.height,
+        text: this.config.label
+      });
+      /*
+      			return {
+      				x: x,
+      				y: 0,
+      				width: this.config.textWidth,
+      				height: this.config.height,
+      				text: this.config.label,
+      				fontSize: this.fontSize,
+      				fontStyle: 'bold',
+      				fontFamily: this.options.fontFamily,
+      				lineHeight: this.lineHeight,
+      				align: 'center',
+      				verticalAlign: 'middle',
+      			}*/
+    },
+    borderConfig: function borderConfig() {
+      var customConfig = this.config.borderConfig ? this.config.borderConfig : {};
+      return _objectSpread({}, this.defaultBorder, {
+        cornerRadius: Math.ceil(this.config.height / 2)
+      }, customConfig, {
         x: 0,
         y: 0,
         width: this.config.width,
         height: this.config.height,
-        cornerRadius: Math.ceil(this.config.height / 2),
-        stroke: colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.black,
-        strokeWidth: 2
-      };
+        text: this.config.label
+      });
+      /*
+      			var height = this.labelHeight;
+      
+      			return {
+      				x: 0,
+      				y: 0,
+      				width: this.config.width,
+      				height: this.config.height,
+      				cornerRadius: Math.ceil(this.config.height / 2),
+      				stroke: colours.black,
+      				strokeWidth: 2,
+      			}*/
     }
   }
 });
@@ -13780,6 +15783,121 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         visible: this.isVisible
       }, _defineProperty(_defaultConfig, "visible", true), _defineProperty(_defaultConfig, "text", this.model ? this.model.title : ''), _defineProperty(_defaultConfig, "fontSize", 24), _defineProperty(_defaultConfig, "fontFamily", this.options.fontFamily), _defineProperty(_defaultConfig, "lineHeight", 1.3), _defineProperty(_defaultConfig, "x", 20), _defineProperty(_defaultConfig, "y", 20), _defineProperty(_defaultConfig, "width", 800), _defaultConfig);
       return Object.assign({}, defaultConfig, this.config);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
+/* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! colors.css */ "./node_modules/colors.css/js/colors.js");
+/* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(colors_css__WEBPACK_IMPORTED_MODULE_1__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'CosmosVisualAnnotation',
+  props: {
+    annotation: Object
+  },
+  data: function data() {
+    return {
+      isHovering: false
+    };
+  },
+  computed: {
+    groupConfig: function groupConfig() {
+      return {
+        x: this.annotation.position[0],
+        y: this.annotation.position[1],
+        draggable: true
+      };
+    },
+    pathConfig: function pathConfig() {
+      var defaultConfig = {
+        closed: true,
+        x: 0,
+        y: -24,
+        fill: this.isHovering ? colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.fuchsia : colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.purple,
+        scale: {
+          x: 1,
+          y: 1
+        },
+        data: 'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z',
+        strokeEnabled: false,
+        opacity: 1
+      };
+      return defaultConfig;
+    },
+    circlesConfig: function circlesConfig() {
+      var defaultConfig = {
+        x: 0,
+        y: 0,
+        fill: this.isHovering ? colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.fuchsia : colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.purple
+      };
+      var circles = [];
+      circles.push(_objectSpread({}, defaultConfig, {
+        radius: 12,
+        opacity: 0.5
+      }));
+      circles.push(_objectSpread({}, defaultConfig, {
+        radius: 8,
+        opacity: 1
+      }));
+      return circles;
+    }
+  },
+  methods: {
+    handleDragEnd: function handleDragEnd(event) {
+      console.log(event);
+      this.annotation.position = [event.target.attrs.x, event.target.attrs.y];
+    },
+    handleMouseMove: function handleMouseMove() {
+      this.isHovering = true;
+      Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["commit"])('START_STAGE_HOVER');
+    },
+    handleMouseOut: function handleMouseOut() {
+      this.isHovering = false;
+      Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["commit"])('STOP_STAGE_HOVER');
+    },
+    handleActivate: function handleActivate(evt) {
+      evt.cancelBubble = true;
+      this.$emit('activate', this.annotation);
     }
   }
 });
@@ -13911,6 +16029,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -13947,7 +16071,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       exportData: null
     };
   },
-  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(['appName', 'userCanEdit', 'hasUser', 'authUser', 'project', 'lastSave', 'userGuide']), {}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["sync"])(['scale']), {
+  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(['appName', 'userCanEdit', 'hasUser', 'authUser', 'project', 'lastSave', 'userGuide']), {}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["sync"])(['scale', 'showAnnotations']), {
     hasProject: function hasProject() {
       return this.route && this.route.params.id ? true : false;
     },
@@ -14296,6 +16420,232 @@ var timer = null;
   },
   activated: function activated() {
     console.log("Activated");
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/AnnotationCard.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
+/* harmony import */ var _plugins_linkify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/plugins/linkify */ "./js/plugins/linkify.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'AnnotationCard',
+  props: {
+    annotation: Object,
+    stageConfig: Object
+  },
+  directives: {
+    linkify: _plugins_linkify__WEBPACK_IMPORTED_MODULE_1__["linkify"]
+  },
+  watch: {
+    'annotation': 'watchAnnotation'
+  },
+  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(['userCanEdit', 'hasUser', 'authUser', 'scale']), {
+    containerClass: function containerClass() {
+      var classes = [];
+
+      if (!this.annotation) {
+        return classes;
+      }
+
+      switch (this.annotation.type) {
+        case 'visual':
+          var posX = this.annotation.position[0];
+          var posY = this.annotation.position[1];
+
+          if (this.scale) {
+            posX = Math.floor(posX * this.stageConfig.scale.x);
+            posY = Math.floor(posY * this.stageConfig.scale.y);
+          }
+
+          if (posX > this.stageConfig.width / 2) {
+            classes.push('on-left');
+          } else {
+            classes.push('on-right');
+          }
+
+          if (posY > this.stageConfig.height / 2) {
+            classes.push('is-above');
+          }
+
+          break;
+      }
+
+      return classes;
+    },
+    containerStyle: function containerStyle() {
+      var style = {};
+
+      if (!this.annotation) {
+        return style;
+      }
+
+      switch (this.annotation.type) {
+        case 'visual':
+          var posX = this.annotation.position[0];
+          var posY = this.annotation.position[1];
+
+          if (this.scale) {
+            posX = Math.floor(posX * this.stageConfig.scale.x);
+            posY = Math.floor(posY * this.stageConfig.scale.y);
+          }
+
+          style.top = posY + 'px';
+          style.left = posX + 'px';
+          return style;
+          break;
+      }
+    }
+  }),
+  methods: {
+    /**
+     * When an annotation is present, focus the textarea.
+     *
+     */
+    watchAnnotation: function watchAnnotation() {
+      var _this = this;
+
+      if (this.annotation) {
+        this.$nextTick(function () {
+          _this.$refs.body.$el.focus();
+        });
+      }
+    },
+
+    /**
+     * Close the window.
+     *
+     */
+    doOK: function doOK() {
+      this.$emit('close');
+    },
+    deleteAnnotation: function deleteAnnotation() {
+      this.$emit('delete', this.annotation);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "ExperienceEditor",
+  props: {
+    name: String,
+    definition: Object,
+    value: [String, Number]
+  },
+  data: function data() {
+    return {
+      options: [{
+        value: 'negative',
+        img: 'user-journey/face-frown.svg'
+      }, {
+        value: 'neutral',
+        img: 'user-journey/face-neutral.svg'
+      }, {
+        value: 'positive',
+        img: 'user-journey/face-smile.svg'
+      }]
+    };
+  },
+  computed: {
+    val: {
+      get: function get() {
+        return this.value;
+      },
+      set: function set(content) {
+        this.$emit("input", content);
+      }
+    }
   }
 });
 
@@ -15028,6 +17378,62 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/edit/lib/ProjectCountryEditor.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/edit/lib/ProjectCountryEditor.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash/map */ "./node_modules/lodash/map.js");
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_map__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _services_Trans__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/services/Trans */ "./js/services/Trans.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "ProjectCountryEditor",
+  props: {
+    value: String
+  },
+  mounted: function mounted() {
+    this.val = this.value;
+  },
+  computed: {
+    availableCountries: function availableCountries() {
+      var _this = this;
+
+      return lodash_map__WEBPACK_IMPORTED_MODULE_0___default()(_services_Trans__WEBPACK_IMPORTED_MODULE_1__["default"].supportedLanguages(), function (lang) {
+        return {
+          value: lang,
+          label: _this.$t("countries.".concat(lang))
+        };
+      });
+    },
+    val: {
+      get: function get() {
+        return this.value;
+      },
+      set: function set(value) {
+        this.$emit("input", value);
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/edit/lib/ProjectModelsEditor.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/edit/lib/ProjectModelsEditor.vue?vue&type=script&lang=js& ***!
@@ -15072,6 +17478,9 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         value: "co_creation_of_service_model",
         label: this.$t("aspects.co_creation_of_service_model.title")
+      }, {
+        value: "user_journey_model",
+        label: this.$t("aspects.user_journey_model.title")
       }];
     },
     val: {
@@ -16644,6 +19053,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         value: "co_creation_of_service_model",
         label: this.$t("aspects.co_creation_of_service_model.title")
+      }, {
+        value: "user_journey_model",
+        label: this.$t("aspects.user_journey_model.title")
       }];
     }
   }),
@@ -16653,7 +19065,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         name: null,
         created_at: null,
         config: {
-          models: ["analytic_model", "change_model", "intervention_theory_model", "moral_ordering_model", "co_creation_of_service_model"]
+          models: ["analytic_model", "change_model", "intervention_theory_model", "moral_ordering_model", "co_creation_of_service_model", "user_journey_model"]
         }
       };
     },
@@ -16935,13 +19347,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash_throttle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash/throttle */ "./node_modules/lodash/throttle.js");
 /* harmony import */ var lodash_throttle__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_throttle__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
-/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jspdf */ "./node_modules/jspdf/dist/jspdf.min.js");
-/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jspdf__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _services_Trans__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/services/Trans */ "./js/services/Trans.js");
-/* harmony import */ var _services_EventBus__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/services/EventBus */ "./js/services/EventBus.js");
-/* harmony import */ var _aspects__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/aspects */ "./js/aspects/index.js");
-/* harmony import */ var _components_UserGuide__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/components/UserGuide */ "./js/components/UserGuide.vue");
+/* harmony import */ var lodash_filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/filter */ "./node_modules/lodash/filter.js");
+/* harmony import */ var lodash_filter__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_filter__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jspdf */ "./node_modules/jspdf/dist/jspdf.min.js");
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jspdf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _services_Trans__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/services/Trans */ "./js/services/Trans.js");
+/* harmony import */ var _services_EventBus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/services/EventBus */ "./js/services/EventBus.js");
+/* harmony import */ var _aspects__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/aspects */ "./js/aspects/index.js");
+/* harmony import */ var _components_UserGuide__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/components/UserGuide */ "./js/components/UserGuide.vue");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -17006,6 +19420,40 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -17016,13 +19464,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'DashboardTab',
   components: {
-    UserGuide: _components_UserGuide__WEBPACK_IMPORTED_MODULE_6__["default"]
+    UserGuide: _components_UserGuide__WEBPACK_IMPORTED_MODULE_7__["default"]
   },
   props: {
     aspectId: [Boolean, String]
   },
   watch: {
     'scale': 'resize',
+    'annotate': 'watchAnnotate',
     'stageHover': 'setCursor',
     'project.id': {
       handler: function handler(newVal, oldVal) {
@@ -17049,12 +19498,24 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           x: 1,
           y: 1
         }
-      }
+      },
+      currentAnnotation: null
     };
   },
-  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_1__["get"])(['scale', 'stageHover', 'options', 'project']), {
+  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_2__["get"])(['scale', 'showAnnotations', 'stageHover', 'options', 'project', 'userCanEdit']), {
+    /**
+     * All annotations. See @filteredAnnotations() for scoped ones.
+     *
+     */
+    annotations: Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_2__["sync"])('project@data.annotations'),
+    projectConfig: Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_2__["get"])('project@config'),
+
+    /**
+     * Current language to pass to child components.
+     *
+     */
     currentLanguage: function currentLanguage() {
-      return _services_Trans__WEBPACK_IMPORTED_MODULE_3__["default"].currentLanguage();
+      return _services_Trans__WEBPACK_IMPORTED_MODULE_4__["default"].currentLanguage();
     },
 
     /**
@@ -17068,20 +19529,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         return null;
       }
 
-      return _aspects__WEBPACK_IMPORTED_MODULE_5__["default"].get(aspect);
+      return _aspects__WEBPACK_IMPORTED_MODULE_6__["default"].get(aspect);
     },
 
-    /*
-    		template() {
-    			if ( ! this.project.id) {
-    				return false;
-    			}
-    			var template = Templates.get(this.project.template);
-    			return template;
-    		},*/
+    /**
+     * Get dashboard nodes of the current aspect.
+     *
+     */
     nodes: function nodes() {
       return this.aspect && this.aspect.NODES ? this.aspect.NODES : [];
     },
+
+    /**
+     * Background layer config (just solid colour so it isn't transparent)
+     *
+     */
     backgroundConfig: function backgroundConfig() {
       var config = {
         fill: '#ffffff',
@@ -17091,6 +19553,58 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         height: this.aspect.CONFIG.stageSize.height
       };
       return config;
+    },
+
+    /**
+     * List of 'visual' annotations for this aspect.
+     *
+     */
+    filteredAnnotations: function filteredAnnotations() {
+      return lodash_filter__WEBPACK_IMPORTED_MODULE_1___default()(this.annotations, {
+        type: 'visual',
+        aspect: this.aspectId
+      });
+    },
+    countryConfig: function countryConfig() {
+      var projectConfig = this.projectConfig;
+      var country = projectConfig ? projectConfig.country : null;
+      var langKey = "countries.".concat(country);
+      var langExists = this.$te(langKey);
+
+      if (!langExists) {
+        console.debug("countryConfig: no lang");
+        return null;
+      } // console.debug(`countryConfig: set as ${country}`);
+
+
+      var textConfig = {
+        fontSize: 14,
+        fontStyle: 'bold',
+        fontFamily: '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+        lineHeight: 1.35,
+        align: 'right',
+        x: 0,
+        y: 20,
+        width: this.stageConfig.width - 20 - 30 - 5,
+        text: this.$t(langKey),
+        fill: '#666666'
+      };
+      var flagName = _services_Trans__WEBPACK_IMPORTED_MODULE_4__["default"].codeToFlag(country);
+      var flagConfig = {
+        visible: langExists,
+        opacity: 1,
+        scale: {
+          x: 0.12,
+          y: 0.12
+        },
+        x: this.stageConfig.width - 20 - 30,
+        y: 20,
+        filename: "/images/flags/".concat(flagName, ".svg")
+      };
+      return {
+        text: textConfig,
+        flag: flagConfig
+      };
     }
   }),
   methods: {
@@ -17204,7 +19718,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
               var image = stage.toDataURL({
                 pixelRatio: 1.5
               });
-              var pdf = new jspdf__WEBPACK_IMPORTED_MODULE_2___default.a('l', 'px', [w, h], false, true);
+              var pdf = new jspdf__WEBPACK_IMPORTED_MODULE_3___default.a('l', 'px', [w, h], false, true);
               var width = pdf.internal.pageSize.getWidth();
               var height = pdf.internal.pageSize.getHeight();
               pdf.addImage(image, 'PNG', 0, 0, width, height);
@@ -17221,6 +19735,73 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           }, 100);
           break;
       }
+    },
+
+    /**
+     * On double-click of stage, add a new annotation.
+     *
+     */
+    handleAddAnnotate: function handleAddAnnotate(event) {
+      if (!this.userCanEdit) {
+        return;
+      }
+
+      if (!this.showAnnotations) {
+        return;
+      }
+
+      if (event.evt.button && event.evt.button > 0) {
+        return;
+      }
+
+      var pos = this.$refs.stage.getStage().getPointerPosition();
+
+      if (this.scale) {
+        pos.x = Math.floor(pos.x / this.stageConfig.scale.x);
+        pos.y = Math.floor(pos.y / this.stageConfig.scale.y);
+      }
+
+      var newAnnotation = {
+        aspect: this.aspectId,
+        type: 'visual',
+        position: [pos.x, pos.y],
+        body: ''
+      };
+      this.annotations.push(newAnnotation);
+      this.currentAnnotation = newAnnotation;
+    },
+
+    /**
+     * Handle showing the dialog for a given annotation.
+     * Set the currentAnnotation to this object, which will show the dialog.
+     *
+     */
+    setCurrentAnnotation: function setCurrentAnnotation(annotation) {
+      this.currentAnnotation = annotation;
+    },
+    deleteAnnotation: function deleteAnnotation(annotation) {
+      if (!confirm("Delete this annotation?")) {
+        return;
+      }
+
+      var items = this.annotations;
+
+      if (items.indexOf(annotation) > -1) {
+        items.splice(items.indexOf(annotation), 1);
+        this.annotations = items;
+        this.setCurrentAnnotation(null);
+      }
+    },
+
+    /**
+     * Watch the 'annotate' flag.
+     * When `false`, set the current annotation to `null` - which will remove any visible window of it.
+     *
+     */
+    watchAnnotate: function watchAnnotate() {
+      if (!this.annotate) {
+        this.currentAnnotation = null;
+      }
     }
   },
   mounted: function mounted() {
@@ -17231,11 +19812,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       window.addEventListener('resize', lodash_throttle__WEBPACK_IMPORTED_MODULE_0___default()(_this2.resize, 250));
     });
-    _services_EventBus__WEBPACK_IMPORTED_MODULE_4__["EventBus"].$on('export', this.exportHandler);
+    _services_EventBus__WEBPACK_IMPORTED_MODULE_5__["EventBus"].$on('export', this.exportHandler);
   },
   destroyed: function destroyed() {
     window.removeEventListener("resize", lodash_throttle__WEBPACK_IMPORTED_MODULE_0___default()(this.resize, 250));
-    _services_EventBus__WEBPACK_IMPORTED_MODULE_4__["EventBus"].$off('export', this.exportHandler);
+    _services_EventBus__WEBPACK_IMPORTED_MODULE_5__["EventBus"].$off('export', this.exportHandler);
   }
 });
 
@@ -17669,6 +20250,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           modelPath: "project@config.models",
           editor: "project-models-editor",
           title: 'app.models'
+        });
+        panels.unshift({
+          id: "country",
+          aspectId: aspectId,
+          modelPath: "project@config.country",
+          editor: "project-country-editor",
+          title: 'app.country'
         });
         panels.unshift({
           id: "meta",
@@ -18209,6 +20797,63 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, ".group-title[data-v-cd9dbf10] {\n  font-size: 1.3rem;\n  padding-top: 0.6rem;\n}\n.group-prompt[data-v-cd9dbf10] {\n  font-size: 0.8rem;\n  font-weight: bold;\n  width: 50%;\n  vertical-align: top;\n}\n.group-value[data-v-cd9dbf10] {\n  vertical-align: top;\n}\n.group-value .link[data-v-cd9dbf10],\n.group-value a.link[data-v-cd9dbf10] {\n  color: #0074D9;\n  text-decoration: underline;\n}\n.like-pre[data-v-cd9dbf10] {\n  white-space: pre;\n}\ntable[data-v-cd9dbf10] {\n  margin-bottom: 2.4rem;\n}\n.divider[data-v-cd9dbf10] {\n  border-top-width: 0.1rem;\n  height: 0.1rem;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".group-title[data-v-5549a21c] {\n  font-size: 1.3rem;\n  padding-top: 0.6rem;\n}\n.group-prompt[data-v-5549a21c] {\n  font-size: 0.8rem;\n  font-weight: bold;\n  width: 50%;\n  vertical-align: top;\n}\n.group-value[data-v-5549a21c] {\n  vertical-align: top;\n}\n.group-value .link[data-v-5549a21c],\n.group-value a.link[data-v-5549a21c] {\n  color: #0074D9;\n  text-decoration: underline;\n}\n.like-pre[data-v-5549a21c] {\n  white-space: pre;\n}\ntable[data-v-5549a21c] {\n  margin-bottom: 2.4rem;\n}\n.divider[data-v-5549a21c] {\n  border-top-width: 0.1rem;\n  height: 0.1rem;\n}\n.img-experience[data-v-5549a21c] {\n  max-width: 48px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".annotation-container[data-v-3adb0916] {\n  position: absolute;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=style&index=0&id=c51f4002&lang=scss&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=style&index=0&id=c51f4002&lang=scss&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".btn[data-v-c51f4002] {\n  height: auto;\n  padding: 0 2px;\n  border: 0;\n}\n.btn img[data-v-c51f4002] {\n  display: block;\n  margin: 0 auto;\n  width: 64px;\n  height: 64px;\n}\n.btn span[data-v-c51f4002] {\n  display: block;\n  border: 2px solid transparent;\n}\n.btn input:checked + span[data-v-c51f4002] {\n  background: #f2f0f1;\n  border: 2px solid #003965;\n}\n.btn[data-v-c51f4002]:hover, .btn[data-v-c51f4002]:focus, .btn[data-v-c51f4002]:active {\n  background: transparent;\n}\n.btn:hover span[data-v-c51f4002], .btn:focus span[data-v-c51f4002], .btn:active span[data-v-c51f4002] {\n  border: 2px solid #ffdc00;\n}", ""]);
 
 // exports
 
@@ -43653,6 +46298,96 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=style&index=0&id=5549a21c&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=style&index=0&id=3adb0916&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=style&index=0&id=c51f4002&lang=scss&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=style&index=0&id=c51f4002&lang=scss&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ExperienceEditor.vue?vue&type=style&index=0&id=c51f4002&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=style&index=0&id=c51f4002&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./js/components/layout/ToastMessage.vue?vue&type=style&index=0&id=8766a998&scoped=true&lang=css&":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./js/components/layout/ToastMessage.vue?vue&type=style&index=0&id=8766a998&scoped=true&lang=css& ***!
@@ -48907,7 +51642,7 @@ var render = function() {
           attrs: {
             config: {
               x: 870,
-              y: 30
+              y: 60
             }
           }
         },
@@ -50630,6 +53365,781 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=template&id=b843cd4a&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/aspects/user_journey_model/components/UserJourneyDashboard.vue?vue&type=template&id=b843cd4a& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-group",
+    [
+      _c("CosmosTitle", {
+        attrs: { aspectId: _vm.aspectId, options: _vm.options }
+      }),
+      _vm._v(" "),
+      _c(
+        "v-group",
+        { attrs: { config: { x: 547, y: 430 } } },
+        [
+          _vm._l(_vm.swimLanesConfig, function(rect, idx) {
+            return _c("v-rect", {
+              key: "swimLane" + idx,
+              attrs: { config: rect }
+            })
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.swimLaneLabelsConfig, function(label, idx) {
+            return _c("v-text", {
+              key: "swimLaneLabel" + idx,
+              attrs: { config: label }
+            })
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.swimLaneSmileys, function(img, idx) {
+            return _c("CosmosImage", {
+              key: "swimLaneSmiley" + idx,
+              attrs: { config: img }
+            })
+          })
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _vm._l(_vm.journeyStagesConfig, function(stage, idx) {
+        return _c(
+          "v-group",
+          { key: "stage" + idx, attrs: { config: stage.group } },
+          [
+            _c(
+              "v-label",
+              { attrs: { config: stage.label } },
+              [
+                _c("v-tag", { attrs: { config: stage.tag } }),
+                _vm._v(" "),
+                _c("v-text", { attrs: { config: stage.text } })
+              ],
+              1
+            )
+          ],
+          1
+        )
+      }),
+      _vm._v(" "),
+      _c(
+        "v-group",
+        { attrs: { config: { x: 490, y: 85, scale: { x: 0.85, y: 0.85 } } } },
+        [
+          _vm._l(_vm.flowchartTextConfig, function(text, idx) {
+            return _c(
+              "v-group",
+              { key: "flowText" + idx, attrs: { config: { x: 0, y: 0 } } },
+              [
+                _c("CosmosTextBox", {
+                  attrs: { options: _vm.options, config: text }
+                })
+              ],
+              1
+            )
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.flowchartLabelsConfig, function(text, idx) {
+            return _c(
+              "v-group",
+              { key: "flowLabel" + idx, attrs: { config: { x: 0, y: 0 } } },
+              [_c("v-text", { attrs: { config: text } })],
+              1
+            )
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.flowchartArrowsConfig, function(arrow, idx) {
+            return _c(
+              "v-group",
+              { key: "flowArrow" + idx, attrs: { config: { x: 0, y: 0 } } },
+              [_c("v-arrow", { attrs: { config: arrow } })],
+              1
+            )
+          })
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _c(
+        "v-group",
+        { attrs: { config: _vm.sipConfig.group } },
+        [
+          _c("v-rect", { attrs: { config: _vm.sipConfig.rect } }),
+          _vm._v(" "),
+          _c("v-text", { attrs: { config: _vm.sipConfig.label } }),
+          _vm._v(" "),
+          _vm._l(_vm.sipConfig.boxes, function(text, idx) {
+            return _c("CosmosTextBox", {
+              key: "sipBox" + idx,
+              attrs: { config: text, options: _vm.options }
+            })
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.sipConfig.connectors, function(conn, idx) {
+            return _c("CosmosConnector", {
+              key: "sipConnector" + idx,
+              attrs: { config: conn }
+            })
+          })
+        ],
+        2
+      )
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/aspects/user_journey_model/components/UserJourneySummaryView.vue?vue&type=template&id=5549a21c&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm.aspectData
+    ? _c(
+        "main",
+        { ref: "container", staticClass: "app-content light moral-summary" },
+        [
+          _c("div", { staticClass: "scrollable scr-y" }, [
+            _c("div", { staticClass: "container grid-xl" }, [
+              _vm.aspectData.model
+                ? _c("h1", { staticClass: "h4 mb-8 mt-4" }, [
+                    _vm._v(_vm._s(_vm.aspectData.model.title))
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("div", { staticClass: "divider" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "columns" }, [
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t(
+                          "aspects.user_journey_model.definitions.discovering.title"
+                        )
+                      )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "column col-9" }, [
+                  _c("table", { staticClass: "table" }, [
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.discovering.discovery_medium.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value" }, [
+                          _vm.aspectData.discovering.discovery_medium
+                            ? _c("span", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t(
+                                      "aspects.user_journey_model.options.mediums." +
+                                        _vm.aspectData.discovering
+                                          .discovery_medium
+                                    )
+                                  )
+                                )
+                              ])
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.discovering.information_medium.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value" }, [
+                          _vm.aspectData.discovering.information_medium
+                            ? _c("span", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t(
+                                      "aspects.user_journey_model.options.mediums." +
+                                        _vm.aspectData.discovering
+                                          .information_medium
+                                    )
+                                  )
+                                )
+                              ])
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.discovering.information_experience.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _vm.aspectData.discovering.information_experience
+                            ? _c("img", {
+                                staticClass: "img-responsive img-experience",
+                                attrs: {
+                                  src: _vm.experienceImage(
+                                    _vm.aspectData.discovering
+                                      .information_experience
+                                  )
+                                }
+                              })
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.discovering.comments.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _c("span", {
+                            directives: [
+                              {
+                                name: "linkify",
+                                rawName: "v-linkify",
+                                value: _vm.aspectData.discovering.comments,
+                                expression: "aspectData.discovering.comments"
+                              }
+                            ]
+                          })
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "divider" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "columns" }, [
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t(
+                          "aspects.user_journey_model.definitions.accessing.title"
+                        )
+                      )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "column col-9" }, [
+                  _c("table", { staticClass: "table" }, [
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.accessing.access_method.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value" }, [
+                          _vm.aspectData.accessing.access_method
+                            ? _c("span", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t(
+                                      "aspects.user_journey_model.options.access_methods." +
+                                        _vm.aspectData.accessing.access_method
+                                    )
+                                  )
+                                )
+                              ])
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.accessing.qualification_process.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _c("span", {
+                            directives: [
+                              {
+                                name: "linkify",
+                                rawName: "v-linkify",
+                                value:
+                                  _vm.aspectData.accessing
+                                    .qualification_process,
+                                expression:
+                                  "aspectData.accessing.qualification_process"
+                              }
+                            ]
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.accessing.qualification_experience.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _vm.aspectData.accessing.qualification_experience
+                            ? _c("img", {
+                                staticClass: "img-responsive img-experience",
+                                attrs: {
+                                  src: _vm.experienceImage(
+                                    _vm.aspectData.accessing
+                                      .qualification_experience
+                                  )
+                                }
+                              })
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.accessing.appropriate_comment.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _c("span", {
+                            directives: [
+                              {
+                                name: "linkify",
+                                rawName: "v-linkify",
+                                value:
+                                  _vm.aspectData.accessing.appropriate_comment,
+                                expression:
+                                  "aspectData.accessing.appropriate_comment"
+                              }
+                            ]
+                          })
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "divider" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "columns" }, [
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t(
+                          "aspects.user_journey_model.definitions.using.title"
+                        )
+                      )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "column col-9" }, [
+                  _c("table", { staticClass: "table" }, [
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.using.participate_experience.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _vm.aspectData.using.participate_experience
+                            ? _c("img", {
+                                staticClass: "img-responsive img-experience",
+                                attrs: {
+                                  src: _vm.experienceImage(
+                                    _vm.aspectData.using.participate_experience
+                                  )
+                                }
+                              })
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.using.accessible_experience.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _vm.aspectData.using.accessible_experience
+                            ? _c("img", {
+                                staticClass: "img-responsive img-experience",
+                                attrs: {
+                                  src: _vm.experienceImage(
+                                    _vm.aspectData.using.accessible_experience
+                                  )
+                                }
+                              })
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.using.time_experience.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _vm.aspectData.using.time_experience
+                            ? _c("img", {
+                                staticClass: "img-responsive img-experience",
+                                attrs: {
+                                  src: _vm.experienceImage(
+                                    _vm.aspectData.using.time_experience
+                                  )
+                                }
+                              })
+                            : _vm._e()
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "divider" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "columns" }, [
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t(
+                          "aspects.user_journey_model.definitions.evaluating.title"
+                        )
+                      )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "column col-9" }, [
+                  _c("table", { staticClass: "table" }, [
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.evaluating.opinions_asked.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value" }, [
+                          _vm.aspectData.evaluating.opinions_asked
+                            ? _c("span", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t(
+                                      "aspects.user_journey_model.options.yes_no_maybe." +
+                                        _vm.aspectData.evaluating.opinions_asked
+                                    )
+                                  )
+                                )
+                              ])
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.evaluating.opinions_how.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value" }, [
+                          _vm.aspectData.evaluating.opinions_how
+                            ? _c("span", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$t(
+                                      "aspects.user_journey_model.options.opinions_how." +
+                                        _vm.aspectData.evaluating.opinions_how
+                                    )
+                                  )
+                                )
+                              ])
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.evaluating.service_experience.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _vm.aspectData.evaluating.service_experience
+                            ? _c("img", {
+                                staticClass: "img-responsive img-experience",
+                                attrs: {
+                                  src: _vm.experienceImage(
+                                    _vm.aspectData.evaluating.service_experience
+                                  )
+                                }
+                              })
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.evaluating.surprises_comments.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _c("span", {
+                            directives: [
+                              {
+                                name: "linkify",
+                                rawName: "v-linkify",
+                                value:
+                                  _vm.aspectData.evaluating.surprises_comments,
+                                expression:
+                                  "aspectData.evaluating.surprises_comments"
+                              }
+                            ]
+                          })
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "divider" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "columns" }, [
+                _c("div", { staticClass: "column col-3" }, [
+                  _c("h2", { staticClass: "group-title" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$t(
+                          "aspects.user_journey_model.definitions.instigating.title"
+                        )
+                      )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "column col-9" }, [
+                  _c("table", { staticClass: "table" }, [
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.instigating.design_role.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _c("span", {
+                            directives: [
+                              {
+                                name: "linkify",
+                                rawName: "v-linkify",
+                                value: _vm.aspectData.instigating.design_role,
+                                expression: "aspectData.instigating.design_role"
+                              }
+                            ]
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.instigating.instigate_role.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value" }, [
+                          _c(
+                            "ul",
+                            _vm._l(
+                              _vm.aspectData.instigating.instigate_role,
+                              function(roleName) {
+                                return _c("li", [
+                                  _vm._v(
+                                    "\n\t\t\t\t\t\t\t\t\t\t\t" +
+                                      _vm._s(
+                                        _vm.$t(
+                                          "aspects.user_journey_model.options.instigate_roles." +
+                                            roleName
+                                        )
+                                      ) +
+                                      "\n\t\t\t\t\t\t\t\t\t\t"
+                                  )
+                                ])
+                              }
+                            ),
+                            0
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("td", { staticClass: "group-prompt" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$t(
+                                "aspects.user_journey_model.definitions.instigating.comments.label"
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "group-value like-pre" }, [
+                          _c("span", {
+                            directives: [
+                              {
+                                name: "linkify",
+                                rawName: "v-linkify",
+                                value: _vm.aspectData.instigating.comments,
+                                expression: "aspectData.instigating.comments"
+                              }
+                            ]
+                          })
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]
+      )
+    : _vm._e()
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/UserGuide.vue?vue&type=template&id=e6aff600&":
 /*!**************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/components/UserGuide.vue?vue&type=template&id=e6aff600& ***!
@@ -50842,6 +54352,41 @@ var render = function() {
       _c("v-arrow", { attrs: { config: _vm.arrowConfig } })
     ],
     1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosConnector.vue?vue&type=template&id=4a6fc2d6&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/components/cosmos/lib/CosmosConnector.vue?vue&type=template&id=4a6fc2d6& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-group",
+    { attrs: { config: { visible: this.visible } } },
+    [
+      _c("v-line", { ref: "line", attrs: { config: _vm.lineConfig } }),
+      _vm._v(" "),
+      _vm._l(_vm.circlesConfig, function(circle, idx) {
+        return _c("v-circle", { key: idx, attrs: { config: circle } })
+      })
+    ],
+    2
   )
 }
 var staticRenderFns = []
@@ -51311,6 +54856,45 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=template&id=ab515512&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/components/cosmos/lib/CosmosVisualAnnotation.vue?vue&type=template&id=ab515512& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-group",
+    {
+      ref: "group",
+      attrs: { config: _vm.groupConfig },
+      on: {
+        click: _vm.handleActivate,
+        tap: _vm.handleActivate,
+        dragend: _vm.handleDragEnd,
+        mousemove: _vm.handleMouseMove,
+        mouseout: _vm.handleMouseOut
+      }
+    },
+    [_c("v-path", { attrs: { config: _vm.pathConfig } })],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/layout/AppHeader.vue?vue&type=template&id=40a0b06a&":
 /*!*********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/components/layout/AppHeader.vue?vue&type=template&id=40a0b06a& ***!
@@ -51498,6 +55082,71 @@ var render = function() {
                       [_vm._v(_vm._s(_vm.$t("user_guide.show")))]
                     )
                   : _vm._e()
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.project && _vm.project.id
+            ? _c("div", { staticClass: "input-group input-inline mr-4" }, [
+                _c(
+                  "label",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.activeTab == "model",
+                        expression: "activeTab == 'model'"
+                      }
+                    ],
+                    staticClass: "form-switch input-sm"
+                  },
+                  [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.showAnnotations,
+                          expression: "showAnnotations"
+                        }
+                      ],
+                      attrs: { type: "checkbox" },
+                      domProps: {
+                        checked: Array.isArray(_vm.showAnnotations)
+                          ? _vm._i(_vm.showAnnotations, null) > -1
+                          : _vm.showAnnotations
+                      },
+                      on: {
+                        change: function($event) {
+                          var $$a = _vm.showAnnotations,
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = null,
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 &&
+                                (_vm.showAnnotations = $$a.concat([$$v]))
+                            } else {
+                              $$i > -1 &&
+                                (_vm.showAnnotations = $$a
+                                  .slice(0, $$i)
+                                  .concat($$a.slice($$i + 1)))
+                            }
+                          } else {
+                            _vm.showAnnotations = $$c
+                          }
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "form-icon" }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "text-small" }, [
+                      _vm._v(_vm._s(_vm.$t("app.more_details")))
+                    ])
+                  ]
+                )
               ])
             : _vm._e(),
           _vm._v(" "),
@@ -51888,6 +55537,193 @@ var render = function() {
           _vm._v("\n\t\t" + _vm._s(_vm.toast.message) + "\n\t")
         ])
       : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/AnnotationCard.vue?vue&type=template&id=3adb0916&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm.annotation
+    ? _c(
+        "div",
+        {
+          staticClass: "annotation-container",
+          class: _vm.containerClass,
+          style: _vm.containerStyle
+        },
+        [
+          _c("div", { staticClass: "card card-annotation" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("button", {
+                staticClass: "btn btn-clear float-right",
+                attrs: { "aria-label": "Close" },
+                on: { click: _vm.doOK }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-title h5" }, [
+                _vm._v(_vm._s(_vm.$t("app.more_details")))
+              ])
+            ]),
+            _vm._v(" "),
+            _vm.userCanEdit
+              ? _c(
+                  "div",
+                  { staticClass: "card-body" },
+                  [
+                    _c(
+                      "VGroup",
+                      { attrs: { name: "annotation" } },
+                      [
+                        _c("VTextarea", {
+                          ref: "body",
+                          staticClass: "input-sm",
+                          attrs: { rows: "6", id: "annotation" },
+                          model: {
+                            value: _vm.annotation.body,
+                            callback: function($$v) {
+                              _vm.$set(_vm.annotation, "body", $$v)
+                            },
+                            expression: "annotation.body"
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.userCanEdit
+              ? _c("div", { staticClass: "card-body" }, [
+                  _c("div", {
+                    directives: [
+                      {
+                        name: "linkify",
+                        rawName: "v-linkify",
+                        value: _vm.annotation.body,
+                        expression: "annotation.body"
+                      }
+                    ],
+                    staticClass: "text-small like-pre"
+                  })
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-sm btn-primary",
+                  attrs: { type: "button" },
+                  on: { click: _vm.doOK }
+                },
+                [
+                  _c("i", { staticClass: "icon icon-check" }),
+                  _vm._v(" " + _vm._s(_vm.$t("app.ok")))
+                ]
+              ),
+              _vm._v(" "),
+              _vm.userCanEdit
+                ? _c(
+                    "button",
+                    {
+                      staticClass:
+                        "btn btn-sm btn-negative btn-action float-right tooltip",
+                      attrs: {
+                        type: "button",
+                        "data-tooltip": _vm.$t("app.delete")
+                      },
+                      on: { click: _vm.deleteAnnotation }
+                    },
+                    [_c("i", { staticClass: "icon icon-delete" })]
+                  )
+                : _vm._e()
+            ])
+          ])
+        ]
+      )
+    : _vm._e()
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=template&id=c51f4002&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/edit/lib/ExperienceEditor.vue?vue&type=template&id=c51f4002&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "div",
+      { staticClass: "btn-group btn-group-block" },
+      _vm._l(_vm.options, function(option) {
+        return _c(
+          "label",
+          { key: option.value, staticClass: "btn form-radio" },
+          [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.val,
+                  expression: "val"
+                }
+              ],
+              staticClass: "text-hide",
+              attrs: { type: "radio" },
+              domProps: {
+                value: option.value,
+                checked: _vm._q(_vm.val, option.value)
+              },
+              on: {
+                change: function($event) {
+                  _vm.val = option.value
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", [
+              _c("img", { attrs: { src: "/images/aspects/" + option.img } })
+            ])
+          ]
+        )
+      }),
+      0
+    )
   ])
 }
 var staticRenderFns = []
@@ -52543,6 +56379,53 @@ var render = function() {
                 _vm.$set(_vm.val, "title", $$v)
               },
               expression: "val.title"
+            }
+          })
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./js/components/project/edit/lib/ProjectCountryEditor.vue?vue&type=template&id=bd926ddc&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./js/components/project/edit/lib/ProjectCountryEditor.vue?vue&type=template&id=bd926ddc& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "sidebar-content" },
+    [
+      _c(
+        "VGroup",
+        { attrs: { name: "countries", label: _vm.$t("app.which_country") } },
+        [
+          _c("VRadioList", {
+            attrs: { options: _vm.availableCountries },
+            model: {
+              value: _vm.val,
+              callback: function($$v) {
+                _vm.val = $$v
+              },
+              expression: "val"
             }
           })
         ],
@@ -54376,98 +58259,180 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("main", { staticClass: "app-content dark" }, [
-    _vm.aspect
-      ? _c(
-          "div",
-          {
-            ref: "container",
-            staticClass: "canvas-container scrollable scr-x scr-y"
-          },
-          [
-            _c(
-              "v-stage",
-              { ref: "stage", attrs: { config: _vm.stageConfig } },
-              [
-                _c(
-                  "v-layer",
-                  [_c("v-rect", { attrs: { config: _vm.backgroundConfig } })],
-                  1
-                ),
-                _vm._v(" "),
-                _vm.project.id && _vm.nodes.length
-                  ? _c(
-                      "v-layer",
-                      _vm._l(_vm.nodes, function(node, idx) {
-                        return _c(node.componentName, {
-                          key: idx,
-                          ref: node.ref,
-                          refInFor: true,
-                          tag: "component",
-                          attrs: {
-                            path: node.path,
-                            config: node.config,
-                            children: node.children,
-                            definitionName: node.definitionName,
-                            visibilityFunc: node.visibilityFunc,
-                            options: _vm.options,
-                            aspectId: _vm.aspect.CONFIG.id
-                          }
-                        })
-                      }),
-                      1
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.project.id && _vm.aspect.CONFIG.dashboardComponent
-                  ? _c(
-                      "v-layer",
-                      [
-                        _c(_vm.aspect.CONFIG.dashboardComponent, {
-                          tag: "component",
-                          attrs: {
-                            definitions: _vm.aspect.DEFINITIONS,
-                            options: _vm.options,
-                            aspectId: _vm.aspect.CONFIG.id,
-                            currentLanguage: _vm.currentLanguage
-                          }
-                        })
-                      ],
-                      1
-                    )
-                  : _vm._e()
-              ],
-              1
-            )
-          ],
-          1
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "modal modal-sm", class: _vm.isExporting ? "active" : "" },
-      [
-        _c("div", { staticClass: "modal-overlay" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "modal-container" }, [
-          _c("div", { staticClass: "modal-header" }, [
-            _c("div", { staticClass: "modal-title h5" }, [
-              _vm._v(_vm._s(_vm.$t("app.exporting")) + "...")
-            ])
-          ]),
+  return _c(
+    "main",
+    { staticClass: "app-content dark" },
+    [
+      _vm.aspect
+        ? _c(
+            "div",
+            {
+              ref: "container",
+              staticClass: "canvas-container scrollable scr-x scr-y"
+            },
+            [
+              _c(
+                "v-stage",
+                {
+                  ref: "stage",
+                  attrs: { config: _vm.stageConfig },
+                  on: {
+                    click: function($event) {
+                      return _vm.setCurrentAnnotation(null)
+                    },
+                    tap: function($event) {
+                      return _vm.setCurrentAnnotation(null)
+                    },
+                    dblclick: _vm.handleAddAnnotate,
+                    dbltap: _vm.handleAddAnnotate
+                  }
+                },
+                [
+                  _c(
+                    "v-layer",
+                    [_c("v-rect", { attrs: { config: _vm.backgroundConfig } })],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _vm.project.id && _vm.nodes.length
+                    ? _c(
+                        "v-layer",
+                        _vm._l(_vm.nodes, function(node, idx) {
+                          return _c(node.componentName, {
+                            key: idx,
+                            ref: node.ref,
+                            refInFor: true,
+                            tag: "component",
+                            attrs: {
+                              path: node.path,
+                              config: node.config,
+                              children: node.children,
+                              definitionName: node.definitionName,
+                              visibilityFunc: node.visibilityFunc,
+                              options: _vm.options,
+                              aspectId: _vm.aspect.CONFIG.id
+                            }
+                          })
+                        }),
+                        1
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.project.id && _vm.aspect.CONFIG.dashboardComponent
+                    ? _c(
+                        "v-layer",
+                        [
+                          _c(_vm.aspect.CONFIG.dashboardComponent, {
+                            tag: "component",
+                            attrs: {
+                              definitions: _vm.aspect.DEFINITIONS,
+                              options: _vm.options,
+                              aspectId: _vm.aspect.CONFIG.id,
+                              currentLanguage: _vm.currentLanguage
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.showAnnotations
+                    ? _c(
+                        "v-layer",
+                        _vm._l(_vm.filteredAnnotations, function(
+                          annotation,
+                          idx
+                        ) {
+                          return _c("CosmosVisualAnnotation", {
+                            key: "annotation" + idx,
+                            attrs: {
+                              annotation: annotation,
+                              currentAnnotation: _vm.currentAnnotation
+                            },
+                            on: { activate: _vm.setCurrentAnnotation }
+                          })
+                        }),
+                        1
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _c(
+                    "v-layer",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.countryConfig !== null,
+                          expression: "countryConfig !== null"
+                        }
+                      ]
+                    },
+                    [
+                      _vm.countryConfig
+                        ? _c("v-text", {
+                            attrs: { config: _vm.countryConfig.text }
+                          })
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.countryConfig
+                        ? _c("CosmosImage", {
+                            attrs: { config: _vm.countryConfig.flag }
+                          })
+                        : _vm._e()
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "modal modal-sm",
+          class: _vm.isExporting ? "active" : ""
+        },
+        [
+          _c("div", { staticClass: "modal-overlay" }),
           _vm._v(" "),
-          _c("div", { staticClass: "modal-body" }, [
-            _c("div", { staticClass: "content mb-4" }, [
-              _c("p", [_vm._v(_vm._s(_vm.$t("app.please_wait_generate")))]),
-              _vm._v(" "),
-              _c("div", { staticClass: "loading loading-lg" })
+          _c("div", { staticClass: "modal-container" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c("div", { staticClass: "modal-title h5" }, [
+                _vm._v(_vm._s(_vm.$t("app.exporting")) + "...")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _c("div", { staticClass: "content mb-4" }, [
+                _c("p", [_vm._v(_vm._s(_vm.$t("app.please_wait_generate")))]),
+                _vm._v(" "),
+                _c("div", { staticClass: "loading loading-lg" })
+              ])
             ])
           ])
-        ])
-      ]
-    )
-  ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("AnnotationCard", {
+        attrs: {
+          annotation: _vm.currentAnnotation,
+          stageConfig: _vm.stageConfig
+        },
+        on: {
+          close: function($event) {
+            return _vm.setCurrentAnnotation(null)
+          },
+          delete: _vm.deleteAnnotation
+        }
+      })
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

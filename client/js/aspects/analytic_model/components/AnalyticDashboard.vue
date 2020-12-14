@@ -27,7 +27,7 @@
 
 		<v-group :config="{
 			x: 870,
-			y: 30,
+			y: 60,
 		}">
 
 			<v-line

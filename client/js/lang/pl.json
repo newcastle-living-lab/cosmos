@@ -9,6 +9,7 @@
         "add_new_item": "Dodaj nową pozycję",
         "all": "Wszystko",
         "colour": "Kolor",
+        "country": "Kraj",
         "create": "Stwórz",
         "created_by": "Stworzone przez",
         "delete": "Kasować",
@@ -35,6 +36,7 @@
         "log_in": "Zaloguj sie",
         "maximum_items": "Maksymalnie {count} elementów | Maxumum {count} element | Maksymalnie {count} elementów",
         "models": "Modele",
+        "more_details": "Więcej szczegółów",
         "name": "Nazwa",
         "new_project": "Utwórz nowy projekt",
         "next": "Kolejny",
@@ -54,7 +56,8 @@
         "try_again": "Spróbuj ponownie",
         "type": "Rodzaj",
         "user_is_read_only": "Twój poziom dostępu użytkownika jest tylko do odczytu.",
-        "web_address": "adres internetowy"
+        "web_address": "adres internetowy",
+        "which_country": "Z jakiego kraju pochodzisz?"
     },
     "aspects": {
         "analytic_model": {
@@ -526,12 +529,157 @@
             },
             "title": "Teoria zmiany"
         },
+        "user_journey_model": {
+            "dashboard": {
+                "one": "",
+                "few": "",
+                "many": "",
+                "other": ""
+            },
+            "definitions": {
+                "accessing": {
+                    "access_method": {
+                        "label": "Jak uzyskałeś dostęp do usługi?"
+                    },
+                    "appropriate_comment": {
+                        "label": "Czy uważasz, że ten aspekt usługi jest odpowiedni?"
+                    },
+                    "qualification_experience": {
+                        "label": "Jeśli tak, jakie to było doświadczenie?"
+                    },
+                    "qualification_process": {
+                        "label": "Czy był proces kwalifikacji lub selekcji?"
+                    },
+                    "title": "Dostęp"
+                },
+                "discovering": {
+                    "comments": {
+                        "label": "Jakieś dalsze uwagi, spostrzeżenia?"
+                    },
+                    "discovery_medium": {
+                        "label": "Jak dowiedziałeś się o usłudze?"
+                    },
+                    "information_experience": {
+                        "label": "Jaka jest Twoja opinia na temat jakości, kompletności i dostępności informacji?"
+                    },
+                    "information_medium": {
+                        "label": "W jaki sposób uzyskałeś informacje o usłudze?"
+                    },
+                    "title": "Odkrywanie"
+                },
+                "evaluating": {
+                    "opinions_asked": {
+                        "hint": "Pomyśl, gdzie i kiedy to było.",
+                        "label": "Czy zapytano Cię o opinie na temat Twojego doświadczenia z usługą?"
+                    },
+                    "opinions_how": {
+                        "label": "Jeśli tak, w jaki sposób zostałeś zapytany?"
+                    },
+                    "service_experience": {
+                        "label": "Czy usługa była tym, czego się spodziewałeś?"
+                    },
+                    "surprises_comments": {
+                        "label": "Czy w twoim doświadczeniu były jakieś niespodzianki lub rozczarowania?"
+                    },
+                    "title": "Ocenianie"
+                },
+                "instigating": {
+                    "comments": {
+                        "label": "Komentarze"
+                    },
+                    "design_role": {
+                        "label": "Czy odegrałeś jakąś rolę w projektowaniu i definiowaniu usługi? Jeśli tak, jakie były okazje i kanały, w których to się działo?"
+                    },
+                    "instigate_role": {
+                        "label": "Czy odegrałeś jakąś rolę w zainicjowaniu projektu? Jeśli tak, czy uczestniczyłeś w którejś z poniższych opcji? Możesz wybrać tyle, ile chcesz."
+                    },
+                    "title": "Inspirujące"
+                },
+                "model": {
+                    "title": "Model"
+                },
+                "using": {
+                    "accessible_experience": {
+                        "label": "Czy usługa była dla Ciebie dostępna?"
+                    },
+                    "participate_experience": {
+                        "label": "Jak to było korzystać z usługi lub w niej uczestniczyć?"
+                    },
+                    "time_experience": {
+                        "label": "Czy czas trwania i częstotliwość wydarzeń serwisowych lub kontaktów były prawidłowe?"
+                    },
+                    "title": "Za pomocą",
+                    "where": {
+                        "label": "Gdzie korzystałeś z usługi?"
+                    }
+                }
+            },
+            "guide": {
+                "step01": "Usługi są upubliczniane dla ich zamierzonych użytkowników, jest to faza wykrywania.",
+                "step02": "Użytkownicy, którzy chcą, aby usługa złożyła jakąś prośbę lub aplikację, jest to faza dostępu.",
+                "step03": "Jeśli poprzedni etap się powiódł, usługa jest dostarczona i doświadczona, jest to faza użytkowania.",
+                "step04": "Następnie oceniane jest doświadczenie w korzystaniu z usługi.",
+                "step05": "Dotychczasowe pytania zakładają, że usługa została zdefiniowana i już istnieje. Kolejny zestaw pytań dotyczy tego, czy iw jaki sposób uczestniczyłeś w procesach, dzięki którym usługa została stworzona w pierwszej kolejności.",
+                "step06": "Najpierw możemy uzupełnić nasz model świadczenia usług o etapy tworzenia. Nazywamy to fazą projektowania.",
+                "step07": "Następnie możemy pokazać procesy, przez które usługa została zidentyfikowana i zainicjowana w pierwszej kolejności. Nazywamy to fazą pobudzającą."
+            },
+            "options": {
+                "access_methods": {
+                    "applied": "Stosowany",
+                    "other": "Inny",
+                    "referred": "Polecony"
+                },
+                "instigate_roles": {
+                    "government_department": "Departament rządu",
+                    "political_party": "Partia polityczna",
+                    "pressure_group": "Grupa nacisku \/ kampanii"
+                },
+                "mediums": {
+                    "other": "Inny",
+                    "paper": "Publikacja papierowa",
+                    "referral": "Skierowanie",
+                    "social": "Media społecznościowe",
+                    "word_of_mouth": "Plotka"
+                },
+                "opinions_how": {
+                    "interview": "Wywiad",
+                    "survey": "Ankieta",
+                    "workshop": "Warsztat"
+                },
+                "where": {
+                    "community": "Społeczność",
+                    "home": "Dom",
+                    "other": "Inny",
+                    "public": "Publiczny"
+                },
+                "yes_no_maybe": {
+                    "maybe": "Może",
+                    "no": "Nie",
+                    "yes": "tak"
+                }
+            },
+            "title": "Model podróży użytkownika"
+        },
         "welcome": {
             "dashboard": {
                 "summary": "Utworzone przez {user} dnia {date_time}"
             },
             "title": "Witamy"
         }
+    },
+    "countries": {
+        "de": "Niemcy",
+        "el": "Grecja",
+        "en_GB": "Zjednoczone Królestwo",
+        "es": "Hiszpania",
+        "et": "Estonia",
+        "fi": "Finlandia",
+        "fr": "Francja",
+        "hu": "Węgry",
+        "it": "Włochy",
+        "nl": "Holandia",
+        "pl": "Polska",
+        "sv_SE": "Szwecja"
     },
     "hints": {
         "editor_double_click_edit": "Kliknij dwukrotnie element, aby go edytować, i wprowadź, aby zapisać",

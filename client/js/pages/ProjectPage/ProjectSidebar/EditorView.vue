@@ -129,6 +129,13 @@ export default {
 					title: 'app.models',
 				});
 				panels.unshift({
+					id: "country",
+					aspectId: aspectId,
+					modelPath: `project@config.country`,
+					editor: "project-country-editor",
+					title: 'app.country',
+				});
+				panels.unshift({
 					id: "meta",
 					aspectId: aspectId,
 					modelPath: `project`,
