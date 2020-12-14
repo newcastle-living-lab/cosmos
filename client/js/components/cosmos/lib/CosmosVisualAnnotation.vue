@@ -9,11 +9,12 @@
 		@mousemove="handleMouseMove"
 		@mouseout="handleMouseOut"
 	>
-		<v-circle
+		<v-path :config="pathConfig" />
+		<!-- <v-circle
 			v-for="(circle, idx) in circlesConfig"
 			:key="'circle' + idx"
 			:config="circle"
-		/>
+		/> -->
 	</v-group>
 
 </template>
@@ -45,6 +46,22 @@ export default {
 				y: this.annotation.position[1],
 				draggable: true,
 			}
+		},
+
+		pathConfig() {
+
+			const defaultConfig = {
+				closed: true,
+				x: 0,
+				y: -24,
+				fill: this.isHovering ? colours.fuchsia : colours.purple,
+				scale: { x: 1, y: 1 },
+				data: 'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z',
+				strokeEnabled: false,
+				opacity: 1,
+			};
+
+			return defaultConfig;
 		},
 
 		circlesConfig() {

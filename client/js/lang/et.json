@@ -9,6 +9,7 @@
         "add_new_item": "Lisage uus üksus",
         "all": "Kõik",
         "colour": "Värv",
+        "country": "Riik",
         "create": "Loo",
         "created_by": "Loodud",
         "delete": "Kustuta",
@@ -35,6 +36,7 @@
         "log_in": "Logi sisse",
         "maximum_items": "Maksimaalselt {count} üksust | Maksimaalne üksus {count} | Maksimaalselt {count} üksust",
         "models": "Mudelid",
+        "more_details": "Rohkem detaile",
         "name": "Nimi",
         "new_project": "Looge uus projekt",
         "next": "Järgmine",
@@ -54,7 +56,8 @@
         "try_again": "Proovi uuesti",
         "type": "Tüüp",
         "user_is_read_only": "Teie kasutaja juurdepääsutase on kirjutuskaitstud.",
-        "web_address": "veebiaadress"
+        "web_address": "veebiaadress",
+        "which_country": "Millisest riigist sa pärit oled?"
     },
     "aspects": {
         "analytic_model": {
@@ -526,12 +529,155 @@
             },
             "title": "Muutuste teooria"
         },
+        "user_journey_model": {
+            "dashboard": {
+                "one": "",
+                "other": ""
+            },
+            "definitions": {
+                "accessing": {
+                    "access_method": {
+                        "label": "Kuidas te teenusele juurde pääsesite?"
+                    },
+                    "appropriate_comment": {
+                        "label": "Kas see teenuse aspekt on teie arvates asjakohane?"
+                    },
+                    "qualification_experience": {
+                        "label": "Kui jah, siis milline oli kogemus?"
+                    },
+                    "qualification_process": {
+                        "label": "Kas toimus kvalifikatsioon või valikuprotsess?"
+                    },
+                    "title": "Juurdepääs"
+                },
+                "discovering": {
+                    "comments": {
+                        "label": "Kas on veel märkusi, tähelepanekuid?"
+                    },
+                    "discovery_medium": {
+                        "label": "Kuidas said teenusest teada?"
+                    },
+                    "information_experience": {
+                        "label": "Milline on teie arvamus teabe kvaliteedi, täielikkuse ja kättesaadavuse kohta?"
+                    },
+                    "information_medium": {
+                        "label": "Kuidas pääsesite teenuse kohta käivale teabele juurde?"
+                    },
+                    "title": "Avastamine"
+                },
+                "evaluating": {
+                    "opinions_asked": {
+                        "hint": "Mõelge, kus ja millal see oli.",
+                        "label": "Kas teie käest küsiti teie arvamuse kohta teenuse kasutamise kogemuse kohta?"
+                    },
+                    "opinions_how": {
+                        "label": "Kui jah, siis kuidas teilt küsiti?"
+                    },
+                    "service_experience": {
+                        "label": "Kas teenus oli see, mida ootasite?"
+                    },
+                    "surprises_comments": {
+                        "label": "Kas teie kogemuses oli üllatusi või pettumusi?"
+                    },
+                    "title": "Hindamine"
+                },
+                "instigating": {
+                    "comments": {
+                        "label": "Kommentaarid"
+                    },
+                    "design_role": {
+                        "label": "Kas mängisite mingit rolli teenuse kujundamisel ja määratlemisel? Kui jah, siis milliseid juhtumeid ja kanaleid see juhtus?"
+                    },
+                    "instigate_role": {
+                        "label": "Kas teil oli projekti käivitamisel mingit rolli? Kui jah, kas kuulusite mõnda järgmistest võimalustest? Saate valida nii palju kui soovite."
+                    },
+                    "title": "Kihutamine"
+                },
+                "model": {
+                    "title": "Mudel"
+                },
+                "using": {
+                    "accessible_experience": {
+                        "label": "Kas teenus oli teile kättesaadav?"
+                    },
+                    "participate_experience": {
+                        "label": "Kuidas oli teenust kasutada või selles osaleda?"
+                    },
+                    "time_experience": {
+                        "label": "Kas teenindusürituste või kontaktide kestus ja sagedused olid korras?"
+                    },
+                    "title": "Kasutamine",
+                    "where": {
+                        "label": "Kus te seda teenust kasutasite?"
+                    }
+                }
+            },
+            "guide": {
+                "step01": "Teenuseid reklaamitakse nende mõeldud kasutajatele, see on avastamise etapp.",
+                "step02": "Teenust soovivad kasutajad esitavad mingisuguse taotluse või rakenduse, see on juurdepääsu faas.",
+                "step03": "Kui eelmine etapp on edukas, teenus osutatakse ja kogetakse, on see kasutamisetapp.",
+                "step04": "Seejärel hinnatakse teenuse kasutamise kogemust.",
+                "step05": "Senistes küsimustes eeldatakse, et teenus on määratletud ja on juba olemas. Järgmine küsimus on selle kohta, kas ja kuidas osalesite protsessides, mille abil teenus kõigepealt loodi.",
+                "step06": "Kõigepealt saame täiendada oma teenuse osutamise mudelit koos loomise etappidega. Nimetame seda projekteerimisetapiks.",
+                "step07": "Seejärel saame näidata protsesse, mille abil teenus üldse tuvastati ja algatati. Nimetame seda kihutamisfaasiks."
+            },
+            "options": {
+                "access_methods": {
+                    "applied": "Rakendatud",
+                    "other": "Muu",
+                    "referred": "Viidatud"
+                },
+                "instigate_roles": {
+                    "government_department": "Valitsuse osakond",
+                    "political_party": "Erakond",
+                    "pressure_group": "Surve- \/ kampaaniarühm"
+                },
+                "mediums": {
+                    "other": "Muu",
+                    "paper": "Paberväljaanne",
+                    "referral": "Suunamine",
+                    "social": "Sotsiaalmeedia",
+                    "word_of_mouth": "Suusõnaliselt"
+                },
+                "opinions_how": {
+                    "interview": "Intervjuu",
+                    "survey": "Uuring",
+                    "workshop": "Töötuba"
+                },
+                "where": {
+                    "community": "Kogukond",
+                    "home": "Kodu",
+                    "other": "Muu",
+                    "public": "Avalik"
+                },
+                "yes_no_maybe": {
+                    "maybe": "Võib olla",
+                    "no": "Ei",
+                    "yes": "Jah"
+                }
+            },
+            "title": "Kasutaja teekonna mudel"
+        },
         "welcome": {
             "dashboard": {
                 "summary": "Loonud {user} kuupäeval {date_time}"
             },
             "title": "Tere tulemast"
         }
+    },
+    "countries": {
+        "de": "Saksamaa",
+        "el": "Kreeka",
+        "en_GB": "Ühendkuningriik",
+        "es": "Hispaania",
+        "et": "Eesti",
+        "fi": "Soome",
+        "fr": "Prantsusmaa",
+        "hu": "Ungari",
+        "it": "Itaalia",
+        "nl": "Holland",
+        "pl": "Poola",
+        "sv_SE": "Rootsi"
     },
     "hints": {
         "editor_double_click_edit": "Selle muutmiseks topeltklõpsake üksust ja salvestamiseks sisestage sisestusklahv",

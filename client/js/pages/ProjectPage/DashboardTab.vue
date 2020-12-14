@@ -54,6 +54,11 @@
 					/>
 				</v-layer>
 
+				<v-layer v-show="countryConfig !== null">
+					<v-text v-if="countryConfig" :config="countryConfig.text" />
+					<CosmosImage v-if="countryConfig" :config="countryConfig.flag" />
+				</v-layer>
+
 			</v-stage>
 
 		</div>
@@ -163,6 +168,9 @@ export default {
 		annotations: sync('project@data.annotations'),
 
 
+		projectConfig: get('project@config'),
+
+
 		/**
 		 * Current language to pass to child components.
 		 *
@@ -216,6 +224,51 @@ export default {
 		 */
 		filteredAnnotations() {
 			return filter(this.annotations, { type: 'visual', aspect: this.aspectId });
+		},
+
+		countryConfig() {
+
+			const projectConfig = this.projectConfig;
+			const country = projectConfig ? projectConfig.country : null;
+			const langKey = `countries.${country}`;
+			const langExists = this.$te(langKey);
+
+			if ( ! langExists) {
+				console.debug("countryConfig: no lang");
+				return null;
+			}
+
+			// console.debug(`countryConfig: set as ${country}`);
+
+			var textConfig = {
+				fontSize: 14,
+				fontStyle: 'bold',
+				fontFamily: '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+				lineHeight: 1.35,
+				align: 'right',
+				x: 0,
+				y: 20,
+				width: this.stageConfig.width - 20 - 30 - 5,
+				text: this.$t(langKey),
+				fill: '#666666',
+			};
+
+
+			const flagName = Trans.codeToFlag(country);
+
+			var flagConfig = {
+				visible: langExists,
+				opacity: 1,
+				scale: { x: 0.12, y: 0.12 },
+				x: this.stageConfig.width - 20 - 30,
+				y: 20,
+				filename: `/images/flags/${flagName}.svg`,
+			};
+
+			return {
+				text: textConfig,
+				flag: flagConfig,
+			};
 		}
 
 	},

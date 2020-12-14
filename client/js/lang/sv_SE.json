@@ -9,6 +9,7 @@
         "add_new_item": "Lägg till nytt föremål",
         "all": "Allt",
         "colour": "Färg",
+        "country": "Land",
         "create": "Skapa",
         "created_by": "Skapad av",
         "delete": "Radera",
@@ -35,6 +36,7 @@
         "log_in": "Logga in",
         "maximum_items": "Högst {count} objekt | Maxumum {count} artikel | Högst {count} objekt",
         "models": "Modeller",
+        "more_details": "Fler detaljer",
         "name": "namn",
         "new_project": "Skapa nytt projekt",
         "next": "Nästa",
@@ -54,7 +56,8 @@
         "try_again": "Försök igen",
         "type": "Typ",
         "user_is_read_only": "Din användaråtkomstnivå är skrivskyddad.",
-        "web_address": "webbadress"
+        "web_address": "webbadress",
+        "which_country": "Vilket land kommer du ifrån?"
     },
     "aspects": {
         "analytic_model": {
@@ -526,12 +529,155 @@
             },
             "title": "Teori om förändring"
         },
+        "user_journey_model": {
+            "dashboard": {
+                "one": "",
+                "other": ""
+            },
+            "definitions": {
+                "accessing": {
+                    "access_method": {
+                        "label": "Hur fick du tillgång till tjänsten?"
+                    },
+                    "appropriate_comment": {
+                        "label": "Tror du att den här aspekten av tjänsten är lämplig?"
+                    },
+                    "qualification_experience": {
+                        "label": "Om så är fallet, hur var upplevelsen?"
+                    },
+                    "qualification_process": {
+                        "label": "Fanns det en kvalificerings- eller urvalsprocess?"
+                    },
+                    "title": "Åtkomst"
+                },
+                "discovering": {
+                    "comments": {
+                        "label": "Några ytterligare kommentarer, observationer?"
+                    },
+                    "discovery_medium": {
+                        "label": "Hur fick du reda på tjänsten?"
+                    },
+                    "information_experience": {
+                        "label": "Vad tycker du om informationens kvalitet, fullständighet och tillgänglighet?"
+                    },
+                    "information_medium": {
+                        "label": "Hur fick du tillgång till information om tjänsten?"
+                    },
+                    "title": "Upptäcka"
+                },
+                "evaluating": {
+                    "opinions_asked": {
+                        "hint": "Tänk på var och när detta var.",
+                        "label": "Frågades du om dina åsikter om din upplevelse av tjänsten?"
+                    },
+                    "opinions_how": {
+                        "label": "Om ja, hur blev du tillfrågad?"
+                    },
+                    "service_experience": {
+                        "label": "Var tjänsten vad du förväntade dig?"
+                    },
+                    "surprises_comments": {
+                        "label": "Fanns det några överraskningar eller besvikelser i din upplevelse?"
+                    },
+                    "title": "Utvärderar"
+                },
+                "instigating": {
+                    "comments": {
+                        "label": "Kommentarer"
+                    },
+                    "design_role": {
+                        "label": "Spelade du någon roll i utformningen och definitionen av tjänsten? Om ja, vad var de tillfällen och kanaler som detta inträffade?"
+                    },
+                    "instigate_role": {
+                        "label": "Hade du någon roll i att starta projektet? Om ja, ingick du i något av följande alternativ? Du kan välja så många du vill."
+                    },
+                    "title": "Inledande"
+                },
+                "model": {
+                    "title": "Modell"
+                },
+                "using": {
+                    "accessible_experience": {
+                        "label": "Var tjänsten tillgänglig för dig?"
+                    },
+                    "participate_experience": {
+                        "label": "Hur var det att använda eller delta i tjänsten?"
+                    },
+                    "time_experience": {
+                        "label": "Var varaktigheten och frekvensen för servicehändelserna eller kontakterna OK?"
+                    },
+                    "title": "Använder sig av",
+                    "where": {
+                        "label": "Var använde du tjänsten?"
+                    }
+                }
+            },
+            "guide": {
+                "step01": "Tjänsterna publiceras för deras avsedda användare, detta är upptäcktsfasen.",
+                "step02": "Användare som vill ha tjänsten gör någon form av begäran eller applikation, detta är åtkomstfasen.",
+                "step03": "Om det föregående steget är framgångsrikt levereras tjänsten och upplevs, detta är användningsfasen.",
+                "step04": "Upplevelsen av användningen av tjänsten utvärderas sedan.",
+                "step05": "Frågorna har hittills antagit att tjänsten har definierats och redan finns. Nästa uppsättning frågor handlar om huruvida och hur du deltog i de processer som tjänsten skapades i första hand.",
+                "step06": "Först kan vi slutföra vår leveransmodell med de steg som är involverade i skapandet. Vi kallar detta designfasen.",
+                "step07": "Sedan kan vi visa de processer genom vilka tjänsten identifierades och initierades i första hand. Vi kallar detta den inledande fasen."
+            },
+            "options": {
+                "access_methods": {
+                    "applied": "Applicerad",
+                    "other": "Övrig",
+                    "referred": "Hänvisad"
+                },
+                "instigate_roles": {
+                    "government_department": "Myndighet",
+                    "political_party": "Politiskt parti",
+                    "pressure_group": "Tryck \/ Kampanjgrupp"
+                },
+                "mediums": {
+                    "other": "Övrig",
+                    "paper": "Papperspublikation",
+                    "referral": "Hänvisning",
+                    "social": "Sociala media",
+                    "word_of_mouth": "Ord från mun"
+                },
+                "opinions_how": {
+                    "interview": "Intervju",
+                    "survey": "Undersökning",
+                    "workshop": "Verkstad"
+                },
+                "where": {
+                    "community": "gemenskap",
+                    "home": "Hem",
+                    "other": "Övrig",
+                    "public": "offentlig"
+                },
+                "yes_no_maybe": {
+                    "maybe": "Kanske",
+                    "no": "Nej",
+                    "yes": "Ja"
+                }
+            },
+            "title": "Användarens resemodell"
+        },
         "welcome": {
             "dashboard": {
                 "summary": "Skapad av {user} den {date_time}"
             },
             "title": "Välkommen"
         }
+    },
+    "countries": {
+        "de": "Tyskland",
+        "el": "Grekland",
+        "en_GB": "Storbritannien",
+        "es": "Spanien",
+        "et": "Estland",
+        "fi": "Finland",
+        "fr": "Frankrike",
+        "hu": "Ungern",
+        "it": "Italien",
+        "nl": "Nederländerna",
+        "pl": "Polen",
+        "sv_SE": "Sverige"
     },
     "hints": {
         "editor_double_click_edit": "Dubbelklicka på ett objekt för att redigera det och gå in för att spara",

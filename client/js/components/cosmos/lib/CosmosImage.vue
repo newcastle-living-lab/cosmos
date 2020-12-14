@@ -48,10 +48,17 @@ export default {
 
 	methods: {
 		setImage() {
+			if ( ! this.config.filename) {
+				return;
+			}
 			if ( ! this._image) {
 				this._image = new window.Image();
 			}
-			this._image.src = `/images/aspects/${this.config.filename}`;
+			if (/^\//.test(this.config.filename)) {
+				this._image.src = this.config.filename;
+			} else {
+				this._image.src = `/images/aspects/${this.config.filename}`;
+			}
 			this._image.onload = () => {
 				this.image = this._image;
 			};

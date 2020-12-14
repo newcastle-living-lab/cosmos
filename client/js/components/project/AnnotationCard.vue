@@ -4,7 +4,7 @@
 		<div class="card card-annotation">
 			<div class="card-header">
 				<button class="btn btn-clear float-right" aria-label="Close" @click="doOK"></button>
-				<div class="card-title h5">{{ $t('app.annotation') }}</div>
+				<div class="card-title h5">{{ $t('app.more_details') }}</div>
 			</div>
 			<div class="card-body" v-if="userCanEdit">
 				<VGroup name="annotation">

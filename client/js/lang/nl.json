@@ -9,6 +9,7 @@
         "add_new_item": "Voeg een nieuw item toe",
         "all": "Alle",
         "colour": "Kleur",
+        "country": "Land",
         "create": "Creëer",
         "created_by": "Gemaakt door",
         "delete": "Verwijderen",
@@ -35,6 +36,7 @@
         "log_in": "Log in",
         "maximum_items": "Maximaal {count} items | Maxumum {count} item | Maximaal {count} items",
         "models": "Modellen",
+        "more_details": "Meer details",
         "name": "Naam",
         "new_project": "Maak een nieuw project",
         "next": "De volgende",
@@ -54,7 +56,8 @@
         "try_again": "Probeer het nog eens",
         "type": "Type",
         "user_is_read_only": "Uw gebruikerstoegangsniveau is alleen-lezen.",
-        "web_address": "webadres"
+        "web_address": "webadres",
+        "which_country": "Uit welk land kom je?"
     },
     "aspects": {
         "analytic_model": {
@@ -526,12 +529,155 @@
             },
             "title": "Theorie van verandering"
         },
+        "user_journey_model": {
+            "dashboard": {
+                "one": "",
+                "other": ""
+            },
+            "definitions": {
+                "accessing": {
+                    "access_method": {
+                        "label": "Hoe heeft u toegang gekregen tot de dienst?"
+                    },
+                    "appropriate_comment": {
+                        "label": "Vindt u dit aspect van de service passend?"
+                    },
+                    "qualification_experience": {
+                        "label": "Zo ja, hoe was de ervaring?"
+                    },
+                    "qualification_process": {
+                        "label": "Was er een kwalificatie- of selectieproces?"
+                    },
+                    "title": "Toegang verkrijgen"
+                },
+                "discovering": {
+                    "comments": {
+                        "label": "Nog meer opmerkingen, opmerkingen?"
+                    },
+                    "discovery_medium": {
+                        "label": "Hoe ben je op de hoogte van de dienst gekomen?"
+                    },
+                    "information_experience": {
+                        "label": "Wat is uw mening over de kwaliteit, volledigheid en toegankelijkheid van de informatie?"
+                    },
+                    "information_medium": {
+                        "label": "Hoe heeft u toegang gekregen tot informatie over de dienst?"
+                    },
+                    "title": "Ontdekken"
+                },
+                "evaluating": {
+                    "opinions_asked": {
+                        "hint": "Bedenk waar en wanneer dit was.",
+                        "label": "Werd u gevraagd naar uw mening over uw ervaring met de dienst?"
+                    },
+                    "opinions_how": {
+                        "label": "Zo ja, hoe werd u gevraagd?"
+                    },
+                    "service_experience": {
+                        "label": "Was de service wat je had verwacht?"
+                    },
+                    "surprises_comments": {
+                        "label": "Waren er verrassingen of teleurstellingen in uw ervaring?"
+                    },
+                    "title": "Evalueren"
+                },
+                "instigating": {
+                    "comments": {
+                        "label": "Opmerkingen"
+                    },
+                    "design_role": {
+                        "label": "Heeft u een rol gespeeld bij het ontwerp en de definitie van de dienst? Zo ja, wat waren de gelegenheden en kanalen dat dit plaatsvond?"
+                    },
+                    "instigate_role": {
+                        "label": "Heeft u een rol gespeeld bij het opzetten van het project? Zo ja, maakte u deel uit van een van de volgende opties? U kunt er zoveel kiezen als u wilt."
+                    },
+                    "title": "Aanzetten"
+                },
+                "model": {
+                    "title": "Model"
+                },
+                "using": {
+                    "accessible_experience": {
+                        "label": "Was de dienst voor u toegankelijk?"
+                    },
+                    "participate_experience": {
+                        "label": "Hoe was het om de dienst te gebruiken of eraan deel te nemen?"
+                    },
+                    "time_experience": {
+                        "label": "Was de duur en frequentie van de servicegebeurtenissen of contacten in orde?"
+                    },
+                    "title": "Gebruik makend van",
+                    "where": {
+                        "label": "Waar heb je de service gebruikt?"
+                    }
+                }
+            },
+            "guide": {
+                "step01": "Services worden bekendgemaakt aan de beoogde gebruikers, dit is de ontdekkingsfase.",
+                "step02": "Gebruikers die de service willen, doen een soort verzoek of toepassing, dit is de toegangsfase.",
+                "step03": "Als de vorige fase succesvol is, wordt de dienst geleverd en ervaren, dit is de gebruiksfase.",
+                "step04": "De ervaring met het gebruik van de dienst wordt vervolgens geëvalueerd.",
+                "step05": "De vragen tot nu toe gaan ervan uit dat de service is gedefinieerd en al bestaat. De volgende reeks vragen gaat over of en hoe u hebt deelgenomen aan de processen waarmee de service in de eerste plaats is gemaakt.",
+                "step06": "Ten eerste kunnen we ons serviceleveringsmodel voltooien met de fasen die betrokken zijn bij het creëren. We noemen dit de ontwerpfase.",
+                "step07": "Vervolgens kunnen we de processen laten zien waarmee de service in de eerste plaats is geïdentificeerd en geïnitieerd. Dit noemen we de aanzetfase."
+            },
+            "options": {
+                "access_methods": {
+                    "applied": "Toegepast",
+                    "other": "Andere",
+                    "referred": "Doorverwezen"
+                },
+                "instigate_roles": {
+                    "government_department": "Overheidsdienst",
+                    "political_party": "Politieke partij",
+                    "pressure_group": "Druk \/ campagnegroep"
+                },
+                "mediums": {
+                    "other": "Andere",
+                    "paper": "Papieren publicatie",
+                    "referral": "Doorverwijzing",
+                    "social": "Sociale media",
+                    "word_of_mouth": "Mond op mond"
+                },
+                "opinions_how": {
+                    "interview": "Interview",
+                    "survey": "Enquête",
+                    "workshop": "Werkplaats"
+                },
+                "where": {
+                    "community": "Gemeenschap",
+                    "home": "Huis",
+                    "other": "Andere",
+                    "public": "Openbaar"
+                },
+                "yes_no_maybe": {
+                    "maybe": "Kan zijn",
+                    "no": "Nee",
+                    "yes": "Ja"
+                }
+            },
+            "title": "User Journey Model"
+        },
         "welcome": {
             "dashboard": {
                 "summary": "Gemaakt door {user} op {date_time}"
             },
             "title": "Welkom"
         }
+    },
+    "countries": {
+        "de": "Duitsland",
+        "el": "Griekenland",
+        "en_GB": "Verenigd Koninkrijk",
+        "es": "Spanje",
+        "et": "Estland",
+        "fi": "Finland",
+        "fr": "Frankrijk",
+        "hu": "Hongarije",
+        "it": "Italië",
+        "nl": "Nederland",
+        "pl": "Polen",
+        "sv_SE": "Zweden"
     },
     "hints": {
         "editor_double_click_edit": "Dubbelklik op een item om het te bewerken en voer het in om het op te slaan",

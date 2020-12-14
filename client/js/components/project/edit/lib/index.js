@@ -1,5 +1,6 @@
 import MetaEditor from "./MetaEditor";
 import ProjectModelsEditor from "./ProjectModelsEditor";
+import ProjectCountryEditor from "./ProjectCountryEditor";
 import ExternalsEditor from "./ExternalsEditor";
 import ExternalsEditorItem from "./ExternalsEditorItem";
 import GroupEditor from "./GroupEditor";
@@ -14,6 +15,7 @@ import ExperienceEditor from "./ExperienceEditor";
 export {
 	MetaEditor,
 	ProjectModelsEditor,
+	ProjectCountryEditor,
 	ExternalsEditor,
 	ExternalsEditorItem,
 	GroupEditor,

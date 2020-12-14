@@ -15,9 +15,9 @@
 				"componentName": "VRadioList",
 				"componentProps": {
 					"options": [
-						{"value": "face", "lang": "aspects.user_journey_model.options.mediums.face" },
+						{"value": "word_of_mouth", "lang": "aspects.user_journey_model.options.mediums.word_of_mouth" },
 						{"value": "paper", "lang": "aspects.user_journey_model.options.mediums.paper" },
-						{"value": "tv", "lang": "aspects.user_journey_model.options.mediums.tv" },
+						{"value": "referral", "lang": "aspects.user_journey_model.options.mediums.referral" },
 						{"value": "social", "lang": "aspects.user_journey_model.options.mediums.social" },
 						{"value": "other", "lang": "aspects.user_journey_model.options.mediums.other" }
 					]
@@ -29,9 +29,9 @@
 				"componentName": "VRadioList",
 				"componentProps": {
 					"options": [
-						{"value": "face", "lang": "aspects.user_journey_model.options.mediums.face" },
+						{"value": "word_of_mouth", "lang": "aspects.user_journey_model.options.mediums.word_of_mouth" },
 						{"value": "paper", "lang": "aspects.user_journey_model.options.mediums.paper" },
-						{"value": "tv", "lang": "aspects.user_journey_model.options.mediums.tv" },
+						{"value": "referral", "lang": "aspects.user_journey_model.options.mediums.referral" },
 						{"value": "social", "lang": "aspects.user_journey_model.options.mediums.social" },
 						{"value": "other", "lang": "aspects.user_journey_model.options.mediums.other" }
 					]
@@ -62,9 +62,8 @@
 				"componentName": "VRadioList",
 				"componentProps": {
 					"options": [
-						{"value": "community", "lang": "aspects.user_journey_model.options.access_methods.community" },
-						{"value": "public", "lang": "aspects.user_journey_model.options.access_methods.public" },
-						{"value": "electronically", "lang": "aspects.user_journey_model.options.access_methods.electronically" },
+						{"value": "referred", "lang": "aspects.user_journey_model.options.access_methods.referred" },
+						{"value": "applied", "lang": "aspects.user_journey_model.options.access_methods.applied" },
 						{"value": "other", "lang": "aspects.user_journey_model.options.access_methods.other" }
 					]
 				}
@@ -110,6 +109,19 @@
 				"id": "time_experience",
 				"dataType": "string",
 				"componentName": "ExperienceEditor"
+			},
+			{
+				"id": "where",
+				"dataType": "string",
+				"componentName": "VRadioList",
+				"componentProps": {
+					"options": [
+						{"value": "home", "lang": "aspects.user_journey_model.options.where.home" },
+						{"value": "community", "lang": "aspects.user_journey_model.options.where.community" },
+						{"value": "public", "lang": "aspects.user_journey_model.options.where.public" },
+						{"value": "other", "lang": "aspects.user_journey_model.options.where.other" }
+					]
+				}
 			}
 		]
 	},
@@ -118,11 +130,27 @@
 		"type": "group",
 		"children": [
 			{
-				"id": "surveyed_opinions",
+				"id": "opinions_asked",
 				"dataType": "string",
-				"componentName": "VTextarea",
+				"componentName": "VRadioList",
 				"componentProps": {
-					"rows": 4
+					"options": [
+						{"value": "yes", "lang": "aspects.user_journey_model.options.yes_no_maybe.yes" },
+						{"value": "no", "lang": "aspects.user_journey_model.options.yes_no_maybe.no" },
+						{"value": "maybe", "lang": "aspects.user_journey_model.options.yes_no_maybe.maybe" }
+					]
+				}
+			},
+			{
+				"id": "opinions_how",
+				"dataType": "string",
+				"componentName": "VRadioList",
+				"componentProps": {
+					"options": [
+						{"value": "workshop", "lang": "aspects.user_journey_model.options.opinions_how.workshop" },
+						{"value": "survey", "lang": "aspects.user_journey_model.options.opinions_how.survey" },
+						{"value": "interview", "lang": "aspects.user_journey_model.options.opinions_how.interview" }
+					]
 				}
 			},
 			{

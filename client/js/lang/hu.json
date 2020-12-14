@@ -9,6 +9,7 @@
         "add_new_item": "Új elem hozzáadása",
         "all": "Összes",
         "colour": "Szín",
+        "country": "Ország",
         "create": "Teremt",
         "created_by": "Készítette",
         "delete": "Töröl",
@@ -35,6 +36,7 @@
         "log_in": "Belépés",
         "maximum_items": "Legfeljebb {count} elem | Maximális {count} elem | Legfeljebb {count} elem",
         "models": "Modellek",
+        "more_details": "További részletek",
         "name": "Név",
         "new_project": "Hozzon létre új projektet",
         "next": "Következő",
@@ -54,7 +56,8 @@
         "try_again": "Próbáld újra",
         "type": "típus",
         "user_is_read_only": "A felhasználói hozzáférési szint csak olvasható.",
-        "web_address": "webcím"
+        "web_address": "webcím",
+        "which_country": "Melyik országból jöttél?"
     },
     "aspects": {
         "analytic_model": {
@@ -526,12 +529,155 @@
             },
             "title": "A változás elmélete"
         },
+        "user_journey_model": {
+            "dashboard": {
+                "one": "",
+                "other": ""
+            },
+            "definitions": {
+                "accessing": {
+                    "access_method": {
+                        "label": "Hogyan juthatott hozzá a szolgáltatáshoz?"
+                    },
+                    "appropriate_comment": {
+                        "label": "Ön szerint megfelelő ez a szolgáltatás-szempont?"
+                    },
+                    "qualification_experience": {
+                        "label": "Ha igen, milyen volt a tapasztalat?"
+                    },
+                    "qualification_process": {
+                        "label": "Volt-e minősítés vagy kiválasztási folyamat?"
+                    },
+                    "title": "Hozzáférés"
+                },
+                "discovering": {
+                    "comments": {
+                        "label": "További észrevételek, észrevételek?"
+                    },
+                    "discovery_medium": {
+                        "label": "Hogyan értesült a szolgáltatásról?"
+                    },
+                    "information_experience": {
+                        "label": "Mi a véleménye az információk minőségéről, teljességéről és hozzáférhetőségéről?"
+                    },
+                    "information_medium": {
+                        "label": "Hogyan jutott hozzá a szolgáltatással kapcsolatos információkhoz?"
+                    },
+                    "title": "Felfedezés"
+                },
+                "evaluating": {
+                    "opinions_asked": {
+                        "hint": "Gondold át, hol és mikor volt ez.",
+                        "label": "Megkérdezték a szolgáltatással kapcsolatos tapasztalatairól?"
+                    },
+                    "opinions_how": {
+                        "label": "Ha igen, hogyan kérdezték?"
+                    },
+                    "service_experience": {
+                        "label": "Olyan volt a szolgáltatás, amire számítottál?"
+                    },
+                    "surprises_comments": {
+                        "label": "Voltak-e meglepetések vagy csalódások tapasztalatai alapján?"
+                    },
+                    "title": "Értékelő"
+                },
+                "instigating": {
+                    "comments": {
+                        "label": "Hozzászólások"
+                    },
+                    "design_role": {
+                        "label": "Játszott valamilyen szerepet a szolgáltatás tervezésében és meghatározásában? Ha igen, milyen alkalmak és csatornák történtek?"
+                    },
+                    "instigate_role": {
+                        "label": "Volt valamilyen szerepe a projekt kezdeményezésében? Ha igen, részese volt-e az alábbi lehetőségek bármelyikének? Választhat annyit, amennyit csak akar."
+                    },
+                    "title": "Felbujtás"
+                },
+                "model": {
+                    "title": "Modell"
+                },
+                "using": {
+                    "accessible_experience": {
+                        "label": "Hozzáférhető volt a szolgáltatás?"
+                    },
+                    "participate_experience": {
+                        "label": "Milyen volt használni vagy részt venni a szolgáltatásban?"
+                    },
+                    "time_experience": {
+                        "label": "Rendben volt-e a szolgáltatási események vagy kapcsolattartók időtartama és gyakorisága?"
+                    },
+                    "title": "Használata",
+                    "where": {
+                        "label": "Hol használta a szolgáltatást?"
+                    }
+                }
+            },
+            "guide": {
+                "step01": "A szolgáltatásokat nyilvánosságra hozzák a tervezett felhasználók számára, ez a felfedezés fázisa.",
+                "step02": "Azok a felhasználók, akik szeretnék a szolgáltatást, valamiféle kérést vagy alkalmazást nyújtanak be, ez a hozzáférési szakasz.",
+                "step03": "Ha az előző szakasz sikeres volt, a szolgáltatást átadták és megtapasztalták, ez a felhasználási szakasz.",
+                "step04": "Ezután értékelik a szolgáltatás használatának tapasztalatait.",
+                "step05": "Az eddigi kérdések azt feltételezik, hogy a szolgáltatás definiálva van és már létezik. A következő kérdéssor arról szól, hogy részt vett-e és hogyan vett részt a szolgáltatás létrejöttében.",
+                "step06": "Először kiegészíthetjük szolgáltatásnyújtási modellünket a létrehozás szakaszaival. Ezt hívjuk tervezési szakasznak.",
+                "step07": "Ezután megmutathatjuk azokat a folyamatokat, amelyek alapján a szolgáltatást először azonosították és elindították. Ezt hívjuk felbujtó szakasznak."
+            },
+            "options": {
+                "access_methods": {
+                    "applied": "Alkalmazott",
+                    "other": "Egyéb",
+                    "referred": "Hivatkozva"
+                },
+                "instigate_roles": {
+                    "government_department": "Kormányhivatal",
+                    "political_party": "Politikai párt",
+                    "pressure_group": "Nyomás \/ Kampánycsoport"
+                },
+                "mediums": {
+                    "other": "Egyéb",
+                    "paper": "Papír kiadvány",
+                    "referral": "Áttétel",
+                    "social": "Közösségi média",
+                    "word_of_mouth": "Szájról szájra"
+                },
+                "opinions_how": {
+                    "interview": "Interjú",
+                    "survey": "Felmérés",
+                    "workshop": "Műhely"
+                },
+                "where": {
+                    "community": "Közösség",
+                    "home": "itthon",
+                    "other": "Egyéb",
+                    "public": "Nyilvános"
+                },
+                "yes_no_maybe": {
+                    "maybe": "Talán",
+                    "no": "Nem",
+                    "yes": "Igen"
+                }
+            },
+            "title": "Felhasználói utazási modell"
+        },
         "welcome": {
             "dashboard": {
                 "summary": "Készítette: {user} napon: {date_time}"
             },
             "title": "Üdvözöljük"
         }
+    },
+    "countries": {
+        "de": "Németország",
+        "el": "Görögország",
+        "en_GB": "Egyesült Királyság",
+        "es": "Spanyolország",
+        "et": "Észtország",
+        "fi": "Finnország",
+        "fr": "Franciaország",
+        "hu": "Magyarország",
+        "it": "Olaszország",
+        "nl": "Hollandia",
+        "pl": "Lengyelország",
+        "sv_SE": "Svédország"
     },
     "hints": {
         "editor_double_click_edit": "Kattintson duplán egy elemre a szerkesztéshez, majd az Enter gombra a mentéshez",

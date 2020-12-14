@@ -9,10 +9,11 @@
         "add_new_item": "Füge neuen Gegenstand hinzu",
         "all": "Alle",
         "colour": "Farbe",
+        "country": "Land",
         "create": "Erstellen",
-        "created_by": "",
+        "created_by": "Erstellt von",
         "delete": "Löschen",
-        "description": "",
+        "description": "Beschreibung",
         "download": "Herunterladen",
         "error": "Error",
         "error_message": "Fehler: {message}",
@@ -32,10 +33,11 @@
         "just_mine": "Nur meins",
         "label": "Etikette",
         "last_saved_at": "Zuletzt gespeichert um {date_time}",
-        "log_in": "",
+        "log_in": "Anmelden",
         "maximum_items": "Maximal {count} Elemente | Maxumum {count} item | Maximal {count} Elemente",
         "models": "Modelle",
-        "name": "",
+        "more_details": "Mehr Details",
+        "name": "Namen",
         "new_project": "Neues Projekt erstellen",
         "next": "Nächster",
         "no_projects": "Keine Projekte gefunden.",
@@ -43,18 +45,19 @@
         "open_project": "Offenes Projekt",
         "please_wait_generate": "Bitte warten Sie, während die Datei generiert wird.",
         "processing": "wird bearbeitet",
-        "project": "",
+        "project": "Projekt",
         "project_save_success": "Projekt gespeichert!",
         "save": "speichern",
         "saving": "Sparen",
         "scale_to_fit": "Passend skalieren",
         "search": "Suche",
-        "title": "",
+        "title": "Titel",
         "to_create_project": "ein Projekt erstellen.",
         "try_again": "Versuchen Sie es nochmal",
         "type": "Art",
         "user_is_read_only": "Ihre Benutzerzugriffsebene ist schreibgeschützt.",
-        "web_address": "Webadresse"
+        "web_address": "Webadresse",
+        "which_country": "Aus welchem Land kommst du?"
     },
     "aspects": {
         "analytic_model": {
@@ -130,7 +133,7 @@
                 "step04": "Die Lieferung erfolgt in einem formellen oder informellen institutionellen Kontext.",
                 "step05": "Schließlich gibt es den Dienst in einer umfassenderen Richtlinieneinstellung.",
                 "step06": "Dies soll ein abstraktes Modell sein. In einigen Fällen kann es eine flache Organisation geben, in der Lieferung, Verwaltung und Richtlinien von allen Mitgliedern eines kleinen Teams übernommen werden, in anderen Fällen können sie unterschiedliche Personen und Kontexte repräsentieren.",
-                "step07": "",
+                "step07": "Wie fügen sich die Konzepte der Mikro-, Meso- und Makroebene in Ihre Initiative ein?",
                 "step08": "Wie findet die Kommunikation zwischen ihnen statt?",
                 "step09": "Wie koordiniert und kohärent sind sie?",
                 "step10": "Gibt es insbesondere Informationsflüsse und Gespräche zwischen Makro und Mikro, die nicht vom Meso vermittelt werden? Was bedeutet das?",
@@ -193,7 +196,7 @@
                 },
                 "second_order": {
                     "committing": {
-                        "label": ""
+                        "label": "Wie hat sich die Leistungserbringung der Intervention gegenüber ihren ursprünglichen Plänen verändert?"
                     },
                     "languaging": {
                         "label": "Welche Änderungen wurden am Verständnis der Intervention vorgenommen?"
@@ -204,7 +207,7 @@
                 },
                 "third_order": {
                     "processes": {
-                        "label": ""
+                        "label": "Welche Prozesse provozieren oder ermöglichen Befragungen zweiter Ordnung?"
                     }
                 }
             },
@@ -526,12 +529,155 @@
             },
             "title": "Theorie der Veränderung"
         },
+        "user_journey_model": {
+            "dashboard": {
+                "one": "",
+                "other": ""
+            },
+            "definitions": {
+                "accessing": {
+                    "access_method": {
+                        "label": "Wie haben Sie Zugang zum Service erhalten?"
+                    },
+                    "appropriate_comment": {
+                        "label": "Halten Sie diesen Aspekt des Dienstes für angemessen?"
+                    },
+                    "qualification_experience": {
+                        "label": "Wenn ja, wie war die Erfahrung?"
+                    },
+                    "qualification_process": {
+                        "label": "Gab es ein Qualifizierungs- oder Auswahlverfahren?"
+                    },
+                    "title": "Zugriff"
+                },
+                "discovering": {
+                    "comments": {
+                        "label": "Weitere Kommentare, Beobachtungen?"
+                    },
+                    "discovery_medium": {
+                        "label": "Wie haben Sie von dem Service erfahren?"
+                    },
+                    "information_experience": {
+                        "label": "Wie beurteilen Sie die Qualität, Vollständigkeit und Zugänglichkeit der Informationen?"
+                    },
+                    "information_medium": {
+                        "label": "Wie haben Sie auf Informationen zum Service zugegriffen?"
+                    },
+                    "title": "Entdecken"
+                },
+                "evaluating": {
+                    "opinions_asked": {
+                        "hint": "Überlegen Sie, wo und wann dies war.",
+                        "label": "Wurden Sie nach Ihrer Meinung zu Ihren Erfahrungen mit dem Service gefragt?"
+                    },
+                    "opinions_how": {
+                        "label": "Wenn ja, wie wurden Sie gefragt?"
+                    },
+                    "service_experience": {
+                        "label": "War der Service das, was Sie erwartet hatten?"
+                    },
+                    "surprises_comments": {
+                        "label": "Gab es irgendwelche Überraschungen oder Enttäuschungen in Ihrer Erfahrung?"
+                    },
+                    "title": "Auswerten"
+                },
+                "instigating": {
+                    "comments": {
+                        "label": "Bemerkungen"
+                    },
+                    "design_role": {
+                        "label": "Haben Sie bei der Gestaltung und Definition des Dienstes eine Rolle gespielt? Wenn ja, zu welchen Anlässen und Kanälen ist dies geschehen?"
+                    },
+                    "instigate_role": {
+                        "label": "Hatten Sie eine Rolle bei der Initiierung des Projekts? Wenn ja, waren Sie Teil einer der folgenden Optionen? Sie können so viele auswählen, wie Sie möchten."
+                    },
+                    "title": "Anstiftung"
+                },
+                "model": {
+                    "title": "Modell"
+                },
+                "using": {
+                    "accessible_experience": {
+                        "label": "War der Service für Sie zugänglich?"
+                    },
+                    "participate_experience": {
+                        "label": "Wie war es, den Dienst zu nutzen oder daran teilzunehmen?"
+                    },
+                    "time_experience": {
+                        "label": "War die Dauer und Häufigkeit der Serviceereignisse oder Kontakte in Ordnung?"
+                    },
+                    "title": "Verwenden von",
+                    "where": {
+                        "label": "Wo haben Sie den Service genutzt?"
+                    }
+                }
+            },
+            "guide": {
+                "step01": "Dienste werden ihren beabsichtigten Benutzern zur Verfügung gestellt. Dies ist die Erkennungsphase.",
+                "step02": "Benutzer, die den Dienst wünschen, stellen eine Anfrage oder Anwendung. Dies ist die Zugriffsphase.",
+                "step03": "Wenn die vorherige Phase erfolgreich ist, wird der Service bereitgestellt und erlebt. Dies ist die Nutzungsphase.",
+                "step04": "Anschließend wird die Erfahrung mit der Nutzung des Dienstes ausgewertet.",
+                "step05": "Die bisherigen Fragen setzen voraus, dass der Service definiert wurde und bereits existiert. Bei den nächsten Fragen geht es darum, ob und wie Sie an den Prozessen teilgenommen haben, mit denen der Service überhaupt erstellt wurde.",
+                "step06": "Zunächst können wir unser Servicebereitstellungsmodell mit den Phasen der Erstellung vervollständigen. Wir nennen dies die Entwurfsphase.",
+                "step07": "Dann können wir die Prozesse zeigen, durch die der Service überhaupt identifiziert und initiiert wurde. Wir nennen dies die Anstiftungsphase."
+            },
+            "options": {
+                "access_methods": {
+                    "applied": "Angewandt",
+                    "other": "Andere",
+                    "referred": "Weitergeleitet"
+                },
+                "instigate_roles": {
+                    "government_department": "Regierungsabteilung",
+                    "political_party": "Politische Partei",
+                    "pressure_group": "Druck- \/ Kampagnengruppe"
+                },
+                "mediums": {
+                    "other": "Andere",
+                    "paper": "Veröffentlichung in Papierform",
+                    "referral": "Verweisung",
+                    "social": "Sozialen Medien",
+                    "word_of_mouth": "Mundpropaganda"
+                },
+                "opinions_how": {
+                    "interview": "Interview",
+                    "survey": "Umfrage",
+                    "workshop": "Werkstatt"
+                },
+                "where": {
+                    "community": "Gemeinschaft",
+                    "home": "Zuhause",
+                    "other": "Andere",
+                    "public": "Öffentlichkeit"
+                },
+                "yes_no_maybe": {
+                    "maybe": "Vielleicht",
+                    "no": "Nein",
+                    "yes": "Ja"
+                }
+            },
+            "title": "User Journey Model"
+        },
         "welcome": {
             "dashboard": {
                 "summary": "Erstellt von {user} am {date_time}"
             },
             "title": "Herzlich willkommen"
         }
+    },
+    "countries": {
+        "de": "Deutschland",
+        "el": "Griechenland",
+        "en_GB": "Großbritannien",
+        "es": "Spanien",
+        "et": "Estland",
+        "fi": "Finnland",
+        "fr": "Frankreich",
+        "hu": "Ungarn",
+        "it": "Italien",
+        "nl": "Niederlande",
+        "pl": "Polen",
+        "sv_SE": "Schweden"
     },
     "hints": {
         "editor_double_click_edit": "Doppelklicken Sie auf ein Element, um es zu bearbeiten, und geben Sie es zum Speichern ein",

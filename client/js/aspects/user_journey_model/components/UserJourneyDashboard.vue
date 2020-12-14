@@ -23,8 +23,6 @@
 			/>
 		</v-group>
 
-		<v-text :config="serviceLabelConfig" />
-
 		<v-group v-for="(stage, idx) in journeyStagesConfig" :key="'stage' + idx" :config="stage.group">
 			<v-label :config="stage.label">
 				<v-tag :config="stage.tag" />
@@ -32,16 +30,18 @@
 			</v-label>
 		</v-group>
 
-		<v-group v-for="(text, idx) in flowchartTextConfig" :key="'flowText' + idx" :config="{ x: 440, y: 130 }">
-			<CosmosTextBox :options="options" :config="text" />
-		</v-group>
+		<v-group :config="{ x: 490, y: 85, scale: { x: 0.85, y: 0.85 } }">
+			<v-group v-for="(text, idx) in flowchartTextConfig" :key="'flowText' + idx" :config="{ x: 0, y: 0 }">
+				<CosmosTextBox :options="options" :config="text" />
+			</v-group>
 
-		<v-group v-for="(text, idx) in flowchartLabelsConfig" :key="'flowLabel' + idx" :config="{ x: 440, y: 130 }">
-			<v-text :config="text" />
-		</v-group>
+			<v-group v-for="(text, idx) in flowchartLabelsConfig" :key="'flowLabel' + idx" :config="{ x: 0, y: 0 }">
+				<v-text :config="text" />
+			</v-group>
 
-		<v-group v-for="(arrow, idx) in flowchartArrowsConfig" :key="'flowArrow' + idx" :config="{ x: 440, y: 130 }">
-			<v-arrow :config="arrow" />
+			<v-group v-for="(arrow, idx) in flowchartArrowsConfig" :key="'flowArrow' + idx" :config="{ x: 0, y: 0 }">
+				<v-arrow :config="arrow" />
+			</v-group>
 		</v-group>
 
 		<v-group :config="sipConfig.group">
@@ -57,11 +57,6 @@
 				v-for="(conn, idx) in sipConfig.connectors"
 				:key="'sipConnector' + idx"
 				:config="conn"
-			/>
-			<v-path
-				v-for="(icon, idx) in sipConfig.icons"
-				:key="'sipIcon' + idx"
-				:config="icon"
 			/>
 		</v-group>
 
@@ -155,12 +150,12 @@ export default {
 
 			if (this.userGuide.isOpen) {
 
-				config.discovering = (this.userGuide.currentStep >= 0);
-				config.accessing = (this.userGuide.currentStep >= 1);
-				config.using = (this.userGuide.currentStep >= 2);
-				config.evaluating = (this.userGuide.currentStep >= 3);
-				config.designing = (this.userGuide.currentStep >= 5);
-				config.instigating = (this.userGuide.currentStep >= 6);
+				config.discovering = (this.userGuide.currentStep >= 0 ? true : false);
+				config.accessing = (this.userGuide.currentStep >= 1 ? true : false);
+				config.using = (this.userGuide.currentStep >= 2 ? true : false);
+				config.evaluating = (this.userGuide.currentStep >= 3 ? true : false);
+				config.designing = (this.userGuide.currentStep >= 5 ? true : false);
+				config.instigating = (this.userGuide.currentStep >= 6 ? true : false);
 				config.pressureGroup = true;
 				config.political = true;
 				config.government = true;
@@ -187,7 +182,7 @@ export default {
 				) ? true : false;
 
 				config.evaluating = (
-					this.aspectData.evaluating.surveyed_opinions.length
+					this.aspectData.evaluating.opinions_asked.length
 					&& this.aspectData.evaluating.service_experience.length
 					&& this.aspectData.evaluating.surprises_comments.length
 				) ? true : false;
@@ -682,7 +677,6 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				visible: visibility.pressureGroup,
 				label: "Pressure / Campaign Group",
 				x: 10,
 				y: 85,
@@ -693,7 +687,6 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				visible: visibility.government,
 				label: "Government Department",
 				x: 240,
 				y: 85,
@@ -704,7 +697,6 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				visible: visibility.political,
 				label: "Political Party",
 				x: 150,
 				y: 40,
@@ -776,43 +768,6 @@ export default {
 				end: [315, 370],
 			});
 
-			// Icons
-			//
-
-			data.icons = []
-
-			const defaultIconConfig = {
-				closed: false,
-				x: 0,
-				y: 0,
-				opacity: 1,
-				scale: {
-					x: 1.75,
-					y: 1.75,
-				}
-			}
-
-			const checkConfig = {
-				...defaultIconConfig,
-				stroke: colours.green,
-				data: Icons.check,
-			};
-
-			const crossConfig = {
-				...defaultIconConfig,
-				stroke: colours.red,
-				data: Icons.cross,
-			};
-
-			data.icons.push({ ...checkConfig, visible: visibility.pressureGroup, x: 60, y: 280 });
-			data.icons.push({ ...crossConfig, visible: visibility.pressureGroup, x: 105, y: 280 });
-
-			data.icons.push({ ...checkConfig, visible: visibility.political, x: 180, y: 280 });
-			data.icons.push({ ...crossConfig, visible: visibility.political, x: 220, y: 280 });
-
-			data.icons.push({ ...checkConfig, visible: visibility.government, x: 275, y: 280 });
-			data.icons.push({ ...crossConfig, visible: visibility.government, x: 315, y: 280 });
-
 			return data;
 		},
 
@@ -863,13 +818,15 @@ export default {
 				fontSize: 18,
 			};
 
+			const xOffset = 520;
+
 			labels.push({
 				...defaultLabelConfig,
 				text: 'Service Workflow',
 				width: 100,
 				align: 'right',
 				x: 0,
-				y: -60,
+				y: -130,
 				offsetX: 110,
 			});
 
@@ -890,7 +847,7 @@ export default {
 				align: 'right',
 				x: 0,
 				y: 105,
-				offsetX: 110,
+				offsetX: xOffset,
 			});
 
 			labels.push({
@@ -900,7 +857,7 @@ export default {
 				align: 'right',
 				x: 0,
 				y: 175,
-				offsetX: 110,
+				offsetX: xOffset,
 			});
 
 			labels.push({
@@ -910,19 +867,55 @@ export default {
 				align: 'right',
 				x: 0,
 				y: 245,
-				offsetX: 110,
+				offsetX: xOffset,
 			});
+
+			// How did you find out about the service?
+			//
 
 			var optionValue = this.aspectData.discovering.discovery_medium;
 			var langKey = `aspects.user_journey_model.options.mediums.${optionValue}`;
 
 			labels.push({
 				...defaultValueConfig,
-				text: this.$t(langKey),
+				text: this.$te(langKey) ? this.$t(langKey) : '',
+				visible: (optionValue && optionValue.length && this.$te(langKey) ? true : false),
 				align: 'left',
 				x: 10,
 				y: 250,
-				offset: 0,
+				// offset: 0,
+			});
+
+			// How did you gain access to the service?
+			//
+
+			var optionValue = this.aspectData.accessing.access_method;
+			var langKey = `aspects.user_journey_model.options.access_methods.${optionValue}`;
+
+			labels.push({
+				...defaultValueConfig,
+				text: this.$te(langKey) ? this.$t(langKey) : '',
+				visible: (optionValue && optionValue.length && this.$te(langKey) ? true : false),
+				align: 'left',
+				x: 220,
+				y: 250,
+				// offset: 0,
+			});
+
+			// Where did you use the service?
+			//
+
+			var optionValue = this.aspectData.using.where;
+			var langKey = `aspects.user_journey_model.options.where.${optionValue}`;
+
+			labels.push({
+				...defaultValueConfig,
+				text: this.$te(langKey) ? this.$t(langKey) : '',
+				visible: (optionValue && optionValue.length && this.$te(langKey) ? true : false),
+				align: 'left',
+				x: 400,
+				y: 250,
+				// offset: 0,
 			});
 
 			return labels;

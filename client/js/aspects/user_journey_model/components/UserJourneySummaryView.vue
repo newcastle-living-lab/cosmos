@@ -107,8 +107,12 @@
 						<table class="table">
 							<tbody>
 								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.evaluating.surveyed_opinions.label') }}</td>
-									<td class="group-value like-pre"><span v-linkify="aspectData.evaluating.surveyed_opinions" /></td>
+									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.evaluating.opinions_asked.label') }}</td>
+									<td class="group-value">{{ $t(`aspects.user_journey_model.options.yes_no_maybe.${aspectData.evaluating.opinions_asked}`) }}</td>
+								</tr>
+								<tr>
+									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.evaluating.opinions_how.label') }}</td>
+									<td class="group-value">{{ $t(`aspects.user_journey_model.options.opinions_how.${aspectData.evaluating.opinions_how}`) }}</td>
 								</tr>
 								<tr>
 									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.evaluating.service_experience.label') }}</td>

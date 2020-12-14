@@ -9,6 +9,7 @@
         "add_new_item": "Aggiungi un nuovo elemento",
         "all": "Tutti",
         "colour": "Colore",
+        "country": "Nazione",
         "create": "Creare",
         "created_by": "Creato da",
         "delete": "Elimina",
@@ -35,6 +36,7 @@
         "log_in": "Accesso",
         "maximum_items": "{count} massimo di {count} elementi | Numero massimo {count} elemento | {count} massimo di {count} elementi",
         "models": "Modelli",
+        "more_details": "Più dettagli",
         "name": "Nome",
         "new_project": "Crea nuovo progetto",
         "next": "Il prossimo",
@@ -54,7 +56,8 @@
         "try_again": "Riprova",
         "type": "genere",
         "user_is_read_only": "Il tuo livello di accesso utente è di sola lettura.",
-        "web_address": "indirizzo Web"
+        "web_address": "indirizzo Web",
+        "which_country": "Da quale paese vieni?"
     },
     "aspects": {
         "analytic_model": {
@@ -526,12 +529,155 @@
             },
             "title": "Teoria del cambiamento"
         },
+        "user_journey_model": {
+            "dashboard": {
+                "one": "",
+                "other": ""
+            },
+            "definitions": {
+                "accessing": {
+                    "access_method": {
+                        "label": "Come hai avuto accesso al servizio?"
+                    },
+                    "appropriate_comment": {
+                        "label": "Pensi che questo aspetto del servizio sia appropriato?"
+                    },
+                    "qualification_experience": {
+                        "label": "In caso affermativo, com'è stata l'esperienza?"
+                    },
+                    "qualification_process": {
+                        "label": "C'era un processo di qualificazione o selezione?"
+                    },
+                    "title": "Accesso"
+                },
+                "discovering": {
+                    "comments": {
+                        "label": "Eventuali ulteriori commenti, osservazioni?"
+                    },
+                    "discovery_medium": {
+                        "label": "Come hai scoperto il servizio?"
+                    },
+                    "information_experience": {
+                        "label": "Qual è la tua opinione sulla qualità, completezza e accessibilità delle informazioni?"
+                    },
+                    "information_medium": {
+                        "label": "Come hai avuto accesso alle informazioni sul servizio?"
+                    },
+                    "title": "Alla scoperta"
+                },
+                "evaluating": {
+                    "opinions_asked": {
+                        "hint": "Pensa a dove e quando è stato.",
+                        "label": "Ti è stato chiesto quali sono le tue opinioni sulla tua esperienza con il servizio?"
+                    },
+                    "opinions_how": {
+                        "label": "Se sì, come ti è stato chiesto?"
+                    },
+                    "service_experience": {
+                        "label": "Il servizio era quello che ti aspettavi?"
+                    },
+                    "surprises_comments": {
+                        "label": "Ci sono state sorprese o delusioni nella tua esperienza?"
+                    },
+                    "title": "Valutare"
+                },
+                "instigating": {
+                    "comments": {
+                        "label": "Commenti"
+                    },
+                    "design_role": {
+                        "label": "Hai avuto un ruolo nella progettazione e definizione del servizio? Se sì, quali sono state le occasioni e i canali in cui ciò è avvenuto?"
+                    },
+                    "instigate_role": {
+                        "label": "Hai avuto qualche ruolo nell'istigare il progetto? Se sì, facevi parte di una delle seguenti opzioni? Puoi sceglierne quante ne vuoi."
+                    },
+                    "title": "Istigante"
+                },
+                "model": {
+                    "title": "Modello"
+                },
+                "using": {
+                    "accessible_experience": {
+                        "label": "Il servizio era accessibile a te?"
+                    },
+                    "participate_experience": {
+                        "label": "Com'è stato utilizzare o partecipare al servizio?"
+                    },
+                    "time_experience": {
+                        "label": "La durata e la frequenza degli eventi di servizio o dei contatti erano corrette?"
+                    },
+                    "title": "Utilizzando",
+                    "where": {
+                        "label": "Dove hai utilizzato il servizio?"
+                    }
+                }
+            },
+            "guide": {
+                "step01": "I servizi sono pubblicizzati agli utenti previsti, questa è la fase di scoperta.",
+                "step02": "Gli utenti che desiderano il servizio fanno una sorta di richiesta o applicazione, questa è la fase di accesso.",
+                "step03": "Se la fase precedente ha esito positivo, il servizio viene fornito e sperimentato, questa è la fase di utilizzo.",
+                "step04": "Viene quindi valutata l'esperienza di utilizzo del servizio.",
+                "step05": "Le domande finora presuppongono che il servizio sia stato definito ed esista già. La prossima serie di domande riguarda se e come hai partecipato ai processi con cui il servizio è stato creato in primo luogo.",
+                "step06": "Per prima cosa possiamo completare il nostro modello di erogazione dei servizi con le fasi coinvolte nella creazione. Chiamiamo questa fase di progettazione.",
+                "step07": "Quindi possiamo mostrare i processi con cui il servizio è stato identificato e avviato in primo luogo. Chiamiamo questa la fase di istigazione."
+            },
+            "options": {
+                "access_methods": {
+                    "applied": "Applicato",
+                    "other": "Altro",
+                    "referred": "Riferito"
+                },
+                "instigate_roles": {
+                    "government_department": "Dipartimento del governo",
+                    "political_party": "Partito politico",
+                    "pressure_group": "Gruppo di pressione \/ campagna"
+                },
+                "mediums": {
+                    "other": "Altro",
+                    "paper": "Pubblicazione cartacea",
+                    "referral": "Rinvio",
+                    "social": "Social media",
+                    "word_of_mouth": "Passaparola"
+                },
+                "opinions_how": {
+                    "interview": "Colloquio",
+                    "survey": "Sondaggio",
+                    "workshop": "Workshop"
+                },
+                "where": {
+                    "community": "Comunità",
+                    "home": "Casa",
+                    "other": "Altro",
+                    "public": "Pubblico"
+                },
+                "yes_no_maybe": {
+                    "maybe": "Può essere",
+                    "no": "No",
+                    "yes": "sì"
+                }
+            },
+            "title": "Modello di viaggio dell'utente"
+        },
         "welcome": {
             "dashboard": {
                 "summary": "Creato da {user} il {date_time}"
             },
             "title": "benvenuto"
         }
+    },
+    "countries": {
+        "de": "Germania",
+        "el": "Grecia",
+        "en_GB": "Regno Unito",
+        "es": "Spagna",
+        "et": "Estonia",
+        "fi": "Finlandia",
+        "fr": "Francia",
+        "hu": "Ungheria",
+        "it": "Italia",
+        "nl": "Olanda",
+        "pl": "Polonia",
+        "sv_SE": "Svezia"
     },
     "hints": {
         "editor_double_click_edit": "Fare doppio clic su un elemento per modificarlo e immettere per salvare",
