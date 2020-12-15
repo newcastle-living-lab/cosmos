@@ -532,7 +532,35 @@
         "user_journey_model": {
             "dashboard": {
                 "one": "",
-                "other": ""
+                "other": "",
+                "activist": "Activist",
+                "applicant": "Applicant",
+                "application": "Application",
+                "budget": "Budget",
+                "carrier_of_experience": "Carrier of Experience",
+                "citizen": "Citizen",
+                "client": "Client",
+                "clients_view": "Clients' views",
+                "evaluating_agent": "Evaluating Agent",
+                "government_department": "Government Department",
+                "outcome_reports": "Outcome Reports",
+                "political_party": "Political Party",
+                "potential_beneficiary": "Potential Beneficiary",
+                "pressure_campaign_group": "Pressure \/ Campaigning Group",
+                "provider_views": "Provider views",
+                "qualifying_agent": "Qualifying Agent",
+                "reservation_scheduling": "Reservation & Scheduling",
+                "service_definition": "Service Definition",
+                "service_delivery": "Service Delivery",
+                "service_experience": "Service Experience",
+                "service_instigation_policymaking": "Service Instigation and Policymaking",
+                "service_publication": "Service publication",
+                "service_publicity": "Service Publicity",
+                "service_resourcing": "Service Resourcing",
+                "service_use": "Service Use",
+                "service_workflow": "Service Workflow",
+                "touch_points": "Touch Points",
+                "voter": "Voter"
             },
             "definitions": {
                 "accessing": {

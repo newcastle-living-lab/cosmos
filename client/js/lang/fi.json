@@ -532,7 +532,35 @@
         "user_journey_model": {
             "dashboard": {
                 "one": "",
-                "other": ""
+                "other": "",
+                "activist": "Aktivisti",
+                "applicant": "Hakija",
+                "application": "Sovellus",
+                "budget": "Talousarvio",
+                "carrier_of_experience": "Kokemusten kantaja",
+                "citizen": "Kansalainen",
+                "client": "Asiakas",
+                "clients_view": "Asiakkaiden näkemykset",
+                "evaluating_agent": "Arvioiva edustaja",
+                "government_department": "Ministeriö",
+                "outcome_reports": "Tulosraportit",
+                "political_party": "Poliittinen puolue",
+                "potential_beneficiary": "Mahdollinen edunsaaja",
+                "pressure_campaign_group": "Paine- \/ kampanjaryhmä",
+                "provider_views": "Palveluntarjoajan näkymät",
+                "qualifying_agent": "Hyväksytty edustaja",
+                "reservation_scheduling": "Varaus ja aikataulu",
+                "service_definition": "Palvelun määritelmä",
+                "service_delivery": "Palvelun toimitus",
+                "service_experience": "Palvelukokemus",
+                "service_instigation_policymaking": "Palvelun käynnistäminen ja päätöksenteko",
+                "service_publication": "Palvelujulkaisu",
+                "service_publicity": "Palvelun julkisuus",
+                "service_resourcing": "Palvelujen uudelleenhankinta",
+                "service_use": "Palvelun käyttö",
+                "service_workflow": "Palvelun työnkulku",
+                "touch_points": "Kosketuspisteet",
+                "voter": "Äänestäjä"
             },
             "definitions": {
                 "accessing": {

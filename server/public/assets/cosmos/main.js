@@ -6185,7 +6185,7 @@ module.exports = JSON.parse("{\"activity_types\":{\"organisation\":\"Οργάν�
 /*! exports provided: languages, countries, app, user_guide, hints, activity_types, aspects, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"languages\":{\"el\":\"Greek\",\"en_GB\":\"English\",\"fr\":\"French\",\"de\":\"German\",\"es\":\"Spanish\",\"et\":\"Estonian\",\"fi\":\"Finnish\",\"hu\":\"Hungarian\",\"it\":\"Italian\",\"nl\":\"Dutch\",\"pl\":\"Polish\",\"sv_SE\":\"Swedish\"},\"countries\":{\"el\":\"Greece\",\"en_GB\":\"UK\",\"fr\":\"France\",\"de\":\"Germany\",\"es\":\"Spain\",\"et\":\"Estonia\",\"fi\":\"Finland\",\"hu\":\"Hungary\",\"it\":\"Italy\",\"nl\":\"Netherlands\",\"pl\":\"Poland\",\"sv_SE\":\"Sweden\"},\"app\":{\"log_in\":\"Log in\",\"project\":\"Project\",\"name\":\"Name\",\"title\":\"Title\",\"created_by\":\"Created by\",\"description\":\"Description\",\"label\":\"Label\",\"type\":\"Type\",\"colour\":\"Colour\",\"search\":\"Search\",\"web_address\":\"Web address\",\"image\":\"Image\",\"image_remove\":\"Remove image\",\"image_drag_prompt\":\"Drag your image here to begin or click to browse.\",\"image_is_uploading\":\"Uploading image\",\"image_upload_error\":\"Upload error\",\"next\":\"Next\",\"delete\":\"Delete\",\"ok\":\"OK\",\"save\":\"Save\",\"saving\":\"Saving\",\"create\":\"Create\",\"project_save_success\":\"Project saved!\",\"last_saved_at\":\"Last saved at {date_time}\",\"download\":\"Download\",\"export\":\"Export\",\"exporting\":\"Exporting\",\"import\":\"Import\",\"processing\":\"Processing\",\"import_project\":\"Import project\",\"import_project_success\":\"The project has been imported successfully!\",\"import_project_notes\":\"Note: You will be the owner of the project that is imported.\",\"import_project_drag_hint\":\"Drag your CoSMoS project here to begin or click to browse.\",\"open_project\":\"Open project\",\"all\":\"All\",\"just_mine\":\"Just mine\",\"no_projects\":\"No projects found.\",\"new_project\":\"Create new project\",\"to_create_project\":\"to create a project.\",\"user_is_read_only\":\"Your user access level is read-only.\",\"exporting_project\":\"Exporting project\",\"please_wait_generate\":\"Please wait while the file is being generated.\",\"error\":\"Error\",\"error_message\":\"Error: {message}\",\"scale_to_fit\":\"Scale to fit\",\"try_again\":\"Try again\",\"add_new_item\":\"Add new item\",\"add_new_actor\":\"Add new actor\",\"maximum_items\":\"Maximum {count} items | Maxumum {count} item | Maximum {count} items\",\"models\":\"Models\",\"more_details\":\"More details\",\"country\":\"Country\",\"which_country\":\"Which country are you from?\"},\"user_guide\":{\"show\":\"Show user guide\",\"skip\":\"Skip user guide\",\"back\":\"Back\",\"next\":\"Next\",\"close\":\"Close\"},\"hints\":{\"type_and_enter\":\"Type the name below and press enter.\",\"editor_double_click_edit\":\"Double-click an item to edit it, and enter to save\",\"social_twitter_add\":\"Enter a Twitter hashtag, with or without the #. Press enter to add.\",\"social_facebook_add\":\"Add full links (URLs) to Facebook groups or pages.\",\"social_instagram_add\":\"Enter an Instagram hashtag, with or without the #. Press enter to add.\",\"social_youtube_add\":\"Enter a link to a YouTube video and press enter to add.\"},\"activity_types\":{\"user\":\"User\",\"organisation\":\"Organisation\",\"service\":\"Service\"},\"aspects\":{\"analytic_model\":{\"title\":\"Analytic Model\",\"guide\":{\"step01\":\"In this model, we consider a Cosie initiative in terms of a set of roles and the conversational relationships in which they engage.\",\"step02\":\"First we have front line service deliverer and a client.\",\"step03\":\"The deliverer has a manager or supervisor. This pattern of an individual engaging in two conversations will be repeated.\",\"step04\":\"The delivery takes place in some formal or informal institutional context.\",\"step05\":\"Finally, the service exists in some wider policy setting.\",\"step06\":\"This is meant to be an abstract model. In some cases there may be a flat organisation where delivery, management and policy are undertaken by all the members of a small team, in other cases they may represent distinct individuals and contexts.\",\"step07\":\"How do the concepts of micro, meso and macro map onto your initiative?\",\"step08\":\"How does communication take place between them?\",\"step09\":\"How coordinated and coherent are they?\",\"step10\":\"In particular, are there information flows and conversations between macro and micro which are not mediated by the meso? What are the implications of this?\",\"step11\":\"The next model considers change agency in terms of roles and conversations.\",\"step12\":\"A change must be instigated, then it is executed.\",\"step13\":\"The changes we are considering are to a person, or a place or environment.\",\"step14\":\"The changes we are considering are often themselves complex and are about complex situations. Often they are based on some theory which has been introduced or brokered into the situation.\",\"step15\":\"There is a set of intended beneficiaries.\",\"step16\":\"But there are also possible dis-beneficiaries or victims of the change.\",\"step17\":\"This model is designed as a probe on the initial service model to identify the specific actors who, at various stages in the development of the initiative, have undertaken one or more of these change agency roles. Who are they?\"},\"dashboard\":{\"meso\":{\"label\":\"Meso\",\"description\":\"There may be a number of stages at this level.\"},\"macro\":{\"label\":\"Macro\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"title\":\"Service Delivery Manager\",\"hint\":\"Who is the Service Delivery Manager responsible for the Intervention?\"},\"frontLineServiceDeliverer\":{\"title\":\"Front-line Service Deliverer\",\"hint\":\"Who is the Front-line Service Deliverer?\"},\"user\":{\"title\":\"Client / User\",\"hint\":\"Who is the direct user of the service?\"},\"serviceOrganisationManager\":{\"title\":\"Service Organisation Manager\",\"hint\":\"Who is the Service Organisation Manager for the Intervention?\"},\"servicePolicyMaker\":{\"title\":\"Service Policy Maker\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"instigatorsOfChange\":{\"title\":\"Instigators of Change\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},\"changeMakers\":{\"title\":\"Change Makers\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},\"subjectsOfChange\":{\"title\":\"Subjects of Change\",\"hint\":\"Who are the idenitified subjects of change within the intervention?\"},\"broker\":{\"title\":\"Broker\",\"hint\":\"Is there an active Broker between the Instigators of Change and Change Makers? If so, who are they?\"},\"changeTheorists\":{\"title\":\"Change Theorists\",\"hint\":\"Who are the Change Theorists for the Intervention?\"},\"beneficiaries\":{\"title\":\"Beneficiaries\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"victims\":{\"title\":\"Victims\",\"hint\":\"Are there any identified victims? If so, who are they?\"}}},\"change_model\":{\"title\":\"Change Model\",\"guide\":{\"step01\":\"We start off with the standard model of purposeful action that we are all very familiar with.\",\"step02\":\"But we have all had the experience of looking back and realising that things have changed in a really fundamental way: we talk about the paradigm shifting. This implies that we have engaged in making new sense of our world and this often means that our language changes.\",\"step03\":\"These two different ways of operation are sometimes referred to as first order and second order.\",\"step04\":\"In management terms, we have risk management on one hand and the resolution of contradictions and ambiguities on the other.\",\"step05\":\"We now introduce the idea of third order activities which enable and support the appropriate transitions between first and second work allowing a step back to reconsider our ethos and assumptions and, when we have, to move back into the mode of practical planning and delivery.\",\"step06\":\"Sometimes the reaction to ambiguity and contradiction is an emotional one: fight or fly which is zero order, or inspiration and heroism which we will call fourth order.\",\"step07\":\"So, on the right hand side of our diagram we have the spectrum of emotional work and responses while of the left hand side we have co-productive, conversational work.\",\"step08\":\"This model generates a series of open ended questions about where the different first and second order work takes place in your initiative, what emotional work has been and is requires and how and where it is undertaken and how and by whom are the required third order interventions undertaken?\"},\"dashboard\":{\"first_order\":\"First Order\",\"risk\":\"Risk\",\"vision\":\"Vision\",\"plan\":\"Plan\",\"execute\":\"Execute\",\"measure\":\"Measure\",\"second_order\":\"Second Order\",\"ambiguity\":\"Ambiguity\",\"sense_making\":\"Sense-Making\",\"languaging\":\"\\\"Languaging\\\"\",\"committing\":\"Committing\",\"third_order\":\"Third Order\",\"ambivalence\":\"Ambivalence\",\"zero_order\":\"Zero Order\",\"fourth_order\":\"Fourth Order!\"},\"definitions\":{\"model\":{\"title\":\"Model\"},\"first_order\":{\"vision\":{\"label\":\"How were the vision and objectives set?\"},\"plan\":{\"label\":\"How was a plan set up to deliver the vision?\"},\"execute\":{\"label\":\"How is the plan being executed?\"},\"measure\":{\"label\":\"How are observations and measurements being recorded? If not, what needs to be enabled to do so?\"}},\"second_order\":{\"sense_making\":{\"label\":\"When do you review the plans and vision?\"},\"languaging\":{\"label\":\"What changes have been made to how the intervention has been understood?\"},\"committing\":{\"label\":\"How has the service delivery of the intervention changed from its original plans?\"}},\"third_order\":{\"processes\":{\"label\":\"What processes provoke or enable second order questioning?\"}},\"fourth_order\":{\"unexpected_events\":{\"label\":\"Have there been instances where you have seen unexpected events occurred?\"},\"event_cause\":{\"label\":\"What happened to allow this event to occur?\"},\"change_origin\":{\"label\":\"What was the origin of the change? And what was the change?\"}}}},\"community_reporting\":{\"title\":\"Community Reporting\",\"dashboard\":{\"title\":\"Community Reporting\",\"empty_set\":\"There are no community reporting items for this project.\",\"manage\":\"Manage Community Reporting\"},\"definitions\":{\"data\":{\"title\":\"Community Reporting\",\"hint\":\"Please add any Community Reports your project may have.\"}}},\"documents\":{\"title\":\"Documents\",\"dashboard\":{\"title\":\"Documents and Files\",\"empty_set\":\"There are no documents or files for this project.\",\"manage\":\"Manage documents and files\"},\"definitions\":{\"data\":{\"title\":\"Documents and Files\",\"hint\":\"Please add any Documents and Files your project may have.\"}}},\"intervention_theory_model\":{\"title\":\"Intervention Theory Model\",\"guide\":{\"step01\":\"The co-creative initiatives we are considering are all concerned with improving and nurturing wellbeing. Here we consider the wellbeing of individuals but this might be applied to places or to wider environments.\",\"step02\":\"Wellbeing has a number of different facets which are all interdependent.\",\"step03\":\"It also interacts with the physical and social environments.\",\"step04\":\"Some services or interventions are about mending something that has gone wrong and restoring the status quo.\",\"step05\":\"But there are other purposes for interventions.\",\"step06\":\"The intervention process involves a number of different stages and processes.\",\"step07\":\"Finally, if our innovations are to be sustained we must learn and improve.\",\"step08\":\"Who, what or where is the target of your intervention?\",\"step09\":\"Which aspects of wellbeing are the focus of your initiative?\",\"step10\":\"What aspects of the wellbeing of your subject are relevant but beyond the scope of your initiative?\",\"step11\":\"What are the relevant environmental aspects?\",\"step12\":\"Which combinations of interventions, from prevention to transformation, are relevant to your initiative?\",\"step13\":\"To what extent is learning and improvement built into your development governance and delivery processes?\"},\"dashboard\":{\"wellbeing\":\"Well Being\"},\"options\":{\"wellbeing\":{\"physical_env\":\"Physical Envrionment\",\"socio_cultural_env\":\"Socio-cultural Environment\",\"faculties_skills\":\"Faculties and Skills\",\"mental_psych\":\"Mental and Psychological\",\"physiological\":\"Physiological\",\"socio_economic\":\"Socio-Economic\"},\"innovation\":{\"transformation\":\"Transformation\",\"development\":\"Development\",\"facilitation\":\"Facilitation\",\"rehabilitation\":\"Rehabilitation\",\"remedy\":\"Remedy\",\"palliation\":\"Palliation\",\"prevention\":\"Prevention\"},\"intervention\":{\"identification\":\"Identification & Planning\",\"coordination_delivery\":\"Coordination & Delivery\",\"management\":\"Management\",\"governance\":\"Governance\",\"learning\":\"Learning\"},\"learning\":{\"research_evidence\":\"Research & Evidence\",\"trials\":\"Trials\",\"service_improvement\":\"Service Improvement\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"title\":\"Human well-being and Environment\",\"items\":{\"label\":\"Which aspects of human well-being and of the environment are relevant to your service? Are some more significant than others?\"}},\"innovation\":{\"title\":\"Innovation and change\",\"items\":{\"label\":\"What aspects of the service lifecycle are important regarding your innovation and change?\"}},\"intervention\":{\"title\":\"Intervention\",\"items\":{\"label\":\"What type of intervention is occuring?\"}},\"learning\":{\"title\":\"Learning\",\"items\":{\"label\":\"How is learning happening in your intervention?\"}}}},\"moral_ordering_model\":{\"title\":\"Moral Ordering\",\"guide\":{\"step01\":\"There are a number of core processes involved in a co-creative innovation. The first is concerned with the definition of ethos.\",\"step02\":\"The second involves management activities and products.\",\"step03\":\"Moral ordering is concerned with who gets to participate in activities so, in the case of your initiative, who is involved in these processes? Where and when do they take place? How do they communicate and how are they recorded?\",\"step04\":\"As a result of leadership, planning and design, services or initiatives are delivered and experienced.\",\"step05\":\"Again who is involved here and do they get any participation in the first two sets of activities?\",\"step06\":\"Rather than simply close the loop with a simple evaluation process, we are suggesting that, in systems of co-productive wellbeing and care, governance involves all the participants in the relationships identified here participation in addressing the questions defined in the moral ordering model.\",\"step07\":\"Governance takes place at the individual service client relationship level.\",\"step08\":\"It also takes place at the overall service level.\",\"step09\":\"How are governance processes, in the sense we are describing them here, take place in your initiative?\"},\"dashboard\":{\"govern\":\"Govern\",\"deliver\":\"Deliver\",\"define_ethos\":\"Define Ethos\",\"define_ethos_items\":\"Values\\nPrinciples\\nIntentions\\nPolicies\",\"plan_manage\":\"Plan & Manage\",\"plan_manage_items\":\"Rules\\nResources\\nProcesses\\nAccounts\",\"experience\":\"Experience\",\"individual_cases\":\"Individual Cases\",\"the_service_level\":\"The Service Level\"},\"options\":{\"sources\":{\"policy\":\"Policy\",\"meeting\":\"Meeting\",\"other\":\"Other\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"defineEthos\":{\"title\":\"Define Ethos\",\"values\":{\"label\":\"What values are important that the intervention comes to address?\"},\"definedBy\":{\"label\":\"How do these values come to be defined?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"planManagePrior\":{\"title\":\"Plan and Manage - Prior actions\",\"actions\":{\"label\":\"What actions were being undertaken prior to the intervention?\"},\"actors\":{\"label\":\"Who was involved with these prior actions?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"planManageCurrent\":{\"title\":\"Plan and Manage - Current actions\",\"actions\":{\"label\":\"What actions are now being undertaken within the pilot?\"},\"actors\":{\"label\":\"What ongoing actions are being taken?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"deliver\":{\"title\":\"Deliver\",\"method\":{\"label\":\"How is the intervention delivered?\"},\"actors\":{\"label\":\"By whom is it delivered?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"govern\":{\"title\":\"Govern\",\"actions\":{\"label\":\"How is the intervention governed? What measures are put in place to ensure the outcomes were as intended?\"},\"actors\":{\"label\":\"Who is evaluating this?\"},\"outcomes\":{\"label\":\"Are outcomes embodied in targets and measurements? And if so, whose?\"},\"evolution\":{\"label\":\"How does this impact on the evolution of the service?\"},\"improvements\":{\"label\":\"How are improvements identified? How are they implemented?\"}}}},\"co_creation_of_service_model\":{\"title\":\"Co-Creation of Service Model\",\"dashboard\":{\"structural_relationships\":\"Structural Relationships and Occasions\",\"infrastructural_relationships\":\"Infrastructural Relationships, Recourses and Facilities\",\"ethos\":\"Ethos\",\"policy_law\":\"Policy & Law\",\"resources\":\"Resources\",\"service_definition\":\"Service Definition and Development Platform\",\"service_delivery\":\"Service Delivery Platform\"},\"definitions\":{\"model\":{\"title\":\"Model\"},\"drivers\":{\"title\":\"Drivers and Motivations\",\"hint\":\"What were / are the drivers and motivations of the project? Was it a statutory requirement, recognition of a need or demand, seizing an opportunity, addressing an inequality?\",\"body\":{\"label\":\"Drivers and Motivations\",\"hint\":\"What are the drivers and motivations involved?\"}},\"policyDef\":{\"title\":\"Policy Definer\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"specDes\":{\"title\":\"Specifier and Designer\",\"hint\":\"Who specifies / specified and designs / designed the service delivery processes and resources?\"},\"deployment\":{\"title\":\"Deployer\",\"hint\":\"Who deploys / deployed and activates / activated those processes and resources?\"},\"delivery\":{\"title\":\"Deliverer\",\"hint\":\"Who is responsible for the delivery mechanism(s), channels and roles in your pilot?\"},\"evaluation\":{\"title\":\"Evaluator\",\"hint\":\"Who is the evaluator(s) and governors of the service?\"},\"user\":{\"title\":\"User\",\"hint\":\"Who is the direct user of the service?\"},\"beneficiary\":{\"title\":\"Beneficiary\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"initiator\":{\"title\":\"Initiator\",\"hint\":\"Who are, or were, the instigators who initiated your pilot activity?\"},\"extsvc\":{\"title\":\"External Technical Services\",\"hint\":\"What reusable facilities, (technical and human) resources, services and sources of information were developed and used in support of these service definition and development processes? What external resources and services (e.g. communications and social media) were/are used?\"},\"extorg\":{\"title\":\"External Organisations\",\"hint\":\"Are there any relevant actors, stakeholders or agencies which are relevant to the pilot, but which remain outside its vision and ethos?\"},\"infsvc\":{\"title\":\"Infrastructural Services\",\"hint\":\"What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?\"}}},\"user_journey_model\":{\"title\":\"User Journey Model\",\"dashboard\":{},\"guide\":{\"step01\":\"Services are publicised to their intended users, this is the discovery phase.\",\"step02\":\"Users who want the service make some sort of request or application, this is the accessing phase.\",\"step03\":\"If the previous stage is successful, the service is delivered and experienced, this is the using phase.\",\"step04\":\"The experience of the use of the service is then evaluated.\",\"step05\":\"The questions so far assume that the service has been defined and already exists. The next set of questions is about whether and how you participated in the processes by which the service was created in the first place.\",\"step06\":\"First we can complete our service delivery model with the stages involved in creating. We call this the designing phase.\",\"step07\":\"Then we can show the processes by which the service was identified and initiated in the first place. We call this the instigating phase.\"},\"options\":{\"mediums\":{\"word_of_mouth\":\"Word of mouth\",\"paper\":\"Paper publication\",\"referral\":\"Referral\",\"social\":\"Social media\",\"other\":\"Other\"},\"access_methods\":{\"referred\":\"Referred\",\"applied\":\"Applied\",\"other\":\"Other\"},\"where\":{\"home\":\"Home\",\"community\":\"Community\",\"public\":\"Public\",\"other\":\"Other\"},\"yes_no_maybe\":{\"yes\":\"Yes\",\"no\":\"No\",\"maybe\":\"Maybe\"},\"opinions_how\":{\"workshop\":\"Workshop\",\"survey\":\"Survey\",\"interview\":\"Interview\"},\"instigate_roles\":{\"pressure_group\":\"Pressure/Campaigning Group\",\"political_party\":\"Political Party\",\"government_department\":\"Government Department\"},\"methods\":{\"workshop\":\"Workshop\",\"online\":\"Online\",\"face\":\"Face-to-Face\"},\"design_assist_broker\":{\"university\":\"University\",\"government\":\"Government\",\"ngo\":\"NGO\",\"other\":\"Other\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"discovering\":{\"title\":\"Discovering\",\"discovery_medium\":{\"label\":\"How did you find out about the service?\"},\"information_medium\":{\"label\":\"How did you access information about the service?\"},\"information_experience\":{\"label\":\"What is your opinion about the quality, completeness and accessibility of the information?\"},\"comments\":{\"label\":\"Any further comments, observations?\"}},\"accessing\":{\"title\":\"Accessing\",\"access_method\":{\"label\":\"How did you gain access to the service?\"},\"qualification_process\":{\"label\":\"Was there a qualification or selection process?\"},\"qualification_experience\":{\"label\":\"If so, what was the experience like?\"},\"appropriate_comment\":{\"label\":\"Do you think this aspect of the service is appropriate?\"}},\"using\":{\"title\":\"Using\",\"participate_experience\":{\"label\":\"What was it like to use or participate in the service?\"},\"accessible_experience\":{\"label\":\"Was the service accessible to you?\"},\"time_experience\":{\"label\":\"Was the duration and frequencies of the service events or contacts OK?\"},\"where\":{\"label\":\"Where did you use the service?\"}},\"evaluating\":{\"title\":\"Evaluating\",\"opinions_asked\":{\"label\":\"Were you asked about your opinions about your experience of the service?\",\"hint\":\"Think about where and when this was.\"},\"opinions_how\":{\"label\":\"If yes, how were you asked?\"},\"service_experience\":{\"label\":\"Was the service what you expected?\"},\"surprises_comments\":{\"label\":\"Were there any surprises or disappointments in your experience?\"}},\"designing\":{\"title\":\"Designing\",\"design_input_asked\":{\"label\":\"Were you asked to input into the design of the service?\"},\"design_input_method\":{\"label\":\"How did you participate?\"},\"design_input_experience\":{\"label\":\"How was your experience of this?\"},\"design_assist_asked\":{\"label\":\"Were you invited to assist with the design of the service?\"},\"design_assist_broker\":{\"label\":\"If yes, who by?\",\"hint\":\"Co-creation Broker:\"}},\"instigating\":{\"title\":\"Instigating\",\"identify_role\":{\"label\":\"Did you play a role in how the service was initially identified?\"},\"identify_method\":{\"label\":\"How did this identification occur?\"},\"identify_experience\":{\"label\":\"How was your experience of this?\"},\"design_role\":{\"label\":\"Did you play any role in the design and definition of the service? If yes, what were the occasions and channels that this occurred?\"},\"instigate_role\":{\"label\":\"Did you have any role in instigating the project? If yes, were you part of any of the following options? You can choose as many as you like.\"},\"comments\":{\"label\":\"Comments\"}}}},\"social_media\":{\"title\":\"Social Media\",\"dashboard\":{\"title\":\"Social Media\"},\"definitions\":{\"data\":{\"title\":\"Social Media\"}}},\"theory_of_change\":{\"title\":\"Theory of Change\",\"dashboard\":{\"title\":\"Theory of Change\",\"empty_set\":\"There are no theory of change items for this project.\",\"manage\":\"Manage Theory of Change\"},\"definitions\":{\"data\":{\"title\":\"Theory of Change\",\"hint\":\"Please add any theories of change your project may have.\"}}},\"welcome\":{\"title\":\"Welcome\",\"dashboard\":{\"summary\":\"Created by {user} on {date_time}\"}}}}");
+module.exports = JSON.parse("{\"languages\":{\"el\":\"Greek\",\"en_GB\":\"English\",\"fr\":\"French\",\"de\":\"German\",\"es\":\"Spanish\",\"et\":\"Estonian\",\"fi\":\"Finnish\",\"hu\":\"Hungarian\",\"it\":\"Italian\",\"nl\":\"Dutch\",\"pl\":\"Polish\",\"sv_SE\":\"Swedish\"},\"countries\":{\"el\":\"Greece\",\"en_GB\":\"UK\",\"fr\":\"France\",\"de\":\"Germany\",\"es\":\"Spain\",\"et\":\"Estonia\",\"fi\":\"Finland\",\"hu\":\"Hungary\",\"it\":\"Italy\",\"nl\":\"Netherlands\",\"pl\":\"Poland\",\"sv_SE\":\"Sweden\"},\"app\":{\"log_in\":\"Log in\",\"project\":\"Project\",\"name\":\"Name\",\"title\":\"Title\",\"created_by\":\"Created by\",\"description\":\"Description\",\"label\":\"Label\",\"type\":\"Type\",\"colour\":\"Colour\",\"search\":\"Search\",\"web_address\":\"Web address\",\"image\":\"Image\",\"image_remove\":\"Remove image\",\"image_drag_prompt\":\"Drag your image here to begin or click to browse.\",\"image_is_uploading\":\"Uploading image\",\"image_upload_error\":\"Upload error\",\"next\":\"Next\",\"delete\":\"Delete\",\"ok\":\"OK\",\"save\":\"Save\",\"saving\":\"Saving\",\"create\":\"Create\",\"project_save_success\":\"Project saved!\",\"last_saved_at\":\"Last saved at {date_time}\",\"download\":\"Download\",\"export\":\"Export\",\"exporting\":\"Exporting\",\"import\":\"Import\",\"processing\":\"Processing\",\"import_project\":\"Import project\",\"import_project_success\":\"The project has been imported successfully!\",\"import_project_notes\":\"Note: You will be the owner of the project that is imported.\",\"import_project_drag_hint\":\"Drag your CoSMoS project here to begin or click to browse.\",\"open_project\":\"Open project\",\"all\":\"All\",\"just_mine\":\"Just mine\",\"no_projects\":\"No projects found.\",\"new_project\":\"Create new project\",\"to_create_project\":\"to create a project.\",\"user_is_read_only\":\"Your user access level is read-only.\",\"exporting_project\":\"Exporting project\",\"please_wait_generate\":\"Please wait while the file is being generated.\",\"error\":\"Error\",\"error_message\":\"Error: {message}\",\"scale_to_fit\":\"Scale to fit\",\"try_again\":\"Try again\",\"add_new_item\":\"Add new item\",\"add_new_actor\":\"Add new actor\",\"maximum_items\":\"Maximum {count} items | Maxumum {count} item | Maximum {count} items\",\"models\":\"Models\",\"more_details\":\"More details\",\"country\":\"Country\",\"which_country\":\"Which country are you from?\"},\"user_guide\":{\"show\":\"Show user guide\",\"skip\":\"Skip user guide\",\"back\":\"Back\",\"next\":\"Next\",\"close\":\"Close\"},\"hints\":{\"type_and_enter\":\"Type the name below and press enter.\",\"editor_double_click_edit\":\"Double-click an item to edit it, and enter to save\",\"social_twitter_add\":\"Enter a Twitter hashtag, with or without the #. Press enter to add.\",\"social_facebook_add\":\"Add full links (URLs) to Facebook groups or pages.\",\"social_instagram_add\":\"Enter an Instagram hashtag, with or without the #. Press enter to add.\",\"social_youtube_add\":\"Enter a link to a YouTube video and press enter to add.\"},\"activity_types\":{\"user\":\"User\",\"organisation\":\"Organisation\",\"service\":\"Service\"},\"aspects\":{\"analytic_model\":{\"title\":\"Analytic Model\",\"guide\":{\"step01\":\"In this model, we consider a Cosie initiative in terms of a set of roles and the conversational relationships in which they engage.\",\"step02\":\"First we have front line service deliverer and a client.\",\"step03\":\"The deliverer has a manager or supervisor. This pattern of an individual engaging in two conversations will be repeated.\",\"step04\":\"The delivery takes place in some formal or informal institutional context.\",\"step05\":\"Finally, the service exists in some wider policy setting.\",\"step06\":\"This is meant to be an abstract model. In some cases there may be a flat organisation where delivery, management and policy are undertaken by all the members of a small team, in other cases they may represent distinct individuals and contexts.\",\"step07\":\"How do the concepts of micro, meso and macro map onto your initiative?\",\"step08\":\"How does communication take place between them?\",\"step09\":\"How coordinated and coherent are they?\",\"step10\":\"In particular, are there information flows and conversations between macro and micro which are not mediated by the meso? What are the implications of this?\",\"step11\":\"The next model considers change agency in terms of roles and conversations.\",\"step12\":\"A change must be instigated, then it is executed.\",\"step13\":\"The changes we are considering are to a person, or a place or environment.\",\"step14\":\"The changes we are considering are often themselves complex and are about complex situations. Often they are based on some theory which has been introduced or brokered into the situation.\",\"step15\":\"There is a set of intended beneficiaries.\",\"step16\":\"But there are also possible dis-beneficiaries or victims of the change.\",\"step17\":\"This model is designed as a probe on the initial service model to identify the specific actors who, at various stages in the development of the initiative, have undertaken one or more of these change agency roles. Who are they?\"},\"dashboard\":{\"meso\":{\"label\":\"Meso\",\"description\":\"There may be a number of stages at this level.\"},\"macro\":{\"label\":\"Macro\"},\"micro\":{\"label\":\"Micro\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"serviceDeliveryManager\":{\"title\":\"Service Delivery Manager\",\"hint\":\"Who is the Service Delivery Manager responsible for the Intervention?\"},\"frontLineServiceDeliverer\":{\"title\":\"Front-line Service Deliverer\",\"hint\":\"Who is the Front-line Service Deliverer?\"},\"user\":{\"title\":\"Client / User\",\"hint\":\"Who is the direct user of the service?\"},\"serviceOrganisationManager\":{\"title\":\"Service Organisation Manager\",\"hint\":\"Who is the Service Organisation Manager for the Intervention?\"},\"servicePolicyMaker\":{\"title\":\"Service Policy Maker\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"instigatorsOfChange\":{\"title\":\"Instigators of Change\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},\"changeMakers\":{\"title\":\"Change Makers\",\"hint\":\"Who are, or were, the instigators who initiated your intervention activity?\"},\"subjectsOfChange\":{\"title\":\"Subjects of Change\",\"hint\":\"Who are the idenitified subjects of change within the intervention?\"},\"broker\":{\"title\":\"Broker\",\"hint\":\"Is there an active Broker between the Instigators of Change and Change Makers? If so, who are they?\"},\"changeTheorists\":{\"title\":\"Change Theorists\",\"hint\":\"Who are the Change Theorists for the Intervention?\"},\"beneficiaries\":{\"title\":\"Beneficiaries\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"victims\":{\"title\":\"Victims\",\"hint\":\"Are there any identified victims? If so, who are they?\"}}},\"change_model\":{\"title\":\"Change Model\",\"guide\":{\"step01\":\"We start off with the standard model of purposeful action that we are all very familiar with.\",\"step02\":\"But we have all had the experience of looking back and realising that things have changed in a really fundamental way: we talk about the paradigm shifting. This implies that we have engaged in making new sense of our world and this often means that our language changes.\",\"step03\":\"These two different ways of operation are sometimes referred to as first order and second order.\",\"step04\":\"In management terms, we have risk management on one hand and the resolution of contradictions and ambiguities on the other.\",\"step05\":\"We now introduce the idea of third order activities which enable and support the appropriate transitions between first and second work allowing a step back to reconsider our ethos and assumptions and, when we have, to move back into the mode of practical planning and delivery.\",\"step06\":\"Sometimes the reaction to ambiguity and contradiction is an emotional one: fight or fly which is zero order, or inspiration and heroism which we will call fourth order.\",\"step07\":\"So, on the right hand side of our diagram we have the spectrum of emotional work and responses while of the left hand side we have co-productive, conversational work.\",\"step08\":\"This model generates a series of open ended questions about where the different first and second order work takes place in your initiative, what emotional work has been and is requires and how and where it is undertaken and how and by whom are the required third order interventions undertaken?\"},\"dashboard\":{\"first_order\":\"First Order\",\"risk\":\"Risk\",\"vision\":\"Vision\",\"plan\":\"Plan\",\"execute\":\"Execute\",\"measure\":\"Measure\",\"second_order\":\"Second Order\",\"ambiguity\":\"Ambiguity\",\"sense_making\":\"Sense-Making\",\"languaging\":\"\\\"Languaging\\\"\",\"committing\":\"Committing\",\"third_order\":\"Third Order\",\"ambivalence\":\"Ambivalence\",\"zero_order\":\"Zero Order\",\"fourth_order\":\"Fourth Order!\"},\"definitions\":{\"model\":{\"title\":\"Model\"},\"first_order\":{\"vision\":{\"label\":\"How were the vision and objectives set?\"},\"plan\":{\"label\":\"How was a plan set up to deliver the vision?\"},\"execute\":{\"label\":\"How is the plan being executed?\"},\"measure\":{\"label\":\"How are observations and measurements being recorded? If not, what needs to be enabled to do so?\"}},\"second_order\":{\"sense_making\":{\"label\":\"When do you review the plans and vision?\"},\"languaging\":{\"label\":\"What changes have been made to how the intervention has been understood?\"},\"committing\":{\"label\":\"How has the service delivery of the intervention changed from its original plans?\"}},\"third_order\":{\"processes\":{\"label\":\"What processes provoke or enable second order questioning?\"}},\"fourth_order\":{\"unexpected_events\":{\"label\":\"Have there been instances where you have seen unexpected events occurred?\"},\"event_cause\":{\"label\":\"What happened to allow this event to occur?\"},\"change_origin\":{\"label\":\"What was the origin of the change? And what was the change?\"}}}},\"community_reporting\":{\"title\":\"Community Reporting\",\"dashboard\":{\"title\":\"Community Reporting\",\"empty_set\":\"There are no community reporting items for this project.\",\"manage\":\"Manage Community Reporting\"},\"definitions\":{\"data\":{\"title\":\"Community Reporting\",\"hint\":\"Please add any Community Reports your project may have.\"}}},\"documents\":{\"title\":\"Documents\",\"dashboard\":{\"title\":\"Documents and Files\",\"empty_set\":\"There are no documents or files for this project.\",\"manage\":\"Manage documents and files\"},\"definitions\":{\"data\":{\"title\":\"Documents and Files\",\"hint\":\"Please add any Documents and Files your project may have.\"}}},\"intervention_theory_model\":{\"title\":\"Intervention Theory Model\",\"guide\":{\"step01\":\"The co-creative initiatives we are considering are all concerned with improving and nurturing wellbeing. Here we consider the wellbeing of individuals but this might be applied to places or to wider environments.\",\"step02\":\"Wellbeing has a number of different facets which are all interdependent.\",\"step03\":\"It also interacts with the physical and social environments.\",\"step04\":\"Some services or interventions are about mending something that has gone wrong and restoring the status quo.\",\"step05\":\"But there are other purposes for interventions.\",\"step06\":\"The intervention process involves a number of different stages and processes.\",\"step07\":\"Finally, if our innovations are to be sustained we must learn and improve.\",\"step08\":\"Who, what or where is the target of your intervention?\",\"step09\":\"Which aspects of wellbeing are the focus of your initiative?\",\"step10\":\"What aspects of the wellbeing of your subject are relevant but beyond the scope of your initiative?\",\"step11\":\"What are the relevant environmental aspects?\",\"step12\":\"Which combinations of interventions, from prevention to transformation, are relevant to your initiative?\",\"step13\":\"To what extent is learning and improvement built into your development governance and delivery processes?\"},\"dashboard\":{\"wellbeing\":\"Well Being\"},\"options\":{\"wellbeing\":{\"physical_env\":\"Physical Envrionment\",\"socio_cultural_env\":\"Socio-cultural Environment\",\"faculties_skills\":\"Faculties and Skills\",\"mental_psych\":\"Mental and Psychological\",\"physiological\":\"Physiological\",\"socio_economic\":\"Socio-Economic\"},\"innovation\":{\"transformation\":\"Transformation\",\"development\":\"Development\",\"facilitation\":\"Facilitation\",\"rehabilitation\":\"Rehabilitation\",\"remedy\":\"Remedy\",\"palliation\":\"Palliation\",\"prevention\":\"Prevention\"},\"intervention\":{\"identification\":\"Identification & Planning\",\"coordination_delivery\":\"Coordination & Delivery\",\"management\":\"Management\",\"governance\":\"Governance\",\"learning\":\"Learning\"},\"learning\":{\"research_evidence\":\"Research & Evidence\",\"trials\":\"Trials\",\"service_improvement\":\"Service Improvement\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"wellbeing\":{\"title\":\"Human well-being and Environment\",\"items\":{\"label\":\"Which aspects of human well-being and of the environment are relevant to your service? Are some more significant than others?\"}},\"innovation\":{\"title\":\"Innovation and change\",\"items\":{\"label\":\"What aspects of the service lifecycle are important regarding your innovation and change?\"}},\"intervention\":{\"title\":\"Intervention\",\"items\":{\"label\":\"What type of intervention is occuring?\"}},\"learning\":{\"title\":\"Learning\",\"items\":{\"label\":\"How is learning happening in your intervention?\"}}}},\"moral_ordering_model\":{\"title\":\"Moral Ordering\",\"guide\":{\"step01\":\"There are a number of core processes involved in a co-creative innovation. The first is concerned with the definition of ethos.\",\"step02\":\"The second involves management activities and products.\",\"step03\":\"Moral ordering is concerned with who gets to participate in activities so, in the case of your initiative, who is involved in these processes? Where and when do they take place? How do they communicate and how are they recorded?\",\"step04\":\"As a result of leadership, planning and design, services or initiatives are delivered and experienced.\",\"step05\":\"Again who is involved here and do they get any participation in the first two sets of activities?\",\"step06\":\"Rather than simply close the loop with a simple evaluation process, we are suggesting that, in systems of co-productive wellbeing and care, governance involves all the participants in the relationships identified here participation in addressing the questions defined in the moral ordering model.\",\"step07\":\"Governance takes place at the individual service client relationship level.\",\"step08\":\"It also takes place at the overall service level.\",\"step09\":\"How are governance processes, in the sense we are describing them here, take place in your initiative?\"},\"dashboard\":{\"govern\":\"Govern\",\"deliver\":\"Deliver\",\"define_ethos\":\"Define Ethos\",\"define_ethos_items\":\"Values\\nPrinciples\\nIntentions\\nPolicies\",\"plan_manage\":\"Plan & Manage\",\"plan_manage_items\":\"Rules\\nResources\\nProcesses\\nAccounts\",\"experience\":\"Experience\",\"individual_cases\":\"Individual Cases\",\"the_service_level\":\"The Service Level\"},\"options\":{\"sources\":{\"policy\":\"Policy\",\"meeting\":\"Meeting\",\"other\":\"Other\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"defineEthos\":{\"title\":\"Define Ethos\",\"values\":{\"label\":\"What values are important that the intervention comes to address?\"},\"definedBy\":{\"label\":\"How do these values come to be defined?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"planManagePrior\":{\"title\":\"Plan and Manage - Prior actions\",\"actions\":{\"label\":\"What actions were being undertaken prior to the intervention?\"},\"actors\":{\"label\":\"Who was involved with these prior actions?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"planManageCurrent\":{\"title\":\"Plan and Manage - Current actions\",\"actions\":{\"label\":\"What actions are now being undertaken within the pilot?\"},\"actors\":{\"label\":\"What ongoing actions are being taken?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"deliver\":{\"title\":\"Deliver\",\"method\":{\"label\":\"How is the intervention delivered?\"},\"actors\":{\"label\":\"By whom is it delivered?\"},\"evidenceUrl\":{\"label\":\"What (external) evidence is available to support this?\"}},\"govern\":{\"title\":\"Govern\",\"actions\":{\"label\":\"How is the intervention governed? What measures are put in place to ensure the outcomes were as intended?\"},\"actors\":{\"label\":\"Who is evaluating this?\"},\"outcomes\":{\"label\":\"Are outcomes embodied in targets and measurements? And if so, whose?\"},\"evolution\":{\"label\":\"How does this impact on the evolution of the service?\"},\"improvements\":{\"label\":\"How are improvements identified? How are they implemented?\"}}}},\"co_creation_of_service_model\":{\"title\":\"Co-Creation of Service Model\",\"dashboard\":{\"structural_relationships\":\"Structural Relationships and Occasions\",\"infrastructural_relationships\":\"Infrastructural Relationships, Recourses and Facilities\",\"ethos\":\"Ethos\",\"policy_law\":\"Policy & Law\",\"resources\":\"Resources\",\"service_definition\":\"Service Definition and Development Platform\",\"service_delivery\":\"Service Delivery Platform\"},\"definitions\":{\"model\":{\"title\":\"Model\"},\"drivers\":{\"title\":\"Drivers and Motivations\",\"hint\":\"What were / are the drivers and motivations of the project? Was it a statutory requirement, recognition of a need or demand, seizing an opportunity, addressing an inequality?\",\"body\":{\"label\":\"Drivers and Motivations\",\"hint\":\"What are the drivers and motivations involved?\"}},\"policyDef\":{\"title\":\"Policy Definer\",\"hint\":\"Who are, or were, the definers of the service policies and the principles under which the service operates?\"},\"specDes\":{\"title\":\"Specifier and Designer\",\"hint\":\"Who specifies / specified and designs / designed the service delivery processes and resources?\"},\"deployment\":{\"title\":\"Deployer\",\"hint\":\"Who deploys / deployed and activates / activated those processes and resources?\"},\"delivery\":{\"title\":\"Deliverer\",\"hint\":\"Who is responsible for the delivery mechanism(s), channels and roles in your pilot?\"},\"evaluation\":{\"title\":\"Evaluator\",\"hint\":\"Who is the evaluator(s) and governors of the service?\"},\"user\":{\"title\":\"User\",\"hint\":\"Who is the direct user of the service?\"},\"beneficiary\":{\"title\":\"Beneficiary\",\"hint\":\"Are there beneficiaries other than the direct user/participants? If so, who are they?\"},\"initiator\":{\"title\":\"Initiator\",\"hint\":\"Who are, or were, the instigators who initiated your pilot activity?\"},\"extsvc\":{\"title\":\"External Technical Services\",\"hint\":\"What reusable facilities, (technical and human) resources, services and sources of information were developed and used in support of these service definition and development processes? What external resources and services (e.g. communications and social media) were/are used?\"},\"extorg\":{\"title\":\"External Organisations\",\"hint\":\"Are there any relevant actors, stakeholders or agencies which are relevant to the pilot, but which remain outside its vision and ethos?\"},\"infsvc\":{\"title\":\"Infrastructural Services\",\"hint\":\"What external services, channels and facilities do you make use of in the delivery of your service(s)? What information sources do you make use of? What information do you publish, to whom and using what channels and media?\"}}},\"user_journey_model\":{\"title\":\"User Journey Model\",\"dashboard\":{\"service_workflow\":\"Service Workflow\",\"touch_points\":\"Touch Points\",\"service_experience\":\"Service Experience\",\"carrier_of_experience\":\"Carrier of Experience\",\"service_instigation_policymaking\":\"Service Instigation and Policymaking\",\"pressure_campaign_group\":\"Pressure / Campaigning Group\",\"government_department\":\"Government Department\",\"political_party\":\"Political Party\",\"activist\":\"Activist\",\"voter\":\"Voter\",\"citizen\":\"Citizen\",\"budget\":\"Budget\",\"service_definition\":\"Service Definition\",\"outcome_reports\":\"Outcome Reports\",\"provider_views\":\"Provider views\",\"service_publication\":\"Service publication\",\"application\":\"Application\",\"service_use\":\"Service Use\",\"clients_view\":\"Clients' views\",\"service_resourcing\":\"Service Resourcing\",\"reservation_scheduling\":\"Reservation & Scheduling\",\"service_delivery\":\"Service Delivery\",\"service_publicity\":\"Service Publicity\",\"qualifying_agent\":\"Qualifying Agent\",\"evaluating_agent\":\"Evaluating Agent\",\"potential_beneficiary\":\"Potential Beneficiary\",\"applicant\":\"Applicant\",\"client\":\"Client\"},\"guide\":{\"step01\":\"Services are publicised to their intended users, this is the discovery phase.\",\"step02\":\"Users who want the service make some sort of request or application, this is the accessing phase.\",\"step03\":\"If the previous stage is successful, the service is delivered and experienced, this is the using phase.\",\"step04\":\"The experience of the use of the service is then evaluated.\",\"step05\":\"The questions so far assume that the service has been defined and already exists. The next set of questions is about whether and how you participated in the processes by which the service was created in the first place.\",\"step06\":\"First we can complete our service delivery model with the stages involved in creating. We call this the designing phase.\",\"step07\":\"Then we can show the processes by which the service was identified and initiated in the first place. We call this the instigating phase.\"},\"options\":{\"mediums\":{\"word_of_mouth\":\"Word of mouth\",\"paper\":\"Paper publication\",\"referral\":\"Referral\",\"social\":\"Social media\",\"other\":\"Other\"},\"access_methods\":{\"referred\":\"Referred\",\"applied\":\"Applied\",\"other\":\"Other\"},\"where\":{\"home\":\"Home\",\"community\":\"Community\",\"public\":\"Public\",\"other\":\"Other\"},\"yes_no_maybe\":{\"yes\":\"Yes\",\"no\":\"No\",\"maybe\":\"Maybe\"},\"opinions_how\":{\"workshop\":\"Workshop\",\"survey\":\"Survey\",\"interview\":\"Interview\"},\"instigate_roles\":{\"pressure_group\":\"Pressure/Campaigning Group\",\"political_party\":\"Political Party\",\"government_department\":\"Government Department\"},\"methods\":{\"workshop\":\"Workshop\",\"online\":\"Online\",\"face\":\"Face-to-Face\"},\"design_assist_broker\":{\"university\":\"University\",\"government\":\"Government\",\"ngo\":\"NGO\",\"other\":\"Other\"}},\"definitions\":{\"model\":{\"title\":\"Model\"},\"discovering\":{\"title\":\"Discovering\",\"discovery_medium\":{\"label\":\"How did you find out about the service?\"},\"information_medium\":{\"label\":\"How did you access information about the service?\"},\"information_experience\":{\"label\":\"What is your opinion about the quality, completeness and accessibility of the information?\"},\"comments\":{\"label\":\"Any further comments, observations?\"}},\"accessing\":{\"title\":\"Accessing\",\"access_method\":{\"label\":\"How did you gain access to the service?\"},\"qualification_process\":{\"label\":\"Was there a qualification or selection process?\"},\"qualification_experience\":{\"label\":\"If so, what was the experience like?\"},\"appropriate_comment\":{\"label\":\"Do you think this aspect of the service is appropriate?\"}},\"using\":{\"title\":\"Using\",\"participate_experience\":{\"label\":\"What was it like to use or participate in the service?\"},\"accessible_experience\":{\"label\":\"Was the service accessible to you?\"},\"time_experience\":{\"label\":\"Was the duration and frequencies of the service events or contacts OK?\"},\"where\":{\"label\":\"Where did you use the service?\"}},\"evaluating\":{\"title\":\"Evaluating\",\"opinions_asked\":{\"label\":\"Were you asked about your opinions about your experience of the service?\",\"hint\":\"Think about where and when this was.\"},\"opinions_how\":{\"label\":\"If yes, how were you asked?\"},\"service_experience\":{\"label\":\"Was the service what you expected?\"},\"surprises_comments\":{\"label\":\"Were there any surprises or disappointments in your experience?\"}},\"designing\":{\"title\":\"Designing\",\"design_input_asked\":{\"label\":\"Were you asked to input into the design of the service?\"},\"design_input_method\":{\"label\":\"How did you participate?\"},\"design_input_experience\":{\"label\":\"How was your experience of this?\"},\"design_assist_asked\":{\"label\":\"Were you invited to assist with the design of the service?\"},\"design_assist_broker\":{\"label\":\"If yes, who by?\",\"hint\":\"Co-creation Broker\"}},\"instigating\":{\"title\":\"Instigating\",\"identify_role\":{\"label\":\"Did you play a role in how the service was initially identified?\"},\"identify_method\":{\"label\":\"How did this identification occur?\"},\"identify_experience\":{\"label\":\"How was your experience of this?\"},\"design_role\":{\"label\":\"Did you play any role in the design and definition of the service? If yes, what were the occasions and channels that this occurred?\"},\"instigate_role\":{\"label\":\"Did you have any role in instigating the project? If yes, were you part of any of the following options? You can choose as many as you like.\"},\"comments\":{\"label\":\"Comments\"}}}},\"social_media\":{\"title\":\"Social Media\",\"dashboard\":{\"title\":\"Social Media\"},\"definitions\":{\"data\":{\"title\":\"Social Media\"}}},\"theory_of_change\":{\"title\":\"Theory of Change\",\"dashboard\":{\"title\":\"Theory of Change\",\"empty_set\":\"There are no theory of change items for this project.\",\"manage\":\"Manage Theory of Change\"},\"definitions\":{\"data\":{\"title\":\"Theory of Change\",\"hint\":\"Please add any theories of change your project may have.\"}}},\"welcome\":{\"title\":\"Welcome\",\"dashboard\":{\"summary\":\"Created by {user} on {date_time}\"}}}}");
 
 /***/ }),
 
@@ -13066,29 +13066,6 @@ var Icons = {
     options: Object,
     definitions: [Object, Array]
   },
-  data: function data() {
-    return {
-      labelConfig: {
-        x: 170,
-        y: 75,
-        opacity: 0.75
-      },
-      tagConfig: {
-        fill: "black",
-        pointerDirection: "down",
-        pointerWidth: 10,
-        pointerHeight: 10,
-        lineJoin: "round"
-      },
-      textConfig: {
-        text: "Tooltip pointing down",
-        fontFamily: "Calibri",
-        fontSize: 18,
-        padding: 5,
-        fill: "white"
-      }
-    };
-  },
   computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(['userGuide']), {
     dataPath: function dataPath() {
       if (this.userGuide.isOpen) {
@@ -13139,18 +13116,6 @@ var Icons = {
       var data = {};
       return data;
     },
-    serviceLabelConfig: function serviceLabelConfig() {
-      return _objectSpread({}, defaultTextConfig, {
-        visible: this.visibility.designing || this.visibility.instigating,
-        fontStyle: 'italic',
-        fontSize: 18,
-        text: 'Service Co-creation Journey',
-        width: 175,
-        align: 'right',
-        x: 0,
-        y: 535
-      });
-    },
     journeyStagesConfig: function journeyStagesConfig() {
       var data = {};
       var tagConfig = {
@@ -13191,7 +13156,7 @@ var Icons = {
           pointerHeight: 0
         }),
         text: _objectSpread({}, textConfig, {
-          text: 'Evaluating'
+          text: this.$t('aspects.user_journey_model.definitions.evaluating.title')
         })
       };
       data.using = {
@@ -13206,7 +13171,7 @@ var Icons = {
           fill: '#FAC090'
         }),
         text: _objectSpread({}, textConfig, {
-          text: 'Using'
+          text: this.$t('aspects.user_journey_model.definitions.using.title')
         })
       };
       data.accessing = {
@@ -13221,7 +13186,7 @@ var Icons = {
           fill: '#D99694'
         }),
         text: _objectSpread({}, textConfig, {
-          text: 'Accessing'
+          text: this.$t('aspects.user_journey_model.definitions.accessing.title')
         })
       };
       data.discovering = {
@@ -13236,7 +13201,7 @@ var Icons = {
           fill: '#4F81BD'
         }),
         text: _objectSpread({}, textConfig, {
-          text: 'Discovering'
+          text: this.$t('aspects.user_journey_model.definitions.discovering.title')
         })
       };
       data.designing = {
@@ -13251,7 +13216,7 @@ var Icons = {
           fill: '#79C36F'
         }),
         text: _objectSpread({}, textConfig, {
-          text: 'Designing'
+          text: this.$t('aspects.user_journey_model.definitions.designing.title')
         })
       };
       data.instigating = {
@@ -13266,7 +13231,7 @@ var Icons = {
           fill: '#DC5C52'
         }),
         text: _objectSpread({}, textConfig, {
-          text: 'Instigating'
+          text: this.$t('aspects.user_journey_model.definitions.instigating.title')
         })
       };
       return data;
@@ -13284,9 +13249,32 @@ var Icons = {
           strokeWidth: 2
         }
       };
+      var brokerValue = this.aspectData.designing.design_assist_broker;
+      data.push(_objectSpread({}, defaultConfig, {
+        labelConfig: {
+          fontStyle: 'bold',
+          fontSize: 16
+        },
+        visibility: brokerValue.length ? true : false,
+        x: -140,
+        y: 230,
+        label: [this.$t('aspects.user_journey_model.definitions.designing.design_assist_broker.hint'), ""].join("\n"),
+        textWidth: 240,
+        width: 250,
+        height: 60
+      }));
+      data.push(_objectSpread({}, defaultConfig, {
+        visibility: brokerValue.length ? true : false,
+        x: -140,
+        y: 230,
+        label: ["", this.$t("aspects.user_journey_model.options.design_assist_broker.".concat(brokerValue))].join("\n"),
+        textWidth: 240,
+        width: 250,
+        height: 60
+      }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.designing,
-        label: "Service Definition",
+        label: this.$t('aspects.user_journey_model.dashboard.service_definition'),
         x: 0,
         y: 140,
         textWidth: 105,
@@ -13295,7 +13283,7 @@ var Icons = {
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.designing,
-        label: "Service Resourcing",
+        label: this.$t('aspects.user_journey_model.dashboard.service_resourcing'),
         x: 130,
         y: 30,
         textWidth: 125,
@@ -13304,7 +13292,7 @@ var Icons = {
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.designing,
-        label: "Reservation & Scheduling",
+        label: this.$t('aspects.user_journey_model.dashboard.reservation_scheduling'),
         x: 305,
         y: 30,
         textWidth: 175,
@@ -13313,7 +13301,7 @@ var Icons = {
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.using,
-        label: "Service Delivery",
+        label: this.$t('aspects.user_journey_model.dashboard.service_delivery'),
         x: 515,
         y: 30,
         textWidth: 100,
@@ -13322,7 +13310,7 @@ var Icons = {
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.discovering,
-        label: "Service Publicity",
+        label: this.$t('aspects.user_journey_model.dashboard.service_publicity'),
         x: 130,
         y: 150,
         textWidth: 135,
@@ -13331,7 +13319,7 @@ var Icons = {
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.accessing,
-        label: "Qualifying Agent",
+        label: this.$t('aspects.user_journey_model.dashboard.qualifying_agent'),
         x: 315,
         y: 150,
         textWidth: 135,
@@ -13340,7 +13328,7 @@ var Icons = {
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.evaluating,
-        label: "Evaluating Agent",
+        label: this.$t('aspects.user_journey_model.dashboard.evaluating_agent'),
         x: 700,
         y: 140,
         textWidth: 100,
@@ -13349,7 +13337,7 @@ var Icons = {
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.discovering,
-        label: "Potential Beneficiary",
+        label: this.$t('aspects.user_journey_model.dashboard.potential_beneficiary'),
         x: 125,
         y: 315,
         textWidth: 130,
@@ -13358,7 +13346,7 @@ var Icons = {
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.accessing,
-        label: "Applicant",
+        label: this.$t('aspects.user_journey_model.dashboard.applicant'),
         x: 315,
         y: 325,
         textWidth: 130,
@@ -13367,7 +13355,7 @@ var Icons = {
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.using,
-        label: "Client",
+        label: this.$t('aspects.user_journey_model.dashboard.client'),
         x: 490,
         y: 325,
         textWidth: 130,
@@ -13391,33 +13379,33 @@ var Icons = {
 
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.designing,
-        text: 'Budget',
+        text: this.$t('aspects.user_journey_model.dashboard.budget'),
         x: 120,
         y: 100
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.designing,
-        text: 'Service Definition',
+        text: this.$t('aspects.user_journey_model.dashboard.service_definition'),
         x: 265,
         y: 110
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.designing,
-        text: 'Outcome Reports',
+        text: this.$t('aspects.user_journey_model.dashboard.outcome_reports'),
         x: 715,
         y: 55,
         width: 80
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.designing,
-        text: 'Provider views',
+        text: this.$t('aspects.user_journey_model.dashboard.provider_views'),
         x: 600,
         y: 145,
         width: 75
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.discovering,
-        text: 'Service publication',
+        text: this.$t('aspects.user_journey_model.dashboard.service_publication'),
         x: 155,
         y: 235,
         width: 100
@@ -13425,19 +13413,19 @@ var Icons = {
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.accessing,
         align: 'center',
-        text: 'Application',
+        text: this.$t('aspects.user_journey_model.dashboard.application'),
         x: 355,
         y: 245
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.using,
-        text: 'Service Use',
+        text: this.$t('aspects.user_journey_model.dashboard.service_use'),
         x: 525,
         y: 245
       }));
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.evaluating,
-        text: 'Clients\' views',
+        text: this.$t('aspects.user_journey_model.dashboard.clients_view'),
         x: 715,
         y: 235,
         width: 90
@@ -13577,7 +13565,7 @@ var Icons = {
         padding: 10,
         fontSize: 18,
         fontStyle: 'normal',
-        text: 'Service Instigation and Policymaking'
+        text: this.$t('aspects.user_journey_model.dashboard.service_instigation_policymaking')
       }); // Inner boxes
       //
 
@@ -13594,7 +13582,7 @@ var Icons = {
         }
       };
       data.boxes.push(_objectSpread({}, defaultConfig, {
-        label: "Pressure / Campaign Group",
+        label: this.$t('aspects.user_journey_model.dashboard.pressure_campaign_group'),
         x: 10,
         y: 85,
         textWidth: 170,
@@ -13602,7 +13590,7 @@ var Icons = {
         height: 65
       }));
       data.boxes.push(_objectSpread({}, defaultConfig, {
-        label: "Government Department",
+        label: this.$t('aspects.user_journey_model.dashboard.government_department'),
         x: 240,
         y: 85,
         textWidth: 130,
@@ -13610,7 +13598,7 @@ var Icons = {
         height: 65
       }));
       data.boxes.push(_objectSpread({}, defaultConfig, {
-        label: "Political Party",
+        label: this.$t('aspects.user_journey_model.dashboard.political_party'),
         x: 150,
         y: 40,
         textWidth: 125,
@@ -13618,7 +13606,7 @@ var Icons = {
         height: 35
       }));
       data.boxes.push(_objectSpread({}, defaultConfig, {
-        label: "Activist",
+        label: this.$t('aspects.user_journey_model.dashboard.activist'),
         x: 55,
         y: 300,
         textWidth: 95,
@@ -13626,7 +13614,7 @@ var Icons = {
         height: 35
       }));
       data.boxes.push(_objectSpread({}, defaultConfig, {
-        label: "Voter",
+        label: this.$t('aspects.user_journey_model.dashboard.voter'),
         x: 160,
         y: 300,
         textWidth: 95,
@@ -13634,7 +13622,7 @@ var Icons = {
         height: 35
       }));
       data.boxes.push(_objectSpread({}, defaultConfig, {
-        label: "Citizen",
+        label: this.$t('aspects.user_journey_model.dashboard.citizen'),
         x: 265,
         y: 300,
         textWidth: 95,
@@ -13697,17 +13685,17 @@ var Icons = {
 
       var xOffset = 520;
       labels.push(_objectSpread({}, defaultLabelConfig, {
-        text: 'Service Workflow',
+        text: this.$t('aspects.user_journey_model.dashboard.service_workflow'),
         width: 100,
-        align: 'right',
+        align: 'center',
         x: 0,
         y: 0,
         // y: -130,
         offsetX: -250,
-        offsetY: 200
+        offsetY: 170
       }));
       labels.push(_objectSpread({}, defaultLabelConfig, {
-        text: 'Touch Points',
+        text: this.$t('aspects.user_journey_model.dashboard.touch_points'),
         width: 100,
         align: 'right',
         x: 0,
@@ -13716,7 +13704,7 @@ var Icons = {
         offsetY: 60
       }));
       labels.push(_objectSpread({}, defaultLabelConfig, {
-        text: 'Service Experience',
+        text: this.$t('aspects.user_journey_model.dashboard.service_experience'),
         width: 100,
         align: 'right',
         x: 0,
@@ -13725,7 +13713,7 @@ var Icons = {
         offsetY: -10
       }));
       labels.push(_objectSpread({}, defaultLabelConfig, {
-        text: 'Carrier of Experience',
+        text: this.$t('aspects.user_journey_model.dashboard.carrier_of_experience'),
         width: 100,
         align: 'right',
         x: 0,

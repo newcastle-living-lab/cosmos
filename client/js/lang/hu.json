@@ -532,7 +532,35 @@
         "user_journey_model": {
             "dashboard": {
                 "one": "",
-                "other": ""
+                "other": "",
+                "activist": "Aktivista",
+                "applicant": "Pályázó",
+                "application": "Alkalmazás",
+                "budget": "Költségvetés",
+                "carrier_of_experience": "A tapasztalat hordozója",
+                "citizen": "Polgár",
+                "client": "Ügyfél",
+                "clients_view": "Az ügyfelek véleménye",
+                "evaluating_agent": "Értékelő ügynök",
+                "government_department": "Kormányhivatal",
+                "outcome_reports": "Eredményjelentések",
+                "political_party": "Politikai párt",
+                "potential_beneficiary": "Potenciális kedvezményezett",
+                "pressure_campaign_group": "Nyomás \/ Kampánycsoport",
+                "provider_views": "Szolgáltató nézetei",
+                "qualifying_agent": "Minősítő ügynök",
+                "reservation_scheduling": "Foglalás és ütemezés",
+                "service_definition": "Szolgáltatás meghatározása",
+                "service_delivery": "Szolgáltatás kézbesítése",
+                "service_experience": "Szolgáltatási tapasztalat",
+                "service_instigation_policymaking": "Szolgáltatás ösztönzése és döntéshozatal",
+                "service_publication": "Szolgáltatási kiadvány",
+                "service_publicity": "Szolgáltatás nyilvánossága",
+                "service_resourcing": "Szolgáltatás újrafeldolgozása",
+                "service_use": "Szolgáltatás használata",
+                "service_workflow": "Szolgáltatási munkafolyamat",
+                "touch_points": "Érintő pontok",
+                "voter": "Szavazó"
             },
             "definitions": {
                 "accessing": {

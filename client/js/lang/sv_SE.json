@@ -532,7 +532,35 @@
         "user_journey_model": {
             "dashboard": {
                 "one": "",
-                "other": ""
+                "other": "",
+                "activist": "Aktivist",
+                "applicant": "Sökande",
+                "application": "Ansökan",
+                "budget": "Budget",
+                "carrier_of_experience": "Bärare av erfarenhet",
+                "citizen": "Medborgare",
+                "client": "Klient",
+                "clients_view": "Kundernas åsikter",
+                "evaluating_agent": "Utvärderingsagent",
+                "government_department": "Myndighet",
+                "outcome_reports": "Resultatrapporter",
+                "political_party": "Politiskt parti",
+                "potential_beneficiary": "Potentiell mottagare",
+                "pressure_campaign_group": "Tryck \/ Kampanjgrupp",
+                "provider_views": "Leverantörens åsikter",
+                "qualifying_agent": "Kvalificerande agent",
+                "reservation_scheduling": "Bokning och schemaläggning",
+                "service_definition": "Service Definition",
+                "service_delivery": "Tjänsteleverans",
+                "service_experience": "Serviceupplevelse",
+                "service_instigation_policymaking": "Serviceinstitution och policyframställning",
+                "service_publication": "Tjänstepublikation",
+                "service_publicity": "Tjänstens publicitet",
+                "service_resourcing": "Tjänsteresourcing",
+                "service_use": "Tjänsteanvändning",
+                "service_workflow": "Service arbetsflöde",
+                "touch_points": "Beröringspunkter",
+                "voter": "Väljare"
             },
             "definitions": {
                 "accessing": {

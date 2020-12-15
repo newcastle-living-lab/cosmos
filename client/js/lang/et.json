@@ -532,7 +532,35 @@
         "user_journey_model": {
             "dashboard": {
                 "one": "",
-                "other": ""
+                "other": "",
+                "activist": "Aktivist",
+                "applicant": "Taotleja",
+                "application": "Rakendus",
+                "budget": "Eelarve",
+                "carrier_of_experience": "Kogemuste kandja",
+                "citizen": "Kodanik",
+                "client": "Klient",
+                "clients_view": "Klientide vaated",
+                "evaluating_agent": "Hindav esindaja",
+                "government_department": "Valitsuse osakond",
+                "outcome_reports": "Tulemuste aruanded",
+                "political_party": "Erakond",
+                "potential_beneficiary": "Potentsiaalne kasusaaja",
+                "pressure_campaign_group": "Surve- \/ kampaaniarühm",
+                "provider_views": "Pakkuja vaated",
+                "qualifying_agent": "Kvalifitseeruv esindaja",
+                "reservation_scheduling": "Broneerimine ja ajastamine",
+                "service_definition": "Teenuse määratlus",
+                "service_delivery": "Teenuse kohaletoimetamine",
+                "service_experience": "Teeninduskogemus",
+                "service_instigation_policymaking": "Teenuse õhutamine ja poliitika kujundamine",
+                "service_publication": "Teenuse väljaanne",
+                "service_publicity": "Teenuse avalikkus",
+                "service_resourcing": "Teenuse allhange",
+                "service_use": "Teenuse kasutamine",
+                "service_workflow": "Teenuse töövoog",
+                "touch_points": "Puudutage punkte",
+                "voter": "Valija"
             },
             "definitions": {
                 "accessing": {

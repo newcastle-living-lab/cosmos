@@ -532,7 +532,35 @@
         "user_journey_model": {
             "dashboard": {
                 "one": "",
-                "other": ""
+                "other": "",
+                "activist": "Activista",
+                "applicant": "Solicitante",
+                "application": "Solicitud",
+                "budget": "Presupuesto",
+                "carrier_of_experience": "Portador de experiencia",
+                "citizen": "Ciudadano",
+                "client": "Cliente",
+                "clients_view": "Opiniones de los clientes",
+                "evaluating_agent": "Agente evaluador",
+                "government_department": "Departamento de Gobierno",
+                "outcome_reports": "Informes de resultados",
+                "political_party": "Partido político",
+                "potential_beneficiary": "Beneficiario potencial",
+                "pressure_campaign_group": "Grupo de presión \/ campañas",
+                "provider_views": "Vistas del proveedor",
+                "qualifying_agent": "Agente calificado",
+                "reservation_scheduling": "Reserva y programación",
+                "service_definition": "Definición de servicio",
+                "service_delivery": "Entrega de servicios",
+                "service_experience": "Experiencia de servicio",
+                "service_instigation_policymaking": "Instigación de servicios y formulación de políticas",
+                "service_publication": "Publicación de servicio",
+                "service_publicity": "Publicidad de servicio",
+                "service_resourcing": "Recursos del servicio",
+                "service_use": "Uso del servicio",
+                "service_workflow": "Flujo de trabajo de servicio",
+                "touch_points": "Puntos de contacto",
+                "voter": "Votante"
             },
             "definitions": {
                 "accessing": {

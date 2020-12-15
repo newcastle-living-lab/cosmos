@@ -532,7 +532,35 @@
         "user_journey_model": {
             "dashboard": {
                 "one": "",
-                "other": ""
+                "other": "",
+                "activist": "Ακτιβιστής",
+                "applicant": "Αιτών",
+                "application": "Εφαρμογή",
+                "budget": "Προϋπολογισμός",
+                "carrier_of_experience": "Μεταφορέας εμπειρίας",
+                "citizen": "Πολίτης",
+                "client": "Πελάτης",
+                "clients_view": "Απόψεις πελατών",
+                "evaluating_agent": "Αξιολογώντας πράκτορας",
+                "government_department": "Κυβερνητικό Τμήμα",
+                "outcome_reports": "Αναφορές αποτελεσμάτων",
+                "political_party": "Πολιτικό κόμμα",
+                "potential_beneficiary": "Πιθανός δικαιούχος",
+                "pressure_campaign_group": "Ομάδα πίεσης \/ εκστρατείας",
+                "provider_views": "Προβολές παρόχου",
+                "qualifying_agent": "Ειδικός πράκτορας",
+                "reservation_scheduling": "Κράτηση & προγραμματισμός",
+                "service_definition": "Ορισμός υπηρεσίας",
+                "service_delivery": "Παροχή υπηρεσιών",
+                "service_experience": "Εμπειρία σέρβις",
+                "service_instigation_policymaking": "Υποκίνηση υπηρεσίας και χάραξη πολιτικής",
+                "service_publication": "Δημοσίευση υπηρεσίας",
+                "service_publicity": "Δημοσιότητα υπηρεσίας",
+                "service_resourcing": "Πόρος υπηρεσιών",
+                "service_use": "Χρήση υπηρεσίας",
+                "service_workflow": "Ροή εργασιών υπηρεσίας",
+                "touch_points": "Σημεία επαφής",
+                "voter": "Ψηφοφόρος"
             },
             "definitions": {
                 "accessing": {

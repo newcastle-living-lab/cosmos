@@ -98,30 +98,6 @@ export default {
 		definitions: [Object, Array],
 	},
 
-	data() {
-		return {
-			labelConfig: {
-				x: 170,
-				y: 75,
-				opacity: 0.75,
-			},
-			tagConfig: {
-				fill: "black",
-				pointerDirection: "down",
-				pointerWidth: 10,
-				pointerHeight: 10,
-				lineJoin: "round",
-			},
-			textConfig: {
-				text: "Tooltip pointing down",
-				fontFamily: "Calibri",
-				fontSize: 18,
-				padding: 5,
-				fill: "white",
-			},
-		}
-	},
-
 	computed: {
 
 		...get(['userGuide']),
@@ -217,20 +193,6 @@ export default {
 			return data;
 		},
 
-		serviceLabelConfig() {
-			return {
-				...defaultTextConfig,
-				visible: (this.visibility.designing || this.visibility.instigating),
-				fontStyle: 'italic',
-				fontSize: 18,
-				text: 'Service Co-creation Journey',
-				width: 175,
-				align: 'right',
-				x: 0,
-				y: 535,
-			}
-		},
-
 		journeyStagesConfig() {
 
 			var data = {};
@@ -266,42 +228,42 @@ export default {
 				group: { visible: visibility.evaluating },
 				label: { x: xPos(5), y: yPos, },
 				tag: { ...tagConfig, fill: '#604A7B', pointerHeight: 0 },
-				text: { ...textConfig, text: 'Evaluating' },
+				text: { ...textConfig, text: this.$t('aspects.user_journey_model.definitions.evaluating.title') },
 			};
 
 			data.using = {
 				group: { visible: visibility.using },
 				label: { x: xPos(4), y: yPos, },
 				tag: { ...tagConfig, fill: '#FAC090', },
-				text: { ...textConfig, text: 'Using' },
+				text: { ...textConfig, text: this.$t('aspects.user_journey_model.definitions.using.title') },
 			};
 
 			data.accessing = {
 				group: { visible: visibility.accessing },
 				label: { x: xPos(3), y: yPos, },
 				tag: { ...tagConfig, fill: '#D99694', },
-				text: { ...textConfig, text: 'Accessing' },
+				text: { ...textConfig, text: this.$t('aspects.user_journey_model.definitions.accessing.title') },
 			};
 
 			data.discovering = {
 				group: { visible: visibility.discovering },
 				label: { x: xPos(2), y: yPos, },
 				tag: { ...tagConfig, fill: '#4F81BD', },
-				text: { ...textConfig, text: 'Discovering' },
+				text: { ...textConfig, text: this.$t('aspects.user_journey_model.definitions.discovering.title') },
 			};
 
 			data.designing = {
 				group: { visible: visibility.designing },
 				label: { x: xPos(1), y: yPos, },
 				tag: { ...tagConfig, fill: '#79C36F', },
-				text: { ...textConfig, text: 'Designing' },
+				text: { ...textConfig, text: this.$t('aspects.user_journey_model.definitions.designing.title') },
 			};
 
 			data.instigating = {
 				group: { visible: visibility.instigating },
 				label: { x: xPos(0), y: yPos, },
 				tag: { ...tagConfig, fill: '#DC5C52', },
-				text: { ...textConfig, text: 'Instigating' },
+				text: { ...textConfig, text: this.$t('aspects.user_journey_model.definitions.instigating.title') },
 			};
 
 			return data;
@@ -318,10 +280,40 @@ export default {
 				borderConfig: { cornerRadius: 0, strokeWidth: 2 },
 			};
 
+			var brokerValue = this.aspectData.designing.design_assist_broker;
+			data.push({
+				...defaultConfig,
+				labelConfig: { fontStyle: 'bold', fontSize: 16 },
+				visibility: brokerValue.length ? true : false,
+				x: -140,
+				y: 230,
+				label: [
+					this.$t('aspects.user_journey_model.definitions.designing.design_assist_broker.hint'),
+					""
+				].join("\n"),
+				textWidth: 240,
+				width: 250,
+				height: 60,
+			});
+
+			data.push({
+				...defaultConfig,
+				visibility: brokerValue.length ? true : false,
+				x: -140,
+				y: 230,
+				label: [
+					"",
+					this.$t(`aspects.user_journey_model.options.design_assist_broker.${brokerValue}`)
+				].join("\n"),
+				textWidth: 240,
+				width: 250,
+				height: 60,
+			});
+
 			data.push({
 				...defaultConfig,
 				visible: visibility.designing,
-				label: "Service Definition",
+				label: this.$t('aspects.user_journey_model.dashboard.service_definition'),
 				x: 0,
 				y: 140,
 				textWidth: 105,
@@ -332,7 +324,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.designing,
-				label: "Service Resourcing",
+				label: this.$t('aspects.user_journey_model.dashboard.service_resourcing'),
 				x: 130,
 				y: 30,
 				textWidth: 125,
@@ -343,7 +335,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.designing,
-				label: "Reservation & Scheduling",
+				label: this.$t('aspects.user_journey_model.dashboard.reservation_scheduling'),
 				x: 305,
 				y: 30,
 				textWidth: 175,
@@ -354,7 +346,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.using,
-				label: "Service Delivery",
+				label: this.$t('aspects.user_journey_model.dashboard.service_delivery'),
 				x: 515,
 				y: 30,
 				textWidth: 100,
@@ -365,7 +357,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.discovering,
-				label: "Service Publicity",
+				label: this.$t('aspects.user_journey_model.dashboard.service_publicity'),
 				x: 130,
 				y: 150,
 				textWidth: 135,
@@ -376,7 +368,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.accessing,
-				label: "Qualifying Agent",
+				label: this.$t('aspects.user_journey_model.dashboard.qualifying_agent'),
 				x: 315,
 				y: 150,
 				textWidth: 135,
@@ -387,7 +379,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.evaluating,
-				label: "Evaluating Agent",
+				label: this.$t('aspects.user_journey_model.dashboard.evaluating_agent'),
 				x: 700,
 				y: 140,
 				textWidth: 100,
@@ -398,7 +390,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.discovering,
-				label: "Potential Beneficiary",
+				label: this.$t('aspects.user_journey_model.dashboard.potential_beneficiary'),
 				x: 125,
 				y: 315,
 				textWidth: 130,
@@ -409,7 +401,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.accessing,
-				label: "Applicant",
+				label: this.$t('aspects.user_journey_model.dashboard.applicant'),
 				x: 315,
 				y: 325,
 				textWidth: 130,
@@ -420,7 +412,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.using,
-				label: "Client",
+				label: this.$t('aspects.user_journey_model.dashboard.client'),
 				x: 490,
 				y: 325,
 				textWidth: 130,
@@ -450,7 +442,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.designing,
-				text: 'Budget',
+				text: this.$t('aspects.user_journey_model.dashboard.budget'),
 				x: 120,
 				y: 100,
 			});
@@ -458,7 +450,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.designing,
-				text: 'Service Definition',
+				text: this.$t('aspects.user_journey_model.dashboard.service_definition'),
 				x: 265,
 				y: 110,
 			});
@@ -466,7 +458,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.designing,
-				text: 'Outcome Reports',
+				text: this.$t('aspects.user_journey_model.dashboard.outcome_reports'),
 				x: 715,
 				y: 55,
 				width: 80,
@@ -475,7 +467,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.designing,
-				text: 'Provider views',
+				text: this.$t('aspects.user_journey_model.dashboard.provider_views'),
 				x: 600,
 				y: 145,
 				width: 75,
@@ -484,7 +476,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.discovering,
-				text: 'Service publication',
+				text: this.$t('aspects.user_journey_model.dashboard.service_publication'),
 				x: 155,
 				y: 235,
 				width: 100,
@@ -494,7 +486,7 @@ export default {
 				...defaultConfig,
 				visible: visibility.accessing,
 				align: 'center',
-				text: 'Application',
+				text: this.$t('aspects.user_journey_model.dashboard.application'),
 				x: 355,
 				y: 245,
 			});
@@ -502,7 +494,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.using,
-				text: 'Service Use',
+				text: this.$t('aspects.user_journey_model.dashboard.service_use'),
 				x: 525,
 				y: 245,
 			});
@@ -510,7 +502,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.evaluating,
-				text: 'Clients\' views',
+				text: this.$t('aspects.user_journey_model.dashboard.clients_view'),
 				x: 715,
 				y: 235,
 				width: 90,
@@ -668,7 +660,7 @@ export default {
 				padding: 10,
 				fontSize: 18,
 				fontStyle: 'normal',
-				text: 'Service Instigation and Policymaking',
+				text: this.$t('aspects.user_journey_model.dashboard.service_instigation_policymaking'),
 			};
 
 			// Inner boxes
@@ -683,7 +675,7 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				label: "Pressure / Campaign Group",
+				label: this.$t('aspects.user_journey_model.dashboard.pressure_campaign_group'),
 				x: 10,
 				y: 85,
 				textWidth: 170,
@@ -693,7 +685,7 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				label: "Government Department",
+				label: this.$t('aspects.user_journey_model.dashboard.government_department'),
 				x: 240,
 				y: 85,
 				textWidth: 130,
@@ -703,7 +695,7 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				label: "Political Party",
+				label: this.$t('aspects.user_journey_model.dashboard.political_party'),
 				x: 150,
 				y: 40,
 				textWidth: 125,
@@ -713,7 +705,7 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				label: "Activist",
+				label: this.$t('aspects.user_journey_model.dashboard.activist'),
 				x: 55,
 				y: 300,
 				textWidth: 95,
@@ -723,7 +715,7 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				label: "Voter",
+				label: this.$t('aspects.user_journey_model.dashboard.voter'),
 				x: 160,
 				y: 300,
 				textWidth: 95,
@@ -733,7 +725,7 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				label: "Citizen",
+				label: this.$t('aspects.user_journey_model.dashboard.citizen'),
 				x: 265,
 				y: 300,
 				textWidth: 95,
@@ -817,19 +809,19 @@ export default {
 
 			labels.push({
 				...defaultLabelConfig,
-				text: 'Service Workflow',
+				text: this.$t('aspects.user_journey_model.dashboard.service_workflow'),
 				width: 100,
-				align: 'right',
+				align: 'center',
 				x: 0,
 				y: 0,
 				// y: -130,
 				offsetX: -250,
-				offsetY: 200,
+				offsetY: 170,
 			});
 
 			labels.push({
 				...defaultLabelConfig,
-				text: 'Touch Points',
+				text: this.$t('aspects.user_journey_model.dashboard.touch_points'),
 				width: 100,
 				align: 'right',
 				x: 0,
@@ -840,7 +832,7 @@ export default {
 
 			labels.push({
 				...defaultLabelConfig,
-				text: 'Service Experience',
+				text: this.$t('aspects.user_journey_model.dashboard.service_experience'),
 				width: 100,
 				align: 'right',
 				x: 0,
@@ -851,7 +843,7 @@ export default {
 
 			labels.push({
 				...defaultLabelConfig,
-				text: 'Carrier of Experience',
+				text: this.$t('aspects.user_journey_model.dashboard.carrier_of_experience'),
 				width: 100,
 				align: 'right',
 				x: 0,

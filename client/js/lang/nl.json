@@ -532,7 +532,35 @@
         "user_journey_model": {
             "dashboard": {
                 "one": "",
-                "other": ""
+                "other": "",
+                "activist": "Activist",
+                "applicant": "Aanvrager",
+                "application": "Toepassing",
+                "budget": "Begroting",
+                "carrier_of_experience": "Drager van ervaring",
+                "citizen": "Inwoner",
+                "client": "Cliënt",
+                "clients_view": "Meningen van klanten",
+                "evaluating_agent": "Evaluerende agent",
+                "government_department": "Overheidsdienst",
+                "outcome_reports": "Uitkomstrapporten",
+                "political_party": "Politieke partij",
+                "potential_beneficiary": "Potentiële begunstigde",
+                "pressure_campaign_group": "Druk \/ campagnegroep",
+                "provider_views": "Provider-weergaven",
+                "qualifying_agent": "Kwalificerende agent",
+                "reservation_scheduling": "Reservering en planning",
+                "service_definition": "Dienstdefinitie",
+                "service_delivery": "Levering van diensten",
+                "service_experience": "Service-ervaring",
+                "service_instigation_policymaking": "Dienstverlening en beleidsvorming",
+                "service_publication": "Dienst publicatie",
+                "service_publicity": "Service Publiciteit",
+                "service_resourcing": "Dienstverlening",
+                "service_use": "Service gebruik",
+                "service_workflow": "Servicewerkstroom",
+                "touch_points": "Aanraak punten",
+                "voter": "Kiezer"
             },
             "definitions": {
                 "accessing": {
