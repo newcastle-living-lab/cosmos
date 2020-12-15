@@ -550,6 +550,25 @@
                     },
                     "title": "Juurdepääs"
                 },
+                "designing": {
+                    "design_assist_asked": {
+                        "label": "Kas teid kutsuti teenuse kujundamisel abiks olema?"
+                    },
+                    "design_assist_broker": {
+                        "hint": "Ühisloome maakler",
+                        "label": "Kui jah, siis kelle poolt?"
+                    },
+                    "design_input_asked": {
+                        "label": "Kas teil paluti sisestada teenuse kujundus?"
+                    },
+                    "design_input_experience": {
+                        "label": "Kuidas teie kogemus sellest oli?"
+                    },
+                    "design_input_method": {
+                        "label": "Kuidas osalesid?"
+                    },
+                    "title": "Kujundamine"
+                },
                 "discovering": {
                     "comments": {
                         "label": "Kas on veel märkusi, tähelepanekuid?"
@@ -587,6 +606,15 @@
                     },
                     "design_role": {
                         "label": "Kas mängisite mingit rolli teenuse kujundamisel ja määratlemisel? Kui jah, siis milliseid juhtumeid ja kanaleid see juhtus?"
+                    },
+                    "identify_experience": {
+                        "label": "Kuidas teie kogemus sellest oli?"
+                    },
+                    "identify_method": {
+                        "label": "Kuidas see tuvastamine toimus?"
+                    },
+                    "identify_role": {
+                        "label": "Kas mängisite rolli teenuse esialgsel tuvastamisel?"
                     },
                     "instigate_role": {
                         "label": "Kas teil oli projekti käivitamisel mingit rolli? Kui jah, kas kuulusite mõnda järgmistest võimalustest? Saate valida nii palju kui soovite."
@@ -627,6 +655,12 @@
                     "other": "Muu",
                     "referred": "Viidatud"
                 },
+                "design_assist_broker": {
+                    "government": "Valitsus",
+                    "ngo": "Valitsusväline organisatsioon (valitsusväline organisatsioon)",
+                    "other": "Muu",
+                    "university": "Ülikool"
+                },
                 "instigate_roles": {
                     "government_department": "Valitsuse osakond",
                     "political_party": "Erakond",
@@ -638,6 +672,11 @@
                     "referral": "Suunamine",
                     "social": "Sotsiaalmeedia",
                     "word_of_mouth": "Suusõnaliselt"
+                },
+                "methods": {
+                    "face": "Näost näkku",
+                    "online": "Veebis",
+                    "workshop": "Töötuba"
                 },
                 "opinions_how": {
                     "interview": "Intervjuu",

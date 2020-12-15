@@ -550,6 +550,25 @@
                     },
                     "title": "Pääsy"
                 },
+                "designing": {
+                    "design_assist_asked": {
+                        "label": "Onko sinut kutsuttu avustamaan palvelun suunnittelussa?"
+                    },
+                    "design_assist_broker": {
+                        "hint": "Yhteisluomisvälittäjä",
+                        "label": "Jos kyllä, kuka?"
+                    },
+                    "design_input_asked": {
+                        "label": "Onko sinua pyydetty osallistumaan palvelun suunnitteluun?"
+                    },
+                    "design_input_experience": {
+                        "label": "Millainen oli kokemuksesi tästä?"
+                    },
+                    "design_input_method": {
+                        "label": "Kuinka osallistuit?"
+                    },
+                    "title": "Suunnittelu"
+                },
                 "discovering": {
                     "comments": {
                         "label": "Muita kommentteja, huomautuksia?"
@@ -587,6 +606,15 @@
                     },
                     "design_role": {
                         "label": "Soititko mitään roolia palvelun suunnittelussa ja määrittelyssä? Jos kyllä, mitä tapauksia ja kanavia tämä tapahtui?"
+                    },
+                    "identify_experience": {
+                        "label": "Millainen oli kokemuksesi tästä?"
+                    },
+                    "identify_method": {
+                        "label": "Kuinka tämä tunnistaminen tapahtui?"
+                    },
+                    "identify_role": {
+                        "label": "Oliko sinulla rooli palvelun tunnistamisessa?"
                     },
                     "instigate_role": {
                         "label": "Onko sinulla mitään roolia projektin käynnistämisessä? Jos kyllä, olitko osa jotakin seuraavista vaihtoehdoista? Voit valita niin monta kuin haluat."
@@ -627,6 +655,12 @@
                     "other": "Muu",
                     "referred": "Viitattu"
                 },
+                "design_assist_broker": {
+                    "government": "Hallitus",
+                    "ngo": "Kansalaisjärjestö (valtiosta vapaa järjestö)",
+                    "other": "Muu",
+                    "university": "Yliopisto"
+                },
                 "instigate_roles": {
                     "government_department": "Ministeriö",
                     "political_party": "Poliittinen puolue",
@@ -638,6 +672,11 @@
                     "referral": "Lähetys",
                     "social": "Sosiaalinen media",
                     "word_of_mouth": "Suusanallisesti"
+                },
+                "methods": {
+                    "face": "Kasvokkain",
+                    "online": "Verkossa",
+                    "workshop": "Työpaja"
                 },
                 "opinions_how": {
                     "interview": "Haastatella",

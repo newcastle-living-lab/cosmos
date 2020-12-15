@@ -552,6 +552,25 @@
                     },
                     "title": "Dostęp"
                 },
+                "designing": {
+                    "design_assist_asked": {
+                        "label": "Czy zostałeś zaproszony do pomocy przy projektowaniu usługi?"
+                    },
+                    "design_assist_broker": {
+                        "hint": "Broker współtworzenia",
+                        "label": "Jeśli tak, to kto?"
+                    },
+                    "design_input_asked": {
+                        "label": "Czy zostałeś poproszony o wkład w projekt usługi?"
+                    },
+                    "design_input_experience": {
+                        "label": "Jakie było twoje doświadczenie?"
+                    },
+                    "design_input_method": {
+                        "label": "W jaki sposób uczestniczyłeś?"
+                    },
+                    "title": "Projektowanie"
+                },
                 "discovering": {
                     "comments": {
                         "label": "Jakieś dalsze uwagi, spostrzeżenia?"
@@ -589,6 +608,15 @@
                     },
                     "design_role": {
                         "label": "Czy odegrałeś jakąś rolę w projektowaniu i definiowaniu usługi? Jeśli tak, jakie były okazje i kanały, w których to się działo?"
+                    },
+                    "identify_experience": {
+                        "label": "Jakie było twoje doświadczenie?"
+                    },
+                    "identify_method": {
+                        "label": "Jak doszło do tej identyfikacji?"
+                    },
+                    "identify_role": {
+                        "label": "Czy odegrałeś jakąś rolę w początkowej identyfikacji usługi?"
                     },
                     "instigate_role": {
                         "label": "Czy odegrałeś jakąś rolę w zainicjowaniu projektu? Jeśli tak, czy uczestniczyłeś w którejś z poniższych opcji? Możesz wybrać tyle, ile chcesz."
@@ -629,6 +657,12 @@
                     "other": "Inny",
                     "referred": "Polecony"
                 },
+                "design_assist_broker": {
+                    "government": "Rząd",
+                    "ngo": "Organizacja pozarządowa (Organizacja Pozarządowa)",
+                    "other": "Inny",
+                    "university": "Uniwersytet"
+                },
                 "instigate_roles": {
                     "government_department": "Departament rządu",
                     "political_party": "Partia polityczna",
@@ -640,6 +674,11 @@
                     "referral": "Skierowanie",
                     "social": "Media społecznościowe",
                     "word_of_mouth": "Plotka"
+                },
+                "methods": {
+                    "face": "Twarzą w twarz",
+                    "online": "online",
+                    "workshop": "Warsztat"
                 },
                 "opinions_how": {
                     "interview": "Wywiad",

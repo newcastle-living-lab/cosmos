@@ -550,6 +550,25 @@
                     },
                     "title": "Zugriff"
                 },
+                "designing": {
+                    "design_assist_asked": {
+                        "label": "Wurden Sie eingeladen, bei der Gestaltung des Dienstes mitzuwirken?"
+                    },
+                    "design_assist_broker": {
+                        "hint": "Co-Creation Broker",
+                        "label": "Wenn ja, von wem?"
+                    },
+                    "design_input_asked": {
+                        "label": "Wurden Sie gebeten, sich an der Gestaltung des Dienstes zu beteiligen?"
+                    },
+                    "design_input_experience": {
+                        "label": "Wie war Ihre Erfahrung damit?"
+                    },
+                    "design_input_method": {
+                        "label": "Wie haben Sie teilgenommen?"
+                    },
+                    "title": "Entwerfen"
+                },
                 "discovering": {
                     "comments": {
                         "label": "Weitere Kommentare, Beobachtungen?"
@@ -587,6 +606,15 @@
                     },
                     "design_role": {
                         "label": "Haben Sie bei der Gestaltung und Definition des Dienstes eine Rolle gespielt? Wenn ja, zu welchen Anlässen und Kanälen ist dies geschehen?"
+                    },
+                    "identify_experience": {
+                        "label": "Wie war Ihre Erfahrung damit?"
+                    },
+                    "identify_method": {
+                        "label": "Wie kam es zu dieser Identifizierung?"
+                    },
+                    "identify_role": {
+                        "label": "Haben Sie eine Rolle bei der ursprünglichen Identifizierung des Dienstes gespielt?"
                     },
                     "instigate_role": {
                         "label": "Hatten Sie eine Rolle bei der Initiierung des Projekts? Wenn ja, waren Sie Teil einer der folgenden Optionen? Sie können so viele auswählen, wie Sie möchten."
@@ -627,6 +655,12 @@
                     "other": "Andere",
                     "referred": "Weitergeleitet"
                 },
+                "design_assist_broker": {
+                    "government": "Regierung",
+                    "ngo": "NRO (Nichtregierungsorganisation)",
+                    "other": "Andere",
+                    "university": "Universität"
+                },
                 "instigate_roles": {
                     "government_department": "Regierungsabteilung",
                     "political_party": "Politische Partei",
@@ -638,6 +672,11 @@
                     "referral": "Verweisung",
                     "social": "Sozialen Medien",
                     "word_of_mouth": "Mundpropaganda"
+                },
+                "methods": {
+                    "face": "Von Angesicht zu Angesicht",
+                    "online": "Online",
+                    "workshop": "Werkstatt"
                 },
                 "opinions_how": {
                     "interview": "Interview",

@@ -596,6 +596,17 @@
 					"pressure_group": "Pressure/Campaigning Group",
 					"political_party": "Political Party",
 					"government_department": "Government Department"
+				},
+				"methods": {
+					"workshop": "Workshop",
+					"online": "Online",
+					"face": "Face-to-Face"
+				},
+				"design_assist_broker": {
+					"university": "University",
+					"government": "Government",
+					"ngo": "NGO",
+					"other": "Other"
 				}
 			},
 			"definitions": {
@@ -663,8 +674,36 @@
 						"label": "Were there any surprises or disappointments in your experience?"
 					}
 				},
+				"designing": {
+					"title": "Designing",
+					"design_input_asked": {
+						"label": "Were you asked to input into the design of the service?"
+					},
+					"design_input_method": {
+						"label": "How did you participate?"
+					},
+					"design_input_experience": {
+						"label": "How was your experience of this?"
+					},
+					"design_assist_asked": {
+						"label": "Were you invited to assist with the design of the service?"
+					},
+					"design_assist_broker": {
+						"label": "If yes, who by?",
+						"hint": "Co-creation Broker:"
+					}
+				},
 				"instigating": {
 					"title": "Instigating",
+					"identify_role": {
+						"label": "Did you play a role in how the service was initially identified?"
+					},
+					"identify_method": {
+						"label": "How did this identification occur?"
+					},
+					"identify_experience": {
+						"label": "How was your experience of this?"
+					},
 					"design_role": {
 						"label": "Did you play any role in the design and definition of the service? If yes, what were the occasions and channels that this occurred?"
 					},

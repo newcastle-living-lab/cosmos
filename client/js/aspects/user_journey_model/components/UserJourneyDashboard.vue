@@ -5,7 +5,15 @@
 		<CosmosTitle :aspectId="aspectId" :options="options" />
 
 		<!-- Swim Lanes -->
-		<v-group :config="{ x: 547, y: 430 }">
+
+		<v-group v-for="(stage, idx) in journeyStagesConfig" :key="'stage' + idx" :config="stage.group">
+			<v-label :config="stage.label">
+				<v-tag :config="stage.tag" />
+				<v-text :config="stage.text" />
+			</v-label>
+		</v-group>
+
+		<v-group :config="{ x: 187, y: 550 }">
 			<v-rect
 				v-for="(rect, idx) in swimLanesConfig"
 				:key="'swimLane' + idx"
@@ -23,14 +31,7 @@
 			/>
 		</v-group>
 
-		<v-group v-for="(stage, idx) in journeyStagesConfig" :key="'stage' + idx" :config="stage.group">
-			<v-label :config="stage.label">
-				<v-tag :config="stage.tag" />
-				<v-text :config="stage.text" />
-			</v-label>
-		</v-group>
-
-		<v-group :config="{ x: 490, y: 85, scale: { x: 0.85, y: 0.85 } }">
+		<v-group :config="{ x: 490, y: 95, scale: { x: 0.9, y: 0.9 } }">
 			<v-group v-for="(text, idx) in flowchartTextConfig" :key="'flowText' + idx" :config="{ x: 0, y: 0 }">
 				<CosmosTextBox :options="options" :config="text" />
 			</v-group>
@@ -83,6 +84,7 @@ const defaultTextConfig = {
 
 const Icons = {
 	check: 'M5 13l4 4L19 7',
+	question: 'M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z',
 	cross: 'M6 18L18 6M6 6l12 12',
 };
 
@@ -187,10 +189,14 @@ export default {
 					&& this.aspectData.evaluating.surprises_comments.length
 				) ? true : false;
 
-				config.designing = config.evaluating;
+				config.designing = (
+					this.aspectData.designing.design_input_asked.length
+					&& this.aspectData.designing.design_assist_asked.length
+				) ? true : false;
 
 				config.instigating = (
-					this.aspectData.instigating.design_role.length
+					this.aspectData.instigating.identify_role.length
+					&& this.aspectData.instigating.design_role.length
 					&& this.aspectData.instigating.comments.length
 				) ? true : false;
 
@@ -252,7 +258,7 @@ export default {
 				return offset + (itemNum * 180);
 			};
 
-			const yPos = 555;
+			const yPos = 500;
 
 			const visibility = this.visibility;
 
@@ -709,7 +715,7 @@ export default {
 				...defaultConfig,
 				label: "Activist",
 				x: 55,
-				y: 370,
+				y: 300,
 				textWidth: 95,
 				width: 100,
 				height: 35,
@@ -719,7 +725,7 @@ export default {
 				...defaultConfig,
 				label: "Voter",
 				x: 160,
-				y: 370,
+				y: 300,
 				textWidth: 95,
 				width: 100,
 				height: 35,
@@ -729,7 +735,7 @@ export default {
 				...defaultConfig,
 				label: "Citizen",
 				x: 265,
-				y: 370,
+				y: 300,
 				textWidth: 95,
 				width: 100,
 				height: 35,
@@ -751,21 +757,21 @@ export default {
 				...defaultConnectorConfig,
 				visible: visibility.pressureGroup,
 				start: [105, 150],
-				end: [105, 370],
+				end: [105, 300],
 			});
 
 			data.connectors.push({
 				...defaultConnectorConfig,
 				visible: visibility.political,
 				start: [220, 75],
-				end: [220, 370],
+				end: [220, 300],
 			});
 
 			data.connectors.push({
 				...defaultConnectorConfig,
 				visible: visibility.government,
 				start: [315, 150],
-				end: [315, 370],
+				end: [315, 300],
 			});
 
 			return data;
@@ -775,27 +781,22 @@ export default {
 
 			var lanes = [];
 
+			// Green service experience
 			lanes.push({
 				x: 0,
 				y: 0,
-				width: 720,
-				height: 90,
-				fill: '#edfdfb',
-			});
-
-			lanes.push({
-				x: 0,
-				y: 160,
-				width: 720,
-				height: 65,
+				width: 1080,
+				height: 70,
 				fill: '#d7e4bd',
 			});
 
+			// Yellow carrier of experience
+
 			lanes.push({
 				x: 0,
-				y: 230,
-				width: 720,
-				height: 65,
+				y: 90,
+				width: 1080,
+				height: 70,
 				fill: '#ffe07d',
 			});
 
@@ -812,12 +813,6 @@ export default {
 				fontSize: 18,
 			};
 
-			const defaultValueConfig = {
-				...defaultTextConfig,
-				fontStyle: 'normal',
-				fontSize: 18,
-			};
-
 			const xOffset = 520;
 
 			labels.push({
@@ -826,8 +821,10 @@ export default {
 				width: 100,
 				align: 'right',
 				x: 0,
-				y: -130,
-				offsetX: 110,
+				y: 0,
+				// y: -130,
+				offsetX: -250,
+				offsetY: 200,
 			});
 
 			labels.push({
@@ -836,18 +833,9 @@ export default {
 				width: 100,
 				align: 'right',
 				x: 0,
-				y: 30,
-				offsetX: 110,
-			});
-
-			labels.push({
-				...defaultLabelConfig,
-				text: 'Service User Journey',
-				width: 100,
-				align: 'right',
-				x: 0,
-				y: 105,
-				offsetX: xOffset,
+				y: 0,
+				offsetX: (180 * 1) - 20,
+				offsetY: 60,
 			});
 
 			labels.push({
@@ -856,8 +844,9 @@ export default {
 				width: 100,
 				align: 'right',
 				x: 0,
-				y: 175,
-				offsetX: xOffset,
+				y: 0,
+				offsetX: (180 * 1) - 20,
+				offsetY: -10,
 			});
 
 			labels.push({
@@ -866,9 +855,80 @@ export default {
 				width: 100,
 				align: 'right',
 				x: 0,
-				y: 245,
-				offsetX: xOffset,
+				y: 0,
+				offsetX: (180 * 1) - 20,
+				offsetY: -100,
 			});
+
+			// Responses
+			//
+
+			const defaultResponseTextConfig = {
+				...defaultTextConfig,
+				fontStyle: 'normal',
+				fontSize: 16,
+				align: 'center',
+				width: 180,
+				padding: 10,
+				y: 100,
+			};
+
+			// Instigating: Did you play a role in how the service was initally identified?
+			//
+			var optionValue = this.aspectData.instigating.identify_role;
+
+			var config = {
+				...defaultResponseTextConfig,
+				visible: (optionValue && optionValue.length ? true : false),
+				x: 0 * 180,
+			};
+
+			switch (optionValue) {
+				case "no":
+					config.text = '✗';
+					config.fontStyle = 'bold';
+					break;
+				case "maybe":
+					config.text = '?';
+					config.fontStyle = 'bold';
+					break;
+				case "yes":
+					var howResponse = this.aspectData.instigating.identify_method;
+					var langKey = `aspects.user_journey_model.options.methods.${howResponse}`;
+					config.text = this.$te(langKey) ? this.$t(langKey) : this.$t(`aspects.user_journey_model.options.yes_no_maybe.yes`);
+					break;
+			}
+
+			labels.push(config);
+
+
+			// Design: Were you asked to input into the design of the service?
+			//
+			var optionValue = this.aspectData.designing.design_input_asked;
+
+			var config = {
+				...defaultResponseTextConfig,
+				visible: (optionValue && optionValue.length ? true : false),
+				x: 1 * 180,
+			};
+
+			switch (optionValue) {
+				case "no":
+					config.text = '✗';
+					config.fontStyle = 'bold';
+					break;
+				case "maybe":
+					config.text = '?';
+					config.fontStyle = 'bold';
+					break;
+				case "yes":
+					var howResponse = this.aspectData.designing.design_input_method;
+					var langKey = `aspects.user_journey_model.options.methods.${howResponse}`;
+					config.text = this.$te(langKey) ? this.$t(langKey) : this.$t(`aspects.user_journey_model.options.yes_no_maybe.yes`);
+					break;
+			}
+
+			labels.push(config);
 
 			// How did you find out about the service?
 			//
@@ -877,46 +937,65 @@ export default {
 			var langKey = `aspects.user_journey_model.options.mediums.${optionValue}`;
 
 			labels.push({
-				...defaultValueConfig,
+				...defaultResponseTextConfig,
 				text: this.$te(langKey) ? this.$t(langKey) : '',
 				visible: (optionValue && optionValue.length && this.$te(langKey) ? true : false),
-				align: 'left',
-				x: 10,
-				y: 250,
-				// offset: 0,
+				x: 2 * 180,
 			});
+
 
 			// How did you gain access to the service?
 			//
-
 			var optionValue = this.aspectData.accessing.access_method;
 			var langKey = `aspects.user_journey_model.options.access_methods.${optionValue}`;
 
 			labels.push({
-				...defaultValueConfig,
+				...defaultResponseTextConfig,
 				text: this.$te(langKey) ? this.$t(langKey) : '',
 				visible: (optionValue && optionValue.length && this.$te(langKey) ? true : false),
-				align: 'left',
-				x: 220,
-				y: 250,
-				// offset: 0,
+				x: 3 * 180,
 			});
 
 			// Where did you use the service?
 			//
-
 			var optionValue = this.aspectData.using.where;
 			var langKey = `aspects.user_journey_model.options.where.${optionValue}`;
 
 			labels.push({
-				...defaultValueConfig,
+				...defaultResponseTextConfig,
 				text: this.$te(langKey) ? this.$t(langKey) : '',
 				visible: (optionValue && optionValue.length && this.$te(langKey) ? true : false),
-				align: 'left',
-				x: 400,
-				y: 250,
-				// offset: 0,
+				x: 4 * 180,
 			});
+
+			// Were you asked about your opinions about your experience of the service?
+			//
+			var optionValue = this.aspectData.evaluating.opinions_asked;
+
+			var config = {
+				...defaultResponseTextConfig,
+				visible: (optionValue && optionValue.length ? true : false),
+				x: 5 * 180,
+			};
+
+
+			switch (optionValue) {
+				case "no":
+					config.text = '✗';
+					config.fontStyle = 'bold';
+					break;
+				case "maybe":
+					config.text = '?';
+					config.fontStyle = 'bold';
+					break;
+				case "yes":
+					var howResponse = this.aspectData.evaluating.opinions_how;
+					var langKey = `aspects.user_journey_model.options.opinions_how.${howResponse}`;
+					config.text = this.$te(langKey) ? this.$t(langKey) : this.$t(`aspects.user_journey_model.options.yes_no_maybe.yes`);
+					break;
+			}
+
+			labels.push(config);
 
 			return labels;
 		},
@@ -929,7 +1008,7 @@ export default {
 				opacity: 1,
 				scale: { x: 0.35, y: 0.35 },
 				x: 0,
-				y: 168,
+				y: 10,
 			};
 
 			const faceTypes = {
@@ -947,9 +1026,27 @@ export default {
 				accessing: this.aspectData.accessing.qualification_experience,
 				using: this.aspectData.using.participate_experience,
 				evaluating: this.aspectData.evaluating.service_experience,
+				designing: this.aspectData.designing.design_input_experience,
+				instigating: this.aspectData.instigating.identify_experience,
 			};
 
 			var offset = 65;
+			faces.push({
+				...defaultFaceConfig,
+				visible: (responses.instigating.length ? true : false),
+				filename: faceTypes[responses.instigating],
+				x: offset,
+			});
+
+			offset += 180;
+			faces.push({
+				...defaultFaceConfig,
+				visible: (responses.designing.length ? true : false),
+				filename: faceTypes[responses.designing],
+				x: offset,
+			});
+
+			offset += 180;
 			faces.push({
 				...defaultFaceConfig,
 				visible: (responses.discovering.length ? true : false),

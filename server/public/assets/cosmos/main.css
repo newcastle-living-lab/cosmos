@@ -5487,6 +5487,41 @@ a.text-gray-medium:visited {
   display: block;
 }
 
+.summary-view .group-title {
+  font-size: 1.3rem;
+  padding-top: 0.6rem;
+}
+
+.summary-view .group-prompt {
+  font-size: 0.8rem;
+  font-weight: bold;
+  width: 50%;
+  vertical-align: top;
+}
+
+.summary-view .group-value {
+  vertical-align: top;
+}
+
+.summary-view .group-value .link,
+.summary-view .group-value a.link {
+  color: #0074D9;
+  text-decoration: underline;
+}
+
+.summary-view .like-pre {
+  white-space: pre;
+}
+
+.summary-view table {
+  margin-bottom: 2.4rem;
+}
+
+.summary-view .divider {
+  border-top-width: 0.1rem;
+  height: 0.1rem;
+}
+
 .user-guide {
   background: #fff5da;
   padding: 0.8rem;

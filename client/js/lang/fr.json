@@ -550,6 +550,25 @@
                     },
                     "title": "Accès"
                 },
+                "designing": {
+                    "design_assist_asked": {
+                        "label": "Avez-vous été invité à participer à la conception du service?"
+                    },
+                    "design_assist_broker": {
+                        "hint": "Courtier en co-création",
+                        "label": "Si oui, par qui?"
+                    },
+                    "design_input_asked": {
+                        "label": "Vous a-t-on demandé de contribuer à la conception du service?"
+                    },
+                    "design_input_experience": {
+                        "label": "Comment avez-vous vécu cela?"
+                    },
+                    "design_input_method": {
+                        "label": "Comment avez-vous participé?"
+                    },
+                    "title": "Conception"
+                },
                 "discovering": {
                     "comments": {
                         "label": "D'autres commentaires, observations?"
@@ -587,6 +606,15 @@
                     },
                     "design_role": {
                         "label": "Avez-vous joué un rôle dans la conception et la définition du service? Si oui, quelles ont été les occasions et les canaux où cela s'est produit?"
+                    },
+                    "identify_experience": {
+                        "label": "Comment avez-vous vécu cela?"
+                    },
+                    "identify_method": {
+                        "label": "Comment cette identification s'est-elle produite?"
+                    },
+                    "identify_role": {
+                        "label": "Avez-vous joué un rôle dans la manière dont le service a été initialement identifié?"
                     },
                     "instigate_role": {
                         "label": "Avez-vous joué un rôle dans la mise en place du projet? Si oui, faisiez-vous partie de l'une des options suivantes? Vous pouvez en choisir autant que vous le souhaitez."
@@ -627,6 +655,12 @@
                     "other": "Autre",
                     "referred": "Référé"
                 },
+                "design_assist_broker": {
+                    "government": "Gouvernement",
+                    "ngo": "ONG (Organisation non gouvernementale)",
+                    "other": "Autre",
+                    "university": "Université"
+                },
                 "instigate_roles": {
                     "government_department": "Ministère",
                     "political_party": "Parti politique",
@@ -638,6 +672,11 @@
                     "referral": "Référence",
                     "social": "Des médias sociaux",
                     "word_of_mouth": "Bouche à oreille"
+                },
+                "methods": {
+                    "face": "Face à face",
+                    "online": "En ligne",
+                    "workshop": "Atelier"
                 },
                 "opinions_how": {
                     "interview": "Entrevue",

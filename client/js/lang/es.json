@@ -550,6 +550,25 @@
                     },
                     "title": "Accediendo"
                 },
+                "designing": {
+                    "design_assist_asked": {
+                        "label": "¿Fue invitado a ayudar con el diseño del servicio?"
+                    },
+                    "design_assist_broker": {
+                        "hint": "Broker de co-creación",
+                        "label": "Si es así, ¿por quién?"
+                    },
+                    "design_input_asked": {
+                        "label": "¿Se le pidió que participara en el diseño del servicio?"
+                    },
+                    "design_input_experience": {
+                        "label": "¿Cómo fue tu experiencia con esto?"
+                    },
+                    "design_input_method": {
+                        "label": "¿Cómo participaste?"
+                    },
+                    "title": "Diseño"
+                },
                 "discovering": {
                     "comments": {
                         "label": "¿Algún otro comentario, observación?"
@@ -587,6 +606,15 @@
                     },
                     "design_role": {
                         "label": "¿Jugó algún papel en el diseño y definición del servicio? En caso afirmativo, ¿cuáles fueron las ocasiones y canales en que esto ocurrió?"
+                    },
+                    "identify_experience": {
+                        "label": "¿Cómo fue tu experiencia con esto?"
+                    },
+                    "identify_method": {
+                        "label": "¿Cómo ocurrió esta identificación?"
+                    },
+                    "identify_role": {
+                        "label": "¿Desempeñó un papel en la forma en que se identificó inicialmente el servicio?"
                     },
                     "instigate_role": {
                         "label": "¿Tuviste algún papel en la instigación del proyecto? En caso afirmativo, ¿formó parte de alguna de las siguientes opciones? Puedes elegir tantos como quieras."
@@ -627,6 +655,12 @@
                     "other": "Otro",
                     "referred": "Referido"
                 },
+                "design_assist_broker": {
+                    "government": "Gobierno",
+                    "ngo": "ONG (Organización no gubernamental)",
+                    "other": "Otro",
+                    "university": "Universidad"
+                },
                 "instigate_roles": {
                     "government_department": "Departamento de Gobierno",
                     "political_party": "Partido político",
@@ -638,6 +672,11 @@
                     "referral": "Remisión",
                     "social": "Redes sociales",
                     "word_of_mouth": "Boca a boca"
+                },
+                "methods": {
+                    "face": "Cara a cara",
+                    "online": "En línea",
+                    "workshop": "Taller"
                 },
                 "opinions_how": {
                     "interview": "Entrevista",

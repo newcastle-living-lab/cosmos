@@ -550,6 +550,25 @@
                     },
                     "title": "Toegang verkrijgen"
                 },
+                "designing": {
+                    "design_assist_asked": {
+                        "label": "Bent u uitgenodigd om te helpen bij het ontwerp van de dienst?"
+                    },
+                    "design_assist_broker": {
+                        "hint": "Co-creatie makelaar",
+                        "label": "Zo ja, door wie?"
+                    },
+                    "design_input_asked": {
+                        "label": "Werd u gevraagd om mee te werken aan het ontwerp van de dienst?"
+                    },
+                    "design_input_experience": {
+                        "label": "Hoe was uw ervaring hiermee?"
+                    },
+                    "design_input_method": {
+                        "label": "Hoe heb je meegedaan?"
+                    },
+                    "title": "Ontwerpen"
+                },
                 "discovering": {
                     "comments": {
                         "label": "Nog meer opmerkingen, opmerkingen?"
@@ -587,6 +606,15 @@
                     },
                     "design_role": {
                         "label": "Heeft u een rol gespeeld bij het ontwerp en de definitie van de dienst? Zo ja, wat waren de gelegenheden en kanalen dat dit plaatsvond?"
+                    },
+                    "identify_experience": {
+                        "label": "Hoe was uw ervaring hiermee?"
+                    },
+                    "identify_method": {
+                        "label": "Hoe kwam deze identificatie tot stand?"
+                    },
+                    "identify_role": {
+                        "label": "Speelde u een rol in de manier waarop de service aanvankelijk werd geïdentificeerd?"
                     },
                     "instigate_role": {
                         "label": "Heeft u een rol gespeeld bij het opzetten van het project? Zo ja, maakte u deel uit van een van de volgende opties? U kunt er zoveel kiezen als u wilt."
@@ -627,6 +655,12 @@
                     "other": "Andere",
                     "referred": "Doorverwezen"
                 },
+                "design_assist_broker": {
+                    "government": "Regering",
+                    "ngo": "NGO (niet-gouvernementele organisatie)",
+                    "other": "Andere",
+                    "university": "Universiteit"
+                },
                 "instigate_roles": {
                     "government_department": "Overheidsdienst",
                     "political_party": "Politieke partij",
@@ -638,6 +672,11 @@
                     "referral": "Doorverwijzing",
                     "social": "Sociale media",
                     "word_of_mouth": "Mond op mond"
+                },
+                "methods": {
+                    "face": "Oog in oog",
+                    "online": "Online",
+                    "workshop": "Werkplaats"
                 },
                 "opinions_how": {
                     "interview": "Interview",
