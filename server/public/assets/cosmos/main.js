@@ -13250,28 +13250,30 @@ var Icons = {
         }
       };
       var brokerValue = this.aspectData.designing.design_assist_broker;
-      data.push(_objectSpread({}, defaultConfig, {
-        labelConfig: {
-          fontStyle: 'bold',
-          fontSize: 16
-        },
-        visibility: brokerValue.length ? true : false,
-        x: -140,
-        y: 230,
-        label: [this.$t('aspects.user_journey_model.definitions.designing.design_assist_broker.hint'), ""].join("\n"),
-        textWidth: 240,
-        width: 250,
-        height: 60
-      }));
-      data.push(_objectSpread({}, defaultConfig, {
-        visibility: brokerValue.length ? true : false,
-        x: -140,
-        y: 230,
-        label: ["", this.$t("aspects.user_journey_model.options.design_assist_broker.".concat(brokerValue))].join("\n"),
-        textWidth: 240,
-        width: 250,
-        height: 60
-      }));
+
+      if (!this.userGuide.isOpen && brokerValue.length) {
+        data.push(_objectSpread({}, defaultConfig, {
+          labelConfig: {
+            fontStyle: 'bold',
+            fontSize: 16
+          },
+          x: -140,
+          y: 230,
+          label: [this.$t('aspects.user_journey_model.definitions.designing.design_assist_broker.hint'), ""].join("\n"),
+          textWidth: 240,
+          width: 250,
+          height: 60
+        }));
+        data.push(_objectSpread({}, defaultConfig, {
+          x: -140,
+          y: 230,
+          label: ["", this.$t("aspects.user_journey_model.options.design_assist_broker.".concat(brokerValue))].join("\n"),
+          textWidth: 240,
+          width: 250,
+          height: 60
+        }));
+      }
+
       data.push(_objectSpread({}, defaultConfig, {
         visible: visibility.designing,
         label: this.$t('aspects.user_journey_model.dashboard.service_definition'),
