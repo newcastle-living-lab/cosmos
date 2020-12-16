@@ -531,10 +531,6 @@
         },
         "user_journey_model": {
             "dashboard": {
-                "one": "",
-                "few": "",
-                "many": "",
-                "other": "",
                 "activist": "Aktywista",
                 "applicant": "Petent",
                 "application": "Podanie",

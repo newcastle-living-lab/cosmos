@@ -531,8 +531,6 @@
         },
         "user_journey_model": {
             "dashboard": {
-                "one": "",
-                "other": "",
                 "activist": "Activiste",
                 "applicant": "Demandeur",
                 "application": "Application",
