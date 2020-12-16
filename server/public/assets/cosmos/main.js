@@ -10486,9 +10486,11 @@ var defaultTextConfig = {
       return config;
     },
     stakeholdersConfig: function stakeholdersConfig() {
+      var descriptionVisible = this.userGuide.isOpen ? false : true;
       var config = {};
       config.sdm = {
         definitionName: 'serviceDeliveryManager',
+        descriptionVisible: descriptionVisible,
         config: {
           description: this.$t('aspects.analytic_model.definitions.serviceDeliveryManager.title'),
           group: {
@@ -10499,6 +10501,7 @@ var defaultTextConfig = {
       };
       config.flsd = {
         definitionName: 'frontLineServiceDeliverer',
+        descriptionVisible: descriptionVisible,
         config: {
           description: this.$t('aspects.analytic_model.definitions.frontLineServiceDeliverer.title'),
           group: {
@@ -10509,6 +10512,7 @@ var defaultTextConfig = {
       };
       config.user = {
         definitionName: 'user',
+        descriptionVisible: descriptionVisible,
         config: {
           description: this.$t('aspects.analytic_model.definitions.user.title'),
           group: {
@@ -10519,6 +10523,7 @@ var defaultTextConfig = {
       };
       config.som = {
         definitionName: 'serviceOrganisationManager',
+        descriptionVisible: descriptionVisible,
         config: {
           description: this.$t('aspects.analytic_model.definitions.serviceOrganisationManager.title'),
           group: {
@@ -10529,6 +10534,7 @@ var defaultTextConfig = {
       };
       config.spm = {
         definitionName: 'servicePolicyMaker',
+        descriptionVisible: descriptionVisible,
         config: {
           description: this.$t('aspects.analytic_model.definitions.servicePolicyMaker.title'),
           group: {
@@ -10550,9 +10556,11 @@ var defaultTextConfig = {
       return config;
     },
     agencyStakeholdersConfig: function agencyStakeholdersConfig() {
+      var descriptionVisible = this.userGuide.isOpen ? false : true;
       var config = {};
       config.ioc = {
         definitionName: 'instigatorsOfChange',
+        descriptionVisible: descriptionVisible,
         config: {
           description: this.$t('aspects.analytic_model.definitions.instigatorsOfChange.title'),
           group: {
@@ -10563,6 +10571,7 @@ var defaultTextConfig = {
       };
       config.cm = {
         definitionName: 'changeMakers',
+        descriptionVisible: descriptionVisible,
         config: {
           description: this.$t('aspects.analytic_model.definitions.changeMakers.title'),
           group: {
@@ -10573,6 +10582,7 @@ var defaultTextConfig = {
       };
       config.soc = {
         definitionName: 'subjectsOfChange',
+        descriptionVisible: descriptionVisible,
         config: {
           description: this.$t('aspects.analytic_model.definitions.subjectsOfChange.title'),
           group: {
@@ -10583,6 +10593,7 @@ var defaultTextConfig = {
       };
       config.br = {
         definitionName: 'broker',
+        descriptionVisible: descriptionVisible,
         config: {
           description: this.$t('aspects.analytic_model.definitions.broker.title'),
           group: {
@@ -10593,6 +10604,7 @@ var defaultTextConfig = {
       };
       config.ct = {
         definitionName: 'changeTheorists',
+        descriptionVisible: descriptionVisible,
         config: {
           description: this.$t('aspects.analytic_model.definitions.changeTheorists.title'),
           group: {
@@ -10603,6 +10615,7 @@ var defaultTextConfig = {
       };
       config.be = {
         definitionName: 'beneficiaries',
+        descriptionVisible: descriptionVisible,
         config: {
           description: this.$t('aspects.analytic_model.definitions.beneficiaries.title'),
           group: {
@@ -10613,6 +10626,7 @@ var defaultTextConfig = {
       };
       config.v = {
         definitionName: 'victims',
+        descriptionVisible: descriptionVisible,
         config: {
           description: this.$t('aspects.analytic_model.definitions.victims.title'),
           group: {
@@ -15563,6 +15577,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     aspectId: String,
     options: Object,
     definitionName: String,
+    descriptionVisible: [String, Boolean],
     config: Object
   },
   data: function data() {
@@ -15610,7 +15625,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     groupConfig: function groupConfig() {
       return {
-        visible: this.isVisible,
+        // visible: this.isVisible,
         opacity: 1,
         x: this.config.group.x,
         y: this.config.group.y
@@ -15618,6 +15633,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     iconConfig: function iconConfig() {
       return {
+        visible: this.isVisible,
         x: 0,
         y: 0,
         colour: this.model.colour,
@@ -15640,6 +15656,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     labelConfig: function labelConfig() {
       var label = this.model ? this.model.label : '';
       var config = {
+        visible: this.isVisible,
         text: label,
         fontSize: 13,
         fontStyle: 'bold',
@@ -15661,6 +15678,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
 
       var config = {
+        visible: this.descriptionVisible === true || this.isVisible,
         fill: '#999999',
         text: label,
         fontSize: 11,
@@ -15694,10 +15712,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     refreshPositions: function refreshPositions() {
       var _this = this;
-
-      if (!this.isVisible) {
-        return;
-      }
 
       if (!this.descriptionConfig) {
         return;
@@ -15786,6 +15800,10 @@ Icons.Female = 'M 49.801 1.32 C 43.403 1.32 38.16 6.563 38.16 12.961 C 38.16 19.
       type: Number,
       "default": 100
     },
+    visible: {
+      type: Boolean,
+      "default": true
+    },
     x: Number,
     y: Number
   },
@@ -15818,6 +15836,7 @@ Icons.Female = 'M 49.801 1.32 C 43.403 1.32 38.16 6.563 38.16 12.961 C 38.16 19.
     },
     groupConfig: function groupConfig() {
       return {
+        visible: this.visible,
         x: this.x,
         y: this.y
       };

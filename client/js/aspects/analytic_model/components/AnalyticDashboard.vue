@@ -262,10 +262,13 @@ export default {
 
 		stakeholdersConfig() {
 
+			const descriptionVisible = this.userGuide.isOpen ? false : true;
+
 			var config = {};
 
 			config.sdm = {
 				definitionName: 'serviceDeliveryManager',
+				descriptionVisible: descriptionVisible,
 				config: {
 					description: this.$t('aspects.analytic_model.definitions.serviceDeliveryManager.title'),
 					group: {
@@ -277,6 +280,7 @@ export default {
 
 			config.flsd = {
 				definitionName: 'frontLineServiceDeliverer',
+				descriptionVisible: descriptionVisible,
 				config: {
 					description: this.$t('aspects.analytic_model.definitions.frontLineServiceDeliverer.title'),
 					group: {
@@ -288,6 +292,7 @@ export default {
 
 			config.user = {
 				definitionName: 'user',
+				descriptionVisible: descriptionVisible,
 				config: {
 					description: this.$t('aspects.analytic_model.definitions.user.title'),
 					group: {
@@ -299,6 +304,7 @@ export default {
 
 			config.som = {
 				definitionName: 'serviceOrganisationManager',
+				descriptionVisible: descriptionVisible,
 				config: {
 					description: this.$t('aspects.analytic_model.definitions.serviceOrganisationManager.title'),
 					group: {
@@ -310,6 +316,7 @@ export default {
 
 			config.spm = {
 				definitionName: 'servicePolicyMaker',
+				descriptionVisible: descriptionVisible,
 				config: {
 					description: this.$t('aspects.analytic_model.definitions.servicePolicyMaker.title'),
 					group: {
@@ -336,10 +343,13 @@ export default {
 
 		agencyStakeholdersConfig() {
 
+			const descriptionVisible = this.userGuide.isOpen ? false : true;
+
 			var config = {};
 
 			config.ioc = {
 				definitionName: 'instigatorsOfChange',
+				descriptionVisible: descriptionVisible,
 				config: {
 					description: this.$t('aspects.analytic_model.definitions.instigatorsOfChange.title'),
 					group: {
@@ -351,6 +361,7 @@ export default {
 
 			config.cm = {
 				definitionName: 'changeMakers',
+				descriptionVisible: descriptionVisible,
 				config: {
 					description: this.$t('aspects.analytic_model.definitions.changeMakers.title'),
 					group: {
@@ -362,6 +373,7 @@ export default {
 
 			config.soc = {
 				definitionName: 'subjectsOfChange',
+				descriptionVisible: descriptionVisible,
 				config: {
 					description: this.$t('aspects.analytic_model.definitions.subjectsOfChange.title'),
 					group: {
@@ -373,6 +385,7 @@ export default {
 
 			config.br = {
 				definitionName: 'broker',
+				descriptionVisible: descriptionVisible,
 				config: {
 					description: this.$t('aspects.analytic_model.definitions.broker.title'),
 					group: {
@@ -384,6 +397,7 @@ export default {
 
 			config.ct = {
 				definitionName: 'changeTheorists',
+				descriptionVisible: descriptionVisible,
 				config: {
 					description: this.$t('aspects.analytic_model.definitions.changeTheorists.title'),
 					group: {
@@ -395,6 +409,7 @@ export default {
 
 			config.be = {
 				definitionName: 'beneficiaries',
+				descriptionVisible: descriptionVisible,
 				config: {
 					description: this.$t('aspects.analytic_model.definitions.beneficiaries.title'),
 					group: {
@@ -406,6 +421,7 @@ export default {
 
 			config.v = {
 				definitionName: 'victims',
+				descriptionVisible: descriptionVisible,
 				config: {
 					description: this.$t('aspects.analytic_model.definitions.victims.title'),
 					group: {
