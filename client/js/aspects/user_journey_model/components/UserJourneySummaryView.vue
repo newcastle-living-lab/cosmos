@@ -1,167 +1,245 @@
 <template>
 
-	<main ref="container" class="app-content light moral-summary" v-if="aspectData">
+	<main ref="container" class="app-content light summary-view" v-if="aspectData">
 		<div class="scrollable scr-y">
 			<div class="container grid-xl">
 				<h1 class="h4 mb-8 mt-4" v-if="aspectData.model">{{ aspectData.model.title }}</h1>
 
-				<div class="divider"></div>
 
-				<div class="columns">
-					<div class="column col-3">
-						<h2 class="group-title">{{ $t('aspects.user_journey_model.definitions.discovering.title') }}</h2>
-					</div>
-					<div class="column col-9">
-						<table class="table">
-							<tbody>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.discovering.discovery_medium.label') }}</td>
-									<td class="group-value"><span v-if="aspectData.discovering.discovery_medium">{{ $t(`aspects.user_journey_model.options.mediums.${aspectData.discovering.discovery_medium}`) }}</span></td>
-								</tr>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.discovering.information_medium.label') }}</td>
-									<td class="group-value"><span v-if="aspectData.discovering.information_medium">{{ $t(`aspects.user_journey_model.options.mediums.${aspectData.discovering.information_medium}`) }}</span></td>
-								</tr>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.discovering.information_experience.label') }}</td>
-									<td class="group-value like-pre"><img class="img-responsive img-experience" v-if="aspectData.discovering.information_experience" :src="experienceImage(aspectData.discovering.information_experience)" /></td>
-								</tr>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.discovering.comments.label') }}</td>
-									<td class="group-value like-pre"><span v-linkify="aspectData.discovering.comments" /></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+				<!-- Discovering -->
 
+				<SummaryBlock :title="$t('aspects.user_journey_model.definitions.discovering.title')">
 
-				<div class="divider"></div>
+					<SummaryRow
+						labelKey="aspects.user_journey_model.definitions.discovering.discovery_medium.label"
+						:valueKey="`aspects.user_journey_model.options.mediums.${aspectData.discovering.discovery_medium}`"
+						:response="aspectData.discovering.discovery_medium"
+					/>
 
+					<SummaryRow
+						labelKey="aspects.user_journey_model.definitions.discovering.information_medium.label"
+						:valueKey="`aspects.user_journey_model.options.mediums.${aspectData.discovering.information_medium}`"
+						:response="aspectData.discovering.information_medium"
+					/>
 
-				<div class="columns">
-					<div class="column col-3">
-						<h2 class="group-title">{{ $t('aspects.user_journey_model.definitions.accessing.title') }}</h2>
-					</div>
-					<div class="column col-9">
-						<table class="table">
-							<tbody>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.accessing.access_method.label') }}</td>
-									<td class="group-value"><span v-if="aspectData.accessing.access_method">{{ $t(`aspects.user_journey_model.options.access_methods.${aspectData.accessing.access_method}`) }}</span></td>
-								</tr>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.accessing.qualification_process.label') }}</td>
-									<td class="group-value like-pre"><span v-linkify="aspectData.accessing.qualification_process" /></td>
-								</tr>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.accessing.qualification_experience.label') }}</td>
-									<td class="group-value like-pre"><img class="img-responsive img-experience" v-if="aspectData.accessing.qualification_experience" :src="experienceImage(aspectData.accessing.qualification_experience)" /></td>
-								</tr>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.accessing.appropriate_comment.label') }}</td>
-									<td class="group-value like-pre"><span v-linkify="aspectData.accessing.appropriate_comment" /></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+					<SummaryRow labelKey="aspects.user_journey_model.definitions.discovering.information_experience.label">
+						<img
+							class="img-responsive img-experience"
+							v-if="aspectData.discovering.information_experience"
+							:src="experienceImage(aspectData.discovering.information_experience)"
+						/>
+					</SummaryRow>
+
+					<SummaryRow
+						labelKey="aspects.user_journey_model.definitions.discovering.comments.label"
+						:response="aspectData.discovering.comments"
+						:linkify="true"
+					/>
+
+				</SummaryBlock>
 
 
-				<div class="divider"></div>
+
+				<!-- Accessing -->
+
+				<SummaryBlock :title="$t('aspects.user_journey_model.definitions.accessing.title')">
+
+					<SummaryRow
+						labelKey="aspects.user_journey_model.definitions.accessing.access_method.label"
+						:valueKey="`aspects.user_journey_model.options.access_methods.${aspectData.accessing.access_method}`"
+						:response="aspectData.accessing.access_method"
+					/>
+
+					<SummaryRow
+						labelKey="aspects.user_journey_model.definitions.accessing.qualification_process.label"
+						:response="aspectData.accessing.qualification_process"
+						:linkify="true"
+					/>
+
+					<SummaryRow labelKey="aspects.user_journey_model.definitions.accessing.qualification_experience.label">
+						<img
+							class="img-responsive img-experience"
+							v-if="aspectData.accessing.qualification_experience"
+							:src="experienceImage(aspectData.accessing.qualification_experience)"
+						/>
+					</SummaryRow>
+
+					<SummaryRow
+						labelKey="aspects.user_journey_model.definitions.accessing.appropriate_comment.label"
+						:response="aspectData.accessing.appropriate_comment"
+						:linkify="true"
+					/>
+
+				</SummaryBlock>
 
 
-				<div class="columns">
-					<div class="column col-3">
-						<h2 class="group-title">{{ $t('aspects.user_journey_model.definitions.using.title') }}</h2>
-					</div>
-					<div class="column col-9">
-						<table class="table">
-							<tbody>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.using.participate_experience.label') }}</td>
-									<td class="group-value like-pre"><img class="img-responsive img-experience" v-if="aspectData.using.participate_experience" :src="experienceImage(aspectData.using.participate_experience)" /></td>
-								</tr>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.using.accessible_experience.label') }}</td>
-									<td class="group-value like-pre"><img class="img-responsive img-experience" v-if="aspectData.using.accessible_experience" :src="experienceImage(aspectData.using.accessible_experience)" /></td>
-								</tr>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.using.time_experience.label') }}</td>
-									<td class="group-value like-pre"><img class="img-responsive img-experience" v-if="aspectData.using.time_experience" :src="experienceImage(aspectData.using.time_experience)" /></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+
+				<!-- Using -->
+
+				<SummaryBlock :title="$t('aspects.user_journey_model.definitions.using.title')">
+
+					<SummaryRow labelKey="aspects.user_journey_model.definitions.using.participate_experience.label">
+						<img
+							class="img-responsive img-experience"
+							v-if="aspectData.using.participate_experience"
+							:src="experienceImage(aspectData.using.participate_experience)"
+						/>
+					</SummaryRow>
+
+					<SummaryRow labelKey="aspects.user_journey_model.definitions.using.accessible_experience.label">
+						<img
+							class="img-responsive img-experience"
+							v-if="aspectData.using.accessible_experience"
+							:src="experienceImage(aspectData.using.accessible_experience)"
+						/>
+					</SummaryRow>
+
+					<SummaryRow labelKey="aspects.user_journey_model.definitions.using.time_experience.label">
+						<img
+							class="img-responsive img-experience"
+							v-if="aspectData.using.time_experience"
+							:src="experienceImage(aspectData.using.time_experience)"
+						/>
+					</SummaryRow>
+
+					<SummaryRow
+						labelKey="aspects.user_journey_model.definitions.using.where.label"
+						:valueKey="`aspects.user_journey_model.options.where.${aspectData.using.where}`"
+						:response="aspectData.using.where"
+					/>
+
+				</SummaryBlock>
 
 
-				<div class="divider"></div>
+
+				<!-- Evaluating -->
+
+				<SummaryBlock :title="$t('aspects.user_journey_model.definitions.evaluating.title')">
+
+					<SummaryRow
+						labelKey="aspects.user_journey_model.definitions.evaluating.opinions_asked.label"
+						:valueKey="`aspects.user_journey_model.options.yes_no_maybe.${aspectData.evaluating.opinions_asked}`"
+						:response="aspectData.evaluating.opinions_asked"
+					/>
+
+					<SummaryRow
+						labelKey="aspects.user_journey_model.definitions.evaluating.opinions_how.label"
+						:valueKey="`aspects.user_journey_model.options.opinions_how.${aspectData.evaluating.opinions_how}`"
+						:response="aspectData.evaluating.opinions_how"
+					/>
+
+					<SummaryRow
+						labelKey="aspects.user_journey_model.definitions.evaluating.service_experience.label"
+					>
+						<img
+							class="img-responsive img-experience"
+							v-if="aspectData.evaluating.service_experience"
+							:src="experienceImage(aspectData.evaluating.service_experience)"
+						/>
+					</SummaryRow>
+
+					<SummaryRow
+						labelKey="aspects.user_journey_model.definitions.evaluating.surprises_comments.label"
+						:response="aspectData.evaluating.surprises_comments"
+						:linkify="true"
+					/>
+
+				</SummaryBlock>
 
 
-				<div class="columns">
-					<div class="column col-3">
-						<h2 class="group-title">{{ $t('aspects.user_journey_model.definitions.evaluating.title') }}</h2>
-					</div>
-					<div class="column col-9">
-						<table class="table">
-							<tbody>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.evaluating.opinions_asked.label') }}</td>
-									<td class="group-value"><span v-if="aspectData.evaluating.opinions_asked">{{ $t(`aspects.user_journey_model.options.yes_no_maybe.${aspectData.evaluating.opinions_asked}`) }}</span></td>
-								</tr>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.evaluating.opinions_how.label') }}</td>
-									<td class="group-value"><span v-if="aspectData.evaluating.opinions_how">{{ $t(`aspects.user_journey_model.options.opinions_how.${aspectData.evaluating.opinions_how}`) }}</span></td>
-								</tr>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.evaluating.service_experience.label') }}</td>
-									<td class="group-value like-pre"><img class="img-responsive img-experience" v-if="aspectData.evaluating.service_experience" :src="experienceImage(aspectData.evaluating.service_experience)" /></td>
-								</tr>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.evaluating.surprises_comments.label') }}</td>
-									<td class="group-value like-pre"><span v-linkify="aspectData.evaluating.surprises_comments" /></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+
+				<!-- Designing -->
+
+				<SummaryBlock :title="$t('aspects.user_journey_model.definitions.designing.title')">
+
+					<SummaryRow
+						:response="aspectData.designing.design_input_asked"
+						labelKey="aspects.user_journey_model.definitions.designing.design_input_asked.label"
+						:valueKey="`aspects.user_journey_model.options.yes_no_maybe.${aspectData.designing.design_input_asked}`"
+					/>
+
+					<SummaryRow
+						:response="aspectData.designing.design_input_method"
+						labelKey="aspects.user_journey_model.definitions.designing.design_input_method.label"
+						:valueKey="`aspects.user_journey_model.options.methods.${aspectData.designing.design_input_method}`"
+					/>
+
+					<SummaryRow
+						labelKey="aspects.user_journey_model.definitions.designing.design_input_experience.label"
+					>
+						<img
+							class="img-responsive img-experience"
+							v-if="aspectData.designing.design_input_experience"
+							:src="experienceImage(aspectData.designing.design_input_experience)"
+						/>
+					</SummaryRow>
+
+					<SummaryRow
+						:response="aspectData.designing.design_assist_asked"
+						labelKey="aspects.user_journey_model.definitions.designing.design_assist_asked.label"
+						:valueKey="`aspects.user_journey_model.options.yes_no_maybe.${aspectData.designing.design_assist_asked}`"
+					/>
+
+					<SummaryRow
+						:response="aspectData.designing.design_assist_broker"
+						labelKey="aspects.user_journey_model.definitions.designing.design_assist_broker.label"
+						:valueKey="`aspects.user_journey_model.options.design_assist_broker.${aspectData.designing.design_assist_broker}`"
+					/>
+
+				</SummaryBlock>
 
 
-				<div class="divider"></div>
 
+				<!-- Instigating -->
 
-				<div class="columns">
-					<div class="column col-3">
-						<h2 class="group-title">{{ $t('aspects.user_journey_model.definitions.instigating.title') }}</h2>
-					</div>
-					<div class="column col-9">
-						<table class="table">
-							<tbody>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.instigating.design_role.label') }}</td>
-									<td class="group-value like-pre"><span v-linkify="aspectData.instigating.design_role" /></td>
-								</tr>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.instigating.instigate_role.label') }}</td>
-									<td class="group-value">
-										<ul>
-											<li
-												v-for="roleName in aspectData.instigating.instigate_role"
-											>
-												{{ $t(`aspects.user_journey_model.options.instigate_roles.${roleName}`) }}
-											</li>
-										</ul>
-									</td>
-								</tr>
-								<tr>
-									<td class="group-prompt">{{ $t('aspects.user_journey_model.definitions.instigating.comments.label') }}</td>
-									<td class="group-value like-pre"><span v-linkify="aspectData.instigating.comments" /></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+				<SummaryBlock :title="$t('aspects.user_journey_model.definitions.instigating.title')">
+
+					<SummaryRow
+						:response="aspectData.instigating.identify_role"
+						labelKey="aspects.user_journey_model.definitions.instigating.identify_role.label"
+						:valueKey="`aspects.user_journey_model.options.yes_no_maybe.${aspectData.instigating.identify_role}`"
+					/>
+
+					<SummaryRow
+						:response="aspectData.instigating.identify_method"
+						labelKey="aspects.user_journey_model.definitions.instigating.identify_method.label"
+						:valueKey="`aspects.user_journey_model.options.methods.${aspectData.instigating.identify_method}`"
+					/>
+
+					<SummaryRow
+						labelKey="aspects.user_journey_model.definitions.instigating.identify_experience.label"
+					>
+						<img
+							class="img-responsive img-experience"
+							v-if="aspectData.instigating.identify_experience"
+							:src="experienceImage(aspectData.instigating.identify_experience)"
+						/>
+					</SummaryRow>
+
+					<SummaryRow
+						:response="aspectData.instigating.design_role"
+						:linkify="true"
+						labelKey="aspects.user_journey_model.definitions.instigating.design_role.label"
+					/>
+
+					<SummaryRow
+						labelKey="aspects.user_journey_model.definitions.instigating.instigate_role.label"
+					>
+						<ul>
+							<li v-for="roleName in aspectData.instigating.instigate_role">
+								{{ $t(`aspects.user_journey_model.options.instigate_roles.${roleName}`) }}
+							</li>
+						</ul>
+					</SummaryRow>
+
+					<SummaryRow
+						:response="aspectData.instigating.comments"
+						:linkify="true"
+						labelKey="aspects.user_journey_model.definitions.instigating.comments.label"
+					/>
+
+				</SummaryBlock>
+
 
 			</div>
 		</div>
@@ -175,6 +253,9 @@ import { linkify } from '@/plugins/linkify';
 import { get, set, sync, call } from 'vuex-pathify';
 import find from 'lodash/find';
 
+import SummaryBlock from '@/components/project/view/SummaryBlock';
+import SummaryRow from '@/components/project/view/SummaryRow';
+
 import Aspects from '@/aspects';
 
 const FACE_TYPES = {
@@ -186,6 +267,11 @@ const FACE_TYPES = {
 export default {
 
 	name: "UserJourneySummaryView",
+
+	components: {
+		SummaryBlock,
+		SummaryRow,
+	},
 
 	props: {
 		aspectId: [Boolean, String],
@@ -253,41 +339,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.group-title {
-	font-size: 1.3rem;
-	// line-height: 1;
-	padding-top: .6rem;
-}
-
-.group-prompt {
-	font-size: .8rem;
-	font-weight: bold;
-	width: 50%;
-	vertical-align: top;
-}
-
-.group-value {
-	vertical-align: top;
-
-	.link,
-	a.link {
-		color: #0074D9;
-		text-decoration: underline;
-	}
-}
-
-.like-pre {
-	white-space: pre;
-}
-
-table {
-	margin-bottom: 2.4rem;
-}
-
-.divider {
-	border-top-width: .1rem;
-	height: .1rem;
-}
 
 .img-experience {
 	max-width: 48px;

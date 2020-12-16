@@ -7,6 +7,7 @@
 			:key="idx"
 			:val="val"
 			:label="groupLabel(definition, child)"
+			:hint="groupHint(definition, child)"
 		>
 
 			<component
@@ -50,10 +51,17 @@ export default {
 	},
 
 	methods: {
+
 		groupLabel(definition, child) {
 			const langKey = `aspects.${this.aspectId}.definitions.${definition.id}.${child.id}.label`;
 			return this.$te(langKey) ? this.$t(langKey) : `[${langKey}]`;
+		},
+
+		groupHint(definition, child) {
+			const langKey = `aspects.${this.aspectId}.definitions.${definition.id}.${child.id}.hint`;
+			return this.$te(langKey) ? this.$t(langKey) : false;
 		}
+
 	}
 
 }

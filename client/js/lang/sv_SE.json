@@ -531,8 +531,34 @@
         },
         "user_journey_model": {
             "dashboard": {
-                "one": "",
-                "other": ""
+                "activist": "Aktivist",
+                "applicant": "Sökande",
+                "application": "Ansökan",
+                "budget": "Budget",
+                "carrier_of_experience": "Bärare av erfarenhet",
+                "citizen": "Medborgare",
+                "client": "Klient",
+                "clients_view": "Kundernas åsikter",
+                "evaluating_agent": "Utvärderingsagent",
+                "government_department": "Myndighet",
+                "outcome_reports": "Resultatrapporter",
+                "political_party": "Politiskt parti",
+                "potential_beneficiary": "Potentiell mottagare",
+                "pressure_campaign_group": "Tryck \/ Kampanjgrupp",
+                "provider_views": "Leverantörens åsikter",
+                "qualifying_agent": "Kvalificerande agent",
+                "reservation_scheduling": "Bokning och schemaläggning",
+                "service_definition": "Service Definition",
+                "service_delivery": "Tjänsteleverans",
+                "service_experience": "Serviceupplevelse",
+                "service_instigation_policymaking": "Serviceinstitution och policyframställning",
+                "service_publication": "Tjänstepublikation",
+                "service_publicity": "Tjänstens publicitet",
+                "service_resourcing": "Tjänsteresourcing",
+                "service_use": "Tjänsteanvändning",
+                "service_workflow": "Service arbetsflöde",
+                "touch_points": "Beröringspunkter",
+                "voter": "Väljare"
             },
             "definitions": {
                 "accessing": {
@@ -549,6 +575,25 @@
                         "label": "Fanns det en kvalificerings- eller urvalsprocess?"
                     },
                     "title": "Åtkomst"
+                },
+                "designing": {
+                    "design_assist_asked": {
+                        "label": "Har du bjudits in att hjälpa till med utformningen av tjänsten?"
+                    },
+                    "design_assist_broker": {
+                        "hint": "Co-creation Broker",
+                        "label": "Om ja, vem av?"
+                    },
+                    "design_input_asked": {
+                        "label": "Har du blivit ombedd att skriva in tjänsten?"
+                    },
+                    "design_input_experience": {
+                        "label": "Hur var din upplevelse av detta?"
+                    },
+                    "design_input_method": {
+                        "label": "Hur deltog du?"
+                    },
+                    "title": "Design"
                 },
                 "discovering": {
                     "comments": {
@@ -587,6 +632,15 @@
                     },
                     "design_role": {
                         "label": "Spelade du någon roll i utformningen och definitionen av tjänsten? Om ja, vad var de tillfällen och kanaler som detta inträffade?"
+                    },
+                    "identify_experience": {
+                        "label": "Hur var din upplevelse av detta?"
+                    },
+                    "identify_method": {
+                        "label": "Hur skedde denna identifiering?"
+                    },
+                    "identify_role": {
+                        "label": "Spelade du en roll i hur tjänsten ursprungligen identifierades?"
                     },
                     "instigate_role": {
                         "label": "Hade du någon roll i att starta projektet? Om ja, ingick du i något av följande alternativ? Du kan välja så många du vill."
@@ -627,6 +681,12 @@
                     "other": "Övrig",
                     "referred": "Hänvisad"
                 },
+                "design_assist_broker": {
+                    "government": "Regering",
+                    "ngo": "Ngo (icke-statliga organisationen)",
+                    "other": "Övrig",
+                    "university": "universitet"
+                },
                 "instigate_roles": {
                     "government_department": "Myndighet",
                     "political_party": "Politiskt parti",
@@ -638,6 +698,11 @@
                     "referral": "Hänvisning",
                     "social": "Sociala media",
                     "word_of_mouth": "Ord från mun"
+                },
+                "methods": {
+                    "face": "Ansikte mot ansikte",
+                    "online": "Uppkopplad",
+                    "workshop": "Verkstad"
                 },
                 "opinions_how": {
                     "interview": "Intervju",

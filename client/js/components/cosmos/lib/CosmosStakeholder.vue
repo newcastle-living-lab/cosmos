@@ -38,6 +38,7 @@ export default {
 		aspectId: String,
 		options: Object,
 		definitionName: String,
+		descriptionVisible: [String, Boolean],
 		config: Object,
 	},
 
@@ -99,7 +100,7 @@ export default {
 
 		groupConfig() {
 			return {
-				visible: this.isVisible,
+				// visible: this.isVisible,
 				opacity: 1,
 				x: this.config.group.x,
 				y: this.config.group.y
@@ -108,6 +109,7 @@ export default {
 
 		iconConfig() {
 			return {
+				visible: this.isVisible,
 				x: 0,
 				y: 0,
 				colour: this.model.colour,
@@ -134,6 +136,7 @@ export default {
 			var label = this.model ? this.model.label : '';
 
 			var config = {
+				visible: this.isVisible,
 				text: label,
 				fontSize: 13,
 				fontStyle: 'bold',
@@ -157,6 +160,7 @@ export default {
 			}
 
 			var config = {
+				visible: this.descriptionVisible === true || this.isVisible,
 				fill: '#999999',
 				text: label,
 				fontSize: 11,
@@ -195,10 +199,6 @@ export default {
 		},
 
 		refreshPositions() {
-
-			if ( ! this.isVisible) {
-				return;
-			}
 
 			if ( ! this.descriptionConfig) {
 				return;

@@ -531,8 +531,34 @@
         },
         "user_journey_model": {
             "dashboard": {
-                "one": "",
-                "other": ""
+                "activist": "Ακτιβιστής",
+                "applicant": "Αιτών",
+                "application": "Εφαρμογή",
+                "budget": "Προϋπολογισμός",
+                "carrier_of_experience": "Μεταφορέας εμπειρίας",
+                "citizen": "Πολίτης",
+                "client": "Πελάτης",
+                "clients_view": "Απόψεις πελατών",
+                "evaluating_agent": "Αξιολογώντας πράκτορας",
+                "government_department": "Κυβερνητικό Τμήμα",
+                "outcome_reports": "Αναφορές αποτελεσμάτων",
+                "political_party": "Πολιτικό κόμμα",
+                "potential_beneficiary": "Πιθανός δικαιούχος",
+                "pressure_campaign_group": "Ομάδα πίεσης \/ εκστρατείας",
+                "provider_views": "Προβολές παρόχου",
+                "qualifying_agent": "Ειδικός πράκτορας",
+                "reservation_scheduling": "Κράτηση & προγραμματισμός",
+                "service_definition": "Ορισμός υπηρεσίας",
+                "service_delivery": "Παροχή υπηρεσιών",
+                "service_experience": "Εμπειρία σέρβις",
+                "service_instigation_policymaking": "Υποκίνηση υπηρεσίας και χάραξη πολιτικής",
+                "service_publication": "Δημοσίευση υπηρεσίας",
+                "service_publicity": "Δημοσιότητα υπηρεσίας",
+                "service_resourcing": "Πόρος υπηρεσιών",
+                "service_use": "Χρήση υπηρεσίας",
+                "service_workflow": "Ροή εργασιών υπηρεσίας",
+                "touch_points": "Σημεία επαφής",
+                "voter": "Ψηφοφόρος"
             },
             "definitions": {
                 "accessing": {
@@ -549,6 +575,25 @@
                         "label": "Υπήρξε διαδικασία προσόντων ή επιλογής;"
                     },
                     "title": "Πρόσβαση"
+                },
+                "designing": {
+                    "design_assist_asked": {
+                        "label": "Σας προσκαλέσατε να βοηθήσετε στο σχεδιασμό της υπηρεσίας;"
+                    },
+                    "design_assist_broker": {
+                        "hint": "Μεσίτης συν-δημιουργίας",
+                        "label": "Εάν ναι, από ποιον;"
+                    },
+                    "design_input_asked": {
+                        "label": "Σας ζητήθηκε να εισαγάγετε το σχεδιασμό της υπηρεσίας;"
+                    },
+                    "design_input_experience": {
+                        "label": "Πώς ήταν η εμπειρία σας από αυτό;"
+                    },
+                    "design_input_method": {
+                        "label": "Πώς συμμετείχατε;"
+                    },
+                    "title": "Σχέδιο"
                 },
                 "discovering": {
                     "comments": {
@@ -587,6 +632,15 @@
                     },
                     "design_role": {
                         "label": "Έπαιξες κάποιο ρόλο στο σχεδιασμό και τον ορισμό της υπηρεσίας; Εάν ναι, ποιες ήταν οι περιπτώσεις και τα κανάλια που συνέβη αυτό;"
+                    },
+                    "identify_experience": {
+                        "label": "Πώς ήταν η εμπειρία σας από αυτό;"
+                    },
+                    "identify_method": {
+                        "label": "Πώς προέκυψε αυτή η αναγνώριση;"
+                    },
+                    "identify_role": {
+                        "label": "Έπαιξες ρόλο στον τρόπο με τον οποίο εντοπίστηκε αρχικά η υπηρεσία;"
                     },
                     "instigate_role": {
                         "label": "Είχατε κάποιο ρόλο στην υποκίνηση του έργου; Εάν ναι, συμμετείχατε σε κάποια από τις παρακάτω επιλογές; Μπορείτε να επιλέξετε όσα θέλετε."
@@ -627,6 +681,12 @@
                     "other": "Αλλα",
                     "referred": "Αναφέρεται"
                 },
+                "design_assist_broker": {
+                    "government": "Κυβέρνηση",
+                    "ngo": "ΜΚΟ (Μη Κυβερνητικός Οργανισμός)",
+                    "other": "Αλλα",
+                    "university": "Πανεπιστήμιο"
+                },
                 "instigate_roles": {
                     "government_department": "Κυβερνητικό Τμήμα",
                     "political_party": "Πολιτικό κόμμα",
@@ -638,6 +698,11 @@
                     "referral": "Παραπομπή",
                     "social": "Μεσα ΚΟΙΝΩΝΙΚΗΣ ΔΙΚΤΥΩΣΗΣ",
                     "word_of_mouth": "Από στόμα σε στόμα"
+                },
+                "methods": {
+                    "face": "Πρόσωπο με πρόσωπο",
+                    "online": "Σε σύνδεση",
+                    "workshop": "ΕΡΓΑΣΤΗΡΙ"
                 },
                 "opinions_how": {
                     "interview": "Συνέντευξη",

@@ -169,9 +169,98 @@
 		]
 	},
 	{
+		"id": "designing",
+		"type": "group",
+		"children": [
+			{
+				"id": "design_input_asked",
+				"dataType": "string",
+				"componentName": "VRadioList",
+				"componentProps": {
+					"options": [
+						{"value": "yes", "lang": "aspects.user_journey_model.options.yes_no_maybe.yes" },
+						{"value": "no", "lang": "aspects.user_journey_model.options.yes_no_maybe.no" },
+						{"value": "maybe", "lang": "aspects.user_journey_model.options.yes_no_maybe.maybe" }
+					]
+				}
+			},
+			{
+				"id": "design_input_method",
+				"dataType": "string",
+				"componentName": "VRadioList",
+				"componentProps": {
+					"options": [
+						{"value": "workshop", "lang": "aspects.user_journey_model.options.methods.workshop" },
+						{"value": "online", "lang": "aspects.user_journey_model.options.methods.online" },
+						{"value": "face", "lang": "aspects.user_journey_model.options.methods.face" }
+					]
+				}
+			},
+			{
+				"id": "design_input_experience",
+				"dataType": "string",
+				"componentName": "ExperienceEditor"
+			},
+			{
+				"id": "design_assist_asked",
+				"dataType": "string",
+				"componentName": "VRadioList",
+				"componentProps": {
+					"options": [
+						{"value": "yes", "lang": "aspects.user_journey_model.options.yes_no_maybe.yes" },
+						{"value": "no", "lang": "aspects.user_journey_model.options.yes_no_maybe.no" },
+						{"value": "maybe", "lang": "aspects.user_journey_model.options.yes_no_maybe.maybe" }
+					]
+				}
+			},
+			{
+				"id": "design_assist_broker",
+				"dataType": "string",
+				"componentName": "VRadioList",
+				"componentProps": {
+					"options": [
+						{"value": "university", "lang": "aspects.user_journey_model.options.design_assist_broker.university" },
+						{"value": "government", "lang": "aspects.user_journey_model.options.design_assist_broker.government" },
+						{"value": "ngo", "lang": "aspects.user_journey_model.options.design_assist_broker.ngo" },
+						{"value": "other", "lang": "aspects.user_journey_model.options.design_assist_broker.other" }
+					]
+				}
+			}
+		]
+	},
+	{
 		"id": "instigating",
 		"type": "group",
 		"children": [
+			{
+				"id": "identify_role",
+				"dataType": "string",
+				"componentName": "VRadioList",
+				"componentProps": {
+					"options": [
+						{"value": "yes", "lang": "aspects.user_journey_model.options.yes_no_maybe.yes" },
+						{"value": "no", "lang": "aspects.user_journey_model.options.yes_no_maybe.no" },
+						{"value": "maybe", "lang": "aspects.user_journey_model.options.yes_no_maybe.maybe" }
+					]
+				}
+			},
+			{
+				"id": "identify_method",
+				"dataType": "string",
+				"componentName": "VRadioList",
+				"componentProps": {
+					"options": [
+						{"value": "workshop", "lang": "aspects.user_journey_model.options.methods.workshop" },
+						{"value": "online", "lang": "aspects.user_journey_model.options.methods.online" },
+						{"value": "face", "lang": "aspects.user_journey_model.options.methods.face" }
+					]
+				}
+			},
+			{
+				"id": "identify_experience",
+				"dataType": "string",
+				"componentName": "ExperienceEditor"
+			},
 			{
 				"id": "design_role",
 				"dataType": "string",

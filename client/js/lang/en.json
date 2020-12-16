@@ -553,6 +553,36 @@
 		"user_journey_model": {
 			"title": "User Journey Model",
 			"dashboard": {
+				"service_workflow": "Service Workflow",
+				"touch_points": "Touch Points",
+				"service_experience": "Service Experience",
+				"carrier_of_experience": "Carrier of Experience",
+				"service_instigation_policymaking": "",
+				"pressure_campaign_group": "Pressure / Campaigning Group",
+				"government_department": "Government Department",
+				"political_party": "Political Party",
+				"activist": "Activist",
+				"voter": "Voter",
+				"citizen": "Citizen",
+				"service_instigation_policymaking": "Service Instigation and Policymaking",
+				"budget": "Budget",
+				"service_definition": "Service Definition",
+				"outcome_reports": "Outcome Reports",
+				"provider_views": "Provider views",
+				"service_publication": "Service publication",
+				"application": "Application",
+				"service_use": "Service Use",
+				"clients_view": "Clients' views",
+				"service_definition": "Service Definition",
+				"service_resourcing": "Service Resourcing",
+				"reservation_scheduling": "Reservation & Scheduling",
+				"service_delivery": "Service Delivery",
+				"service_publicity": "Service Publicity",
+				"qualifying_agent": "Qualifying Agent",
+				"evaluating_agent": "Evaluating Agent",
+				"potential_beneficiary": "Potential Beneficiary",
+				"applicant": "Applicant",
+				"client": "Client"
 			},
 			"guide": {
 				"step01": "Services are publicised to their intended users, this is the discovery phase.",
@@ -596,6 +626,17 @@
 					"pressure_group": "Pressure/Campaigning Group",
 					"political_party": "Political Party",
 					"government_department": "Government Department"
+				},
+				"methods": {
+					"workshop": "Workshop",
+					"online": "Online",
+					"face": "Face-to-Face"
+				},
+				"design_assist_broker": {
+					"university": "University",
+					"government": "Government",
+					"ngo": "NGO",
+					"other": "Other"
 				}
 			},
 			"definitions": {
@@ -663,8 +704,36 @@
 						"label": "Were there any surprises or disappointments in your experience?"
 					}
 				},
+				"designing": {
+					"title": "Designing",
+					"design_input_asked": {
+						"label": "Were you asked to input into the design of the service?"
+					},
+					"design_input_method": {
+						"label": "How did you participate?"
+					},
+					"design_input_experience": {
+						"label": "How was your experience of this?"
+					},
+					"design_assist_asked": {
+						"label": "Were you invited to assist with the design of the service?"
+					},
+					"design_assist_broker": {
+						"label": "If yes, who by?",
+						"hint": "Co-creation Broker"
+					}
+				},
 				"instigating": {
 					"title": "Instigating",
+					"identify_role": {
+						"label": "Did you play a role in how the service was initially identified?"
+					},
+					"identify_method": {
+						"label": "How did this identification occur?"
+					},
+					"identify_experience": {
+						"label": "How was your experience of this?"
+					},
 					"design_role": {
 						"label": "Did you play any role in the design and definition of the service? If yes, what were the occasions and channels that this occurred?"
 					},

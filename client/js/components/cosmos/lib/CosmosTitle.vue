@@ -39,10 +39,16 @@ export default {
 		},
 
 		titleConfig() {
+
+			const aspectTitle = this.$t(`aspects.${this.aspectId}.title`);
+			const modelTitle = this.model ? this.model.title : undefined;
+
+			const title = [ aspectTitle, modelTitle ].filter(str => str).join(' - ');
+
 			var defaultConfig = {
 				visible: this.isVisible,
 				visible: true,
-				text: this.model ? this.model.title : '',
+				text: title,
 				fontSize: 24,
 				// fontStyle: 'bold',
 				fontFamily: this.options.fontFamily,

@@ -531,8 +531,34 @@
         },
         "user_journey_model": {
             "dashboard": {
-                "one": "",
-                "other": ""
+                "activist": "Attivista",
+                "applicant": "Richiedente",
+                "application": "Applicazione",
+                "budget": "Budget",
+                "carrier_of_experience": "Portatore di esperienza",
+                "citizen": "Cittadino",
+                "client": "Cliente",
+                "clients_view": "Opinioni dei clienti",
+                "evaluating_agent": "Agente di valutazione",
+                "government_department": "Dipartimento del governo",
+                "outcome_reports": "Rapporti sui risultati",
+                "political_party": "Partito politico",
+                "potential_beneficiary": "Potenziale beneficiario",
+                "pressure_campaign_group": "Gruppo di pressione \/ campagna",
+                "provider_views": "Visualizzazioni del fornitore",
+                "qualifying_agent": "Agente qualificato",
+                "reservation_scheduling": "Prenotazione e pianificazione",
+                "service_definition": "Definizione del servizio",
+                "service_delivery": "L'erogazione dei servizi",
+                "service_experience": "Esperienza di servizio",
+                "service_instigation_policymaking": "Istigazione del servizio e definizione delle politiche",
+                "service_publication": "Pubblicazione del servizio",
+                "service_publicity": "Pubblicità di servizio",
+                "service_resourcing": "Risorse di servizio",
+                "service_use": "Utilizzo del servizio",
+                "service_workflow": "Flusso di lavoro del servizio",
+                "touch_points": "Punti di contatto",
+                "voter": "Elettore"
             },
             "definitions": {
                 "accessing": {
@@ -549,6 +575,25 @@
                         "label": "C'era un processo di qualificazione o selezione?"
                     },
                     "title": "Accesso"
+                },
+                "designing": {
+                    "design_assist_asked": {
+                        "label": "Sei stato invitato ad assistere alla progettazione del servizio?"
+                    },
+                    "design_assist_broker": {
+                        "hint": "Broker di co-creazione",
+                        "label": "Se sì, da chi?"
+                    },
+                    "design_input_asked": {
+                        "label": "Ti è stato chiesto di contribuire alla progettazione del servizio?"
+                    },
+                    "design_input_experience": {
+                        "label": "Come è stata la tua esperienza di questo?"
+                    },
+                    "design_input_method": {
+                        "label": "Come hai partecipato?"
+                    },
+                    "title": "Progettare"
                 },
                 "discovering": {
                     "comments": {
@@ -587,6 +632,15 @@
                     },
                     "design_role": {
                         "label": "Hai avuto un ruolo nella progettazione e definizione del servizio? Se sì, quali sono state le occasioni e i canali in cui ciò è avvenuto?"
+                    },
+                    "identify_experience": {
+                        "label": "Come è stata la tua esperienza di questo?"
+                    },
+                    "identify_method": {
+                        "label": "Come è avvenuta questa identificazione?"
+                    },
+                    "identify_role": {
+                        "label": "Hai avuto un ruolo nel modo in cui il servizio è stato inizialmente identificato?"
                     },
                     "instigate_role": {
                         "label": "Hai avuto qualche ruolo nell'istigare il progetto? Se sì, facevi parte di una delle seguenti opzioni? Puoi sceglierne quante ne vuoi."
@@ -627,6 +681,12 @@
                     "other": "Altro",
                     "referred": "Riferito"
                 },
+                "design_assist_broker": {
+                    "government": "Governo",
+                    "ngo": "ONG (Organizzazione non governativa)",
+                    "other": "Altro",
+                    "university": "Università"
+                },
                 "instigate_roles": {
                     "government_department": "Dipartimento del governo",
                     "political_party": "Partito politico",
@@ -638,6 +698,11 @@
                     "referral": "Rinvio",
                     "social": "Social media",
                     "word_of_mouth": "Passaparola"
+                },
+                "methods": {
+                    "face": "Faccia a faccia",
+                    "online": "in linea",
+                    "workshop": "Workshop"
                 },
                 "opinions_how": {
                     "interview": "Colloquio",

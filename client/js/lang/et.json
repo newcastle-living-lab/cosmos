@@ -531,8 +531,34 @@
         },
         "user_journey_model": {
             "dashboard": {
-                "one": "",
-                "other": ""
+                "activist": "Aktivist",
+                "applicant": "Taotleja",
+                "application": "Rakendus",
+                "budget": "Eelarve",
+                "carrier_of_experience": "Kogemuste kandja",
+                "citizen": "Kodanik",
+                "client": "Klient",
+                "clients_view": "Klientide vaated",
+                "evaluating_agent": "Hindav esindaja",
+                "government_department": "Valitsuse osakond",
+                "outcome_reports": "Tulemuste aruanded",
+                "political_party": "Erakond",
+                "potential_beneficiary": "Potentsiaalne kasusaaja",
+                "pressure_campaign_group": "Surve- \/ kampaaniarühm",
+                "provider_views": "Pakkuja vaated",
+                "qualifying_agent": "Kvalifitseeruv esindaja",
+                "reservation_scheduling": "Broneerimine ja ajastamine",
+                "service_definition": "Teenuse määratlus",
+                "service_delivery": "Teenuse kohaletoimetamine",
+                "service_experience": "Teeninduskogemus",
+                "service_instigation_policymaking": "Teenuse õhutamine ja poliitika kujundamine",
+                "service_publication": "Teenuse väljaanne",
+                "service_publicity": "Teenuse avalikkus",
+                "service_resourcing": "Teenuse allhange",
+                "service_use": "Teenuse kasutamine",
+                "service_workflow": "Teenuse töövoog",
+                "touch_points": "Puudutage punkte",
+                "voter": "Valija"
             },
             "definitions": {
                 "accessing": {
@@ -549,6 +575,25 @@
                         "label": "Kas toimus kvalifikatsioon või valikuprotsess?"
                     },
                     "title": "Juurdepääs"
+                },
+                "designing": {
+                    "design_assist_asked": {
+                        "label": "Kas teid kutsuti teenuse kujundamisel abiks olema?"
+                    },
+                    "design_assist_broker": {
+                        "hint": "Ühisloome maakler",
+                        "label": "Kui jah, siis kelle poolt?"
+                    },
+                    "design_input_asked": {
+                        "label": "Kas teil paluti sisestada teenuse kujundus?"
+                    },
+                    "design_input_experience": {
+                        "label": "Kuidas teie kogemus sellest oli?"
+                    },
+                    "design_input_method": {
+                        "label": "Kuidas osalesid?"
+                    },
+                    "title": "Kujundamine"
                 },
                 "discovering": {
                     "comments": {
@@ -587,6 +632,15 @@
                     },
                     "design_role": {
                         "label": "Kas mängisite mingit rolli teenuse kujundamisel ja määratlemisel? Kui jah, siis milliseid juhtumeid ja kanaleid see juhtus?"
+                    },
+                    "identify_experience": {
+                        "label": "Kuidas teie kogemus sellest oli?"
+                    },
+                    "identify_method": {
+                        "label": "Kuidas see tuvastamine toimus?"
+                    },
+                    "identify_role": {
+                        "label": "Kas mängisite rolli teenuse esialgsel tuvastamisel?"
                     },
                     "instigate_role": {
                         "label": "Kas teil oli projekti käivitamisel mingit rolli? Kui jah, kas kuulusite mõnda järgmistest võimalustest? Saate valida nii palju kui soovite."
@@ -627,6 +681,12 @@
                     "other": "Muu",
                     "referred": "Viidatud"
                 },
+                "design_assist_broker": {
+                    "government": "Valitsus",
+                    "ngo": "Valitsusväline organisatsioon (valitsusväline organisatsioon)",
+                    "other": "Muu",
+                    "university": "Ülikool"
+                },
                 "instigate_roles": {
                     "government_department": "Valitsuse osakond",
                     "political_party": "Erakond",
@@ -638,6 +698,11 @@
                     "referral": "Suunamine",
                     "social": "Sotsiaalmeedia",
                     "word_of_mouth": "Suusõnaliselt"
+                },
+                "methods": {
+                    "face": "Näost näkku",
+                    "online": "Veebis",
+                    "workshop": "Töötuba"
                 },
                 "opinions_how": {
                     "interview": "Intervjuu",

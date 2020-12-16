@@ -1,0 +1,39 @@
+
+.summary-view {
+	.group-title {
+		font-size: 1.3rem;
+		// line-height: 1;
+		padding-top: .6rem;
+	}
+
+	.group-prompt {
+		font-size: .8rem;
+		font-weight: bold;
+		width: 50%;
+		vertical-align: top;
+	}
+
+	.group-value {
+		vertical-align: top;
+
+		.link,
+		a.link {
+			color: #0074D9;
+			text-decoration: underline;
+		}
+	}
+
+	.like-pre {
+		white-space: pre;
+	}
+
+	table {
+		margin-bottom: 2.4rem;
+	}
+
+	.divider {
+		border-top-width: .1rem;
+		height: .1rem;
+	}
+
+}

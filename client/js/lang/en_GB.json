@@ -531,8 +531,34 @@
         },
         "user_journey_model": {
             "dashboard": {
-                "one": "",
-                "other": ""
+                "activist": "Activist",
+                "applicant": "Applicant",
+                "application": "Application",
+                "budget": "Budget",
+                "carrier_of_experience": "Carrier of Experience",
+                "citizen": "Citizen",
+                "client": "Client",
+                "clients_view": "Clients' views",
+                "evaluating_agent": "Evaluating Agent",
+                "government_department": "Government Department",
+                "outcome_reports": "Outcome Reports",
+                "political_party": "Political Party",
+                "potential_beneficiary": "Potential Beneficiary",
+                "pressure_campaign_group": "Pressure \/ Campaigning Group",
+                "provider_views": "Provider views",
+                "qualifying_agent": "Qualifying Agent",
+                "reservation_scheduling": "Reservation & Scheduling",
+                "service_definition": "Service Definition",
+                "service_delivery": "Service Delivery",
+                "service_experience": "Service Experience",
+                "service_instigation_policymaking": "Service Instigation and Policymaking",
+                "service_publication": "Service publication",
+                "service_publicity": "Service Publicity",
+                "service_resourcing": "Service Resourcing",
+                "service_use": "Service Use",
+                "service_workflow": "Service Workflow",
+                "touch_points": "Touch Points",
+                "voter": "Voter"
             },
             "definitions": {
                 "accessing": {
@@ -549,6 +575,25 @@
                         "label": "Was there a qualification or selection process?"
                     },
                     "title": "Accessing"
+                },
+                "designing": {
+                    "design_assist_asked": {
+                        "label": "Were you invited to assist with the design of the service?"
+                    },
+                    "design_assist_broker": {
+                        "hint": "Co-creation Broker",
+                        "label": "If yes, who by?"
+                    },
+                    "design_input_asked": {
+                        "label": "Were you asked to input into the design of the service?"
+                    },
+                    "design_input_experience": {
+                        "label": "How was your experience of this?"
+                    },
+                    "design_input_method": {
+                        "label": "How did you participate?"
+                    },
+                    "title": "Designing"
                 },
                 "discovering": {
                     "comments": {
@@ -587,6 +632,15 @@
                     },
                     "design_role": {
                         "label": "Did you play any role in the design and definition of the service? If yes, what were the occasions and channels that this occurred?"
+                    },
+                    "identify_experience": {
+                        "label": "How was your experience of this?"
+                    },
+                    "identify_method": {
+                        "label": "How did this identification occur?"
+                    },
+                    "identify_role": {
+                        "label": "Did you play a role in how the service was initially identified?"
                     },
                     "instigate_role": {
                         "label": "Did you have any role in instigating the project? If yes, were you part of any of the following options? You can choose as many as you like."
@@ -627,6 +681,12 @@
                     "other": "Other",
                     "referred": "Referred"
                 },
+                "design_assist_broker": {
+                    "government": "Government",
+                    "ngo": "NGO (Non-Government Organisation)",
+                    "other": "Other",
+                    "university": "University"
+                },
                 "instigate_roles": {
                     "government_department": "Government Department",
                     "political_party": "Political Party",
@@ -638,6 +698,11 @@
                     "referral": "Referral",
                     "social": "Social media",
                     "word_of_mouth": "Word of mouth"
+                },
+                "methods": {
+                    "face": "Face-to-Face",
+                    "online": "Online",
+                    "workshop": "Workshop"
                 },
                 "opinions_how": {
                     "interview": "Interview",

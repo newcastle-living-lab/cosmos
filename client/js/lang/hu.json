@@ -531,8 +531,34 @@
         },
         "user_journey_model": {
             "dashboard": {
-                "one": "",
-                "other": ""
+                "activist": "Aktivista",
+                "applicant": "Pályázó",
+                "application": "Alkalmazás",
+                "budget": "Költségvetés",
+                "carrier_of_experience": "A tapasztalat hordozója",
+                "citizen": "Polgár",
+                "client": "Ügyfél",
+                "clients_view": "Az ügyfelek véleménye",
+                "evaluating_agent": "Értékelő ügynök",
+                "government_department": "Kormányhivatal",
+                "outcome_reports": "Eredményjelentések",
+                "political_party": "Politikai párt",
+                "potential_beneficiary": "Potenciális kedvezményezett",
+                "pressure_campaign_group": "Nyomás \/ Kampánycsoport",
+                "provider_views": "Szolgáltató nézetei",
+                "qualifying_agent": "Minősítő ügynök",
+                "reservation_scheduling": "Foglalás és ütemezés",
+                "service_definition": "Szolgáltatás meghatározása",
+                "service_delivery": "Szolgáltatás kézbesítése",
+                "service_experience": "Szolgáltatási tapasztalat",
+                "service_instigation_policymaking": "Szolgáltatás ösztönzése és döntéshozatal",
+                "service_publication": "Szolgáltatási kiadvány",
+                "service_publicity": "Szolgáltatás nyilvánossága",
+                "service_resourcing": "Szolgáltatás újrafeldolgozása",
+                "service_use": "Szolgáltatás használata",
+                "service_workflow": "Szolgáltatási munkafolyamat",
+                "touch_points": "Érintő pontok",
+                "voter": "Szavazó"
             },
             "definitions": {
                 "accessing": {
@@ -549,6 +575,25 @@
                         "label": "Volt-e minősítés vagy kiválasztási folyamat?"
                     },
                     "title": "Hozzáférés"
+                },
+                "designing": {
+                    "design_assist_asked": {
+                        "label": "Meghívtak segítséget nyújtani a szolgáltatás tervezésében?"
+                    },
+                    "design_assist_broker": {
+                        "hint": "Co-creation Broker",
+                        "label": "Ha igen, ki által?"
+                    },
+                    "design_input_asked": {
+                        "label": "Kérték, hogy vegyenek részt a szolgáltatás tervezésében?"
+                    },
+                    "design_input_experience": {
+                        "label": "Milyen volt a tapasztalata erről?"
+                    },
+                    "design_input_method": {
+                        "label": "Hogyan vett részt?"
+                    },
+                    "title": "Tervezés"
                 },
                 "discovering": {
                     "comments": {
@@ -587,6 +632,15 @@
                     },
                     "design_role": {
                         "label": "Játszott valamilyen szerepet a szolgáltatás tervezésében és meghatározásában? Ha igen, milyen alkalmak és csatornák történtek?"
+                    },
+                    "identify_experience": {
+                        "label": "Milyen volt a tapasztalata erről?"
+                    },
+                    "identify_method": {
+                        "label": "Hogyan történt ez az azonosítás?"
+                    },
+                    "identify_role": {
+                        "label": "Játszott szerepet abban, hogy a szolgáltatást eredetileg meghatározták?"
                     },
                     "instigate_role": {
                         "label": "Volt valamilyen szerepe a projekt kezdeményezésében? Ha igen, részese volt-e az alábbi lehetőségek bármelyikének? Választhat annyit, amennyit csak akar."
@@ -627,6 +681,12 @@
                     "other": "Egyéb",
                     "referred": "Hivatkozva"
                 },
+                "design_assist_broker": {
+                    "government": "Kormány",
+                    "ngo": "Nem kormányzati szervezet (nem kormányzati szervezet)",
+                    "other": "Egyéb",
+                    "university": "Egyetemi"
+                },
                 "instigate_roles": {
                     "government_department": "Kormányhivatal",
                     "political_party": "Politikai párt",
@@ -638,6 +698,11 @@
                     "referral": "Áttétel",
                     "social": "Közösségi média",
                     "word_of_mouth": "Szájról szájra"
+                },
+                "methods": {
+                    "face": "Szemtől szemben",
+                    "online": "Online",
+                    "workshop": "Műhely"
                 },
                 "opinions_how": {
                     "interview": "Interjú",

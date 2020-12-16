@@ -531,8 +531,34 @@
         },
         "user_journey_model": {
             "dashboard": {
-                "one": "",
-                "other": ""
+                "activist": "Activist",
+                "applicant": "Aanvrager",
+                "application": "Toepassing",
+                "budget": "Begroting",
+                "carrier_of_experience": "Drager van ervaring",
+                "citizen": "Inwoner",
+                "client": "Cliënt",
+                "clients_view": "Meningen van klanten",
+                "evaluating_agent": "Evaluerende agent",
+                "government_department": "Overheidsdienst",
+                "outcome_reports": "Uitkomstrapporten",
+                "political_party": "Politieke partij",
+                "potential_beneficiary": "Potentiële begunstigde",
+                "pressure_campaign_group": "Druk \/ campagnegroep",
+                "provider_views": "Provider-weergaven",
+                "qualifying_agent": "Kwalificerende agent",
+                "reservation_scheduling": "Reservering en planning",
+                "service_definition": "Dienstdefinitie",
+                "service_delivery": "Levering van diensten",
+                "service_experience": "Service-ervaring",
+                "service_instigation_policymaking": "Dienstverlening en beleidsvorming",
+                "service_publication": "Dienst publicatie",
+                "service_publicity": "Service Publiciteit",
+                "service_resourcing": "Dienstverlening",
+                "service_use": "Service gebruik",
+                "service_workflow": "Servicewerkstroom",
+                "touch_points": "Aanraak punten",
+                "voter": "Kiezer"
             },
             "definitions": {
                 "accessing": {
@@ -549,6 +575,25 @@
                         "label": "Was er een kwalificatie- of selectieproces?"
                     },
                     "title": "Toegang verkrijgen"
+                },
+                "designing": {
+                    "design_assist_asked": {
+                        "label": "Bent u uitgenodigd om te helpen bij het ontwerp van de dienst?"
+                    },
+                    "design_assist_broker": {
+                        "hint": "Co-creatie makelaar",
+                        "label": "Zo ja, door wie?"
+                    },
+                    "design_input_asked": {
+                        "label": "Werd u gevraagd om mee te werken aan het ontwerp van de dienst?"
+                    },
+                    "design_input_experience": {
+                        "label": "Hoe was uw ervaring hiermee?"
+                    },
+                    "design_input_method": {
+                        "label": "Hoe heb je meegedaan?"
+                    },
+                    "title": "Ontwerpen"
                 },
                 "discovering": {
                     "comments": {
@@ -587,6 +632,15 @@
                     },
                     "design_role": {
                         "label": "Heeft u een rol gespeeld bij het ontwerp en de definitie van de dienst? Zo ja, wat waren de gelegenheden en kanalen dat dit plaatsvond?"
+                    },
+                    "identify_experience": {
+                        "label": "Hoe was uw ervaring hiermee?"
+                    },
+                    "identify_method": {
+                        "label": "Hoe kwam deze identificatie tot stand?"
+                    },
+                    "identify_role": {
+                        "label": "Speelde u een rol in de manier waarop de service aanvankelijk werd geïdentificeerd?"
                     },
                     "instigate_role": {
                         "label": "Heeft u een rol gespeeld bij het opzetten van het project? Zo ja, maakte u deel uit van een van de volgende opties? U kunt er zoveel kiezen als u wilt."
@@ -627,6 +681,12 @@
                     "other": "Andere",
                     "referred": "Doorverwezen"
                 },
+                "design_assist_broker": {
+                    "government": "Regering",
+                    "ngo": "NGO (niet-gouvernementele organisatie)",
+                    "other": "Andere",
+                    "university": "Universiteit"
+                },
                 "instigate_roles": {
                     "government_department": "Overheidsdienst",
                     "political_party": "Politieke partij",
@@ -638,6 +698,11 @@
                     "referral": "Doorverwijzing",
                     "social": "Sociale media",
                     "word_of_mouth": "Mond op mond"
+                },
+                "methods": {
+                    "face": "Oog in oog",
+                    "online": "Online",
+                    "workshop": "Werkplaats"
                 },
                 "opinions_how": {
                     "interview": "Interview",

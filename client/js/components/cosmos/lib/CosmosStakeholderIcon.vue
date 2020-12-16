@@ -56,6 +56,10 @@ export default {
 			type: Number,
 			default: 100,
 		},
+		visible: {
+			type: Boolean,
+			default: true,
+		},
 		x: Number,
 		y: Number,
 	},
@@ -93,6 +97,7 @@ export default {
 
 		groupConfig() {
 			return {
+				visible: this.visible,
 				x: this.x,
 				y: this.y,
 			}

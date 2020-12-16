@@ -5,7 +5,15 @@
 		<CosmosTitle :aspectId="aspectId" :options="options" />
 
 		<!-- Swim Lanes -->
-		<v-group :config="{ x: 547, y: 430 }">
+
+		<v-group v-for="(stage, idx) in journeyStagesConfig" :key="'stage' + idx" :config="stage.group">
+			<v-label :config="stage.label">
+				<v-tag :config="stage.tag" />
+				<v-text :config="stage.text" />
+			</v-label>
+		</v-group>
+
+		<v-group :config="{ x: 187, y: 550 }">
 			<v-rect
 				v-for="(rect, idx) in swimLanesConfig"
 				:key="'swimLane' + idx"
@@ -23,14 +31,7 @@
 			/>
 		</v-group>
 
-		<v-group v-for="(stage, idx) in journeyStagesConfig" :key="'stage' + idx" :config="stage.group">
-			<v-label :config="stage.label">
-				<v-tag :config="stage.tag" />
-				<v-text :config="stage.text" />
-			</v-label>
-		</v-group>
-
-		<v-group :config="{ x: 490, y: 85, scale: { x: 0.85, y: 0.85 } }">
+		<v-group :config="{ x: 490, y: 95, scale: { x: 0.9, y: 0.9 } }">
 			<v-group v-for="(text, idx) in flowchartTextConfig" :key="'flowText' + idx" :config="{ x: 0, y: 0 }">
 				<CosmosTextBox :options="options" :config="text" />
 			</v-group>
@@ -83,6 +84,7 @@ const defaultTextConfig = {
 
 const Icons = {
 	check: 'M5 13l4 4L19 7',
+	question: 'M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z',
 	cross: 'M6 18L18 6M6 6l12 12',
 };
 
@@ -94,30 +96,6 @@ export default {
 		aspectId: [Boolean, String],
 		options: Object,
 		definitions: [Object, Array],
-	},
-
-	data() {
-		return {
-			labelConfig: {
-				x: 170,
-				y: 75,
-				opacity: 0.75,
-			},
-			tagConfig: {
-				fill: "black",
-				pointerDirection: "down",
-				pointerWidth: 10,
-				pointerHeight: 10,
-				lineJoin: "round",
-			},
-			textConfig: {
-				text: "Tooltip pointing down",
-				fontFamily: "Calibri",
-				fontSize: 18,
-				padding: 5,
-				fill: "white",
-			},
-		}
 	},
 
 	computed: {
@@ -187,10 +165,14 @@ export default {
 					&& this.aspectData.evaluating.surprises_comments.length
 				) ? true : false;
 
-				config.designing = config.evaluating;
+				config.designing = (
+					this.aspectData.designing.design_input_asked.length
+					&& this.aspectData.designing.design_assist_asked.length
+				) ? true : false;
 
 				config.instigating = (
-					this.aspectData.instigating.design_role.length
+					this.aspectData.instigating.identify_role.length
+					&& this.aspectData.instigating.design_role.length
 					&& this.aspectData.instigating.comments.length
 				) ? true : false;
 
@@ -209,20 +191,6 @@ export default {
 			var data = {};
 
 			return data;
-		},
-
-		serviceLabelConfig() {
-			return {
-				...defaultTextConfig,
-				visible: (this.visibility.designing || this.visibility.instigating),
-				fontStyle: 'italic',
-				fontSize: 18,
-				text: 'Service Co-creation Journey',
-				width: 175,
-				align: 'right',
-				x: 0,
-				y: 535,
-			}
 		},
 
 		journeyStagesConfig() {
@@ -252,7 +220,7 @@ export default {
 				return offset + (itemNum * 180);
 			};
 
-			const yPos = 555;
+			const yPos = 500;
 
 			const visibility = this.visibility;
 
@@ -260,42 +228,42 @@ export default {
 				group: { visible: visibility.evaluating },
 				label: { x: xPos(5), y: yPos, },
 				tag: { ...tagConfig, fill: '#604A7B', pointerHeight: 0 },
-				text: { ...textConfig, text: 'Evaluating' },
+				text: { ...textConfig, text: this.$t('aspects.user_journey_model.definitions.evaluating.title') },
 			};
 
 			data.using = {
 				group: { visible: visibility.using },
 				label: { x: xPos(4), y: yPos, },
 				tag: { ...tagConfig, fill: '#FAC090', },
-				text: { ...textConfig, text: 'Using' },
+				text: { ...textConfig, text: this.$t('aspects.user_journey_model.definitions.using.title') },
 			};
 
 			data.accessing = {
 				group: { visible: visibility.accessing },
 				label: { x: xPos(3), y: yPos, },
 				tag: { ...tagConfig, fill: '#D99694', },
-				text: { ...textConfig, text: 'Accessing' },
+				text: { ...textConfig, text: this.$t('aspects.user_journey_model.definitions.accessing.title') },
 			};
 
 			data.discovering = {
 				group: { visible: visibility.discovering },
 				label: { x: xPos(2), y: yPos, },
 				tag: { ...tagConfig, fill: '#4F81BD', },
-				text: { ...textConfig, text: 'Discovering' },
+				text: { ...textConfig, text: this.$t('aspects.user_journey_model.definitions.discovering.title') },
 			};
 
 			data.designing = {
 				group: { visible: visibility.designing },
 				label: { x: xPos(1), y: yPos, },
 				tag: { ...tagConfig, fill: '#79C36F', },
-				text: { ...textConfig, text: 'Designing' },
+				text: { ...textConfig, text: this.$t('aspects.user_journey_model.definitions.designing.title') },
 			};
 
 			data.instigating = {
 				group: { visible: visibility.instigating },
 				label: { x: xPos(0), y: yPos, },
 				tag: { ...tagConfig, fill: '#DC5C52', },
-				text: { ...textConfig, text: 'Instigating' },
+				text: { ...textConfig, text: this.$t('aspects.user_journey_model.definitions.instigating.title') },
 			};
 
 			return data;
@@ -312,10 +280,42 @@ export default {
 				borderConfig: { cornerRadius: 0, strokeWidth: 2 },
 			};
 
+			const brokerValue = this.aspectData.designing.design_assist_broker;
+			if ( ! this.userGuide.isOpen && brokerValue.length) {
+
+				data.push({
+					...defaultConfig,
+					labelConfig: { fontStyle: 'bold', fontSize: 16 },
+					x: -140,
+					y: 230,
+					label: [
+						this.$t('aspects.user_journey_model.definitions.designing.design_assist_broker.hint'),
+						""
+					].join("\n"),
+					textWidth: 240,
+					width: 250,
+					height: 60,
+				});
+
+				data.push({
+					...defaultConfig,
+					x: -140,
+					y: 230,
+					label: [
+						"",
+						this.$t(`aspects.user_journey_model.options.design_assist_broker.${brokerValue}`)
+					].join("\n"),
+					textWidth: 240,
+					width: 250,
+					height: 60,
+				});
+
+			}
+
 			data.push({
 				...defaultConfig,
 				visible: visibility.designing,
-				label: "Service Definition",
+				label: this.$t('aspects.user_journey_model.dashboard.service_definition'),
 				x: 0,
 				y: 140,
 				textWidth: 105,
@@ -326,7 +326,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.designing,
-				label: "Service Resourcing",
+				label: this.$t('aspects.user_journey_model.dashboard.service_resourcing'),
 				x: 130,
 				y: 30,
 				textWidth: 125,
@@ -337,7 +337,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.designing,
-				label: "Reservation & Scheduling",
+				label: this.$t('aspects.user_journey_model.dashboard.reservation_scheduling'),
 				x: 305,
 				y: 30,
 				textWidth: 175,
@@ -348,7 +348,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.using,
-				label: "Service Delivery",
+				label: this.$t('aspects.user_journey_model.dashboard.service_delivery'),
 				x: 515,
 				y: 30,
 				textWidth: 100,
@@ -359,7 +359,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.discovering,
-				label: "Service Publicity",
+				label: this.$t('aspects.user_journey_model.dashboard.service_publicity'),
 				x: 130,
 				y: 150,
 				textWidth: 135,
@@ -370,7 +370,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.accessing,
-				label: "Qualifying Agent",
+				label: this.$t('aspects.user_journey_model.dashboard.qualifying_agent'),
 				x: 315,
 				y: 150,
 				textWidth: 135,
@@ -381,7 +381,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.evaluating,
-				label: "Evaluating Agent",
+				label: this.$t('aspects.user_journey_model.dashboard.evaluating_agent'),
 				x: 700,
 				y: 140,
 				textWidth: 100,
@@ -392,7 +392,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.discovering,
-				label: "Potential Beneficiary",
+				label: this.$t('aspects.user_journey_model.dashboard.potential_beneficiary'),
 				x: 125,
 				y: 315,
 				textWidth: 130,
@@ -403,7 +403,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.accessing,
-				label: "Applicant",
+				label: this.$t('aspects.user_journey_model.dashboard.applicant'),
 				x: 315,
 				y: 325,
 				textWidth: 130,
@@ -414,7 +414,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.using,
-				label: "Client",
+				label: this.$t('aspects.user_journey_model.dashboard.client'),
 				x: 490,
 				y: 325,
 				textWidth: 130,
@@ -444,7 +444,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.designing,
-				text: 'Budget',
+				text: this.$t('aspects.user_journey_model.dashboard.budget'),
 				x: 120,
 				y: 100,
 			});
@@ -452,7 +452,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.designing,
-				text: 'Service Definition',
+				text: this.$t('aspects.user_journey_model.dashboard.service_definition'),
 				x: 265,
 				y: 110,
 			});
@@ -460,7 +460,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.designing,
-				text: 'Outcome Reports',
+				text: this.$t('aspects.user_journey_model.dashboard.outcome_reports'),
 				x: 715,
 				y: 55,
 				width: 80,
@@ -469,7 +469,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.designing,
-				text: 'Provider views',
+				text: this.$t('aspects.user_journey_model.dashboard.provider_views'),
 				x: 600,
 				y: 145,
 				width: 75,
@@ -478,7 +478,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.discovering,
-				text: 'Service publication',
+				text: this.$t('aspects.user_journey_model.dashboard.service_publication'),
 				x: 155,
 				y: 235,
 				width: 100,
@@ -488,7 +488,7 @@ export default {
 				...defaultConfig,
 				visible: visibility.accessing,
 				align: 'center',
-				text: 'Application',
+				text: this.$t('aspects.user_journey_model.dashboard.application'),
 				x: 355,
 				y: 245,
 			});
@@ -496,7 +496,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.using,
-				text: 'Service Use',
+				text: this.$t('aspects.user_journey_model.dashboard.service_use'),
 				x: 525,
 				y: 245,
 			});
@@ -504,7 +504,7 @@ export default {
 			data.push({
 				...defaultConfig,
 				visible: visibility.evaluating,
-				text: 'Clients\' views',
+				text: this.$t('aspects.user_journey_model.dashboard.clients_view'),
 				x: 715,
 				y: 235,
 				width: 90,
@@ -662,7 +662,7 @@ export default {
 				padding: 10,
 				fontSize: 18,
 				fontStyle: 'normal',
-				text: 'Service Instigation and Policymaking',
+				text: this.$t('aspects.user_journey_model.dashboard.service_instigation_policymaking'),
 			};
 
 			// Inner boxes
@@ -677,7 +677,7 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				label: "Pressure / Campaign Group",
+				label: this.$t('aspects.user_journey_model.dashboard.pressure_campaign_group'),
 				x: 10,
 				y: 85,
 				textWidth: 170,
@@ -687,7 +687,7 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				label: "Government Department",
+				label: this.$t('aspects.user_journey_model.dashboard.government_department'),
 				x: 240,
 				y: 85,
 				textWidth: 130,
@@ -697,7 +697,7 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				label: "Political Party",
+				label: this.$t('aspects.user_journey_model.dashboard.political_party'),
 				x: 150,
 				y: 40,
 				textWidth: 125,
@@ -707,9 +707,9 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				label: "Activist",
+				label: this.$t('aspects.user_journey_model.dashboard.activist'),
 				x: 55,
-				y: 370,
+				y: 300,
 				textWidth: 95,
 				width: 100,
 				height: 35,
@@ -717,9 +717,9 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				label: "Voter",
+				label: this.$t('aspects.user_journey_model.dashboard.voter'),
 				x: 160,
-				y: 370,
+				y: 300,
 				textWidth: 95,
 				width: 100,
 				height: 35,
@@ -727,9 +727,9 @@ export default {
 
 			data.boxes.push({
 				...defaultConfig,
-				label: "Citizen",
+				label: this.$t('aspects.user_journey_model.dashboard.citizen'),
 				x: 265,
-				y: 370,
+				y: 300,
 				textWidth: 95,
 				width: 100,
 				height: 35,
@@ -751,21 +751,21 @@ export default {
 				...defaultConnectorConfig,
 				visible: visibility.pressureGroup,
 				start: [105, 150],
-				end: [105, 370],
+				end: [105, 300],
 			});
 
 			data.connectors.push({
 				...defaultConnectorConfig,
 				visible: visibility.political,
 				start: [220, 75],
-				end: [220, 370],
+				end: [220, 300],
 			});
 
 			data.connectors.push({
 				...defaultConnectorConfig,
 				visible: visibility.government,
 				start: [315, 150],
-				end: [315, 370],
+				end: [315, 300],
 			});
 
 			return data;
@@ -775,27 +775,22 @@ export default {
 
 			var lanes = [];
 
+			// Green service experience
 			lanes.push({
 				x: 0,
 				y: 0,
-				width: 720,
-				height: 90,
-				fill: '#edfdfb',
-			});
-
-			lanes.push({
-				x: 0,
-				y: 160,
-				width: 720,
-				height: 65,
+				width: 1080,
+				height: 70,
 				fill: '#d7e4bd',
 			});
 
+			// Yellow carrier of experience
+
 			lanes.push({
 				x: 0,
-				y: 230,
-				width: 720,
-				height: 65,
+				y: 90,
+				width: 1080,
+				height: 70,
 				fill: '#ffe07d',
 			});
 
@@ -812,63 +807,122 @@ export default {
 				fontSize: 18,
 			};
 
-			const defaultValueConfig = {
-				...defaultTextConfig,
-				fontStyle: 'normal',
-				fontSize: 18,
-			};
-
 			const xOffset = 520;
 
 			labels.push({
 				...defaultLabelConfig,
-				text: 'Service Workflow',
+				text: this.$t('aspects.user_journey_model.dashboard.service_workflow'),
 				width: 100,
-				align: 'right',
+				align: 'center',
 				x: 0,
-				y: -130,
-				offsetX: 110,
+				y: 0,
+				// y: -130,
+				offsetX: -250,
+				offsetY: 170,
 			});
 
 			labels.push({
 				...defaultLabelConfig,
-				text: 'Touch Points',
+				text: this.$t('aspects.user_journey_model.dashboard.touch_points'),
 				width: 100,
 				align: 'right',
 				x: 0,
-				y: 30,
-				offsetX: 110,
+				y: 0,
+				offsetX: (180 * 1) - 20,
+				offsetY: 60,
 			});
 
 			labels.push({
 				...defaultLabelConfig,
-				text: 'Service User Journey',
+				text: this.$t('aspects.user_journey_model.dashboard.service_experience'),
 				width: 100,
 				align: 'right',
 				x: 0,
-				y: 105,
-				offsetX: xOffset,
+				y: 0,
+				offsetX: (180 * 1) - 20,
+				offsetY: -10,
 			});
 
 			labels.push({
 				...defaultLabelConfig,
-				text: 'Service Experience',
+				text: this.$t('aspects.user_journey_model.dashboard.carrier_of_experience'),
 				width: 100,
 				align: 'right',
 				x: 0,
-				y: 175,
-				offsetX: xOffset,
+				y: 0,
+				offsetX: (180 * 1) - 20,
+				offsetY: -100,
 			});
 
-			labels.push({
-				...defaultLabelConfig,
-				text: 'Carrier of Experience',
-				width: 100,
-				align: 'right',
-				x: 0,
-				y: 245,
-				offsetX: xOffset,
-			});
+			// Responses
+			//
+
+			const defaultResponseTextConfig = {
+				...defaultTextConfig,
+				fontStyle: 'normal',
+				fontSize: 16,
+				align: 'center',
+				width: 180,
+				padding: 10,
+				y: 100,
+			};
+
+			// Instigating: Did you play a role in how the service was initally identified?
+			//
+			var optionValue = this.aspectData.instigating.identify_role;
+
+			var config = {
+				...defaultResponseTextConfig,
+				visible: (optionValue && optionValue.length ? true : false),
+				x: 0 * 180,
+			};
+
+			switch (optionValue) {
+				case "no":
+					config.text = '✗';
+					config.fontStyle = 'bold';
+					break;
+				case "maybe":
+					config.text = '?';
+					config.fontStyle = 'bold';
+					break;
+				case "yes":
+					var howResponse = this.aspectData.instigating.identify_method;
+					var langKey = `aspects.user_journey_model.options.methods.${howResponse}`;
+					config.text = this.$te(langKey) ? this.$t(langKey) : this.$t(`aspects.user_journey_model.options.yes_no_maybe.yes`);
+					break;
+			}
+
+			labels.push(config);
+
+
+			// Design: Were you asked to input into the design of the service?
+			//
+			var optionValue = this.aspectData.designing.design_input_asked;
+
+			var config = {
+				...defaultResponseTextConfig,
+				visible: (optionValue && optionValue.length ? true : false),
+				x: 1 * 180,
+			};
+
+			switch (optionValue) {
+				case "no":
+					config.text = '✗';
+					config.fontStyle = 'bold';
+					break;
+				case "maybe":
+					config.text = '?';
+					config.fontStyle = 'bold';
+					break;
+				case "yes":
+					var howResponse = this.aspectData.designing.design_input_method;
+					var langKey = `aspects.user_journey_model.options.methods.${howResponse}`;
+					config.text = this.$te(langKey) ? this.$t(langKey) : this.$t(`aspects.user_journey_model.options.yes_no_maybe.yes`);
+					break;
+			}
+
+			labels.push(config);
 
 			// How did you find out about the service?
 			//
@@ -877,46 +931,65 @@ export default {
 			var langKey = `aspects.user_journey_model.options.mediums.${optionValue}`;
 
 			labels.push({
-				...defaultValueConfig,
+				...defaultResponseTextConfig,
 				text: this.$te(langKey) ? this.$t(langKey) : '',
 				visible: (optionValue && optionValue.length && this.$te(langKey) ? true : false),
-				align: 'left',
-				x: 10,
-				y: 250,
-				// offset: 0,
+				x: 2 * 180,
 			});
+
 
 			// How did you gain access to the service?
 			//
-
 			var optionValue = this.aspectData.accessing.access_method;
 			var langKey = `aspects.user_journey_model.options.access_methods.${optionValue}`;
 
 			labels.push({
-				...defaultValueConfig,
+				...defaultResponseTextConfig,
 				text: this.$te(langKey) ? this.$t(langKey) : '',
 				visible: (optionValue && optionValue.length && this.$te(langKey) ? true : false),
-				align: 'left',
-				x: 220,
-				y: 250,
-				// offset: 0,
+				x: 3 * 180,
 			});
 
 			// Where did you use the service?
 			//
-
 			var optionValue = this.aspectData.using.where;
 			var langKey = `aspects.user_journey_model.options.where.${optionValue}`;
 
 			labels.push({
-				...defaultValueConfig,
+				...defaultResponseTextConfig,
 				text: this.$te(langKey) ? this.$t(langKey) : '',
 				visible: (optionValue && optionValue.length && this.$te(langKey) ? true : false),
-				align: 'left',
-				x: 400,
-				y: 250,
-				// offset: 0,
+				x: 4 * 180,
 			});
+
+			// Were you asked about your opinions about your experience of the service?
+			//
+			var optionValue = this.aspectData.evaluating.opinions_asked;
+
+			var config = {
+				...defaultResponseTextConfig,
+				visible: (optionValue && optionValue.length ? true : false),
+				x: 5 * 180,
+			};
+
+
+			switch (optionValue) {
+				case "no":
+					config.text = '✗';
+					config.fontStyle = 'bold';
+					break;
+				case "maybe":
+					config.text = '?';
+					config.fontStyle = 'bold';
+					break;
+				case "yes":
+					var howResponse = this.aspectData.evaluating.opinions_how;
+					var langKey = `aspects.user_journey_model.options.opinions_how.${howResponse}`;
+					config.text = this.$te(langKey) ? this.$t(langKey) : this.$t(`aspects.user_journey_model.options.yes_no_maybe.yes`);
+					break;
+			}
+
+			labels.push(config);
 
 			return labels;
 		},
@@ -929,7 +1002,7 @@ export default {
 				opacity: 1,
 				scale: { x: 0.35, y: 0.35 },
 				x: 0,
-				y: 168,
+				y: 10,
 			};
 
 			const faceTypes = {
@@ -947,9 +1020,27 @@ export default {
 				accessing: this.aspectData.accessing.qualification_experience,
 				using: this.aspectData.using.participate_experience,
 				evaluating: this.aspectData.evaluating.service_experience,
+				designing: this.aspectData.designing.design_input_experience,
+				instigating: this.aspectData.instigating.identify_experience,
 			};
 
 			var offset = 65;
+			faces.push({
+				...defaultFaceConfig,
+				visible: (responses.instigating.length ? true : false),
+				filename: faceTypes[responses.instigating],
+				x: offset,
+			});
+
+			offset += 180;
+			faces.push({
+				...defaultFaceConfig,
+				visible: (responses.designing.length ? true : false),
+				filename: faceTypes[responses.designing],
+				x: offset,
+			});
+
+			offset += 180;
 			faces.push({
 				...defaultFaceConfig,
 				visible: (responses.discovering.length ? true : false),
