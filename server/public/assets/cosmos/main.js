@@ -7897,18 +7897,16 @@ var getters = {
     return false;
   },
   userCanEdit: function userCanEdit(state, getters) {
-    var hasUser = getters.hasUser;
-    var isOwner = hasUser && state.authUser.username == state.project.created_by;
-    var isAdmin = getters.hasAdminRole;
-    var isEditor = getters.hasEditRole;
-
-    if (!hasUser) {
+    if (!getters.hasUser) {
       return false;
     }
 
-    if (isAdmin) {
+    if (getters.hasAdminRole) {
       return true;
     }
+
+    var isOwner = state.authUser.username == state.project.created_by || state.authUser.email == state.project.created_by;
+    var isEditor = getters.hasEditRole;
 
     if (isOwner && isEditor) {
       return true;
