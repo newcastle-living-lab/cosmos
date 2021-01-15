@@ -23,8 +23,10 @@
 
 @include margin-variant(4, $unit-4);
 @include margin-variant(8, $unit-8);
+@include margin-variant(12, $unit-12);
 @include margin-variant(16, $unit-16);
 
 @include padding-variant(4, $unit-4);
 @include padding-variant(8, $unit-8);
+@include padding-variant(12, $unit-12);
 @include padding-variant(16, $unit-16);

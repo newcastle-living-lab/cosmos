@@ -9,6 +9,7 @@ import Network from '@/services/Network';
 
 export const state = {
 	appName: 'CoSMoS',
+	userGuideUrl: 'https://guide.livinglab.org.uk/books/cosmos-user-guide',
 	aspectEditId: false,
 	isLoading: false,
 	features: {
