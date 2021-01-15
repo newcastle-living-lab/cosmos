@@ -122,6 +122,13 @@ export default {
 
 			if (this.aspect.CONFIG.id === 'welcome') {
 				panels.unshift({
+					id: "danger",
+					aspectId: aspectId,
+					modelPath: `project`,
+					editor: "project-danger-editor",
+					title: 'app.delete',
+				});
+				panels.unshift({
 					id: "models",
 					aspectId: aspectId,
 					modelPath: `project@config.models`,

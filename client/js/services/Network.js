@@ -49,6 +49,11 @@ export default {
 			});
 	},
 
+	deleteProject(id) {
+		return cosmosHttp.delete(`/projects/${id}`)
+			.then(res => res.data)
+	},
+
 	uploadImage(projectId, formData) {
 		return cosmosHttp.post(`/upload-image/${projectId}`, formData)
 			.then(res => res.data);
