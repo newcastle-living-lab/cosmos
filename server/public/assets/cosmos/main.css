@@ -5249,10 +5249,9 @@ a.text-gray-medium:visited {
 }
 
 .app-header {
-  background: #f2f0f1;
-  color: #444;
-  padding: 0.4rem 0.8rem;
-  border-bottom: 0.05rem solid #bbb;
+  background: #444;
+  color: #fff;
+  padding: 0.2rem 0.8rem;
 }
 
 .app-header .btn-link {
@@ -5301,7 +5300,7 @@ a.text-gray-medium:visited {
 .app-header .navbar-buttons .navbar-brand:hover,
 .app-header .navbar-buttons .navbar-brand:focus,
 .app-header .navbar-buttons .navbar-brand:active {
-  color: #0074d9;
+  color: inherit;
   background: none;
 }
 
@@ -5310,6 +5309,57 @@ a.text-gray-medium:visited {
   padding-left: 0;
   padding-right: 0;
   margin-right: 2.4rem;
+}
+
+.project-header {
+  background: #f2f0f1;
+  color: #444;
+  padding: 0.4rem 0.8rem;
+  border-bottom: 0.05rem solid #bbb;
+}
+
+.project-header .btn-link {
+  color: inherit;
+}
+
+.project-header .btn-link:hover,
+.project-header .btn-link:focus,
+.project-header .btn-link:active {
+  color: inherit;
+}
+
+.project-header .saving-ui {
+  margin-left: 0.8rem;
+  color: #666;
+  font-size: 0.7rem;
+}
+
+.project-header .navbar-section {
+  -webkit-box-flex: 1;
+          flex: 1 1 auto;
+}
+
+.project-header .navbar-buttons .btn-link {
+  margin-right: 0.4rem;
+}
+
+.project-header .navbar-buttons .btn-link .feather {
+  margin-right: 0.2rem;
+  vertical-align: -10%;
+}
+
+.project-header .navbar-buttons .btn-link:hover {
+  color: #fff;
+  background: #0074d9;
+}
+
+.project-header .navbar-buttons .navbar-brand {
+  font-size: 0.8rem;
+  padding-left: 0;
+  padding-right: 0;
+  padding-right: 1.2rem;
+  margin-right: 1.2rem;
+  border-right: 0.05rem solid #bbb;
 }
 
 .cosmos-index {
@@ -5737,6 +5787,46 @@ a.text-gray-medium:visited {
 
 .btn .feather {
   vertical-align: -15%;
+}
+
+.btn.btn-guide {
+  background: #39cccc;
+  border-color: #32c3c3;
+  color: #fff;
+}
+
+.btn.btn-guide:focus {
+  box-shadow: 0 0 0 0.1rem rgba(57, 204, 204, 0.2);
+}
+
+.btn.btn-guide:focus,
+.btn.btn-guide:hover {
+  background: #33c7c7;
+  border-color: #30bbbb;
+  color: #fff;
+}
+
+.btn.btn-guide:active,
+.btn.btn-guide.active {
+  background: #2eb3b3;
+  border-color: #2ba7a7;
+  color: #fff;
+}
+
+.btn.btn-guide.loading::after {
+  border-bottom-color: #fff;
+  border-left-color: #fff;
+}
+
+.btn.btn-guide,
+.btn.btn-guide:hover,
+.btn.btn-guide:focus,
+.btn.btn-guide:active {
+  color: #425858;
+}
+
+.btn.btn-sm .feather {
+  vertical-align: -12.5%;
 }
 
 .btn.btn-empty {

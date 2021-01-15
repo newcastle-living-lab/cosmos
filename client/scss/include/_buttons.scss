@@ -23,9 +23,19 @@
 		vertical-align: -15%;
 	}
 
+	&.btn-guide {
+		@include button-variant($clrs-teal);
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			color: mix($clrs-teal, $dark-color, 15%);
+		}
+	}
+
 	&.btn-sm {
 		.feather {
-			// vertical-align: -10%;
+			vertical-align: -12.5%;
 		}
 	}
 
