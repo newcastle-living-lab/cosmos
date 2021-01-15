@@ -246,11 +246,11 @@ export default {
 						top.location.href = res.url;
 						return;
 					}
-					const msg = this.$t('error_message', { message: res.reason });
+					const msg = this.$t('app.error_message', { message: res.reason });
 					commit('SET_TOAST', { message: msg, type: 'error' });
 				})
 				.catch((err) => {
-					const msg = this.$t('error_message', { message: err });
+					const msg = this.$t('app.error_message', { message: err });
 					commit('SET_TOAST', { message: msg, type: 'error' });
 				});
 		},
