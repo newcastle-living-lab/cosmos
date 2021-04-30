@@ -42,6 +42,8 @@
 
 import { get, sync, dispatch, commit } from 'vuex-pathify';
 
+import Aspects from '@/aspects';
+
 import colours from 'colors.css';
 
 const defaultTextConfig = {
@@ -80,6 +82,7 @@ export default {
 
 		...get([
 			'stageHover',
+			'userCanEdit',
 		]),
 
 		availableModels: get('project@config.models'),
@@ -429,8 +432,20 @@ export default {
 		},
 
 		launchModel(name) {
+
+			this.isHovering = false;
+			commit('STOP_STAGE_HOVER');
+
 			if ( ! name || ! name.length) return;
-			commit('EDIT_ASPECT', name);
+
+			if (this.userCanEdit) {
+				commit('EDIT_ASPECT', name);
+				return;
+			}
+
+			const aspect = Aspects.get(name);
+			this.$router.push({ name: aspect.CONFIG.routeName, params: {...this.$route.params, aspectId: aspect.CONFIG.id } });
+
 		}
 
 	},
