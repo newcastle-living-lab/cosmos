@@ -772,6 +772,14 @@
         "pl": "Polskie",
         "sv_SE": "Szwedzki"
     },
+    "lifecycle": {
+        "evaluating": "Ocenianie",
+        "intro": "Wybierz model, który pokrywa się z Twoją obecną pozycją w Cyklu opracowywania projektów innowacji usługowych:",
+        "learning": "Uczenie się",
+        "resourcing": "Zasoby",
+        "strategising": "Strategia",
+        "welcome": "Witamy w COSMOS."
+    },
     "model_support": {
         "back": "Z powrotem",
         "close": "Blisko",

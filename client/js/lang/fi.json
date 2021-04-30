@@ -772,6 +772,14 @@
         "pl": "Kiillottaa",
         "sv_SE": "Ruotsin kieli"
     },
+    "lifecycle": {
+        "evaluating": "Arviointi",
+        "intro": "Valitse malli, joka vastaa nykyistä sijaintiasi palveluinnovaatioprojektien kehittämissyklissä:",
+        "learning": "Oppiminen",
+        "resourcing": "Resurssien hankinta",
+        "strategising": "Strategisointi",
+        "welcome": "Tervetuloa COSMOS."
+    },
     "model_support": {
         "back": "Takaisin",
         "close": "kiinni",

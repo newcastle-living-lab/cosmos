@@ -772,6 +772,14 @@
         "pl": "Pools",
         "sv_SE": "Zweeds"
     },
+    "lifecycle": {
+        "evaluating": "Evalueren",
+        "intro": "Selecteer een model dat overeenkomt met uw huidige functie binnen de ontwikkelingscyclus van het service-innovatieproject:",
+        "learning": "Aan het leren",
+        "resourcing": "Middelen",
+        "strategising": "Strategiseren",
+        "welcome": "Welkom bij COSMOS."
+    },
     "model_support": {
         "back": "Terug",
         "close": "Dichtbij",

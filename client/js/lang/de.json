@@ -772,6 +772,14 @@
         "pl": "Polieren",
         "sv_SE": "Schwedisch"
     },
+    "lifecycle": {
+        "evaluating": "Auswerten",
+        "intro": "Bitte wählen Sie ein Modell aus, das mit Ihrer aktuellen Position im Entwicklungszyklus des Service Innovation-Projekts übereinstimmt:",
+        "learning": "Lernen",
+        "resourcing": "Beschaffung",
+        "strategising": "Strategisieren",
+        "welcome": "Willkommen bei COSMOS."
+    },
     "model_support": {
         "back": "Zurück",
         "close": "Schließen",
