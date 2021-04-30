@@ -772,6 +772,21 @@
         "pl": "Polska",
         "sv_SE": "Svenska"
     },
+    "lifecycle": {
+        "evaluating": "Utvärderar",
+        "intro": "Välj en modell som sammanfaller med din nuvarande position inom Service Innovation Project Development Cycle:",
+        "learning": "Inlärning",
+        "resourcing": "Resursing",
+        "strategising": "Strategiserande",
+        "welcome": "Välkommen till COSMOS."
+    },
+    "model_support": {
+        "back": "Tillbaka",
+        "close": "Stänga",
+        "hide": "Dölj modellstöd",
+        "next": "Nästa",
+        "show": "Visa modellstöd"
+    },
     "user_guide": {
         "back": "Tillbaka",
         "close": "Stänga",

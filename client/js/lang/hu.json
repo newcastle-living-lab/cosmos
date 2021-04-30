@@ -772,6 +772,21 @@
         "pl": "fényesít",
         "sv_SE": "svéd"
     },
+    "lifecycle": {
+        "evaluating": "Értékelő",
+        "intro": "Kérjük, válasszon egy modellt, amely egybeesik az Ön jelenlegi pozíciójával a szolgáltatási innovációs projekt fejlesztési ciklusában:",
+        "learning": "Tanulás",
+        "resourcing": "Újrafeldolgozás",
+        "strategising": "Stratégiai",
+        "welcome": "Üdvözöljük a COSMOS."
+    },
+    "model_support": {
+        "back": "Vissza",
+        "close": "Bezárás",
+        "hide": "A modell támogatásának elrejtése",
+        "next": "Következő",
+        "show": "A modell támogatásának megjelenítése"
+    },
     "user_guide": {
         "back": "Vissza",
         "close": "Bezárás",

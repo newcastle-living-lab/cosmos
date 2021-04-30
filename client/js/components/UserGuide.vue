@@ -13,7 +13,7 @@
 						<!-- {{ userGuide.currentStep }}. -->
 						{{ $t(`aspects.${aspectId}.guide.${step.lang}`) }}
 					</div>
-					<a href="#" class="text-small mt-2 d-inline-block" @click.prevent="close()" v-if="userGuide.currentStep === 0">{{ $t('user_guide.skip') }}</a>
+					<!-- <a href="#" class="text-small mt-2 d-inline-block" @click.prevent="close()" v-if="userGuide.currentStep === 0">{{ $t('user_guide.skip') }}</a> -->
 				</div>
 				<div class="tile-action">
 					<button class="btn btn-grey" :class="userGuide.currentStep === 0 ? 'disabled' : ''" :disabled="userGuide.currentStep === 0" type="button" @click.prevent="prev()"><BackIcon size="16" /> {{ $t('user_guide.back') }}</button>

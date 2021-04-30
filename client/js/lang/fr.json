@@ -772,6 +772,21 @@
         "pl": "Polonais",
         "sv_SE": "Suédois"
     },
+    "lifecycle": {
+        "evaluating": "Évaluer",
+        "intro": "Veuillez sélectionner un modèle qui coïncide avec votre position actuelle dans le cycle de développement de projet d'innovation de service:",
+        "learning": "Apprentissage",
+        "resourcing": "Ressourcement",
+        "strategising": "Stratégies",
+        "welcome": "Bienvenue à COSMOS."
+    },
+    "model_support": {
+        "back": "Dos",
+        "close": "Fermer",
+        "hide": "Masquer la prise en charge du modèle",
+        "next": "Suivant",
+        "show": "Afficher le support du modèle"
+    },
     "user_guide": {
         "back": "Retour",
         "close": "proche",

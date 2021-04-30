@@ -88,12 +88,24 @@
 		"country": "Country",
 		"which_country": "Which country are you from?"
 	},
+	"lifecycle": {
+		"welcome": "Welcome to COSMOS.",
+		"intro": "Please select a model which coincides with your current position within the Service Innovation Project Development Cycle:",
+		"learning": "Learning",
+		"strategising": "Strategising",
+		"evaluating": "Evaluating",
+		"resourcing": "Resourcing"
+	},
 	"user_guide": {
 		"show": "Show user guide",
 		"skip": "Skip user guide",
 		"back": "Back",
 		"next": "Next",
 		"close": "Close"
+	},
+	"model_support": {
+		"show": "Show model support",
+		"hide": "Hide model support"
 	},
 	"hints": {
 		"type_and_enter": "Type the name below and press enter.",

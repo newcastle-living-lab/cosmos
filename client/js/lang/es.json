@@ -772,6 +772,21 @@
         "pl": "Polaco",
         "sv_SE": "Sueco"
     },
+    "lifecycle": {
+        "evaluating": "Evaluar",
+        "intro": "Seleccione un modelo que coincida con su puesto actual dentro del ciclo de desarrollo de proyectos de innovación de servicios:",
+        "learning": "Aprendiendo",
+        "resourcing": "Recursos",
+        "strategising": "Estrategias",
+        "welcome": "Bienvenidos a COSMOS."
+    },
+    "model_support": {
+        "back": "atrás",
+        "close": "Cerca",
+        "hide": "Ocultar soporte de modelo",
+        "next": "próximo",
+        "show": "Mostrar soporte de modelo"
+    },
     "user_guide": {
         "back": "atrás",
         "close": "Cerca",

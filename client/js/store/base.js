@@ -274,9 +274,9 @@ export const actions = {
 		commit('SET_USER_GUIDE_STATUS', { isAvailable: hasUg, isCompleted: isCompleted });
 
 		// Open the user guide if it's available and hasn't been completed yet.
-		if (hasUg && ! isCompleted) {
-			dispatch('openUserGuide', { projectId: projectId, aspectId: aspectId });
-		}
+		// if (hasUg && ! isCompleted) {
+		// 	dispatch('openUserGuide', { projectId: projectId, aspectId: aspectId });
+		// }
 	},
 
 	fetchProjects({ state, commit }) {

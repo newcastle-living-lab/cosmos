@@ -772,6 +772,21 @@
         "pl": "Poola keel",
         "sv_SE": "Rootsi keel"
     },
+    "lifecycle": {
+        "evaluating": "Hindamine",
+        "intro": "Valige mudel, mis langeb kokku teie praeguse positsiooniga teenuseuuenduse projekti arendustsüklis:",
+        "learning": "Õppimine",
+        "resourcing": "Varude hankimine",
+        "strategising": "Strateegiline",
+        "welcome": "Tere tulemast COSMOS."
+    },
+    "model_support": {
+        "back": "tagasi",
+        "close": "Sulge",
+        "hide": "Peida mudeli tugi",
+        "next": "Järgmine",
+        "show": "Kuva mudeli tugi"
+    },
     "user_guide": {
         "back": "tagasi",
         "close": "Sulge",
