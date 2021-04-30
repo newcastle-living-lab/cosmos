@@ -14519,8 +14519,9 @@ var FACE_TYPES = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
-/* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! colors.css */ "./node_modules/colors.css/js/colors.js");
-/* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(colors_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _aspects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/aspects */ "./js/aspects/index.js");
+/* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! colors.css */ "./node_modules/colors.css/js/colors.js");
+/* harmony import */ var colors_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(colors_css__WEBPACK_IMPORTED_MODULE_2__);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -14569,6 +14570,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 
 
+
 var defaultTextConfig = {
   fontSize: 14,
   fontStyle: 'normal',
@@ -14593,7 +14595,7 @@ var defaultTextConfig = {
       }
     };
   },
-  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(['stageHover']), {
+  computed: _objectSpread({}, Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])(['stageHover', 'userCanEdit']), {
     availableModels: Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["get"])('project@config.models'),
     circleConfig: function circleConfig() {
       var config = {
@@ -14703,7 +14705,7 @@ var defaultTextConfig = {
         y: learningY,
         width: halfWidth,
         text: this.$t("aspects.change_model.title"),
-        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.gray,
+        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.gray,
         name: this.hasModel(modelName) ? modelName : null
       }));
       learningY += itemHeight;
@@ -14714,7 +14716,7 @@ var defaultTextConfig = {
         y: learningY,
         width: halfWidth,
         text: this.$t("aspects.intervention_theory_model.title"),
-        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.gray,
+        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.gray,
         name: this.hasModel(modelName) ? modelName : null
       }));
       learningY += itemHeight;
@@ -14725,7 +14727,7 @@ var defaultTextConfig = {
         y: learningY,
         width: halfWidth,
         text: this.$t("aspects.moral_ordering_model.title"),
-        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.gray,
+        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.gray,
         name: this.hasModel(modelName) ? modelName : null
       }));
       /**
@@ -14759,7 +14761,7 @@ var defaultTextConfig = {
         y: evalY,
         width: halfWidth,
         text: this.$t("aspects.user_journey_model.title"),
-        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.gray,
+        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.gray,
         name: this.hasModel(modelName) ? modelName : null
       }));
       evalY += itemHeight;
@@ -14793,7 +14795,7 @@ var defaultTextConfig = {
         y: stratY,
         width: halfWidth * 0.7,
         text: this.$t('aspects.intervention_theory_model.title'),
-        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.gray,
+        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.gray,
         name: this.hasModel(modelName) ? modelName : null
       }));
       stratY += itemHeight * 1.8;
@@ -14804,7 +14806,7 @@ var defaultTextConfig = {
         y: stratY,
         width: halfWidth,
         text: 'User Journey Model',
-        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.gray,
+        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.gray,
         name: this.hasModel(modelName) ? modelName : null
       }));
       stratY += itemHeight;
@@ -14815,7 +14817,7 @@ var defaultTextConfig = {
         y: stratY,
         width: halfWidth,
         text: this.$t("aspects.analytic_model.title"),
-        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.gray,
+        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.gray,
         name: this.hasModel(modelName) ? modelName : null
       }));
       /**
@@ -14831,7 +14833,7 @@ var defaultTextConfig = {
         y: resY,
         width: halfWidth * 0.7,
         text: this.$t("aspects.co_creation_of_service_model.title"),
-        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_1___default.a.gray,
+        fill: this.hasModel(modelName) ? colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.black : colors_css__WEBPACK_IMPORTED_MODULE_2___default.a.gray,
         name: this.hasModel(modelName) ? modelName : null,
         lineHeight: 1.4
       }));
@@ -14858,8 +14860,22 @@ var defaultTextConfig = {
       Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["commit"])('STOP_STAGE_HOVER');
     },
     launchModel: function launchModel(name) {
+      this.isHovering = false;
+      Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["commit"])('STOP_STAGE_HOVER');
       if (!name || !name.length) return;
-      Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["commit"])('EDIT_ASPECT', name);
+
+      if (this.userCanEdit) {
+        Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["commit"])('EDIT_ASPECT', name);
+        return;
+      }
+
+      var aspect = _aspects__WEBPACK_IMPORTED_MODULE_1__["default"].get(name);
+      this.$router.push({
+        name: aspect.CONFIG.routeName,
+        params: _objectSpread({}, this.$route.params, {
+          aspectId: aspect.CONFIG.id
+        })
+      });
     }
   }
 });
