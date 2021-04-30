@@ -772,6 +772,13 @@
         "pl": "Polish",
         "sv_SE": "Swedish"
     },
+    "model_support": {
+        "back": "Back",
+        "close": "Close",
+        "hide": "Hide model support",
+        "next": "Next",
+        "show": "Show model support"
+    },
     "user_guide": {
         "back": "Back",
         "close": "Close",

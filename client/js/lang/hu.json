@@ -772,6 +772,13 @@
         "pl": "fényesít",
         "sv_SE": "svéd"
     },
+    "model_support": {
+        "back": "Vissza",
+        "close": "Bezárás",
+        "hide": "A modell támogatásának elrejtése",
+        "next": "Következő",
+        "show": "A modell támogatásának megjelenítése"
+    },
     "user_guide": {
         "back": "Vissza",
         "close": "Bezárás",

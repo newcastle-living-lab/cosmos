@@ -772,6 +772,13 @@
         "pl": "Polskie",
         "sv_SE": "Szwedzki"
     },
+    "model_support": {
+        "back": "Z powrotem",
+        "close": "Blisko",
+        "hide": "Ukryj wsparcie modelu",
+        "next": "Kolejny",
+        "show": "Pokaż wsparcie modelu"
+    },
     "user_guide": {
         "back": "Z powrotem",
         "close": "Blisko",

@@ -772,6 +772,13 @@
         "pl": "Pools",
         "sv_SE": "Zweeds"
     },
+    "model_support": {
+        "back": "Terug",
+        "close": "Dichtbij",
+        "hide": "Verberg modelondersteuning",
+        "next": "De volgende",
+        "show": "Toon modelondersteuning"
+    },
     "user_guide": {
         "back": "Terug",
         "close": "Dichtbij",

@@ -772,6 +772,13 @@
         "pl": "Polieren",
         "sv_SE": "Schwedisch"
     },
+    "model_support": {
+        "back": "Zurück",
+        "close": "Schließen",
+        "hide": "Modellunterstützung ausblenden",
+        "next": "Nächster",
+        "show": "Modellunterstützung anzeigen"
+    },
     "user_guide": {
         "back": "Zurück",
         "close": "Schließen",

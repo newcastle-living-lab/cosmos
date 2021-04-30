@@ -95,6 +95,10 @@
 		"next": "Next",
 		"close": "Close"
 	},
+	"model_support": {
+		"show": "Show model support",
+		"hide": "Hide model support"
+	},
 	"hints": {
 		"type_and_enter": "Type the name below and press enter.",
 		"editor_double_click_edit": "Double-click an item to edit it, and enter to save",

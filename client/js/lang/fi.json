@@ -772,6 +772,13 @@
         "pl": "Kiillottaa",
         "sv_SE": "Ruotsin kieli"
     },
+    "model_support": {
+        "back": "Takaisin",
+        "close": "kiinni",
+        "hide": "Piilota mallin tuki",
+        "next": "Seuraava",
+        "show": "Näytä mallin tuki"
+    },
     "user_guide": {
         "back": "Takaisin",
         "close": "kiinni",

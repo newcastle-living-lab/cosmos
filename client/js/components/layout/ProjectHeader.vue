@@ -43,9 +43,12 @@
 			<section class="navbar-section navbar-tabs">
 				<div v-if="project && project.id" class="input-group input-inline mr-4">
 					<button class="btn btn-sm btn-link"
-						@click.prevent="startUserGuide()"
-						v-if="userGuide.isAvailable && !userGuide.isOpen"
-					>{{ $t('user_guide.show') }}</button>
+						@click.prevent="toggleModelSupport()"
+						v-if="userGuide.isAvailable"
+					>
+						<template v-if="!userGuide.isOpen">{{ $t('model_support.show') }}</template>
+						<template v-if="userGuide.isOpen">{{ $t('model_support.hide') }}</template>
+					</button>
 				</div>
 				<div v-if="project && project.id" class="input-group input-inline mr-4">
 					<label class="form-switch input-sm" v-show="activeTab == 'model'">
@@ -217,8 +220,13 @@ export default {
 			EventBus.$emit('export', { target: 'pdf' });
 		},
 
-		startUserGuide() {
-			dispatch('openUserGuide', {projectId: this.project.id, aspectId: this.aspect.CONFIG.id });
+		toggleModelSupport() {
+			let params = { projectId: this.project.id, aspectId: this.aspect.CONFIG.id };
+			let event = this.userGuide.isOpen
+				? 'finishUserGuide'
+				: 'openUserGuide';
+
+			dispatch(event, params);
 		},
 
 		doExportProject() {

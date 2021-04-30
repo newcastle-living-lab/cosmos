@@ -772,6 +772,13 @@
         "pl": "Polaco",
         "sv_SE": "Sueco"
     },
+    "model_support": {
+        "back": "atrás",
+        "close": "Cerca",
+        "hide": "Ocultar soporte de modelo",
+        "next": "próximo",
+        "show": "Mostrar soporte de modelo"
+    },
     "user_guide": {
         "back": "atrás",
         "close": "Cerca",

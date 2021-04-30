@@ -772,6 +772,13 @@
         "pl": "Polonais",
         "sv_SE": "Suédois"
     },
+    "model_support": {
+        "back": "Dos",
+        "close": "Fermer",
+        "hide": "Masquer la prise en charge du modèle",
+        "next": "Suivant",
+        "show": "Afficher le support du modèle"
+    },
     "user_guide": {
         "back": "Retour",
         "close": "proche",
